@@ -1,0 +1,23 @@
+{
+  "name": "jp.synesthesias.plateau.snap",
+  "displayName": "Synesthesias PLATEAU SNAP",
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "description": "Synesthesias PLATEAU SNAP Unity Runtime",
+  "keywords": [],
+  "author": {
+    "name": "synesthesias-koichi-inoue",
+    "email": "kouichi.inoue@synesthesias.jp"
+  },
+  "dependencies": {
+    "com.unity.addressables": "1.22.3",
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "samples": [
+    {
+      "displayName": "Sample App",
+      "description": "Sample PLATEAU SNAP Unity Application",
+      "path": "Samples~"
+    }
+  ]
+}

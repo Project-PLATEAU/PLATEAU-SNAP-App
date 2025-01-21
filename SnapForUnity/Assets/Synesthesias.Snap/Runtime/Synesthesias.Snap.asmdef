@@ -1,0 +1,21 @@
+{
+    "name": "Synesthesias.Snap",
+    "rootNamespace": "",
+    "references": [
+        "Unity.ResourceManager",
+        "Unity.Addressables",
+        "Unity.TextMeshPro",
+        "UniTask",
+        "UniTask.Addressables",
+        "R3.Unity"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Samples/Synesthesias.Snap/Scenes/BootScene.unity
+    guid: 20eae257719a743829b1996294c71d7b
+  - enabled: 1
+    path: Assets/Samples/Synesthesias.Snap/Scenes/MainScene.unity
+    guid: d7d48199586de4c5fbe75778fce924b3
+  - enabled: 1
+    path: Assets/Samples/Synesthesias.Snap/Scenes/GuideScene.unity
+    guid: 92a871acd76e449baabcd9c93974a586
+  - enabled: 1
+    path: Assets/Samples/Synesthesias.Snap/Scenes/DetectionScene.unity
+    guid: f9e5d1c99a8e5431d9694ae44b30cda0
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 734990228937845a7823f3bcccf81dcd, type: 2}
