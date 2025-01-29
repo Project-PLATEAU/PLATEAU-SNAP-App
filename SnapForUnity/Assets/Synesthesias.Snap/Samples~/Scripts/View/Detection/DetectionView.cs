@@ -9,11 +9,18 @@ namespace Synesthesias.Snap.Sample
     public class DetectionView : MonoBehaviour
     {
         [SerializeField] private Button backButton;
+        [SerializeField] private Button cameraButton;
 
         /// <summary>
         /// 戻るボタン
         /// </summary>
         public Button BackButton
             => backButton;
+
+        /// <summary>
+        /// カメラボタン
+        /// </summary>
+        public Button CameraButton
+            => cameraButton;
     }
 }

@@ -171,6 +171,8 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   detectionView: {fileID: 1084631502}
+  dialogPrefab: {fileID: 333301362813518443, guid: dbbc93f1a625a4b788e9d7999d28ed79, type: 3}
+  dialogTransform: {fileID: 1084631501}
 --- !u!1 &130188959
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +589,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1158836699}
   - {fileID: 1662787263}
   - {fileID: 698984051}
   - {fileID: 130188960}
@@ -595,6 +596,7 @@ RectTransform:
   - {fileID: 1611629292}
   - {fileID: 1684428624}
   - {fileID: 1933063555}
+  - {fileID: 1158836699}
   m_Father: {fileID: 2083272874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -615,6 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 1621886168}
+  cameraButton: {fileID: 1684428625}
 --- !u!1 &1158836698
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b151d891c9e14f5c8821fdee48af535, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3fcb7a4d50824a64bd3ff235c5af8cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -917,7 +920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1611629292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1112,7 +1115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1662787263
 RectTransform:
   m_ObjectHideFlags: 0

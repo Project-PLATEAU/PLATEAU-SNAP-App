@@ -19,10 +19,16 @@ namespace Synesthesias.Snap.Sample
             base.Configure(builder);
             builder.Register<SceneModel>(Lifetime.Singleton);
             builder.RegisterInstance(residentView);
+            ConfigureLocalization(builder);
             ConfigureBoot(builder);
         }
 
-        private static void ConfigureBoot(IContainerBuilder builder)
+        private void ConfigureLocalization(IContainerBuilder builder)
+        {
+            builder.Register<LocalizationModel>(Lifetime.Singleton);
+        }
+
+        private void ConfigureBoot(IContainerBuilder builder)
         {
             builder.Register<BootModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<BootPresenter>();

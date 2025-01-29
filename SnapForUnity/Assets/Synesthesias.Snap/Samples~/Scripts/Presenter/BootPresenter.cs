@@ -31,7 +31,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            await bootModel.InitializeAsync(cancellationToken);
+            await bootModel.StartAsync(cancellationToken);
             sceneModel.Transition(SceneNameDefine.Main);
         }
     }

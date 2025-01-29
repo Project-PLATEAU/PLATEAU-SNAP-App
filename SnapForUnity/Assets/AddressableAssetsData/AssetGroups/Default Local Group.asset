@@ -22,6 +22,41 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 134afafe17070451a9230f8078f11484
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Text/NotoSansJP-Regular/TextMeshPro/NotoSansJP_basic_jp_common_kanji.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29fbf16de92c64cd98446071e4393cdc
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Text/NotoSansJP-Regular/TextMeshPro/NotoSansJP_Extended_ASCII.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85cf679f3a9ee496186a65b1e11e1bf3
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Atlas/DialogAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f32ce995978f4371bf6a7020005e9cc
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Atlas/GuideAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0432074cc6a8482f9d242a1b1f07963
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Atlas/DetectionAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1c9c18c58dd7448eaadd58e709c953d
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Atlas/MainAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbbc93f1a625a4b788e9d7999d28ed79
+    m_Address: Assets/Samples/Synesthesias.Snap/Addressables/Prefab/DialogPrefab.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 07799bfa3c1314e568e1478b23887540, type: 2}
   m_SchemaSet:
