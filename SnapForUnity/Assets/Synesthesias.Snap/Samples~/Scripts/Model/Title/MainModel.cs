@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Synesthesias.Snap.Sample
 {
     /// <summary>
@@ -20,6 +22,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void Start()
         {
+            Screen.fullScreen = false;
             sceneModel.Transition(SceneNameDefine.Guide);
         }
     }

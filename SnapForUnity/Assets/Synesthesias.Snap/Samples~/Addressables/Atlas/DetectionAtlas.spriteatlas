@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DetectionAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 11c2f0fa0487e4a2b844b7cf68ea56a5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 9d870f33482f64cae9daa1a7d6eeaba1: 21300000
+    - 363d234399e2f4e4a9884a43a821f543: 21300000
+    - 51a101a65d58941a7ba0c7a69e2dec3d: 21300000
+    - 4ec1a8da186924835a6f46cea6209c43: 21300000
+    - 240afe3c8fdc34cbdab4dbecf5a088c6: 21300000
+    - 809f0c9caaa2b4931b795e436fa067f2: 21300000
+    - c5b55e9c04be040dfac706961e7b7966: 21300000
+    - 8f4a8b2f784c74e9bb5681da2b801719: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 9d870f33482f64cae9daa1a7d6eeaba1, type: 3}
+  - {fileID: 21300000, guid: 363d234399e2f4e4a9884a43a821f543, type: 3}
+  - {fileID: 21300000, guid: 51a101a65d58941a7ba0c7a69e2dec3d, type: 3}
+  - {fileID: 21300000, guid: 4ec1a8da186924835a6f46cea6209c43, type: 3}
+  - {fileID: 21300000, guid: 240afe3c8fdc34cbdab4dbecf5a088c6, type: 3}
+  - {fileID: 21300000, guid: 809f0c9caaa2b4931b795e436fa067f2, type: 3}
+  - {fileID: 21300000, guid: c5b55e9c04be040dfac706961e7b7966, type: 3}
+  - {fileID: 21300000, guid: 8f4a8b2f784c74e9bb5681da2b801719, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - detection_logo
+  - detection_arrow
+  - detection_notification
+  - detection_camera_area
+  - detection_camera_disabled
+  - detection_icon_menu
+  - detection_camera_activated
+  - detection_mesh
+  m_RenderDataMap: {}
+  m_Tag: DetectionAtlas
+  m_IsVariant: 0

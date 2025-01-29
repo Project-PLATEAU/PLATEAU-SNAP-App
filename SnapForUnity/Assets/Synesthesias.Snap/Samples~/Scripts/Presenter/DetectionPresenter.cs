@@ -10,8 +10,8 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class DetectionPresenter : IAsyncStartable
     {
-        private readonly DetectionModel _model;
-        private readonly DetectionView _view;
+        private readonly DetectionModel model;
+        private readonly DetectionView view;
 
         /// <summary>
         /// コンストラクタ
@@ -20,27 +20,30 @@ namespace Synesthesias.Snap.Sample
             DetectionModel model,
             DetectionView view)
         {
-            _model = model;
-            _view = view;
+            this.model = model;
+            this.view = view;
+            OnSubscribe();
         }
 
+        /// <summary>
+        /// 開始
+        /// </summary>
         public async UniTask StartAsync(CancellationToken cancellation)
         {
-            OnSubscribe();
             await UniTask.Yield();
         }
 
         private void OnSubscribe()
         {
-            _view.BackButton
+            view.BackButton
                 .OnClickAsObservable()
                 .Subscribe(_ => OnClickBack())
-                .AddTo(_view);
+                .AddTo(view);
         }
 
         private void OnClickBack()
         {
-            _model.Back();
+            model.Back();
         }
     }
 }

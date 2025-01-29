@@ -22,11 +22,14 @@ namespace Synesthesias.Snap.Sample
         {
             this.guideModel = guideModel;
             this.view = view;
+            OnSubscribe();
         }
 
-        public async UniTask StartAsync(CancellationToken cancellation = new CancellationToken())
+        /// <summary>
+        /// 開始
+        /// </summary>
+        public async UniTask StartAsync(CancellationToken cancellation)
         {
-            OnSubscribe();
             await UniTask.Yield();
         }
 

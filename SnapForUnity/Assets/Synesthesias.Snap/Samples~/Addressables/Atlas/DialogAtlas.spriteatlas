@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DialogAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 607af00748dc647ffa3299fb00f82b12, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - e8470730bf12c45d1afa6a31dd6e52f6: 21300000
+    - e92d1480765ba477584a7f4457c944bd: 21300000
+    - 474fc591829c043099b2044caead3ad9: 21300000
+    - 2bd532e11a83d4df9a30a428d2c80bcc: 21300000
+    - 421a4a36649034cb590e8cb06898e6f5: 21300000
+    - 2472aeb87802743f49ad70489dafbfaf: 21300000
+    - fc5346690e5cc4579b520f11bfe08a51: 21300000
+    - 539fbae978c3a4c00b811958f3fdde9a: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e8470730bf12c45d1afa6a31dd6e52f6, type: 3}
+  - {fileID: 21300000, guid: e92d1480765ba477584a7f4457c944bd, type: 3}
+  - {fileID: 21300000, guid: 474fc591829c043099b2044caead3ad9, type: 3}
+  - {fileID: 21300000, guid: 2bd532e11a83d4df9a30a428d2c80bcc, type: 3}
+  - {fileID: 21300000, guid: 421a4a36649034cb590e8cb06898e6f5, type: 3}
+  - {fileID: 21300000, guid: 2472aeb87802743f49ad70489dafbfaf, type: 3}
+  - {fileID: 21300000, guid: fc5346690e5cc4579b520f11bfe08a51, type: 3}
+  - {fileID: 21300000, guid: 539fbae978c3a4c00b811958f3fdde9a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - dialog_text
+  - dialog_button_01
+  - dialog_icon_error_2
+  - dialog_icon_success_2
+  - dialog_button_02
+  - dialog_background
+  - dialog_icon_error_1
+  - dialog_icon_success_1
+  m_RenderDataMap: {}
+  m_Tag: DialogAtlas
+  m_IsVariant: 0

@@ -22,11 +22,15 @@ namespace Synesthesias.Snap.Sample
         {
             this.model = model;
             this.view = view;
+            OnSubscribe();
         }
 
-        public async UniTask StartAsync(CancellationToken cancellation = new CancellationToken())
+        /// <summary>
+        /// 開始
+        /// </summary>
+        public async UniTask StartAsync(CancellationToken cancellation)
         {
-            OnSubscribe();
+            // 開始前の事前ダウンロード等はここに実装
             await UniTask.Yield();
         }
 
@@ -38,6 +42,9 @@ namespace Synesthesias.Snap.Sample
                 .AddTo(view);
         }
 
+        /// <summary>
+        /// アプリ開始ボタンのタップ
+        /// </summary>
         private void OnClickStart()
         {
             model.Start();
