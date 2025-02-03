@@ -43,9 +43,13 @@ namespace Synesthesias.Snap.Sample
 
         private void OnSubscribe()
         {
-            view.BackButton
+            model.IsGeospatialVisibleProperty
+                .Subscribe(OnClickGeospatial)
+                .AddTo(view);
+
+            view.MenuButton
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickBack())
+                .Subscribe(_ => OnClickMenu())
                 .AddTo(view);
 
             view.CameraButton
@@ -54,9 +58,14 @@ namespace Synesthesias.Snap.Sample
                 .AddTo(view);
         }
 
-        private void OnClickBack()
+        private void OnClickMenu()
         {
-            model.Back();
+            model.ShowMenu();
+        }
+
+        private void OnClickGeospatial(bool isVisible)
+        {
+            view.GeospatialObject.SetActive(isVisible);
         }
 
         private async UniTask OnClickCameraAsync()

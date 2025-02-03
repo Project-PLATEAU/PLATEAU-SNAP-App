@@ -8,22 +8,15 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class EditorDetectionView : MonoBehaviour
     {
-        [SerializeField] private Button backButton;
-        [SerializeField] private Button cameraDeviceToggleButton;
+        [SerializeField] private Button menuButton;
         [SerializeField] private RawImage cameraRawImage;
         [SerializeField] private Button cameraButton;
 
         /// <summary>
-        /// 戻るボタン
+        /// メニューボタン
         /// </summary>
-        public Button BackButton
-            => backButton;
-
-        /// <summary>
-        /// カメラデバイス切り替えボタン
-        /// </summary>
-        public Button CameraDeviceToggleButton
-            => cameraDeviceToggleButton;
+        public Button MenuButton
+            => menuButton;
 
         /// <summary>
         /// カメラのRawImage

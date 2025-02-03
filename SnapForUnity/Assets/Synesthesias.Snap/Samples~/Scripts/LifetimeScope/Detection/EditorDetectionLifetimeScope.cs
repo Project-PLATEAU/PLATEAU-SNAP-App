@@ -10,6 +10,7 @@ namespace Synesthesias.Snap.Sample
     public class EditorDetectionLifetimeScope : BaseLifetimeScope
     {
         [SerializeField] private EditorDetectionView detectionView;
+        [SerializeField] private DetectionMenuView menuView;
 
         protected override void Configure(IContainerBuilder builder)
         {
@@ -18,6 +19,14 @@ namespace Synesthesias.Snap.Sample
             builder.Register<EditorWebCameraModel>(Lifetime.Singleton);
             builder.Register<EditorDetectionModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<EditorDetectionPresenter>();
+            ConfigureMenu(builder);
+        }
+
+        private void ConfigureMenu(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(menuView);
+            builder.Register<DetectionMenuModel>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<DetectionMenuPresenter>();
         }
     }
 }

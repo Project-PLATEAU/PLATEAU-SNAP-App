@@ -45,14 +45,9 @@ namespace Synesthesias.Snap.Sample
 
         private void OnSubscribe()
         {
-            view.BackButton
+            view.MenuButton
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickBack())
-                .AddTo(view);
-
-            view.CameraDeviceToggleButton
-                .OnClickAsObservable()
-                .Subscribe(_ => OnClickCameraDeviceToggle())
+                .Subscribe(_ => OnClickMenu())
                 .AddTo(view);
 
             view.CameraButton
@@ -61,14 +56,9 @@ namespace Synesthesias.Snap.Sample
                 .AddTo(view);
         }
 
-        private void OnClickBack()
+        private void OnClickMenu()
         {
-            model.Back();
-        }
-
-        private void OnClickCameraDeviceToggle()
-        {
-            model.ToggleCameraDevice();
+            model.ShowMenu();
         }
 
         private async UniTask OnClickCameraAsync()

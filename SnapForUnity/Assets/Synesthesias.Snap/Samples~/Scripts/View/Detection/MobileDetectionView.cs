@@ -8,15 +8,22 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class MobileDetectionView : MonoBehaviour
     {
-        [SerializeField] private Button backButton;
+        [SerializeField] private Button menuButton;
+        [SerializeField] private GameObject geospatialObject;
         [SerializeField] private RawImage cameraRawImage;
         [SerializeField] private Button cameraButton;
 
         /// <summary>
-        /// 戻るボタン
+        /// メニューボタン
         /// </summary>
-        public Button BackButton
-            => backButton;
+        public Button MenuButton
+            => menuButton;
+
+        /// <summary>
+        /// Geospatial情報のオブジェクト
+        /// </summary>
+        public GameObject GeospatialObject
+            => geospatialObject;
 
         /// <summary>
         /// カメラのRawImage

@@ -15,6 +15,7 @@ namespace Synesthesias.Snap.Sample
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly EditorWebCameraModel cameraModel;
+        private readonly DetectionMenuModel menuModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
 
         /// <summary>
@@ -24,11 +25,13 @@ namespace Synesthesias.Snap.Sample
             TextureRepository textureRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
-            EditorWebCameraModel cameraModel)
+            EditorWebCameraModel cameraModel,
+            DetectionMenuModel menuModel)
         {
             this.textureRepository = textureRepository;
             this.sceneModel = sceneModel;
             this.cameraModel = cameraModel;
+            this.menuModel = menuModel;
             this.localizationModel = localizationModel;
         }
 
@@ -41,14 +44,18 @@ namespace Synesthesias.Snap.Sample
                     tableName: "DetectionStringTableCollection",
                     cancellation),
                 cameraModel.StartAsync(cancellation));
+
+            menuModel.AddElement(new DetectionMenuElementModel(
+                text: "カメラデバイス切替",
+                onClick: cameraModel.ToggleDevice));
         }
 
         /// <summary>
-        /// 戻る
+        /// メニューを表示
         /// </summary>
-        public void Back()
+        public void ShowMenu()
         {
-            sceneModel.Transition(SceneNameDefine.Main);
+            menuModel.IsVisibleProperty.Value = true;
         }
 
         public Texture GetCameraTexture()
@@ -69,14 +76,6 @@ namespace Synesthesias.Snap.Sample
             await UniTask.WaitForSeconds(second, cancellationToken: token);
             var isDetect = Random.Range(0, 100) <= 70;
             return isDetect;
-        }
-
-        /// <summary>
-        /// カメラデバイスの切り替え
-        /// </summary>
-        public void ToggleCameraDevice()
-        {
-            cameraModel.ToggleDevice();
         }
 
         /// <summary>

@@ -13,6 +13,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private MobileDetectionView detectionView;
         [SerializeField] private ARCameraManager arCameraManager;
         [SerializeField] private GeospatialController geospatialController;
+        [SerializeField] private DetectionMenuView menuView;
 
         protected override void Configure(IContainerBuilder builder)
         {
@@ -24,6 +25,14 @@ namespace Synesthesias.Snap.Sample
             builder.Register<MobileARCameraModel>(Lifetime.Singleton);
             builder.Register<MobileDetectionModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<MobileDetectionPresenter>();
+            ConfigureMenu(builder);
+        }
+
+        private void ConfigureMenu(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(menuView);
+            builder.Register<DetectionMenuModel>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<DetectionMenuPresenter>();
         }
     }
 }

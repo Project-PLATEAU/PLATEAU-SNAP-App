@@ -58,6 +58,7 @@ SpriteAtlas:
     - 809f0c9caaa2b4931b795e436fa067f2: 21300000
     - c5b55e9c04be040dfac706961e7b7966: 21300000
     - 8f4a8b2f784c74e9bb5681da2b801719: 21300000
+    - 942e58ffc71994e4ea1d8bc3874a4e4a: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 9d870f33482f64cae9daa1a7d6eeaba1, type: 3}
@@ -68,6 +69,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 809f0c9caaa2b4931b795e436fa067f2, type: 3}
   - {fileID: 21300000, guid: c5b55e9c04be040dfac706961e7b7966, type: 3}
   - {fileID: 21300000, guid: 8f4a8b2f784c74e9bb5681da2b801719, type: 3}
+  - {fileID: 21300000, guid: 942e58ffc71994e4ea1d8bc3874a4e4a, type: 3}
   m_PackedSpriteNamesToIndex:
   - detection_logo
   - detection_arrow
@@ -77,6 +79,7 @@ SpriteAtlas:
   - detection_icon_menu
   - detection_camera_activated
   - detection_mesh
+  - detection_menu_background
   m_RenderDataMap: {}
   m_Tag: DetectionAtlas
   m_IsVariant: 0

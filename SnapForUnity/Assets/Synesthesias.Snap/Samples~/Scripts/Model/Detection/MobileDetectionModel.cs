@@ -1,4 +1,6 @@
 using Cysharp.Threading.Tasks;
+using R3;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using Random = UnityEngine.Random;
@@ -8,13 +10,20 @@ namespace Synesthesias.Snap.Sample
     /// <summary>
     /// 建物検出シーンのModel(携帯端末)
     /// </summary>
-    public class MobileDetectionModel
+    public class MobileDetectionModel : IDisposable
     {
+        private readonly CompositeDisposable disposable = new();
         private readonly TextureRepository textureRepository;
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly MobileARCameraModel cameraModel;
+        private readonly DetectionMenuModel menuModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
+
+        /// <summary>
+        /// Geospatial情報を表示するか
+        /// </summary>
+        public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty = new(true);
 
         /// <summary>
         /// コンストラクタ
@@ -23,12 +32,22 @@ namespace Synesthesias.Snap.Sample
             TextureRepository textureRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
-            MobileARCameraModel cameraModel)
+            MobileARCameraModel cameraModel,
+            DetectionMenuModel menuModel)
         {
             this.textureRepository = textureRepository;
             this.sceneModel = sceneModel;
             this.cameraModel = cameraModel;
+            this.menuModel = menuModel;
             this.localizationModel = localizationModel;
+        }
+
+        /// <summary>
+        /// 破棄
+        /// </summary>
+        public void Dispose()
+        {
+            disposable.Dispose();
         }
 
         /// <summary>
@@ -39,14 +58,16 @@ namespace Synesthesias.Snap.Sample
             await localizationModel.InitializeAsync(
                 tableName: "DetectionStringTableCollection",
                 cancellation);
+
+            OnSubscribe();
         }
 
         /// <summary>
         /// 戻る
         /// </summary>
-        public void Back()
+        public void ShowMenu()
         {
-            sceneModel.Transition(SceneNameDefine.Main);
+            menuModel.IsVisibleProperty.Value = true;
         }
 
         /// <summary>
@@ -78,6 +99,29 @@ namespace Synesthesias.Snap.Sample
 
             await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             sceneModel.Transition(SceneNameDefine.Validation);
+        }
+
+        private void OnSubscribe()
+        {
+            var geospatialMenuElement = new DetectionMenuElementModel(
+                text: "Geospatial: ---",
+                onClick: OnClickGeospatial);
+
+            IsGeospatialVisibleProperty
+                .Subscribe(isVisible =>
+                {
+                    var text = isVisible ? "Geospatial: 表示" : "Geospatial: 非表示";
+                    geospatialMenuElement.TextProperty.Value = text;
+                })
+                .AddTo(disposable);
+
+            menuModel.AddElement(geospatialMenuElement);
+        }
+
+        private void OnClickGeospatial()
+        {
+            var isVisible = IsGeospatialVisibleProperty.Value;
+            IsGeospatialVisibleProperty.Value = !isVisible;
         }
     }
 }
