@@ -10,8 +10,7 @@
     "email": "kouichi.inoue@synesthesias.jp"
   },
   "dependencies": {
-    "com.unity.addressables": "1.22.3",
-    "com.unity.textmeshpro": "3.0.6"
+    "com.unity.xr.arkit": "5.1.5"
   },
   "samples": [
     {

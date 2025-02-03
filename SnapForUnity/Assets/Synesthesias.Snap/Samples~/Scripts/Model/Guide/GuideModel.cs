@@ -6,13 +6,17 @@ namespace Synesthesias.Snap.Sample
     public class GuideModel
     {
         private readonly SceneModel sceneModel;
+        private readonly PlatformModel platformModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public GuideModel(SceneModel sceneModel)
+        public GuideModel(
+            SceneModel sceneModel,
+            PlatformModel platformModel)
         {
             this.sceneModel = sceneModel;
+            this.platformModel = platformModel;
         }
 
         /// <summary>
@@ -20,7 +24,11 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void Close()
         {
-            sceneModel.Transition(SceneNameDefine.Detection);
+            var sceneName = platformModel.IsSupportedMobileDevice()
+                ? SceneNameDefine.MobileDetection
+                : SceneNameDefine.EditorDetection;
+
+            sceneModel.Transition(sceneName);
         }
     }
 }

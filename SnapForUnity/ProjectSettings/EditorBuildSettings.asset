@@ -15,8 +15,21 @@ EditorBuildSettings:
     path: Assets/Samples/Synesthesias.Snap/Scenes/GuideScene.unity
     guid: 92a871acd76e449baabcd9c93974a586
   - enabled: 1
-    path: Assets/Samples/Synesthesias.Snap/Scenes/DetectionScene.unity
+    path: Assets/Samples/Synesthesias.Snap/Scenes/Detection/MobileDetectionScene.unity
     guid: f9e5d1c99a8e5431d9694ae44b30cda0
+  - enabled: 0
+    path: Assets/Samples/ARCore Extensions/1.47.0/Geospatial Sample/Scenes/GeospatialArf4.unity
+    guid: 1ed15e9657253406185e4b2c7c5a4fc4
+  - enabled: 1
+    path: Assets/Samples/Synesthesias.Snap/Scenes/ValidationScene.unity
+    guid: 5feb3602521e74400a928df340d5df1b
+  - enabled: 1
+    path: Assets/Samples/Synesthesias.Snap/Scenes/Detection/EditorDetectionScene.unity
+    guid: 35d1e027ffb2b4b62832382994e17c4b
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 90bd4ffd7f1764e3090eda9bc46bc38f, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 49e9ad0ba923d4a1ca8a31fe6ea8ed44, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 734990228937845a7823f3bcccf81dcd, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 6785925a4bba74b248322e71ccb4909c, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: eb78c287dc6eb4f2c901efb12402b7fa, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 27e98f81942824945b11bd75dfd165bd, type: 2}

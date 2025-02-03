@@ -6,13 +6,21 @@
         "Unity.Addressables",
         "Unity.Localization",
         "Unity.TextMeshPro",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.CoreUtils",
+        "Google.XR.ARCoreExtensions",
         "VContainer",
         "UniTask",
         "UniTask.Addressables",
         "R3.Unity",
         "Synesthesias.Snap"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "iOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

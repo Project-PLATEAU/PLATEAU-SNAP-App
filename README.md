@@ -13,10 +13,11 @@
 
 ### Dependencies
 
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Addressables&message=1.22.3&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.addressables@1.22/manual/index.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=TextMeshPro&message=3.0.6&color=0e6da0)](https://docs.unity3d.com/ja/2022.3/Manual/com.unity.textmeshpro.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=UniTask&message=2.5.10&color=0e6da0)](https://github.com/Cysharp/UniTask/releases/tag/2.5.10)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=R3&message=1.2.9&color=0e6da0)](https://github.com/Cysharp/R3/releases/tag/1.2.9)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=AR%20Foundation&message=5.1.5&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Google%20ARCore%20XR%20Plugin&message=5.1.5&color=0e6da0)](https://docs.unity3d.com/ja/Packages/com.unity.xr.arkit@5.1/manual/index.html)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=ARCore%20Extensions&message=1.22.3&color=0e6da0)](https://github.com/google-ar/arcore-unity-extensions)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=UniTask&message=2.5.10&color=0e6da0)](https://github.com/Cysharp/UniTask/releases/tag/2.5.10)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=R3&message=1.2.9&color=0e6da0)](https://github.com/Cysharp/R3/releases/tag/1.2.9)
 
 ### Installation
 
@@ -26,11 +27,11 @@ Package/manifest.jsonに以下を追記します。
 ```json
 {
   "dependencies": {
+    "jp.synesthesias.plateau.snap": "https://github.com/Synesthesias/PLATEAU-SNAP-App.git?path=SnapForUnity/Assets/Synesthesias.Snap",
     "com.cysharp.r3": "1.2.9",
     "com.cysharp.unitask": "2.5.10",
-    "com.unity.addressables": "1.22.3",
-    "com.unity.textmeshpro": "3.0.6",
-    "org.nuget.r3": "1.2.9"
+    "org.nuget.r3": "1.2.9",
+    "com.google.ar.core.arfoundation.extensions": "https://github.com/google-ar/arcore-unity-extensions.git#1.47.0",
   },
   "scopedRegistries": [
     {
@@ -49,7 +50,10 @@ Package/manifest.jsonに以下を追記します。
 
 ### Dependencies
 
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=VContainer&message=1.16.8&color=0e6da0)](https://github.com/hadashiA/VContainer/releases/tag/1.16.8)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Addressables&message=1.22.3&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.addressables@1.22/manual/index.html)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Localization&message=1.5.4&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.localization@1.5/manual/index.html)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=TextMeshPro&message=3.0.6&color=0e6da0)](https://docs.unity3d.com/ja/2022.3/Manual/com.unity.textmeshpro.html)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=VContainer&message=1.16.8&color=0e6da0)](https://github.com/hadashiA/VContainer/releases/tag/1.16.8)
 
 ### Installation
 
@@ -58,6 +62,9 @@ PackageManagerからSampleを追加する場合は上記のRuntime側のInstalla
 ```json
 {
   "dependencies": {
+    "com.unity.addressables": "1.22.3",
+    "com.unity.localization": "1.5.4",
+    "com.unity.textmeshpro": "3.0.6",
     "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.16.8",
   }
 }
@@ -76,6 +83,32 @@ git config core.symlinks true
 ```
 
 Macユーザーは特別な対応は不要です。
+
+## ARCoreの設定方法 (iOS)
+
+- Project Settings > XR Plugin-in Management > ARCore Extensions
+- iOS Support Enabledにチェックを入れます
+- Geospatialにチェックを入れます
+
+# APIキーの管理に注意してください
+
+- APIキーはgitで管理しないようにしください
+- APIキーをアプリに組み込まないようにしてください
+- APIキーはあくまで暫定対応です
+  - Android: Keylessを使用してください
+  - iOS: Authentication Tokenを使用してください
+- APIキーを間違ってコミットしないように以下の設定ファイルは.gitignoreで除外しています
+
+```
+/ProjectSettings/ARCoreExtensionsProjectSettings.json
+```
+
+### ARCoreのAPIキーの設定方法
+
+- Project Settings > XR Plugin-in Management > ARCore Extensions
+- iOS Authentication StrategyをAPI Keyに設定します
+  - 本来であればAuthentication Tokenを使用することを推奨します
+  - iOS API KeyにAPIキーを設定します
 
 ## プルリクエストの作成手順
 

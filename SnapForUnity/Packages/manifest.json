@@ -2,6 +2,7 @@
   "dependencies": {
     "com.cysharp.r3": "1.2.9",
     "com.cysharp.unitask": "2.5.10",
+    "com.google.ar.core.arfoundation.extensions": "https://github.com/google-ar/arcore-unity-extensions.git#1.47.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.addressables": "1.22.3",
     "com.unity.collab-proxy": "2.6.0",
@@ -11,6 +12,7 @@
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.4",
+    "com.unity.xr.arkit": "5.1.5",
     "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.16.8",
     "org.nuget.r3": "1.2.9",
     "com.unity.modules.ai": "1.0.0",

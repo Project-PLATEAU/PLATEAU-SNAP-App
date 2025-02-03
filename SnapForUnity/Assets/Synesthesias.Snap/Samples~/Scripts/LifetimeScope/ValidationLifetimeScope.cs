@@ -1,0 +1,40 @@
+using UnityEngine;
+using VContainer;
+using VContainer.Unity;
+
+namespace Synesthesias.Snap.Sample
+{
+    public class ValidationLifetimeScope : BaseLifetimeScope
+    {
+        [SerializeField] private ValidationView validationView;
+        [SerializeField] private ValidationDialogView dialogPrefab;
+        [SerializeField] private Transform dialogTransform;
+
+        protected override void Configure(IContainerBuilder builder)
+        {
+            base.Configure(builder);
+            ConfigureValidation(builder);
+            ConfigureDialog(builder);
+        }
+
+        private void ConfigureValidation(IContainerBuilder builder)
+        {
+            // TODO: ValidationModelを登録
+            builder.Register<MockValidationModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+
+            builder.RegisterInstance(validationView);
+            builder.RegisterEntryPoint<ValidationPresenter>();
+        }
+
+        private void ConfigureDialog(IContainerBuilder builder)
+        {
+            builder.Register<ValidationDialogModel>(Lifetime.Singleton);
+
+            builder.RegisterComponentInNewPrefab(dialogPrefab, Lifetime.Singleton)
+                .UnderTransform(dialogTransform);
+
+            builder.RegisterEntryPoint<ValidationDialogPresenter>();
+        }
+    }
+}

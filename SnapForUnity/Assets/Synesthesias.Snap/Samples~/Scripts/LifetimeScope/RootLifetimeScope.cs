@@ -18,9 +18,12 @@ namespace Synesthesias.Snap.Sample
         {
             base.Configure(builder);
             builder.Register<SceneModel>(Lifetime.Singleton);
+            builder.Register<PlatformModel>(Lifetime.Singleton);
             builder.RegisterInstance(residentView);
             ConfigureLocalization(builder);
             ConfigureBoot(builder);
+            ConfigureAPI(builder);
+            ConfigureRepository(builder);
         }
 
         private void ConfigureLocalization(IContainerBuilder builder)
@@ -30,8 +33,27 @@ namespace Synesthesias.Snap.Sample
 
         private void ConfigureBoot(IContainerBuilder builder)
         {
-            builder.Register<BootModel>(Lifetime.Singleton);
-            builder.RegisterEntryPoint<BootPresenter>();
+#if UNITY_EDITOR
+            builder.Register<MockServerModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+#else
+            builder.Register<ServerModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+#endif
+        }
+
+        private void ConfigureAPI(IContainerBuilder builder)
+        {
+            builder.Register<MockEndPointModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+
+            builder.Register<MockAPIModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+        }
+
+        private void ConfigureRepository(IContainerBuilder builder)
+        {
+            builder.Register<TextureRepository>(Lifetime.Singleton);
         }
     }
 }

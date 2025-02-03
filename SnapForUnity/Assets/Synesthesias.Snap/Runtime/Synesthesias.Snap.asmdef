@@ -2,14 +2,18 @@
     "name": "Synesthesias.Snap",
     "rootNamespace": "",
     "references": [
-        "Unity.ResourceManager",
-        "Unity.Addressables",
-        "Unity.TextMeshPro",
+        "Unity.XR.ARFoundation",
+        "Unity.XR.ARSubsystems",
+        "Unity.XR.CoreUtils",
+        "Google.XR.ARCoreExtensions",
         "UniTask",
-        "UniTask.Addressables",
         "R3.Unity"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "iOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

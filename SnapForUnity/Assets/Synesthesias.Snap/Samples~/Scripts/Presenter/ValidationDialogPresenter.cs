@@ -6,20 +6,23 @@ using VContainer.Unity;
 
 namespace Synesthesias.Snap.Sample
 {
+    /// <summary>
+    /// 検証ダイアログのPresenter
+    /// </summary>
     public class ValidationDialogPresenter : IAsyncStartable, IDisposable
     {
         private readonly CompositeDisposable disposable = new();
-        private readonly ValidationDialogModel model;
+        private readonly ValidationDialogModel dialogModel;
         private readonly ValidationDialogView view;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public ValidationDialogPresenter(
-            ValidationDialogModel model,
+            ValidationDialogModel dialogModel,
             ValidationDialogView view)
         {
-            this.model = model;
+            this.dialogModel = dialogModel;
             this.view = view;
             OnSubscribe();
         }
@@ -42,31 +45,31 @@ namespace Synesthesias.Snap.Sample
 
         private void OnSubscribe()
         {
-            model.ParameterAsObservable()
+            dialogModel.ParameterAsObservable()
                 .Subscribe(OnParameter)
                 .AddTo(disposable);
 
-            model.IsVisibleProperty
+            dialogModel.IsVisibleProperty
                 .Subscribe(OnIsVisible)
                 .AddTo(disposable);
 
-            model.TitleAsObservable()
+            dialogModel.TitleAsObservable()
                 .Subscribe(OnTitle)
                 .AddTo(disposable);
 
-            model.DescriptionAsObservable()
+            dialogModel.DescriptionAsObservable()
                 .Subscribe(OnDescription)
                 .AddTo(disposable);
 
-            model.IsLeftValidProperty
+            dialogModel.IsLeftValidProperty
                 .Subscribe(OnIsLeftValid)
                 .AddTo(disposable);
 
-            model.IsRightValidProperty
+            dialogModel.IsRightValidProperty
                 .Subscribe(OnIsRightValid)
                 .AddTo(disposable);
 
-            model.IsValidAsObservable()
+            dialogModel.IsValidAsObservable()
                 .Subscribe(OnIsValid)
                 .AddTo(disposable);
         }
@@ -99,21 +102,21 @@ namespace Synesthesias.Snap.Sample
 
         private void OnIsLeftValid(bool isValid)
         {
-            var sprite = model.GetTextIconSprite(view.IconSprites, isValid);
+            var sprite = dialogModel.GetTextIconSprite(view.IconSprites, isValid);
             view.LeftIconImage.sprite = sprite;
             view.LeftIconImage.gameObject.SetActive(true);
         }
 
         private void OnIsRightValid(bool isValid)
         {
-            var sprite = model.GetTextIconSprite(view.IconSprites, isValid);
+            var sprite = dialogModel.GetTextIconSprite(view.IconSprites, isValid);
             view.RightIconImage.sprite = sprite;
             view.RightIconImage.gameObject.SetActive(true);
         }
 
         private void OnIsValid(bool isValid)
         {
-            var sprite = model.GetTitleIconSprite(view.IconSprites, isValid);
+            var sprite = dialogModel.GetTitleIconSprite(view.IconSprites, isValid);
             view.IconImage.sprite = sprite;
             view.IconImage.gameObject.SetActive(true);
             view.ConfirmButton.interactable = isValid;
