@@ -66,6 +66,9 @@ namespace Synesthesias.Snap.Sample
             builder.Register<DetectionTouchModel>(Lifetime.Singleton)
                 .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
                 .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
+
+            // TODO: 削除する
+            builder.Register<MockValidationResultModel>(Lifetime.Singleton);
         }
     }
 }

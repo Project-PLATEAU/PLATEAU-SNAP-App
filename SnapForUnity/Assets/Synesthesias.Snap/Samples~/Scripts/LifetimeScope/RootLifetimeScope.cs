@@ -47,6 +47,7 @@ namespace Synesthesias.Snap.Sample
             builder.Register<MockEndPointModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
 
+            // TODO: APIModelに差し替える
             builder.Register<MockAPIModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
         }
@@ -54,6 +55,7 @@ namespace Synesthesias.Snap.Sample
         private void ConfigureRepository(IContainerBuilder builder)
         {
             builder.Register<TextureRepository>(Lifetime.Singleton);
+            builder.Register<SettingRepository>(Lifetime.Singleton);
         }
     }
 }

@@ -25,6 +25,7 @@ namespace Synesthesias.Snap.Sample
         private readonly GeospatialAsyncModel geospatialAsyncModel;
         private readonly MobileMeshModel meshModel;
         private readonly DetectionTouchModel touchModel;
+        private readonly MockValidationResultModel resultModel;
         private CancellationTokenSource createMeshCancellationTokenSource;
 
         /// <summary>
@@ -49,7 +50,8 @@ namespace Synesthesias.Snap.Sample
             DetectionMenuModel menuModel,
             GeospatialAsyncModel geospatialAsyncModel,
             MobileMeshModel meshModel,
-            DetectionTouchModel touchModel)
+            DetectionTouchModel touchModel,
+            MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
             this.sceneModel = sceneModel;
@@ -59,6 +61,7 @@ namespace Synesthesias.Snap.Sample
             this.geospatialAsyncModel = geospatialAsyncModel;
             this.meshModel = meshModel;
             this.touchModel = touchModel;
+            this.resultModel = resultModel;
         }
 
         /// <summary>
@@ -81,9 +84,10 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellation)
         {
-            await localizationModel.InitializeAsync(
-                tableName: "DetectionStringTableCollection",
-                cancellation);
+            await UniTask.WhenAll(localizationModel.InitializeAsync(
+                    tableName: "DetectionStringTableCollection",
+                    cancellation),
+                resultModel.StartAsync(cancellation));
 
             CreateMenu();
 

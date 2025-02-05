@@ -19,6 +19,7 @@ namespace Synesthesias.Snap.Sample
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionTouchModel touchModel;
         private readonly EditorMeshModel meshModel;
+        private readonly MockValidationResultModel resultModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
 
         /// <summary>
@@ -37,7 +38,8 @@ namespace Synesthesias.Snap.Sample
             EditorWebCameraModel cameraModel,
             DetectionMenuModel menuModel,
             DetectionTouchModel touchModel,
-            EditorMeshModel meshModel)
+            EditorMeshModel meshModel,
+            MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
             this.sceneModel = sceneModel;
@@ -46,6 +48,7 @@ namespace Synesthesias.Snap.Sample
             this.menuModel = menuModel;
             this.touchModel = touchModel;
             this.meshModel = meshModel;
+            this.resultModel = resultModel;
         }
 
         /// <summary>
@@ -67,7 +70,8 @@ namespace Synesthesias.Snap.Sample
             await UniTask.WhenAll(localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
                     cancellation),
-                cameraModel.StartAsync(cancellation));
+                cameraModel.StartAsync(cancellation),
+                resultModel.StartAsync(cancellation));
 
             CreateMenu();
         }

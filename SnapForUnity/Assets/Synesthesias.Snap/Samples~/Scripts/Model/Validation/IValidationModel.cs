@@ -5,6 +5,9 @@ using VContainer.Unity;
 
 namespace Synesthesias.Snap.Sample
 {
+    /// <summary>
+    /// 撮影判定画面のModel
+    /// </summary>
     public interface IValidationModel : IAsyncStartable
     {
         /// <summary>

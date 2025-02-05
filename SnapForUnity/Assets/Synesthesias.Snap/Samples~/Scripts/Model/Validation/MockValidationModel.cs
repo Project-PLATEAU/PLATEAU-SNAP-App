@@ -8,10 +8,14 @@ using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
 {
+    /// <summary>
+    /// 撮影判定画面のModel(Mock)
+    /// </summary>
     public class MockValidationModel : IValidationModel, IDisposable
     {
         private readonly CompositeDisposable disposable = new();
         private readonly TextureRepository textureRepository;
+        private readonly SettingRepository settingRepository;
         private readonly SceneModel sceneModel;
         private readonly PlatformModel platformModel;
         private readonly LocalizationModel localizationModel;
@@ -24,6 +28,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public MockValidationModel(
             TextureRepository textureRepository,
+            SettingRepository settingRepository,
             SceneModel sceneModel,
             PlatformModel platformModel,
             LocalizationModel localizationModel,
@@ -31,6 +36,7 @@ namespace Synesthesias.Snap.Sample
             ValidationDialogModel dialogModel)
         {
             this.textureRepository = textureRepository;
+            this.settingRepository = settingRepository;
             this.sceneModel = sceneModel;
             this.platformModel = platformModel;
             this.dialogModel = dialogModel;
@@ -207,9 +213,8 @@ namespace Synesthesias.Snap.Sample
         {
             var second = UnityEngine.Random.Range(2, 5);
             await UniTask.WaitForSeconds(second, cancellationToken: cancellationToken);
-            var isValid = UnityEngine.Random.Range(0, 100) <= 70;
-            isValid = true; // FIXME: 一時的に成功させている
-            dialogModel.IsLeftValidProperty.OnNext(isValid);
+            var isAngleValid = settingRepository.GetIsAngleValid();
+            dialogModel.IsLeftValidProperty.OnNext(isAngleValid);
         }
 
         /// <summary>
@@ -219,9 +224,8 @@ namespace Synesthesias.Snap.Sample
         {
             var second = UnityEngine.Random.Range(2, 5);
             await UniTask.WaitForSeconds(second, cancellationToken: cancellationToken);
-            var isValid = UnityEngine.Random.Range(0, 100) <= 70;
-            isValid = true; // FIXME: 一時的に成功させている
-            dialogModel.IsRightValidProperty.OnNext(isValid);
+            var isSurfaceValid = settingRepository.GetIsSurfaceValid();
+            dialogModel.IsRightValidProperty.OnNext(isSurfaceValid);
         }
     }
 }

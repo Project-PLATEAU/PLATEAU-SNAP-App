@@ -9,14 +9,14 @@ namespace Synesthesias.Snap.Sample
     /// APIモデル(モック)
     /// MockServerと一緒に使用する
     /// </summary>
-    public class MockAPIModel : IAPIModel
+    public class APIModel : IAPIModel
     {
         private readonly IEndPointModel endPointModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public MockAPIModel(
+        public APIModel(
             IEndPointModel endPointModel)
         {
             this.endPointModel = endPointModel;
@@ -36,8 +36,8 @@ namespace Synesthesias.Snap.Sample
             request.uploadHandler = new UploadHandlerRaw(bytes);
             request.SetRequestHeader("Content-Type", "image/png");
 
-            // モックなので通信はしない
-            await UniTask.WaitForSeconds(3, cancellationToken: cancellationToken);
+            await request.SendWebRequest()
+                .ToUniTask(cancellationToken: cancellationToken);
         }
     }
 }
