@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using R3;
 using System.Threading;
+using UnityEngine;
 using VContainer.Unity;
 
 namespace Synesthesias.Snap.Sample
@@ -32,17 +33,18 @@ namespace Synesthesias.Snap.Sample
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
             await model.StartAsync(cancellationToken);
-
-            while (true)
-            {
-                var isDetect = await model.IsDetectAsync(cancellationToken);
-                view.CameraButton.interactable = isDetect;
-                await UniTask.WaitForSeconds(0.5F, cancellationToken: cancellationToken);
-            }
         }
 
         private void OnSubscribe()
         {
+            model.OnSelectedAsObservable()
+                .Subscribe(OnOnSelected)
+                .AddTo(view);
+
+            view.TouchView.OnScreenInputAsObservable()
+                .Subscribe(OnScreenInput)
+                .AddTo(view);
+
             model.IsGeospatialVisibleProperty
                 .Subscribe(OnClickGeospatial)
                 .AddTo(view);
@@ -56,6 +58,16 @@ namespace Synesthesias.Snap.Sample
                 .OnClickAsObservable()
                 .Subscribe(_ => OnClickCameraAsync().Forget())
                 .AddTo(view);
+        }
+
+        private void OnOnSelected(bool isSelected)
+        {
+            view.CameraButton.interactable = isSelected;
+        }
+
+        private void OnScreenInput(Vector2 position)
+        {
+            model.TouchScreen(view.ArCamera, position);
         }
 
         private void OnClickMenu()

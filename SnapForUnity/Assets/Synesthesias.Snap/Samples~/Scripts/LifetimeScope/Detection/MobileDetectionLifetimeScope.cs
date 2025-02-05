@@ -1,3 +1,4 @@
+using Google.XR.ARCoreExtensions;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using VContainer;
@@ -10,22 +11,25 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class MobileDetectionLifetimeScope : BaseLifetimeScope
     {
-        [SerializeField] private MobileDetectionView detectionView;
+        [SerializeField] private ARAnchorManager arAnchorManager;
         [SerializeField] private ARCameraManager arCameraManager;
-        [SerializeField] private GeospatialController geospatialController;
+        [SerializeField] private AREarthManager arEarthManager;
+        [SerializeField] private ARRaycastManager arRaycastManager;
+        [SerializeField] private ARStreetscapeGeometryManager arStreetScapeGeometryManager;
+        [SerializeField] private GeospatialModel geospatialModel;
+        [SerializeField] private MobileDetectionView detectionView;
         [SerializeField] private DetectionMenuView menuView;
+        [SerializeField] private MobileDetectionMeshView detectionMeshViewTemplate;
 
         protected override void Configure(IContainerBuilder builder)
         {
             base.Configure(builder);
-            builder.RegisterInstance(detectionView);
-            builder.RegisterInstance(arCameraManager);
-            builder.RegisterInstance(geospatialController);
-            builder.RegisterInstance(detectionView.CameraRawImage);
             builder.Register<MobileARCameraModel>(Lifetime.Singleton);
-            builder.Register<MobileDetectionModel>(Lifetime.Singleton);
-            builder.RegisterEntryPoint<MobileDetectionPresenter>();
+            builder.Register<MobileMeshModel>(Lifetime.Singleton);
             ConfigureMenu(builder);
+            ConfigureScreenTouch(builder);
+            ConfigureAR(builder);
+            ConfigureDetection(builder);
         }
 
         private void ConfigureMenu(IContainerBuilder builder)
@@ -33,6 +37,35 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterInstance(menuView);
             builder.Register<DetectionMenuModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<DetectionMenuPresenter>();
+        }
+
+        private void ConfigureScreenTouch(IContainerBuilder builder)
+        {
+            builder.Register<ScreenTouchModel>(Lifetime.Singleton);
+        }
+
+        private void ConfigureAR(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(arCameraManager);
+            builder.RegisterInstance(arAnchorManager);
+            builder.RegisterInstance(arEarthManager);
+            builder.RegisterInstance(arRaycastManager);
+            builder.RegisterInstance(arStreetScapeGeometryManager);
+            builder.RegisterInstance(geospatialModel);
+            builder.Register<GeospatialAsyncModel>(Lifetime.Singleton);
+        }
+
+        private void ConfigureDetection(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(detectionView);
+            builder.RegisterInstance(detectionView.CameraRawImage);
+            builder.Register<MobileDetectionModel>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<MobileDetectionPresenter>();
+            builder.RegisterInstance(detectionMeshViewTemplate);
+
+            builder.Register<DetectionTouchModel>(Lifetime.Singleton)
+                .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
+                .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
         }
     }
 }

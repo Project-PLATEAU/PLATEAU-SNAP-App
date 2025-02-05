@@ -1,22 +1,31 @@
 using Cysharp.Threading.Tasks;
+using R3;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Synesthesias.Snap.Sample
 {
     /// <summary>
     /// 建物検出シーンのModel(Editor)
     /// </summary>
-    public class EditorDetectionModel
+    public class EditorDetectionModel : IDisposable
     {
         private readonly TextureRepository textureRepository;
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly EditorWebCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
+        private readonly DetectionTouchModel touchModel;
+        private readonly EditorMeshModel meshModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
+
+        /// <summary>
+        /// オブジェクトが選択されたかのObservable
+        /// </summary>
+        public Observable<bool> OnSelectedAsObservable()
+            => touchModel.OnSelectedAsObservable();
 
         /// <summary>
         /// コンストラクタ
@@ -26,13 +35,28 @@ namespace Synesthesias.Snap.Sample
             SceneModel sceneModel,
             LocalizationModel localizationModel,
             EditorWebCameraModel cameraModel,
-            DetectionMenuModel menuModel)
+            DetectionMenuModel menuModel,
+            DetectionTouchModel touchModel,
+            EditorMeshModel meshModel)
         {
             this.textureRepository = textureRepository;
             this.sceneModel = sceneModel;
+            this.localizationModel = localizationModel;
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
-            this.localizationModel = localizationModel;
+            this.touchModel = touchModel;
+            this.meshModel = meshModel;
+        }
+
+        /// <summary>
+        /// 破棄
+        /// </summary>
+        public void Dispose()
+        {
+            foreach (var source in cancellationTokenSources)
+            {
+                source.Cancel();
+            }
         }
 
         /// <summary>
@@ -45,9 +69,33 @@ namespace Synesthesias.Snap.Sample
                     cancellation),
                 cameraModel.StartAsync(cancellation));
 
+            CreateMenu();
+        }
+
+        private void CreateMenu()
+        {
             menuModel.AddElement(new DetectionMenuElementModel(
                 text: "カメラデバイス切替",
                 onClick: cameraModel.ToggleDevice));
+
+            menuModel.AddElement(new DetectionMenuElementModel(
+                text: "アンカーのクリア",
+                onClick: OnClickClear));
+        }
+
+        /// <summary>
+        /// 画面をタッチ
+        /// </summary>
+        public void TouchScreen(Camera camera, Vector2 screenPosition)
+        {
+            if (touchModel.IsTapToCreateAnchor)
+            {
+                OnCreateAnchor(camera, screenPosition);
+            }
+            else
+            {
+                touchModel.TouchScreen(camera, screenPosition);
+            }
         }
 
         /// <summary>
@@ -58,24 +106,13 @@ namespace Synesthesias.Snap.Sample
             menuModel.IsVisibleProperty.Value = true;
         }
 
+        /// <summary>
+        /// カメラのTextureを取得
+        /// </summary>
         public Texture GetCameraTexture()
         {
             var result = cameraModel.GetCameraTexture();
             return result;
-        }
-
-        /// <summary>
-        /// 建物が検出されているか
-        /// </summary>
-        public async UniTask<bool> IsDetectAsync(CancellationToken cancellationToken)
-        {
-            var source = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-            var token = source.Token;
-            cancellationTokenSources.Add(source);
-            var second = Random.Range(1, 3);
-            await UniTask.WaitForSeconds(second, cancellationToken: token);
-            var isDetect = Random.Range(0, 100) <= 70;
-            return isDetect;
         }
 
         /// <summary>
@@ -92,6 +129,26 @@ namespace Synesthesias.Snap.Sample
             }
 
             sceneModel.Transition(SceneNameDefine.Validation);
+        }
+
+        private void OnCreateAnchor(Camera camera, Vector3 screenPosition)
+        {
+            const float DistanceFromCamera = 10.0F;
+            var modifiedScreenPosition = screenPosition;
+            modifiedScreenPosition.z = DistanceFromCamera;
+            var worldPosition = camera.ScreenToWorldPoint(modifiedScreenPosition);
+
+            var mesh = meshModel.CreateMeshAtTransform(
+                position: worldPosition,
+                rotation: Quaternion.identity);
+
+            touchModel.SetDetectedMeshView(mesh);
+        }
+
+        private void OnClickClear()
+        {
+            meshModel.Clear();
+            touchModel.Clear();
         }
     }
 }

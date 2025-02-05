@@ -1,9 +1,11 @@
 using R3;
+using System;
 
 namespace Synesthesias.Snap.Sample
 {
-    public class DetectionMenuModel
+    public class DetectionMenuModel : IDisposable
     {
+        private readonly CompositeDisposable disposable = new();
         private readonly Subject<DetectionMenuElementModel> addElementSubject = new();
         private readonly SceneModel sceneModel;
 
@@ -27,6 +29,15 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
+        /// 破棄
+        /// </summary>
+        public void Dispose()
+        {
+            disposable.Dispose();
+            disposable.Clear();
+        }
+
+        /// <summary>
         /// 要素を追加
         /// </summary>
         public void PopulateElements()
@@ -45,6 +56,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void AddElement(DetectionMenuElementModel element)
         {
+            disposable.Add(element);
             addElementSubject.OnNext(element);
         }
 

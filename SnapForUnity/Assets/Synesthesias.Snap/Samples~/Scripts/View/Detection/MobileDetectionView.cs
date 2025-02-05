@@ -8,10 +8,38 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class MobileDetectionView : MonoBehaviour
     {
+        [SerializeField] private Material detectedMaterial;
+        [SerializeField] private Material selectedMaterial;
+        [SerializeField] private DetectionTouchView touchView;
+        [SerializeField] private Camera arCamera;
         [SerializeField] private Button menuButton;
         [SerializeField] private GameObject geospatialObject;
         [SerializeField] private RawImage cameraRawImage;
         [SerializeField] private Button cameraButton;
+
+        /// <summary>
+        /// 検出時のMaterial
+        /// </summary>
+        public Material DetectedMaterial
+            => detectedMaterial;
+
+        /// <summary>
+        /// 選択中のMaterial
+        /// </summary>
+        public Material SelectedMaterial
+            => selectedMaterial;
+
+        /// <summary>
+        /// タッチ関連のView
+        /// </summary>
+        public DetectionTouchView TouchView
+            => touchView;
+
+        /// <summary>
+        /// ARカメラ
+        /// </summary>
+        public Camera ArCamera
+            => arCamera;
 
         /// <summary>
         /// メニューボタン

@@ -11,13 +11,15 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly WebCamDevice[] devices;
         private readonly WebCamTexture webCamTexture;
+        private readonly RenderTexture renderTexture;
         private int deviceIndex;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public EditorWebCameraModel()
+        public EditorWebCameraModel(RenderTexture renderTexture)
         {
+            this.renderTexture = renderTexture;
             webCamTexture = new WebCamTexture();
             devices = WebCamTexture.devices;
         }
@@ -74,6 +76,8 @@ namespace Synesthesias.Snap.Sample
                 var colors = webCamTexture.GetPixels();
                 result.SetPixels(colors);
                 result.Apply();
+
+                // TODO: RenderTextureの画像をresultに乗算する
             }
             catch
             {

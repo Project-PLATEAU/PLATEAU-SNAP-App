@@ -48,7 +48,7 @@ namespace Synesthesias.Snap.Sample
     /// <summary>
     /// GeospatialControllerを複製したもの
     /// </summary>
-    public class GeospatialController : MonoBehaviour
+    public class GeospatialModel : MonoBehaviour
     {
         [Header("AR Components")]
         /// <summary>
@@ -176,6 +176,11 @@ namespace Synesthesias.Snap.Sample
         /// Text displaying debug information, only activated in debug build.
         /// </summary>
         public Text DebugText;
+
+        /// <summary>
+        /// 画面をタップしたらアンカーを設置するか
+        /// </summary>
+        public bool IsPlaceAnchorByScreenTap { get; set; }
 
         /// <summary>
         /// Help message shown while localizing.
@@ -710,13 +715,7 @@ namespace Synesthesias.Snap.Sample
                     _clearStreetscapeGeometryRenderObjects = false;
                 }
 
-                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began
-                                         && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)
-                                         && _anchorObjects.Count < _storageLimit)
-                {
-                    // Set anchor on screen tap.
-                    PlaceAnchorByScreenTap(Input.GetTouch(0).position);
-                }
+                OnTapScreen();
 
                 // Hide anchor settings and toggles if the storage limit has been reached.
                 if (_anchorObjects.Count >= _storageLimit)
@@ -957,6 +956,22 @@ namespace Synesthesias.Snap.Sample
             return (mapDistance - 2.0f) / (20.0f - 2.0f) + 1.0f;
         }
 
+        private void OnTapScreen()
+        {
+            if (!IsPlaceAnchorByScreenTap)
+            {
+                return;
+            }
+
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began
+                                     && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)
+                                     && _anchorObjects.Count < _storageLimit)
+            {
+                // Set anchor on screen tap.
+                PlaceAnchorByScreenTap(Input.GetTouch(0).position);
+            }
+        }
+
         private void PlaceAnchorByScreenTap(Vector2 position)
         {
             if (_streetscapeGeometryVisibility)
@@ -1042,11 +1057,12 @@ namespace Synesthesias.Snap.Sample
 
         private GeospatialAnchorHistory CreateHistory(Pose pose, AnchorType anchorType)
         {
-            GeospatialPose geospatialPose = EarthManager.Convert(pose);
+            var geospatialPose = EarthManager.Convert(pose);
 
-            GeospatialAnchorHistory history = new GeospatialAnchorHistory(
+            var history = new GeospatialAnchorHistory(
                 geospatialPose.Latitude, geospatialPose.Longitude, geospatialPose.Altitude,
                 anchorType, geospatialPose.EunRotation);
+
             return history;
         }
 

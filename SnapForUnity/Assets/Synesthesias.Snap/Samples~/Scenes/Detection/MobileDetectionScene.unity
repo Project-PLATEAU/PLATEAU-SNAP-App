@@ -275,10 +275,15 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  detectionView: {fileID: 1084631503}
+  arAnchorManager: {fileID: 77910947}
   arCameraManager: {fileID: 523198169}
-  geospatialController: {fileID: 160832975}
+  arEarthManager: {fileID: 77910945}
+  arRaycastManager: {fileID: 77910946}
+  arStreetScapeGeometryManager: {fileID: 77910944}
+  geospatialModel: {fileID: 160832975}
+  detectionView: {fileID: 1084631503}
   menuView: {fileID: 5408049611502967477}
+  detectionMeshViewTemplate: {fileID: 5933794237506062931, guid: 29bac43bb9d3648338639c58a3600a43, type: 3}
 --- !u!1 &77910942
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8327b807ca7a4c87b3b7afa5a2cb0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnchorPrefab: {fileID: 5831908950388203684, guid: f09a13e3d47394ab588884ffd124d732, type: 3}
+  AnchorPrefab: {fileID: 0}
 --- !u!114 &77910945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,7 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.26666668, g: 0.26666668, b: 0.26666668, a: 0.5019608}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -649,7 +654,7 @@ GameObject:
   - component: {fileID: 160832974}
   - component: {fileID: 160832975}
   m_Layer: 0
-  m_Name: GeospatialController
+  m_Name: GeospatialModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,11 +669,11 @@ Transform:
   m_GameObject: {fileID: 160832972}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 585, y: 1266, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2083272874}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &160832975
 MonoBehaviour:
@@ -694,8 +699,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 4b2d0d8634e20448cb7ef06579fe9bbb, type: 2}
   - {fileID: 2100000, guid: 3a5a66d1f5c534a27a708c3f235eaa5d, type: 2}
   StreetscapeGeometryMaterialTerrain: {fileID: 2100000, guid: 775ce3c1866ce4692b5d2cd9c1848a39, type: 2}
-  GeospatialPrefab: {fileID: 5831908950388203684, guid: f09a13e3d47394ab588884ffd124d732, type: 3}
-  TerrainPrefab: {fileID: 5831908950388203684, guid: a46bc1cf69cc345ba81f34525c7e1b09, type: 3}
+  GeospatialPrefab: {fileID: 7024758289656468688, guid: 29bac43bb9d3648338639c58a3600a43, type: 3}
+  TerrainPrefab: {fileID: 7024758289656468688, guid: 29bac43bb9d3648338639c58a3600a43, type: 3}
   PrivacyPromptCanvas: {fileID: 711478315}
   VPSCheckCanvas: {fileID: 86428935}
   ARViewCanvas: {fileID: 622635384}
@@ -2082,7 +2087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2783,6 +2788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084631501}
+  - component: {fileID: 1084631504}
   - component: {fileID: 1084631503}
   m_Layer: 5
   m_Name: View
@@ -2829,10 +2835,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3d6fbefaf54b7dbafcfef340bdc507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectedMaterial: {fileID: 2100000, guid: 3d9f65d76060e4ebda16e4a8c60986ec, type: 2}
+  selectedMaterial: {fileID: 2100000, guid: dad49b04de1874cdd8b6f2b86d928f22, type: 2}
+  touchView: {fileID: 1084631504}
+  arCamera: {fileID: 523198172}
   menuButton: {fileID: 1621886168}
   geospatialObject: {fileID: 169797083}
   cameraRawImage: {fileID: 1276176877}
   cameraButton: {fileID: 1684428625}
+--- !u!114 &1084631504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084631500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c3e4102b32490f88cbcc6ca780d40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1082093643}
 --- !u!1 &1104063735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,7 +3947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4989,7 +5012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 0.5019608}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5144,7 +5167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 0.5019608}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5696,7 +5719,6 @@ RectTransform:
   - {fileID: 169797084}
   - {fileID: 86428936}
   - {fileID: 711478316}
-  - {fileID: 160832974}
   - {fileID: 275408494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6285,4 +6307,5 @@ SceneRoots:
   - {fileID: 2107980354}
   - {fileID: 77910943}
   - {fileID: 1104063738}
+  - {fileID: 160832974}
   - {fileID: 32907724}
