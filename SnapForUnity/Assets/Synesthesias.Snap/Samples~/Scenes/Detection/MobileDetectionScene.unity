@@ -4054,8 +4054,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 160832975}
+        m_TargetAssemblyTypeName: Synesthesias.Snap.Sample.GeospatialModel, Synesthesias.Snap.Sample
         m_MethodName: OnContinueClicked
         m_Mode: 1
         m_Arguments:

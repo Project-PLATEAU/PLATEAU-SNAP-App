@@ -1,0 +1,9 @@
+{
+  "packageName": "Synesthesias.PLATEAU.Snap.Generated",
+  "optionalAssemblyInfo": false,
+  "optionalProjectFile": false,
+  "targetFramework": "netstandard2.1",
+  "library": "httpclient",
+  "userDateTimeForDate": true,
+  "validatable": false
+}

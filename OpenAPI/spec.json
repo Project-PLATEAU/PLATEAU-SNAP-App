@@ -1,0 +1,247 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PLATEAU.Snap.Server",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/building-image": {
+      "post": {
+        "tags": [
+          "Images"
+        ],
+        "summary": "撮影した建物面の画像を登録します。",
+        "operationId": "CreateBuildingImageAsync",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "File",
+                  "Metadata"
+                ],
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "description": "建物面を撮影した画像ファイル",
+                    "format": "binary"
+                  },
+                  "Metadata": {
+                    "type": "string",
+                    "description": "画像に関連するメタデータ"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "Metadata": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "リクエストが成功しました。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BuildingImageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "リクエストが不正です。"
+          },
+          "401": {
+            "description": "認証に失敗しました。"
+          },
+          "404": {
+            "description": "リソースが見つかりません。"
+          },
+          "500": {
+            "description": "サーバー内部でエラーが発生しました。"
+          }
+        }
+      }
+    },
+    "/api/visible-surfaces": {
+      "post": {
+        "tags": [
+          "Surfaces"
+        ],
+        "summary": "現在の位置で撮影可能な面の情報を取得します。",
+        "operationId": "GetVisibleSurfacesAsync",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VisibleSurfacesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VisibleSurfacesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VisibleSurfacesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "リクエストが成功しました。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VisibleSurfacesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "リクエストが不正です。"
+          },
+          "401": {
+            "description": "認証に失敗しました。"
+          },
+          "404": {
+            "description": "リソースが見つかりません。"
+          },
+          "500": {
+            "description": "サーバー内部でエラーが発生しました。"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BuildingImageResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/StatusType"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Coordinate": {
+        "type": "object",
+        "properties": {
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "altitude": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusType": {
+        "enum": [
+          "success",
+          "error"
+        ],
+        "type": "string"
+      },
+      "Surface": {
+        "type": "object",
+        "properties": {
+          "gmlid": {
+            "type": "string",
+            "nullable": true
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VisibleSurfacesRequest": {
+        "required": [
+          "from",
+          "roll",
+          "to"
+        ],
+        "type": "object",
+        "properties": {
+          "from": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Coordinate"
+          },
+          "roll": {
+            "type": "number",
+            "description": "カメラのロール角 (度数法で半時計回りを正とする)",
+            "format": "double"
+          },
+          "max_distance": {
+            "type": "number",
+            "description": "検出する最大距離 (メートル)",
+            "format": "double",
+            "nullable": true
+          },
+          "field_of_view": {
+            "type": "number",
+            "description": "カメラの視野角 (度数法)",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VisibleSurfacesResponse": {
+        "type": "object",
+        "properties": {
+          "surfaces": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Surface"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

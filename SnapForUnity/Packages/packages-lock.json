@@ -321,6 +321,27 @@
       },
       "url": "https://package.openupm.com"
     },
+    "org.nuget.polly": {
+      "version": "8.5.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.polly.core": "8.5.2"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "org.nuget.polly.core": {
+      "version": "8.5.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.bcl.asyncinterfaces": "6.0.0",
+        "org.nuget.microsoft.bcl.timeprovider": "8.0.0",
+        "org.nuget.system.componentmodel.annotations": "4.5.0",
+        "org.nuget.system.threading.tasks.extensions": "4.5.4"
+      },
+      "url": "https://package.openupm.com"
+    },
     "org.nuget.r3": {
       "version": "1.2.9",
       "depth": 0,

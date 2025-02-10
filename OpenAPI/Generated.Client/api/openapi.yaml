@@ -1,0 +1,248 @@
+openapi: 3.0.1
+info:
+  title: PLATEAU.Snap.Server
+  version: "1.0"
+servers:
+- url: /
+paths:
+  /api/building-image:
+    post:
+      operationId: CreateBuildingImageAsync
+      requestBody:
+        content:
+          multipart/form-data:
+            encoding:
+              File:
+                style: form
+              Metadata:
+                style: form
+            schema:
+              $ref: '#/components/schemas/CreateBuildingImageAsync_request'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuildingImageResponse'
+          description: リクエストが成功しました。
+        "400":
+          description: リクエストが不正です。
+        "401":
+          description: 認証に失敗しました。
+        "404":
+          description: リソースが見つかりません。
+        "500":
+          description: サーバー内部でエラーが発生しました。
+      summary: 撮影した建物面の画像を登録します。
+      tags:
+      - Images
+  /api/visible-surfaces:
+    post:
+      operationId: GetVisibleSurfacesAsync
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VisibleSurfacesRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/VisibleSurfacesRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/VisibleSurfacesRequest'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VisibleSurfacesResponse'
+          description: リクエストが成功しました。
+        "400":
+          description: リクエストが不正です。
+        "401":
+          description: 認証に失敗しました。
+        "404":
+          description: リソースが見つかりません。
+        "500":
+          description: サーバー内部でエラーが発生しました。
+      summary: 現在の位置で撮影可能な面の情報を取得します。
+      tags:
+      - Surfaces
+components:
+  schemas:
+    BuildingImageResponse:
+      additionalProperties: false
+      example:
+        id: 0
+        message: message
+        status: success
+      properties:
+        status:
+          $ref: '#/components/schemas/StatusType'
+        id:
+          format: int64
+          nullable: true
+          type: integer
+        message:
+          nullable: true
+          type: string
+      type: object
+    Coordinate:
+      additionalProperties: false
+      example:
+        altitude: 1.4658129805029452
+        latitude: 6.027456183070403
+        longitude: 0.8008281904610115
+      properties:
+        longitude:
+          format: double
+          type: number
+        latitude:
+          format: double
+          type: number
+        altitude:
+          format: double
+          type: number
+      type: object
+    StatusType:
+      enum:
+      - success
+      - error
+      type: string
+    Surface:
+      additionalProperties: false
+      example:
+        coordinates:
+        - - - - 0.8008281904610115
+              - 0.8008281904610115
+            - - 0.8008281904610115
+              - 0.8008281904610115
+          - - - 0.8008281904610115
+              - 0.8008281904610115
+            - - 0.8008281904610115
+              - 0.8008281904610115
+        - - - - 0.8008281904610115
+              - 0.8008281904610115
+            - - 0.8008281904610115
+              - 0.8008281904610115
+          - - - 0.8008281904610115
+              - 0.8008281904610115
+            - - 0.8008281904610115
+              - 0.8008281904610115
+        gmlid: gmlid
+      properties:
+        gmlid:
+          nullable: true
+          type: string
+        coordinates:
+          items:
+            items:
+              items:
+                items:
+                  format: double
+                  type: number
+                type: array
+              type: array
+            type: array
+          nullable: true
+          type: array
+      type: object
+    VisibleSurfacesRequest:
+      additionalProperties: false
+      example:
+        roll: 5.962133916683182
+        from:
+          altitude: 1.4658129805029452
+          latitude: 6.027456183070403
+          longitude: 0.8008281904610115
+        to:
+          altitude: 1.4658129805029452
+          latitude: 6.027456183070403
+          longitude: 0.8008281904610115
+        max_distance: 5.637376656633329
+        field_of_view: 2.3021358869347655
+      properties:
+        from:
+          $ref: '#/components/schemas/Coordinate'
+        to:
+          $ref: '#/components/schemas/Coordinate'
+        roll:
+          description: カメラのロール角 (度数法で半時計回りを正とする)
+          format: double
+          type: number
+        max_distance:
+          description: 検出する最大距離 (メートル)
+          format: double
+          nullable: true
+          type: number
+        field_of_view:
+          description: カメラの視野角 (度数法)
+          format: double
+          nullable: true
+          type: number
+      required:
+      - from
+      - roll
+      - to
+      type: object
+    VisibleSurfacesResponse:
+      additionalProperties: false
+      example:
+        surfaces:
+        - coordinates:
+          - - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+            - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+          - - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+            - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+          gmlid: gmlid
+        - coordinates:
+          - - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+            - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+          - - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+            - - - 0.8008281904610115
+                - 0.8008281904610115
+              - - 0.8008281904610115
+                - 0.8008281904610115
+          gmlid: gmlid
+      properties:
+        surfaces:
+          items:
+            $ref: '#/components/schemas/Surface'
+          nullable: true
+          type: array
+      type: object
+    CreateBuildingImageAsync_request:
+      properties:
+        File:
+          description: 建物面を撮影した画像ファイル
+          format: binary
+          type: string
+        Metadata:
+          description: 画像に関連するメタデータ
+          type: string
+      required:
+      - File
+      - Metadata
+      type: object
+

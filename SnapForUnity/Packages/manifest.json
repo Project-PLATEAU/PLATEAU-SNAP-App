@@ -15,6 +15,7 @@
     "com.unity.xr.arkit": "5.1.5",
     "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.16.8",
     "org.nuget.r3": "1.2.9",
+    "org.nuget.polly": "8.5.2",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

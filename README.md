@@ -110,6 +110,109 @@ Macユーザーは特別な対応は不要です。
   - 本来であればAuthentication Tokenを使用することを推奨します
   - iOS API KeyにAPIキーを設定します
 
+## クライアントのコード生成の方法
+
+```bash
+// openapi-generatorのインストール
+brew install openapi-generator
+
+// OpenAPIのディレクトリへ移動
+cd path/to/OpenAPI
+
+// コードど削除
+rm -rf ./Generated.Client/
+
+// コードを生成
+openapi-generator generate -i spec.json -g csharp -c config_client.json -o ./Generated.Client
+```
+
+### README.mdで依存パッケージの確認
+
+- コードが生成できたら `Generated.Client` ディレクトリの中にある README.md の Dependencies セクションを確認してパッケージの依存を確認します
+
+```markdown
+## Dependencies
+
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 13.0.2 or later
+- [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 5.0.0 or later
+```
+
+README.mdからは以下の2つのパッケージのバージョンの依存があることが判明
+
+- Json.NET (Newtonsoft.Json)
+    - 13.0.2以降
+- System.ComponentModel.Annotations
+    - 5.0.0以降
+
+実際は、`using Polly` の箇所でコンパイルエラーになるため `Polly` のパッケージ名とバージョンを後述の手順で確認します
+
+### openupm-cliでパッケージ名と提供バージョンを確認する
+
+- 例えば `Polly` のパッケージ名とバージョンを確認は以下のような流れで行います
+
+```bash
+// npxをインストールする
+brew install npx
+
+// 検索でパッケージ名を確認する
+// (初回の場合はyでopenupm-cliコマンドをインストールする)
+npx openupm-cli search Polly
+
+// パッケージのバージョン一覧を調べる
+npx openupm-cli info org.nuget.polly
+```
+
+- `npx openupm-cli search Polly` を実行するとパッケージ名は `org.nuget.polly` であることが判明します
+- `npx openupm-cli info org.nuget.polly` を実行すると `org.nuget.polly` の最新バージョンが `8.5.2` であることが判明します
+
+### manifest.jsonに依存パッケージを記載する
+
+- 自動生成される `packages-lock.json` 側に依存パッケージが既に導入されているか確認します
+- packages-lock.jsonに記載がないことが確認できたら `manifest.json` に各種依存パッケージを記載します
+
+- 例: Pollyの場合
+
+```json
+{
+  "dependencies": {
+    "org.nuget.polly": "8.5.2"
+  }
+}
+```
+
+### packages-lock.jsonを確認する
+
+- 自動生成される `packages-lock.json` 側に依存パッケージが導入されているか確認します
+- 今回の場合、 `org.nuget.polly` を導入したことにより前述のREADME.mdのDependenciesに記載があった `Annotation` が `packages-lock.json` に自動的に追記されていることが分かります
+
+```json
+{
+  "dependencies": {
+    "org.nuget.polly": {
+      "version": "8.5.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.polly.core": "8.5.2"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "org.nuget.polly.core": {
+      "version": "8.5.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.microsoft.bcl.asyncinterfaces": "6.0.0",
+        "org.nuget.microsoft.bcl.timeprovider": "8.0.0",
+        "org.nuget.system.componentmodel.annotations": "4.5.0",
+        "org.nuget.system.threading.tasks.extensions": "4.5.4"
+      },
+      "url": "https://package.openupm.com"
+    }
+  }
+}
+```
+
 ## プルリクエストの作成手順
 
 - Githubのリポジトリの画面上部から `Pull requests` タブを選択します

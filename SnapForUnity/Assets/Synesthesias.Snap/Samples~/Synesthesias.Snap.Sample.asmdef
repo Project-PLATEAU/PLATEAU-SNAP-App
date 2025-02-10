@@ -14,7 +14,8 @@
         "UniTask",
         "UniTask.Addressables",
         "R3.Unity",
-        "Synesthesias.Snap"
+        "Synesthesias.Snap",
+        "Synesthesias.Snap.Generated.Sample"
     ],
     "includePlatforms": [
         "Android",
