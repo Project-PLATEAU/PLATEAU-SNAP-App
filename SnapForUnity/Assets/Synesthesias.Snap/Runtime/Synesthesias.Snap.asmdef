@@ -7,7 +7,11 @@
         "Unity.XR.CoreUtils",
         "Google.XR.ARCoreExtensions",
         "UniTask",
-        "R3.Unity"
+        "R3.Unity",
+        "iShape.Mesh2d",
+        "iShape.Geometry",
+        "iShape.Triangulation",
+        "Unity.Mathematics"
     ],
     "includePlatforms": [
         "Android",

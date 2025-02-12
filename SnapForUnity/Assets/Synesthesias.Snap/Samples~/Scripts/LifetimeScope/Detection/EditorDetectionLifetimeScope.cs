@@ -1,3 +1,4 @@
+using Synesthesias.Snap.Runtime;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -12,6 +13,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private EditorDetectionView detectionView;
         [SerializeField] private DetectionMenuView menuView;
         [SerializeField] private EditorDetectionMeshView detectionMeshViewTemplate;
+        [SerializeField] private MeshView meshViewTemplate;
         [SerializeField] private RenderTexture renderTexture;
 
         protected override void Configure(IContainerBuilder builder)
@@ -49,7 +51,9 @@ namespace Synesthesias.Snap.Sample
         private void ConfigureDetectionMesh(IContainerBuilder builder)
         {
             builder.RegisterInstance(detectionMeshViewTemplate);
+            builder.RegisterInstance(meshViewTemplate);
             builder.Register<EditorMeshModel>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<DetectionMeshPresenter>();
         }
     }
 }

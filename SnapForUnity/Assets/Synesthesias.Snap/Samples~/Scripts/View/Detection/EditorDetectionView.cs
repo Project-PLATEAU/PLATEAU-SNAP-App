@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private Button menuButton;
         [SerializeField] private RawImage cameraRawImage;
         [SerializeField] private Button cameraButton;
+        [SerializeField] private Transform meshParent;
 
         /// <summary>
         /// 検出時のMaterial
@@ -57,5 +59,12 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public Button CameraButton
             => cameraButton;
+
+        /// <summary>
+        /// メッシュを配置する親オブジェクト
+        /// </summary>
+        [Obsolete("ARAnchorやARGespatialAnchorを使用してください")]
+        public Transform MeshParent
+            => meshParent;
     }
 }

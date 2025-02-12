@@ -173,6 +173,7 @@ MonoBehaviour:
   detectionView: {fileID: 1084631503}
   menuView: {fileID: 1648144737}
   detectionMeshViewTemplate: {fileID: 9174863566845142687, guid: 828c1cd6b01184faa8c18d854e9e6768, type: 3}
+  meshViewTemplate: {fileID: 2175353910284336276, guid: 0187b50976c254026ae501ec754b0dec, type: 3}
   renderTexture: {fileID: 8400000, guid: ddcec6086158a406ebf0028c4e74d751, type: 2}
 --- !u!1 &71850296
 GameObject:
@@ -780,6 +781,7 @@ MonoBehaviour:
   menuButton: {fileID: 1621886168}
   cameraRawImage: {fileID: 1662787264}
   cameraButton: {fileID: 1684428625}
+  meshParent: {fileID: 0}
 --- !u!114 &1084631504
 MonoBehaviour:
   m_ObjectHideFlags: 0
