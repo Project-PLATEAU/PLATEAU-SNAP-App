@@ -54,7 +54,7 @@ namespace Synesthesias.Snap.Sample
 
             view.CameraButton
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickCameraAsync().Forget())
+                .Subscribe(_ => OnClickCameraAsync().Forget(Debug.LogException))
                 .AddTo(view);
         }
 

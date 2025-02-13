@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
-using Random = UnityEngine.Random;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -17,12 +16,14 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly CompositeDisposable disposable = new();
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
+        private readonly SurfaceRepository surfaceRepository;
         private readonly TextureRepository textureRepository;
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly MobileARCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
         private readonly GeospatialAsyncModel geospatialAsyncModel;
+        private readonly GeospatialMathModel geospatialMathModel;
         private readonly MobileMeshModel meshModel;
         private readonly DetectionTouchModel touchModel;
         private readonly MockValidationResultModel resultModel;
@@ -43,22 +44,26 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public MobileDetectionModel(
+            SurfaceRepository surfaceRepository,
             TextureRepository textureRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
             MobileARCameraModel cameraModel,
             DetectionMenuModel menuModel,
             GeospatialAsyncModel geospatialAsyncModel,
+            GeospatialMathModel geospatialMathModel,
             MobileMeshModel meshModel,
             DetectionTouchModel touchModel,
             MockValidationResultModel resultModel)
         {
+            this.surfaceRepository = surfaceRepository;
             this.textureRepository = textureRepository;
             this.sceneModel = sceneModel;
             this.localizationModel = localizationModel;
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
             this.geospatialAsyncModel = geospatialAsyncModel;
+            this.geospatialMathModel = geospatialMathModel;
             this.meshModel = meshModel;
             this.touchModel = touchModel;
             this.resultModel = resultModel;
@@ -82,7 +87,9 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 開始
         /// </summary>
-        public async UniTask StartAsync(CancellationToken cancellation)
+        public async UniTask StartAsync(
+            Camera camera,
+            CancellationToken cancellation)
         {
             await UniTask.WhenAll(localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
@@ -93,7 +100,7 @@ namespace Synesthesias.Snap.Sample
 
             while (!cancellation.IsCancellationRequested)
             {
-                await DetectedAsync(cancellation);
+                await DetectedAsync(camera, cancellation);
             }
         }
 
@@ -106,7 +113,7 @@ namespace Synesthesias.Snap.Sample
             {
                 createMeshCancellationTokenSource?.Cancel();
                 createMeshCancellationTokenSource = new CancellationTokenSource();
-                OnCreateAnchor(screenPosition, createMeshCancellationTokenSource.Token).Forget();
+                OnCreateAnchor(screenPosition, createMeshCancellationTokenSource.Token).Forget(Debug.LogException);
             }
             else
             {
@@ -183,38 +190,39 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 建物検出
         /// </summary>
-        private async UniTask DetectedAsync(CancellationToken cancellationToken)
+        private async UniTask DetectedAsync(
+            Camera camera,
+            CancellationToken cancellationToken)
         {
-            await UniTask.WaitForSeconds(3, cancellationToken: cancellationToken);
-
+            // タップでアンカーを作成するモードの場合は処理をスキップ
             if (touchModel.IsTapToCreateAnchor)
             {
                 return;
             }
 
-            // TODO: 建物検出の処理
-            var isDetected = Random.Range(0, 100) > 50;
-            isDetected = false; // 一旦処理が走らないようにする
+            // カメラのGeospatialPoseを始点とする
+            var fromGeospatialPose = geospatialAsyncModel.GetCameraGeospatialPose();
 
-            if (!isDetected)
-            {
-                return;
-            }
+            // カメラの位置から20m先のGeospatialPoseを終点とする
+            var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
+                geospatialPose: fromGeospatialPose,
+                distance: 20); // 必要に応じて距離を変更
 
-            var cameraGeospatialPose = geospatialAsyncModel.GetCameraGeospatialPose();
+            // 始点から終点までの範囲とカメラ方向の範囲内の面の配列を取得
+            var surfaces = await surfaceRepository.GetVisibleSurfacesAsync(
+                fromGeospatialPose: fromGeospatialPose,
+                toGeospatialPose: toGeospatialPose,
+                camera: camera,
+                cancellationToken: cancellationToken);
 
             // CreateAnchor関連の関数でアンカーを作成する(以下の関数以外にも複数定義されている)
-            // MEMO: 必要に応じてlatitude, longitude, altitudeAboveTerrain, eunRotationを変更する
             var meshView = await CreateMeshViewAsync(
-                latitude: cameraGeospatialPose.Latitude,
-                longitude: cameraGeospatialPose.Longitude,
-                altitudeAboveTerrain: cameraGeospatialPose.Altitude,
-                eunRotation: cameraGeospatialPose.EunRotation,
+                geospatialPose: fromGeospatialPose,
                 cancellationToken: cancellationToken);
 
             touchModel.SetDetectedMeshView(meshView);
 
-            // TODO: Viewのメッシュのポリゴン生成
+            // TODO: 取得したSurfacesをMeshViewのメッシュへ描画させる
         }
 
         /// <summary>

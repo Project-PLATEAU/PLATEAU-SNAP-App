@@ -27,6 +27,37 @@
       },
       "hash": "141504d23647362869c41db27a8c30321cfc8dd8"
     },
+    "com.ishape.geometry": {
+      "version": "https://github.com/iShapeUnity/Geometry.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.mathematics": "1.3.1",
+        "com.unity.collections": "2.2.0"
+      },
+      "hash": "57bf3cd03759dd40899c375ae3052b0534aeac24"
+    },
+    "com.ishape.mesh2d": {
+      "version": "https://github.com/iShapeUnity/Mesh2d.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.mathematics": "1.3.1",
+        "com.unity.collections": "2.2.0"
+      },
+      "hash": "146782fc7cba53ab297be3f57d48ae7ad26dd5d2"
+    },
+    "com.ishape.triangulation": {
+      "version": "https://github.com/iShapeUnity/Triangulation.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.ishape.geometry": "0.0.5",
+        "com.unity.mathematics": "1.3.1",
+        "com.unity.collections": "2.2.0"
+      },
+      "hash": "86a829327dfeae32ae9cb1afec0cc3bbfb548fb6"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -47,11 +78,32 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.burst": {
+      "version": "1.8.17",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "2.6.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.collections": {
+      "version": "2.2.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.8.4",
+        "com.unity.nuget.mono-cecil": "1.11.4",
+        "com.unity.modules.unityanalytics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.editorcoroutines": {
@@ -127,7 +179,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
-      "version": "1.2.6",
+      "version": "1.3.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.mono-cecil": {
+      "version": "1.11.4",
       "depth": 2,
       "source": "registry",
       "dependencies": {},

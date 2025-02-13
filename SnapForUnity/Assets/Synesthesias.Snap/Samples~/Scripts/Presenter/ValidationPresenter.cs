@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using R3;
 using System.Threading;
+using UnityEngine;
 using VContainer.Unity;
 
 namespace Synesthesias.Snap.Sample
@@ -41,12 +42,12 @@ namespace Synesthesias.Snap.Sample
         {
             dialogView.CancelButton
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickDialogCancelAsync().Forget())
+                .Subscribe(_ => OnClickDialogCancelAsync().Forget(Debug.LogException))
                 .AddTo(view);
 
             dialogView.ConfirmButton
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickDialogConfirmAsync().Forget())
+                .Subscribe(_ => OnClickDialogConfirmAsync().Forget(Debug.LogException))
                 .AddTo(view);
         }
 

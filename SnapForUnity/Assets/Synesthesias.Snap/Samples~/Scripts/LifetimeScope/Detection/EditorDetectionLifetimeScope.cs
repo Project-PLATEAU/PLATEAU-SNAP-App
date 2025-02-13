@@ -1,3 +1,4 @@
+using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.Snap.Runtime;
 using UnityEngine;
 using VContainer;
@@ -11,6 +12,7 @@ namespace Synesthesias.Snap.Sample
     public class EditorDetectionLifetimeScope : BaseLifetimeScope
     {
         [SerializeField] private EditorDetectionView detectionView;
+        [SerializeField] private EditorDetectionParameterView detectionParameterView;
         [SerializeField] private DetectionMenuView menuView;
         [SerializeField] private EditorDetectionMeshView detectionMeshViewTemplate;
         [SerializeField] private MeshView meshViewTemplate;
@@ -19,13 +21,34 @@ namespace Synesthesias.Snap.Sample
         protected override void Configure(IContainerBuilder builder)
         {
             base.Configure(builder);
+            ConfigureAPI(builder);
+            ConfigureRepository(builder);
 
             builder.Register<EditorWebCameraModel>(Lifetime.Singleton)
                 .WithParameter("renderTexture", renderTexture);
 
             ConfigureMenu(builder);
+            ConfigureAR(builder);
             ConfigureDetection(builder);
             ConfigureDetectionMesh(builder);
+        }
+
+        private void ConfigureAPI(IContainerBuilder builder)
+        {
+            var configuration = Parent.Container.Resolve<Synesthesias.PLATEAU.Snap.Generated.Client.Configuration>();
+            var api = new SurfacesApi(configuration: configuration);
+
+            builder.RegisterInstance(api)
+                .AsImplementedInterfaces();
+        }
+
+        private void ConfigureRepository(IContainerBuilder builder)
+        {
+            builder.Register<SurfaceRepository>(Lifetime.Singleton);
+
+            builder.Register<MeshRepository>(Lifetime.Singleton)
+                .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
+                .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
         }
 
         private void ConfigureMenu(IContainerBuilder builder)
@@ -35,16 +58,21 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterEntryPoint<DetectionMenuPresenter>();
         }
 
+        private static void ConfigureAR(IContainerBuilder builder)
+        {
+            builder.Register<EditorGeospatialModel>(Lifetime.Singleton);
+        }
+
         private void ConfigureDetection(IContainerBuilder builder)
         {
             builder.RegisterInstance(detectionView);
+
+            builder.RegisterInstance(detectionParameterView)
+                .AsImplementedInterfaces();
+
             builder.Register<EditorDetectionModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<EditorDetectionPresenter>();
-
-            builder.Register<DetectionTouchModel>(Lifetime.Singleton)
-                .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
-                .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
-
+            builder.Register<DetectionTouchModel>(Lifetime.Singleton);
             builder.Register<MockValidationResultModel>(Lifetime.Singleton);
         }
 

@@ -93,4 +93,5 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
+  apiConfiguration: {fileID: 0}
   residentView: {fileID: 1524655806150873120}

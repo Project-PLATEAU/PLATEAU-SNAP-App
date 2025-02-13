@@ -13,9 +13,12 @@ namespace Synesthesias.Snap.Sample
     public class EditorDetectionModel : IDisposable
     {
         private readonly TextureRepository textureRepository;
+        private readonly SurfaceRepository surfaceRepository;
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly EditorWebCameraModel cameraModel;
+        private readonly EditorGeospatialModel geospatialModel;
+        private readonly IEditorDetectionParameterModel parameterModel;
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionTouchModel touchModel;
         private readonly EditorMeshModel meshModel;
@@ -33,8 +36,11 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public EditorDetectionModel(
             TextureRepository textureRepository,
+            SurfaceRepository surfaceRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
+            EditorGeospatialModel geospatialModel,
+            IEditorDetectionParameterModel parameterModel,
             EditorWebCameraModel cameraModel,
             DetectionMenuModel menuModel,
             DetectionTouchModel touchModel,
@@ -42,8 +48,11 @@ namespace Synesthesias.Snap.Sample
             MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
+            this.surfaceRepository = surfaceRepository;
             this.sceneModel = sceneModel;
             this.localizationModel = localizationModel;
+            this.geospatialModel = geospatialModel;
+            this.parameterModel = parameterModel;
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
             this.touchModel = touchModel;
@@ -85,6 +94,10 @@ namespace Synesthesias.Snap.Sample
             menuModel.AddElement(new DetectionMenuElementModel(
                 text: "アンカーのクリア",
                 onClick: OnClickClear));
+
+            menuModel.AddElement(new DetectionMenuElementModel(
+                text: "面検出APIデバッグ",
+                onClick: () => OnClickSurfaceAPIAsync().Forget(Debug.LogException)));
         }
 
         /// <summary>
@@ -152,7 +165,41 @@ namespace Synesthesias.Snap.Sample
         private void OnClickClear()
         {
             meshModel.Clear();
-            touchModel.Clear();
+        }
+
+        private async UniTask OnClickSurfaceAPIAsync()
+        {
+            var source = new CancellationTokenSource();
+            cancellationTokenSources.Add(source);
+            var token = source.Token;
+
+            var eulerRotation = parameterModel.EunRotation;
+
+            // デバッグ用のGeospatialPoseを始点とする
+            var fromGeospatialPose = geospatialModel.CreateGeospatialPose(
+                latitude: parameterModel.FromLatitude,
+                longitude: parameterModel.FromLongitude,
+                altitude: parameterModel.FromAltitude,
+                eunRotation: eulerRotation);
+
+            // デバッグ用のGeospatialPoseを終点とする
+            var toGeospatialPose = geospatialModel.CreateGeospatialPose(
+                latitude: parameterModel.ToLatitude,
+                longitude: parameterModel.ToLongitude,
+                altitude: parameterModel.ToAltitude,
+                eunRotation: eulerRotation);
+
+            var surfaces = await surfaceRepository.GetVisibleSurfacesAsync(
+                fromGeospatialPose: fromGeospatialPose,
+                toGeospatialPose: toGeospatialPose,
+                roll: parameterModel.Roll,
+                maxDistance: parameterModel.MaxDistance,
+                fieldOfView: parameterModel.FieldOfView,
+                cancellationToken: token);
+
+            Debug.Log($"取得した面の数: {surfaces.Count}");
+
+            // TODO: 取得したSurfacesをMeshViewのメッシュへ描画させる
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class RootLifetimeScope : LifetimeScope
     {
+        [SerializeField] private ApiConfigurationScriptableObject apiConfiguration;
         [SerializeField] private ResidentView residentView;
 
         /// <summary>
@@ -44,6 +45,14 @@ namespace Synesthesias.Snap.Sample
 
         private void ConfigureAPI(IContainerBuilder builder)
         {
+            var configuration = new Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+            {
+                BasePath = apiConfiguration.EndPoint,
+                DefaultHeaders = { { apiConfiguration.ApiKeyType, apiConfiguration.ApiKeyValue } }
+            };
+
+            builder.RegisterInstance(configuration);
+
             builder.Register<MockEndPointModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
 
@@ -52,7 +61,7 @@ namespace Synesthesias.Snap.Sample
                 .AsImplementedInterfaces();
         }
 
-        private void ConfigureRepository(IContainerBuilder builder)
+        private static void ConfigureRepository(IContainerBuilder builder)
         {
             builder.Register<TextureRepository>(Lifetime.Singleton);
             builder.Register<SettingRepository>(Lifetime.Singleton);

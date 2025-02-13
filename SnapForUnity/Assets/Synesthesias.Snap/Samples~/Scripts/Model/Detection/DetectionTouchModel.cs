@@ -1,7 +1,6 @@
 using R3;
 using System;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -11,14 +10,9 @@ namespace Synesthesias.Snap.Sample
     public class DetectionTouchModel : IDisposable
     {
         private readonly CompositeDisposable disposable = new();
-        private readonly Subject<bool> selectedSubject = new();
-        private readonly Subject<GameObject> selectedObjectSubject = new();
         private readonly ReactiveProperty<bool> isTapToCreateAnchorProperty = new(false);
+        private readonly MeshRepository meshRepository;
         private readonly DetectionMenuModel menuModel;
-        private readonly Material detectedMaterial;
-        private readonly Material selectedMaterial;
-        private IMobileDetectionMeshView previousDetectedMeshView;
-        private IMobileDetectionMeshView previousSelectedMeshView;
 
         /// <summary>
         /// タップでアンカーを作成するか
@@ -30,19 +24,17 @@ namespace Synesthesias.Snap.Sample
         /// 検出された建物が選択されたかのObservable
         /// </summary>
         public Observable<bool> OnSelectedAsObservable()
-            => selectedSubject;
+            => meshRepository.OnSelectedAsObservable();
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public DetectionTouchModel(
-            DetectionMenuModel menuModel,
-            Material detectedMaterial,
-            Material selectedMaterial)
+            MeshRepository meshRepository,
+            DetectionMenuModel menuModel)
         {
+            this.meshRepository = meshRepository;
             this.menuModel = menuModel;
-            this.detectedMaterial = detectedMaterial;
-            this.selectedMaterial = selectedMaterial;
             CreateMenu();
         }
 
@@ -67,82 +59,13 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void SetDetectedMeshView(IMobileDetectionMeshView meshView)
         {
-            var previousDetectedGameObject = previousDetectedMeshView?.GetGameObject();
-
-            if (previousDetectedGameObject)
-            {
-                Object.Destroy(previousDetectedGameObject);
-            }
-
-            OnSubscribeMesh(meshView);
-            previousDetectedMeshView = meshView;
-        }
-
-        /// <summary>
-        /// クリア
-        /// </summary>
-        public void Clear()
-        {
-            if (previousDetectedMeshView == null)
-            {
-                return;
-            }
-
-            Object.Destroy(previousDetectedMeshView.GetGameObject());
-            previousDetectedMeshView = null;
-            previousSelectedMeshView = null;
-            selectedSubject.OnNext(false);
+            meshRepository.SetMesh(meshView);
         }
 
         private void CreateMenu()
         {
             var tapTopPlaceAnchorMenuElement = CreateTapToCreateAnchorMenuElementModel();
             menuModel.AddElement(tapTopPlaceAnchorMenuElement);
-        }
-
-        private void OnSubscribeMesh(IMobileDetectionMeshView meshView)
-        {
-            var gameObject = meshView.GetGameObject();
-
-            selectedObjectSubject
-                .Where(selectedObject => selectedObject == gameObject)
-                .Subscribe(_ => OnMeshViewSelected(meshView))
-                .AddTo(gameObject);
-        }
-
-        private void OnMeshViewSelected(IMobileDetectionMeshView meshView)
-        {
-            if (OnSameViewSelected(meshView))
-            {
-                return;
-            }
-
-            OnDifferentViewSelected(meshView);
-        }
-
-        private bool OnSameViewSelected(IMobileDetectionMeshView meshView)
-        {
-            if (meshView != previousSelectedMeshView)
-            {
-                return false;
-            }
-
-            meshView.MeshRenderer.material = detectedMaterial;
-            previousSelectedMeshView = null;
-            selectedSubject.OnNext(false);
-            return true;
-        }
-
-        private void OnDifferentViewSelected(IMobileDetectionMeshView meshView)
-        {
-            if (previousSelectedMeshView != null)
-            {
-                previousSelectedMeshView.MeshRenderer.material = detectedMaterial;
-            }
-
-            meshView.MeshRenderer.material = selectedMaterial;
-            previousSelectedMeshView = meshView;
-            selectedSubject.OnNext(true);
         }
 
         private DetectionMenuElementModel CreateTapToCreateAnchorMenuElementModel()
@@ -180,7 +103,7 @@ namespace Synesthesias.Snap.Sample
             }
 
             var hitGameObject = hit.collider.gameObject;
-            selectedObjectSubject.OnNext(hitGameObject);
+            meshRepository.SelectObject(hitGameObject);
         }
     }
 }

@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using R3;
+using Synesthesias.PLATEAU.Snap.Generated.Client;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,10 +17,10 @@ namespace Synesthesias.Snap.Sample
         private readonly CompositeDisposable disposable = new();
         private readonly TextureRepository textureRepository;
         private readonly SettingRepository settingRepository;
+        private readonly ImageRepository imageRepository;
         private readonly SceneModel sceneModel;
         private readonly PlatformModel platformModel;
         private readonly LocalizationModel localizationModel;
-        private readonly IAPIModel apiModel;
         private readonly ValidationDialogModel dialogModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
 
@@ -29,18 +30,18 @@ namespace Synesthesias.Snap.Sample
         public MockValidationModel(
             TextureRepository textureRepository,
             SettingRepository settingRepository,
+            ImageRepository imageRepository,
             SceneModel sceneModel,
             PlatformModel platformModel,
             LocalizationModel localizationModel,
-            IAPIModel apiModel,
             ValidationDialogModel dialogModel)
         {
             this.textureRepository = textureRepository;
             this.settingRepository = settingRepository;
+            this.imageRepository = imageRepository;
             this.sceneModel = sceneModel;
             this.platformModel = platformModel;
             this.dialogModel = dialogModel;
-            this.apiModel = apiModel;
             this.localizationModel = localizationModel;
             OnSubscribe();
         }
@@ -124,7 +125,11 @@ namespace Synesthesias.Snap.Sample
                 dialogModel.SetDescription("画像を送信中です...");
 
                 var capturedTexture = textureRepository.GetTexture() as Texture2D;
-                await apiModel.ImageRegisterAsync(capturedTexture, token);
+
+                await imageRepository.CreateBuildingImageAsyncAsync(
+                    texture: capturedTexture,
+                    fileName: "test.png",
+                    cancellationToken: token);
 
                 dialogModel.SetTitle("画像登録完了");
                 dialogModel.SetDescription("画像の登録が完了しました");
@@ -134,11 +139,16 @@ namespace Synesthesias.Snap.Sample
                 var previousSceneName = GetPreviousSceneName();
                 sceneModel.Transition(previousSceneName);
             }
+            catch (ApiException exception)
+            {
+                dialogModel.SetTitle(exception.ErrorCode.ToString());
+                dialogModel.SetDescription(exception.ErrorContent.ToString());
+                throw;
+            }
             catch (Exception exception)
             {
                 dialogModel.SetTitle(exception.Message);
                 dialogModel.SetDescription("画像の登録に失敗しました");
-                throw;
             }
         }
 

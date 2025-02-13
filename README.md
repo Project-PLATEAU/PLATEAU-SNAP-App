@@ -90,7 +90,7 @@ Macユーザーは特別な対応は不要です。
 - iOS Support Enabledにチェックを入れます
 - Geospatialにチェックを入れます
 
-# APIキーの管理に注意してください
+# ARCoreのAPIキーの管理に注意してください
 
 - APIキーはgitで管理しないようにしください
 - APIキーをアプリに組み込まないようにしてください
@@ -109,6 +109,31 @@ Macユーザーは特別な対応は不要です。
 - iOS Authentication StrategyをAPI Keyに設定します
   - 本来であればAuthentication Tokenを使用することを推奨します
   - iOS API KeyにAPIキーを設定します
+
+# サーバーのAPIキーの管理に注意してください
+
+- APIキーはgitで管理しないようにしください
+- APIキーをアプリに組み込まないようにしてください
+- APIキーはあくまで暫定対応です
+- APIキーを間違ってコミットしないように以下の設定ファイルは.gitignoreで除外しています
+
+```
+Assets/Resources/GitIgnore
+```
+
+### サーバーのAPIキーの設定方法
+
+- Project Viewの Assets/Resources/GitIgnore ディレクトリ配下で右クリックします
+- Create > Synesthesias > Snap > Sample > ApiKeyScriptableObject を選択します
+- 作成されたScriptableObjectを選択してAPIの情報を入力します
+  - End Point
+    - サーバーのエンドポイントのURLを入力します
+  - Api Key Type
+    - APIキーの種類を入力します
+    - 例: Bearer, X-API-Key
+  - Api Key Value
+    - APIキーの値を入力します
+- Project ViewからRootLifetimeScopeのprefabを選択し `Api Configuration` のフィールドに前述のScriptableObjectの参照をドラッグ&ドロップで設定します
 
 ## クライアントのコード生成の方法
 

@@ -32,7 +32,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            await model.StartAsync(cancellationToken);
+            await model.StartAsync(view.ArCamera, cancellationToken);
         }
 
         private void OnSubscribe()
@@ -56,7 +56,7 @@ namespace Synesthesias.Snap.Sample
 
             view.CameraButton
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickCameraAsync().Forget())
+                .Subscribe(_ => OnClickCameraAsync().Forget(Debug.LogException))
                 .AddTo(view);
         }
 

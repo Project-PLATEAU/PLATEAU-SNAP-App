@@ -1,4 +1,5 @@
 using Google.XR.ARCoreExtensions;
+using Synesthesias.PLATEAU.Snap.Generated.Api;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using VContainer;
@@ -24,12 +25,32 @@ namespace Synesthesias.Snap.Sample
         protected override void Configure(IContainerBuilder builder)
         {
             base.Configure(builder);
+            ConfigureAPI(builder);
+            ConfigureRepository(builder);
             builder.Register<MobileARCameraModel>(Lifetime.Singleton);
             builder.Register<MobileMeshModel>(Lifetime.Singleton);
             ConfigureMenu(builder);
             ConfigureScreenTouch(builder);
             ConfigureAR(builder);
             ConfigureDetection(builder);
+        }
+
+        private void ConfigureAPI(IContainerBuilder builder)
+        {
+            var configuration = Parent.Container.Resolve<Synesthesias.PLATEAU.Snap.Generated.Client.Configuration>();
+            var api = new SurfacesApi(configuration: configuration);
+
+            builder.RegisterInstance(api)
+                .AsImplementedInterfaces();
+        }
+
+        private void ConfigureRepository(IContainerBuilder builder)
+        {
+            builder.Register<SurfaceRepository>(Lifetime.Singleton);
+
+            builder.Register<MeshRepository>(Lifetime.Singleton)
+                .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
+                .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
         }
 
         private void ConfigureMenu(IContainerBuilder builder)
@@ -53,6 +74,7 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterInstance(arStreetScapeGeometryManager);
             builder.RegisterInstance(geospatialModel);
             builder.Register<GeospatialAsyncModel>(Lifetime.Singleton);
+            builder.Register<GeospatialMathModel>(Lifetime.Singleton);
         }
 
         private void ConfigureDetection(IContainerBuilder builder)
@@ -62,10 +84,7 @@ namespace Synesthesias.Snap.Sample
             builder.Register<MobileDetectionModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<MobileDetectionPresenter>();
             builder.RegisterInstance(detectionMeshViewTemplate);
-
-            builder.Register<DetectionTouchModel>(Lifetime.Singleton)
-                .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
-                .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
+            builder.Register<DetectionTouchModel>(Lifetime.Singleton);
 
             // TODO: 削除する
             builder.Register<MockValidationResultModel>(Lifetime.Singleton);

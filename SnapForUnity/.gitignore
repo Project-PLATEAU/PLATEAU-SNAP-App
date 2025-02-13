@@ -74,3 +74,6 @@ crashlytics-build.properties
 
 # ARCore Extensions generated file
 /ProjectSettings/ARCoreExtensionsProjectSettings.json
+
+# Resoures required to be ignored
+/[Aa]ssets/Resources/GitIgnore
