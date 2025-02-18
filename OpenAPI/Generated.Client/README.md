@@ -94,6 +94,11 @@ namespace Example
 
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            // Configure API key authorization: ApiKey
+            config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("X-API-KEY", "Bearer");
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -144,5 +149,12 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+<a id="ApiKey"></a>
+### ApiKey
+
+- **Type**: API key
+- **API key parameter name**: X-API-KEY
+- **Location**: HTTP header
 

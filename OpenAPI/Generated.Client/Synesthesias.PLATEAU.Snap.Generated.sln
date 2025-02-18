@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synesthesias.PLATEAU.Snap.Generated", "src\Synesthesias.PLATEAU.Snap.Generated\Synesthesias.PLATEAU.Snap.Generated.csproj", "{3818B39E-4526-4391-8BD5-806378A73C34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synesthesias.PLATEAU.Snap.Generated", "src\Synesthesias.PLATEAU.Snap.Generated\Synesthesias.PLATEAU.Snap.Generated.csproj", "{0AFF0CDF-06CC-4492-BFD3-685354C03196}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synesthesias.PLATEAU.Snap.Generated.Test", "src\Synesthesias.PLATEAU.Snap.Generated.Test\Synesthesias.PLATEAU.Snap.Generated.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3818B39E-4526-4391-8BD5-806378A73C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3818B39E-4526-4391-8BD5-806378A73C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3818B39E-4526-4391-8BD5-806378A73C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3818B39E-4526-4391-8BD5-806378A73C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AFF0CDF-06CC-4492-BFD3-685354C03196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AFF0CDF-06CC-4492-BFD3-685354C03196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AFF0CDF-06CC-4492-BFD3-685354C03196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AFF0CDF-06CC-4492-BFD3-685354C03196}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

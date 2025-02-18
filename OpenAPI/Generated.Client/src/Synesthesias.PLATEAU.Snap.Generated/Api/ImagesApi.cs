@@ -344,6 +344,11 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Api
             localVarRequestOptions.FileParameters.Add("File", file);
             localVarRequestOptions.FormParameters.Add("Metadata", Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils.ParameterToString(metadata)); // form parameter
 
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<BuildingImageResponse>("/api/building-image", localVarRequestOptions, this.Configuration);
@@ -411,6 +416,11 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Api
             localVarRequestOptions.FileParameters.Add("File", file);
             localVarRequestOptions.FormParameters.Add("Metadata", Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils.ParameterToString(metadata)); // form parameter
 
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
+            }
 
             // make the HTTP request
 

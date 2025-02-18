@@ -331,6 +331,11 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Api
 
             localVarRequestOptions.Data = visibleSurfacesRequest;
 
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<VisibleSurfacesResponse>("/api/visible-surfaces", localVarRequestOptions, this.Configuration);
@@ -389,6 +394,11 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Api
 
             localVarRequestOptions.Data = visibleSurfacesRequest;
 
+            // authentication (ApiKey) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("X-API-KEY")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("X-API-KEY", this.Configuration.GetApiKeyWithPrefix("X-API-KEY"));
+            }
 
             // make the HTTP request
 

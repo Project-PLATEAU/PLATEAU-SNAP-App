@@ -36,7 +36,7 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Model
         /// </summary>
         /// <param name="gmlid">gmlid.</param>
         /// <param name="coordinates">coordinates.</param>
-        public Surface(string gmlid = default(string), List<List<List<List<double>>>> coordinates = default(List<List<List<List<double>>>>))
+        public Surface(string gmlid = default(string), List<List<List<double>>> coordinates = default(List<List<List<double>>>))
         {
             this.Gmlid = gmlid;
             this.Coordinates = coordinates;
@@ -52,7 +52,7 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Model
         /// Gets or Sets Coordinates
         /// </summary>
         [DataMember(Name = "coordinates", EmitDefaultValue = true)]
-        public List<List<List<List<double>>>> Coordinates { get; set; }
+        public List<List<List<double>>> Coordinates { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
