@@ -57,9 +57,10 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// カメラデバイスの切り替え
         /// </summary>
-        public void ToggleDevice()
+        public async UniTask ToggleDeviceAsync(CancellationToken cancellationToken)
         {
             SetDeviceIndex(deviceIndex + 1);
+            await UniTask.Yield();
         }
 
         public bool TryCaptureTexture2D(out Texture2D result)

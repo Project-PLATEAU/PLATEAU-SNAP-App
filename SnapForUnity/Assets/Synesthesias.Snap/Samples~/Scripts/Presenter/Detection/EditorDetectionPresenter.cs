@@ -32,7 +32,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            await model.StartAsync(cancellationToken);
+            await model.StartAsync(view.MainCamera, cancellationToken);
             var texture = model.GetCameraTexture();
             view.CameraRawImage.texture = texture;
         }
@@ -77,7 +77,7 @@ namespace Synesthesias.Snap.Sample
         {
             view.CameraButton.interactable = false;
             var cancellationToken = view.GetCancellationTokenOnDestroy();
-            await model.CaptureAsync(cancellationToken);
+            await model.CaptureAsync(view.MainCamera, cancellationToken);
         }
     }
 }

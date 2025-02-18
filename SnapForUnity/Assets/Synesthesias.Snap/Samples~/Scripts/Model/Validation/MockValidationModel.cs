@@ -18,6 +18,7 @@ namespace Synesthesias.Snap.Sample
         private readonly TextureRepository textureRepository;
         private readonly SettingRepository settingRepository;
         private readonly ImageRepository imageRepository;
+        private readonly ValidationRepository validationRepository;
         private readonly SceneModel sceneModel;
         private readonly PlatformModel platformModel;
         private readonly LocalizationModel localizationModel;
@@ -31,6 +32,7 @@ namespace Synesthesias.Snap.Sample
             TextureRepository textureRepository,
             SettingRepository settingRepository,
             ImageRepository imageRepository,
+            ValidationRepository validationRepository,
             SceneModel sceneModel,
             PlatformModel platformModel,
             LocalizationModel localizationModel,
@@ -39,6 +41,7 @@ namespace Synesthesias.Snap.Sample
             this.textureRepository = textureRepository;
             this.settingRepository = settingRepository;
             this.imageRepository = imageRepository;
+            this.validationRepository = validationRepository;
             this.sceneModel = sceneModel;
             this.platformModel = platformModel;
             this.dialogModel = dialogModel;
@@ -124,9 +127,11 @@ namespace Synesthesias.Snap.Sample
                 dialogModel.SetTitle("画像登録");
                 dialogModel.SetDescription("画像を送信中です...");
 
+                var validationParameter = validationRepository.GetParameter();
                 var capturedTexture = textureRepository.GetTexture() as Texture2D;
 
                 await imageRepository.CreateBuildingImageAsyncAsync(
+                    validationParameter: validationParameter,
                     texture: capturedTexture,
                     fileName: "test.png",
                     cancellationToken: token);

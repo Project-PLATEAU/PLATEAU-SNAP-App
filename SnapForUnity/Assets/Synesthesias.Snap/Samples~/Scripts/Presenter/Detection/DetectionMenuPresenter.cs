@@ -1,7 +1,9 @@
 using Cysharp.Threading.Tasks;
 using R3;
 using System;
+using System.Collections.Generic;
 using System.Threading;
+using UnityEngine;
 using VContainer.Unity;
 using Object = UnityEngine.Object;
 
@@ -13,6 +15,7 @@ namespace Synesthesias.Snap.Sample
     public class DetectionMenuPresenter : IAsyncStartable, IDisposable
     {
         private readonly CompositeDisposable disposable = new();
+        private readonly List<CancellationTokenSource> cancellationTokenSources = new();
         private readonly DetectionMenuModel model;
         private readonly DetectionMenuView view;
 
@@ -43,6 +46,12 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void Dispose()
         {
+            foreach (var source in cancellationTokenSources)
+            {
+                source.Cancel();
+                source.Dispose();
+            }
+
             disposable.Dispose();
         }
 
@@ -74,7 +83,7 @@ namespace Synesthesias.Snap.Sample
 
             elementView.Button
                 .OnClickAsObservable()
-                .Subscribe(_ => element.Click())
+                .Subscribe(_ => OnClickElementAsync(element, elementView).Forget(Debug.LogException))
                 .AddTo(elementView);
 
             elementView.gameObject.SetActive(true);
@@ -88,6 +97,17 @@ namespace Synesthesias.Snap.Sample
         private void OnClickBackground()
         {
             model.IsVisibleProperty.OnNext(false);
+        }
+
+        private async UniTask OnClickElementAsync(
+            DetectionMenuElementModel elementModel,
+            DetectionMenuElementView elementView)
+        {
+            var source = new CancellationTokenSource();
+            cancellationTokenSources.Add(source);
+            elementView.Button.interactable = false;
+            await elementModel.ClickAsync(source.Token);
+            elementView.Button.interactable = true;
         }
     }
 }

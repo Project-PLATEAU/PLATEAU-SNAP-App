@@ -64,6 +64,7 @@ namespace Synesthesias.Snap.Sample
         private static void ConfigureRepository(IContainerBuilder builder)
         {
             builder.Register<TextureRepository>(Lifetime.Singleton);
+            builder.Register<ValidationRepository>(Lifetime.Singleton);
             builder.Register<SettingRepository>(Lifetime.Singleton);
         }
     }

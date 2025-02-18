@@ -33,6 +33,7 @@ namespace Synesthesias.Snap.Sample
         /// メッシュをAFGeospatialアンカーの位置に生成する
         /// </summary>
         public EditorDetectionMeshView CreateMeshAtTransform(
+            string id,
             Vector3 position,
             Quaternion rotation)
         {
@@ -41,6 +42,7 @@ namespace Synesthesias.Snap.Sample
                 position: position,
                 rotation: rotation);
 
+            view.Id = id;
             anchorObjects.Add(view.gameObject);
             return view;
         }

@@ -6,6 +6,15 @@ namespace Synesthesias.Snap.Sample
         private bool isSurfaceValid;
 
         /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public SettingRepository()
+        {
+            isAngleValid = true;
+            isSurfaceValid = true;
+        }
+
+        /// <summary>
         /// 角度が正しいかどうかを設定
         /// </summary>
         public void SetIsAngleValid(bool isAngleValid)

@@ -36,7 +36,7 @@ namespace Synesthesias.Snap.Sample
 
         private void ConfigureValidation(IContainerBuilder builder)
         {
-            // TODO: ValidationModelを登録
+            // TODO: MockValidationModelをValidationModelに変更
             builder.Register<MockValidationModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
 

@@ -1,5 +1,7 @@
+using Cysharp.Threading.Tasks;
 using R3;
 using System;
+using System.Threading;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -9,7 +11,7 @@ namespace Synesthesias.Snap.Sample
     public class DetectionMenuElementModel : IDisposable
     {
         private readonly CompositeDisposable disposable = new();
-        private readonly Subject<Unit> clickSubject = new();
+        private readonly Func<CancellationToken, UniTask> onClickAsync;
 
         /// <summary>
         /// テキスト
@@ -21,13 +23,10 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public DetectionMenuElementModel(
             string text,
-            Action onClick)
+            Func<CancellationToken, UniTask> onClickAsync)
         {
             TextProperty = new ReactiveProperty<string>(text);
-
-            clickSubject
-                .Subscribe(_ => onClick())
-                .AddTo(disposable);
+            this.onClickAsync = onClickAsync;
         }
 
         /// <summary>
@@ -41,9 +40,9 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// クリックを通知
         /// </summary>
-        public void Click()
+        public async UniTask ClickAsync(CancellationToken cancellationToken)
         {
-            clickSubject.OnNext(Unit.Default);
+            await onClickAsync.Invoke(cancellationToken);
         }
     }
 }

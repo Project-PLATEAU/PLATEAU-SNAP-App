@@ -1,7 +1,9 @@
 using Cysharp.Threading.Tasks;
 using R3;
+using Synesthesias.PLATEAU.Snap.Generated.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 
@@ -12,6 +14,7 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class EditorDetectionModel : IDisposable
     {
+        private readonly ValidationRepository validationRepository;
         private readonly TextureRepository textureRepository;
         private readonly SurfaceRepository surfaceRepository;
         private readonly SceneModel sceneModel;
@@ -36,6 +39,7 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public EditorDetectionModel(
             TextureRepository textureRepository,
+            ValidationRepository validationRepository,
             SurfaceRepository surfaceRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
@@ -48,6 +52,7 @@ namespace Synesthesias.Snap.Sample
             MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
+            this.validationRepository = validationRepository;
             this.surfaceRepository = surfaceRepository;
             this.sceneModel = sceneModel;
             this.localizationModel = localizationModel;
@@ -74,7 +79,9 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 開始
         /// </summary>
-        public async UniTask StartAsync(CancellationToken cancellation)
+        public async UniTask StartAsync(
+            Camera camera,
+            CancellationToken cancellation)
         {
             await UniTask.WhenAll(localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
@@ -82,22 +89,22 @@ namespace Synesthesias.Snap.Sample
                 cameraModel.StartAsync(cancellation),
                 resultModel.StartAsync(cancellation));
 
-            CreateMenu();
+            CreateMenu(camera);
         }
 
-        private void CreateMenu()
+        private void CreateMenu(Camera camera)
         {
             menuModel.AddElement(new DetectionMenuElementModel(
                 text: "カメラデバイス切替",
-                onClick: cameraModel.ToggleDevice));
+                onClickAsync: cameraModel.ToggleDeviceAsync));
 
             menuModel.AddElement(new DetectionMenuElementModel(
                 text: "アンカーのクリア",
-                onClick: OnClickClear));
+                onClickAsync: OnClickClearAsync));
 
             menuModel.AddElement(new DetectionMenuElementModel(
                 text: "面検出APIデバッグ",
-                onClick: () => OnClickSurfaceAPIAsync().Forget(Debug.LogException)));
+                onClickAsync: cancellationToken => OnClickSurfaceAPIAsync(camera, cancellationToken)));
         }
 
         /// <summary>
@@ -135,16 +142,52 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 撮影
         /// </summary>
-        public async UniTask CaptureAsync(CancellationToken cancellationToken)
+        public async UniTask CaptureAsync(
+            Camera camera,
+            CancellationToken cancellationToken)
         {
+            var selectedMeshView = touchModel.GetSelectedMeshView();
+
+            if (selectedMeshView == null)
+            {
+                throw new InvalidOperationException("メッシュが選択されていません");
+            }
+
             var source = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             cancellationTokenSources.Add(source);
 
-            if (cameraModel.TryCaptureTexture2D(out var capturedTexture))
+            if (!cameraModel.TryCaptureTexture2D(out var capturedTexture))
             {
-                textureRepository.SetTexture(capturedTexture);
+                throw new InvalidOperationException("撮影に失敗しました");
             }
 
+            // TODO: ValidationRepositoryへ統合する
+            textureRepository.SetTexture(capturedTexture);
+
+            var eulerRotation = parameterModel.EunRotation;
+
+            // デバッグ用のGeospatialPoseを始点とする
+            var fromGeospatialPose = geospatialModel.CreateGeospatialPose(
+                latitude: parameterModel.FromLatitude,
+                longitude: parameterModel.FromLongitude,
+                altitude: parameterModel.FromAltitude,
+                eunRotation: eulerRotation);
+
+            // デバッグ用のGeospatialPoseを終点とする
+            var toGeospatialPose = geospatialModel.CreateGeospatialPose(
+                latitude: parameterModel.ToLatitude,
+                longitude: parameterModel.ToLongitude,
+                altitude: parameterModel.ToAltitude,
+                eunRotation: eulerRotation);
+
+            var validationParameter = new ValidationParameterModel(
+                gmlId: selectedMeshView.Id,
+                fromGeospatialPose: fromGeospatialPose,
+                toGeospatialPose: toGeospatialPose,
+                roll: camera.transform.rotation.eulerAngles.z,
+                timestamp: DateTime.UtcNow);
+
+            validationRepository.SetParameter(validationParameter);
             sceneModel.Transition(SceneNameDefine.Validation);
         }
 
@@ -156,20 +199,24 @@ namespace Synesthesias.Snap.Sample
             var worldPosition = camera.ScreenToWorldPoint(modifiedScreenPosition);
 
             var mesh = meshModel.CreateMeshAtTransform(
+                id: "Empty Id ---",
                 position: worldPosition,
                 rotation: Quaternion.identity);
 
-            touchModel.SetDetectedMeshView(mesh);
+            touchModel.SetDetectedMeshViews(new[] { mesh });
         }
 
-        private void OnClickClear()
+        private async UniTask OnClickClearAsync(CancellationToken cancellationToken)
         {
             meshModel.Clear();
+            await UniTask.Yield();
         }
 
-        private async UniTask OnClickSurfaceAPIAsync()
+        private async UniTask OnClickSurfaceAPIAsync(
+            Camera camera,
+            CancellationToken cancellationToken)
         {
-            var source = new CancellationTokenSource();
+            var source = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             cancellationTokenSources.Add(source);
             var token = source.Token;
 
@@ -192,14 +239,46 @@ namespace Synesthesias.Snap.Sample
             var surfaces = await surfaceRepository.GetVisibleSurfacesAsync(
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
-                roll: parameterModel.Roll,
+                roll: camera.transform.rotation.eulerAngles.z,
                 maxDistance: parameterModel.MaxDistance,
                 fieldOfView: parameterModel.FieldOfView,
                 cancellationToken: token);
 
             Debug.Log($"取得した面の数: {surfaces.Count}");
 
-            // TODO: 取得したSurfacesをMeshViewのメッシュへ描画させる
+            var meshes = surfaces
+                .Select(surface => CreateMesh(camera, surface))
+                .ToArray();
+
+            touchModel.SetDetectedMeshViews(meshes);
+        }
+
+        private EditorDetectionMeshView CreateMesh(
+            Camera camera,
+            Surface surface)
+        {
+            const float DistanceFromCamera = 10.0F;
+
+            // 画面内のランダムな位置にViewを配置する
+            var screenPosition = GetRandomScreenPosition();
+            screenPosition.z = DistanceFromCamera;
+            var worldPosition = camera.ScreenToWorldPoint(screenPosition);
+
+            var mesh = meshModel.CreateMeshAtTransform(
+                id: surface.Gmlid,
+                position: worldPosition,
+                rotation: Quaternion.identity);
+
+            // TODO: Surfaceの情報の位置にメッシュを描画する
+            return mesh;
+        }
+
+        private static Vector3 GetRandomScreenPosition()
+        {
+            var x = UnityEngine.Random.Range(0, Screen.width);
+            var y = UnityEngine.Random.Range(0, Screen.height);
+            var result = new Vector3(x, y, 0);
+            return result;
         }
     }
 }

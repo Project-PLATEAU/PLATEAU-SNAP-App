@@ -7,7 +7,17 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class MobileDetectionMeshView : MonoBehaviour, IMobileDetectionMeshView
     {
+        [SerializeField] private string id;
         [SerializeField] private MeshRenderer meshRenderer;
+
+        /// <summary>
+        /// メッシュのID
+        /// </summary>
+        public string Id
+        {
+            get => id;
+            set => id = value;
+        }
 
         /// <summary>
         /// メッシュのRenderer

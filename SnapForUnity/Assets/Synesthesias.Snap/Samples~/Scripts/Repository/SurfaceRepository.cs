@@ -15,10 +15,10 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class SurfaceRepository
     {
+        private readonly List<Surface> cachedSurfaces = new();
         private readonly TimeSpan cacheDuration;
         private readonly ISurfacesApiAsync surfacesApiAsync;
         private DateTime requestedAt;
-        private IReadOnlyList<Surface> cachedSurfaces;
 
         /// <summary>
         /// コンストラクタ
@@ -87,7 +87,10 @@ namespace Synesthesias.Snap.Sample
                     visibleSurfacesRequest: request,
                     cancellationToken: cancellationToken);
 
-                cachedSurfaces = response.Surfaces;
+                foreach (var surface in response.Surfaces)
+                {
+                    cachedSurfaces.Add(surface);
+                }
 
                 result = cachedSurfaces;
                 return result;
@@ -170,7 +173,7 @@ namespace Synesthesias.Snap.Sample
 
         private bool TryGetCachedSurfaces(out IReadOnlyList<Surface> result)
         {
-            if (cachedSurfaces == null)
+            if (cachedSurfaces.Count <= 0)
             {
                 result = null;
                 return false;

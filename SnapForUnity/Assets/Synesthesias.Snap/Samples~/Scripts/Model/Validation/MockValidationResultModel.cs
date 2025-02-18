@@ -63,7 +63,7 @@ namespace Synesthesias.Snap.Sample
         {
             var elementModel = new DetectionMenuElementModel(
                 text: "角度の検証: ---",
-                onClick: () => isAngleValidProperty.Value = !isAngleValidProperty.Value);
+                onClickAsync: OnClickAngleAsync);
 
             isAngleValidProperty
                 .Subscribe(isValid =>
@@ -81,7 +81,7 @@ namespace Synesthesias.Snap.Sample
         {
             var elementModel = new DetectionMenuElementModel(
                 text: "面の検証: ---",
-                onClick: () => isSurfaceValidProperty.Value = !isSurfaceValidProperty.Value);
+                onClickAsync: OnClickSurfaceAsync);
 
             isSurfaceValidProperty
                 .Subscribe(isValid =>
@@ -92,6 +92,18 @@ namespace Synesthesias.Snap.Sample
                 }).AddTo(disposable);
 
             return elementModel;
+        }
+
+        private async UniTask OnClickAngleAsync(CancellationToken cancellationToken)
+        {
+            isAngleValidProperty.Value = !isAngleValidProperty.Value;
+            await UniTask.Yield();
+        }
+
+        private async UniTask OnClickSurfaceAsync(CancellationToken cancellationToken)
+        {
+            isSurfaceValidProperty.Value = !isSurfaceValidProperty.Value;
+            await UniTask.Yield();
         }
     }
 }

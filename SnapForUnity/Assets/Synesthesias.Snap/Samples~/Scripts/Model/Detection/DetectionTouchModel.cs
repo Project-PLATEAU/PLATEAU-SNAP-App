@@ -1,5 +1,8 @@
+using Cysharp.Threading.Tasks;
 using R3;
 using System;
+using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
@@ -57,9 +60,18 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 検出されたメッシュのViewを設定する
         /// </summary>
-        public void SetDetectedMeshView(IMobileDetectionMeshView meshView)
+        public void SetDetectedMeshViews(IReadOnlyList<IMobileDetectionMeshView> meshViews)
         {
-            meshRepository.SetMesh(meshView);
+            meshRepository.SetMeshes(meshViews);
+        }
+
+        /// <summary>
+        /// 選択されたメッシュのViewを取得する
+        /// </summary>
+        public IMobileDetectionMeshView GetSelectedMeshView()
+        {
+            var result = meshRepository.SelectedMeshViewProperty.Value;
+            return result;
         }
 
         private void CreateMenu()
@@ -72,7 +84,7 @@ namespace Synesthesias.Snap.Sample
         {
             var result = new DetectionMenuElementModel(
                 text: "タップでアンカー配置: ---",
-                onClick: OnClickTapToCreateAnchor);
+                onClickAsync: OnClickTapToCreateAnchorAsync);
 
             isTapToCreateAnchorProperty
                 .Subscribe(isTapToPlaceAnchor =>
@@ -86,11 +98,12 @@ namespace Synesthesias.Snap.Sample
             return result;
         }
 
-        private void OnClickTapToCreateAnchor()
+        private async UniTask OnClickTapToCreateAnchorAsync(CancellationToken cancellationToken)
         {
             var previous = isTapToCreateAnchorProperty.Value;
             var current = !previous;
             isTapToCreateAnchorProperty.Value = current;
+            await UniTask.Yield();
         }
 
         private void OnSelectAnchor(Camera camera, Vector2 screenPosition)

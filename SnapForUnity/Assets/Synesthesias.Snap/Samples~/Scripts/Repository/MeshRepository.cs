@@ -1,4 +1,6 @@
 using R3;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -12,13 +14,17 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly Subject<GameObject> selectedObjectSubject = new();
         private readonly Subject<bool> selectedSubject = new();
+        private readonly List<IMobileDetectionMeshView> previousDetectedMeshViews = new();
         private readonly Material detectedMaterial;
         private readonly Material selectedMaterial;
-        private IMobileDetectionMeshView previousDetectedMeshView;
-        private IMobileDetectionMeshView previousSelectedMeshView;
 
         /// <summary>
-        /// 検出された建物が選択されたかのObservable
+        /// 選択されたメッシュのViewのProperty
+        /// </summary>
+        public readonly ReactiveProperty<IMobileDetectionMeshView> SelectedMeshViewProperty = new();
+
+        /// <summary>
+        /// MeshViewが選択されたかのObservable
         /// </summary>
         public Observable<bool> OnSelectedAsObservable()
             => selectedSubject;
@@ -40,31 +46,55 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void Clear()
         {
-            if (previousDetectedMeshView == null)
+            ClearDetected();
+            ClearSelected();
+        }
+
+        /// <summary>
+        /// 検出されたメッシュをクリアする
+        /// </summary>
+        public void ClearDetected()
+        {
+            var previousObjects = previousDetectedMeshViews
+                .Select(previousDetectedMeshView => previousDetectedMeshView.GetGameObject())
+                .Where(previousDetectedMeshViewGameObject => previousDetectedMeshViewGameObject);
+
+            foreach (var previousObject in previousObjects)
+            {
+                Object.Destroy(previousObject);
+            }
+
+            previousDetectedMeshViews.Clear();
+        }
+
+        public void ClearSelected()
+        {
+            if (SelectedMeshViewProperty.Value == null)
             {
                 return;
             }
 
-            Object.Destroy(previousDetectedMeshView.GetGameObject());
-            previousDetectedMeshView = null;
-            previousSelectedMeshView = null;
+            SelectedMeshViewProperty.Value = null;
             selectedSubject.OnNext(false);
         }
 
         /// <summary>
         /// 検出されたメッシュのViewを設定する
         /// </summary>
-        public void SetMesh(IMobileDetectionMeshView meshView)
+        public void SetMeshes(IReadOnlyList<IMobileDetectionMeshView> meshViews)
         {
-            var previousDetectedGameObject = previousDetectedMeshView?.GetGameObject();
+            ClearSelected();
+            ClearDetected();
 
-            if (previousDetectedGameObject)
+            foreach (var meshView in meshViews)
             {
-                Object.Destroy(previousDetectedGameObject);
+                previousDetectedMeshViews.Add(meshView);
             }
 
-            previousDetectedMeshView = meshView;
-            OnSubscribeMesh(meshView);
+            foreach (var meshView in meshViews)
+            {
+                OnSubscribeMesh(meshView);
+            }
         }
 
         /// <summary>
@@ -97,26 +127,26 @@ namespace Synesthesias.Snap.Sample
 
         private bool OnSameViewSelected(IMobileDetectionMeshView meshView)
         {
-            if (meshView != previousSelectedMeshView)
+            if (meshView != SelectedMeshViewProperty.Value)
             {
                 return false;
             }
 
             meshView.MeshRenderer.material = detectedMaterial;
-            previousSelectedMeshView = null;
+            SelectedMeshViewProperty.OnNext(null);
             selectedSubject.OnNext(false);
             return true;
         }
 
         private void OnDifferentViewSelected(IMobileDetectionMeshView meshView)
         {
-            if (previousSelectedMeshView != null)
+            if (SelectedMeshViewProperty.Value != null)
             {
-                previousSelectedMeshView.MeshRenderer.material = detectedMaterial;
+                SelectedMeshViewProperty.Value.MeshRenderer.material = detectedMaterial;
             }
 
             meshView.MeshRenderer.material = selectedMaterial;
-            previousSelectedMeshView = meshView;
+            SelectedMeshViewProperty.OnNext(meshView);
             selectedSubject.OnNext(true);
         }
     }

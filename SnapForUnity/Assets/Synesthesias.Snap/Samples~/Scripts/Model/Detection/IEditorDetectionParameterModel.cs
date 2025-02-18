@@ -38,11 +38,6 @@ namespace Synesthesias.Snap.Sample
         public double ToAltitude { get; }
 
         /// <summary>
-        /// カメラの回転角度
-        /// </summary>
-        public double Roll { get; }
-
-        /// <summary>
         /// 最大距離
         /// </summary>
         public double MaxDistance { get; }

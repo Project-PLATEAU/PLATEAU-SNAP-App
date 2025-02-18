@@ -1,5 +1,7 @@
+using Cysharp.Threading.Tasks;
 using R3;
 using System;
+using System.Threading;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -44,11 +46,11 @@ namespace Synesthesias.Snap.Sample
         {
             AddElement(new DetectionMenuElementModel(
                 text: "利用ガイド",
-                onClick: OnClickGuide));
+                onClickAsync: OnClickGuideAsync));
 
             AddElement(new DetectionMenuElementModel(
                 text: "アプリ再起動",
-                onClick: OnClickReboot));
+                onClickAsync: OnClickRebootAsync));
         }
 
         /// <summary>
@@ -60,14 +62,16 @@ namespace Synesthesias.Snap.Sample
             addElementSubject.OnNext(element);
         }
 
-        private void OnClickGuide()
+        private async UniTask OnClickGuideAsync(CancellationToken cancellationToken)
         {
             sceneModel.Transition(SceneNameDefine.Guide);
+            await UniTask.Yield();
         }
 
-        private void OnClickReboot()
+        private async UniTask OnClickRebootAsync(CancellationToken cancellationToken)
         {
             sceneModel.Transition(SceneNameDefine.Boot);
+            await UniTask.Yield();
         }
     }
 }

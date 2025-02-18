@@ -113,7 +113,7 @@ namespace Synesthesias.Snap.Sample
             {
                 createMeshCancellationTokenSource?.Cancel();
                 createMeshCancellationTokenSource = new CancellationTokenSource();
-                OnCreateAnchor(screenPosition, createMeshCancellationTokenSource.Token).Forget(Debug.LogException);
+                OnCreateAnchor(screenPosition, createMeshCancellationTokenSource.Token).Forget();
             }
             else
             {
@@ -137,11 +137,12 @@ namespace Synesthesias.Snap.Sample
             var source = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             cancellationTokenSources.Add(source);
 
-            if (cameraModel.TryCaptureTexture2D(out var capturedTexture))
+            if (!cameraModel.TryCaptureTexture2D(out var capturedTexture))
             {
-                textureRepository.SetTexture(capturedTexture);
+                throw new InvalidOperationException("撮影に失敗しました");
             }
 
+            textureRepository.SetTexture(capturedTexture);
             await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             sceneModel.Transition(SceneNameDefine.Validation);
         }
@@ -159,7 +160,7 @@ namespace Synesthesias.Snap.Sample
         {
             var elementModel = new DetectionMenuElementModel(
                 text: "Geospatial: ---",
-                onClick: OnClickGeospatial);
+                onClickAsync: OnClickGeospatialAsync);
 
             IsGeospatialVisibleProperty
                 .Subscribe(isVisible =>
@@ -176,15 +177,16 @@ namespace Synesthesias.Snap.Sample
         {
             var result = new DetectionMenuElementModel(
                 text: "アンカーのクリア",
-                onClick: meshModel.Clear);
+                onClickAsync: async _ => meshModel.Clear());
 
             return result;
         }
 
-        private void OnClickGeospatial()
+        private async UniTask OnClickGeospatialAsync(CancellationToken cancellationToken)
         {
             var isVisible = IsGeospatialVisibleProperty.Value;
             IsGeospatialVisibleProperty.Value = !isVisible;
+            await UniTask.Yield();
         }
 
         /// <summary>
@@ -220,7 +222,7 @@ namespace Synesthesias.Snap.Sample
                 geospatialPose: fromGeospatialPose,
                 cancellationToken: cancellationToken);
 
-            touchModel.SetDetectedMeshView(meshView);
+            touchModel.SetDetectedMeshViews(new[] { meshView });
 
             // TODO: 取得したSurfacesをMeshViewのメッシュへ描画させる
         }
@@ -285,7 +287,7 @@ namespace Synesthesias.Snap.Sample
             // MEMO: 仮で小さいので大きくする
             mesh.transform.localScale *= 3F;
 
-            touchModel.SetDetectedMeshView(mesh);
+            touchModel.SetDetectedMeshViews(new[] { mesh });
         }
     }
 }

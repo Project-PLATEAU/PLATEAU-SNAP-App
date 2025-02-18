@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.PLATEAU.Snap.Generated.Client;
+using Synesthesias.PLATEAU.Snap.Generated.Model;
 using System;
 using System.IO;
 using System.Threading;
@@ -27,6 +28,7 @@ namespace Synesthesias.Snap.Sample
         /// 建物画像を作成する
         /// </summary>
         public async UniTask CreateBuildingImageAsyncAsync(
+            ValidationParameterModel validationParameter,
             Texture2D texture,
             string fileName,
             CancellationToken cancellationToken)
@@ -42,12 +44,18 @@ namespace Synesthesias.Snap.Sample
                     contentType: "image/png",
                     content: stream);
 
-                // TODO: metadataを設定する
-                var metadata = string.Empty;
+                var metadata = new BuildingImageMetadata(
+                    gmlid: validationParameter.GmlId,
+                    from: validationParameter.FromCoordinate,
+                    to: validationParameter.ToCoordinate,
+                    roll: validationParameter.Roll,
+                    timestamp: validationParameter.Timestamp);
+
+                var metaDataJson = metadata.ToJson();
 
                 await imagesApiAsync.CreateBuildingImageAsyncAsync(
                     file: fileParameter,
-                    metadata: metadata,
+                    metadata: metaDataJson,
                     cancellationToken: cancellationToken);
             }
             catch (ApiException exception)
