@@ -26,6 +26,11 @@ namespace Synesthesias.Snap.Sample
         public const string EditorDetection = "EditorDetectionScene";
 
         /// <summary>
+        /// 建物検出(簡易版メッシュ)画面(携帯端末)
+        /// </summary>
+        public const string MobileSimpleDetection = "MobileSimpleDetectionScene";
+
+        /// <summary>
         /// 検証画面
         /// </summary>
         public const string Validation = "ValidationScene";

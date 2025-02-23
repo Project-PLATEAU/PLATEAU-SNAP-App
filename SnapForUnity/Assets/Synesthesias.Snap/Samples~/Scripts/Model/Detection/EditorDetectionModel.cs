@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using R3;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
+using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,11 +21,11 @@ namespace Synesthesias.Snap.Sample
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly EditorWebCameraModel cameraModel;
-        private readonly EditorGeospatialModel geospatialModel;
+        private readonly EditorGeospatialMathModel geospatialMathModel;
         private readonly IEditorDetectionParameterModel parameterModel;
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionTouchModel touchModel;
-        private readonly EditorMeshModel meshModel;
+        private readonly EditorDetectionMeshModel meshModel;
         private readonly MockValidationResultModel resultModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
 
@@ -43,12 +44,12 @@ namespace Synesthesias.Snap.Sample
             SurfaceRepository surfaceRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
-            EditorGeospatialModel geospatialModel,
+            EditorGeospatialMathModel geospatialMathModel,
             IEditorDetectionParameterModel parameterModel,
             EditorWebCameraModel cameraModel,
             DetectionMenuModel menuModel,
             DetectionTouchModel touchModel,
-            EditorMeshModel meshModel,
+            EditorDetectionMeshModel meshModel,
             MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
@@ -56,7 +57,7 @@ namespace Synesthesias.Snap.Sample
             this.surfaceRepository = surfaceRepository;
             this.sceneModel = sceneModel;
             this.localizationModel = localizationModel;
-            this.geospatialModel = geospatialModel;
+            this.geospatialMathModel = geospatialMathModel;
             this.parameterModel = parameterModel;
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
@@ -167,20 +168,23 @@ namespace Synesthesias.Snap.Sample
             var eulerRotation = parameterModel.EunRotation;
 
             // デバッグ用のGeospatialPoseを始点とする
-            var fromGeospatialPose = geospatialModel.CreateGeospatialPose(
+            var fromGeospatialPose = geospatialMathModel.CreateGeospatialPose(
                 latitude: parameterModel.FromLatitude,
                 longitude: parameterModel.FromLongitude,
                 altitude: parameterModel.FromAltitude,
                 eunRotation: eulerRotation);
 
             // デバッグ用のGeospatialPoseを終点とする
-            var toGeospatialPose = geospatialModel.CreateGeospatialPose(
+            var toGeospatialPose = geospatialMathModel.CreateGeospatialPose(
                 latitude: parameterModel.ToLatitude,
                 longitude: parameterModel.ToLongitude,
                 altitude: parameterModel.ToAltitude,
                 eunRotation: eulerRotation);
 
             var validationParameter = new ValidationParameterModel(
+                cameraPosition: camera.transform.position,
+                mesh: selectedMeshView.MeshFilter.mesh,
+                meshTransform: selectedMeshView.MeshFilter.transform,
                 gmlId: selectedMeshView.Id,
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
@@ -223,14 +227,14 @@ namespace Synesthesias.Snap.Sample
             var eulerRotation = parameterModel.EunRotation;
 
             // デバッグ用のGeospatialPoseを始点とする
-            var fromGeospatialPose = geospatialModel.CreateGeospatialPose(
+            var fromGeospatialPose = geospatialMathModel.CreateGeospatialPose(
                 latitude: parameterModel.FromLatitude,
                 longitude: parameterModel.FromLongitude,
                 altitude: parameterModel.FromAltitude,
                 eunRotation: eulerRotation);
 
             // デバッグ用のGeospatialPoseを終点とする
-            var toGeospatialPose = geospatialModel.CreateGeospatialPose(
+            var toGeospatialPose = geospatialMathModel.CreateGeospatialPose(
                 latitude: parameterModel.ToLatitude,
                 longitude: parameterModel.ToLongitude,
                 altitude: parameterModel.ToAltitude,
@@ -244,8 +248,6 @@ namespace Synesthesias.Snap.Sample
                 fieldOfView: parameterModel.FieldOfView,
                 cancellationToken: token);
 
-            Debug.Log($"取得した面の数: {surfaces.Count}");
-
             var meshes = surfaces
                 .Select(surface => CreateMesh(camera, surface))
                 .ToArray();
@@ -255,7 +257,7 @@ namespace Synesthesias.Snap.Sample
 
         private EditorDetectionMeshView CreateMesh(
             Camera camera,
-            Surface surface)
+            ISurfaceModel surface)
         {
             const float DistanceFromCamera = 10.0F;
 
@@ -265,7 +267,7 @@ namespace Synesthesias.Snap.Sample
             var worldPosition = camera.ScreenToWorldPoint(screenPosition);
 
             var mesh = meshModel.CreateMeshAtTransform(
-                id: surface.Gmlid,
+                id: surface.GmlId,
                 position: worldPosition,
                 rotation: Quaternion.identity);
 

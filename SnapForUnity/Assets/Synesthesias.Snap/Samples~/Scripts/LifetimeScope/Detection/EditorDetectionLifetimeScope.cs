@@ -60,7 +60,7 @@ namespace Synesthesias.Snap.Sample
 
         private static void ConfigureAR(IContainerBuilder builder)
         {
-            builder.Register<EditorGeospatialModel>(Lifetime.Singleton);
+            builder.Register<EditorGeospatialMathModel>(Lifetime.Singleton);
         }
 
         private void ConfigureDetection(IContainerBuilder builder)
@@ -80,7 +80,7 @@ namespace Synesthesias.Snap.Sample
         {
             builder.RegisterInstance(detectionMeshViewTemplate);
             builder.RegisterInstance(meshViewTemplate);
-            builder.Register<EditorMeshModel>(Lifetime.Singleton);
+            builder.Register<EditorDetectionMeshModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<DetectionMeshPresenter>();
         }
     }

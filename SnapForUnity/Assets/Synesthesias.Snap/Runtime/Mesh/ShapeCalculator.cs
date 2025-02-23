@@ -158,21 +158,23 @@ namespace Synesthesias.Snap.Runtime
         public static float GetRotationAxisY(List<Vector3> vertices)
         {
             Vector3 normal = NormalVectorFrom3d(vertices.ToArray());
+            Debug.Log($"検出された面の法線ベクトル: {normal}");
             Vector3 normalXY = new Vector3(0, 0, -1).normalized;
             float dotProduct = Vector3.Dot(normal, normalXY);
+            Debug.Log($"(0,0,-1)と{normal}の内積:{dotProduct}");
             float rotationAngle;
 
-            if (dotProduct >= 0) //normalが時計回りのとき
+            if (normal.z >= 0)
             {
-                dotProduct = Vector3.Dot(normal, normalXY);
                 rotationAngle = Mathf.Acos(dotProduct) * Mathf.Rad2Deg;
             }
-            else //normalが反時計回りのとき
+            else
             {
-                dotProduct = Vector3.Dot(-normal, normalXY);
                 rotationAngle = Mathf.Acos(dotProduct) * Mathf.Rad2Deg;
-                rotationAngle = -(180 - rotationAngle);
+                rotationAngle = -rotationAngle;
             }
+
+            Debug.Log($"回転角: {rotationAngle}");
 
             return rotationAngle;
         }
@@ -205,6 +207,24 @@ namespace Synesthesias.Snap.Runtime
             }
 
             return sum / vertices.Length;
+        }
+
+        // メッシュの中心座標を取得
+        public static (double latitude, double longitude, double altitude) GetMeshCenter(List<List<List<double>>> coordinates)
+        {
+            double latitudeSum = 0;
+            double longitudeSum = 0;
+            double altitudeSum = 0;
+
+            foreach (var coordinate in coordinates[0])
+            {
+                latitudeSum += coordinate[1];
+                longitudeSum += coordinate[0];
+                altitudeSum += coordinate[2];
+            }
+
+            Debug.Log(coordinates[0].Count);
+            return (latitudeSum / coordinates[0].Count, longitudeSum / coordinates[0].Count, altitudeSum / coordinates[0].Count);
         }
 
         // 検出可能面の法線ベクトルを求める関数
@@ -264,7 +284,6 @@ namespace Synesthesias.Snap.Runtime
         {
             Vector3 normal = NormalVectorFrom2d(shapeData.hull);
             Vector3 normalXY = new Vector3(0, 0, -1).normalized; //2つのベクトルの内積が-1の時，反時計まわり
-
             return (Vector3.Dot(normal, normalXY) <= -1) ? true : false;
         }
     }

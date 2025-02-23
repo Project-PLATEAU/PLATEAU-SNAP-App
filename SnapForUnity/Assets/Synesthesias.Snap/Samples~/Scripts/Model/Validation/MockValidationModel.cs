@@ -94,7 +94,15 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void Dispose()
         {
-            Cancel();
+            dialogModel.IsVisibleProperty.OnNext(false);
+            textureRepository.Clear();
+
+            foreach (var source in cancellationTokenSources)
+            {
+                source.Cancel();
+            }
+
+            cancellationTokenSources.Clear();
             dialogModel.Dispose();
             disposable.Dispose();
         }
@@ -162,15 +170,6 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void Cancel()
         {
-            foreach (var source in cancellationTokenSources)
-            {
-                source.Cancel();
-            }
-
-            cancellationTokenSources.Clear();
-            dialogModel.IsVisibleProperty.OnNext(false);
-            textureRepository.Clear();
-
             var previousSceneName = GetPreviousSceneName();
             sceneModel.Transition(previousSceneName);
         }
@@ -178,7 +177,7 @@ namespace Synesthesias.Snap.Sample
         private string GetPreviousSceneName()
         {
             var result = platformModel.IsSupportedMobileDevice()
-                ? SceneNameDefine.MobileDetection
+                ? SceneNameDefine.MobileSimpleDetection
                 : SceneNameDefine.EditorDetection;
 
             return result;

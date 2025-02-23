@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Google.XR.ARCoreExtensions;
 using R3;
+using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -23,11 +24,12 @@ namespace Synesthesias.Snap.Sample
         private readonly MobileARCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
         private readonly GeospatialAsyncModel geospatialAsyncModel;
-        private readonly GeospatialMathModel geospatialMathModel;
-        private readonly MobileMeshModel meshModel;
+        private readonly MobileGeospatialMathModel geospatialMathModel;
+        private readonly MobileDetectionMeshModel meshModel;
         private readonly DetectionTouchModel touchModel;
         private readonly MockValidationResultModel resultModel;
         private CancellationTokenSource createMeshCancellationTokenSource;
+        private float cameraMaxDistance;
 
         /// <summary>
         /// Geospatial情報を表示するか
@@ -51,8 +53,8 @@ namespace Synesthesias.Snap.Sample
             MobileARCameraModel cameraModel,
             DetectionMenuModel menuModel,
             GeospatialAsyncModel geospatialAsyncModel,
-            GeospatialMathModel geospatialMathModel,
-            MobileMeshModel meshModel,
+            MobileGeospatialMathModel geospatialMathModel,
+            MobileDetectionMeshModel meshModel,
             DetectionTouchModel touchModel,
             MockValidationResultModel resultModel)
         {
@@ -89,8 +91,11 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(
             Camera camera,
+            float maxDistance,
             CancellationToken cancellation)
         {
+            cameraMaxDistance = maxDistance;
+
             await UniTask.WhenAll(localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
                     cancellation),
@@ -215,6 +220,7 @@ namespace Synesthesias.Snap.Sample
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
                 camera: camera,
+                maxDistance: cameraMaxDistance,
                 cancellationToken: cancellationToken);
 
             // CreateAnchor関連の関数でアンカーを作成する(以下の関数以外にも複数定義されている)

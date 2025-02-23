@@ -28,7 +28,7 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// メッシュの生成
         /// </summary>
-        public Mesh CreateMesh(int latLonDataIndex, string id)
+        public Mesh CreateMesh(ISurfaceModel surface, string id, double originLatitude, double originLongitude, double originAltitude)
         {
             // Trianglurationの設定
             Application.targetFrameRate = 60;
@@ -42,13 +42,26 @@ namespace Synesthesias.Snap.Runtime
             originalHolesVertices = new List<List<Vector3>>();
 
             // 地理情報を取得
-            var latLonHullData = LatLonTests.TestData[latLonDataIndex].hull;
-            var latLonHolesData = LatLonTests.TestData[latLonDataIndex].holes;
+            var latLonHullData = surface.Coordinates[0].ToArray().Take(surface.Coordinates[0].Count - 1).ToList();
+            var latLonHolesData = new List<List<List<double>>>();
+            if (surface.Coordinates.Count > 1)
+            {
+                foreach (var coordinate in surface.Coordinates)
+                {
+                    latLonHolesData.Add(coordinate.ToArray().Take(coordinate.Count - 1).ToList());
+                }
+            }
 
             // 緯度軽度高度->メートルに変換(x:緯度, y:高度, z:経度)
-            for (int index = 0; index < latLonHullData.GetLength(0); index++)
+            for (int index = 0; index < latLonHullData.Count; index++)
             {
-                originalHullVertices.Add(LatLonConverter.ToMeters(latLonHullData[index][0], latLonHullData[index][1], latLonHullData[index][2]));
+                originalHullVertices.Add(LatLonConverter.ToMeters(                    
+                    latitude: latLonHullData[index][1],
+                    longitude: latLonHullData[index][0], 
+                    altitude: latLonHullData[index][2], 
+                    originLatitude: originLatitude, 
+                    originLongitude: originLongitude,
+                    originAltitude: originAltitude));
             }
 
             if (latLonHolesData != null)
@@ -56,9 +69,15 @@ namespace Synesthesias.Snap.Runtime
                 foreach (var holeData in latLonHolesData)
                 {
                     var holeVertices = new List<Vector3>();
-                    for (int index = 0; index < holeData.GetLength(0); index++)
+                    for (int index = 0; index < holeData.Count; index++)
                     {
-                        holeVertices.Add(LatLonConverter.ToMeters(holeData[index][0], holeData[index][1], holeData[index][2]));
+                        holeVertices.Add(LatLonConverter.ToMeters(
+                            latitude: holeData[index][1], 
+                            longitude: holeData[index][0], 
+                            altitude: holeData[index][2],
+                            originLatitude: originLatitude,
+                            originLongitude: originLongitude,
+                            originAltitude: originAltitude));
                     }
                     originalHolesVertices.Add(holeVertices);
                 }
@@ -115,6 +134,26 @@ namespace Synesthesias.Snap.Runtime
             colliderObject.transform.SetParent(parent);
             var collider = colliderObject.AddComponent<BoxCollider>();
             return collider;
+        }
+
+        /// <summary>
+        /// 頂点が正しい位置に配置されているか確認する用
+        /// </summary>
+        /// <param name="material">表示させる頂点の色</param>
+        public void CheckVertices(Material material)
+        {
+            foreach (Vector3 vertex in originalHullVertices)
+            {
+                //Debug.Log(vertex);
+                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
+                sphere.transform.position = new Vector3(vertex.x, vertex.y, vertex.z);
+
+                sphere.transform.localScale = Vector3.one * debugSphereRadius;
+
+                Renderer renderer = sphere.GetComponent<Renderer>();
+                renderer.material = material;
+            }
         }
     }
 }

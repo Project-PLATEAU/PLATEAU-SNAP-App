@@ -1,5 +1,6 @@
 using Google.XR.ARCoreExtensions;
 using Synesthesias.PLATEAU.Snap.Generated.Api;
+using Synesthesias.Snap.Runtime;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using VContainer;
@@ -28,7 +29,7 @@ namespace Synesthesias.Snap.Sample
             ConfigureAPI(builder);
             ConfigureRepository(builder);
             builder.Register<MobileARCameraModel>(Lifetime.Singleton);
-            builder.Register<MobileMeshModel>(Lifetime.Singleton);
+            builder.Register<MobileDetectionMeshModel>(Lifetime.Singleton);
             ConfigureMenu(builder);
             ConfigureScreenTouch(builder);
             ConfigureAR(builder);
@@ -74,7 +75,7 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterInstance(arStreetScapeGeometryManager);
             builder.RegisterInstance(geospatialModel);
             builder.Register<GeospatialAsyncModel>(Lifetime.Singleton);
-            builder.Register<GeospatialMathModel>(Lifetime.Singleton);
+            builder.Register<MobileGeospatialMathModel>(Lifetime.Singleton);
         }
 
         private void ConfigureDetection(IContainerBuilder builder)

@@ -14,11 +14,6 @@ namespace Synesthesias.Snap.Runtime
         public PlainShape ToPlainShape(IntGeom iGeom, Allocator allocator)
         {
             var iHull = iGeom.Int(hull);
-            Debug.Log(iHull.GetType());
-            foreach (var hull in iHull)
-            {
-                Debug.Log(hull);
-            }
 
             IntShape iShape;
             if (holes != null && holes.Length > 0)

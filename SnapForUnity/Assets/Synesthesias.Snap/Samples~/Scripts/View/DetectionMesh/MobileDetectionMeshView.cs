@@ -9,6 +9,7 @@ namespace Synesthesias.Snap.Sample
     {
         [SerializeField] private string id;
         [SerializeField] private MeshRenderer meshRenderer;
+        [SerializeField] private MeshFilter meshFilter;
 
         /// <summary>
         /// メッシュのID
@@ -18,6 +19,12 @@ namespace Synesthesias.Snap.Sample
             get => id;
             set => id = value;
         }
+
+        /// <summary>
+        /// メッシュのFilter
+        /// </summary>
+        public MeshFilter MeshFilter
+            => meshFilter;
 
         /// <summary>
         /// メッシュのRenderer
@@ -31,6 +38,14 @@ namespace Synesthesias.Snap.Sample
         public GameObject GetGameObject()
         {
             return gameObject;
+        }
+
+        // <summary>
+        /// 子GameObjectを取得する
+        /// </summary>
+        public GameObject GetChildGameObject()
+        {
+            return gameObject.transform.GetChild(0).gameObject;
         }
     }
 }

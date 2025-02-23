@@ -60,7 +60,15 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 検出されたメッシュのViewを設定する
         /// </summary>
-        public void SetDetectedMeshViews(IReadOnlyList<IMobileDetectionMeshView> meshViews)
+        public void SetDetectedMeshView(IMobileDetectionMeshView meshView)
+        {
+            meshRepository.SetMesh(meshView);
+        }
+
+        /// <summary>
+        /// 検出されたメッシュのViewを設定する
+        /// </summary>
+        public void SetDetectedMeshViews(IEnumerable<IMobileDetectionMeshView> meshViews)
         {
             meshRepository.SetMeshes(meshViews);
         }

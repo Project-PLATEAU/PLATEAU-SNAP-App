@@ -83,7 +83,7 @@ namespace Synesthesias.Snap.Sample
 
             elementView.Button
                 .OnClickAsObservable()
-                .Subscribe(_ => OnClickElementAsync(element, elementView).Forget(Debug.LogException))
+                .Subscribe(_ => OnClickElementAsync(element, elementView).Forget(Debug.LogWarning))
                 .AddTo(elementView);
 
             elementView.gameObject.SetActive(true);
@@ -105,9 +105,22 @@ namespace Synesthesias.Snap.Sample
         {
             var source = new CancellationTokenSource();
             cancellationTokenSources.Add(source);
-            elementView.Button.interactable = false;
-            await elementModel.ClickAsync(source.Token);
-            elementView.Button.interactable = true;
+
+            try
+            {
+                elementView.Button.interactable = false;
+                await elementModel.ClickAsync(source.Token);
+            }
+            catch (Exception exception)
+            {
+                source.Cancel();
+                Debug.LogWarning(exception);
+            }
+            finally
+            {
+                elementView.Button.interactable = true;
+                cancellationTokenSources.Remove(source);
+            }
         }
     }
 }

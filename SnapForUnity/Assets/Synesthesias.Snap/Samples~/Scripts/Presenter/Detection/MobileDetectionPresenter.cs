@@ -32,7 +32,10 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            await model.StartAsync(view.ArCamera, cancellationToken);
+            await model.StartAsync(
+                camera: view.ArCamera,
+                maxDistance: 100,
+                cancellationToken);
         }
 
         private void OnSubscribe()

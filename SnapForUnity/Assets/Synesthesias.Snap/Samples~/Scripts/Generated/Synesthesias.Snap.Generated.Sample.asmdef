@@ -1,7 +1,9 @@
 {
     "name": "Synesthesias.Snap.Generated.Sample",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "Synesthesias.Snap"
+    ],
     "includePlatforms": [
         "Android",
         "Editor",

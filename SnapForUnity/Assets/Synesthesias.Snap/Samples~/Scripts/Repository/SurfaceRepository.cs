@@ -3,6 +3,7 @@ using Google.XR.ARCoreExtensions;
 using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.PLATEAU.Snap.Generated.Client;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
+using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -15,7 +16,7 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class SurfaceRepository
     {
-        private readonly List<Surface> cachedSurfaces = new();
+        private readonly List<ISurfaceModel> cachedSurfaces = new();
         private readonly TimeSpan cacheDuration;
         private readonly ISurfacesApiAsync surfacesApiAsync;
         private DateTime requestedAt;
@@ -43,7 +44,7 @@ namespace Synesthesias.Snap.Sample
         /// <param name="fieldOfView">視野角</param>
         /// <param name="cancellationToken">キャンセルトークン</param>
         /// <returns>面の配列</returns>
-        public async UniTask<IReadOnlyList<Surface>> GetVisibleSurfacesAsync(
+        public async UniTask<IReadOnlyList<ISurfaceModel>> GetVisibleSurfacesAsync(
             double fromLatitude,
             double fromLongitude,
             double fromAltitude,
@@ -57,10 +58,12 @@ namespace Synesthesias.Snap.Sample
         {
             if (TryGetCachedSurfaces(out var result))
             {
+                Debug.Log("面の取得(キャッシュ): " + result.Count);
                 return result;
             }
 
             var previousRequestedAt = requestedAt;
+            requestedAt = DateTime.UtcNow;
 
             try
             {
@@ -81,8 +84,6 @@ namespace Synesthesias.Snap.Sample
                     maxDistance: maxDistance,
                     fieldOfView: fieldOfView);
 
-                requestedAt = DateTime.UtcNow;
-
                 var response = await surfacesApiAsync.GetVisibleSurfacesAsyncAsync(
                     visibleSurfacesRequest: request,
                     cancellationToken: cancellationToken);
@@ -91,6 +92,8 @@ namespace Synesthesias.Snap.Sample
                 {
                     cachedSurfaces.Add(surface);
                 }
+
+                Debug.Log("面の取得(API): " + cachedSurfaces.Count);
 
                 result = cachedSurfaces;
                 return result;
@@ -119,7 +122,7 @@ namespace Synesthesias.Snap.Sample
         /// <param name="fieldOfView">視野角</param>
         /// <param name="cancellationToken">キャンセルトークン</param>
         /// <returns>面の配列</returns>
-        public async UniTask<IReadOnlyList<Surface>> GetVisibleSurfacesAsync(
+        public async UniTask<IReadOnlyList<ISurfaceModel>> GetVisibleSurfacesAsync(
             GeospatialPose fromGeospatialPose,
             GeospatialPose toGeospatialPose,
             double roll,
@@ -148,12 +151,14 @@ namespace Synesthesias.Snap.Sample
         /// <param name="fromGeospatialPose">始点のGeospatial情報</param>
         /// <param name="toGeospatialPose">終点のGeospatial情報</param>
         /// <param name="camera">カメラ</param>
+        /// <param name="maxDistance">最大距離</param>
         /// <param name="cancellationToken">キャンセルトークン</param>
         /// <returns>面の配列</returns>
-        public async UniTask<IReadOnlyList<Surface>> GetVisibleSurfacesAsync(
+        public async UniTask<IReadOnlyList<ISurfaceModel>> GetVisibleSurfacesAsync(
             GeospatialPose fromGeospatialPose,
             GeospatialPose toGeospatialPose,
             Camera camera,
+            double maxDistance,
             CancellationToken cancellationToken)
         {
             var result = await GetVisibleSurfacesAsync(
@@ -164,28 +169,28 @@ namespace Synesthesias.Snap.Sample
                 toLongitude: toGeospatialPose.Longitude,
                 toAltitude: toGeospatialPose.Altitude,
                 roll: camera.transform.rotation.eulerAngles.z,
-                maxDistance: camera.farClipPlane,
+                maxDistance: maxDistance,
                 fieldOfView: camera.fieldOfView,
                 cancellationToken: cancellationToken);
 
             return result;
         }
 
-        private bool TryGetCachedSurfaces(out IReadOnlyList<Surface> result)
+        private bool TryGetCachedSurfaces(out IReadOnlyList<ISurfaceModel> result)
         {
+            result = cachedSurfaces;
+
             if (cachedSurfaces.Count <= 0)
             {
-                result = null;
                 return false;
             }
 
             if (DateTime.UtcNow - requestedAt > cacheDuration)
             {
-                result = null;
+                cachedSurfaces.Clear();
                 return false;
             }
 
-            result = cachedSurfaces;
             return true;
         }
     }

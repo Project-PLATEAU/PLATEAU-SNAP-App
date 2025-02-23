@@ -25,7 +25,7 @@ namespace Synesthesias.Snap.Sample
         public void Close()
         {
             var sceneName = platformModel.IsSupportedMobileDevice()
-                ? SceneNameDefine.MobileDetection
+                ? SceneNameDefine.MobileSimpleDetection
                 : SceneNameDefine.EditorDetection;
 
             sceneModel.Transition(sceneName);

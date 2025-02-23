@@ -14,7 +14,7 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly Subject<GameObject> selectedObjectSubject = new();
         private readonly Subject<bool> selectedSubject = new();
-        private readonly List<IMobileDetectionMeshView> previousDetectedMeshViews = new();
+        private readonly Dictionary<string, IMobileDetectionMeshView> previousDetectedMeshViews = new();
         private readonly Material detectedMaterial;
         private readonly Material selectedMaterial;
 
@@ -51,19 +51,22 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
-        /// 検出されたメッシュをクリアする
+        /// 検出されたメッシュを削除する
         /// </summary>
-        public void ClearDetected()
+        public void RemoveDetected(string id)
         {
-            var previousObjects = previousDetectedMeshViews
-                .Select(previousDetectedMeshView => previousDetectedMeshView.GetGameObject())
-                .Where(previousDetectedMeshViewGameObject => previousDetectedMeshViewGameObject);
-
-            foreach (var previousObject in previousObjects)
+            if (!previousDetectedMeshViews.TryGetValue(id, out var meshView))
             {
-                Object.Destroy(previousObject);
+                return;
             }
 
+            Object.Destroy(meshView.GetGameObject());
+            previousDetectedMeshViews.Remove(id);
+        }
+
+        public void ClearDetected()
+        {
+            RemoveDetected(previousDetectedMeshViews.Values);
             previousDetectedMeshViews.Clear();
         }
 
@@ -81,19 +84,21 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 検出されたメッシュのViewを設定する
         /// </summary>
-        public void SetMeshes(IReadOnlyList<IMobileDetectionMeshView> meshViews)
+        public void SetMesh(IMobileDetectionMeshView meshView)
         {
-            ClearSelected();
-            ClearDetected();
+            RemoveDetected(meshView.Id);
+            previousDetectedMeshViews[meshView.Id] = meshView;
+            OnSubscribeMesh(meshView);
+        }
 
+        /// <summary>
+        /// 検出されたメッシュのViewを設定する
+        /// </summary>
+        public void SetMeshes(IEnumerable<IMobileDetectionMeshView> meshViews)
+        {
             foreach (var meshView in meshViews)
             {
-                previousDetectedMeshViews.Add(meshView);
-            }
-
-            foreach (var meshView in meshViews)
-            {
-                OnSubscribeMesh(meshView);
+                SetMesh(meshView);
             }
         }
 
@@ -103,6 +108,14 @@ namespace Synesthesias.Snap.Sample
         public void SelectObject(GameObject gameObject)
         {
             selectedObjectSubject.OnNext(gameObject);
+        }
+
+        private void RemoveDetected(IEnumerable<IMobileDetectionMeshView> meshViews)
+        {
+            foreach (var meshView in meshViews)
+            {
+                RemoveDetected(meshView.Id);
+            }
         }
 
         private void OnSubscribeMesh(IMobileDetectionMeshView meshView)

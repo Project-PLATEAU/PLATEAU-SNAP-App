@@ -686,12 +686,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e071aa5a9c640ab8b820bdcd185bf1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fromLatitude: 0
-  fromLongitude: 0
+  fromLatitude: 35.75321294390318
+  fromLongitude: 139.6908707372933
   fromAltitude: 60
-  toLatitude: 0
-  toLongitude: 0
+  toLatitude: 35.75253831659066
+  toLongitude: 139.6907623826732
   toAltitude: 60
+  maxDistance: 20
   camera: {fileID: 457435022}
 --- !u!4 &965094033
 Transform:

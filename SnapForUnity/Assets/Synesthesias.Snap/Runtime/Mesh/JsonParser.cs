@@ -5,25 +5,25 @@ using System.Linq;
 
 namespace Synesthesias.Snap.Runtime
 {
-    // JSON全体のモデル
-    public class Surfaces
+    // JSON全体のモデル(モック版)
+    public class MockSurfaces
     {
         [JsonProperty("surfaces")]
-        public IList<Surface> DetectedSurfaces { get; set; } = new List<Surface>();
+        public IList<ISurfaceModel> DetectedSurfaces { get; set; } = new List<ISurfaceModel>();
     }
 
-    // 各surfaceのモデル
-    public class Surface
+    // 各surfaceのモデル(モック版)
+    public class MockSurface : ISurfaceModel
     {
         [JsonProperty("gmlid")]
         public string GmlId { get; set; }
         
         [JsonProperty("coordinates")]
-        public List<double[][]> Coordinates { get; set; }
+        public List<List<List<double>>> Coordinates { get; set; }
     }
-    public class JsonParser
+    public class MockJsonParser
     {
-        public static Surfaces Parse()
+        public static MockSurfaces Parse()
         {
             string json = @"{
   ""surfaces"": [
@@ -100,7 +100,7 @@ namespace Synesthesias.Snap.Runtime
   ]
 }
 ";
-            var detectedSurfaces = new Surfaces { DetectedSurfaces = new List<Surface>() };
+            var detectedSurfaces = new MockSurfaces { DetectedSurfaces = new List<ISurfaceModel>() };
 
             var model = JObject.Parse(json);
             
@@ -111,7 +111,7 @@ namespace Synesthesias.Snap.Runtime
             
             foreach (var surface in model["surfaces"])
             {
-                var detectedSurface = new Surface();
+                var detectedSurface = new MockSurface();
 
                 if (surface["gmlid"] != null && surface["coordinates"] != null)
                 {
@@ -120,7 +120,7 @@ namespace Synesthesias.Snap.Runtime
                     detectedSurface.Coordinates = surface["coordinates"].SelectMany(root => root
                             .Select(coords => coords
                                 .Select(coord => coord
-                                    .Select(n => (double)n).ToArray()).ToArray()))
+                                    .Select(n => (double)n).ToList()).ToList()))
                         .ToList();
                 }
                     

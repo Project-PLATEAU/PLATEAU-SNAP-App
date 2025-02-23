@@ -1,6 +1,7 @@
 using Google.XR.ARCoreExtensions;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
 using System;
+using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -9,6 +10,9 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class ValidationParameterModel
     {
+        public Vector3 CameraPosition { get; private set; }
+        public Mesh Mesh { get; private set; }
+        public Transform MeshTransform { get; private set; }
         public string GmlId { get; private set; }
         public Coordinate FromCoordinate { get; private set; }
         public Coordinate ToCoordinate { get; private set; }
@@ -19,12 +23,18 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
+            Vector3 cameraPosition,
+            Mesh mesh,
+            Transform meshTransform,
             string gmlId,
             Coordinate fromCoordinate,
             Coordinate toCoordinate,
             double roll,
             DateTime timestamp)
         {
+            CameraPosition = cameraPosition;
+            Mesh = mesh;
+            MeshTransform = meshTransform;
             GmlId = gmlId;
             FromCoordinate = fromCoordinate;
             ToCoordinate = toCoordinate;
@@ -36,6 +46,9 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
+            Vector3 cameraPosition,
+            Mesh mesh,
+            Transform meshTransform,
             string gmlId,
             double fromLongitude,
             double fromLatitude,
@@ -45,6 +58,9 @@ namespace Synesthesias.Snap.Sample
             double toAltitude,
             double roll,
             DateTime timestamp) : this(
+            cameraPosition,
+            mesh,
+            meshTransform,
             gmlId,
             fromCoordinate: new Coordinate(fromLongitude, fromLatitude, fromAltitude),
             toCoordinate: new Coordinate(toLongitude, toLatitude, toAltitude),
@@ -57,11 +73,17 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
+            Vector3 cameraPosition,
+            Mesh mesh,
+            Transform meshTransform,
             string gmlId,
             GeospatialPose fromGeospatialPose,
             GeospatialPose toGeospatialPose,
             double roll,
             DateTime timestamp) : this(
+            cameraPosition,
+            mesh,
+            meshTransform,
             gmlId,
             fromLongitude: fromGeospatialPose.Longitude,
             fromLatitude: fromGeospatialPose.Latitude,

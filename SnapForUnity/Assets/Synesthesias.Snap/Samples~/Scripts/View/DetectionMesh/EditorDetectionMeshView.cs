@@ -8,7 +8,9 @@ namespace Synesthesias.Snap.Sample
     public class EditorDetectionMeshView : MonoBehaviour, IMobileDetectionMeshView
     {
         [SerializeField] private string id;
+        [SerializeField] private MeshFilter meshFilter;
         [SerializeField] private MeshRenderer meshRenderer;
+        [SerializeField] private Material debugSphereMaterial;
 
         /// <summary>
         /// メッシュのID
@@ -20,10 +22,19 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
+        /// メッシュのFilter
+        /// </summary>
+        public MeshFilter MeshFilter
+            => meshFilter;
+
+        /// <summary>
         /// メッシュのRenderer
         /// </summary>
         public MeshRenderer MeshRenderer
             => meshRenderer;
+
+        public Material DebugSphereMaterial
+            => debugSphereMaterial;
 
         /// <summary>
         /// GameObjectを取得する
@@ -31,6 +42,14 @@ namespace Synesthesias.Snap.Sample
         public GameObject GetGameObject()
         {
             return gameObject;
+        }
+
+        // <summary>
+        /// 子GameObjectを取得する
+        /// </summary>
+        public GameObject GetChildGameObject()
+        {
+            return gameObject.transform.GetChild(0).gameObject;
         }
     }
 }
