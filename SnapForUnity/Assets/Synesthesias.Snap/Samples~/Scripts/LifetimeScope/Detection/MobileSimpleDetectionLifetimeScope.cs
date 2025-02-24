@@ -1,6 +1,7 @@
 using Google.XR.ARCoreExtensions;
 using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.Snap.Runtime;
+using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using VContainer;
@@ -23,6 +24,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private DetectionMenuView menuView;
         [SerializeField] private MobileDetectionSimpleMeshView detectionMeshViewTemplate;
         [SerializeField] private GeospatialDebugView geospatialDebugView;
+        [SerializeField] private Camera validationCamera;
 
         protected override void Configure(IContainerBuilder builder)
         {
@@ -37,7 +39,16 @@ namespace Synesthesias.Snap.Sample
             ConfigureAR(builder);
             ConfigureDetection(builder);
             ConfigureDetectionMesh(builder);
+            ConfigureValidation(builder);
             ConfigureGeospatialDebug(builder);
+        }
+
+        protected override void OnBootstrap(IObjectResolver resolver)
+        {
+            base.OnBootstrap(resolver);
+            var repository = resolver.Resolve<ValidationRepository>();
+            var mockParameter = CreateMockParameter();
+            repository.SetParameter(mockParameter);
         }
 
         private void ConfigureAPI(IContainerBuilder builder)
@@ -106,9 +117,6 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterInstance(detectionView.CameraRawImage);
             builder.Register<MobileSimpleDetectionModel>(Lifetime.Singleton);
             builder.Register<DetectionTouchModel>(Lifetime.Singleton);
-
-            // TODO: 削除する
-            builder.Register<MockValidationResultModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<MobileSimpleDetectionPresenter>();
         }
 
@@ -119,11 +127,50 @@ namespace Synesthesias.Snap.Sample
             builder.Register<SimpleMeshModel>(Lifetime.Singleton);
         }
 
+        private void ConfigureValidation(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(MeshValidationAngleThresholdModel.Default);
+
+            builder.Register<MeshValidationModel>(Lifetime.Singleton)
+                .WithParameter("camera", validationCamera);
+
+            builder.Register<MockValidationResultModel>(Lifetime.Singleton);
+        }
+
         private void ConfigureGeospatialDebug(IContainerBuilder builder)
         {
             builder.RegisterInstance(geospatialDebugView);
             builder.Register<GeospatialDebugModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<GeospatialDebugPresenter>();
+        }
+
+        private ValidationParameterModel CreateMockParameter()
+        {
+            var mainLoopState = new GeospatialMainLoopState();
+
+            var accuracyResult = new GeospatialAccuracyResult(
+                mainLoopState: mainLoopState,
+                accuracyState: GeospatialAccuracyState.HighAccuracy);
+
+            var meshValidationResult = new MeshValidationResult(
+                mainLoopState: mainLoopState,
+                accuracyResult: accuracyResult,
+                meshAngleResultType: MeshValidationAngleResultType.Valid,
+                meshVertexResultType: MeshValidationVertexResultType.Valid);
+
+            var mockParameter = new ValidationParameterModel(
+                meshValidationResult: meshValidationResult,
+                gmlId: "gmlId",
+                fromLongitude: 0.0,
+                fromLatitude: 0.0,
+                fromAltitude: 0.0,
+                toLongitude: 0.0,
+                toLatitude: 0.0,
+                toAltitude: 0.0,
+                roll: 0,
+                timestamp: DateTime.Now);
+
+            return mockParameter;
         }
     }
 }

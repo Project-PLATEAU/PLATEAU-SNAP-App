@@ -1,7 +1,7 @@
 using Google.XR.ARCoreExtensions;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
+using Synesthesias.Snap.Runtime;
 using System;
-using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -10,31 +10,48 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class ValidationParameterModel
     {
-        public Vector3 CameraPosition { get; private set; }
-        public Mesh Mesh { get; private set; }
-        public Transform MeshTransform { get; private set; }
-        public string GmlId { get; private set; }
-        public Coordinate FromCoordinate { get; private set; }
-        public Coordinate ToCoordinate { get; private set; }
-        public double Roll { get; private set; }
-        public DateTime Timestamp { get; private set; }
+        /// <summary>
+        /// Meshの検証結果
+        /// </summary>
+        public readonly MeshValidationResult MeshValidationResult;
+
+        /// <summary>
+        /// GML ID
+        /// </summary>
+        public readonly string GmlId;
+
+        /// <summary>
+        /// 開始地点の座標
+        /// </summary>
+        public readonly Coordinate FromCoordinate;
+
+        /// <summary>
+        /// 終了地点の座標
+        /// </summary>
+        public readonly Coordinate ToCoordinate;
+
+        /// <summary>
+        /// ロール
+        /// </summary>
+        public readonly double Roll;
+
+        /// <summary>
+        /// タイムスタンプ
+        /// </summary>
+        public readonly DateTime Timestamp;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
-            Vector3 cameraPosition,
-            Mesh mesh,
-            Transform meshTransform,
+            MeshValidationResult meshValidationResult,
             string gmlId,
             Coordinate fromCoordinate,
             Coordinate toCoordinate,
             double roll,
             DateTime timestamp)
         {
-            CameraPosition = cameraPosition;
-            Mesh = mesh;
-            MeshTransform = meshTransform;
+            MeshValidationResult = meshValidationResult;
             GmlId = gmlId;
             FromCoordinate = fromCoordinate;
             ToCoordinate = toCoordinate;
@@ -46,9 +63,7 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
-            Vector3 cameraPosition,
-            Mesh mesh,
-            Transform meshTransform,
+            MeshValidationResult meshValidationResult,
             string gmlId,
             double fromLongitude,
             double fromLatitude,
@@ -58,14 +73,12 @@ namespace Synesthesias.Snap.Sample
             double toAltitude,
             double roll,
             DateTime timestamp) : this(
-            cameraPosition,
-            mesh,
-            meshTransform,
-            gmlId,
+            meshValidationResult: meshValidationResult,
+            gmlId: gmlId,
             fromCoordinate: new Coordinate(fromLongitude, fromLatitude, fromAltitude),
             toCoordinate: new Coordinate(toLongitude, toLatitude, toAltitude),
-            roll,
-            timestamp)
+            roll: roll,
+            timestamp: timestamp)
         {
         }
 
@@ -73,26 +86,22 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
-            Vector3 cameraPosition,
-            Mesh mesh,
-            Transform meshTransform,
+            MeshValidationResult meshValidationResult,
             string gmlId,
             GeospatialPose fromGeospatialPose,
             GeospatialPose toGeospatialPose,
             double roll,
             DateTime timestamp) : this(
-            cameraPosition,
-            mesh,
-            meshTransform,
-            gmlId,
+            meshValidationResult: meshValidationResult,
+            gmlId: gmlId,
             fromLongitude: fromGeospatialPose.Longitude,
             fromLatitude: fromGeospatialPose.Latitude,
             fromAltitude: fromGeospatialPose.Altitude,
             toLongitude: toGeospatialPose.Longitude,
             toLatitude: toGeospatialPose.Latitude,
             toAltitude: toGeospatialPose.Altitude,
-            roll,
-            timestamp)
+            roll: roll,
+            timestamp: timestamp)
         {
         }
     }

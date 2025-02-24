@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using R3;
+using Synesthesias.Snap.Runtime;
 using System;
 using System.Threading;
 
@@ -11,25 +12,24 @@ namespace Synesthesias.Snap.Sample
     public class MockValidationResultModel : IDisposable
     {
         private readonly CompositeDisposable disposable = new();
-        private readonly ReactiveProperty<bool> isAngleValidProperty;
-        private readonly ReactiveProperty<bool> isSurfaceValidProperty;
-        private readonly SettingRepository settingRepository;
+        private readonly ReactiveProperty<MeshValidationAngleResultType> angleResultProperty;
+        private readonly ReactiveProperty<MeshValidationVertexResultType> vertexResultProperty;
+        private readonly ValidationRepository validationRepository;
         private readonly DetectionMenuModel menuModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public MockValidationResultModel(
-            SettingRepository settingRepository,
+            ValidationRepository validationRepository,
             DetectionMenuModel menuModel)
         {
-            this.settingRepository = settingRepository;
+            this.validationRepository = validationRepository;
             this.menuModel = menuModel;
-
-            var isSurfaceValid = settingRepository.GetIsSurfaceValid();
-            var isAngleValid = settingRepository.GetIsAngleValid();
-            isAngleValidProperty = new ReactiveProperty<bool>(isAngleValid);
-            isSurfaceValidProperty = new ReactiveProperty<bool>(isSurfaceValid);
+            var mockAngleResult = validationRepository.GetAngleResult();
+            var mockVertexResult = validationRepository.GetVertexResult();
+            angleResultProperty = new ReactiveProperty<MeshValidationAngleResultType>(mockAngleResult);
+            vertexResultProperty = new ReactiveProperty<MeshValidationVertexResultType>(mockVertexResult);
         }
 
         /// <summary>
@@ -38,8 +38,8 @@ namespace Synesthesias.Snap.Sample
         public void Dispose()
         {
             disposable.Dispose();
-            settingRepository.SetIsAngleValid(isAngleValidProperty.Value);
-            settingRepository.SetIsSurfaceValid(isSurfaceValidProperty.Value);
+            validationRepository.SetMockAngleResult(angleResultProperty.Value);
+            validationRepository.SetMockVertexResult(vertexResultProperty.Value);
         }
 
         /// <summary>
@@ -62,15 +62,21 @@ namespace Synesthesias.Snap.Sample
         private DetectionMenuElementModel CreateToggleIsValidAngleMenuElementModel()
         {
             var elementModel = new DetectionMenuElementModel(
-                text: "角度の検証: ---",
+                text: "角度のモック: ---",
                 onClickAsync: OnClickAngleAsync);
 
-            isAngleValidProperty
-                .Subscribe(isValid =>
+            angleResultProperty
+                .Subscribe(resultType =>
                 {
-                    var resultText = isValid ? "成功" : "失敗";
-                    var text = $"角度の結果: {resultText}";
-                    elementModel.TextProperty.Value = text;
+                    var text = resultType switch
+                    {
+                        MeshValidationAngleResultType.None => "---",
+                        MeshValidationAngleResultType.Invalid => "失敗",
+                        MeshValidationAngleResultType.Valid => "成功",
+                        _ => throw new NotImplementedException($"未実装: {resultType}")
+                    };
+
+                    elementModel.TextProperty.Value = $"角度のモック: {text}";
                 })
                 .AddTo(disposable);
 
@@ -80,15 +86,21 @@ namespace Synesthesias.Snap.Sample
         private DetectionMenuElementModel CreateToggleIsValidSurfaceMenuElementModel()
         {
             var elementModel = new DetectionMenuElementModel(
-                text: "面の検証: ---",
+                text: "面のモック: ---",
                 onClickAsync: OnClickSurfaceAsync);
 
-            isSurfaceValidProperty
-                .Subscribe(isValid =>
+            vertexResultProperty
+                .Subscribe(resultType =>
                 {
-                    var resultText = isValid ? "成功" : "失敗";
-                    var text = $"面の結果: {resultText}";
-                    elementModel.TextProperty.Value = text;
+                    var text = resultType switch
+                    {
+                        MeshValidationVertexResultType.None => "---",
+                        MeshValidationVertexResultType.Invalid => "失敗",
+                        MeshValidationVertexResultType.Valid => "成功",
+                        _ => throw new NotImplementedException($"未実装: {resultType}")
+                    };
+
+                    elementModel.TextProperty.Value = $"面のモック: {text}";
                 }).AddTo(disposable);
 
             return elementModel;
@@ -96,13 +108,17 @@ namespace Synesthesias.Snap.Sample
 
         private async UniTask OnClickAngleAsync(CancellationToken cancellationToken)
         {
-            isAngleValidProperty.Value = !isAngleValidProperty.Value;
+            var size = Enum.GetValues(typeof(MeshValidationAngleResultType)).Length;
+            var next = ((int)angleResultProperty.Value + 1) % size;
+            angleResultProperty.Value = (MeshValidationAngleResultType)next;
             await UniTask.Yield();
         }
 
         private async UniTask OnClickSurfaceAsync(CancellationToken cancellationToken)
         {
-            isSurfaceValidProperty.Value = !isSurfaceValidProperty.Value;
+            var size = Enum.GetValues(typeof(MeshValidationVertexResultType)).Length;
+            var next = ((int)vertexResultProperty.Value + 1) % size;
+            vertexResultProperty.Value = (MeshValidationVertexResultType)next;
             await UniTask.Yield();
         }
     }

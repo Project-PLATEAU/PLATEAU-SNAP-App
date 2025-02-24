@@ -25,11 +25,12 @@ namespace Synesthesias.Snap.Sample
         private readonly MobileARCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
         private readonly GeospatialAccuracyModel accuracyModel;
+        private readonly MeshValidationModel validationModel;
         private readonly GeospatialPoseModel geospatialPoseModel;
         private readonly IGeospatialMathModel geospatialMathModel;
         private readonly MobileDetectionSimpleMeshModel detectionMeshModel;
         private readonly DetectionTouchModel touchModel;
-        private readonly MockValidationResultModel resultModel;
+        private readonly MockValidationResultModel mockValidationResultModel;
         private CancellationTokenSource createMeshCancellationTokenSource;
         private float maxDistance;
 
@@ -56,11 +57,12 @@ namespace Synesthesias.Snap.Sample
             MobileARCameraModel cameraModel,
             DetectionMenuModel menuModel,
             GeospatialAccuracyModel accuracyModel,
+            MeshValidationModel validationModel,
             GeospatialPoseModel geospatialPoseModel,
             IGeospatialMathModel geospatialMathModel,
             MobileDetectionSimpleMeshModel detectionMeshModel,
             DetectionTouchModel touchModel,
-            MockValidationResultModel resultModel)
+            MockValidationResultModel mockValidationResultModel)
         {
             this.validationRepository = validationRepository;
             this.surfaceRepository = surfaceRepository;
@@ -70,11 +72,12 @@ namespace Synesthesias.Snap.Sample
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
             this.accuracyModel = accuracyModel;
+            this.validationModel = validationModel;
             this.geospatialPoseModel = geospatialPoseModel;
             this.geospatialMathModel = geospatialMathModel;
             this.detectionMeshModel = detectionMeshModel;
             this.touchModel = touchModel;
-            this.resultModel = resultModel;
+            this.mockValidationResultModel = mockValidationResultModel;
         }
 
         /// <summary>
@@ -102,10 +105,11 @@ namespace Synesthesias.Snap.Sample
         {
             this.maxDistance = maxDistance;
 
-            await UniTask.WhenAll(localizationModel.InitializeAsync(
+            await UniTask.WhenAll(
+                localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
                     cancellation),
-                resultModel.StartAsync(cancellation));
+                mockValidationResultModel.StartAsync(cancellation));
 
             CreateMenu(camera);
 
@@ -203,33 +207,42 @@ namespace Synesthesias.Snap.Sample
                 return;
             }
 
-            var eunRotation = Quaternion.AngleAxis(
-                fromGeospatialPose.EunRotation.eulerAngles.y, Vector3.up);
-
-            if (!cameraModel.TryCaptureTexture2D(out var capturedTexture))
+            try
             {
-                throw new InvalidOperationException("撮影に失敗しました");
+                detectionMeshModel.SetMeshActive(false);
+
+                if (!cameraModel.TryCaptureTexture2D(out var capturedTexture))
+                {
+                    throw new InvalidOperationException("撮影に失敗しました");
+                }
+
+                // TODO: ValidationRepositoryへ統合する
+                textureRepository.SetTexture(capturedTexture);
+
+                var meshValidationResult = validationModel.Validate(
+                    meshTransform: selectedMeshView.MeshFilter.transform,
+                    mesh: selectedMeshView.MeshFilter.mesh);
+
+                var validationParameter = new ValidationParameterModel(
+                    meshValidationResult: meshValidationResult,
+                    gmlId: selectedMeshView.Id,
+                    fromLongitude: fromGeospatialPose.Longitude,
+                    fromLatitude: fromGeospatialPose.Latitude,
+                    fromAltitude: fromGeospatialPose.Altitude,
+                    toLongitude: toGeospatialPose.Longitude,
+                    toLatitude: toGeospatialPose.Latitude,
+                    toAltitude: toGeospatialPose.Altitude,
+                    roll: camera.transform.rotation.eulerAngles.z,
+                    timestamp: DateTime.UtcNow);
+
+                validationRepository.SetParameter(validationParameter);
+                sceneModel.Transition(SceneNameDefine.Validation);
             }
-
-            // TODO: ValidationRepositoryへ統合する
-            textureRepository.SetTexture(capturedTexture);
-
-            var validationParameter = new ValidationParameterModel(
-                cameraPosition: camera.transform.position,
-                mesh: selectedMeshView.MeshFilter.mesh,
-                meshTransform: selectedMeshView.MeshFilter.transform,
-                gmlId: selectedMeshView.Id,
-                fromLongitude: fromGeospatialPose.Longitude,
-                fromLatitude: fromGeospatialPose.Latitude,
-                fromAltitude: fromGeospatialPose.Altitude,
-                toLongitude: toGeospatialPose.Longitude,
-                toLatitude: toGeospatialPose.Latitude,
-                toAltitude: toGeospatialPose.Altitude,
-                roll: camera.transform.rotation.eulerAngles.z,
-                timestamp: DateTime.UtcNow);
-
-            validationRepository.SetParameter(validationParameter);
-            sceneModel.Transition(SceneNameDefine.Validation);
+            catch (Exception exception)
+            {
+                detectionMeshModel.SetMeshActive(false);
+                Debug.LogWarning(exception);
+            }
         }
 
         private void CreateMenu(Camera camera)

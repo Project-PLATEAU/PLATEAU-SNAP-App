@@ -69,6 +69,17 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
+        /// メッシュの表示を設定する
+        /// </summary>
+        public void SetMeshActive(bool isActive)
+        {
+            foreach (var anchorObject in anchorObjects)
+            {
+                anchorObject.SetActive(isActive);
+            }
+        }
+
+        /// <summary>
         /// 全てのメッシュを削除する
         /// </summary>
         public void Clear()

@@ -36,12 +36,21 @@ namespace Synesthesias.Snap.Sample
 
         private void ConfigureValidation(IContainerBuilder builder)
         {
-            // TODO: MockValidationModelをValidationModelに変更
-            builder.Register<MockValidationModel>(Lifetime.Singleton)
-                .AsImplementedInterfaces();
-
             builder.RegisterInstance(validationView);
             builder.RegisterEntryPoint<ValidationPresenter>();
+
+            var platformModel = Parent.Container.Resolve<PlatformModel>();
+
+            if (platformModel.IsSupportedMobileDevice())
+            {
+                builder.Register<ValidationModel>(Lifetime.Singleton)
+                    .AsImplementedInterfaces();
+
+                return;
+            }
+
+            builder.Register<MockValidationModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
         }
 
         private void ConfigureDialog(IContainerBuilder builder)

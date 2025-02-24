@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using R3;
 using Synesthesias.PLATEAU.Snap.Generated.Client;
+using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +17,6 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly CompositeDisposable disposable = new();
         private readonly TextureRepository textureRepository;
-        private readonly SettingRepository settingRepository;
         private readonly ImageRepository imageRepository;
         private readonly ValidationRepository validationRepository;
         private readonly SceneModel sceneModel;
@@ -30,7 +30,6 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public MockValidationModel(
             TextureRepository textureRepository,
-            SettingRepository settingRepository,
             ImageRepository imageRepository,
             ValidationRepository validationRepository,
             SceneModel sceneModel,
@@ -39,7 +38,6 @@ namespace Synesthesias.Snap.Sample
             ValidationDialogModel dialogModel)
         {
             this.textureRepository = textureRepository;
-            this.settingRepository = settingRepository;
             this.imageRepository = imageRepository;
             this.validationRepository = validationRepository;
             this.sceneModel = sceneModel;
@@ -82,11 +80,8 @@ namespace Synesthesias.Snap.Sample
             dialogModel.SetTitle(validationTitleText);
             dialogModel.SetDescription(validationDescriptionText);
             dialogModel.IsVisibleProperty.OnNext(true);
-
-            await UniTask.WhenAll(
-                ValidateAngleAsync(token),
-                ValidSurfaceAsync(token)
-            );
+            ValidateAngle();
+            ValidVertex();
         }
 
         /// <summary>
@@ -223,23 +218,21 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// 撮影角度の検証
         /// </summary>
-        private async UniTask ValidateAngleAsync(CancellationToken cancellationToken)
+        private void ValidateAngle()
         {
-            var second = UnityEngine.Random.Range(2, 5);
-            await UniTask.WaitForSeconds(second, cancellationToken: cancellationToken);
-            var isAngleValid = settingRepository.GetIsAngleValid();
-            dialogModel.IsLeftValidProperty.OnNext(isAngleValid);
+            var angleResult = validationRepository.GetAngleResult();
+            var isValidAngle = angleResult == MeshValidationAngleResultType.Valid;
+            dialogModel.IsLeftValidProperty.OnNext(isValidAngle);
         }
 
         /// <summary>
         /// 面の欠けの検証
         /// </summary>
-        private async UniTask ValidSurfaceAsync(CancellationToken cancellationToken)
+        private void ValidVertex()
         {
-            var second = UnityEngine.Random.Range(2, 5);
-            await UniTask.WaitForSeconds(second, cancellationToken: cancellationToken);
-            var isSurfaceValid = settingRepository.GetIsSurfaceValid();
-            dialogModel.IsRightValidProperty.OnNext(isSurfaceValid);
+            var vertexResult = validationRepository.GetVertexResult();
+            var isValidVertex = vertexResult == MeshValidationVertexResultType.Valid;
+            dialogModel.IsRightValidProperty.OnNext(isValidVertex);
         }
     }
 }

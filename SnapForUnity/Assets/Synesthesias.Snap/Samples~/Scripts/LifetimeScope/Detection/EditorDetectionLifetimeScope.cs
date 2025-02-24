@@ -31,6 +31,7 @@ namespace Synesthesias.Snap.Sample
             ConfigureAR(builder);
             ConfigureDetection(builder);
             ConfigureDetectionMesh(builder);
+            ConfigureValidation(builder);
         }
 
         private void ConfigureAPI(IContainerBuilder builder)
@@ -82,6 +83,14 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterInstance(meshViewTemplate);
             builder.Register<EditorDetectionMeshModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<DetectionMeshPresenter>();
+        }
+
+        private void ConfigureValidation(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(MeshValidationAngleThresholdModel.Default);
+
+            builder.Register<MeshValidationModel>(Lifetime.Singleton)
+                .WithParameter("camera", detectionView.MainCamera);
         }
     }
 }

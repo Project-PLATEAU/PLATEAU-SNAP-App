@@ -1,6 +1,5 @@
 using Cysharp.Threading.Tasks;
 using R3;
-using Synesthesias.PLATEAU.Snap.Generated.Model;
 using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
@@ -26,6 +25,7 @@ namespace Synesthesias.Snap.Sample
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionTouchModel touchModel;
         private readonly EditorDetectionMeshModel meshModel;
+        private readonly MeshValidationModel meshValidationModel;
         private readonly MockValidationResultModel resultModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
 
@@ -50,6 +50,7 @@ namespace Synesthesias.Snap.Sample
             DetectionMenuModel menuModel,
             DetectionTouchModel touchModel,
             EditorDetectionMeshModel meshModel,
+            MeshValidationModel meshValidationModel,
             MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
@@ -63,6 +64,7 @@ namespace Synesthesias.Snap.Sample
             this.menuModel = menuModel;
             this.touchModel = touchModel;
             this.meshModel = meshModel;
+            this.meshValidationModel = meshValidationModel;
             this.resultModel = resultModel;
         }
 
@@ -181,10 +183,12 @@ namespace Synesthesias.Snap.Sample
                 altitude: parameterModel.ToAltitude,
                 eunRotation: eulerRotation);
 
-            var validationParameter = new ValidationParameterModel(
-                cameraPosition: camera.transform.position,
-                mesh: selectedMeshView.MeshFilter.mesh,
+            var meshValidationResult = meshValidationModel.Validate(
                 meshTransform: selectedMeshView.MeshFilter.transform,
+                mesh: selectedMeshView.MeshFilter.mesh);
+
+            var validationParameter = new ValidationParameterModel(
+                meshValidationResult: meshValidationResult,
                 gmlId: selectedMeshView.Id,
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,

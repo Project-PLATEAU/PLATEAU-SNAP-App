@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.PLATEAU.Snap.Generated.Client;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
+using Synesthesias.Snap.Runtime;
 using System;
 using System.IO;
 using System.Threading;
@@ -35,6 +36,11 @@ namespace Synesthesias.Snap.Sample
         {
             try
             {
+                // 各種引数のNullをDebug.Logで出力する
+                Debug.Log($"validationParameter(null?): {validationParameter == null}");
+                Debug.Log($"texture(null?): {texture == null}");
+                Debug.Log($"fileName(null?): {fileName == null}");
+
                 var pngBytesBuffer = texture.EncodeToPNG();
                 using var stream = new MemoryStream(buffer: pngBytesBuffer);
                 var fullFileName = $"{fileName}.png";
