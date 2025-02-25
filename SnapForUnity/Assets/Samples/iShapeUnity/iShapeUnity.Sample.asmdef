@@ -1,0 +1,20 @@
+{
+    "name": "iShapeUnity.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:44924221d30db4602a2f54625c5d84ed",
+        "GUID:e9f45a0bca7ec46beaee51f5fe885d67",
+        "GUID:9267cde3c47644be2aa278c43d7895c3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
