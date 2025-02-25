@@ -34,7 +34,6 @@ namespace Synesthesias.Snap.Sample
         {
             await model.StartAsync(
                 camera: view.ArCamera,
-                maxDistance: 30,
                 cancellationToken);
         }
 

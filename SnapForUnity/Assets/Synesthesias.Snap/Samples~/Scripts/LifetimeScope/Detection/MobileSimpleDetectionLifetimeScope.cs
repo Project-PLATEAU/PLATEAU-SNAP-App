@@ -115,6 +115,12 @@ namespace Synesthesias.Snap.Sample
         {
             builder.RegisterInstance(detectionView);
             builder.RegisterInstance(detectionView.CameraRawImage);
+
+            builder.Register<DetectionSettingModel>(Lifetime.Singleton)
+                .WithParameter("minimumDistance", 10)
+                .WithParameter("maximumDistance", 100)
+                .WithParameter("incrementDistance", 10);
+
             builder.Register<MobileSimpleDetectionModel>(Lifetime.Singleton);
             builder.Register<DetectionTouchModel>(Lifetime.Singleton);
             builder.RegisterEntryPoint<MobileSimpleDetectionPresenter>();

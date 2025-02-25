@@ -16,7 +16,6 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly CompositeDisposable disposable = new();
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
-        private readonly ReactiveProperty<bool> isManualDetectionProperty = new(true);
         private readonly ValidationRepository validationRepository;
         private readonly SurfaceRepository surfaceRepository;
         private readonly TextureRepository textureRepository;
@@ -24,6 +23,7 @@ namespace Synesthesias.Snap.Sample
         private readonly LocalizationModel localizationModel;
         private readonly MobileARCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
+        private readonly DetectionSettingModel settingModel;
         private readonly GeospatialAccuracyModel accuracyModel;
         private readonly MeshValidationModel validationModel;
         private readonly GeospatialPoseModel geospatialPoseModel;
@@ -32,12 +32,12 @@ namespace Synesthesias.Snap.Sample
         private readonly DetectionTouchModel touchModel;
         private readonly MockValidationResultModel mockValidationResultModel;
         private CancellationTokenSource createMeshCancellationTokenSource;
-        private float maxDistance;
 
         /// <summary>
         /// Geospatial情報を表示するか
         /// </summary>
-        public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty = new(true);
+        public ReactiveProperty<bool> IsGeospatialVisibleProperty
+            => settingModel.IsGeospatialVisibleProperty;
 
         /// <summary>
         /// オブジェクトが選択されたかのObservable
@@ -56,6 +56,7 @@ namespace Synesthesias.Snap.Sample
             LocalizationModel localizationModel,
             MobileARCameraModel cameraModel,
             DetectionMenuModel menuModel,
+            DetectionSettingModel settingModel,
             GeospatialAccuracyModel accuracyModel,
             MeshValidationModel validationModel,
             GeospatialPoseModel geospatialPoseModel,
@@ -71,6 +72,7 @@ namespace Synesthesias.Snap.Sample
             this.localizationModel = localizationModel;
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
+            this.settingModel = settingModel;
             this.accuracyModel = accuracyModel;
             this.validationModel = validationModel;
             this.geospatialPoseModel = geospatialPoseModel;
@@ -100,15 +102,13 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(
             Camera camera,
-            float maxDistance,
             CancellationToken cancellation)
         {
-            this.maxDistance = maxDistance;
-
             await UniTask.WhenAll(
                 localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
                     cancellation),
+                settingModel.StartAsync(cancellation),
                 mockValidationResultModel.StartAsync(cancellation));
 
             CreateMenu(camera);
@@ -124,7 +124,7 @@ namespace Synesthesias.Snap.Sample
                 }
 
                 // 手動検出の場合は処理をスキップ
-                if (isManualDetectionProperty.Value)
+                if (settingModel.IsManualDetectionProperty.Value)
                 {
                     continue;
                 }
@@ -179,7 +179,7 @@ namespace Synesthesias.Snap.Sample
 
             var source = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             cancellationTokenSources.Add(source);
-            
+
             var accuracy = accuracyModel.GetAccuracy();
 
             if (!accuracy.IsSuccess)
@@ -196,10 +196,12 @@ namespace Synesthesias.Snap.Sample
                 return;
             }
 
+            var distance = settingModel.DistanceProperty.Value;
+
             // カメラの位置から先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: maxDistance);
+                distance: distance);
 
             if (!toGeospatialPose.IsValid())
             {
@@ -247,56 +249,11 @@ namespace Synesthesias.Snap.Sample
 
         private void CreateMenu(Camera camera)
         {
-            var manualDetectionMenuElementModel = CreateIsManualDetectionMenuElementModel();
-            menuModel.AddElement(manualDetectionMenuElementModel);
-
             var surfaceAPIDebugMenuElement = CreateManualDetectionMenuElementModel(camera);
             menuModel.AddElement(surfaceAPIDebugMenuElement);
 
-            var geospatialVisibilityElementModel = CreateGeospatialVisibilityElementModel();
-            menuModel.AddElement(geospatialVisibilityElementModel);
-
             var clearAnchorMenuElement = CreateClearAnchorMenuElementModel();
             menuModel.AddElement(clearAnchorMenuElement);
-        }
-
-        private DetectionMenuElementModel CreateIsManualDetectionMenuElementModel()
-        {
-            var elementModel = new DetectionMenuElementModel(
-                text: "建物検出: ---",
-                onClickAsync: async _ =>
-                {
-                    var isManualDetection = isManualDetectionProperty.Value;
-                    isManualDetectionProperty.Value = !isManualDetection;
-                    await UniTask.Yield();
-                });
-
-            isManualDetectionProperty
-                .Subscribe(isManualDetection =>
-                {
-                    var text = "建物検出: " + (isManualDetection ? "手動" : "自動");
-                    elementModel.TextProperty.Value = text;
-                })
-                .AddTo(disposable);
-
-            return elementModel;
-        }
-
-        private DetectionMenuElementModel CreateGeospatialVisibilityElementModel()
-        {
-            var elementModel = new DetectionMenuElementModel(
-                text: "Geospatial: ---",
-                onClickAsync: OnClickGeospatialAsync);
-
-            IsGeospatialVisibleProperty
-                .Subscribe(isVisible =>
-                {
-                    var text = isVisible ? "Geospatial: 表示" : "Geospatial: 非表示";
-                    elementModel.TextProperty.Value = text;
-                })
-                .AddTo(disposable);
-
-            return elementModel;
         }
 
         private DetectionMenuElementModel CreateClearAnchorMenuElementModel()
@@ -321,13 +278,6 @@ namespace Synesthesias.Snap.Sample
             return result;
         }
 
-        private async UniTask OnClickGeospatialAsync(CancellationToken cancellationToken)
-        {
-            var isVisible = IsGeospatialVisibleProperty.Value;
-            IsGeospatialVisibleProperty.Value = !isVisible;
-            await UniTask.Yield();
-        }
-
         /// <summary>
         /// 建物検出
         /// </summary>
@@ -350,10 +300,12 @@ namespace Synesthesias.Snap.Sample
                 return;
             }
 
+            var distance = settingModel.DistanceProperty.Value;
+
             // カメラの位置から先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: maxDistance);
+                distance: distance);
 
             if (!toGeospatialPose.IsValid())
             {
@@ -365,7 +317,7 @@ namespace Synesthesias.Snap.Sample
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
                 camera: camera,
-                maxDistance: maxDistance,
+                maxDistance: distance,
                 cancellationToken: cancellationToken);
 
             var eunRotation = Quaternion.AngleAxis(
