@@ -153,7 +153,7 @@ namespace Synesthesias.Snap.Sample
 
         private void OnDifferentViewSelected(IMobileDetectionMeshView meshView)
         {
-            if (SelectedMeshViewProperty.Value != null)
+            if (SelectedMeshViewProperty.Value?.MeshRenderer)
             {
                 SelectedMeshViewProperty.Value.MeshRenderer.material = detectedMaterial;
             }
