@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -73,7 +74,8 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void SetMeshActive(bool isActive)
         {
-            foreach (var anchorObject in anchorObjects)
+            foreach (var anchorObject in anchorObjects
+                         .Where(anchorObject => anchorObject))
             {
                 anchorObject.SetActive(isActive);
             }

@@ -211,7 +211,11 @@ namespace Synesthesias.Snap.Sample
 
             try
             {
+                // メッシュを非表示にする
                 detectionMeshModel.SetMeshActive(false);
+
+                // メッシュが撮影画像に含まれないように2フレーム待機する
+                await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
 
                 if (!cameraModel.TryCaptureTexture2D(out var capturedTexture))
                 {
@@ -242,7 +246,8 @@ namespace Synesthesias.Snap.Sample
             }
             catch (Exception exception)
             {
-                detectionMeshModel.SetMeshActive(false);
+                // 何かしらの原因でエラーが発生する場合は非表示にしたメッシュを表示しなおす
+                detectionMeshModel.SetMeshActive(true);
                 Debug.LogWarning(exception);
             }
         }
