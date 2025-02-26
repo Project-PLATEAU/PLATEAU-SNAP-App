@@ -11,13 +11,12 @@ using System.Linq;
 
 namespace Synesthesias.Snap.Runtime
 {
-    public static class ShapeCalculator
+    public class ShapeModel
     {
         private static readonly float maxEdge = 1;
         private static readonly float maxArea = 1;
-
         // Triangulationを行う関数
-        public static void GeneratePlainShape(Shape shapeData, Mesh mesh)
+        public void CreateShape(Shape shapeData, Mesh mesh)
         {
             //頂点の重複がある時，クラッシュするのを防止する．
             if (IsOverlappingVertices(shapeData))
@@ -82,7 +81,7 @@ namespace Synesthesias.Snap.Runtime
             pShape.Dispose();
         }
 
-        private static Vector3 RotateByMatrix(Vector3 vertex, Matrix4x4 rotationMatrix)
+        private Vector3 RotateByMatrix(Vector3 vertex, Matrix4x4 rotationMatrix)
         {
             // 回転行列を適用
             Vector3 rotatedVertex = rotationMatrix.MultiplyPoint3x4(vertex);
@@ -90,7 +89,7 @@ namespace Synesthesias.Snap.Runtime
             return rotatedVertex;
         }
 
-        public static Matrix4x4 GetInvertRotationMatrix(float angle)
+        public Matrix4x4 GetInvertRotationMatrix(float angle)
         {
             // 回転軸と角度を指定（例: Y軸周りに45度回転）
             Vector3 rotationAxis = Vector3.up;
@@ -105,7 +104,7 @@ namespace Synesthesias.Snap.Runtime
             return inverseRotationMatrix;
         }
 
-        public static Vector3[] GetRestoredVertices(List<Vector3> vertices, Matrix4x4 inverseMatrix)
+        public Vector3[] GetRestoredVertices(List<Vector3> vertices, Matrix4x4 inverseMatrix)
         {
             var results = vertices
                 .Select(vertex => RotateByMatrix(vertex, inverseMatrix))
@@ -114,7 +113,7 @@ namespace Synesthesias.Snap.Runtime
             return results;
         }
 
-        public static Vector3[] RestoredOffsetZ(Vector3[] vertices, float offsetZ)
+        public Vector3[] RestoredOffsetZ(Vector3[] vertices, float offsetZ)
         {
             var results = vertices
                 .Select(vertex => new Vector3(vertex.x, vertex.y, offsetZ))
@@ -123,7 +122,7 @@ namespace Synesthesias.Snap.Runtime
             return results;
         }
 
-        public static Vector2[] GetHullVertices2d(IReadOnlyList<Vector3> hullVertices)
+        public Vector2[] GetHullVertices2d(IReadOnlyList<Vector3> hullVertices)
         {
             var results = hullVertices.Select(hullVertex => 
             {
@@ -133,7 +132,7 @@ namespace Synesthesias.Snap.Runtime
             return results;
         }
 
-        public static Vector2[][] GetHolesVertices2d(List<IReadOnlyList<Vector3>> holesVertices)
+        public Vector2[][] GetHolesVertices2d(List<IReadOnlyList<Vector3>> holesVertices)
         {
             var results = holesVertices.Select(holeVertices =>
             {
@@ -143,7 +142,7 @@ namespace Synesthesias.Snap.Runtime
             return results;
         }
 
-        public static float GetRotationAxisY(IReadOnlyList<Vector3> vertices)
+        public float GetRotationAxisY(IReadOnlyList<Vector3> vertices)
         {
             // verticesの法線ベクトル
             var normal = NormalVectorFrom3d(vertices);
@@ -160,7 +159,7 @@ namespace Synesthesias.Snap.Runtime
             return rotationAngle;
         }
 
-        public static IReadOnlyList<Vector3> GetRotatedVertices(IReadOnlyList<Vector3> vertices, float rotationAngle)
+        public IReadOnlyList<Vector3> GetRotatedVertices(IReadOnlyList<Vector3> vertices, float rotationAngle)
         {
             var results = vertices.Select(vertex =>
             {
@@ -174,7 +173,7 @@ namespace Synesthesias.Snap.Runtime
         }
 
         // メッシュの中心座標を取得
-        public static Vector3 GetMeshCenter(Vector3[] vertices)
+        public Vector3 GetMeshCenter(Vector3[] vertices)
         {
             Vector3 sum = Vector3.zero;
 
@@ -189,7 +188,7 @@ namespace Synesthesias.Snap.Runtime
         }
 
         // メッシュの中心座標を取得
-        public static (double latitude, double longitude, double altitude) GetMeshCenter(
+        public (double latitude, double longitude, double altitude) GetMeshCenter(
             List<List<double>> coordinateList)
         {
             double latitudeSum = 0;
@@ -207,8 +206,47 @@ namespace Synesthesias.Snap.Runtime
                 altitudeSum / coordinateList.Count);
         }
 
+        //　メッシュがカメラの方向を向いているか判定
+        public bool IsFacingCamera(Mesh mesh, Camera camera)
+        {
+            var meshNormal = mesh.normals[0];
+            var cameraNormal = camera.transform.forward;
+            var normalXY = new Vector3(0,1,0);
+
+            // meshNormalとcameraNormalをXZ平面に投影
+            var fromNormal = Vector3.ProjectOnPlane(meshNormal, normalXY);
+            var toNormal = Vector3.ProjectOnPlane(cameraNormal, normalXY);
+
+            var angle = Vector3.Angle(fromNormal, toNormal);
+
+            return angle >= 90 && angle <= 180;
+        }
+
+        // メッシュを反転
+        public Mesh GetInvertMesh(Mesh mesh)
+        {
+            int[] triangles = mesh.triangles;
+            for (int i = 0; i < triangles.Length; i += 3)
+            {
+                int temp = triangles[i];
+                triangles[i] = triangles[i + 1];
+                triangles[i + 1] = temp;
+            }
+            mesh.triangles = triangles;
+
+            Vector3[] normals = mesh.normals;
+            for (int i = 0; i < normals.Length; i++)
+            {
+                normals[i] = -normals[i];
+            }
+            mesh.normals = normals;
+            mesh.RecalculateBounds();
+
+            return mesh;
+        }
+
         // 検出可能面の法線ベクトルを求める関数
-        private static Vector3 NormalVectorFrom3d(IReadOnlyList<Vector3> vertices)
+        private Vector3 NormalVectorFrom3d(IReadOnlyList<Vector3> vertices)
         {
             var n = vertices.Count;
             var normal = Vector3.zero;
@@ -224,7 +262,7 @@ namespace Synesthesias.Snap.Runtime
             return normal.normalized;
         }
 
-        private static Vector3 NormalVectorFrom2d(Vector2[] vertices)
+        private Vector3 NormalVectorFrom2d(Vector2[] vertices)
         {
             var n = vertices.Length;
             var normal = Vector3.zero;
@@ -241,7 +279,7 @@ namespace Synesthesias.Snap.Runtime
         }
 
         //頂点の重複を検知する関数
-        private static bool IsOverlappingVertices(Shape vertices2d)
+        private bool IsOverlappingVertices(Shape vertices2d)
         {
             var hashset = new HashSet<Vector2>();
             var overlap = false;
@@ -260,7 +298,7 @@ namespace Synesthesias.Snap.Runtime
         }
 
         //shapeDataに格納されている頂点座標が反時計まわりになっていることを検知する関数
-        private static bool IsCounterClockwise(Shape shapeData)
+        private bool IsCounterClockwise(Shape shapeData)
         {
             var normal = NormalVectorFrom2d(shapeData.hull);
             var normalXY = new Vector3(0, 0, -1).normalized; //2つのベクトルの内積が-1の時，反時計まわり
@@ -268,7 +306,7 @@ namespace Synesthesias.Snap.Runtime
             return isCounterClockwise;
         }
 
-        public static PlainShape ToPlainShape(
+        public PlainShape ToPlainShape(
             IntGeom iGeom,
             Allocator allocator,
             Vector2[] hull,

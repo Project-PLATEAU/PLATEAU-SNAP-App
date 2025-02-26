@@ -28,6 +28,8 @@ namespace Synesthesias.Snap.Sample
                 .WithParameter("renderTexture", renderTexture);
 
             ConfigureMenu(builder);
+            ConfigureGeospatialMainLoop(builder);
+            ConfigureGeospatial(builder);
             ConfigureAR(builder);
             ConfigureDetection(builder);
             ConfigureDetectionMesh(builder);
@@ -59,9 +61,35 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterEntryPoint<DetectionMenuPresenter>();
         }
 
+        private void ConfigureGeospatialMainLoop(IContainerBuilder builder)
+        {
+            //builder.RegisterInstance(geospatialMainLoopView);
+            //builder.Register<GeospatialMainLoopModel>(Lifetime.Singleton);
+            //builder.RegisterEntryPoint<GeospatialMainLoopPresenter>();
+        }
+
+        private static void ConfigureGeospatial(IContainerBuilder builder)
+        {
+            //builder.RegisterInstance(GeospatialAccuracyThresholdModel.Default);
+            //builder.Register<GeospatialAccuracyModel>(Lifetime.Singleton);
+            //builder.Register<GeospatialAnchorModel>(Lifetime.Singleton);
+            //builder.Register<GeospatialPoseModel>(Lifetime.Singleton);
+            // builder.Register<EditorGeospatialMathModel>(Lifetime.Singleton)
+            //     .AsImplementedInterfaces();
+            builder.Register<ShapeModel>(Lifetime.Singleton);
+            builder.Register<EditorTriangulationModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+            
+            builder.Register<EditorGeospatialMeshModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+        }
+
         private static void ConfigureAR(IContainerBuilder builder)
         {
-            builder.Register<EditorGeospatialMathModel>(Lifetime.Singleton);
+            builder.Register<EditorGeospatialMathModel>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+
+            builder.Register<MeshModel>(Lifetime.Singleton);
         }
 
         private void ConfigureDetection(IContainerBuilder builder)
@@ -72,9 +100,10 @@ namespace Synesthesias.Snap.Sample
                 .AsImplementedInterfaces();
 
             builder.Register<EditorDetectionModel>(Lifetime.Singleton);
-            builder.RegisterEntryPoint<EditorDetectionPresenter>();
+            //builder.RegisterEntryPoint<EditorDetectionPresenter>();
             builder.Register<DetectionTouchModel>(Lifetime.Singleton);
             builder.Register<MockValidationResultModel>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<EditorDetectionPresenter>();
         }
 
         private void ConfigureDetectionMesh(IContainerBuilder builder)

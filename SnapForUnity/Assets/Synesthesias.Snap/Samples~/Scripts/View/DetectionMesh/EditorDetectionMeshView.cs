@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
@@ -10,6 +11,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private string id;
         [SerializeField] private MeshFilter meshFilter;
         [SerializeField] private MeshRenderer meshRenderer;
+        [SerializeField] private MeshCollider meshCollider;
         [SerializeField] private Material debugSphereMaterial;
 
         /// <summary>
@@ -43,6 +45,12 @@ namespace Synesthesias.Snap.Sample
         {
             return gameObject;
         }
+
+        /// <summary>
+        /// メッシュのCollider
+        /// </summary>
+        public MeshCollider MeshCollider
+            => meshCollider;
 
         // <summary>
         /// 子GameObjectを取得する

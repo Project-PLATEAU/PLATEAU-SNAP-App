@@ -45,6 +45,24 @@ namespace Synesthesias.Snap.Runtime
         }
 
         /// <summary>
+        /// カメラのTrackingStateを取得する
+        /// </summary>
+        public TrackingState GetCameraTrackingState()
+        {
+            var result = arEarthManager.EarthTrackingState;
+            return result;
+        }
+
+        /// <summary>
+        /// カメラのEarthStateを取得する
+        /// </summary>
+        public EarthState GetCameraEarthState()
+        {
+            var result = arEarthManager.EarthState;
+            return result;
+        }
+
+        /// <summary>
         /// ARGeospatialアンカーを作成する(AnchorType指定)
         /// </summary>
         public async UniTask<ARGeospatialAnchor> CreateARGeospatialAnchorWithAnchorTypeAsync(

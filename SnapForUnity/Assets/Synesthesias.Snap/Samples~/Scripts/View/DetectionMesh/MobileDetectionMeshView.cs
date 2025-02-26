@@ -8,8 +8,9 @@ namespace Synesthesias.Snap.Sample
     public class MobileDetectionMeshView : MonoBehaviour, IMobileDetectionMeshView
     {
         [SerializeField] private string id;
-        [SerializeField] private MeshRenderer meshRenderer;
         [SerializeField] private MeshFilter meshFilter;
+        [SerializeField] private MeshRenderer meshRenderer;
+        [SerializeField] private MeshCollider meshCollider;
 
         /// <summary>
         /// メッシュのID
@@ -39,6 +40,12 @@ namespace Synesthesias.Snap.Sample
         {
             return gameObject;
         }
+
+        /// <summary>
+        /// メッシュのCollider
+        /// </summary>
+        public MeshCollider MeshCollider
+            => meshCollider;
 
         // <summary>
         /// 子GameObjectを取得する

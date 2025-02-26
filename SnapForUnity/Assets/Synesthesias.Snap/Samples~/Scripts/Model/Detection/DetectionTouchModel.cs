@@ -118,7 +118,7 @@ namespace Synesthesias.Snap.Sample
         {
             var ray = camera.ScreenPointToRay(screenPosition);
 
-            if (!Physics.Raycast(ray, out var hit))
+            if (!Physics.Raycast(ray, out var hit, Mathf.Infinity))
             {
                 return;
             }

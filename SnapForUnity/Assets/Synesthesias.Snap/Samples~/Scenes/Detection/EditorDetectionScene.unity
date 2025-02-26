@@ -689,10 +689,7 @@ MonoBehaviour:
   fromLatitude: 35.75321294390318
   fromLongitude: 139.6908707372933
   fromAltitude: 60
-  toLatitude: 35.75253831659066
-  toLongitude: 139.6907623826732
-  toAltitude: 60
-  maxDistance: 20
+  maxDistance: 40
   camera: {fileID: 457435022}
 --- !u!4 &965094033
 Transform:

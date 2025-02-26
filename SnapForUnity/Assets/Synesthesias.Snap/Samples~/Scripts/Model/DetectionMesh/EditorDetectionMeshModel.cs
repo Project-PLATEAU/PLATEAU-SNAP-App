@@ -1,7 +1,8 @@
 using Synesthesias.Snap.Runtime;
-using Google.XR.ARCoreExtensions;
+using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -13,17 +14,21 @@ namespace Synesthesias.Snap.Sample
     public class EditorDetectionMeshModel : IDisposable
     {
         private readonly List<GameObject> anchorObjects = new();
+        private readonly IGeospatialMeshModel editorGeospatialMeshModel;
         private readonly EditorDetectionMeshView meshViewTemplate;
-        private double originLatitude;
-        private double originLongitude;
-        private double originAltitude;
+        private readonly MeshModel meshModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public EditorDetectionMeshModel(EditorDetectionMeshView meshViewTemplate)
+        public EditorDetectionMeshModel(
+            IGeospatialMeshModel editorGeospatialMeshModel,
+            EditorDetectionMeshView meshViewTemplate,
+            MeshModel meshModel)
         {
+            this.editorGeospatialMeshModel = editorGeospatialMeshModel;
             this.meshViewTemplate = meshViewTemplate;
+            this.meshModel = meshModel;
         }
 
         /// <summary>
@@ -32,6 +37,55 @@ namespace Synesthesias.Snap.Sample
         public void Dispose()
         {
             Clear();
+        }
+        
+        /// <summary>
+        /// メッシュ(surface)をAFGeospatialアンカーの位置に生成する
+        /// </summary>
+        public async UniTask<EditorDetectionMeshView> CreateMeshView(
+            Camera camera,
+            ISurfaceModel surface,
+            Quaternion eunRotation,
+            CancellationToken cancellationToken)
+        {
+            var meshResult = await editorGeospatialMeshModel.CreateMeshAsync(
+                camera: camera,
+                surface: surface,
+                eunRotation: eunRotation,
+                cancellationToken: cancellationToken);
+
+            if (meshResult.ResultType != GeospatialMeshResultType.Success)
+            {
+                return null;
+            }
+
+            // const float DistanceFromCamera = 10.0F;
+
+            // 画面内のランダムな位置にViewを配置する
+            // var screenPosition = GetRandomScreenPosition();
+            // screenPosition.z = DistanceFromCamera;
+            // var worldPosition = camera.ScreenToWorldPoint(screenPosition);
+
+            var view = Object.Instantiate(
+                meshViewTemplate,
+                meshResult.AnchorTransform);
+
+            anchorObjects.Add(view.gameObject);
+
+            view.Id = surface.GmlId;
+            view.MeshFilter.mesh = meshResult.Mesh;
+            view.MeshCollider.sharedMesh = meshResult.Mesh;
+
+            return view;
+        }
+
+        private static Vector3 GetRandomScreenPosition()
+        {
+            var x = UnityEngine.Random.Range(0, Screen.width);
+            var y = UnityEngine.Random.Range(0, Screen.height);
+
+            var result = new Vector3(x, y, 0);
+            return result;
         }
 
         /// <summary>
@@ -55,33 +109,26 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// メッシュ(surface)をAFGeospatialアンカーの位置に生成する
         /// </summary>
-        public EditorDetectionMeshView CreateMeshAtARGeospatialAnchor(
-            double latitude,
-            double longitude,
-            double altitude, 
-            ISurfaceModel detectedSurface)
-        {
-            var gmlId = detectedSurface.GmlId;
-            var model = new MeshModel();
+        // public EditorDetectionMeshView CreateMeshAtTransform(
+        //     ISurfaceModel surface,
+        //     Vector3 position,
+        //     Quaternion rotation)
+        // {
+        //     var view = Object.Instantiate(meshViewTemplate, Vector3.zero, Quaternion.Euler(Vector3.zero));
+        //     view.Id = surface.GmlId;
+        //     var mesh = meshModel.CreateMesh(
+        //         surface: surface,
+        //         parent: view.GetGameObject().transform, 
+        //         eunRotation: rotation);
+        //     view.MeshFilter.mesh = mesh;
+            
+        //     view.gameObject.transform.position = position;
+        //     view.gameObject.transform.rotation = rotation;
+        //     anchorObjects.Add(view.gameObject);
+        //     return view;
+        // }
 
-            // メッシュを生成する緯度経度の原点を設定する
-            if (originLatitude == 0 && originLongitude == 0)
-            {
-                originLatitude = detectedSurface.Coordinates[0][0][1];
-                originLongitude = detectedSurface.Coordinates[0][0][0];
-                (originLatitude, originLongitude, originAltitude) = ShapeCalculator.GetMeshCenter(detectedSurface.Coordinates);
-            }
 
-            var view = Object.Instantiate(meshViewTemplate, Vector3.zero, Quaternion.Euler(Vector3.zero));
-            Debug.Log($"GML ID: {gmlId}");
-            var mesh = model.CreateMesh(detectedSurface, gmlId, originLatitude, originLongitude, originAltitude);
-            view.MeshFilter.mesh = mesh;
-            model.CreateCollider(gmlId, mesh, view.transform);
-
-            anchorObjects.Add(view.gameObject);
-
-            return view;
-        }
 
         /// <summary>
         /// 全てのメッシュを削除する

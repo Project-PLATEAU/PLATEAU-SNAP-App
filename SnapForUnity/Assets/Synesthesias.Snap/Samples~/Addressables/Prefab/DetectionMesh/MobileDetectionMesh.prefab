@@ -100,6 +100,7 @@ MonoBehaviour:
   id: 
   meshFilter: {fileID: 5937169099439375262}
   meshRenderer: {fileID: 3836081297118441963}
+  meshCollider: {fileID: 8704576388425787388}
 --- !u!64 &8704576388425787388
 MeshCollider:
   m_ObjectHideFlags: 0

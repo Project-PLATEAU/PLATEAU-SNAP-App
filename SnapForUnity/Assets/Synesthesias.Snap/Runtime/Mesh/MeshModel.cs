@@ -1,5 +1,6 @@
-using System.Linq;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Synesthesias.Snap.Runtime
@@ -9,103 +10,119 @@ namespace Synesthesias.Snap.Runtime
     /// </summary>
     public class MeshModel
     {
-        private List<Vector3> originalHullVertices;
-        private Shape plainShapeData;
-        public List<Vector3> OriginalHullVertices { get { return originalHullVertices; } }
-        private List<List<Vector3>> originalHolesVertices;
-        public List<List<Vector3>> OriginalHolesVertices { get { return originalHolesVertices; } }
-        private List<Vector3> rotatedHullVertices;
-        public List<Vector3> RotatedHullVertices { get { return rotatedHullVertices; } }
-        private List<List<Vector3>> rotatedHolesVertices;
-        public List<List<Vector3>> RotatedHolesVertices { get { return rotatedHolesVertices; } }
-        private string gmlId;
-        public string GmlId { get { return gmlId; } }
-
-        private float rotationAxisY = 0;
-        private const float debugSphereRadius = 0.5f;
+        private readonly IGeospatialMathModel geospatialMathModel;
         private bool isCheckedVertices = false;
 
         /// <summary>
-        /// メッシュの生成
+        /// コンストラクタ
         /// </summary>
-        public Mesh CreateMesh(ISurfaceModel surface, string id, double originLatitude, double originLongitude, double originAltitude)
+        public MeshModel(IGeospatialMathModel geospatialMathModel)
         {
-            // Trianglurationの設定
-            Application.targetFrameRate = 60;
+            this.geospatialMathModel = geospatialMathModel;
+        }
+
+        /// <summary>
+        /// 三角形のインデックス
+        /// </summary>
+        public bool TryCreateFanTriangles(
+            Vector3 cameraPosition,
+            Vector3[] vertices,
+            out int[] results)
+        {
+            var triangleList = new List<int>();
+
+            if (vertices.Length < 4)
+            {
+                results = Array.Empty<int>();
+                return false;
+            }
+
+            var vertexCount = vertices.Length;
+
+            for (var vertexIndex = 1; vertexIndex < vertexCount - 1; vertexIndex++)
+            {
+                // 三角形の3頂点を取得
+                var vertex1 = vertices[0];    // 扇形の中心
+                var vertex2 = vertices[vertexIndex];    // 現在の頂点
+                var vertex3 = vertices[vertexIndex + 1]; // 次の頂点
+
+                // 三角形の法線を計算
+                var normal = Vector3.Cross(vertex2 - vertex1, vertex3 - vertex1).normalized;
+
+                // Camera から見た方向
+                var cameraToTriangle = (vertex1 + vertex2 + vertex3) / 3 - cameraPosition;
+                var isFacingCamera = Vector3.Dot(normal, cameraToTriangle) < 0;
+
+                triangleList.Add(0);
+
+                // 三角形をカメラの向きに合わせて追加
+                if (isFacingCamera)
+                {
+                    triangleList.Add(vertexIndex);
+                    triangleList.Add(vertexIndex + 1);
+                }
+                else
+                {
+                    triangleList.Add(vertexIndex + 1);
+                    triangleList.Add(vertexIndex);
+                }
+            }
+
+            results = triangleList.ToArray();
+            return true;
+        }
+
+        /// <summary>
+        /// メッシュの作成
+        /// </summary>
+        /// <param name="surface">検出された面</param>
+        /// <param name="parent">Colliderを設置する親オブジェクト</param>
+        /// <param name="eunRotation">カメラの向き</param>
+        /// <returns></returns>
+        public Mesh CreateMesh(
+            ISurfaceModel surface,
+            Transform parent,
+            Quaternion eunRotation)
+        {
+            if (surface?.Coordinates == null || surface.Coordinates.Count == 0)
+            {
+                return null; // 無効なデータの場合
+            }
+
             var mesh = new Mesh();
             mesh.MarkDynamic();
 
-            // 当たり判定用のColliderを作成, gmlIdの設定
-            gmlId = id;
+            var vertexList = new List<Vector3>();
+            var triangleList = new List<int>();
 
-            originalHullVertices = new List<Vector3>();
-            originalHolesVertices = new List<List<Vector3>>();
+            // Hull(外周)の経度緯度高度データを取得
+            var hull = surface.Coordinates[0];
 
-            // 地理情報を取得
-            var latLonHullData = surface.Coordinates[0].ToArray().Take(surface.Coordinates[0].Count - 1).ToList();
-            var latLonHolesData = new List<List<List<double>>>();
-            if (surface.Coordinates.Count > 1)
-            {
-                foreach (var coordinate in surface.Coordinates)
-                {
-                    latLonHolesData.Add(coordinate.ToArray().Take(coordinate.Count - 1).ToList());
-                }
-            }
+            // Holes(穴)の経度緯度高度データを取得
+            var holes = surface.Coordinates.Skip(1);
 
-            // 緯度軽度高度->メートルに変換(x:緯度, y:高度, z:経度)
-            for (int index = 0; index < latLonHullData.Count; index++)
-            {
-                originalHullVertices.Add(LatLonConverter.ToMeters(                    
-                    latitude: latLonHullData[index][1],
-                    longitude: latLonHullData[index][0], 
-                    altitude: latLonHullData[index][2], 
-                    originLatitude: originLatitude, 
-                    originLongitude: originLongitude,
-                    originAltitude: originAltitude));
-            }
-
-            if (latLonHolesData != null)
-            {
-                foreach (var holeData in latLonHolesData)
-                {
-                    var holeVertices = new List<Vector3>();
-                    for (int index = 0; index < holeData.Count; index++)
-                    {
-                        holeVertices.Add(LatLonConverter.ToMeters(
-                            latitude: holeData[index][1], 
-                            longitude: holeData[index][0], 
-                            altitude: holeData[index][2],
-                            originLatitude: originLatitude,
-                            originLongitude: originLongitude,
-                            originAltitude: originAltitude));
-                    }
-                    originalHolesVertices.Add(holeVertices);
-                }
-            }
-
+            // Hull(外周)の処理
+            var hullVertices = ConvertToVector3List(
+                hull,
+                eunRotation);
+            
+            // Holes(穴)の処理
+            var holesVertices = holes.Select(vertices => ConvertToVector3List(vertices,eunRotation));
+            
             // メッシュを生成する用の頂点座標を設定
-            rotationAxisY = ShapeCalculator.GetRotationAxisY(originalHullVertices);
-            rotatedHullVertices = ShapeCalculator.GetRotatedVertices(originalHullVertices, rotationAxisY);
+            var rotationAxisY = ShapeCalculator.GetRotationAxisY(hullVertices);
+            var rotatedHullVertices = ShapeCalculator.GetRotatedVertices(hullVertices, rotationAxisY);
+            var rotatedHolesVertices = holesVertices.Select(vertices => ShapeCalculator.GetRotatedVertices(vertices, rotationAxisY));
 
-            rotatedHolesVertices = new List<List<Vector3>>();
-            foreach (var holeVertices in originalHolesVertices)
-            {
-                rotatedHolesVertices.Add(ShapeCalculator.GetRotatedVertices(holeVertices, rotationAxisY));
-            }
-
-            // x,y,z座標の内、x,yを使用してメッシュを生成
-            plainShapeData = new Shape
+            // メッシュ生成用に2次元座標に変換
+            Shape shapeData = new Shape
             {
                 hull = ShapeCalculator.GetHullVertices2d(rotatedHullVertices),
-                holes = ShapeCalculator.GetHolesVertices2d(rotatedHolesVertices)
+                holes = ShapeCalculator.GetHolesVertices2d(rotatedHolesVertices.ToList())
             };
 
-            // メッシュを生成
-            ShapeCalculator.GeneratePlainShape(plainShapeData, mesh);
-
-            // メッシュを生成した時にZ成分が失われるので，これを元に戻す
-            float offsetZ = rotatedHullVertices[0].z;
-            mesh.vertices = ShapeCalculator.RestoredOffsetZ(mesh.vertices, offsetZ);
+            // メッシュを生成(meshに生成したメッシュが入る)
+            ShapeCalculator.GeneratePlainShape(shapeData, mesh);
 
             // verticesに渡す頂点を作成
             var invertRotaionMatrix = ShapeCalculator.GetInvertRotationMatrix(rotationAxisY);
@@ -113,48 +130,87 @@ namespace Synesthesias.Snap.Runtime
 
             // 頂点を渡す
             mesh.vertices = restoredVertices.ToArray();
-            
+
             return mesh;
         }
 
         /// <summary>
-        /// Colliderの生成
+        /// Meshの生成
         /// </summary>
-        public Collider CreateCollider(
-            string id,
-            Mesh mesh,
-            Transform parent)
+        public Mesh CreateMesh(Vector3[] vertices, int[] triangles)
         {
-            GameObject colliderObject = new GameObject(id);
-            var bounds = mesh.bounds;
-            
-            colliderObject.transform.position = ShapeCalculator.GetMeshCenter(mesh.vertices);
-            colliderObject.transform.rotation = Quaternion.Euler(0, -rotationAxisY, 0);
-            colliderObject.transform.localScale = new Vector3(bounds.size.x, bounds.size.y, 0.5f);
-            colliderObject.transform.SetParent(parent);
-            var collider = colliderObject.AddComponent<BoxCollider>();
-            return collider;
+            var result = new Mesh { vertices = vertices, triangles = triangles };
+            result.RecalculateNormals();
+            result.RecalculateBounds();
+            return result;
         }
 
         /// <summary>
-        /// 頂点が正しい位置に配置されているか確認する用
+        /// メッシュの中心の緯度経度高度を取得
         /// </summary>
-        /// <param name="material">表示させる頂点の色</param>
-        public void CheckVertices(Material material)
+        public (double latitude, double longitude, double altitude) GetMeshCenter(
+            List<List<double>> coordinateList)
         {
-            foreach (Vector3 vertex in originalHullVertices)
+            return ShapeCalculator.GetMeshCenter(coordinateList);
+        }
+
+        /// <summary>
+        /// GeospatialPose を Unity のローカル座標に変換し、Vector3 リストを作成
+        /// </summary>
+        private List<Vector3> ConvertToVector3List(
+            List<List<double>> coordinateList,
+            Quaternion eunRotation)
+        {
+            var vertices = new List<Vector3>();
+
+            // 各頂点をVector3に変換する際に使用する原点を設定
+            (var originLatitude, var originLogitude, var originAltitude) = ShapeCalculator.GetMeshCenter(coordinateList);
+            // GeospatialPose を作成
+            var geospatialPose = geospatialMathModel.CreateGeospatialPose(
+                latitude: originLatitude, //緯度
+                longitude: originLogitude, //経度
+                altitude: originAltitude, //高度
+                eunRotation: eunRotation);
+            
+            var originPosition = geospatialMathModel.GetVector3(geospatialPose);
+            
+            foreach (var coordinate in coordinateList)
             {
-                //Debug.Log(vertex);
-                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-                sphere.transform.position = new Vector3(vertex.x, vertex.y, vertex.z);
-
-                sphere.transform.localScale = Vector3.one * debugSphereRadius;
-
-                Renderer renderer = sphere.GetComponent<Renderer>();
-                renderer.material = material;
+                // GeospatialPose を作成
+                geospatialPose = geospatialMathModel.CreateGeospatialPose(
+                    latitude: coordinate[1], //緯度
+                    longitude: coordinate[0], //経度
+                    altitude: coordinate[2], //高度
+                    eunRotation: eunRotation);
+                
+                var position = geospatialMathModel.GetVector3(geospatialPose);
+                vertices.Add(position - originPosition);
             }
+
+            vertices = vertices.Distinct().ToList();
+
+            return vertices;
+        }
+
+        /// <summary>
+        /// Hull（三角形分割）のための簡単な Ear Clipping アルゴリズム
+        /// </summary>
+        private static List<int> TriangulateHull(
+            List<Vector3> vertices, 
+            int startIndex)
+        {
+            var triangles = new List<int>();
+
+            if (vertices.Count < 3) return triangles;
+
+            for (int i = 1; i < vertices.Count - 1; i++)
+            {
+                triangles.Add(startIndex);
+                triangles.Add(startIndex + i);
+                triangles.Add(startIndex + i + 1);
+            }
+
+            return triangles;
         }
     }
 }
-

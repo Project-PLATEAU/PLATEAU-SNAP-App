@@ -10,9 +10,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private double fromLatitude;
         [SerializeField] private double fromLongitude;
         [SerializeField] private double fromAltitude;
-        [SerializeField] private double toLatitude;
-        [SerializeField] private double toLongitude;
-        [SerializeField] private double toAltitude;
+        [SerializeField] private double maxDistance;
         [SerializeField] private Camera camera;
 
         public double FromLatitude
@@ -24,20 +22,11 @@ namespace Synesthesias.Snap.Sample
         public double FromAltitude
             => fromAltitude;
 
-        public double ToLatitude
-            => toLatitude;
-
-        public double ToLongitude
-            => toLongitude;
-
-        public double ToAltitude
-            => toAltitude;
-
         public double Roll
             => camera.transform.rotation.eulerAngles.z;
 
         public double MaxDistance
-            => 20; // camera.farClipPlane;
+            => maxDistance;
 
         public double FieldOfView
             => camera.fieldOfView;

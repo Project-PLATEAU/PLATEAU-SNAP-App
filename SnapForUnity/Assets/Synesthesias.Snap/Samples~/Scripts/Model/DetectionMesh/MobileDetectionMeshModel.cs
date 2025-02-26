@@ -1,8 +1,10 @@
+using Synesthesias.Snap.Runtime;
 using Cysharp.Threading.Tasks;
 using Google.XR.ARCoreExtensions;
 using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -16,18 +18,21 @@ namespace Synesthesias.Snap.Sample
     public class MobileDetectionMeshModel : IDisposable
     {
         private readonly List<GameObject> anchorObjects = new();
-        private readonly GeospatialAsyncModel geospatialAsyncModel;
+        private readonly IGeospatialMeshModel mobileGeospatialMeshModel;
         private readonly MobileDetectionMeshView meshViewTemplate;
+        private readonly MeshModel meshModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public MobileDetectionMeshModel(
-            GeospatialAsyncModel geospatialAsyncModel,
-            MobileDetectionMeshView meshViewTemplate)
+            IGeospatialMeshModel mobileGeospatialMeshModel,
+            MobileDetectionMeshView meshViewTemplate,
+            MeshModel meshModel)
         {
-            this.geospatialAsyncModel = geospatialAsyncModel;
+            this.mobileGeospatialMeshModel = mobileGeospatialMeshModel;
             this.meshViewTemplate = meshViewTemplate;
+            this.meshModel = meshModel;
         }
 
         /// <summary>
@@ -39,50 +44,48 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
-        /// メッシュをAFGeospatialアンカーの位置に生成する
+        /// メッシュ(surface)をAFGeospatialアンカーの位置に生成する
         /// </summary>
-        public MobileDetectionMeshView CreateMeshAtARGeospatialAnchor(ARGeospatialAnchor geospatialAnchor)
-        {
-            anchorObjects.Add(geospatialAnchor.gameObject);
-            var view = Object.Instantiate(meshViewTemplate, geospatialAnchor.transform);
-            anchorObjects.Add(view.gameObject);
-            return view;
-        }
-
-        /// <summary>
-        /// メッシュをARアンカーの位置に生成する
-        /// </summary>
-        public MobileDetectionMeshView CreateMeshAtARAnchor(ARAnchor arAnchor)
-        {
-            anchorObjects.Add(arAnchor.gameObject);
-            var view = Object.Instantiate(meshViewTemplate, arAnchor.transform);
-            anchorObjects.Add(view.gameObject);
-            return view;
-        }
-
-        /// <summary>
-        /// GeospatialPoseの位置にメッシュを生成する
-        /// </summary>
-        public async UniTask<MobileDetectionMeshView> CreateMeshAtARGeospatialPose(
-            GeospatialPose geospatialPose,
+        public async UniTask<MobileDetectionMeshView> CreateMeshView(
+            Camera camera,
+            ISurfaceModel surface,
+            Quaternion eunRotation,
             CancellationToken cancellationToken)
         {
-            var arGeospatialAnchor = await geospatialAsyncModel.CreateARGeospatialAnchorAsync(
-                geospatialPose,
-                cancellationToken);
+            var meshResult = await mobileGeospatialMeshModel.CreateMeshAsync(
+                camera: camera,
+                surface: surface,
+                eunRotation: eunRotation,
+                cancellationToken: cancellationToken);
 
-            var view = CreateMeshAtARGeospatialAnchor(arGeospatialAnchor);
+            if (meshResult.ResultType != GeospatialMeshResultType.Success)
+            {
+                return null;
+            }
+
+            var view = Object.Instantiate(
+                meshViewTemplate,
+                meshResult.AnchorTransform);
+
+            anchorObjects.Add(view.gameObject);
+
+            view.Id = surface.GmlId;
+            view.MeshFilter.mesh = meshResult.Mesh;
+            view.MeshCollider.sharedMesh = meshResult.Mesh;
+
             return view;
         }
 
         /// <summary>
-        /// カメラの位置にメッシュを生成する
+        /// メッシュの表示を設定する
         /// </summary>
-        public async UniTask<MobileDetectionMeshView> CreateMeshAtCameraAsync(CancellationToken cancellationToken)
+        public void SetMeshActive(bool isActive)
         {
-            var geospatialPose = geospatialAsyncModel.GetCameraGeospatialPose();
-            var view = await CreateMeshAtARGeospatialPose(geospatialPose, cancellationToken);
-            return view;
+            foreach (var anchorObject in anchorObjects
+                         .Where(anchorObject => anchorObject))
+            {
+                anchorObject.SetActive(isActive);
+            }
         }
 
         /// <summary>

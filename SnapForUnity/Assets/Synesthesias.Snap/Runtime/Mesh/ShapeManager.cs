@@ -10,11 +10,11 @@ namespace Synesthesias.Snap.Runtime
     {
         public Vector2[] hull;
         public Vector2[][] holes;
-
+    
         public PlainShape ToPlainShape(IntGeom iGeom, Allocator allocator)
         {
             var iHull = iGeom.Int(hull);
-
+    
             IntShape iShape;
             if (holes != null && holes.Length > 0)
             {
@@ -25,31 +25,10 @@ namespace Synesthesias.Snap.Runtime
             {
                 iShape = new IntShape(iHull, Array.Empty<IntVector[]>());
             }
-
+    
             var pShape = new PlainShape(iShape, allocator);
-
+    
             return pShape;
         }
-    }
-    public class ShapeManager
-    {
-        public static Shape[] Data = new Shape[] {
-            new Shape {
-                hull = new Vector2[] {
-                    new Vector2(-15, -15),
-                    new Vector2(-15, 15),
-                    new Vector2(15, 15),
-                    new Vector2(15, -15)
-                }
-            },
-            new Shape {
-                hull = new Vector2[] {
-                    new Vector2(-5, -15),
-                    new Vector2(-15, 15),
-                    new Vector2(15, 15),
-                    new Vector2(15, -15)
-                }
-            }
-        };
     }
 }

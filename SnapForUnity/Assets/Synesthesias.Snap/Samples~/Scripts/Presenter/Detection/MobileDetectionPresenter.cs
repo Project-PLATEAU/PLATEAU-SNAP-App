@@ -80,14 +80,16 @@ namespace Synesthesias.Snap.Sample
 
         private void OnClickGeospatial(bool isVisible)
         {
-            view.GeospatialObject.SetActive(isVisible);
+            //view.GeospatialObject.SetActive(isVisible);
         }
 
         private async UniTask OnClickCameraAsync()
         {
             view.CameraButton.interactable = false;
             var cancellationToken = view.GetCancellationTokenOnDestroy();
-            await model.CaptureAsync(cancellationToken);
+            await model.CaptureAsync(
+                camera: view.ArCamera,
+                cancellationToken: cancellationToken);
         }
     }
 }

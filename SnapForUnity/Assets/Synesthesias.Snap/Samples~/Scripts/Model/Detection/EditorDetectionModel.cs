@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Google.XR.ARCoreExtensions;
 using R3;
 using Synesthesias.Snap.Runtime;
 using System;
@@ -20,11 +21,11 @@ namespace Synesthesias.Snap.Sample
         private readonly SceneModel sceneModel;
         private readonly LocalizationModel localizationModel;
         private readonly EditorWebCameraModel cameraModel;
-        private readonly EditorGeospatialMathModel geospatialMathModel;
+        private readonly IGeospatialMathModel geospatialMathModel;
         private readonly IEditorDetectionParameterModel parameterModel;
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionTouchModel touchModel;
-        private readonly EditorDetectionMeshModel meshModel;
+        private readonly EditorDetectionMeshModel detectionMeshModel;
         private readonly MeshValidationModel meshValidationModel;
         private readonly MockValidationResultModel resultModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
@@ -44,12 +45,12 @@ namespace Synesthesias.Snap.Sample
             SurfaceRepository surfaceRepository,
             SceneModel sceneModel,
             LocalizationModel localizationModel,
-            EditorGeospatialMathModel geospatialMathModel,
+            IGeospatialMathModel geospatialMathModel,
             IEditorDetectionParameterModel parameterModel,
             EditorWebCameraModel cameraModel,
             DetectionMenuModel menuModel,
             DetectionTouchModel touchModel,
-            EditorDetectionMeshModel meshModel,
+            EditorDetectionMeshModel detectionMeshModel,
             MeshValidationModel meshValidationModel,
             MockValidationResultModel resultModel)
         {
@@ -63,7 +64,7 @@ namespace Synesthesias.Snap.Sample
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
             this.touchModel = touchModel;
-            this.meshModel = meshModel;
+            this.detectionMeshModel = detectionMeshModel;
             this.meshValidationModel = meshValidationModel;
             this.resultModel = resultModel;
         }
@@ -176,12 +177,10 @@ namespace Synesthesias.Snap.Sample
                 altitude: parameterModel.FromAltitude,
                 eunRotation: eulerRotation);
 
-            // デバッグ用のGeospatialPoseを終点とする
-            var toGeospatialPose = geospatialMathModel.CreateGeospatialPose(
-                latitude: parameterModel.ToLatitude,
-                longitude: parameterModel.ToLongitude,
-                altitude: parameterModel.ToAltitude,
-                eunRotation: eulerRotation);
+            // 始点から先のGeospatialPoseを終点とする
+            var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
+                geospatialPose: fromGeospatialPose,
+                distance: (float) parameterModel.MaxDistance);
 
             var meshValidationResult = meshValidationModel.Validate(
                 meshTransform: selectedMeshView.MeshFilter.transform,
@@ -206,7 +205,7 @@ namespace Synesthesias.Snap.Sample
             modifiedScreenPosition.z = DistanceFromCamera;
             var worldPosition = camera.ScreenToWorldPoint(modifiedScreenPosition);
 
-            var mesh = meshModel.CreateMeshAtTransform(
+            var mesh = detectionMeshModel.CreateMeshAtTransform(
                 id: "Empty Id ---",
                 position: worldPosition,
                 rotation: Quaternion.identity);
@@ -216,7 +215,7 @@ namespace Synesthesias.Snap.Sample
 
         private async UniTask OnClickClearAsync(CancellationToken cancellationToken)
         {
-            meshModel.Clear();
+            detectionMeshModel.Clear();
             await UniTask.Yield();
         }
 
@@ -237,12 +236,10 @@ namespace Synesthesias.Snap.Sample
                 altitude: parameterModel.FromAltitude,
                 eunRotation: eulerRotation);
 
-            // デバッグ用のGeospatialPoseを終点とする
-            var toGeospatialPose = geospatialMathModel.CreateGeospatialPose(
-                latitude: parameterModel.ToLatitude,
-                longitude: parameterModel.ToLongitude,
-                altitude: parameterModel.ToAltitude,
-                eunRotation: eulerRotation);
+            // 始点からMaxDistance(m)先のGeospatialPoseを終点とする
+            var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
+                geospatialPose: fromGeospatialPose,
+                distance: (float) parameterModel.MaxDistance);
 
             var surfaces = await surfaceRepository.GetVisibleSurfacesAsync(
                 fromGeospatialPose: fromGeospatialPose,
@@ -251,38 +248,65 @@ namespace Synesthesias.Snap.Sample
                 maxDistance: parameterModel.MaxDistance,
                 fieldOfView: parameterModel.FieldOfView,
                 cancellationToken: token);
+            
+            await UniTask.WhenAll(surfaces
+                .Select(async surface =>
+                {
+                    await OnSurfaceAsync(
+                        camera: camera,
+                        surface: surface,
+                        eunRotation: Quaternion.identity,
+                        cancellationToken: cancellationToken);
+                }).ToArray());
 
-            var meshes = surfaces
-                .Select(surface => CreateMesh(camera, surface))
-                .ToArray();
-
-            touchModel.SetDetectedMeshViews(meshes);
+            // touchModel.SetDetectedMeshViews(meshes);
         }
 
-        private EditorDetectionMeshView CreateMesh(
+        private async UniTask OnSurfaceAsync(
             Camera camera,
-            ISurfaceModel surface)
+            ISurfaceModel surface,
+            Quaternion eunRotation,
+            CancellationToken cancellationToken)
         {
-            const float DistanceFromCamera = 10.0F;
+            var view = await detectionMeshModel.CreateMeshView(
+                camera: camera,
+                surface: surface,
+                eunRotation: eunRotation,
+                cancellationToken: cancellationToken);
 
-            // 画面内のランダムな位置にViewを配置する
-            var screenPosition = GetRandomScreenPosition();
-            screenPosition.z = DistanceFromCamera;
-            var worldPosition = camera.ScreenToWorldPoint(screenPosition);
+            if (!view)
+            {
+                return;
+            }
 
-            var mesh = meshModel.CreateMeshAtTransform(
-                id: surface.GmlId,
-                position: worldPosition,
-                rotation: Quaternion.identity);
-
-            // TODO: Surfaceの情報の位置にメッシュを描画する
-            return mesh;
+            touchModel.SetDetectedMeshView(view);
         }
+
+        // private EditorDetectionMeshView CreateMesh(
+        //     Camera camera,
+        //     ISurfaceModel surface)
+        // {
+        //     const float DistanceFromCamera = 10.0F;
+
+        //     // 画面内のランダムな位置にViewを配置する
+        //     var screenPosition = GetRandomScreenPosition();
+        //     screenPosition.z = DistanceFromCamera;
+        //     var worldPosition = camera.ScreenToWorldPoint(screenPosition);
+
+        //     var mesh = detectionMeshModel.CreateMeshAtTransform(
+        //         surface: surface,
+        //         position: worldPosition,
+        //         rotation: Quaternion.identity);
+
+        //     // TODO: Surfaceの情報の位置にメッシュを描画する
+        //     return mesh;
+        // }
 
         private static Vector3 GetRandomScreenPosition()
         {
             var x = UnityEngine.Random.Range(0, Screen.width);
             var y = UnityEngine.Random.Range(0, Screen.height);
+
             var result = new Vector3(x, y, 0);
             return result;
         }

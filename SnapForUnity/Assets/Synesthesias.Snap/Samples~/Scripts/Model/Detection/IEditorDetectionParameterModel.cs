@@ -23,21 +23,6 @@ namespace Synesthesias.Snap.Sample
         public double FromAltitude { get; }
 
         /// <summary>
-        /// 終点の緯度
-        /// </summary>
-        public double ToLatitude { get; }
-
-        /// <summary>
-        /// 終点の経度
-        /// </summary>
-        public double ToLongitude { get; }
-
-        /// <summary>
-        /// 終点の高度
-        /// </summary>
-        public double ToAltitude { get; }
-
-        /// <summary>
         /// 最大距離
         /// </summary>
         public double MaxDistance { get; }
