@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  id: GeospatialAnchorResultType
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Failed
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResultType.None
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Success
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorResultType
+  nameWithType: GeospatialAnchorResultType
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialAnchorResultType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Geospatialのアンカーの結果の種類
+  example: []
+  syntax:
+    content: public enum GeospatialAnchorResultType
+    content.vb: Public Enum GeospatialAnchorResultType
+  extensionMethods:
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.None
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResultType.None
+  id: None
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: GeospatialAnchorResultType.None
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.None
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: None
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: なし
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Failed
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Failed
+  id: Failed
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: GeospatialAnchorResultType.Failed
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Failed
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Failed
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 失敗
+  example: []
+  syntax:
+    content: Failed = 1
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Success
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Success
+  id: Success
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: GeospatialAnchorResultType.Success
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Success
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Success
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 成功
+  example: []
+  syntax:
+    content: Success = 2
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions
+  definition: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html#Synesthesias_Snap_Runtime_GeospatialAnchorResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_
+  name: ToMessage(GeospatialAnchorResultType)
+  nameWithType: GeospatialAnchorResultTypeExtensions.ToMessage(GeospatialAnchorResultType)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html#Synesthesias_Snap_Runtime_GeospatialAnchorResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+    name: GeospatialAnchorResultType
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html#Synesthesias_Snap_Runtime_GeospatialAnchorResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+    name: GeospatialAnchorResultType
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html
+  - name: )
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html#Synesthesias_Snap_Runtime_GeospatialAnchorResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_
+  name: ToMessage(GeospatialAnchorResultType)
+  nameWithType: GeospatialAnchorResultTypeExtensions.ToMessage(GeospatialAnchorResultType)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html#Synesthesias_Snap_Runtime_GeospatialAnchorResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+    name: GeospatialAnchorResultType
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.GeospatialAnchorResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html#Synesthesias_Snap_Runtime_GeospatialAnchorResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+    name: GeospatialAnchorResultType
+    href: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html
+  - name: )
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html
+  name: GeospatialAnchorResultTypeExtensions
+  nameWithType: GeospatialAnchorResultTypeExtensions
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html
+  name: GeospatialAnchorResultType
+  nameWithType: GeospatialAnchorResultType
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultType

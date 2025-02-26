@@ -1,0 +1,751 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  id: GeospatialAnchorHistory
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor(System.DateTime,System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Altitude
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.AnchorType
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.EunRotation
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Heading
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Latitude
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Longitude
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.SerializedTime
+  - Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorHistory
+  nameWithType: GeospatialAnchorHistory
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  type: Struct
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialAnchorHistory
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 50
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: A serializable struct that stores the basic information of a persistent geospatial anchor.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct GeospatialAnchorHistory
+    content.vb: >-
+      <Serializable>
+
+      Public Structure GeospatialAnchorHistory
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.SerializedTime
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.SerializedTime
+  id: SerializedTime
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: SerializedTime
+  nameWithType: GeospatialAnchorHistory.SerializedTime
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.SerializedTime
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SerializedTime
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 56
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: The created time of this geospatial anchor.
+  example: []
+  syntax:
+    content: public string SerializedTime
+    return:
+      type: System.String
+    content.vb: Public SerializedTime As String
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Latitude
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Latitude
+  id: Latitude
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: GeospatialAnchorHistory.Latitude
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Latitude
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Latitude
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 61
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Latitude of the creation pose in degrees.
+  example: []
+  syntax:
+    content: public double Latitude
+    return:
+      type: System.Double
+    content.vb: Public Latitude As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Longitude
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Longitude
+  id: Longitude
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: GeospatialAnchorHistory.Longitude
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Longitude
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Longitude
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 66
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Longitude of the creation pose in degrees.
+  example: []
+  syntax:
+    content: public double Longitude
+    return:
+      type: System.Double
+    content.vb: Public Longitude As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Altitude
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Altitude
+  id: Altitude
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: Altitude
+  nameWithType: GeospatialAnchorHistory.Altitude
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Altitude
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Altitude
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 71
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Altitude of the creation pose in meters above the WGS84 ellipsoid.
+  example: []
+  syntax:
+    content: public double Altitude
+    return:
+      type: System.Double
+    content.vb: Public Altitude As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Heading
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Heading
+  id: Heading
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: Heading
+  nameWithType: GeospatialAnchorHistory.Heading
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.Heading
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Heading
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 76
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Heading of the creation pose in degrees, used to calculate the original orientation.
+  example: []
+  syntax:
+    content: public double Heading
+    return:
+      type: System.Double
+    content.vb: Public Heading As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.AnchorType
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.AnchorType
+  id: AnchorType
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: AnchorType
+  nameWithType: GeospatialAnchorHistory.AnchorType
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.AnchorType
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: AnchorType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 81
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Anchor type of the creation, used to instantiate the original anchor type.
+  example: []
+  syntax:
+    content: public AnchorType AnchorType
+    return:
+      type: Synesthesias.Snap.Runtime.AnchorType
+    content.vb: Public AnchorType As AnchorType
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.EunRotation
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.EunRotation
+  id: EunRotation
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: EunRotation
+  nameWithType: GeospatialAnchorHistory.EunRotation
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.EunRotation
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EunRotation
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 87
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: >-
+    Rotation of the creation pose as a quaternion, used to calculate the original
+
+    orientation.
+  example: []
+  syntax:
+    content: public Quaternion EunRotation
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public EunRotation As Quaternion
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor(System.DateTime,System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor(System.DateTime,System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)
+  id: '#ctor(System.DateTime,System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)'
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorHistory(DateTime, double, double, double, AnchorType, Quaternion)
+  nameWithType: GeospatialAnchorHistory.GeospatialAnchorHistory(DateTime, double, double, double, AnchorType, Quaternion)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.GeospatialAnchorHistory(System.DateTime, double, double, double, Synesthesias.Snap.Runtime.AnchorType, UnityEngine.Quaternion)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 105
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Construct a Geospatial Anchor history.
+  example: []
+  syntax:
+    content: public GeospatialAnchorHistory(DateTime time, double latitude, double longitude, double altitude, AnchorType anchorType, Quaternion eunRotation)
+    parameters:
+    - id: time
+      type: System.DateTime
+      description: The time this Geospatial Anchor was created.
+    - id: latitude
+      type: System.Double
+      description: Latitude of the creation pose in degrees.
+    - id: longitude
+      type: System.Double
+      description: Longitude of the creation pose in degrees.
+    - id: altitude
+      type: System.Double
+      description: Altitude of the creation pose in meters above the WGS84 ellipsoid.
+    - id: anchorType
+      type: Synesthesias.Snap.Runtime.AnchorType
+      description: Anchor type of the creation.
+    - id: eunRotation
+      type: UnityEngine.Quaternion
+      description: >-
+        Rotation of the creation pose as a quaternion, used to calculate the original
+
+        orientation.
+    content.vb: Public Sub New(time As Date, latitude As Double, longitude As Double, altitude As Double, anchorType As AnchorType, eunRotation As Quaternion)
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor*
+  nameWithType.vb: GeospatialAnchorHistory.New(Date, Double, Double, Double, AnchorType, Quaternion)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.New(Date, Double, Double, Double, Synesthesias.Snap.Runtime.AnchorType, UnityEngine.Quaternion)
+  name.vb: New(Date, Double, Double, Double, AnchorType, Quaternion)
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)
+  id: '#ctor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.AnchorType,UnityEngine.Quaternion)'
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorHistory(double, double, double, AnchorType, Quaternion)
+  nameWithType: GeospatialAnchorHistory.GeospatialAnchorHistory(double, double, double, AnchorType, Quaternion)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.GeospatialAnchorHistory(double, double, double, Synesthesias.Snap.Runtime.AnchorType, UnityEngine.Quaternion)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 132
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Construct a Geospatial Anchor history.
+  example: []
+  syntax:
+    content: public GeospatialAnchorHistory(double latitude, double longitude, double altitude, AnchorType anchorType, Quaternion eunRotation)
+    parameters:
+    - id: latitude
+      type: System.Double
+      description: Latitude of the creation pose in degrees.
+    - id: longitude
+      type: System.Double
+      description: Longitude of the creation pose in degrees.
+    - id: altitude
+      type: System.Double
+      description: Altitude of the creation pose in meters above the WGS84 ellipsoid.
+    - id: anchorType
+      type: Synesthesias.Snap.Runtime.AnchorType
+      description: Anchor type of the creation.
+    - id: eunRotation
+      type: UnityEngine.Quaternion
+      description: >-
+        Rotation of the creation pose as a quaternion, used to calculate the original
+
+        orientation.
+    content.vb: Public Sub New(latitude As Double, longitude As Double, altitude As Double, anchorType As AnchorType, eunRotation As Quaternion)
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor*
+  nameWithType.vb: GeospatialAnchorHistory.New(Double, Double, Double, AnchorType, Quaternion)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.New(Double, Double, Double, Synesthesias.Snap.Runtime.AnchorType, UnityEngine.Quaternion)
+  name.vb: New(Double, Double, Double, AnchorType, Quaternion)
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime
+  id: CreatedTime
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: CreatedTime
+  nameWithType: GeospatialAnchorHistory.CreatedTime
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreatedTime
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 143
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Gets created time in DataTime format.
+  example: []
+  syntax:
+    content: public DateTime CreatedTime { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property CreatedTime As Date
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime*
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString
+  id: ToString
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorHistory
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GeospatialAnchorHistory.ToString()
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ToString
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 149
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Overrides ToString() method.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: Return the json string of this object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString*
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Synesthesias.Snap.Runtime.AnchorType
+  commentId: T:Synesthesias.Snap.Runtime.AnchorType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.AnchorType.html
+  name: AnchorType
+  nameWithType: AnchorType
+  fullName: Synesthesias.Snap.Runtime.AnchorType
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.html#Synesthesias_Snap_Runtime_GeospatialAnchorHistory__ctor_System_DateTime_System_Double_System_Double_System_Double_Synesthesias_Snap_Runtime_AnchorType_UnityEngine_Quaternion_
+  name: GeospatialAnchorHistory
+  nameWithType: GeospatialAnchorHistory.GeospatialAnchorHistory
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.GeospatialAnchorHistory
+  nameWithType.vb: GeospatialAnchorHistory.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.New
+  name.vb: New
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.html#Synesthesias_Snap_Runtime_GeospatialAnchorHistory_CreatedTime
+  name: CreatedTime
+  nameWithType: GeospatialAnchorHistory.CreatedTime
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.CreatedTime
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.html#Synesthesias_Snap_Runtime_GeospatialAnchorHistory_ToString
+  name: ToString
+  nameWithType: GeospatialAnchorHistory.ToString
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistory.ToString

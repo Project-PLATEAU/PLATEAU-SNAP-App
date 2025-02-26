@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel
+  commentId: T:Synesthesias.Snap.Sample.IApiConfigurationModel
+  id: IApiConfigurationModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType
+  - Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue
+  - Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint
+  langs:
+  - csharp
+  - vb
+  name: IApiConfigurationModel
+  nameWithType: IApiConfigurationModel
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IApiConfigurationModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+    startLine: 2
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: public interface IApiConfigurationModel
+    content.vb: Public Interface IApiConfigurationModel
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint
+  commentId: P:Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint
+  id: EndPoint
+  parent: Synesthesias.Snap.Sample.IApiConfigurationModel
+  langs:
+  - csharp
+  - vb
+  name: EndPoint
+  nameWithType: IApiConfigurationModel.EndPoint
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EndPoint
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+    startLine: 7
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: APIのエンドポイント
+  example: []
+  syntax:
+    content: string EndPoint { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property EndPoint As String
+  overload: Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint*
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType
+  commentId: P:Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType
+  id: ApiKeyType
+  parent: Synesthesias.Snap.Sample.IApiConfigurationModel
+  langs:
+  - csharp
+  - vb
+  name: ApiKeyType
+  nameWithType: IApiConfigurationModel.ApiKeyType
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ApiKeyType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+    startLine: 12
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: APIキーの種類
+  example: []
+  syntax:
+    content: string ApiKeyType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property ApiKeyType As String
+  overload: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType*
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue
+  commentId: P:Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue
+  id: ApiKeyValue
+  parent: Synesthesias.Snap.Sample.IApiConfigurationModel
+  langs:
+  - csharp
+  - vb
+  name: ApiKeyValue
+  nameWithType: IApiConfigurationModel.ApiKeyValue
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ApiKeyValue
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IApiConfigurationModel.cs
+    startLine: 17
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: APIキーの値
+  example: []
+  syntax:
+    content: string ApiKeyValue { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property ApiKeyValue As String
+  overload: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint*
+  commentId: Overload:Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint
+  href: Synesthesias.Snap.Sample.IApiConfigurationModel.html#Synesthesias_Snap_Sample_IApiConfigurationModel_EndPoint
+  name: EndPoint
+  nameWithType: IApiConfigurationModel.EndPoint
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel.EndPoint
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType*
+  commentId: Overload:Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType
+  href: Synesthesias.Snap.Sample.IApiConfigurationModel.html#Synesthesias_Snap_Sample_IApiConfigurationModel_ApiKeyType
+  name: ApiKeyType
+  nameWithType: IApiConfigurationModel.ApiKeyType
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyType
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue*
+  commentId: Overload:Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue
+  href: Synesthesias.Snap.Sample.IApiConfigurationModel.html#Synesthesias_Snap_Sample_IApiConfigurationModel_ApiKeyValue
+  name: ApiKeyValue
+  nameWithType: IApiConfigurationModel.ApiKeyValue
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel.ApiKeyValue

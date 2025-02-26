@@ -135,7 +135,141 @@ Assets/Resources/GitIgnore
     - APIキーの値を入力します
 - Project ViewからRootLifetimeScopeのprefabを選択し `Api Configuration` のフィールドに前述のScriptableObjectの参照をドラッグ&ドロップで設定します
 
-## クライアントのコード生成の方法
+## クライアントのAPIドキュメントの閲覧方法
+
+APIドキュメントを閲覧するだけであれば以下のコマンドが一番楽です。
+
+```bash
+python3 -m http.server <ポート番号> --directory docs/_site
+```
+
+- ブラウザで以下のURLへアクセスします。
+  - http://localhost:<ポート番号>/
+- 画面上部から「API」タブを選択して各種APIを確認できます
+
+### APIドキュメントの更新と閲覧を行う方法
+
+- 後述のDocFxの設定を完了している場合は以下の手順でAPIドキュメントの更新と同時にページをホスティング可能です
+
+## クライアントのAPIドキュメントの作成方法(追加対応不要)
+
+- 既に初期設定は行なっているため追加対応は不要です
+- 以下の手順で各種設定ファイルは作成しています
+
+```bash
+// .NETのインストール
+brew install dotnet
+
+// リポジトリのルートディレクトリへ移動
+cd path/to/PLATEAU-SNAP-App
+
+// .NET環境を作成(.config/dotnet-tools.jsonが作成される)
+dotnet new tool-manifest
+
+// .NET経由でDocFxを導入(dotnet-tools.jsonにdocfxが追記される)
+dotnet tool install docfx
+
+// DocFxのバージョンを調整(下記参照)
+vi .config/dotnet-tools.json
+
+// バージョンを変更したので.NET環境を復元
+dotnet tool restore
+
+// DocFxの初期化(質問に順番に答えるとdocsディレクトリが生成される)
+dotnet docfx init -o docs
+
+// APIドキュメントに含めるcsprojファイルを指定(下記参照)
+vi docs/docfx.json
+```
+
+### DocFxのバージョンについて
+
+最新のバージョンだとAPIドキュメント生成時にエラーになってしまうためバージョン `2.78.2` から `2.75.3` にダウングレードしています。
+
+### DocFxの初期化時の質問項目(追加対応不要)
+
+```bash
+// サイトの名称
+Name (mysite): Synesthesias.Snap API Document
+
+// APIドキュメントを作成するかどうか
+Generate .NET API documentation? [y/n] (y): ※そのままエンターキーを押す
+
+// Unityプロジェクトディレクトリを指定(csprojファイルのパス)
+.NET projects location (src): ./SnapForUnity
+
+// ドキュメントのディレクトリ
+Markdown docs location (docs): ※そのままエンターキーを押す
+
+// 検索バーが表示するかどうか
+Enable site search? [y/n] (y): ※そのままエンターキーを押す
+
+// PDFのダウンロードリンクを表示するかどうか
+Enable PDF? [y/n] (y): ※そのままエンターキーを押す
+
+// 設定の最終確認
+Is this OK? [y/n] (y): ※そのままエンターキーを押す
+```
+
+### APIドキュメントに含めるcsprojを指定
+
+> docs/docfx.json
+
+```diff
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": ".././SnapForUnity",
+          "files": [
+-           "**/*.csproj"
++           "Synesthesias.Snap.Generated.Sample.csproj",
++           "Synesthesias.Snap.csproj",
++           "Synesthesias.Snap.Sample.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
++     "allowCompilationErrors": true
+    }
+  ]
+}
+```
+
+## クライアントのAPIドキュメントの更新方法
+
+APIドキュメントは `*.csproj` ファイルを元に生成されます。
+
+Unityで該当のUnityプロジェクトを開き直したり、ソースコードを任意のIDEで開きます。
+
+Unityプロジェクトのディレクトリ直下に `*.csproj` ファイルが生成されていることを確認します。
+
+```bash
+// .NETのインストール
+brew install dotnet
+
+// リポジトリのルートディレクトリへ移動
+cd path/to/PLATEAU-SNAP-App
+
+// .NET環境を復元
+dotnet tool restore
+
+// ymlファイル作成
+dotnet docfx metadata docs/docfx.json
+
+// htmlファイル作成
+dotnet docfx build docs/docfx.json
+
+// ホスティングとpdfドキュメント生成(前述のコマンドをスキップしてこちらを直接実行してもymlとhtmlファイルは作成されます)
+dotnet docfx docs/docfx.json --serve --port <ポート番号>
+```
+
+## API通信用のクライアントコードの更新方法
+
+- サーバー側のAPIが更新されたら `spec.json` を更新してください
+- 以下の手順を参考にOpenAPIのGeneratorでGenerated.Clientディレクトリ配下のソースコードを更新します
 
 ```bash
 // openapi-generatorのインストール

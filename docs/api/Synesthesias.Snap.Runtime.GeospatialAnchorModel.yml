@@ -1,0 +1,480 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorModel
+  id: GeospatialAnchorModel
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialAnchorModel.#ctor(Synesthesias.Snap.Runtime.GeospatialAccuracyModel,UnityEngine.XR.ARFoundation.ARAnchorManager)
+  - Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor(System.Double,System.Double,System.Double,UnityEngine.Quaternion)
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorModel
+  nameWithType: GeospatialAnchorModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialAnchorModel
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorModel.cs
+    startLine: 6
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  syntax:
+    content: public class GeospatialAnchorModel
+    content.vb: Public Class GeospatialAnchorModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorModel.#ctor(Synesthesias.Snap.Runtime.GeospatialAccuracyModel,UnityEngine.XR.ARFoundation.ARAnchorManager)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorModel.#ctor(Synesthesias.Snap.Runtime.GeospatialAccuracyModel,UnityEngine.XR.ARFoundation.ARAnchorManager)
+  id: '#ctor(Synesthesias.Snap.Runtime.GeospatialAccuracyModel,UnityEngine.XR.ARFoundation.ARAnchorManager)'
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorModel
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorModel(GeospatialAccuracyModel, ARAnchorManager)
+  nameWithType: GeospatialAnchorModel.GeospatialAnchorModel(GeospatialAccuracyModel, ARAnchorManager)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorModel.GeospatialAnchorModel(Synesthesias.Snap.Runtime.GeospatialAccuracyModel, UnityEngine.XR.ARFoundation.ARAnchorManager)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorModel.cs
+    startLine: 14
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public GeospatialAnchorModel(GeospatialAccuracyModel accuracyModel, ARAnchorManager arAnchorManager)
+    parameters:
+    - id: accuracyModel
+      type: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+    - id: arAnchorManager
+      type: UnityEngine.XR.ARFoundation.ARAnchorManager
+    content.vb: Public Sub New(accuracyModel As GeospatialAccuracyModel, arAnchorManager As ARAnchorManager)
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorModel.#ctor*
+  nameWithType.vb: GeospatialAnchorModel.New(GeospatialAccuracyModel, ARAnchorManager)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorModel.New(Synesthesias.Snap.Runtime.GeospatialAccuracyModel, UnityEngine.XR.ARFoundation.ARAnchorManager)
+  name.vb: New(GeospatialAccuracyModel, ARAnchorManager)
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor(System.Double,System.Double,System.Double,UnityEngine.Quaternion)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor(System.Double,System.Double,System.Double,UnityEngine.Quaternion)
+  id: CreateAnchor(System.Double,System.Double,System.Double,UnityEngine.Quaternion)
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorModel
+  langs:
+  - csharp
+  - vb
+  name: CreateAnchor(double, double, double, Quaternion)
+  nameWithType: GeospatialAnchorModel.CreateAnchor(double, double, double, Quaternion)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor(double, double, double, UnityEngine.Quaternion)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateAnchor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorModel.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: ARGeospatialAnchorを作成する
+  example: []
+  syntax:
+    content: public GeospatialAnchorResult CreateAnchor(double latitude, double longitude, double altitude, Quaternion eunRotation)
+    parameters:
+    - id: latitude
+      type: System.Double
+      description: 緯度
+    - id: longitude
+      type: System.Double
+      description: 経度
+    - id: altitude
+      type: System.Double
+      description: 高度
+    - id: eunRotation
+      type: UnityEngine.Quaternion
+      description: EUN回転
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+    content.vb: Public Function CreateAnchor(latitude As Double, longitude As Double, altitude As Double, eunRotation As Quaternion) As GeospatialAnchorResult
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor*
+  nameWithType.vb: GeospatialAnchorModel.CreateAnchor(Double, Double, Double, Quaternion)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor(Double, Double, Double, UnityEngine.Quaternion)
+  name.vb: CreateAnchor(Double, Double, Double, Quaternion)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAnchorModel.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorModel.html#Synesthesias_Snap_Runtime_GeospatialAnchorModel__ctor_Synesthesias_Snap_Runtime_GeospatialAccuracyModel_UnityEngine_XR_ARFoundation_ARAnchorManager_
+  name: GeospatialAnchorModel
+  nameWithType: GeospatialAnchorModel.GeospatialAnchorModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorModel.GeospatialAnchorModel
+  nameWithType.vb: GeospatialAnchorModel.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorModel.New
+  name.vb: New
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAccuracyModel.html
+  name: GeospatialAccuracyModel
+  nameWithType: GeospatialAccuracyModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+- uid: UnityEngine.XR.ARFoundation.ARAnchorManager
+  commentId: T:UnityEngine.XR.ARFoundation.ARAnchorManager
+  parent: UnityEngine.XR.ARFoundation
+  isExternal: true
+  name: ARAnchorManager
+  nameWithType: ARAnchorManager
+  fullName: UnityEngine.XR.ARFoundation.ARAnchorManager
+- uid: UnityEngine.XR.ARFoundation
+  commentId: N:UnityEngine.XR.ARFoundation
+  isExternal: true
+  name: UnityEngine.XR.ARFoundation
+  nameWithType: UnityEngine.XR.ARFoundation
+  fullName: UnityEngine.XR.ARFoundation
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARFoundation
+    name: ARFoundation
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARFoundation
+    name: ARFoundation
+    isExternal: true
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorModel.html#Synesthesias_Snap_Runtime_GeospatialAnchorModel_CreateAnchor_System_Double_System_Double_System_Double_UnityEngine_Quaternion_
+  name: CreateAnchor
+  nameWithType: GeospatialAnchorModel.CreateAnchor
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorModel.CreateAnchor
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResult.html
+  name: GeospatialAnchorResult
+  nameWithType: GeospatialAnchorResult
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

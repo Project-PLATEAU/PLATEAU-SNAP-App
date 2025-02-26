@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.IAPIModel
+  commentId: T:Synesthesias.Snap.Sample.IAPIModel
+  id: IAPIModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync(UnityEngine.Texture2D,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAPIModel
+  nameWithType: IAPIModel
+  fullName: Synesthesias.Snap.Sample.IAPIModel
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IAPIModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IAPIModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IAPIModel.cs
+    startLine: 9
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: APIのModel
+  example: []
+  syntax:
+    content: public interface IAPIModel
+    content.vb: Public Interface IAPIModel
+- uid: Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync(UnityEngine.Texture2D,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync(UnityEngine.Texture2D,System.Threading.CancellationToken)
+  id: ImageRegisterAsync(UnityEngine.Texture2D,System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Sample.IAPIModel
+  langs:
+  - csharp
+  - vb
+  name: ImageRegisterAsync(Texture2D, CancellationToken)
+  nameWithType: IAPIModel.ImageRegisterAsync(Texture2D, CancellationToken)
+  fullName: Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync(UnityEngine.Texture2D, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IAPIModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ImageRegisterAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IAPIModel.cs
+    startLine: 14
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 画像の登録
+  example: []
+  syntax:
+    content: UniTask ImageRegisterAsync(Texture2D texture, CancellationToken cancellationToken)
+    parameters:
+    - id: texture
+      type: UnityEngine.Texture2D
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Function ImageRegisterAsync(texture As Texture2D, cancellationToken As CancellationToken) As UniTask
+  overload: Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync*
+  commentId: Overload:Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync
+  href: Synesthesias.Snap.Sample.IAPIModel.html#Synesthesias_Snap_Sample_IAPIModel_ImageRegisterAsync_UnityEngine_Texture2D_System_Threading_CancellationToken_
+  name: ImageRegisterAsync
+  nameWithType: IAPIModel.ImageRegisterAsync
+  fullName: Synesthesias.Snap.Sample.IAPIModel.ImageRegisterAsync
+- uid: UnityEngine.Texture2D
+  commentId: T:UnityEngine.Texture2D
+  parent: UnityEngine
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: UnityEngine.Texture2D
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true

@@ -1,0 +1,518 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.Shape
+  commentId: T:Synesthesias.Snap.Runtime.Shape
+  id: Shape
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
+  - Synesthesias.Snap.Runtime.Shape.holes
+  - Synesthesias.Snap.Runtime.Shape.hull
+  langs:
+  - csharp
+  - vb
+  name: Shape
+  nameWithType: Shape
+  fullName: Synesthesias.Snap.Runtime.Shape
+  type: Struct
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Shape
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+    startLine: 8
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  syntax:
+    content: public struct Shape
+    content.vb: Public Structure Shape
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Synesthesias.Snap.Runtime.Shape.hull
+  commentId: F:Synesthesias.Snap.Runtime.Shape.hull
+  id: hull
+  parent: Synesthesias.Snap.Runtime.Shape
+  langs:
+  - csharp
+  - vb
+  name: hull
+  nameWithType: Shape.hull
+  fullName: Synesthesias.Snap.Runtime.Shape.hull
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: hull
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  syntax:
+    content: public Vector2[] hull
+    return:
+      type: UnityEngine.Vector2[]
+    content.vb: Public hull As Vector2()
+- uid: Synesthesias.Snap.Runtime.Shape.holes
+  commentId: F:Synesthesias.Snap.Runtime.Shape.holes
+  id: holes
+  parent: Synesthesias.Snap.Runtime.Shape
+  langs:
+  - csharp
+  - vb
+  name: holes
+  nameWithType: Shape.holes
+  fullName: Synesthesias.Snap.Runtime.Shape.holes
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: holes
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+    startLine: 11
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  syntax:
+    content: public Vector2[][] holes
+    return:
+      type: UnityEngine.Vector2[][]
+    content.vb: Public holes As Vector2()()
+- uid: Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
+  commentId: M:Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
+  id: ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
+  parent: Synesthesias.Snap.Runtime.Shape
+  langs:
+  - csharp
+  - vb
+  name: ToPlainShape(IntGeom, Allocator)
+  nameWithType: Shape.ToPlainShape(IntGeom, Allocator)
+  fullName: Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom, Unity.Collections.Allocator)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ToPlainShape
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
+    startLine: 13
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  syntax:
+    content: public PlainShape ToPlainShape(IntGeom iGeom, Allocator allocator)
+    parameters:
+    - id: iGeom
+      type: iShape.Geometry.IntGeom
+    - id: allocator
+      type: Unity.Collections.Allocator
+    return:
+      type: iShape.Geometry.Container.PlainShape
+    content.vb: Public Function ToPlainShape(iGeom As IntGeom, allocator As Allocator) As PlainShape
+  overload: Synesthesias.Snap.Runtime.Shape.ToPlainShape*
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: UnityEngine.Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: UnityEngine.Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Vector2[][]
+  isExternal: true
+  name: Vector2[][]
+  nameWithType: Vector2[][]
+  fullName: UnityEngine.Vector2[][]
+  nameWithType.vb: Vector2()()
+  fullName.vb: UnityEngine.Vector2()()
+  name.vb: Vector2()()
+  spec.csharp:
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector2
+    name: Vector2
+    isExternal: true
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Runtime.Shape.ToPlainShape*
+  commentId: Overload:Synesthesias.Snap.Runtime.Shape.ToPlainShape
+  href: Synesthesias.Snap.Runtime.Shape.html#Synesthesias_Snap_Runtime_Shape_ToPlainShape_iShape_Geometry_IntGeom_Unity_Collections_Allocator_
+  name: ToPlainShape
+  nameWithType: Shape.ToPlainShape
+  fullName: Synesthesias.Snap.Runtime.Shape.ToPlainShape
+- uid: iShape.Geometry.IntGeom
+  commentId: T:iShape.Geometry.IntGeom
+  parent: iShape.Geometry
+  isExternal: true
+  name: IntGeom
+  nameWithType: IntGeom
+  fullName: iShape.Geometry.IntGeom
+- uid: Unity.Collections.Allocator
+  commentId: T:Unity.Collections.Allocator
+  parent: Unity.Collections
+  isExternal: true
+  name: Allocator
+  nameWithType: Allocator
+  fullName: Unity.Collections.Allocator
+- uid: iShape.Geometry.Container.PlainShape
+  commentId: T:iShape.Geometry.Container.PlainShape
+  parent: iShape.Geometry.Container
+  isExternal: true
+  name: PlainShape
+  nameWithType: PlainShape
+  fullName: iShape.Geometry.Container.PlainShape
+- uid: iShape.Geometry
+  commentId: N:iShape.Geometry
+  isExternal: true
+  name: iShape.Geometry
+  nameWithType: iShape.Geometry
+  fullName: iShape.Geometry
+  spec.csharp:
+  - uid: iShape
+    name: iShape
+    isExternal: true
+  - name: .
+  - uid: iShape.Geometry
+    name: Geometry
+    isExternal: true
+  spec.vb:
+  - uid: iShape
+    name: iShape
+    isExternal: true
+  - name: .
+  - uid: iShape.Geometry
+    name: Geometry
+    isExternal: true
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  isExternal: true
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+  spec.csharp:
+  - uid: Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: Unity.Collections
+    name: Collections
+    isExternal: true
+  spec.vb:
+  - uid: Unity
+    name: Unity
+    isExternal: true
+  - name: .
+  - uid: Unity.Collections
+    name: Collections
+    isExternal: true
+- uid: iShape.Geometry.Container
+  commentId: N:iShape.Geometry.Container
+  isExternal: true
+  name: iShape.Geometry.Container
+  nameWithType: iShape.Geometry.Container
+  fullName: iShape.Geometry.Container
+  spec.csharp:
+  - uid: iShape
+    name: iShape
+    isExternal: true
+  - name: .
+  - uid: iShape.Geometry
+    name: Geometry
+    isExternal: true
+  - name: .
+  - uid: iShape.Geometry.Container
+    name: Container
+    isExternal: true
+  spec.vb:
+  - uid: iShape
+    name: iShape
+    isExternal: true
+  - name: .
+  - uid: iShape.Geometry
+    name: Geometry
+    isExternal: true
+  - name: .
+  - uid: iShape.Geometry.Container
+    name: Container
+    isExternal: true

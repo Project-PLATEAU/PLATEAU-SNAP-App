@@ -1,0 +1,588 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopException
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopException
+  id: GeospatialMainLoopException
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopException.#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopException.StateType
+  langs:
+  - csharp
+  - vb
+  name: GeospatialMainLoopException
+  nameWithType: GeospatialMainLoopException
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopException
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopException.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialMainLoopException
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopException.cs
+    startLine: 7
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: GeospatialのメインループのException
+  example: []
+  syntax:
+    content: 'public class GeospatialMainLoopException : Exception, ISerializable'
+    content.vb: Public Class GeospatialMainLoopException Inherits Exception Implements ISerializable
+  inheritance:
+  - System.Object
+  - System.Exception
+  implements:
+  - System.Runtime.Serialization.ISerializable
+  inheritedMembers:
+  - System.Exception.GetBaseException
+  - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - System.Exception.GetType
+  - System.Exception.ToString
+  - System.Exception.Data
+  - System.Exception.HelpLink
+  - System.Exception.HResult
+  - System.Exception.InnerException
+  - System.Exception.Message
+  - System.Exception.Source
+  - System.Exception.StackTrace
+  - System.Exception.TargetSite
+  - System.Exception.SerializeObjectState
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopException.StateType
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialMainLoopException.StateType
+  id: StateType
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopException
+  langs:
+  - csharp
+  - vb
+  name: StateType
+  nameWithType: GeospatialMainLoopException.StateType
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopException.StateType
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopException.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: StateType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopException.cs
+    startLine: 12
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メインループの状態
+  example: []
+  syntax:
+    content: public readonly GeospatialMainLoopStateType StateType
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+    content.vb: Public ReadOnly StateType As GeospatialMainLoopStateType
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopException.#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopException.#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  id: '#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)'
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopException
+  langs:
+  - csharp
+  - vb
+  name: GeospatialMainLoopException(GeospatialMainLoopStateType)
+  nameWithType: GeospatialMainLoopException.GeospatialMainLoopException(GeospatialMainLoopStateType)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopException.GeospatialMainLoopException(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopException.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopException.cs
+    startLine: 17
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public GeospatialMainLoopException(GeospatialMainLoopStateType stateType)
+    parameters:
+    - id: stateType
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+    content.vb: Public Sub New(stateType As GeospatialMainLoopStateType)
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopException.#ctor*
+  nameWithType.vb: GeospatialMainLoopException.New(GeospatialMainLoopStateType)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialMainLoopException.New(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  name.vb: New(GeospatialMainLoopStateType)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
+  fullName: System.Exception.GetBaseException()
+  spec.csharp:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  - name: (
+  - name: )
+- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
+  - name: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
+  - name: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  - name: (
+  - name: )
+- uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  name: ToString()
+  nameWithType: Exception.ToString()
+  fullName: System.Exception.ToString()
+  spec.csharp:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.data
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.helplink
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.hresult
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.innerexception
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
+- uid: System.Exception.Message
+  commentId: P:System.Exception.Message
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.message
+  name: Message
+  nameWithType: Exception.Message
+  fullName: System.Exception.Message
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.source
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.stacktrace
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.targetsite
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
+- uid: System.Exception.SerializeObjectState
+  commentId: E:System.Exception.SerializeObjectState
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.serializeobjectstate
+  name: SerializeObjectState
+  nameWithType: Exception.SerializeObjectState
+  fullName: System.Exception.SerializeObjectState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType.html
+  name: GeospatialMainLoopStateType
+  nameWithType: GeospatialMainLoopStateType
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopException.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopException.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopException.html#Synesthesias_Snap_Runtime_GeospatialMainLoopException__ctor_Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_
+  name: GeospatialMainLoopException
+  nameWithType: GeospatialMainLoopException.GeospatialMainLoopException
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopException.GeospatialMainLoopException
+  nameWithType.vb: GeospatialMainLoopException.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialMainLoopException.New
+  name.vb: New

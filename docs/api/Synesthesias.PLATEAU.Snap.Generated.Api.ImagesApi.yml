@@ -1,0 +1,1910 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  id: ImagesApi
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,Synesthesias.PLATEAU.Snap.Generated.Client.Configuration,System.Net.Http.HttpClientHandler)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.Net.Http.HttpClientHandler)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpClientHandler)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.String)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi
+  nameWithType: ImagesApi
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ImagesApi
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 97
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Represents a collection of functions to interact with the API endpoints
+  example: []
+  syntax:
+    content: 'public class ImagesApi : IDisposable, IImagesApi, IImagesApiSync, IImagesApiAsync, IApiAccessor'
+    content.vb: Public Class ImagesApi Implements IDisposable, IImagesApi, IImagesApiSync, IImagesApiAsync, IApiAccessor
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor
+  id: '#ctor'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi()
+  nameWithType: ImagesApi.ImagesApi()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi()
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 107
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: >-
+    Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class.
+
+    **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+
+    It's better to reuse the <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</a>.
+  example: []
+  syntax:
+    content: public ImagesApi()
+    content.vb: Public Sub New()
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  nameWithType.vb: ImagesApi.New()
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New()
+  name.vb: New()
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.String)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi(string)
+  nameWithType: ImagesApi.ImagesApi(string)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi(string)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 119
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: >-
+    Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class.
+
+    **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+
+    It's better to reuse the <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</a>.
+  example: []
+  syntax:
+    content: public ImagesApi(string basePath)
+    parameters:
+    - id: basePath
+      type: System.String
+      description: The target service's base path in URL format.
+    content.vb: Public Sub New(basePath As String)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+  nameWithType.vb: ImagesApi.New(String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New(String)
+  name.vb: New(String)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)
+  id: '#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi(Configuration)
+  nameWithType: ImagesApi.ImagesApi(Configuration)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 139
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: >-
+    Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class using Configuration object.
+
+    **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+
+    It's better to reuse the <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</a>.
+  example: []
+  syntax:
+    content: public ImagesApi(Configuration configuration)
+    parameters:
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+      description: An instance of Configuration.
+    content.vb: Public Sub New(configuration As Configuration)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  nameWithType.vb: ImagesApi.New(Configuration)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)
+  name.vb: New(Configuration)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.Net.Http.HttpClientHandler)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.Net.Http.HttpClientHandler)
+  id: '#ctor(System.Net.Http.HttpClient,System.Net.Http.HttpClientHandler)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi(HttpClient, HttpClientHandler)
+  nameWithType: ImagesApi.ImagesApi(HttpClient, HttpClientHandler)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi(System.Net.Http.HttpClient, System.Net.Http.HttpClientHandler)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 164
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class.
+  remarks: >-
+    Some configuration settings will not be applied without passing an HttpClientHandler.
+
+    The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+  example: []
+  syntax:
+    content: public ImagesApi(HttpClient client, HttpClientHandler handler = null)
+    parameters:
+    - id: client
+      type: System.Net.Http.HttpClient
+      description: An instance of HttpClient.
+    - id: handler
+      type: System.Net.Http.HttpClientHandler
+      description: An optional instance of HttpClientHandler that is used by HttpClient.
+    content.vb: Public Sub New(client As HttpClient, handler As HttpClientHandler = Nothing)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  nameWithType.vb: ImagesApi.New(HttpClient, HttpClientHandler)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New(System.Net.Http.HttpClient, System.Net.Http.HttpClientHandler)
+  name.vb: New(HttpClient, HttpClientHandler)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpClientHandler)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpClientHandler)
+  id: '#ctor(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpClientHandler)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi(HttpClient, string, HttpClientHandler)
+  nameWithType: ImagesApi.ImagesApi(HttpClient, string, HttpClientHandler)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi(System.Net.Http.HttpClient, string, System.Net.Http.HttpClientHandler)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 181
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class.
+  remarks: >-
+    Some configuration settings will not be applied without passing an HttpClientHandler.
+
+    The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+  example: []
+  syntax:
+    content: public ImagesApi(HttpClient client, string basePath, HttpClientHandler handler = null)
+    parameters:
+    - id: client
+      type: System.Net.Http.HttpClient
+      description: An instance of HttpClient.
+    - id: basePath
+      type: System.String
+      description: The target service's base path in URL format.
+    - id: handler
+      type: System.Net.Http.HttpClientHandler
+      description: An optional instance of HttpClientHandler that is used by HttpClient.
+    content.vb: Public Sub New(client As HttpClient, basePath As String, handler As HttpClientHandler = Nothing)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+  nameWithType.vb: ImagesApi.New(HttpClient, String, HttpClientHandler)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New(System.Net.Http.HttpClient, String, System.Net.Http.HttpClientHandler)
+  name.vb: New(HttpClient, String, HttpClientHandler)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,Synesthesias.PLATEAU.Snap.Generated.Client.Configuration,System.Net.Http.HttpClientHandler)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,Synesthesias.PLATEAU.Snap.Generated.Client.Configuration,System.Net.Http.HttpClientHandler)
+  id: '#ctor(System.Net.Http.HttpClient,Synesthesias.PLATEAU.Snap.Generated.Client.Configuration,System.Net.Http.HttpClientHandler)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi(HttpClient, Configuration, HttpClientHandler)
+  nameWithType: ImagesApi.ImagesApi(HttpClient, Configuration, HttpClientHandler)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi(System.Net.Http.HttpClient, Synesthesias.PLATEAU.Snap.Generated.Client.Configuration, System.Net.Http.HttpClientHandler)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 207
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class using Configuration object.
+  remarks: >-
+    Some configuration settings will not be applied without passing an HttpClientHandler.
+
+    The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+  example: []
+  syntax:
+    content: public ImagesApi(HttpClient client, Configuration configuration, HttpClientHandler handler = null)
+    parameters:
+    - id: client
+      type: System.Net.Http.HttpClient
+      description: An instance of HttpClient.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+      description: An instance of Configuration.
+    - id: handler
+      type: System.Net.Http.HttpClientHandler
+      description: An optional instance of HttpClientHandler that is used by HttpClient.
+    content.vb: Public Sub New(client As HttpClient, configuration As Configuration, handler As HttpClientHandler = Nothing)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  nameWithType.vb: ImagesApi.New(HttpClient, Configuration, HttpClientHandler)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New(System.Net.Http.HttpClient, Synesthesias.PLATEAU.Snap.Generated.Client.Configuration, System.Net.Http.HttpClientHandler)
+  name.vb: New(HttpClient, Configuration, HttpClientHandler)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)
+  id: '#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ImagesApi(ISynchronousClient, IAsynchronousClient, IReadableConfiguration)
+  nameWithType: ImagesApi.ImagesApi(ISynchronousClient, IAsynchronousClient, IReadableConfiguration)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient, Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 230
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: >-
+    Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" data-throw-if-not-resolved="false"></xref> class
+
+    using a Configuration object and client instance.
+  example: []
+  syntax:
+    content: public ImagesApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
+    parameters:
+    - id: client
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+      description: The client interface for synchronous API access.
+    - id: asyncClient
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+      description: The client interface for asynchronous API access.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: The configuration object.
+    content.vb: Public Sub New(client As ISynchronousClient, asyncClient As IAsynchronousClient, configuration As IReadableConfiguration)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  nameWithType.vb: ImagesApi.New(ISynchronousClient, IAsynchronousClient, IReadableConfiguration)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient, Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)
+  name.vb: New(ISynchronousClient, IAsynchronousClient, IReadableConfiguration)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose
+  id: Dispose
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ImagesApi.Dispose()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Dispose
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 245
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Disposes resources if they were created by us
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient
+  id: ApiClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ApiClient
+  nameWithType: ImagesApi.ApiClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ApiClient
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 253
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Holds the ApiClient if created
+  example: []
+  syntax:
+    content: public ApiClient ApiClient { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+    content.vb: Public Property ApiClient As ApiClient
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient
+  id: AsynchronousClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: AsynchronousClient
+  nameWithType: ImagesApi.AsynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: AsynchronousClient
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 258
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: The client for accessing this underlying API asynchronously.
+  example: []
+  syntax:
+    content: public IAsynchronousClient AsynchronousClient { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+    content.vb: Public Property AsynchronousClient As IAsynchronousClient
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client
+  id: Client
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: Client
+  nameWithType: ImagesApi.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Client
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 263
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: The client for accessing this underlying API synchronously.
+  example: []
+  syntax:
+    content: public ISynchronousClient Client { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+    content.vb: Public Property Client As ISynchronousClient
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath
+  id: GetBasePath
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: GetBasePath()
+  nameWithType: ImagesApi.GetBasePath()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetBasePath
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 269
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Gets the base path of the API client.
+  example: []
+  syntax:
+    content: public string GetBasePath()
+    return:
+      type: System.String
+      description: The base path
+    content.vb: Public Function GetBasePath() As String
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath*
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration
+  id: Configuration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: Configuration
+  nameWithType: ImagesApi.Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Configuration
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 278
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Gets or sets the configuration object
+  example: []
+  syntax:
+    content: public IReadableConfiguration Configuration { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: An instance of the Configuration
+    content.vb: Public Property Configuration As IReadableConfiguration
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration*
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory
+  id: ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: ExceptionFactory
+  nameWithType: ImagesApi.ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ExceptionFactory
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 283
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Provides a factory method hook for the creation of exceptions.
+  example: []
+  syntax:
+    content: public ExceptionFactory ExceptionFactory { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+    content.vb: Public Property ExceptionFactory As ExceptionFactory
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory*
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  id: CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: CreateBuildingImageAsync(FileParameter, string)
+  nameWithType: ImagesApi.CreateBuildingImageAsync(FileParameter, string)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateBuildingImageAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 303
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: 撮影した建物面の画像を登録します。
+  example: []
+  syntax:
+    content: public BuildingImageResponse CreateBuildingImageAsync(FileParameter file, string metadata)
+    parameters:
+    - id: file
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+      description: 建物面を撮影した画像ファイル
+    - id: metadata
+      type: System.String
+      description: 画像に関連するメタデータ
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+      description: BuildingImageResponse
+    content.vb: Public Function CreateBuildingImageAsync(file As FileParameter, metadata As String) As BuildingImageResponse
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync*
+  exceptions:
+  - type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    description: Thrown when fails to make API call
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  nameWithType.vb: ImagesApi.CreateBuildingImageAsync(FileParameter, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String)
+  name.vb: CreateBuildingImageAsync(FileParameter, String)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  id: CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: CreateBuildingImageAsyncWithHttpInfo(FileParameter, string)
+  nameWithType: ImagesApi.CreateBuildingImageAsyncWithHttpInfo(FileParameter, string)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateBuildingImageAsyncWithHttpInfo
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 316
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: 撮影した建物面の画像を登録します。
+  example: []
+  syntax:
+    content: public ApiResponse<BuildingImageResponse> CreateBuildingImageAsyncWithHttpInfo(FileParameter file, string metadata)
+    parameters:
+    - id: file
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+      description: 建物面を撮影した画像ファイル
+    - id: metadata
+      type: System.String
+      description: 画像に関連するメタデータ
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}
+      description: ApiResponse of BuildingImageResponse
+    content.vb: Public Function CreateBuildingImageAsyncWithHttpInfo(file As FileParameter, metadata As String) As ApiResponse(Of BuildingImageResponse)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo*
+  exceptions:
+  - type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    description: Thrown when fails to make API call
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  nameWithType.vb: ImagesApi.CreateBuildingImageAsyncWithHttpInfo(FileParameter, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String)
+  name.vb: CreateBuildingImageAsyncWithHttpInfo(FileParameter, String)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  id: CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: CreateBuildingImageAsyncAsync(FileParameter, string, CancellationToken)
+  nameWithType: ImagesApi.CreateBuildingImageAsyncAsync(FileParameter, string, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateBuildingImageAsyncAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 372
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: 撮影した建物面の画像を登録します。
+  example: []
+  syntax:
+    content: public Task<BuildingImageResponse> CreateBuildingImageAsyncAsync(FileParameter file, string metadata, CancellationToken cancellationToken = default)
+    parameters:
+    - id: file
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+      description: 建物面を撮影した画像ファイル
+    - id: metadata
+      type: System.String
+      description: 画像に関連するメタデータ
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}
+      description: Task of BuildingImageResponse
+    content.vb: Public Function CreateBuildingImageAsyncAsync(file As FileParameter, metadata As String, cancellationToken As CancellationToken = Nothing) As Task(Of BuildingImageResponse)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync*
+  exceptions:
+  - type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    description: Thrown when fails to make API call
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  nameWithType.vb: ImagesApi.CreateBuildingImageAsyncAsync(FileParameter, String, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String, System.Threading.CancellationToken)
+  name.vb: CreateBuildingImageAsyncAsync(FileParameter, String, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  id: CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  langs:
+  - csharp
+  - vb
+  name: CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, string, CancellationToken)
+  nameWithType: ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, string, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateBuildingImageAsyncWithHttpInfoAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs
+    startLine: 386
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: 撮影した建物面の画像を登録します。
+  example: []
+  syntax:
+    content: public Task<ApiResponse<BuildingImageResponse>> CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter file, string metadata, CancellationToken cancellationToken = default)
+    parameters:
+    - id: file
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+      description: 建物面を撮影した画像ファイル
+    - id: metadata
+      type: System.String
+      description: 画像に関連するメタデータ
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}}
+      description: Task of ApiResponse (BuildingImageResponse)
+    content.vb: Public Function CreateBuildingImageAsyncWithHttpInfoAsync(file As FileParameter, metadata As String, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of BuildingImageResponse))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync*
+  exceptions:
+  - type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    description: Thrown when fails to make API call
+  implements:
+  - Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  nameWithType.vb: ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, String, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String, System.Threading.CancellationToken)
+  name.vb: CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, String, CancellationToken)
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Api
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Api
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Api
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api
+    name: Api
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api
+    name: Api
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi.html
+  name: IImagesApi
+  nameWithType: IImagesApi
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html
+  name: IImagesApiSync
+  nameWithType: IImagesApiSync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html
+  name: IImagesApiAsync
+  nameWithType: IImagesApiAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html
+  name: IApiAccessor
+  nameWithType: IApiAccessor
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html
+  name: ImagesApi
+  nameWithType: ImagesApi
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor
+  name: ImagesApi
+  nameWithType: ImagesApi.ImagesApi
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ImagesApi
+  nameWithType.vb: ImagesApi.New
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.New
+  name.vb: New
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration.html
+  name: Configuration
+  nameWithType: Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: System.Net.Http.HttpClientHandler
+  commentId: T:System.Net.Http.HttpClientHandler
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclienthandler
+  name: HttpClientHandler
+  nameWithType: HttpClientHandler
+  fullName: System.Net.Http.HttpClientHandler
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.html
+  name: ISynchronousClient
+  nameWithType: ISynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html
+  name: IAsynchronousClient
+  nameWithType: IAsynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html
+  name: IReadableConfiguration
+  nameWithType: IReadableConfiguration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Dispose
+  name: Dispose
+  nameWithType: ImagesApi.Dispose
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_ApiClient
+  name: ApiClient
+  nameWithType: ImagesApi.ApiClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient.html
+  name: ApiClient
+  nameWithType: ApiClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_AsynchronousClient
+  name: AsynchronousClient
+  nameWithType: ImagesApi.AsynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Client
+  name: Client
+  nameWithType: ImagesApi.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_GetBasePath
+  name: GetBasePath
+  nameWithType: ImagesApi.GetBasePath
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  name: GetBasePath()
+  nameWithType: IApiAccessor.GetBasePath()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath()
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+    name: GetBasePath
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+    name: GetBasePath
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  - name: (
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Configuration
+  name: Configuration
+  nameWithType: ImagesApi.Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_Configuration
+  name: Configuration
+  nameWithType: IApiAccessor.Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_ExceptionFactory
+  name: ExceptionFactory
+  nameWithType: ImagesApi.ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_ExceptionFactory
+  name: ExceptionFactory
+  nameWithType: IApiAccessor.ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory.html
+  name: ExceptionFactory
+  nameWithType: ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html
+  name: ApiException
+  nameWithType: ApiException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  name: CreateBuildingImageAsync
+  nameWithType: ImagesApi.CreateBuildingImageAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync
+  isExternal: true
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiSync_CreateBuildingImageAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  name: CreateBuildingImageAsync(FileParameter, string)
+  nameWithType: IImagesApiSync.CreateBuildingImageAsync(FileParameter, string)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string)
+  nameWithType.vb: IImagesApiSync.CreateBuildingImageAsync(FileParameter, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String)
+  name.vb: CreateBuildingImageAsync(FileParameter, String)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+    name: CreateBuildingImageAsync
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiSync_CreateBuildingImageAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+    name: CreateBuildingImageAsync
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiSync_CreateBuildingImageAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  name: FileParameter
+  nameWithType: FileParameter
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  name: BuildingImageResponse
+  nameWithType: BuildingImageResponse
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncWithHttpInfo_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  name: CreateBuildingImageAsyncWithHttpInfo
+  nameWithType: ImagesApi.CreateBuildingImageAsyncWithHttpInfo
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync
+  isExternal: true
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiSync_CreateBuildingImageAsyncWithHttpInfo_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  name: CreateBuildingImageAsyncWithHttpInfo(FileParameter, string)
+  nameWithType: IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(FileParameter, string)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string)
+  nameWithType.vb: IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(FileParameter, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String)
+  name.vb: CreateBuildingImageAsyncWithHttpInfo(FileParameter, String)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+    name: CreateBuildingImageAsyncWithHttpInfo
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiSync_CreateBuildingImageAsyncWithHttpInfo_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)
+    name: CreateBuildingImageAsyncWithHttpInfo
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiSync_CreateBuildingImageAsyncWithHttpInfo_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  definition: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  name: ApiResponse<BuildingImageResponse>
+  nameWithType: ApiResponse<BuildingImageResponse>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse>
+  nameWithType.vb: ApiResponse(Of BuildingImageResponse)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse)
+  name.vb: ApiResponse(Of BuildingImageResponse)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+    name: BuildingImageResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+    name: BuildingImageResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  name: ApiResponse<T>
+  nameWithType: ApiResponse<T>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<T>
+  nameWithType.vb: ApiResponse(Of T)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of T)
+  name.vb: ApiResponse(Of T)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  name: CreateBuildingImageAsyncAsync
+  nameWithType: ImagesApi.CreateBuildingImageAsyncAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync
+  isExternal: true
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiAsync_CreateBuildingImageAsyncAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  name: CreateBuildingImageAsyncAsync(FileParameter, string, CancellationToken)
+  nameWithType: IImagesApiAsync.CreateBuildingImageAsyncAsync(FileParameter, string, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string, System.Threading.CancellationToken)
+  nameWithType.vb: IImagesApiAsync.CreateBuildingImageAsyncAsync(FileParameter, String, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String, System.Threading.CancellationToken)
+  name.vb: CreateBuildingImageAsyncAsync(FileParameter, String, CancellationToken)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+    name: CreateBuildingImageAsyncAsync
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiAsync_CreateBuildingImageAsyncAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+    name: CreateBuildingImageAsyncAsync
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiAsync_CreateBuildingImageAsyncAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}
+  commentId: T:System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<BuildingImageResponse>
+  nameWithType: Task<BuildingImageResponse>
+  fullName: System.Threading.Tasks.Task<Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse>
+  nameWithType.vb: Task(Of BuildingImageResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse)
+  name.vb: Task(Of BuildingImageResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+    name: BuildingImageResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+    name: BuildingImageResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html#Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncWithHttpInfoAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  name: CreateBuildingImageAsyncWithHttpInfoAsync
+  nameWithType: ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync
+  isExternal: true
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiAsync_CreateBuildingImageAsyncWithHttpInfoAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  name: CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, string, CancellationToken)
+  nameWithType: IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, string, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, string, System.Threading.CancellationToken)
+  nameWithType.vb: IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, String, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter, String, System.Threading.CancellationToken)
+  name.vb: CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, String, CancellationToken)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+    name: CreateBuildingImageAsyncWithHttpInfoAsync
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiAsync_CreateBuildingImageAsyncWithHttpInfoAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)
+    name: CreateBuildingImageAsyncWithHttpInfoAsync
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_IImagesApiAsync_CreateBuildingImageAsyncWithHttpInfoAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+    name: FileParameter
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}}
+  commentId: T:System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<BuildingImageResponse>>
+  nameWithType: Task<ApiResponse<BuildingImageResponse>>
+  fullName: System.Threading.Tasks.Task<Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of BuildingImageResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse))
+  name.vb: Task(Of ApiResponse(Of BuildingImageResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+    name: BuildingImageResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+    name: BuildingImageResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  - name: )
+  - name: )

@@ -1,0 +1,224 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  id: IApiAccessor
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  langs:
+  - csharp
+  - vb
+  name: IApiAccessor
+  nameWithType: IApiAccessor
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IApiAccessor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+    startLine: 17
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Represents configuration aspects required to interact with the API endpoints.
+  example: []
+  syntax:
+    content: public interface IApiAccessor
+    content.vb: Public Interface IApiAccessor
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  id: Configuration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  langs:
+  - csharp
+  - vb
+  name: Configuration
+  nameWithType: IApiAccessor.Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Configuration
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+    startLine: 23
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets the configuration object
+  example: []
+  syntax:
+    content: IReadableConfiguration Configuration { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: An instance of the Configuration
+    content.vb: Property Configuration As IReadableConfiguration
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  id: GetBasePath
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  langs:
+  - csharp
+  - vb
+  name: GetBasePath()
+  nameWithType: IApiAccessor.GetBasePath()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetBasePath
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets the base path of the API client.
+  example: []
+  syntax:
+    content: string GetBasePath()
+    return:
+      type: System.String
+      description: The base path
+    content.vb: Function GetBasePath() As String
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  id: ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  langs:
+  - csharp
+  - vb
+  name: ExceptionFactory
+  nameWithType: IApiAccessor.ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ExceptionFactory
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IApiAccessor.cs
+    startLine: 34
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Provides a factory method hook for the creation of exceptions.
+  example: []
+  syntax:
+    content: ExceptionFactory ExceptionFactory { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+    content.vb: Property ExceptionFactory As ExceptionFactory
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory*
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_Configuration
+  name: Configuration
+  nameWithType: IApiAccessor.Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html
+  name: IReadableConfiguration
+  nameWithType: IReadableConfiguration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  name: GetBasePath
+  nameWithType: IApiAccessor.GetBasePath
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_ExceptionFactory
+  name: ExceptionFactory
+  nameWithType: IApiAccessor.ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory.html
+  name: ExceptionFactory
+  nameWithType: ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory

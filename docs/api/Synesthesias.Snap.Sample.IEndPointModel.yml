@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.IEndPointModel
+  commentId: T:Synesthesias.Snap.Sample.IEndPointModel
+  id: IEndPointModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint
+  langs:
+  - csharp
+  - vb
+  name: IEndPointModel
+  nameWithType: IEndPointModel
+  fullName: Synesthesias.Snap.Sample.IEndPointModel
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IEndPointModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: エンドポイントのModel
+  example: []
+  syntax:
+    content: public interface IEndPointModel
+    content.vb: Public Interface IEndPointModel
+- uid: Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint
+  commentId: M:Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint
+  id: GetEndPoint
+  parent: Synesthesias.Snap.Sample.IEndPointModel
+  langs:
+  - csharp
+  - vb
+  name: GetEndPoint()
+  nameWithType: IEndPointModel.GetEndPoint()
+  fullName: Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetEndPoint
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: エンドポイントを取得
+  example: []
+  syntax:
+    content: string GetEndPoint()
+    return:
+      type: System.String
+    content.vb: Function GetEndPoint() As String
+  overload: Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint*
+  commentId: Overload:Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint
+  href: Synesthesias.Snap.Sample.IEndPointModel.html#Synesthesias_Snap_Sample_IEndPointModel_GetEndPoint
+  name: GetEndPoint
+  nameWithType: IEndPointModel.GetEndPoint
+  fullName: Synesthesias.Snap.Sample.IEndPointModel.GetEndPoint
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

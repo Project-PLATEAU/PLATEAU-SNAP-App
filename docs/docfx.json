@@ -1,0 +1,48 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": ".././SnapForUnity",
+          "files": [
+            "Synesthesias.Snap.Generated.Sample.csproj",
+            "Synesthesias.Snap.csproj",
+            "Synesthesias.Snap.Sample.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "allowCompilationErrors": true
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "Synesthesias.Snap API Document",
+      "_appTitle": "Synesthesias.Snap API Document",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

@@ -1,0 +1,915 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ImagesApi | Synesthesias.Snap API Document </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ImagesApi | Synesthesias.Snap API Document ">
+      
+      <meta name="description" content="Represents a collection of functions to interact with the API endpoints">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/doc_fx/apiSpec/new?filename=Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi.md&amp;value=---%0Auid%3A%20Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Synesthesias.Snap API Document">
+            Synesthesias.Snap API Document
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi">
+
+
+
+  <h1 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi" class="text-break">
+Class ImagesApi  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Synesthesias.html">Synesthesias</a>.<a class="xref" href="Synesthesias.PLATEAU.html">PLATEAU</a>.<a class="xref" href="Synesthesias.PLATEAU.Snap.html">Snap</a>.<a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.html">Generated</a>.<a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.html">Api</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Synesthesias.Snap.Generated.Sample.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a collection of functions to interact with the API endpoints</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ImagesApi : IDisposable, IImagesApi, IImagesApiSync, IImagesApiAsync, IApiAccessor</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ImagesApi</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi.html">IImagesApi</a></div>
+      <div><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html">IImagesApiSync</a></div>
+      <div><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html">IImagesApiAsync</a></div>
+      <div><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html">IApiAccessor</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor">
+  ImagesApi()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class.
+<strong>IMPORTANT</strong> This will also create an instance of HttpClient, which is less than ideal.
+It's better to reuse the <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_Synesthesias_PLATEAU_Snap_Generated_Client_Configuration_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.Configuration)">
+  ImagesApi(Configuration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class using Configuration object.
+<strong>IMPORTANT</strong> This will also create an instance of HttpClient, which is less than ideal.
+It's better to reuse the <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi(Configuration configuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configuration</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.Configuration.html">Configuration</a></dt>
+    <dd><p>An instance of Configuration.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_Synesthesias_PLATEAU_Snap_Generated_Client_ISynchronousClient_Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration)">
+  ImagesApi(ISynchronousClient, IAsynchronousClient, IReadableConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class
+using a Configuration object and client instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.html">ISynchronousClient</a></dt>
+    <dd><p>The client interface for synchronous API access.</p>
+</dd>
+    <dt><code>asyncClient</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html">IAsynchronousClient</a></dt>
+    <dd><p>The client interface for asynchronous API access.</p>
+</dd>
+    <dt><code>configuration</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html">IReadableConfiguration</a></dt>
+    <dd><p>The configuration object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_Net_Http_HttpClient_Synesthesias_PLATEAU_Snap_Generated_Client_Configuration_System_Net_Http_HttpClientHandler_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,Synesthesias.PLATEAU.Snap.Generated.Client.Configuration,System.Net.Http.HttpClientHandler)">
+  ImagesApi(HttpClient, Configuration, HttpClientHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class using Configuration object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi(HttpClient client, Configuration configuration, HttpClientHandler handler = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></dt>
+    <dd><p>An instance of HttpClient.</p>
+</dd>
+    <dt><code>configuration</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.Configuration.html">Configuration</a></dt>
+    <dd><p>An instance of Configuration.</p>
+</dd>
+    <dt><code>handler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclienthandler">HttpClientHandler</a></dt>
+    <dd><p>An optional instance of HttpClientHandler that is used by HttpClient.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_Net_Http_HttpClient_Synesthesias_PLATEAU_Snap_Generated_Client_Configuration_System_Net_Http_HttpClientHandler__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Some configuration settings will not be applied without passing an HttpClientHandler.
+The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_Net_Http_HttpClient_System_Net_Http_HttpClientHandler_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.Net.Http.HttpClientHandler)">
+  ImagesApi(HttpClient, HttpClientHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi(HttpClient client, HttpClientHandler handler = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></dt>
+    <dd><p>An instance of HttpClient.</p>
+</dd>
+    <dt><code>handler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclienthandler">HttpClientHandler</a></dt>
+    <dd><p>An optional instance of HttpClientHandler that is used by HttpClient.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_Net_Http_HttpClient_System_Net_Http_HttpClientHandler__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Some configuration settings will not be applied without passing an HttpClientHandler.
+The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_Net_Http_HttpClient_System_String_System_Net_Http_HttpClientHandler_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpClientHandler)">
+  ImagesApi(HttpClient, string, HttpClientHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi(HttpClient client, string basePath, HttpClientHandler handler = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></dt>
+    <dd><p>An instance of HttpClient.</p>
+</dd>
+    <dt><code>basePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The target service's base path in URL format.</p>
+</dd>
+    <dt><code>handler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclienthandler">HttpClientHandler</a></dt>
+    <dd><p>An optional instance of HttpClientHandler that is used by HttpClient.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_Net_Http_HttpClient_System_String_System_Net_Http_HttpClientHandler__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Some configuration settings will not be applied without passing an HttpClientHandler.
+The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi__ctor_System_String_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.#ctor(System.String)">
+  ImagesApi(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html">ImagesApi</a> class.
+<strong>IMPORTANT</strong> This will also create an instance of HttpClient, which is less than ideal.
+It's better to reuse the <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagesApi(string basePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>basePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The target service's base path in URL format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_ApiClient_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_ApiClient" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ApiClient">
+  ApiClient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Holds the ApiClient if created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApiClient ApiClient { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient.html">ApiClient</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_AsynchronousClient_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_AsynchronousClient" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.AsynchronousClient">
+  AsynchronousClient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The client for accessing this underlying API asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsynchronousClient AsynchronousClient { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html">IAsynchronousClient</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Client_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Client" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Client">
+  Client
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The client for accessing this underlying API synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISynchronousClient Client { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.html">ISynchronousClient</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Configuration_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Configuration" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Configuration">
+  Configuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the configuration object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadableConfiguration Configuration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html">IReadableConfiguration</a></dt>
+    <dd><p>An instance of the Configuration</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_ExceptionFactory_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_ExceptionFactory" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.ExceptionFactory">
+  ExceptionFactory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a factory method hook for the creation of exceptions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExceptionFactory ExceptionFactory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory.html">ExceptionFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsync_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)">
+  CreateBuildingImageAsync(FileParameter, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>撮影した建物面の画像を登録します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BuildingImageResponse CreateBuildingImageAsync(FileParameter file, string metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>file</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html">FileParameter</a></dt>
+    <dd><p>建物面を撮影した画像ファイル</p>
+</dd>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>画像に関連するメタデータ</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html">BuildingImageResponse</a></dt>
+    <dd><p>BuildingImageResponse</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html">ApiException</a></dt>
+    <dd><p>Thrown when fails to make API call</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncAsync_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)">
+  CreateBuildingImageAsyncAsync(FileParameter, string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>撮影した建物面の画像を登録します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BuildingImageResponse&gt; CreateBuildingImageAsyncAsync(FileParameter file, string metadata, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>file</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html">FileParameter</a></dt>
+    <dd><p>建物面を撮影した画像ファイル</p>
+</dd>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>画像に関連するメタデータ</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation Token to cancel the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html">BuildingImageResponse</a>&gt;</dt>
+    <dd><p>Task of BuildingImageResponse</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html">ApiException</a></dt>
+    <dd><p>Thrown when fails to make API call</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncWithHttpInfo_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncWithHttpInfo_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfo(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String)">
+  CreateBuildingImageAsyncWithHttpInfo(FileParameter, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>撮影した建物面の画像を登録します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApiResponse&lt;BuildingImageResponse&gt; CreateBuildingImageAsyncWithHttpInfo(FileParameter file, string metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>file</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html">FileParameter</a></dt>
+    <dd><p>建物面を撮影した画像ファイル</p>
+</dd>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>画像に関連するメタデータ</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html">ApiResponse</a>&lt;<a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html">BuildingImageResponse</a>&gt;</dt>
+    <dd><p>ApiResponse of BuildingImageResponse</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html">ApiException</a></dt>
+    <dd><p>Thrown when fails to make API call</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncWithHttpInfoAsync_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_CreateBuildingImageAsyncWithHttpInfoAsync_Synesthesias_PLATEAU_Snap_Generated_Client_FileParameter_System_String_System_Threading_CancellationToken_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.CreateBuildingImageAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter,System.String,System.Threading.CancellationToken)">
+  CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter, string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>撮影した建物面の画像を登録します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ApiResponse&lt;BuildingImageResponse&gt;&gt; CreateBuildingImageAsyncWithHttpInfoAsync(FileParameter file, string metadata, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>file</code> <a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html">FileParameter</a></dt>
+    <dd><p>建物面を撮影した画像ファイル</p>
+</dd>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>画像に関連するメタデータ</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation Token to cancel the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html">ApiResponse</a>&lt;<a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html">BuildingImageResponse</a>&gt;&gt;</dt>
+    <dd><p>Task of ApiResponse (BuildingImageResponse)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html">ApiException</a></dt>
+    <dd><p>Thrown when fails to make API call</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Dispose_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_Dispose" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes resources if they were created by us</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_GetBasePath_" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath*"></a>
+
+  <h3 id="Synesthesias_PLATEAU_Snap_Generated_Api_ImagesApi_GetBasePath" data-uid="Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.GetBasePath">
+  GetBasePath()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the base path of the API client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetBasePath()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base path</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/ImagesApi.cs/#L98" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

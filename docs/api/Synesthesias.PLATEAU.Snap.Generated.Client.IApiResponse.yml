@@ -1,0 +1,608 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  id: IApiResponse
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode
+  langs:
+  - csharp
+  - vb
+  name: IApiResponse
+  nameWithType: IApiResponse
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IApiResponse
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 19
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Provides a non-generic contract for the ApiResponse wrapper.
+  example: []
+  syntax:
+    content: public interface IApiResponse
+    content.vb: Public Interface IApiResponse
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType
+  id: ResponseType
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: ResponseType
+  nameWithType: IApiResponse.ResponseType
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ResponseType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 24
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: The data type of <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: Type ResponseType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property ResponseType As Type
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  id: Content
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: IApiResponse.Content
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Content
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: The content of this response
+  example: []
+  syntax:
+    content: object Content { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: ReadOnly Property Content As Object
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode
+  id: StatusCode
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: StatusCode
+  nameWithType: IApiResponse.StatusCode
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: StatusCode
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 35
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets the status code (HTTP status code)
+  example: []
+  syntax:
+    content: HttpStatusCode StatusCode { get; }
+    parameters: []
+    return:
+      type: System.Net.HttpStatusCode
+      description: The status code.
+    content.vb: ReadOnly Property StatusCode As HttpStatusCode
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers
+  id: Headers
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: IApiResponse.Headers
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Headers
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 41
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets the HTTP headers
+  example: []
+  syntax:
+    content: Multimap<string, string> Headers { get; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+      description: HTTP headers
+    content.vb: ReadOnly Property Headers As Multimap(Of String, String)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText
+  id: ErrorText
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: ErrorText
+  nameWithType: IApiResponse.ErrorText
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ErrorText
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 46
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets any error text defined by the calling client.
+  example: []
+  syntax:
+    content: string ErrorText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property ErrorText As String
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies
+  id: Cookies
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: Cookies
+  nameWithType: IApiResponse.Cookies
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Cookies
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 51
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets any cookies passed along on the response.
+  example: []
+  syntax:
+    content: List<Cookie> Cookies { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Net.Cookie}
+    content.vb: Property Cookies As List(Of Cookie)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent
+  id: RawContent
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  langs:
+  - csharp
+  - vb
+  name: RawContent
+  nameWithType: IApiResponse.RawContent
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: RawContent
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiResponse.cs
+    startLine: 56
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: The raw content of this response
+  example: []
+  syntax:
+    content: string RawContent { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property RawContent As String
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent*
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_Content
+  name: Content
+  nameWithType: IApiResponse.Content
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_ResponseType
+  name: ResponseType
+  nameWithType: IApiResponse.ResponseType
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ResponseType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html
+  name: IApiResponse
+  nameWithType: IApiResponse
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_Content
+  name: Content
+  nameWithType: IApiResponse.Content
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Content
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_StatusCode
+  name: StatusCode
+  nameWithType: IApiResponse.StatusCode
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.StatusCode
+- uid: System.Net.HttpStatusCode
+  commentId: T:System.Net.HttpStatusCode
+  parent: System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode
+  name: HttpStatusCode
+  nameWithType: HttpStatusCode
+  fullName: System.Net.HttpStatusCode
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_Headers
+  name: Headers
+  nameWithType: IApiResponse.Headers
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Headers
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  definition: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  name: Multimap<string, string>
+  nameWithType: Multimap<string, string>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<string, string>
+  nameWithType.vb: Multimap(Of String, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap(Of String, String)
+  name.vb: Multimap(Of String, String)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  name: Multimap<TKey, TValue>
+  nameWithType: Multimap<TKey, TValue>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<TKey, TValue>
+  nameWithType.vb: Multimap(Of TKey, TValue)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap(Of TKey, TValue)
+  name.vb: Multimap(Of TKey, TValue)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_ErrorText
+  name: ErrorText
+  nameWithType: IApiResponse.ErrorText
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.ErrorText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_Cookies
+  name: Cookies
+  nameWithType: IApiResponse.Cookies
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.Cookies
+- uid: System.Collections.Generic.List{System.Net.Cookie}
+  commentId: T:System.Collections.Generic.List{System.Net.Cookie}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Cookie>
+  nameWithType: List<Cookie>
+  fullName: System.Collections.Generic.List<System.Net.Cookie>
+  nameWithType.vb: List(Of Cookie)
+  fullName.vb: System.Collections.Generic.List(Of System.Net.Cookie)
+  name.vb: List(Of Cookie)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Net.Cookie
+    name: Cookie
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.cookie
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Net.Cookie
+    name: Cookie
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.cookie
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiResponse_RawContent
+  name: RawContent
+  nameWithType: IApiResponse.RawContent
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.RawContent

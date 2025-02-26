@@ -1,0 +1,800 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel
+  commentId: T:Synesthesias.Snap.Sample.ValidationParameterModel
+  id: ValidationParameterModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Google.XR.ARCoreExtensions.GeospatialPose,Google.XR.ARCoreExtensions.GeospatialPose,System.Double,System.DateTime)
+  - Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,System.Double,System.DateTime)
+  - Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime)
+  - Synesthesias.Snap.Sample.ValidationParameterModel.FromCoordinate
+  - Synesthesias.Snap.Sample.ValidationParameterModel.GmlId
+  - Synesthesias.Snap.Sample.ValidationParameterModel.MeshValidationResult
+  - Synesthesias.Snap.Sample.ValidationParameterModel.Roll
+  - Synesthesias.Snap.Sample.ValidationParameterModel.Timestamp
+  - Synesthesias.Snap.Sample.ValidationParameterModel.ToCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ValidationParameterModel
+  nameWithType: ValidationParameterModel
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ValidationParameterModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 検証するパラメータのModel
+  example: []
+  syntax:
+    content: public class ValidationParameterModel
+    content.vb: Public Class ValidationParameterModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.MeshValidationResult
+  commentId: F:Synesthesias.Snap.Sample.ValidationParameterModel.MeshValidationResult
+  id: MeshValidationResult
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: MeshValidationResult
+  nameWithType: ValidationParameterModel.MeshValidationResult
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.MeshValidationResult
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MeshValidationResult
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: Meshの検証結果
+  example: []
+  syntax:
+    content: public readonly MeshValidationResult MeshValidationResult
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationResult
+    content.vb: Public ReadOnly MeshValidationResult As MeshValidationResult
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.GmlId
+  commentId: F:Synesthesias.Snap.Sample.ValidationParameterModel.GmlId
+  id: GmlId
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: GmlId
+  nameWithType: ValidationParameterModel.GmlId
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.GmlId
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GmlId
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: GML ID
+  example: []
+  syntax:
+    content: public readonly string GmlId
+    return:
+      type: System.String
+    content.vb: Public ReadOnly GmlId As String
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.FromCoordinate
+  commentId: F:Synesthesias.Snap.Sample.ValidationParameterModel.FromCoordinate
+  id: FromCoordinate
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: FromCoordinate
+  nameWithType: ValidationParameterModel.FromCoordinate
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.FromCoordinate
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: FromCoordinate
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 25
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 開始地点の座標
+  example: []
+  syntax:
+    content: public readonly Coordinate FromCoordinate
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+    content.vb: Public ReadOnly FromCoordinate As Coordinate
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.ToCoordinate
+  commentId: F:Synesthesias.Snap.Sample.ValidationParameterModel.ToCoordinate
+  id: ToCoordinate
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: ToCoordinate
+  nameWithType: ValidationParameterModel.ToCoordinate
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.ToCoordinate
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ToCoordinate
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 30
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 終了地点の座標
+  example: []
+  syntax:
+    content: public readonly Coordinate ToCoordinate
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+    content.vb: Public ReadOnly ToCoordinate As Coordinate
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.Roll
+  commentId: F:Synesthesias.Snap.Sample.ValidationParameterModel.Roll
+  id: Roll
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: Roll
+  nameWithType: ValidationParameterModel.Roll
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.Roll
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Roll
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 35
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: ロール
+  example: []
+  syntax:
+    content: public readonly double Roll
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Roll As Double
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.Timestamp
+  commentId: F:Synesthesias.Snap.Sample.ValidationParameterModel.Timestamp
+  id: Timestamp
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: ValidationParameterModel.Timestamp
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.Timestamp
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Timestamp
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 40
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: タイムスタンプ
+  example: []
+  syntax:
+    content: public readonly DateTime Timestamp
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Timestamp As Date
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,System.Double,System.DateTime)
+  commentId: M:Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,System.Double,System.DateTime)
+  id: '#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate,System.Double,System.DateTime)'
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: ValidationParameterModel(MeshValidationResult, string, Coordinate, Coordinate, double, DateTime)
+  nameWithType: ValidationParameterModel.ValidationParameterModel(MeshValidationResult, string, Coordinate, Coordinate, double, DateTime)
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.ValidationParameterModel(Synesthesias.Snap.Runtime.MeshValidationResult, string, Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate, Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate, double, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 45
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public ValidationParameterModel(MeshValidationResult meshValidationResult, string gmlId, Coordinate fromCoordinate, Coordinate toCoordinate, double roll, DateTime timestamp)
+    parameters:
+    - id: meshValidationResult
+      type: Synesthesias.Snap.Runtime.MeshValidationResult
+    - id: gmlId
+      type: System.String
+    - id: fromCoordinate
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+    - id: toCoordinate
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+    - id: roll
+      type: System.Double
+    - id: timestamp
+      type: System.DateTime
+    content.vb: Public Sub New(meshValidationResult As MeshValidationResult, gmlId As String, fromCoordinate As Coordinate, toCoordinate As Coordinate, roll As Double, timestamp As Date)
+  overload: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor*
+  nameWithType.vb: ValidationParameterModel.New(MeshValidationResult, String, Coordinate, Coordinate, Double, Date)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationParameterModel.New(Synesthesias.Snap.Runtime.MeshValidationResult, String, Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate, Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate, Double, Date)
+  name.vb: New(MeshValidationResult, String, Coordinate, Coordinate, Double, Date)
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime)
+  commentId: M:Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime)
+  id: '#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime)'
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: ValidationParameterModel(MeshValidationResult, string, double, double, double, double, double, double, double, DateTime)
+  nameWithType: ValidationParameterModel.ValidationParameterModel(MeshValidationResult, string, double, double, double, double, double, double, double, DateTime)
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.ValidationParameterModel(Synesthesias.Snap.Runtime.MeshValidationResult, string, double, double, double, double, double, double, double, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 64
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public ValidationParameterModel(MeshValidationResult meshValidationResult, string gmlId, double fromLongitude, double fromLatitude, double fromAltitude, double toLongitude, double toLatitude, double toAltitude, double roll, DateTime timestamp)
+    parameters:
+    - id: meshValidationResult
+      type: Synesthesias.Snap.Runtime.MeshValidationResult
+    - id: gmlId
+      type: System.String
+    - id: fromLongitude
+      type: System.Double
+    - id: fromLatitude
+      type: System.Double
+    - id: fromAltitude
+      type: System.Double
+    - id: toLongitude
+      type: System.Double
+    - id: toLatitude
+      type: System.Double
+    - id: toAltitude
+      type: System.Double
+    - id: roll
+      type: System.Double
+    - id: timestamp
+      type: System.DateTime
+    content.vb: Public Sub New(meshValidationResult As MeshValidationResult, gmlId As String, fromLongitude As Double, fromLatitude As Double, fromAltitude As Double, toLongitude As Double, toLatitude As Double, toAltitude As Double, roll As Double, timestamp As Date)
+  overload: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor*
+  nameWithType.vb: ValidationParameterModel.New(MeshValidationResult, String, Double, Double, Double, Double, Double, Double, Double, Date)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationParameterModel.New(Synesthesias.Snap.Runtime.MeshValidationResult, String, Double, Double, Double, Double, Double, Double, Double, Date)
+  name.vb: New(MeshValidationResult, String, Double, Double, Double, Double, Double, Double, Double, Date)
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Google.XR.ARCoreExtensions.GeospatialPose,Google.XR.ARCoreExtensions.GeospatialPose,System.Double,System.DateTime)
+  commentId: M:Synesthesias.Snap.Sample.ValidationParameterModel.#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Google.XR.ARCoreExtensions.GeospatialPose,Google.XR.ARCoreExtensions.GeospatialPose,System.Double,System.DateTime)
+  id: '#ctor(Synesthesias.Snap.Runtime.MeshValidationResult,System.String,Google.XR.ARCoreExtensions.GeospatialPose,Google.XR.ARCoreExtensions.GeospatialPose,System.Double,System.DateTime)'
+  parent: Synesthesias.Snap.Sample.ValidationParameterModel
+  langs:
+  - csharp
+  - vb
+  name: ValidationParameterModel(MeshValidationResult, string, GeospatialPose, GeospatialPose, double, DateTime)
+  nameWithType: ValidationParameterModel.ValidationParameterModel(MeshValidationResult, string, GeospatialPose, GeospatialPose, double, DateTime)
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.ValidationParameterModel(Synesthesias.Snap.Runtime.MeshValidationResult, string, Google.XR.ARCoreExtensions.GeospatialPose, Google.XR.ARCoreExtensions.GeospatialPose, double, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
+    startLine: 87
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public ValidationParameterModel(MeshValidationResult meshValidationResult, string gmlId, GeospatialPose fromGeospatialPose, GeospatialPose toGeospatialPose, double roll, DateTime timestamp)
+    parameters:
+    - id: meshValidationResult
+      type: Synesthesias.Snap.Runtime.MeshValidationResult
+    - id: gmlId
+      type: System.String
+    - id: fromGeospatialPose
+      type: Google.XR.ARCoreExtensions.GeospatialPose
+    - id: toGeospatialPose
+      type: Google.XR.ARCoreExtensions.GeospatialPose
+    - id: roll
+      type: System.Double
+    - id: timestamp
+      type: System.DateTime
+    content.vb: Public Sub New(meshValidationResult As MeshValidationResult, gmlId As String, fromGeospatialPose As GeospatialPose, toGeospatialPose As GeospatialPose, roll As Double, timestamp As Date)
+  overload: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor*
+  nameWithType.vb: ValidationParameterModel.New(MeshValidationResult, String, GeospatialPose, GeospatialPose, Double, Date)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationParameterModel.New(Synesthesias.Snap.Runtime.MeshValidationResult, String, Google.XR.ARCoreExtensions.GeospatialPose, Google.XR.ARCoreExtensions.GeospatialPose, Double, Date)
+  name.vb: New(MeshValidationResult, String, GeospatialPose, GeospatialPose, Double, Date)
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.MeshValidationResult
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationResult
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationResult.html
+  name: MeshValidationResult
+  nameWithType: MeshValidationResult
+  fullName: Synesthesias.Snap.Runtime.MeshValidationResult
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html
+  name: Coordinate
+  nameWithType: Coordinate
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationParameterModel.#ctor
+  href: Synesthesias.Snap.Sample.ValidationParameterModel.html#Synesthesias_Snap_Sample_ValidationParameterModel__ctor_Synesthesias_Snap_Runtime_MeshValidationResult_System_String_Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_System_Double_System_DateTime_
+  name: ValidationParameterModel
+  nameWithType: ValidationParameterModel.ValidationParameterModel
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel.ValidationParameterModel
+  nameWithType.vb: ValidationParameterModel.New
+  fullName.vb: Synesthesias.Snap.Sample.ValidationParameterModel.New
+  name.vb: New
+- uid: Google.XR.ARCoreExtensions.GeospatialPose
+  commentId: T:Google.XR.ARCoreExtensions.GeospatialPose
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: GeospatialPose
+  nameWithType: GeospatialPose
+  fullName: Google.XR.ARCoreExtensions.GeospatialPose
+- uid: Google.XR.ARCoreExtensions
+  commentId: N:Google.XR.ARCoreExtensions
+  isExternal: true
+  name: Google.XR.ARCoreExtensions
+  nameWithType: Google.XR.ARCoreExtensions
+  fullName: Google.XR.ARCoreExtensions
+  spec.csharp:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+  spec.vb:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true

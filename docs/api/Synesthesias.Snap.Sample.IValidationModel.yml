@@ -1,0 +1,317 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.IValidationModel
+  commentId: T:Synesthesias.Snap.Sample.IValidationModel
+  id: IValidationModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.IValidationModel.Cancel
+  - Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture
+  - Synesthesias.Snap.Sample.IValidationModel.RegisterAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IValidationModel
+  nameWithType: IValidationModel
+  fullName: Synesthesias.Snap.Sample.IValidationModel
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IValidationModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 撮影判定画面のModel
+  example: []
+  syntax:
+    content: 'public interface IValidationModel : IAsyncStartable'
+    content.vb: Public Interface IValidationModel Inherits IAsyncStartable
+  inheritedMembers:
+  - VContainer.Unity.IAsyncStartable.StartAsync(System.Threading.CancellationToken)
+- uid: Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture
+  commentId: M:Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture
+  id: GetCapturedTexture
+  parent: Synesthesias.Snap.Sample.IValidationModel
+  langs:
+  - csharp
+  - vb
+  name: GetCapturedTexture()
+  nameWithType: IValidationModel.GetCapturedTexture()
+  fullName: Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetCapturedTexture
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: キャプチャしたテクスチャを取得
+  example: []
+  syntax:
+    content: Texture GetCapturedTexture()
+    return:
+      type: UnityEngine.Texture
+    content.vb: Function GetCapturedTexture() As Texture
+  overload: Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture*
+- uid: Synesthesias.Snap.Sample.IValidationModel.RegisterAsync(System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.IValidationModel.RegisterAsync(System.Threading.CancellationToken)
+  id: RegisterAsync(System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Sample.IValidationModel
+  langs:
+  - csharp
+  - vb
+  name: RegisterAsync(CancellationToken)
+  nameWithType: IValidationModel.RegisterAsync(CancellationToken)
+  fullName: Synesthesias.Snap.Sample.IValidationModel.RegisterAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: RegisterAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 登録
+  example: []
+  syntax:
+    content: UniTask RegisterAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Function RegisterAsync(cancellationToken As CancellationToken) As UniTask
+  overload: Synesthesias.Snap.Sample.IValidationModel.RegisterAsync*
+- uid: Synesthesias.Snap.Sample.IValidationModel.Cancel
+  commentId: M:Synesthesias.Snap.Sample.IValidationModel.Cancel
+  id: Cancel
+  parent: Synesthesias.Snap.Sample.IValidationModel
+  langs:
+  - csharp
+  - vb
+  name: Cancel()
+  nameWithType: IValidationModel.Cancel()
+  fullName: Synesthesias.Snap.Sample.IValidationModel.Cancel()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+      branch: feature/doc_fx
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Cancel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/IValidationModel.cs
+    startLine: 25
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: キャンセル
+  example: []
+  syntax:
+    content: void Cancel()
+    content.vb: Sub Cancel()
+  overload: Synesthesias.Snap.Sample.IValidationModel.Cancel*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: VContainer.Unity.IAsyncStartable.StartAsync(System.Threading.CancellationToken)
+  commentId: M:VContainer.Unity.IAsyncStartable.StartAsync(System.Threading.CancellationToken)
+  parent: VContainer.Unity.IAsyncStartable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: StartAsync(CancellationToken)
+  nameWithType: IAsyncStartable.StartAsync(CancellationToken)
+  fullName: VContainer.Unity.IAsyncStartable.StartAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: VContainer.Unity.IAsyncStartable.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    isExternal: true
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: VContainer.Unity.IAsyncStartable.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    isExternal: true
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: VContainer.Unity.IAsyncStartable
+  commentId: T:VContainer.Unity.IAsyncStartable
+  parent: VContainer.Unity
+  isExternal: true
+  name: IAsyncStartable
+  nameWithType: IAsyncStartable
+  fullName: VContainer.Unity.IAsyncStartable
+- uid: VContainer.Unity
+  commentId: N:VContainer.Unity
+  isExternal: true
+  name: VContainer.Unity
+  nameWithType: VContainer.Unity
+  fullName: VContainer.Unity
+  spec.csharp:
+  - uid: VContainer
+    name: VContainer
+    isExternal: true
+  - name: .
+  - uid: VContainer.Unity
+    name: Unity
+    isExternal: true
+  spec.vb:
+  - uid: VContainer
+    name: VContainer
+    isExternal: true
+  - name: .
+  - uid: VContainer.Unity
+    name: Unity
+    isExternal: true
+- uid: Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture*
+  commentId: Overload:Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture
+  href: Synesthesias.Snap.Sample.IValidationModel.html#Synesthesias_Snap_Sample_IValidationModel_GetCapturedTexture
+  name: GetCapturedTexture
+  nameWithType: IValidationModel.GetCapturedTexture
+  fullName: Synesthesias.Snap.Sample.IValidationModel.GetCapturedTexture
+- uid: UnityEngine.Texture
+  commentId: T:UnityEngine.Texture
+  parent: UnityEngine
+  isExternal: true
+  name: Texture
+  nameWithType: Texture
+  fullName: UnityEngine.Texture
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Sample.IValidationModel.RegisterAsync*
+  commentId: Overload:Synesthesias.Snap.Sample.IValidationModel.RegisterAsync
+  href: Synesthesias.Snap.Sample.IValidationModel.html#Synesthesias_Snap_Sample_IValidationModel_RegisterAsync_System_Threading_CancellationToken_
+  name: RegisterAsync
+  nameWithType: IValidationModel.RegisterAsync
+  fullName: Synesthesias.Snap.Sample.IValidationModel.RegisterAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Synesthesias.Snap.Sample.IValidationModel.Cancel*
+  commentId: Overload:Synesthesias.Snap.Sample.IValidationModel.Cancel
+  href: Synesthesias.Snap.Sample.IValidationModel.html#Synesthesias_Snap_Sample_IValidationModel_Cancel
+  name: Cancel
+  nameWithType: IValidationModel.Cancel
+  fullName: Synesthesias.Snap.Sample.IValidationModel.Cancel
