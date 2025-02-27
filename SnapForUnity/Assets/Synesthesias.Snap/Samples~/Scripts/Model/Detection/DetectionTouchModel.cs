@@ -58,19 +58,19 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
-        /// 検出されたメッシュのViewを設定する
+        /// メッシュIDを含むか
         /// </summary>
-        public void SetDetectedMeshView(IMobileDetectionMeshView meshView)
+        public bool ContainsMeshId(string id)
         {
-            meshRepository.SetMesh(meshView);
+            return meshRepository.ContainsMeshId(id);
         }
 
         /// <summary>
         /// 検出されたメッシュのViewを設定する
         /// </summary>
-        public void SetDetectedMeshViews(IEnumerable<IMobileDetectionMeshView> meshViews)
+        public void SetDetectedMeshView(IMobileDetectionMeshView meshView)
         {
-            meshRepository.SetMeshes(meshViews);
+            meshRepository.SetMesh(meshView);
         }
 
         /// <summary>

@@ -16,7 +16,6 @@ namespace Synesthesias.Snap.Runtime
     public class MobileGeospatialMeshModel : IDisposable, IGeospatialMeshModel
     {
         private readonly List<GeospatialAnchorResult> anchorResults = new();
-        private readonly MeshModel meshModel;
         private readonly ITriangulationModel mobileTriangulationModel;
         private readonly GeospatialAccuracyModel accuracyModel;
         private readonly GeospatialAnchorModel geospatialAnchorModel;
@@ -25,12 +24,10 @@ namespace Synesthesias.Snap.Runtime
         /// コンストラクタ
         /// </summary>
         public MobileGeospatialMeshModel(
-            MeshModel meshModel,
             ITriangulationModel mobileTriangulationModel,
             GeospatialAccuracyModel accuracyModel,
             GeospatialAnchorModel geospatialAnchorModel)
         {
-            this.meshModel = meshModel;
             this.mobileTriangulationModel = mobileTriangulationModel;
             this.accuracyModel = accuracyModel;
             this.geospatialAnchorModel = geospatialAnchorModel;

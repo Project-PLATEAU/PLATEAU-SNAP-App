@@ -12,7 +12,6 @@ namespace Synesthesias.Snap.Runtime
     /// </summary>
     public class EditorGeospatialMeshModel : IGeospatialMeshModel
     {
-        private readonly MeshModel meshModel;
         private readonly IGeospatialMathModel geospatialMathModel;
         private readonly ITriangulationModel editorTriangulationModel;
         private readonly GeospatialMainLoopState mainLoopState = new();
@@ -22,11 +21,9 @@ namespace Synesthesias.Snap.Runtime
         /// コンストラクタ
         /// </summary>
         public EditorGeospatialMeshModel(
-            MeshModel meshModel,
             IGeospatialMathModel geospatialMathModel,
             ITriangulationModel editorTriangulation)
         {
-            this.meshModel = meshModel;
             this.geospatialMathModel = geospatialMathModel;
             this.editorTriangulationModel = editorTriangulation;
             mainLoopState.SetStateType(GeospatialMainLoopStateType.Ready);

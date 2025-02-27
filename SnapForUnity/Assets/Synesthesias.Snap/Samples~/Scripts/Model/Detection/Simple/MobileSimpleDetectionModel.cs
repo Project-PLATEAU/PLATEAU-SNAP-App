@@ -341,6 +341,11 @@ namespace Synesthesias.Snap.Sample
             Quaternion eunRotation,
             CancellationToken cancellationToken)
         {
+            if (touchModel.ContainsMeshId(surface.GmlId))
+            {
+                return;
+            }
+
             var view = await detectionMeshModel.CreateMeshView(
                 camera: camera,
                 surface: surface,

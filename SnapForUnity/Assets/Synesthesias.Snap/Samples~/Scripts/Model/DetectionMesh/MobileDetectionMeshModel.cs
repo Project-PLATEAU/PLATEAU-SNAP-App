@@ -1,13 +1,10 @@
 using Synesthesias.Snap.Runtime;
 using Cysharp.Threading.Tasks;
-using Google.XR.ARCoreExtensions;
-using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
 using Object = UnityEngine.Object;
 
 namespace Synesthesias.Snap.Sample
@@ -20,19 +17,16 @@ namespace Synesthesias.Snap.Sample
         private readonly List<GameObject> anchorObjects = new();
         private readonly IGeospatialMeshModel mobileGeospatialMeshModel;
         private readonly MobileDetectionMeshView meshViewTemplate;
-        private readonly MeshModel meshModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public MobileDetectionMeshModel(
             IGeospatialMeshModel mobileGeospatialMeshModel,
-            MobileDetectionMeshView meshViewTemplate,
-            MeshModel meshModel)
+            MobileDetectionMeshView meshViewTemplate)
         {
             this.mobileGeospatialMeshModel = mobileGeospatialMeshModel;
             this.meshViewTemplate = meshViewTemplate;
-            this.meshModel = meshModel;
         }
 
         /// <summary>

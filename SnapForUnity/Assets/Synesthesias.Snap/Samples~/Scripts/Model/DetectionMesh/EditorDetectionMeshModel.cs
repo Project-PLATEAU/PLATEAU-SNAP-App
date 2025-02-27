@@ -16,19 +16,16 @@ namespace Synesthesias.Snap.Sample
         private readonly List<GameObject> anchorObjects = new();
         private readonly IGeospatialMeshModel editorGeospatialMeshModel;
         private readonly EditorDetectionMeshView meshViewTemplate;
-        private readonly MeshModel meshModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public EditorDetectionMeshModel(
             IGeospatialMeshModel editorGeospatialMeshModel,
-            EditorDetectionMeshView meshViewTemplate,
-            MeshModel meshModel)
+            EditorDetectionMeshView meshViewTemplate)
         {
             this.editorGeospatialMeshModel = editorGeospatialMeshModel;
             this.meshViewTemplate = meshViewTemplate;
-            this.meshModel = meshModel;
         }
 
         /// <summary>

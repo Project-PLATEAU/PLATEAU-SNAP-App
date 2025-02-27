@@ -88,8 +88,6 @@ namespace Synesthesias.Snap.Sample
         {
             builder.Register<EditorGeospatialMathModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
-
-            builder.Register<MeshModel>(Lifetime.Singleton);
         }
 
         private void ConfigureDetection(IContainerBuilder builder)

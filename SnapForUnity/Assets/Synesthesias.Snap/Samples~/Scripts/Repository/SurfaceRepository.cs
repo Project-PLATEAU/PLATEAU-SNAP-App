@@ -20,7 +20,6 @@ namespace Synesthesias.Snap.Sample
         private readonly TimeSpan cacheDuration;
         private readonly ISurfacesApiAsync surfacesApiAsync;
         private DateTime requestedAt;
-        private int upeerLimitOfSurface = 1;
 
         /// <summary>
         /// コンストラクタ

@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using Google.XR.ARCoreExtensions;
 using R3;
 using Synesthesias.Snap.Runtime;
 using System;
@@ -180,7 +179,7 @@ namespace Synesthesias.Snap.Sample
             // 始点から先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: (float) parameterModel.MaxDistance);
+                distance: (float)parameterModel.MaxDistance);
 
             var meshValidationResult = meshValidationModel.Validate(
                 meshTransform: selectedMeshView.MeshFilter.transform,
@@ -205,12 +204,19 @@ namespace Synesthesias.Snap.Sample
             modifiedScreenPosition.z = DistanceFromCamera;
             var worldPosition = camera.ScreenToWorldPoint(modifiedScreenPosition);
 
+            const string ID = "Empty Id ---";
+
+            if (touchModel.ContainsMeshId(ID))
+            {
+                return;
+            }
+
             var mesh = detectionMeshModel.CreateMeshAtTransform(
-                id: "Empty Id ---",
+                id: ID,
                 position: worldPosition,
                 rotation: Quaternion.identity);
 
-            touchModel.SetDetectedMeshViews(new[] { mesh });
+            touchModel.SetDetectedMeshView(mesh);
         }
 
         private async UniTask OnClickClearAsync(CancellationToken cancellationToken)
@@ -239,7 +245,7 @@ namespace Synesthesias.Snap.Sample
             // 始点からMaxDistance(m)先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: (float) parameterModel.MaxDistance);
+                distance: (float)parameterModel.MaxDistance);
 
             var surfaces = await surfaceRepository.GetVisibleSurfacesAsync(
                 fromGeospatialPose: fromGeospatialPose,
@@ -248,7 +254,7 @@ namespace Synesthesias.Snap.Sample
                 maxDistance: parameterModel.MaxDistance,
                 fieldOfView: parameterModel.FieldOfView,
                 cancellationToken: token);
-            
+
             await UniTask.WhenAll(surfaces
                 .Select(async surface =>
                 {
@@ -268,6 +274,11 @@ namespace Synesthesias.Snap.Sample
             Quaternion eunRotation,
             CancellationToken cancellationToken)
         {
+            if (touchModel.ContainsMeshId(surface.GmlId))
+            {
+                return;
+            }
+
             var view = await detectionMeshModel.CreateMeshView(
                 camera: camera,
                 surface: surface,

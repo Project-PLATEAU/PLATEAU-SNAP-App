@@ -1,6 +1,6 @@
 using R3;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -14,7 +14,7 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly Subject<GameObject> selectedObjectSubject = new();
         private readonly Subject<bool> selectedSubject = new();
-        private readonly Dictionary<string, IMobileDetectionMeshView> previousDetectedMeshViews = new();
+        private readonly Dictionary<string, IMobileDetectionMeshView> detectedMeshViews = new();
         private readonly Material detectedMaterial;
         private readonly Material selectedMaterial;
 
@@ -55,19 +55,19 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public void RemoveDetected(string id)
         {
-            if (!previousDetectedMeshViews.TryGetValue(id, out var meshView))
+            if (!detectedMeshViews.TryGetValue(id, out var meshView))
             {
                 return;
             }
 
             Object.Destroy(meshView.GetGameObject());
-            previousDetectedMeshViews.Remove(id);
+            detectedMeshViews.Remove(id);
         }
 
         public void ClearDetected()
         {
-            RemoveDetected(previousDetectedMeshViews.Values);
-            previousDetectedMeshViews.Clear();
+            RemoveDetected(detectedMeshViews.Values);
+            detectedMeshViews.Clear();
         }
 
         public void ClearSelected()
@@ -82,24 +82,26 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
-        /// 検出されたメッシュのViewを設定する
+        /// メッシュIDを含むか
         /// </summary>
-        public void SetMesh(IMobileDetectionMeshView meshView)
+        public bool ContainsMeshId(string id)
         {
-            RemoveDetected(meshView.Id);
-            previousDetectedMeshViews[meshView.Id] = meshView;
-            OnSubscribeMesh(meshView);
+            return detectedMeshViews.ContainsKey(id);
         }
 
         /// <summary>
         /// 検出されたメッシュのViewを設定する
         /// </summary>
-        public void SetMeshes(IEnumerable<IMobileDetectionMeshView> meshViews)
+        public void SetMesh(IMobileDetectionMeshView meshView)
         {
-            foreach (var meshView in meshViews)
+            if (ContainsMeshId(meshView.Id))
             {
-                SetMesh(meshView);
+                throw new InvalidOperationException($"メッシュ({meshView.Id})は既に検出されています");
             }
+
+            RemoveDetected(meshView.Id);
+            detectedMeshViews[meshView.Id] = meshView;
+            OnSubscribeMesh(meshView);
         }
 
         /// <summary>
