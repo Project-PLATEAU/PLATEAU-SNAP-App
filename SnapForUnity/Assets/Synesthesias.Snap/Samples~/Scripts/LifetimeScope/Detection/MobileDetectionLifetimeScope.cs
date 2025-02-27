@@ -114,7 +114,8 @@ namespace Synesthesias.Snap.Sample
             builder.Register<DetectionSettingModel>(Lifetime.Singleton)
                 .WithParameter("minimumDistance", 10)
                 .WithParameter("maximumDistance", 100)
-                .WithParameter("incrementDistance", 10);
+                .WithParameter("incrementDistance", 10)
+                .WithParameter("defaultDistance", 50);
 
             builder.Register<MobileDetectionModel>(Lifetime.Singleton);
             builder.Register<DetectionTouchModel>(Lifetime.Singleton);

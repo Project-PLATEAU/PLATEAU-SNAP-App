@@ -9,7 +9,7 @@ namespace Synesthesias.Snap.Sample
     /// </summary>
     public class RootLifetimeScope : LifetimeScope
     {
-        [SerializeField] private ApiConfigurationScriptableObject apiConfiguration;
+        [SerializeField] private EnvironmentScriptableObject environmentScriptableObject;
         [SerializeField] private ResidentView residentView;
 
         /// <summary>
@@ -21,10 +21,17 @@ namespace Synesthesias.Snap.Sample
             builder.Register<SceneModel>(Lifetime.Singleton);
             builder.Register<PlatformModel>(Lifetime.Singleton);
             builder.RegisterInstance(residentView);
+            ConfigureEnvironment(builder);
             ConfigureLocalization(builder);
             ConfigureBoot(builder);
             ConfigureAPI(builder);
             ConfigureRepository(builder);
+        }
+
+        private void ConfigureEnvironment(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(environmentScriptableObject)
+                .AsImplementedInterfaces();
         }
 
         private void ConfigureLocalization(IContainerBuilder builder)
@@ -45,6 +52,8 @@ namespace Synesthesias.Snap.Sample
 
         private void ConfigureAPI(IContainerBuilder builder)
         {
+            var apiConfiguration = environmentScriptableObject.ApiConfiguration;
+
             var configuration = new Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
             {
                 BasePath = apiConfiguration.EndPoint,

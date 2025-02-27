@@ -34,7 +34,6 @@ namespace Synesthesias.Snap.Sample
         {
             await model.StartAsync(
                 camera: view.ArCamera,
-                maxDistance: 100,
                 cancellationToken);
         }
 
@@ -80,7 +79,7 @@ namespace Synesthesias.Snap.Sample
 
         private void OnClickGeospatial(bool isVisible)
         {
-            //view.GeospatialObject.SetActive(isVisible);
+            view.GeospatialObject.SetActive(isVisible);
         }
 
         private async UniTask OnClickCameraAsync()

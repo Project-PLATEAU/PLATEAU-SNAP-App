@@ -119,7 +119,8 @@ namespace Synesthesias.Snap.Sample
             builder.Register<DetectionSettingModel>(Lifetime.Singleton)
                 .WithParameter("minimumDistance", 10)
                 .WithParameter("maximumDistance", 100)
-                .WithParameter("incrementDistance", 10);
+                .WithParameter("incrementDistance", 10)
+                .WithParameter("defaultDistance", 50);
 
             builder.Register<MobileSimpleDetectionModel>(Lifetime.Singleton);
             builder.Register<DetectionTouchModel>(Lifetime.Singleton);
@@ -161,8 +162,8 @@ namespace Synesthesias.Snap.Sample
             var meshValidationResult = new MeshValidationResult(
                 mainLoopState: mainLoopState,
                 accuracyResult: accuracyResult,
-                meshAngleResultType: MeshValidationAngleResultType.Valid,
-                meshVertexResultType: MeshValidationVertexResultType.Valid);
+                meshAngleResultType: MeshValidationAngleResultType.None,
+                meshVertexResultType: MeshValidationVertexResultType.None);
 
             var mockParameter = new ValidationParameterModel(
                 meshValidationResult: meshValidationResult,

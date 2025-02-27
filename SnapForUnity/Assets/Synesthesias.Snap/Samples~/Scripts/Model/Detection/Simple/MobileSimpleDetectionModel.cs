@@ -34,10 +34,10 @@ namespace Synesthesias.Snap.Sample
         private CancellationTokenSource createMeshCancellationTokenSource;
 
         /// <summary>
-        /// Geospatial情報を表示するか
+        /// Geospatial情報を表示するかのObservable
         /// </summary>
-        public ReactiveProperty<bool> IsGeospatialVisibleProperty
-            => settingModel.IsGeospatialVisibleProperty;
+        public Observable<bool> IsGeospatialVisibleAsObservable()
+            => settingModel.IsGeospatialVisibleAsObservable();
 
         /// <summary>
         /// オブジェクトが選択されたかのObservable
@@ -124,7 +124,7 @@ namespace Synesthesias.Snap.Sample
                 }
 
                 // 手動検出の場合は処理をスキップ
-                if (settingModel.IsManualDetectionProperty.Value)
+                if (settingModel.IsManualDetection)
                 {
                     continue;
                 }
@@ -196,12 +196,10 @@ namespace Synesthesias.Snap.Sample
                 return;
             }
 
-            var distance = settingModel.DistanceProperty.Value;
-
             // カメラの位置から先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: distance);
+                distance: settingModel.Distance);
 
             if (!toGeospatialPose.IsValid())
             {
@@ -305,12 +303,10 @@ namespace Synesthesias.Snap.Sample
                 return;
             }
 
-            var distance = settingModel.DistanceProperty.Value;
-
             // カメラの位置から先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: distance);
+                distance: settingModel.Distance);
 
             if (!toGeospatialPose.IsValid())
             {
@@ -322,7 +318,7 @@ namespace Synesthesias.Snap.Sample
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
                 camera: camera,
-                maxDistance: distance,
+                maxDistance: settingModel.Distance,
                 cancellationToken: cancellationToken);
 
             var eunRotation = Quaternion.AngleAxis(

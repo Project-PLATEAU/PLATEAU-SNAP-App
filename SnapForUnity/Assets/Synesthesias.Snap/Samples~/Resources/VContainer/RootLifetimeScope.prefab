@@ -93,5 +93,5 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  apiConfiguration: {fileID: 0}
+  environmentScriptableObject: {fileID: 11400000, guid: c1058441dc5ed44a2a5ff5d7a9ccce65, type: 2}
   residentView: {fileID: 1524655806150873120}

@@ -13,7 +13,7 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private DetectionTouchView touchView;
         [SerializeField] private Camera arCamera;
         [SerializeField] private Button menuButton;
-        //[SerializeField] private GameObject geospatialObject;
+        [SerializeField] private GameObject geospatialObject;
         [SerializeField] private RawImage cameraRawImage;
         [SerializeField] private Button cameraButton;
 
@@ -49,9 +49,9 @@ namespace Synesthesias.Snap.Sample
 
         /// <summary>
         /// Geospatial情報のオブジェクト
-        // /// </summary>
-        // public GameObject GeospatialObject
-        //     => geospatialObject;
+        /// </summary>
+        public GameObject GeospatialObject
+            => geospatialObject;
 
         /// <summary>
         /// カメラのRawImage

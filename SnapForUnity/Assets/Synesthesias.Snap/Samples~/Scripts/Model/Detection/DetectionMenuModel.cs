@@ -9,6 +9,7 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly CompositeDisposable disposable = new();
         private readonly Subject<DetectionMenuElementModel> addElementSubject = new();
+        private readonly IEnvironmentModel environmentModel;
         private readonly SceneModel sceneModel;
 
         /// <summary>
@@ -25,8 +26,11 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public DetectionMenuModel(SceneModel sceneModel)
+        public DetectionMenuModel(
+            IEnvironmentModel environmentModel,
+            SceneModel sceneModel)
         {
+            this.environmentModel = environmentModel;
             this.sceneModel = sceneModel;
         }
 
@@ -45,8 +49,9 @@ namespace Synesthesias.Snap.Sample
         public void PopulateElements()
         {
             AddElement(new DetectionMenuElementModel(
-                text: "利用ガイド",
-                onClickAsync: OnClickGuideAsync));
+                    text: "利用ガイド",
+                    onClickAsync: OnClickGuideAsync),
+                EnvironmentType.Release);
 
             AddElement(new DetectionMenuElementModel(
                 text: "アプリ再起動",
@@ -56,8 +61,16 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// メニュー要素を追加
         /// </summary>
-        public void AddElement(DetectionMenuElementModel element)
+        public void AddElement(
+            DetectionMenuElementModel element,
+            EnvironmentType environmentType = EnvironmentType.Development)
         {
+            if (environmentType != environmentModel.EnvironmentType
+                && environmentModel.EnvironmentType != EnvironmentType.Development)
+            {
+                return;
+            }
+
             disposable.Add(element);
             addElementSubject.OnNext(element);
         }

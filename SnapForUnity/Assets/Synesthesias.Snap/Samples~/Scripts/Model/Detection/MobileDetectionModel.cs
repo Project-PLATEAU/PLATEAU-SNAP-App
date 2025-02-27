@@ -24,6 +24,7 @@ namespace Synesthesias.Snap.Sample
         private readonly LocalizationModel localizationModel;
         private readonly MobileARCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
+        private readonly DetectionSettingModel settingModel;
         private readonly GeospatialAccuracyModel geospatialAccuracyModel;
         private readonly MeshValidationModel validationModel;
         private readonly GeospatialPoseModel geospatialPoseModel;
@@ -32,12 +33,11 @@ namespace Synesthesias.Snap.Sample
         private readonly DetectionTouchModel touchModel;
         private readonly MockValidationResultModel resultModel;
         private CancellationTokenSource createMeshCancellationTokenSource;
-        private float maxDistance;
 
         /// <summary>
         /// Geospatial情報を表示するか
         /// </summary>
-        public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty = new(true);
+        public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty = new(false);
 
         /// <summary>
         /// オブジェクトが選択されたかのObservable
@@ -56,6 +56,7 @@ namespace Synesthesias.Snap.Sample
             LocalizationModel localizationModel,
             MobileARCameraModel cameraModel,
             DetectionMenuModel menuModel,
+            DetectionSettingModel settingModel,
             GeospatialAccuracyModel geospatialAccuracyModel,
             MeshValidationModel validationModel,
             GeospatialPoseModel geospatialPoseModel,
@@ -71,6 +72,7 @@ namespace Synesthesias.Snap.Sample
             this.localizationModel = localizationModel;
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
+            this.settingModel = settingModel;
             this.geospatialAccuracyModel = geospatialAccuracyModel;
             this.validationModel = validationModel;
             this.geospatialPoseModel = geospatialPoseModel;
@@ -100,14 +102,12 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(
             Camera camera,
-            float maxDistance,
             CancellationToken cancellation)
         {
-            this.maxDistance = maxDistance;
-
             await UniTask.WhenAll(localizationModel.InitializeAsync(
                     tableName: "DetectionStringTableCollection",
                     cancellation),
+                settingModel.StartAsync(cancellation),
                 resultModel.StartAsync(cancellation));
 
             CreateMenu(camera);
@@ -200,7 +200,7 @@ namespace Synesthesias.Snap.Sample
             // カメラの位置から先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: maxDistance);
+                distance: settingModel.Distance);
 
             if (!toGeospatialPose.IsValid())
             {
@@ -355,7 +355,7 @@ namespace Synesthesias.Snap.Sample
             // カメラの位置から20m先のGeospatialPoseを終点とする
             var toGeospatialPose = geospatialMathModel.CreateGeospatialPoseAtDistance(
                 geospatialPose: fromGeospatialPose,
-                distance: maxDistance);
+                distance: settingModel.Distance);
 
             if (!toGeospatialPose.IsValid())
             {
@@ -367,7 +367,7 @@ namespace Synesthesias.Snap.Sample
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
                 camera: camera,
-                maxDistance: maxDistance,
+                maxDistance: settingModel.Distance,
                 cancellationToken: cancellationToken);
 
             var eunRotation = Quaternion.AngleAxis(

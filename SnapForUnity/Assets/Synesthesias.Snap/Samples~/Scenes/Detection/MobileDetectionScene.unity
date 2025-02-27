@@ -773,6 +773,7 @@ MonoBehaviour:
   touchView: {fileID: 1084631504}
   arCamera: {fileID: 1717950066}
   menuButton: {fileID: 1621886168}
+  geospatialObject: {fileID: 1113485502}
   cameraRawImage: {fileID: 1276176877}
   cameraButton: {fileID: 1684428625}
 --- !u!114 &1084631504

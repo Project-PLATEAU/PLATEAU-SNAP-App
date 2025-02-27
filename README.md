@@ -84,6 +84,30 @@ git config core.symlinks true
 
 Macユーザーは特別な対応は不要です。
 
+## 環境設定について
+
+開発環境の設定は以下のScriptableObjectで管理しています。
+
+- EnvironmentDevelopment (開発環境)
+
+> Assets/Samples/Synesthesias.Snap/Resources/Environment/EnvironmentDevelopment.asset
+
+- EnvironmentRelease (リリース環境)
+
+> Assets/Samples/Synesthesias.Snap/Resources/Environment/EnvironmentRelease.asset
+
+### 環境設定を追加する方法
+
+- Project Viewで右クリックします
+- Create > Synesthesias > Snap > Sample > EnvironmentScriptableObject
+
+### 環境を切り替える方法
+
+- Project ViewからRootLifetimeScopeのprefabを選択し  `Environment Scriptable Object` のフィールドに前述の環境設定のScriptableObjectの参照をドラッグ&ドロップで設定します
+- デフォルトで `Environment Development` (開発環境) を指定済みです
+
+> Assets/Samples/Synesthesias.Snap/Resources/VContainer/RootLifetimeScope.prefab
+
 ## ARCoreの設定方法 (iOS)
 
 - Project Settings > XR Plugin-in Management > ARCore Extensions
@@ -133,7 +157,7 @@ Assets/Resources/GitIgnore
     - 例: Bearer, X-API-Key
   - Api Key Value
     - APIキーの値を入力します
-- Project ViewからRootLifetimeScopeのprefabを選択し `Api Configuration` のフィールドに前述のScriptableObjectの参照をドラッグ&ドロップで設定します
+- Project Viewから前述の開発環境設定用のScriptableObjectを選択し `Api Configuration` のフィールドに前述のScriptableObjectの参照をドラッグ&ドロップで設定します
 
 ## クライアントのAPIドキュメントの閲覧方法
 
