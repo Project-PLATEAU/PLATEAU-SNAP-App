@@ -64,7 +64,9 @@ namespace Synesthesias.Snap.Runtime
                     accuracyState: accuracyResult.AccuracyState);
             }
 
-            if (surface?.Coordinates == null || surface.Coordinates.Count < 1)
+            var coordinates = surface?.GetUniqueCoordinates();
+
+            if (coordinates == null || coordinates.Count < 1)
             {
                 return new GeospatialMeshResult(
                     mainLoopState: accuracyResult.MainLoopState,
@@ -73,7 +75,7 @@ namespace Synesthesias.Snap.Runtime
             }
 
             if (!TryGetVertexAnchors(
-                    coordinates: surface.Coordinates[0], // Hullのみ対応(Holeは無視)
+                    coordinates: coordinates[0], // Hullのみ対応(Holeは無視)
                     eunRotation: eunRotation,
                     results: out var vertexAnchors))
             {

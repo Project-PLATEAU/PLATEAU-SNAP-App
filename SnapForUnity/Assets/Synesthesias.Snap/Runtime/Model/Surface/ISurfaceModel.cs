@@ -13,7 +13,7 @@ namespace Synesthesias.Snap.Runtime
         public string GmlId { get; set; }
 
         /// <summary>
-        /// 面の座標
+        /// 面の頂点座標のリスト(座標の重複なし)
         /// </summary>
         /// <remarks>
         /// 内側から数えて
@@ -28,6 +28,6 @@ namespace Synesthesias.Snap.Runtime
         /// 
         /// [3番目のList] - 面と穴のデータの配列
         /// </remarks>
-        public List<List<List<double>>> Coordinates { get; set; }
+        public List<List<List<double>>> GetUniqueCoordinates();
     }
 }

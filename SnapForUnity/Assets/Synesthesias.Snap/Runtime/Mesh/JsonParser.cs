@@ -17,9 +17,14 @@ namespace Synesthesias.Snap.Runtime
     {
         [JsonProperty("gmlid")]
         public string GmlId { get; set; }
-        
+
         [JsonProperty("coordinates")]
         public List<List<List<double>>> Coordinates { get; set; }
+
+        public List<List<List<double>>> GetUniqueCoordinates()
+            => Coordinates
+                .SkipLast(1)
+                .ToList();
     }
     public class MockJsonParser
     {

@@ -41,7 +41,9 @@ namespace Synesthesias.Snap.Runtime
             Quaternion eunRotation,
             CancellationToken cancellationToken)
         {
-            if (surface?.Coordinates == null || surface.Coordinates.Count < 1)
+            var coordinates = surface?.GetUniqueCoordinates();
+
+            if (coordinates == null || coordinates.Count < 1)
             {
                 return new GeospatialMeshResult(
                     mainLoopState: mainLoopState,
@@ -49,8 +51,8 @@ namespace Synesthesias.Snap.Runtime
                     GeospatialMeshResultType.EmptyCoordinate);
             }
 
-            var hullCoordinates = surface.Coordinates[0];
-            var holesCoordinates = surface.Coordinates.Skip(1);
+            var hullCoordinates = coordinates[0];
+            var holesCoordinates = coordinates.Skip(1);
 
             var originPose = CreatePose(
                 coordinates: hullCoordinates[0],

@@ -84,7 +84,9 @@ namespace Synesthesias.Snap.Runtime
             Transform parent,
             Quaternion eunRotation)
         {
-            if (surface?.Coordinates == null || surface.Coordinates.Count == 0)
+            var coordinates = surface?.GetUniqueCoordinates();
+
+            if (coordinates == null || coordinates.Count == 0)
             {
                 return null; // 無効なデータの場合
             }
@@ -96,10 +98,10 @@ namespace Synesthesias.Snap.Runtime
             var triangleList = new List<int>();
 
             // Hull(外周)の経度緯度高度データを取得
-            var hull = surface.Coordinates[0];
+            var hull = coordinates[0];
 
             // Holes(穴)の経度緯度高度データを取得
-            var holes = surface.Coordinates.Skip(1);
+            var holes = coordinates.Skip(1);
 
             // Hull(外周)の処理
             var hullVertices = ConvertToVector3List(

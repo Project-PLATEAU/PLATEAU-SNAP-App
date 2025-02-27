@@ -1,4 +1,6 @@
 using Synesthesias.Snap.Runtime;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Synesthesias.PLATEAU.Snap.Generated.Model
 {
@@ -9,5 +11,10 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Model
             get => Gmlid;
             set => Gmlid = value;
         }
+
+        public List<List<List<double>>> GetUniqueCoordinates()
+            => Coordinates
+                .SkipLast(1)
+                .ToList();
     }
 }
