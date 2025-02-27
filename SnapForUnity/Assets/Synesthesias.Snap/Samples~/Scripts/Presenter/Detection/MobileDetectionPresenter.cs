@@ -47,7 +47,7 @@ namespace Synesthesias.Snap.Sample
                 .Subscribe(OnScreenInput)
                 .AddTo(view);
 
-            model.IsGeospatialVisibleProperty
+            model.OnIsGeospatialVisibleAsObservable()
                 .Subscribe(OnClickGeospatial)
                 .AddTo(view);
 

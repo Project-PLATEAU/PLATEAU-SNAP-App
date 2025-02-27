@@ -35,9 +35,11 @@ namespace Synesthesias.Snap.Sample
         private CancellationTokenSource createMeshCancellationTokenSource;
 
         /// <summary>
-        /// Geospatial情報を表示するか
+        /// GeoSpatial情報を表示するか
         /// </summary>
-        public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty = new(false);
+        /// <returns></returns>
+        public Observable<bool> OnIsGeospatialVisibleAsObservable()
+            => settingModel.IsGeospatialVisibleAsObservable();
 
         /// <summary>
         /// オブジェクトが選択されたかのObservable
@@ -259,9 +261,6 @@ namespace Synesthesias.Snap.Sample
             var surfaceAPIDebugMenuElement = CreateManualDetectionMenuElementModel(camera);
             menuModel.AddElement(surfaceAPIDebugMenuElement);
 
-            var geospatialVisibilityElementModel = CreateGeospatialVisibilityElementModel();
-            menuModel.AddElement(geospatialVisibilityElementModel);
-
             var clearAnchorMenuElement = CreateClearAnchorMenuElementModel();
             menuModel.AddElement(clearAnchorMenuElement);
         }
@@ -288,23 +287,6 @@ namespace Synesthesias.Snap.Sample
             return elementModel;
         }
 
-        private DetectionMenuElementModel CreateGeospatialVisibilityElementModel()
-        {
-            var elementModel = new DetectionMenuElementModel(
-                text: "Geospatial: ---",
-                onClickAsync: OnClickGeospatialAsync);
-
-            IsGeospatialVisibleProperty
-                .Subscribe(isVisible =>
-                {
-                    var text = isVisible ? "Geospatial: 表示" : "Geospatial: 非表示";
-                    elementModel.TextProperty.Value = text;
-                })
-                .AddTo(disposable);
-
-            return elementModel;
-        }
-
         private DetectionMenuElementModel CreateClearAnchorMenuElementModel()
         {
             var result = new DetectionMenuElementModel(
@@ -321,13 +303,6 @@ namespace Synesthesias.Snap.Sample
                 onClickAsync: cancellationToken => DetectedAsync(camera, cancellationToken));
 
             return result;
-        }
-
-        private async UniTask OnClickGeospatialAsync(CancellationToken cancellationToken)
-        {
-            var isVisible = IsGeospatialVisibleProperty.Value;
-            IsGeospatialVisibleProperty.Value = !isVisible;
-            await UniTask.Yield();
         }
 
         /// <summary>
