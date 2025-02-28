@@ -126,6 +126,7 @@ namespace Synesthesias.Snap.Sample
         {
             builder.RegisterInstance(detectionMeshViewTemplate);
             builder.Register<MobileDetectionMeshModel>(Lifetime.Singleton);
+            builder.Register<DetectionMeshCullingModel>(Lifetime.Singleton);
         }
 
         private void ConfigureValidation(IContainerBuilder builder)

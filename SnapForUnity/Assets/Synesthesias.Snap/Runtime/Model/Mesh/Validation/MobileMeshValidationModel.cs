@@ -90,6 +90,18 @@ namespace Synesthesias.Snap.Runtime
             foreach (var vertex in mesh.vertices)
             {
                 var worldVertex = meshTransform.TransformPoint(vertex);
+
+                var viewPortPoint = camera.WorldToViewportPoint(worldVertex);
+
+                var isInsideCamera = viewPortPoint.x is >= 0 and <= 1
+                                     && viewPortPoint.y is >= 0 and <= 1
+                                     && viewPortPoint.z >= 0;
+
+                if (!isInsideCamera)
+                {
+                    return MeshValidationVertexResultType.Invalid;
+                }
+
                 var direction = worldVertex - cameraPosition;
 
                 if (!Physics.Raycast(cameraPosition, direction.normalized, out RaycastHit hit, direction.magnitude))

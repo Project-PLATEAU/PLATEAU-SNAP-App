@@ -24,6 +24,12 @@ namespace Synesthesias.Snap.Sample
         public readonly ReactiveProperty<IMobileDetectionMeshView> SelectedMeshViewProperty = new();
 
         /// <summary>
+        /// 検出されたメッシュのViewのリスト
+        /// </summary>
+        public IReadOnlyCollection<IMobileDetectionMeshView> DetectedMeshViews
+            => detectedMeshViews.Values;
+
+        /// <summary>
         /// MeshViewが選択されたかのObservable
         /// </summary>
         public Observable<bool> OnSelectedAsObservable()

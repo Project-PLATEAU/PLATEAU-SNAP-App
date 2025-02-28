@@ -25,6 +25,7 @@ namespace Synesthesias.Snap.Sample
         private readonly MobileARCameraModel cameraModel;
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionSettingModel settingModel;
+        private readonly DetectionMeshCullingModel meshCullingModel;
         private readonly GeospatialAccuracyModel geospatialAccuracyModel;
         private readonly IMeshValidationModel validationModel;
         private readonly GeospatialPoseModel geospatialPoseModel;
@@ -59,6 +60,7 @@ namespace Synesthesias.Snap.Sample
             MobileARCameraModel cameraModel,
             DetectionMenuModel menuModel,
             DetectionSettingModel settingModel,
+            DetectionMeshCullingModel meshCullingModel,
             GeospatialAccuracyModel geospatialAccuracyModel,
             IMeshValidationModel validationModel,
             GeospatialPoseModel geospatialPoseModel,
@@ -75,6 +77,7 @@ namespace Synesthesias.Snap.Sample
             this.cameraModel = cameraModel;
             this.menuModel = menuModel;
             this.settingModel = settingModel;
+            this.meshCullingModel = meshCullingModel;
             this.geospatialAccuracyModel = geospatialAccuracyModel;
             this.validationModel = validationModel;
             this.geospatialPoseModel = geospatialPoseModel;
@@ -114,32 +117,9 @@ namespace Synesthesias.Snap.Sample
 
             CreateMenu(camera);
 
-            while (!cancellation.IsCancellationRequested)
-            {
-                await UniTask.WaitForSeconds(1, cancellationToken: cancellation);
-
-                // タップでアンカーを作成するモードの場合は処理をスキップ
-                if (touchModel.IsTapToCreateAnchor)
-                {
-                    continue;
-                }
-
-                // 手動検出の場合は処理をスキップ
-                if (isManualDetectionProperty.Value)
-                {
-                    continue;
-                }
-
-                try
-                {
-                    await DetectedAsync(camera, cancellation);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
-                    throw;
-                }
-            }
+            await UniTask.WhenAll(
+                MeshCullingMainLoop(cancellation),
+                DetectMainLoop(camera, cancellation));
         }
 
         /// <summary>
@@ -305,6 +285,38 @@ namespace Synesthesias.Snap.Sample
             return result;
         }
 
+        private async UniTask DetectMainLoop(
+            Camera camera,
+            CancellationToken cancellation)
+        {
+            while (!cancellation.IsCancellationRequested)
+            {
+                await UniTask.WaitForSeconds(1, cancellationToken: cancellation);
+
+                // タップでアンカーを作成するモードの場合は処理をスキップ
+                if (touchModel.IsTapToCreateAnchor)
+                {
+                    continue;
+                }
+
+                // 手動検出の場合は処理をスキップ
+                if (isManualDetectionProperty.Value)
+                {
+                    continue;
+                }
+
+                try
+                {
+                    await DetectedAsync(camera, cancellation);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
+            }
+        }
+
         /// <summary>
         /// 建物検出
         /// </summary>
@@ -383,6 +395,25 @@ namespace Synesthesias.Snap.Sample
             }
 
             touchModel.SetDetectedMeshView(view);
+        }
+
+        private async UniTask MeshCullingMainLoop(CancellationToken cancellationToken)
+        {
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+                try
+                {
+                    await meshCullingModel.CullingAsync(cancellationToken: cancellationToken);
+                    await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e);
+                    throw;
+                }
+            }
         }
     }
 }

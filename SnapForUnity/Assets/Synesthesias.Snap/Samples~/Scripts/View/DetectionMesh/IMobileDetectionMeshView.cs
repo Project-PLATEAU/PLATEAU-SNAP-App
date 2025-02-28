@@ -21,6 +21,11 @@ namespace Synesthesias.Snap.Sample
         MeshRenderer MeshRenderer { get; }
 
         /// <summary>
+        /// メッシュのCollider
+        /// </summary>
+        MeshCollider MeshCollider { get; }
+
+        /// <summary>
         /// GameObjectを取得する
         /// </summary>
         GameObject GetGameObject();

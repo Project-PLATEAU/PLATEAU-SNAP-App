@@ -180,7 +180,7 @@ MonoBehaviour:
   menuView: {fileID: 5408049611502967477}
   detectionMeshViewTemplate: {fileID: 5933794237506062931, guid: 29bac43bb9d3648338639c58a3600a43, type: 3}
   geospatialDebugView: {fileID: 1113485504}
-  validationCamera: {fileID: 1082093643}
+  validationCamera: {fileID: 1717950066}
 --- !u!1 &130188959
 GameObject:
   m_ObjectHideFlags: 0

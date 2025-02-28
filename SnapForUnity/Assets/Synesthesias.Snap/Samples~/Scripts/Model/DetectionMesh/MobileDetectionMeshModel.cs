@@ -66,6 +66,7 @@ namespace Synesthesias.Snap.Sample
             view.Id = surface.GmlId;
             view.MeshFilter.mesh = meshResult.Mesh;
             view.MeshCollider.sharedMesh = meshResult.Mesh;
+            view.MeshRenderer.enabled = false;
 
             return view;
         }

@@ -64,8 +64,10 @@ namespace Synesthesias.Snap.Sample
             anchorObjects.Add(view.gameObject);
 
             view.Id = surface.GmlId;
+            view.MeshRenderer.enabled = false;
             view.MeshFilter.mesh = meshResult.Mesh;
             view.MeshCollider.sharedMesh = meshResult.Mesh;
+
             return view;
         }
 
