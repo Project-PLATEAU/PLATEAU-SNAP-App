@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using iShape.Geometry;
 using iShape.Geometry.Container;
@@ -8,18 +9,26 @@ using System;
 using Unity.Mathematics;
 using UnityEngine;
 using System.Linq;
+using System.Threading;
 
 namespace Synesthesias.Snap.Runtime
 {
     public class ShapeModel
     {
-        private static readonly float maxEdge = 1;
-        private static readonly float maxArea = 1;
         // Triangulationを行う関数
-        public void CreateShape(Shape shapeData, Mesh mesh)
+        public async UniTask CreateShapeAsync(
+            Shape shapeData,
+            Mesh mesh,
+            CancellationToken cancellationToken)
         {
+            if (shapeData.hull.Length < 1)
+            {
+                Debug.LogWarning("頂点が1つもありません");
+                return;
+            }
+
             //頂点の重複がある時，クラッシュするのを防止する．
-            if (IsOverlappingVertices(shapeData))
+            if (await IsOverlappingVerticesAsync(shapeData, cancellationToken))
             {
                 Debug.LogWarning("頂点の重複が検出された為、処理を中断しました");
                 return;
@@ -32,53 +41,117 @@ namespace Synesthesias.Snap.Runtime
                 return;
             }
 
+            await CreateMesh(shapeData, mesh, cancellationToken);
+        }
+
+        private async UniTask CreateMesh(
+            Shape shapeData,
+            Mesh mesh,
+            CancellationToken cancellationToken)
+        {
             var iGeom = IntGeom.DefGeom;
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
             var pShape = ToPlainShape(
                 iGeom: iGeom,
-                Allocator.TempJob,
+                Allocator.Temp,
                 hull: shapeData.hull,
                 holes: shapeData.holes);
 
-            var extraPoints = new NativeArray<IntVector>(0, Allocator.TempJob);
-            var delaunay = pShape.Delaunay(iGeom.Int(maxEdge), extraPoints, Allocator.TempJob);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+            var extraPoints = new NativeArray<IntVector>(0, Allocator.Persistent);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            var minX = shapeData.hull.Min(v => v.x);
+            var maxX = shapeData.hull.Max(v => v.x);
+            var minY = shapeData.hull.Min(v => v.y);
+            var maxY = shapeData.hull.Max(v => v.y);
+
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            var width = maxX - minX;
+            var height = maxY - minY;
+            var maxDimension = math.max(width, height);
+            var maxEdgeValue = maxDimension * 0.5F; // 2分の1の長さ
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            maxEdgeValue = math.clamp(maxEdgeValue, 0.5F, 10F);
+            var maxEdge = iGeom.Int(maxEdgeValue);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            var delaunay = pShape.Delaunay(
+                maxEdge: maxEdge,
+                extraPoints: extraPoints,
+                allocator: Allocator.Temp);
+
+            pShape.Dispose();
+
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            var totalArea = width * height;
+            var maxAreaValue = totalArea * 0.5F; // 2分の1の面積
+            maxAreaValue = math.clamp(maxAreaValue, 0.5F, 50F);
+            var maxArea = iGeom.Int(maxAreaValue);
+
             delaunay.Tessellate(iGeom, maxArea);
 
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             extraPoints.Dispose();
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
-            var triangles = delaunay.Indices(Allocator.Temp);
-            var vertices = delaunay.Vertices(Allocator.Temp, iGeom, 0);
+            var triangles = delaunay.Indices(Allocator.Persistent);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            var vertices = delaunay.Vertices(Allocator.Persistent, iGeom, 0);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
             delaunay.Dispose();
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
             // set each triangle as a separate mesh
 
-            var subVertices = new NativeArray<float3>(3, Allocator.Temp);
-            var subIndices = new NativeArray<int>(new[] { 0, 1, 2 }, Allocator.Temp);
+            var subVertices = new NativeArray<float3>(3, Allocator.Persistent);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
-            var colorMesh = new NativeColorMesh(triangles.Length, Allocator.Temp);
+            var subIndices = new NativeArray<int>(new[] { 0, 1, 2 }, Allocator.Persistent);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+            var colorMesh = new NativeColorMesh(triangles.Length, Allocator.Persistent);
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
             for (int i = 0; i < triangles.Length; i += 3)
             {
                 for (int j = 0; j < 3; j += 1)
                 {
+                    // 処理負荷を軽減するために1フレーム待機
+                    await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
                     var v = vertices[triangles[i + j]];
                     subVertices[j] = new float3(v.x, v.y, v.z);
                 }
 
-                var subMesh = new StaticPrimitiveMesh(subVertices, subIndices, Allocator.Temp);
-                var color = new Color(0, 0, 0);
+                var subMesh = new StaticPrimitiveMesh(subVertices, subIndices, Allocator.Persistent);
+                await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
-                colorMesh.AddAndDispose(subMesh, color);
+                colorMesh.AddAndDispose(subMesh, Color.black);
             }
 
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             subIndices.Dispose();
+
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             subVertices.Dispose();
 
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             vertices.Dispose();
+
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             triangles.Dispose();
+
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             colorMesh.FillAndDispose(mesh);
-            pShape.Dispose();
+
+            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
         }
 
         private Vector3 RotateByMatrix(Vector3 vertex, Matrix4x4 rotationMatrix)
@@ -124,7 +197,7 @@ namespace Synesthesias.Snap.Runtime
 
         public Vector2[] GetHullVertices2d(IReadOnlyList<Vector3> hullVertices)
         {
-            var results = hullVertices.Select(hullVertex => 
+            var results = hullVertices.Select(hullVertex =>
             {
                 return new Vector2(hullVertex.x, hullVertex.y);
             }).ToArray();
@@ -146,8 +219,8 @@ namespace Synesthesias.Snap.Runtime
         {
             // verticesの法線ベクトル
             var normal = NormalVectorFrom3d(vertices);
-            var normalXY = new Vector3(0,1,0);
-            var normalXZ = new Vector3(0,0,-1);
+            var normalXY = new Vector3(0, 1, 0);
+            var normalXZ = new Vector3(0, 0, -1);
             // normalをXZ平面に投影
             var fromNormal = Vector3.ProjectOnPlane(normal, normalXY);
             // もう一方のベクトルをnormalXZに設定
@@ -211,7 +284,7 @@ namespace Synesthesias.Snap.Runtime
         {
             var meshNormal = mesh.normals[0];
             var cameraNormal = camera.transform.forward;
-            var normalXY = new Vector3(0,1,0);
+            var normalXY = new Vector3(0, 1, 0);
 
             // meshNormalとcameraNormalをXZ平面に投影
             var fromNormal = Vector3.ProjectOnPlane(meshNormal, normalXY);
@@ -232,6 +305,7 @@ namespace Synesthesias.Snap.Runtime
                 triangles[i] = triangles[i + 1];
                 triangles[i + 1] = temp;
             }
+
             mesh.triangles = triangles;
 
             Vector3[] normals = mesh.normals;
@@ -239,6 +313,7 @@ namespace Synesthesias.Snap.Runtime
             {
                 normals[i] = -normals[i];
             }
+
             mesh.normals = normals;
             mesh.RecalculateBounds();
 
@@ -279,19 +354,61 @@ namespace Synesthesias.Snap.Runtime
         }
 
         //頂点の重複を検知する関数
-        private bool IsOverlappingVertices(Shape vertices2d)
+        private async UniTask<bool> IsOverlappingVerticesAsync(
+            Shape vertices2d,
+            CancellationToken cancellationToken)
         {
             var hashset = new HashSet<Vector2>();
             var overlap = false;
 
             if (vertices2d.holes == null)
             {
-                overlap = vertices2d.hull.ToList().Any(vertex => !hashset.Add(vertex));
+                foreach (var vertex in vertices2d.hull)
+                {
+                    // 処理負荷を軽減するために1フレーム待機
+                    await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+                    if (hashset.Add(vertex))
+                    {
+                        continue;
+                    }
+
+                    overlap = true;
+                    break;
+                }
             }
             else
             {
-                overlap = vertices2d.holes.ToList().SelectMany(vertex => vertex).Any(vertex => !hashset.Add(vertex))
-                          || vertices2d.hull.ToList().Any(vertex => !hashset.Add(vertex));
+                foreach (var hole in vertices2d.holes)
+                {
+                    foreach (var vertex in hole)
+                    {
+                        // 処理負荷を軽減するために1フレーム待機
+                        await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+                        if (hashset.Add(vertex))
+                        {
+                            continue;
+                        }
+
+                        overlap = true;
+                        break;
+                    }
+                }
+
+                foreach (var vertex in vertices2d.hull)
+                {
+                    // 処理負荷を軽減するために1フレーム待機
+                    await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+
+                    if (hashset.Add(vertex))
+                    {
+                        continue;
+                    }
+
+                    overlap = true;
+                    break;
+                }
             }
 
             return overlap;

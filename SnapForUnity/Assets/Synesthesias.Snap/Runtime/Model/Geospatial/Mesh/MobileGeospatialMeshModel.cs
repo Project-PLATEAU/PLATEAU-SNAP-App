@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using Google.XR.ARCoreExtensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +15,7 @@ namespace Synesthesias.Snap.Runtime
     public class MobileGeospatialMeshModel : IDisposable, IGeospatialMeshModel
     {
         private readonly List<GeospatialAnchorResult> anchorResults = new();
-        private readonly ITriangulationModel mobileTriangulationModel;
+        private readonly ITriangulationModel triangulationModel;
         private readonly GeospatialAccuracyModel accuracyModel;
         private readonly GeospatialAnchorModel geospatialAnchorModel;
 
@@ -24,11 +23,11 @@ namespace Synesthesias.Snap.Runtime
         /// コンストラクタ
         /// </summary>
         public MobileGeospatialMeshModel(
-            ITriangulationModel mobileTriangulationModel,
+            ITriangulationModel triangulationModel,
             GeospatialAccuracyModel accuracyModel,
             GeospatialAnchorModel geospatialAnchorModel)
         {
-            this.mobileTriangulationModel = mobileTriangulationModel;
+            this.triangulationModel = triangulationModel;
             this.accuracyModel = accuracyModel;
             this.geospatialAnchorModel = geospatialAnchorModel;
         }
@@ -38,12 +37,7 @@ namespace Synesthesias.Snap.Runtime
         /// </summary>
         public void Dispose()
         {
-            foreach (var anchorResult in anchorResults)
-            {
-                UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
-            }
-
-            anchorResults.Clear();
+            ClearAnchors(anchorResults);
         }
 
         /// <summary>
@@ -74,21 +68,26 @@ namespace Synesthesias.Snap.Runtime
                     resultType: GeospatialMeshResultType.EmptyCoordinate);
             }
 
-            if (!TryGetVertexAnchors(
+            if (!TryGetAnchorResults(
                     coordinates: coordinates[0], // Hullのみ対応(Holeは無視)
                     eunRotation: eunRotation,
-                    results: out var vertexAnchors))
+                    results: out var results))
             {
+                ClearAnchors(results);
+
                 return new GeospatialMeshResult(
                     mainLoopState: accuracyResult.MainLoopState,
                     accuracyState: accuracyResult.AccuracyState,
                     resultType: GeospatialMeshResultType.AnchorCreationFailed);
             }
 
+            anchorResults.AddRange(results);
+
             await UniTask.WaitUntil(
                 () =>
                 {
-                    foreach (var vertexAnchor in vertexAnchors)
+                    foreach (var vertexAnchor in results
+                                 .Select(result => result.Anchor))
                     {
                         if (vertexAnchor.trackingState != TrackingState.Tracking)
                         {
@@ -105,50 +104,40 @@ namespace Synesthesias.Snap.Runtime
                 },
                 cancellationToken: cancellationToken);
 
-            var originAnchor = vertexAnchors[0];
+            var originAnchor = results[0].Anchor;
             var originVertex = originAnchor.transform.position;
-            var cameraPosition = camera.transform.position - originVertex;
 
-            var vertices = vertexAnchors
-                .Select(anchor => anchor.transform.position - originVertex)
+            var vertices = results
+                .Select(result => result.Anchor.transform.position - originVertex)
                 .ToArray();
 
-            foreach (var anchorResult in anchorResults.Skip(1)
-                         .Where(anchorResult => anchorResult.Anchor)
-                         .ToArray())
+            // Verticesを取得したので原点以外のアンカーを削除
+            for (var anchorIndex = 1; anchorIndex < results.Count; anchorIndex++)
             {
-                UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
+                var anchorResult = results[anchorIndex];
+                if (anchorResult.Anchor.gameObject)
+                {
+                    UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
+                }
+
+                results.Remove(anchorResult);
                 anchorResults.Remove(anchorResult);
             }
 
-            // if (!simpleMeshModel.TryCreateFanTriangles(
-            //         cameraPosition: cameraPosition,
-            //         vertices: vertices,
-            //         results: out var triangles))
-            // {
-            //     return new GeospatialMeshResult(
-            //         mainLoopState: accuracyResult.MainLoopState,
-            //         accuracyState: accuracyResult.AccuracyState,
-            //         resultType: GeospatialMeshResultType.InsufficientVertices);
-            // }
-
-            // var mesh = meshModel.CreateMesh(
-            //     surface: surface,
-            //     parent: originAnchor.transform,
-            //     eunRotation: Quaternion.identity
-            // );
-
-            var mesh = mobileTriangulationModel.GetMesh(
+            var mesh = await triangulationModel.CreateMeshAsync(
                 camera: camera,
                 hullVertices: vertices,
-                holesVertices: null);
+                holesVertices: null,
+                cancellationToken: cancellationToken);
 
-            return new GeospatialMeshResult(
+            var result = new GeospatialMeshResult(
                 mainLoopState: accuracyResult.MainLoopState,
                 accuracyState: accuracyResult.AccuracyState,
                 resultType: GeospatialMeshResultType.Success,
                 anchorTransform: originAnchor.transform,
                 mesh: mesh);
+
+            return result;
         }
 
         private bool IsValidPosition(Vector3 position)
@@ -158,12 +147,12 @@ namespace Synesthesias.Snap.Runtime
                    !float.IsInfinity(position.x) && !float.IsInfinity(position.y) && !float.IsInfinity(position.z);
         }
 
-        private bool TryGetVertexAnchors(
+        private bool TryGetAnchorResults(
             List<List<double>> coordinates,
             Quaternion eunRotation,
-            out ARGeospatialAnchor[] results)
+            out List<GeospatialAnchorResult> results)
         {
-            var isAnchorCreationFailed = false;
+            results = new List<GeospatialAnchorResult>();
 
             foreach (var coordinate in coordinates)
             {
@@ -175,32 +164,20 @@ namespace Synesthesias.Snap.Runtime
                     altitude: geospatialVector.Altitude,
                     eunRotation: eunRotation);
 
-                anchorResults.Add(anchorResult);
+                results.Add(anchorResult);
 
-                if (anchorResult.ResultType == GeospatialAnchorResultType.Success)
+                if (anchorResult.IsSuccess)
                 {
                     continue;
                 }
 
-                isAnchorCreationFailed = true;
-                break;
-            }
-
-            if (isAnchorCreationFailed)
-            {
-                ClearAnchors();
-                results = Array.Empty<ARGeospatialAnchor>();
                 return false;
             }
-
-            results = anchorResults
-                .Select(anchorResult => anchorResult.Anchor)
-                .ToArray();
 
             return true;
         }
 
-        private void ClearAnchors()
+        private static void ClearAnchors(List<GeospatialAnchorResult> anchorResults)
         {
             foreach (var anchorResult in anchorResults
                          .Where(anchorResult => anchorResult.Anchor.gameObject))

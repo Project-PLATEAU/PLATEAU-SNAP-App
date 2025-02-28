@@ -12,11 +12,17 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// 三角形の配列を取得する
         /// </summary>
-        public int[] GetTriangles(Vector3[] hullVertices);
+        UniTask<int[]> GetTriangles(
+            Vector3[] hullVertices,
+            CancellationToken cancellationToken);
 
         /// <summary>
         /// メッシュを取得する
         /// </summary>
-        public Mesh GetMesh(Camera camera, Vector3[] hullVertices, Vector3[][] holesVertices);
+        UniTask<Mesh> CreateMeshAsync(
+            Camera camera,
+            Vector3[] hullVertices,
+            Vector3[][] holesVertices,
+            CancellationToken cancellationToken);
     }
 }

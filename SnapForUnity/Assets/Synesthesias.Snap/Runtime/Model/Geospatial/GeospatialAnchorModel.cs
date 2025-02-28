@@ -50,18 +50,20 @@ namespace Synesthesias.Snap.Runtime
                     altitude: altitude,
                     eunRotation: eunRotation);
 
-                return new GeospatialAnchorResult(
+                var result = new GeospatialAnchorResult(
                     mainLoopState: accuracyResult.MainLoopState,
                     accuracyState: accuracyResult.AccuracyState,
-                    GeospatialAnchorResultType.Success,
-                    geospatialAnchor);
+                    resultType: GeospatialAnchorResultType.Success,
+                    anchor: geospatialAnchor);
+
+                return result;
             }
             catch
             {
                 return new GeospatialAnchorResult(
                     mainLoopState: accuracyResult.MainLoopState,
                     accuracyState: accuracyResult.AccuracyState,
-                    GeospatialAnchorResultType.Failed);
+                    resultType: GeospatialAnchorResultType.Failed);
             }
         }
     }

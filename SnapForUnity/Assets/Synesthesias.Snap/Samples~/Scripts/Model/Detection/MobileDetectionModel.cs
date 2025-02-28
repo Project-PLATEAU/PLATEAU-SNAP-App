@@ -26,7 +26,7 @@ namespace Synesthesias.Snap.Sample
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionSettingModel settingModel;
         private readonly GeospatialAccuracyModel geospatialAccuracyModel;
-        private readonly MeshValidationModel validationModel;
+        private readonly IMeshValidationModel validationModel;
         private readonly GeospatialPoseModel geospatialPoseModel;
         private readonly IGeospatialMathModel geospatialMathModel;
         private readonly MobileDetectionMeshModel detectionMeshModel;
@@ -60,7 +60,7 @@ namespace Synesthesias.Snap.Sample
             DetectionMenuModel menuModel,
             DetectionSettingModel settingModel,
             GeospatialAccuracyModel geospatialAccuracyModel,
-            MeshValidationModel validationModel,
+            IMeshValidationModel validationModel,
             GeospatialPoseModel geospatialPoseModel,
             IGeospatialMathModel geospatialMathModel,
             MobileDetectionMeshModel detectionMeshModel,
@@ -349,14 +349,12 @@ namespace Synesthesias.Snap.Sample
                 fromGeospatialPose.EunRotation.eulerAngles.y, Vector3.up);
 
             await UniTask.WhenAll(surfaces
-                .Select(async surface =>
-                {
-                    await OnSurfaceAsync(
-                        camera: camera,
-                        surface: surface,
-                        eunRotation: eunRotation,
-                        cancellationToken: cancellationToken);
-                }).ToArray());
+                .Select(surface => OnSurfaceAsync(
+                    camera: camera,
+                    surface: surface,
+                    eunRotation: eunRotation,
+                    cancellationToken: cancellationToken)
+                ).ToArray());
         }
 
         private async UniTask OnSurfaceAsync(

@@ -90,7 +90,6 @@ namespace Synesthesias.Snap.Runtime
         {
             // 座標の数だけPoseを作成
             var poses = coordinates
-                .Skip(1)
                 .Select(coordinate =>
                 {
                     var pose = CreatePose(coordinate, eunRotation);

@@ -13,19 +13,18 @@ namespace Synesthesias.Snap.Runtime
     public class EditorGeospatialMeshModel : IGeospatialMeshModel
     {
         private readonly IGeospatialMathModel geospatialMathModel;
-        private readonly ITriangulationModel editorTriangulationModel;
+        private readonly ITriangulationModel triangulationModel;
         private readonly GeospatialMainLoopState mainLoopState = new();
-        
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public EditorGeospatialMeshModel(
             IGeospatialMathModel geospatialMathModel,
-            ITriangulationModel editorTriangulation)
+            ITriangulationModel triangulationModel)
         {
             this.geospatialMathModel = geospatialMathModel;
-            this.editorTriangulationModel = editorTriangulation;
+            this.triangulationModel = triangulationModel;
             mainLoopState.SetStateType(GeospatialMainLoopStateType.Ready);
         }
 
@@ -85,10 +84,11 @@ namespace Synesthesias.Snap.Runtime
             var anchorObject = new GameObject(
                 name: "EditorAnchor") { transform = { position = Vector3.zero } };
 
-            var mesh = editorTriangulationModel.GetMesh(
+            var mesh = await triangulationModel.CreateMeshAsync(
                 camera: camera,
                 hullVertices: hullVertices, 
-                holesVertices: holesVertices);
+                holesVertices: holesVertices,
+                cancellationToken: cancellationToken);
 
             return new GeospatialMeshResult(
                 mainLoopState: mainLoopState,
@@ -105,7 +105,6 @@ namespace Synesthesias.Snap.Runtime
         {
             // 座標の数だけPoseを作成
             var poses = coordinates
-                .Skip(1)
                 .Select(coordinate =>
                 {
                     var pose = CreatePose(coordinate, eunRotation);
@@ -118,7 +117,6 @@ namespace Synesthesias.Snap.Runtime
 
             var results = new[] { Vector3.zero }
                 .Concat(vertices)
-                .SkipLast(1) //Vector3.zeroが2個ある時にメッシュ生成できないため
                 .ToArray();
 
             return results;

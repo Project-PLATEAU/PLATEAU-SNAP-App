@@ -132,8 +132,9 @@ namespace Synesthesias.Snap.Sample
         {
             builder.RegisterInstance(MeshValidationAngleThresholdModel.Default);
 
-            builder.Register<MeshValidationModel>(Lifetime.Singleton)
-                .WithParameter("camera", validationCamera);
+            builder.Register<MobileMeshValidationModel>(Lifetime.Singleton)
+                .WithParameter("camera", validationCamera)
+                .AsImplementedInterfaces();
 
             builder.Register<MockValidationResultModel>(Lifetime.Singleton);
         }

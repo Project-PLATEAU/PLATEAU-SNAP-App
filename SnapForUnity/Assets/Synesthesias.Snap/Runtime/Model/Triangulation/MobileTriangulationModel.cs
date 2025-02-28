@@ -1,13 +1,7 @@
-using System.Collections.Generic;
-using iShape.Geometry;
-using iShape.Geometry.Container;
-using Unity.Collections;
-using iShape.Mesh2d;
-using iShape.Triangulation.Shape.Delaunay;
-using System;
-using Unity.Mathematics;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using System.Linq;
+using System.Threading;
 
 namespace Synesthesias.Snap.Runtime
 {
@@ -27,11 +21,10 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// 三角形の配列を作成する(hullのみ)
         /// </summary>
-        public int[] GetTriangles(Vector3[] hullVertices)
+        public async UniTask<int[]> GetTriangles(
+            Vector3[] hullVertices,
+            CancellationToken cancellationToken)
         {
-            var mesh = new Mesh();
-            mesh.MarkDynamic();
-
             // メッシュを生成する用の頂点座標を設定
             var rotationAxisY = shapeModel.GetRotationAxisY(hullVertices);
             var rotatedHullVertices = shapeModel.GetRotatedVertices(hullVertices, rotationAxisY);
@@ -43,7 +36,9 @@ namespace Synesthesias.Snap.Runtime
                 holes = null// shapeModel.GetHolesVertices2d(rotatedHolesVertices.ToList())
             };
 
-            shapeModel.CreateShape(shapeData, mesh);
+            var mesh = new Mesh();
+            mesh.MarkDynamic();
+            await shapeModel.CreateShapeAsync(shapeData, mesh, cancellationToken);
 
             return mesh.triangles;
         }
@@ -51,18 +46,15 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// メッシュを取得する(一旦holesを無視)
         /// </summary>
-        public Mesh GetMesh(
+        public async UniTask<Mesh> CreateMeshAsync(
             Camera camera,
             Vector3[] hullVertices, 
-            Vector3[][] holesVertices)
+            Vector3[][] holesVertices,
+            CancellationToken cancellationToken)
         {
-            var mesh = new Mesh();
-            mesh.MarkDynamic();
-
             // メッシュを生成する用の頂点座標を設定
             var rotationAxisY = shapeModel.GetRotationAxisY(hullVertices);
             var rotatedHullVertices = shapeModel.GetRotatedVertices(hullVertices, rotationAxisY);
-            // var rotatedHolesVertices = holesVertices.Select(vertices => shapeModel.GetRotatedVertices(vertices, rotationAxisY));
 
             // メッシュ生成用に2次元座標に変換
             Shape shapeData = new Shape
@@ -71,23 +63,19 @@ namespace Synesthesias.Snap.Runtime
                 holes = null // shapeModel.GetHolesVertices2d(rotatedHolesVertices.ToList())
             };
 
+            var mesh = new Mesh();
+            mesh.MarkDynamic();
+
             // メッシュを生成する(meshにデータが入る)
-            shapeModel.CreateShape(shapeData, mesh);
+            await shapeModel.CreateShapeAsync(shapeData, mesh, cancellationToken);
 
             // verticesに渡す頂点を作成
-            var invertRotaionMatrix = shapeModel.GetInvertRotationMatrix(rotationAxisY);
-            var restoredVertices = shapeModel.GetRestoredVertices(mesh.vertices.ToList(), invertRotaionMatrix);
+            var invertRotationMatrix = shapeModel.GetInvertRotationMatrix(rotationAxisY);
+            var restoredVertices = shapeModel.GetRestoredVertices(mesh.vertices.ToList(), invertRotationMatrix);
 
             mesh.vertices = restoredVertices.ToArray();
             mesh.RecalculateNormals();
             mesh.RecalculateBounds();
-
-            // メッシュがカメラと向かい合うように表裏を反転
-            if (!shapeModel.IsFacingCamera(mesh, camera))
-            {
-                mesh = shapeModel.GetInvertMesh(mesh);
-            }
-
             return mesh;
         }
     }

@@ -38,12 +38,7 @@ namespace Synesthesias.Snap.Runtime
         /// </summary>
         public void Dispose()
         {
-            foreach (var anchorResult in anchorResults)
-            {
-                UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
-            }
-
-            anchorResults.Clear();
+            ClearAnchors(anchorResults);
         }
 
         /// <summary>
@@ -74,21 +69,26 @@ namespace Synesthesias.Snap.Runtime
                     resultType: GeospatialMeshResultType.EmptyCoordinate);
             }
 
-            if (!TryGetVertexAnchors(
+            if (!TryGetAnchorResults(
                     coordinates: coordinates[0], // Hullのみ対応(Holeは無視)
                     eunRotation: eunRotation,
-                    results: out var vertexAnchors))
+                    results: out var anchorResults))
             {
+                ClearAnchors(anchorResults);
+
                 return new GeospatialMeshResult(
                     mainLoopState: accuracyResult.MainLoopState,
                     accuracyState: accuracyResult.AccuracyState,
                     resultType: GeospatialMeshResultType.AnchorCreationFailed);
             }
 
+            this.anchorResults.AddRange(anchorResults);
+
             await UniTask.WaitUntil(
                 () =>
                 {
-                    foreach (var vertexAnchor in vertexAnchors)
+                    foreach (var vertexAnchor in anchorResults
+                                 .Select(result => result.Anchor))
                     {
                         if (vertexAnchor.trackingState != TrackingState.Tracking)
                         {
@@ -105,21 +105,15 @@ namespace Synesthesias.Snap.Runtime
                 },
                 cancellationToken: cancellationToken);
 
-            var originAnchor = vertexAnchors[0];
+            var originAnchor = anchorResults[0].Anchor;
             var originVertex = originAnchor.transform.position;
             var cameraPosition = camera.transform.position - originVertex;
 
-            var vertices = vertexAnchors
-                .Select(anchor => anchor.transform.position - originVertex)
+            var vertices = anchorResults
+                .Select(result => result.Anchor.transform.position - originVertex)
                 .ToArray();
 
-            foreach (var anchorResult in anchorResults.Skip(1)
-                         .Where(anchorResult => anchorResult.Anchor)
-                         .ToArray())
-            {
-                UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
-                anchorResults.Remove(anchorResult);
-            }
+            ClearAnchors(anchorResults);
 
             if (!simpleMeshModel.TryCreateFanTriangles(
                     cameraPosition: cameraPosition,
@@ -149,12 +143,12 @@ namespace Synesthesias.Snap.Runtime
                    !float.IsInfinity(position.x) && !float.IsInfinity(position.y) && !float.IsInfinity(position.z);
         }
 
-        private bool TryGetVertexAnchors(
+        private bool TryGetAnchorResults(
             List<List<double>> coordinates,
             Quaternion eunRotation,
-            out ARGeospatialAnchor[] results)
+            out List<GeospatialAnchorResult> results)
         {
-            var isAnchorCreationFailed = false;
+            results = new List<GeospatialAnchorResult>();
 
             foreach (var coordinate in coordinates)
             {
@@ -166,32 +160,18 @@ namespace Synesthesias.Snap.Runtime
                     altitude: geospatialVector.Altitude,
                     eunRotation: eunRotation);
 
-                anchorResults.Add(anchorResult);
+                results.Add(anchorResult);
 
-                if (anchorResult.ResultType == GeospatialAnchorResultType.Success)
+                if (!anchorResult.IsSuccess)
                 {
-                    continue;
+                    return false;
                 }
-
-                isAnchorCreationFailed = true;
-                break;
             }
-
-            if (isAnchorCreationFailed)
-            {
-                ClearAnchors();
-                results = Array.Empty<ARGeospatialAnchor>();
-                return false;
-            }
-
-            results = anchorResults
-                .Select(anchorResult => anchorResult.Anchor)
-                .ToArray();
 
             return true;
         }
 
-        private void ClearAnchors()
+        private static void ClearAnchors(List<GeospatialAnchorResult> anchorResults)
         {
             foreach (var anchorResult in anchorResults
                          .Where(anchorResult => anchorResult.Anchor.gameObject))

@@ -2,6 +2,8 @@
     "name": "Synesthesias.Snap",
     "rootNamespace": "",
     "references": [
+        "Unity.Collections",
+        "Unity.Mathematics",
         "Unity.XR.ARFoundation",
         "Unity.XR.ARSubsystems",
         "Unity.XR.CoreUtils",
@@ -10,8 +12,7 @@
         "R3.Unity",
         "iShape.Mesh2d",
         "iShape.Geometry",
-        "iShape.Triangulation",
-        "Unity.Mathematics"
+        "iShape.Triangulation"
     ],
     "includePlatforms": [
         "Android",

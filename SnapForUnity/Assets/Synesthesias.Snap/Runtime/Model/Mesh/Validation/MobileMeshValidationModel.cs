@@ -5,7 +5,7 @@ namespace Synesthesias.Snap.Runtime
     /// <summary>
     /// メッシュの検証
     /// </summary>
-    public class MeshValidationModel
+    public class MobileMeshValidationModel : IMeshValidationModel
     {
         private readonly GeospatialAccuracyModel accuracyModel;
         private readonly Camera camera;
@@ -14,7 +14,7 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public MeshValidationModel(
+        public MobileMeshValidationModel(
             GeospatialAccuracyModel accuracyModel,
             Camera camera,
             MeshValidationAngleThresholdModel angleThresholdModel)
@@ -60,7 +60,7 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// メッシュの角度の検証結果の種類
         /// </summary>
-        private MeshValidationAngleResultType GetMeshValidationAngleResultType(
+        public MeshValidationAngleResultType GetMeshValidationAngleResultType(
             Transform meshTransform,
             Mesh mesh)
         {
@@ -81,7 +81,7 @@ namespace Synesthesias.Snap.Runtime
         /// <summary>
         /// メッシュの頂点の検証結果の種類を取得
         /// </summary>
-        private MeshValidationVertexResultType GetMeshValidationVertexResultType(
+        public MeshValidationVertexResultType GetMeshValidationVertexResultType(
             Transform meshTransform,
             Mesh mesh)
         {

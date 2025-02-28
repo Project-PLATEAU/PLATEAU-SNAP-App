@@ -23,7 +23,9 @@ namespace Synesthesias.Snap.Runtime
 
         public List<List<List<double>>> GetUniqueCoordinates()
             => Coordinates
-                .SkipLast(1)
+                .Select(coordinates => coordinates
+                    .SkipLast(1)
+                    .ToList())
                 .ToList();
     }
     public class MockJsonParser

@@ -25,7 +25,7 @@ namespace Synesthesias.Snap.Sample
         private readonly DetectionMenuModel menuModel;
         private readonly DetectionTouchModel touchModel;
         private readonly EditorDetectionMeshModel detectionMeshModel;
-        private readonly MeshValidationModel meshValidationModel;
+        private readonly IMeshValidationModel meshValidationModel;
         private readonly MockValidationResultModel resultModel;
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
 
@@ -50,7 +50,7 @@ namespace Synesthesias.Snap.Sample
             DetectionMenuModel menuModel,
             DetectionTouchModel touchModel,
             EditorDetectionMeshModel detectionMeshModel,
-            MeshValidationModel meshValidationModel,
+            IMeshValidationModel meshValidationModel,
             MockValidationResultModel resultModel)
         {
             this.textureRepository = textureRepository;
@@ -256,14 +256,12 @@ namespace Synesthesias.Snap.Sample
                 cancellationToken: token);
 
             await UniTask.WhenAll(surfaces
-                .Select(async surface =>
-                {
-                    await OnSurfaceAsync(
-                        camera: camera,
-                        surface: surface,
-                        eunRotation: Quaternion.identity,
-                        cancellationToken: cancellationToken);
-                }).ToArray());
+                .Select(surface => OnSurfaceAsync(
+                    camera: camera,
+                    surface: surface,
+                    eunRotation: Quaternion.identity,
+                    cancellationToken: cancellationToken))
+                .ToArray());
 
             // touchModel.SetDetectedMeshViews(meshes);
         }
