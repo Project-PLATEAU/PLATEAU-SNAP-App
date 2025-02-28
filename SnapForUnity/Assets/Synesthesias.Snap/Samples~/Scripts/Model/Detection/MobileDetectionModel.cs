@@ -348,13 +348,16 @@ namespace Synesthesias.Snap.Sample
             var eunRotation = Quaternion.AngleAxis(
                 fromGeospatialPose.EunRotation.eulerAngles.y, Vector3.up);
 
-            await UniTask.WhenAll(surfaces
-                .Select(surface => OnSurfaceAsync(
+            foreach (var surface in surfaces)
+            {
+                await UniTask.WaitForSeconds(1F, cancellationToken: cancellationToken);
+
+                await OnSurfaceAsync(
                     camera: camera,
                     surface: surface,
                     eunRotation: eunRotation,
-                    cancellationToken: cancellationToken)
-                ).ToArray());
+                    cancellationToken: cancellationToken);
+            }
         }
 
         private async UniTask OnSurfaceAsync(

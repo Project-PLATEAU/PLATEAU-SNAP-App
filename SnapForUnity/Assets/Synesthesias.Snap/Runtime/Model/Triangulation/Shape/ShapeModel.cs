@@ -54,7 +54,7 @@ namespace Synesthesias.Snap.Runtime
 
             var pShape = ToPlainShape(
                 iGeom: iGeom,
-                Allocator.Temp,
+                Allocator.Persistent,
                 hull: shapeData.hull,
                 holes: shapeData.holes);
 
@@ -82,7 +82,7 @@ namespace Synesthesias.Snap.Runtime
             var delaunay = pShape.Delaunay(
                 maxEdge: maxEdge,
                 extraPoints: extraPoints,
-                allocator: Allocator.Temp);
+                allocator: Allocator.Persistent);
 
             pShape.Dispose();
 
