@@ -26,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Synesthesias.Snap/Scenes/Detection/EditorDetectionScene.unity
     guid: 35d1e027ffb2b4b62832382994e17c4b
-  - enabled: 0
-    path: Assets/Samples/Synesthesias.Snap/Scenes/Detection/MobileSimpleDetectionScene.unity
-    guid: 845c585670b174186bcf5ccd60d3c9c2
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 90bd4ffd7f1764e3090eda9bc46bc38f, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 49e9ad0ba923d4a1ca8a31fe6ea8ed44, type: 2}

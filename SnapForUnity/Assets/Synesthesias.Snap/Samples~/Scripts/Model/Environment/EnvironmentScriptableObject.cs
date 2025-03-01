@@ -10,6 +10,7 @@ namespace Synesthesias.Snap.Sample
     {
         [SerializeField] private EnvironmentType environmentType;
         [SerializeField] private ApiConfigurationScriptableObject apiConfiguration;
+        [SerializeField] private DetectionMeshType detectionMeshType;
 
         /// <summary>
         /// 環境の種類
@@ -22,5 +23,11 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public IApiConfigurationModel ApiConfiguration
             => apiConfiguration;
+
+        /// <summary>
+        /// 建物検出画面のメッシュの種類
+        /// </summary>
+        public DetectionMeshType DetectionMeshType
+            => detectionMeshType;
     }
 }

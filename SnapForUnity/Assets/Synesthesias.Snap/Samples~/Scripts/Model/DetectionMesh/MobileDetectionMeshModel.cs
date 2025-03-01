@@ -47,7 +47,6 @@ namespace Synesthesias.Snap.Sample
             CancellationToken cancellationToken)
         {
             var meshResult = await mobileGeospatialMeshModel.CreateMeshAsync(
-                camera: camera,
                 surface: surface,
                 eunRotation: eunRotation,
                 cancellationToken: cancellationToken);

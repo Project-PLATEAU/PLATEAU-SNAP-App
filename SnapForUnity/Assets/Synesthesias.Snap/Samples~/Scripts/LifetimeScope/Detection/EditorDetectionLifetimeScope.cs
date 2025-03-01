@@ -1,5 +1,6 @@
 using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.Snap.Runtime;
+using System;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -21,6 +22,9 @@ namespace Synesthesias.Snap.Sample
         protected override void Configure(IContainerBuilder builder)
         {
             base.Configure(builder);
+
+            var environment = Parent.Container.Resolve<IEnvironmentModel>();
+
             ConfigureAPI(builder);
             ConfigureRepository(builder);
 
@@ -30,7 +34,7 @@ namespace Synesthesias.Snap.Sample
             ConfigureMenu(builder);
             ConfigureGeospatial(builder);
             ConfigureDetection(builder);
-            ConfigureDetectionMesh(builder);
+            ConfigureDetectionMesh(builder, environment);
             ConfigureValidation(builder);
         }
 
@@ -69,10 +73,6 @@ namespace Synesthesias.Snap.Sample
             builder.Register<EditorGeospatialMathModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
 
-            builder.Register<ShapeModel>(Lifetime.Singleton);
-            builder.Register<EditorTriangulationModel>(Lifetime.Singleton)
-                .AsImplementedInterfaces();
-
             builder.Register<EditorGeospatialMeshModel>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
         }
@@ -90,8 +90,33 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterEntryPoint<EditorDetectionPresenter>();
         }
 
-        private void ConfigureDetectionMesh(IContainerBuilder builder)
+        private void ConfigureDetectionMesh(
+            IContainerBuilder builder,
+            IEnvironmentModel environmentModel)
         {
+            builder.Register<VectorCalculatorModel>(Lifetime.Singleton);
+            builder.Register<ShapeValidatorModel>(Lifetime.Singleton);
+
+            switch (environmentModel.DetectionMeshType)
+            {
+                case DetectionMeshType.None:
+                    throw new InvalidOperationException(
+                        $"DetectionMeshTypeが未設定です: {environmentModel.DetectionMeshType}");
+                case DetectionMeshType.Simple:
+                    builder.Register<SimpleMeshFactoryModel>(Lifetime.Singleton)
+                        .AsImplementedInterfaces();
+                    break;
+                case DetectionMeshType.iShape:
+                    builder.Register<PlainShapeFactoryModel>(Lifetime.Singleton);
+
+                    builder.Register<ShapeMeshFactoryModel>(Lifetime.Singleton)
+                        .AsImplementedInterfaces();
+                    break;
+                default:
+                    throw new NotImplementedException(
+                        $"未実装のDetectionMeshTypeです: {environmentModel.DetectionMeshType}");
+            }
+
             builder.RegisterInstance(detectionMeshViewTemplate);
             builder.RegisterInstance(meshViewTemplate);
             builder.Register<EditorDetectionMeshModel>(Lifetime.Singleton);

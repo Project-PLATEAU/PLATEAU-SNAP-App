@@ -172,7 +172,7 @@ namespace Synesthesias.Snap.Sample
         private string GetPreviousSceneName()
         {
             var result = platformModel.IsSupportedMobileDevice()
-                ? SceneNameDefine.MobileSimpleDetection
+                ? SceneNameDefine.MobileDetection
                 : SceneNameDefine.EditorDetection;
 
             return result;

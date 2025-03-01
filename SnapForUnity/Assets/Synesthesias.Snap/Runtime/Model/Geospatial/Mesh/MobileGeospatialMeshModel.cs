@@ -15,7 +15,7 @@ namespace Synesthesias.Snap.Runtime
     public class MobileGeospatialMeshModel : IDisposable, IGeospatialMeshModel
     {
         private readonly List<GeospatialAnchorResult> anchorResults = new();
-        private readonly ITriangulationModel triangulationModel;
+        private readonly IMeshFactoryModel meshFactoryModel;
         private readonly GeospatialAccuracyModel accuracyModel;
         private readonly GeospatialAnchorModel geospatialAnchorModel;
 
@@ -23,11 +23,11 @@ namespace Synesthesias.Snap.Runtime
         /// コンストラクタ
         /// </summary>
         public MobileGeospatialMeshModel(
-            ITriangulationModel triangulationModel,
+            IMeshFactoryModel meshFactoryModel,
             GeospatialAccuracyModel accuracyModel,
             GeospatialAnchorModel geospatialAnchorModel)
         {
-            this.triangulationModel = triangulationModel;
+            this.meshFactoryModel = meshFactoryModel;
             this.accuracyModel = accuracyModel;
             this.geospatialAnchorModel = geospatialAnchorModel;
         }
@@ -44,7 +44,6 @@ namespace Synesthesias.Snap.Runtime
         /// メッシュの生成
         /// </summary>
         public async UniTask<GeospatialMeshResult> CreateMeshAsync(
-            Camera camera,
             ISurfaceModel surface,
             Quaternion eunRotation,
             CancellationToken cancellationToken)
@@ -124,10 +123,9 @@ namespace Synesthesias.Snap.Runtime
                 anchorResults.Remove(anchorResult);
             }
 
-            var mesh = await triangulationModel.CreateMeshAsync(
-                camera: camera,
-                hullVertices: vertices,
-                holesVertices: null,
+            var mesh = await meshFactoryModel.CreateAsync(
+                hull: vertices,
+                holes: null,
                 cancellationToken: cancellationToken);
 
             var result = new GeospatialMeshResult(

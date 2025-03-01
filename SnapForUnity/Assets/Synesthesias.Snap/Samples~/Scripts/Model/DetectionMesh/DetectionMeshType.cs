@@ -1,9 +1,9 @@
 namespace Synesthesias.Snap.Sample
 {
     /// <summary>
-    /// 環境の種類
+    /// 建物の検出のメッシュの種類
     /// </summary>
-    public enum EnvironmentType
+    public enum DetectionMeshType
     {
         /// <summary>
         /// 未設定
@@ -11,13 +11,13 @@ namespace Synesthesias.Snap.Sample
         None,
 
         /// <summary>
-        /// 開発
+        /// 簡易なMeshを使用
         /// </summary>
-        Development,
+        Simple,
 
         /// <summary>
-        /// リリース
+        /// Unity.iShapeを使用
         /// </summary>
-        Release,
+        iShape,
     }
 }

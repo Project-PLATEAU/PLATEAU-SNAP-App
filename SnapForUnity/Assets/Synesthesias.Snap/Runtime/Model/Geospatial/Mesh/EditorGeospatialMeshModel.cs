@@ -13,7 +13,7 @@ namespace Synesthesias.Snap.Runtime
     public class EditorGeospatialMeshModel : IGeospatialMeshModel
     {
         private readonly IGeospatialMathModel geospatialMathModel;
-        private readonly ITriangulationModel triangulationModel;
+        private readonly IMeshFactoryModel meshFactoryModel;
         private readonly GeospatialMainLoopState mainLoopState = new();
 
         /// <summary>
@@ -21,10 +21,10 @@ namespace Synesthesias.Snap.Runtime
         /// </summary>
         public EditorGeospatialMeshModel(
             IGeospatialMathModel geospatialMathModel,
-            ITriangulationModel triangulationModel)
+            IMeshFactoryModel meshFactoryModel)
         {
             this.geospatialMathModel = geospatialMathModel;
-            this.triangulationModel = triangulationModel;
+            this.meshFactoryModel = meshFactoryModel;
             mainLoopState.SetStateType(GeospatialMainLoopStateType.Ready);
         }
 
@@ -32,7 +32,6 @@ namespace Synesthesias.Snap.Runtime
         /// メッシュの生成
         /// </summary>
         public async UniTask<GeospatialMeshResult> CreateMeshAsync(
-            Camera camera,
             ISurfaceModel surface,
             Quaternion eunRotation,
             CancellationToken cancellationToken)
@@ -58,7 +57,7 @@ namespace Synesthesias.Snap.Runtime
                 originPosition: originPose.position,
                 coordinates: hullCoordinates,
                 eunRotation: eunRotation);
-            
+
             var holesVertices = holesCoordinates.Select(
                 coordinates => CreateVertices(
                     originPosition: originPose.position,
@@ -66,28 +65,12 @@ namespace Synesthesias.Snap.Runtime
                     eunRotation: eunRotation
                 )).ToArray();
 
-            // if (!meshModel.TryCreateFanTriangles(
-            //         cameraPosition: camera.transform.position,
-            //         vertices: vertices,
-            //         results: out var triangles))
-            // {
-            //     return new GeospatialMeshResult(
-            //         mainLoopState: mainLoopState,
-            //         accuracyState: GeospatialAccuracyState.HighAccuracy,
-            //         resultType: GeospatialMeshResultType.InsufficientVertices);
-            // }
-
-            // var triangles = editorTriangulationModel.GetTriangles(hullVertices);
-
-            // var anchorObject = new GameObject(
-            //     name: "EditorAnchor") { transform = { position = originPose.position } };
             var anchorObject = new GameObject(
                 name: "EditorAnchor") { transform = { position = Vector3.zero } };
 
-            var mesh = await triangulationModel.CreateMeshAsync(
-                camera: camera,
-                hullVertices: hullVertices, 
-                holesVertices: holesVertices,
+            var mesh = await meshFactoryModel.CreateAsync(
+                hull: hullVertices,
+                holes: holesVertices,
                 cancellationToken: cancellationToken);
 
             return new GeospatialMeshResult(

@@ -14,5 +14,10 @@ namespace Synesthesias.Snap.Sample
         /// APIの設定Model
         /// </summary>
         IApiConfigurationModel ApiConfiguration { get; }
+
+        /// <summary>
+        /// 建物検出画面のメッシュの種類
+        /// </summary>
+        DetectionMeshType DetectionMeshType { get; }
     }
 }

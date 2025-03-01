@@ -13,7 +13,6 @@ namespace Synesthesias.Snap.Runtime
         /// Meshを作成する
         /// </summary>
         UniTask<GeospatialMeshResult> CreateMeshAsync(
-            Camera camera,
             ISurfaceModel surface,
             Quaternion eunRotation,
             CancellationToken cancellationToken);
