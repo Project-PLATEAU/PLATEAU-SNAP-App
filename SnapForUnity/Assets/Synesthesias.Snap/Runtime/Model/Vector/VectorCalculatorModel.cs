@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -58,11 +59,23 @@ namespace Synesthesias.Snap.Runtime
 
         public Vector2[][] GetHolesVertices2d(Vector3[][] holesVertices)
         {
+            if (holesVertices == null || holesVertices.Length == 0)
+            {
+                return Array.Empty<Vector2[]>();
+            }
+
             var results = holesVertices
-                .Select(holeVertices => holeVertices
-                    .Select(vertex => new Vector2(vertex.x, vertex.y))
-                    .ToArray()
-                ).ToArray();
+                .Select(holeVertices =>
+                {
+                    if (holeVertices == null || holeVertices.Length == 0)
+                    {
+                        return Array.Empty<Vector2>();
+                    }
+
+                    return holeVertices
+                        .Select(vertex => new Vector2(vertex.x, vertex.y))
+                        .ToArray();
+                }).ToArray();
 
             return results;
         }

@@ -2,7 +2,6 @@ using Cysharp.Threading.Tasks;
 using R3;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using UnityEngine;
 using Synesthesias.Snap.Runtime;
@@ -16,7 +15,8 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly CompositeDisposable disposable = new();
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
-        private readonly ReactiveProperty<bool> isManualDetectionProperty = new(true);
+        private readonly ReactiveProperty<bool> isManualDetectionProperty;
+        private readonly IEnvironmentModel environmentModel;
         private readonly ValidationRepository validationRepository;
         private readonly SurfaceRepository surfaceRepository;
         private readonly TextureRepository textureRepository;
@@ -52,6 +52,7 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public MobileDetectionModel(
+            IEnvironmentModel environmentModel,
             ValidationRepository validationRepository,
             SurfaceRepository surfaceRepository,
             TextureRepository textureRepository,
@@ -85,6 +86,10 @@ namespace Synesthesias.Snap.Sample
             this.detectionMeshModel = detectionMeshModel;
             this.touchModel = touchModel;
             this.resultModel = resultModel;
+
+            var isRelease = environmentModel.EnvironmentType == EnvironmentType.Release;
+            var isManualDetection = !isRelease;
+            isManualDetectionProperty = new ReactiveProperty<bool>(isManualDetection);
         }
 
         /// <summary>
