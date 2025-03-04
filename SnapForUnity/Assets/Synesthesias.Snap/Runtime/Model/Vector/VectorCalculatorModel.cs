@@ -84,6 +84,14 @@ namespace Synesthesias.Snap.Runtime
         {
             // verticesの法線ベクトル
             var normal = NormalVectorFrom3d(vertices);
+
+            var angle =  Vector3.Angle(normal,Vector3.up);
+
+            if (Math.Abs(angle) <= 2 || Math.Abs(angle) >= 178)
+            {
+                return float.NaN;
+            }
+
             var normalXY = new Vector3(0, 1, 0);
             var normalXZ = new Vector3(0, 0, -1);
             // normalをXZ平面に投影
@@ -175,6 +183,29 @@ namespace Synesthesias.Snap.Runtime
             }
 
             return normal.normalized;
+        }
+
+        // メッシュを反転
+        public Mesh GetInvertMesh(Mesh mesh)
+        {
+            int[] triangles = mesh.triangles;
+            for (int i = 0; i < triangles.Length; i += 3)
+            {
+                int temp = triangles[i];
+                triangles[i] = triangles[i + 1];
+                triangles[i + 1] = temp;
+            }
+            mesh.triangles = triangles;
+
+            Vector3[] normals = mesh.normals;
+            for (int i = 0; i < normals.Length; i++)
+            {
+                normals[i] = -normals[i];
+            }
+            mesh.normals = normals;
+            mesh.RecalculateBounds();
+
+            return mesh;
         }
     }
 }

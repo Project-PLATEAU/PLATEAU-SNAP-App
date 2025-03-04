@@ -46,6 +46,18 @@ namespace Synesthesias.Snap.Runtime
                 return null;
             }
 
+            var stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append("hull(3d):");
+
+            foreach (var v in hull)
+            {
+                stringBuilder.Append($"({v.x},{v.y},{v.z})");
+            }
+
+            Debug.Log(stringBuilder.ToString());
+
+            await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
+
             //頂点の重複がある時，クラッシュするのを防止する．
             if (await validatorModel.IsOverlappingVerticesAsync(
                     hull: hull,
@@ -65,12 +77,31 @@ namespace Synesthesias.Snap.Runtime
 
             // メッシュを生成する用の頂点座標を設定
             var rotationAxisY = calculatorModel.GetRotationAxisY(hull);
+
+            if (float.IsNaN(rotationAxisY))
+            {
+                Debug.LogWarning("生成できないメッシュです");
+                return null;
+            }
+
             var rotatedHullVertices = calculatorModel.GetRotatedVertices(hull, rotationAxisY);
             var iGeom = IntGeom.DefGeom;
             await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
 
             var vector2Hull = calculatorModel.GetHullVertices2d(rotatedHullVertices);
             var vector2Holes = calculatorModel.GetHolesVertices2d(holes);
+
+            stringBuilder.Clear();
+            stringBuilder.Append("hull(2D):");
+
+            foreach (var v in vector2Hull)
+            {
+                stringBuilder.Append($"({v.x},{v.y})");
+            }
+
+            Debug.Log(stringBuilder.ToString());
+
+            await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
 
             var pShape = plainShapeFactory.CreatePlainShape(
                 hull: vector2Hull,
@@ -186,6 +217,8 @@ namespace Synesthesias.Snap.Runtime
             mesh.vertices = restoredVertices;
             mesh.RecalculateBounds();
             mesh.RecalculateNormals();
+
+            mesh = calculatorModel.GetInvertMesh(mesh);
 
             return mesh;
         }

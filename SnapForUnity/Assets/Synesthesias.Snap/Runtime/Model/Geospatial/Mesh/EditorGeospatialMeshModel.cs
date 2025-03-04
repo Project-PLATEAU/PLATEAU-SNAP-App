@@ -98,8 +98,7 @@ namespace Synesthesias.Snap.Runtime
                 .Select(pose => pose.position - originPosition)
                 .ToArray();
 
-            var results = new[] { Vector3.zero }
-                .Concat(vertices)
+            var results = vertices
                 .ToArray();
 
             return results;

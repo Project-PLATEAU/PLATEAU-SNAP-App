@@ -61,6 +61,18 @@ namespace Synesthesias.Snap.Sample
                 Debug.Log("面の取得(キャッシュ): " + result.Count);
                 return result;
             }
+            
+            var stringBuild = new System.Text.StringBuilder();
+            stringBuild.Append($"fromLatitude: {fromLatitude}, ");
+            stringBuild.Append($"fromLongitude: {fromLongitude}, ");
+            stringBuild.Append($"fromAltitude: {fromAltitude}, ");
+            stringBuild.Append($"toLatitude: {toLatitude}, ");
+            stringBuild.Append($"toLongitude: {toLongitude}, ");
+            stringBuild.Append($"toAltitude: {toAltitude}, ");
+            stringBuild.Append($"roll: {roll}, ");
+            stringBuild.Append($"maxDistance: {maxDistance}, ");
+            stringBuild.Append($"fieldOfView: {fieldOfView}");
+            Debug.Log(stringBuild.ToString());
 
             var previousRequestedAt = requestedAt;
             requestedAt = DateTime.UtcNow;
