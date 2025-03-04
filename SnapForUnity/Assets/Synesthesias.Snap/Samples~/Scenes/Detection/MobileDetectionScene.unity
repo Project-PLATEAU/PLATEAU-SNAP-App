@@ -768,7 +768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3d6fbefaf54b7dbafcfef340bdc507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectedMaterial: {fileID: 2100000, guid: 3d9f65d76060e4ebda16e4a8c60986ec, type: 2}
+  detectedMaterial: {fileID: 2100000, guid: abaee060522424cd3b8bf4ee93ded0a7, type: 2}
+  selectableMaterial: {fileID: 2100000, guid: 3d9f65d76060e4ebda16e4a8c60986ec, type: 2}
   selectedMaterial: {fileID: 2100000, guid: dad49b04de1874cdd8b6f2b86d928f22, type: 2}
   touchView: {fileID: 1084631504}
   arCamera: {fileID: 1717950066}
@@ -1936,7 +1937,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 20
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5

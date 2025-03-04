@@ -51,9 +51,12 @@ namespace Synesthesias.Snap.Sample
         {
             builder.Register<SurfaceRepository>(Lifetime.Singleton);
 
-            builder.Register<MeshRepository>(Lifetime.Singleton)
+            builder.Register<DetectionMaterialModel>(Lifetime.Singleton)
                 .WithParameter("detectedMaterial", detectionView.DetectedMaterial)
+                .WithParameter("selectableMaterial", detectionView.SelectableMaterial)
                 .WithParameter("selectedMaterial", detectionView.SelectedMaterial);
+
+            builder.Register<MeshRepository>(Lifetime.Singleton);
         }
 
         private void ConfigureMenu(IContainerBuilder builder)

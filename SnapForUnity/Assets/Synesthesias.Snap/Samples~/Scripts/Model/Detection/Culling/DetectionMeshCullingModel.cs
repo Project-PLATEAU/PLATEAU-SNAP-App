@@ -2,7 +2,6 @@ using Cysharp.Threading.Tasks;
 using Synesthesias.Snap.Runtime;
 using System.Linq;
 using System.Threading;
-using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -12,6 +11,7 @@ namespace Synesthesias.Snap.Sample
     public class DetectionMeshCullingModel
     {
         private readonly MeshRepository meshRepository;
+        private readonly DetectionMaterialModel materialModel;
         private readonly IMeshValidationModel meshValidationModel;
 
         /// <summary>
@@ -19,9 +19,11 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public DetectionMeshCullingModel(
             MeshRepository meshRepository,
+            DetectionMaterialModel materialModel,
             IMeshValidationModel meshValidationModel)
         {
             this.meshRepository = meshRepository;
+            this.materialModel = materialModel;
             this.meshValidationModel = meshValidationModel;
         }
 
@@ -30,25 +32,27 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask CullingAsync(CancellationToken cancellationToken)
         {
-            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
-
             var meshes = meshRepository.DetectedMeshViews
                 .ToArray();
 
             foreach (var mesh in meshes)
             {
-                await MeshCullingAsync(mesh, cancellationToken);
-                await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+                MeshCulling(mesh);
             }
 
-            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+            await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
         }
 
-        private async UniTask MeshCullingAsync(
-            IMobileDetectionMeshView meshView,
-            CancellationToken cancellationToken)
+        private void MeshCulling(IMobileDetectionMeshView meshView)
         {
             if (meshView == null)
+            {
+                return;
+            }
+
+            var selectedMeshView = meshRepository.SelectedMeshViewProperty.Value;
+
+            if (selectedMeshView != null && selectedMeshView.Id == meshView.Id)
             {
                 return;
             }
@@ -64,10 +68,11 @@ namespace Synesthesias.Snap.Sample
             var isSuccess = angleResultType == MeshValidationAngleResultType.Valid
                             && vertexResultType == MeshValidationVertexResultType.Valid;
 
-            meshView.MeshRenderer.enabled = isSuccess;
-            meshView.MeshCollider.enabled = isSuccess;
+            meshView.MeshRenderer.material = isSuccess
+                ? materialModel.SelectableMaterial
+                : materialModel.DetectedMaterial;
 
-            await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
+            meshView.MeshCollider.enabled = isSuccess;
         }
     }
 }

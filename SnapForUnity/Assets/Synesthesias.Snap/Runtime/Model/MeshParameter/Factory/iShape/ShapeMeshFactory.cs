@@ -46,16 +46,6 @@ namespace Synesthesias.Snap.Runtime
                 return null;
             }
 
-            var stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append("hull(3d):");
-
-            foreach (var v in hull)
-            {
-                stringBuilder.Append($"({v.x},{v.y},{v.z})");
-            }
-
-            Debug.Log(stringBuilder.ToString());
-
             await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
 
             //頂点の重複がある時，クラッシュするのを防止する．
@@ -90,16 +80,6 @@ namespace Synesthesias.Snap.Runtime
 
             var vector2Hull = calculatorModel.GetHullVertices2d(rotatedHullVertices);
             var vector2Holes = calculatorModel.GetHolesVertices2d(holes);
-
-            stringBuilder.Clear();
-            stringBuilder.Append("hull(2D):");
-
-            foreach (var v in vector2Hull)
-            {
-                stringBuilder.Append($"({v.x},{v.y})");
-            }
-
-            Debug.Log(stringBuilder.ToString());
 
             await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
 

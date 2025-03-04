@@ -98,9 +98,7 @@ namespace Synesthesias.Snap.Runtime
             var fromNormal = Vector3.ProjectOnPlane(normal, normalXY);
             // もう一方のベクトルをnormalXZに設定
             var toNormal = normalXZ;
-            Debug.Log($"normal:{normal}");
             var rotationAngle = Vector3.SignedAngle(fromNormal, toNormal, normalXY);
-            Debug.Log($"回転角: {rotationAngle}");
 
             return rotationAngle;
         }
@@ -185,7 +183,11 @@ namespace Synesthesias.Snap.Runtime
             return normal.normalized;
         }
 
-        // メッシュを反転
+        /// <summary>
+        /// メッシュを反転する
+        /// TODO: メッシュ生成後に反転するのは非効率なので，メッシュ生成時に反転するように変更する
+        /// </summary>
+        [Obsolete("削除予定")]
         public Mesh GetInvertMesh(Mesh mesh)
         {
             int[] triangles = mesh.triangles;

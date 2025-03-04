@@ -221,7 +221,6 @@ namespace Synesthesias.Snap.Sample
         private void ValidateAngle()
         {
             var angleResult = validationRepository.GetAngleResult();
-            Debug.Log($"撮影角度の検証: {angleResult}");
             var isValidAngle = angleResult == MeshValidationAngleResultType.Valid;
             dialogModel.IsLeftValidProperty.OnNext(isValidAngle);
         }
@@ -232,7 +231,6 @@ namespace Synesthesias.Snap.Sample
         private void ValidateVertex()
         {
             var vertexResult = validationRepository.GetVertexResult();
-            Debug.Log($"面の欠けの検証: {vertexResult}");
             var isValidVertex = vertexResult == MeshValidationVertexResultType.Valid;
             dialogModel.IsRightValidProperty.OnNext(isValidVertex);
         }

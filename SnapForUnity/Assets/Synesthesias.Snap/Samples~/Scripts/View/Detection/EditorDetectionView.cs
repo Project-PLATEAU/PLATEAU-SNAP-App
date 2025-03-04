@@ -10,6 +10,7 @@ namespace Synesthesias.Snap.Sample
     public class EditorDetectionView : MonoBehaviour
     {
         [SerializeField] private Material detectedMaterial;
+        [SerializeField] private Material selectableMaterial;
         [SerializeField] private Material selectedMaterial;
         [SerializeField] private DetectionTouchView touchView;
         [SerializeField] private Camera mainCamera;
@@ -25,7 +26,13 @@ namespace Synesthesias.Snap.Sample
             => detectedMaterial;
 
         /// <summary>
-        /// 選択中のMaterial
+        /// 選択可能時のMaterial
+        /// </summary>
+        public Material SelectableMaterial
+            => selectableMaterial;
+
+        /// <summary>
+        /// 選択時のMaterial
         /// </summary>
         public Material SelectedMaterial
             => selectedMaterial;

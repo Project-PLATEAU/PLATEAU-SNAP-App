@@ -367,13 +367,13 @@ namespace Synesthesias.Snap.Sample
 
             foreach (var surface in surfaces)
             {
-                await UniTask.WaitForSeconds(1F, cancellationToken: cancellationToken);
-
                 await OnSurfaceAsync(
                     camera: camera,
                     surface: surface,
                     eunRotation: eunRotation,
                     cancellationToken: cancellationToken);
+
+                await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
             }
         }
 

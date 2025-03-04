@@ -64,8 +64,6 @@ namespace Synesthesias.Snap.Runtime
             Transform meshTransform,
             Mesh mesh)
         {
-            return MeshValidationAngleResultType.Valid;
-
             if (mesh.normals.Length < 1)
             {
                 return MeshValidationAngleResultType.Invalid;
@@ -92,8 +90,6 @@ namespace Synesthesias.Snap.Runtime
             Transform meshTransform,
             Mesh mesh)
         {
-            return MeshValidationVertexResultType.Valid;
-
             var cameraPosition = camera.transform.position;
 
             foreach (var vertex in mesh.vertices)

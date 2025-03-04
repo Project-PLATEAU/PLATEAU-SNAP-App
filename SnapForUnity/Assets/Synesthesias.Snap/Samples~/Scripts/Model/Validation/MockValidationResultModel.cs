@@ -26,8 +26,8 @@ namespace Synesthesias.Snap.Sample
         {
             this.validationRepository = validationRepository;
             this.menuModel = menuModel;
-            var mockAngleResult = validationRepository.GetAngleResult();
-            var mockVertexResult = validationRepository.GetVertexResult();
+            var mockAngleResult = validationRepository.MockAngleResult;
+            var mockVertexResult = validationRepository.MockVertexResult;
             angleResultProperty = new ReactiveProperty<MeshValidationAngleResultType>(mockAngleResult);
             vertexResultProperty = new ReactiveProperty<MeshValidationVertexResultType>(mockVertexResult);
         }
@@ -38,8 +38,6 @@ namespace Synesthesias.Snap.Sample
         public void Dispose()
         {
             disposable.Dispose();
-            validationRepository.SetMockAngleResult(angleResultProperty.Value);
-            validationRepository.SetMockVertexResult(vertexResultProperty.Value);
         }
 
         /// <summary>
@@ -68,6 +66,8 @@ namespace Synesthesias.Snap.Sample
             angleResultProperty
                 .Subscribe(resultType =>
                 {
+                    validationRepository.MockAngleResult = resultType;
+
                     var text = resultType switch
                     {
                         MeshValidationAngleResultType.None => "---",
@@ -92,6 +92,8 @@ namespace Synesthesias.Snap.Sample
             vertexResultProperty
                 .Subscribe(resultType =>
                 {
+                    validationRepository.MockVertexResult = resultType;
+
                     var text = resultType switch
                     {
                         MeshValidationVertexResultType.None => "---",

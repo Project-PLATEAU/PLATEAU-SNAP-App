@@ -15,8 +15,7 @@ namespace Synesthesias.Snap.Sample
         private readonly Subject<GameObject> selectedObjectSubject = new();
         private readonly Subject<bool> selectedSubject = new();
         private readonly Dictionary<string, IMobileDetectionMeshView> detectedMeshViews = new();
-        private readonly Material detectedMaterial;
-        private readonly Material selectedMaterial;
+        private readonly DetectionMaterialModel materialModel;
 
         /// <summary>
         /// 選択されたメッシュのViewのProperty
@@ -38,12 +37,9 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public MeshRepository(
-            Material detectedMaterial,
-            Material selectedMaterial)
+        public MeshRepository(DetectionMaterialModel materialModel)
         {
-            this.detectedMaterial = detectedMaterial;
-            this.selectedMaterial = selectedMaterial;
+            this.materialModel = materialModel;
         }
 
         /// <summary>
@@ -153,7 +149,7 @@ namespace Synesthesias.Snap.Sample
                 return false;
             }
 
-            meshView.MeshRenderer.material = detectedMaterial;
+            meshView.MeshRenderer.material = materialModel.DetectedMaterial;
             SelectedMeshViewProperty.OnNext(null);
             selectedSubject.OnNext(false);
             return true;
@@ -163,10 +159,10 @@ namespace Synesthesias.Snap.Sample
         {
             if (SelectedMeshViewProperty.Value?.MeshRenderer)
             {
-                SelectedMeshViewProperty.Value.MeshRenderer.material = detectedMaterial;
+                SelectedMeshViewProperty.Value.MeshRenderer.material = materialModel.DetectedMaterial;
             }
 
-            meshView.MeshRenderer.material = selectedMaterial;
+            meshView.MeshRenderer.material = materialModel.SelectedMaterial;
             SelectedMeshViewProperty.OnNext(meshView);
             selectedSubject.OnNext(true);
         }

@@ -9,16 +9,24 @@ namespace Synesthesias.Snap.Sample
     public class ValidationRepository
     {
         private ValidationParameterModel parameter;
-        private MeshValidationAngleResultType mockAngleResult;
-        private MeshValidationVertexResultType mockVertexResult;
+
+        /// <summary>
+        /// 角度の検証結果のモック
+        /// </summary>
+        public MeshValidationAngleResultType MockAngleResult { get; set; }
+
+        /// <summary>
+        /// 頂点の検証結果のモック
+        /// </summary>
+        public MeshValidationVertexResultType MockVertexResult { get; set; }
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public ValidationRepository()
         {
-            mockAngleResult = MeshValidationAngleResultType.None;
-            mockVertexResult = MeshValidationVertexResultType.None;
+            MockAngleResult = MeshValidationAngleResultType.None;
+            MockVertexResult = MeshValidationVertexResultType.None;
         }
 
         /// <summary>
@@ -34,9 +42,9 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public MeshValidationAngleResultType GetAngleResult()
         {
-            if (mockAngleResult != MeshValidationAngleResultType.None)
+            if (MockAngleResult != MeshValidationAngleResultType.None)
             {
-                return mockAngleResult;
+                return MockAngleResult;
             }
 
             return parameter == null
@@ -49,9 +57,9 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public MeshValidationVertexResultType GetVertexResult()
         {
-            if (mockVertexResult != MeshValidationVertexResultType.None)
+            if (MockVertexResult != MeshValidationVertexResultType.None)
             {
-                return mockVertexResult;
+                return MockVertexResult;
             }
 
             return parameter == null
@@ -65,22 +73,6 @@ namespace Synesthesias.Snap.Sample
         public void SetParameter(ValidationParameterModel parameter)
         {
             this.parameter = parameter;
-        }
-
-        /// <summary>
-        /// モックの角度判定の結果を設定
-        /// </summary>
-        public void SetMockAngleResult(MeshValidationAngleResultType mockAngleResult)
-        {
-            this.mockAngleResult = mockAngleResult;
-        }
-
-        /// <summary>
-        /// モックの面判定の結果を設定
-        /// </summary>
-        public void SetMockVertexResult(MeshValidationVertexResultType mockVertexResult)
-        {
-            this.mockVertexResult = mockVertexResult;
         }
     }
 }
