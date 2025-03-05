@@ -36,9 +36,16 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            model.IsVisibleProperty.OnNext(false);
-            await UniTask.Yield();
-            model.PopulateElements();
+            try
+            {
+                model.IsVisibleProperty.OnNext(false);
+                await UniTask.Yield();
+                model.PopulateElements();
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning(exception);
+            }
         }
 
         /// <summary>

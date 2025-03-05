@@ -406,18 +406,8 @@ namespace Synesthesias.Snap.Sample
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                await UniTask.DelayFrame(1, cancellationToken: cancellationToken);
-
-                try
-                {
-                    await meshCullingModel.CullingAsync(cancellationToken: cancellationToken);
-                    await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e);
-                    throw;
-                }
+                await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
+                await meshCullingModel.CullingAsync(cancellationToken: cancellationToken);
             }
         }
     }

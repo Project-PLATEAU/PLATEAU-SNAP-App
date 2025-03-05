@@ -32,9 +32,16 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            await model.StartAsync(view.MainCamera, cancellationToken);
-            var texture = model.GetCameraTexture();
-            view.CameraRawImage.texture = texture;
+            try
+            {
+                await model.StartAsync(view.MainCamera, cancellationToken);
+                var texture = model.GetCameraTexture();
+                view.CameraRawImage.texture = texture;
+            }
+            catch (System.Exception exception)
+            {
+                Debug.LogWarning(exception);
+            }
         }
 
         private void OnSubscribe()

@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using R3;
+using System;
 using System.Threading;
 using UnityEngine;
 using VContainer.Unity;
@@ -32,9 +33,16 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            await model.StartAsync(
-                camera: view.ArCamera,
-                cancellationToken);
+            try
+            {
+                await model.StartAsync(
+                    camera: view.ArCamera,
+                    cancellationToken);
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning(exception);
+            }
         }
 
         private void OnSubscribe()
