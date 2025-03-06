@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/BaseLifetimeScope.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: BaseLifetimeScope
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/BaseLifetimeScope.cs
@@ -43,7 +43,6 @@ items:
   - Synesthesias.Snap.Sample.GuideLifetimeScope
   - Synesthesias.Snap.Sample.MainLifetimeScope
   - Synesthesias.Snap.Sample.MobileDetectionLifetimeScope
-  - Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope
   - Synesthesias.Snap.Sample.ValidationLifetimeScope
   implements:
   - System.IDisposable
@@ -216,7 +215,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/BaseLifetimeScope.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OnBootstrap
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/BaseLifetimeScope.cs
@@ -247,7 +246,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/BaseLifetimeScope.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Configure
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/BaseLifetimeScope.cs

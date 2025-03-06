@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel
+  commentId: T:Synesthesias.Snap.Sample.IEnvironmentModel
+  id: IEnvironmentModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration
+  - Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType
+  - Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType
+  langs:
+  - csharp
+  - vb
+  name: IEnvironmentModel
+  nameWithType: IEnvironmentModel
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IEnvironmentModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 環境のModel
+  example: []
+  syntax:
+    content: public interface IEnvironmentModel
+    content.vb: Public Interface IEnvironmentModel
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType
+  commentId: P:Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType
+  id: EnvironmentType
+  parent: Synesthesias.Snap.Sample.IEnvironmentModel
+  langs:
+  - csharp
+  - vb
+  name: EnvironmentType
+  nameWithType: IEnvironmentModel.EnvironmentType
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EnvironmentType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 環境の種類
+  example: []
+  syntax:
+    content: EnvironmentType EnvironmentType { get; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Sample.EnvironmentType
+    content.vb: ReadOnly Property EnvironmentType As EnvironmentType
+  overload: Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType*
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration
+  commentId: P:Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration
+  id: ApiConfiguration
+  parent: Synesthesias.Snap.Sample.IEnvironmentModel
+  langs:
+  - csharp
+  - vb
+  name: ApiConfiguration
+  nameWithType: IEnvironmentModel.ApiConfiguration
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ApiConfiguration
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: APIの設定Model
+  example: []
+  syntax:
+    content: IApiConfigurationModel ApiConfiguration { get; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Sample.IApiConfigurationModel
+    content.vb: ReadOnly Property ApiConfiguration As IApiConfigurationModel
+  overload: Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration*
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType
+  commentId: P:Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType
+  id: DetectionMeshType
+  parent: Synesthesias.Snap.Sample.IEnvironmentModel
+  langs:
+  - csharp
+  - vb
+  name: DetectionMeshType
+  nameWithType: IEnvironmentModel.DetectionMeshType
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DetectionMeshType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/IEnvironmentModel.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 建物検出画面のメッシュの種類
+  example: []
+  syntax:
+    content: DetectionMeshType DetectionMeshType { get; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Sample.DetectionMeshType
+    content.vb: ReadOnly Property DetectionMeshType As DetectionMeshType
+  overload: Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType*
+  commentId: Overload:Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html#Synesthesias_Snap_Sample_IEnvironmentModel_EnvironmentType
+  name: EnvironmentType
+  nameWithType: IEnvironmentModel.EnvironmentType
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel.EnvironmentType
+- uid: Synesthesias.Snap.Sample.EnvironmentType
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.EnvironmentType.html
+  name: EnvironmentType
+  nameWithType: EnvironmentType
+  fullName: Synesthesias.Snap.Sample.EnvironmentType
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration*
+  commentId: Overload:Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html#Synesthesias_Snap_Sample_IEnvironmentModel_ApiConfiguration
+  name: ApiConfiguration
+  nameWithType: IEnvironmentModel.ApiConfiguration
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel.ApiConfiguration
+- uid: Synesthesias.Snap.Sample.IApiConfigurationModel
+  commentId: T:Synesthesias.Snap.Sample.IApiConfigurationModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IApiConfigurationModel.html
+  name: IApiConfigurationModel
+  nameWithType: IApiConfigurationModel
+  fullName: Synesthesias.Snap.Sample.IApiConfigurationModel
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType*
+  commentId: Overload:Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html#Synesthesias_Snap_Sample_IEnvironmentModel_DetectionMeshType
+  name: DetectionMeshType
+  nameWithType: IEnvironmentModel.DetectionMeshType
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel.DetectionMeshType
+- uid: Synesthesias.Snap.Sample.DetectionMeshType
+  commentId: T:Synesthesias.Snap.Sample.DetectionMeshType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMeshType.html
+  name: DetectionMeshType
+  nameWithType: DetectionMeshType
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType

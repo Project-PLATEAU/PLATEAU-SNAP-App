@@ -5,7 +5,7 @@ items:
   id: BootModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.BootModel.#ctor(Synesthesias.Snap.Sample.IServerModel,Synesthesias.Snap.Sample.LocalizationModel)
+  - Synesthesias.Snap.Sample.BootModel.#ctor(Synesthesias.Snap.Sample.LocalizationModel)
   - Synesthesias.Snap.Sample.BootModel.Dispose
   - Synesthesias.Snap.Sample.BootModel.StartAsync(System.Threading.CancellationToken)
   langs:
@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: BootModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
@@ -44,21 +44,21 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Synesthesias.Snap.Sample.BootModel.#ctor(Synesthesias.Snap.Sample.IServerModel,Synesthesias.Snap.Sample.LocalizationModel)
-  commentId: M:Synesthesias.Snap.Sample.BootModel.#ctor(Synesthesias.Snap.Sample.IServerModel,Synesthesias.Snap.Sample.LocalizationModel)
-  id: '#ctor(Synesthesias.Snap.Sample.IServerModel,Synesthesias.Snap.Sample.LocalizationModel)'
+- uid: Synesthesias.Snap.Sample.BootModel.#ctor(Synesthesias.Snap.Sample.LocalizationModel)
+  commentId: M:Synesthesias.Snap.Sample.BootModel.#ctor(Synesthesias.Snap.Sample.LocalizationModel)
+  id: '#ctor(Synesthesias.Snap.Sample.LocalizationModel)'
   parent: Synesthesias.Snap.Sample.BootModel
   langs:
   - csharp
   - vb
-  name: BootModel(IServerModel, LocalizationModel)
-  nameWithType: BootModel.BootModel(IServerModel, LocalizationModel)
-  fullName: Synesthesias.Snap.Sample.BootModel.BootModel(Synesthesias.Snap.Sample.IServerModel, Synesthesias.Snap.Sample.LocalizationModel)
+  name: BootModel(LocalizationModel)
+  nameWithType: BootModel.BootModel(LocalizationModel)
+  fullName: Synesthesias.Snap.Sample.BootModel.BootModel(Synesthesias.Snap.Sample.LocalizationModel)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
@@ -69,17 +69,15 @@ items:
   summary: コンストラクタ
   example: []
   syntax:
-    content: public BootModel(IServerModel serverModel, LocalizationModel localizationModel)
+    content: public BootModel(LocalizationModel localizationModel)
     parameters:
-    - id: serverModel
-      type: Synesthesias.Snap.Sample.IServerModel
     - id: localizationModel
       type: Synesthesias.Snap.Sample.LocalizationModel
-    content.vb: Public Sub New(serverModel As IServerModel, localizationModel As LocalizationModel)
+    content.vb: Public Sub New(localizationModel As LocalizationModel)
   overload: Synesthesias.Snap.Sample.BootModel.#ctor*
-  nameWithType.vb: BootModel.New(IServerModel, LocalizationModel)
-  fullName.vb: Synesthesias.Snap.Sample.BootModel.New(Synesthesias.Snap.Sample.IServerModel, Synesthesias.Snap.Sample.LocalizationModel)
-  name.vb: New(IServerModel, LocalizationModel)
+  nameWithType.vb: BootModel.New(LocalizationModel)
+  fullName.vb: Synesthesias.Snap.Sample.BootModel.New(Synesthesias.Snap.Sample.LocalizationModel)
+  name.vb: New(LocalizationModel)
 - uid: Synesthesias.Snap.Sample.BootModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.BootModel.Dispose
   id: Dispose
@@ -94,11 +92,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
-    startLine: 32
+    startLine: 30
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -124,11 +122,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: StartAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Boot/BootModel.cs
-    startLine: 40
+    startLine: 38
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -452,20 +450,13 @@ references:
     isExternal: true
 - uid: Synesthesias.Snap.Sample.BootModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.BootModel.#ctor
-  href: Synesthesias.Snap.Sample.BootModel.html#Synesthesias_Snap_Sample_BootModel__ctor_Synesthesias_Snap_Sample_IServerModel_Synesthesias_Snap_Sample_LocalizationModel_
+  href: Synesthesias.Snap.Sample.BootModel.html#Synesthesias_Snap_Sample_BootModel__ctor_Synesthesias_Snap_Sample_LocalizationModel_
   name: BootModel
   nameWithType: BootModel.BootModel
   fullName: Synesthesias.Snap.Sample.BootModel.BootModel
   nameWithType.vb: BootModel.New
   fullName.vb: Synesthesias.Snap.Sample.BootModel.New
   name.vb: New
-- uid: Synesthesias.Snap.Sample.IServerModel
-  commentId: T:Synesthesias.Snap.Sample.IServerModel
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.IServerModel.html
-  name: IServerModel
-  nameWithType: IServerModel
-  fullName: Synesthesias.Snap.Sample.IServerModel
 - uid: Synesthesias.Snap.Sample.LocalizationModel
   commentId: T:Synesthesias.Snap.Sample.LocalizationModel
   parent: Synesthesias.Snap.Sample

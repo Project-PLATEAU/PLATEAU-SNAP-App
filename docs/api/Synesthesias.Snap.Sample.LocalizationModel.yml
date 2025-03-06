@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LocalizationModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: StartAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: InitializeAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Get
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Localization/LocalizationModel.cs

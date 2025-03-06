@@ -5,9 +5,9 @@ items:
   id: Synesthesias.Snap.Runtime
   children:
   - Synesthesias.Snap.Runtime.AnchorType
-  - Synesthesias.Snap.Runtime.CoordinateUtil
   - Synesthesias.Snap.Runtime.EditorGeospatialMathModel
-  - Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel
+  - Synesthesias.Snap.Runtime.EditorGeospatialMeshModel
+  - Synesthesias.Snap.Runtime.EditorMeshValidationModel
   - Synesthesias.Snap.Runtime.GeospatialAccuracyModel
   - Synesthesias.Snap.Runtime.GeospatialAccuracyResult
   - Synesthesias.Snap.Runtime.GeospatialAccuracyState
@@ -34,32 +34,27 @@ items:
   - Synesthesias.Snap.Runtime.GeospatialPoseModel
   - Synesthesias.Snap.Runtime.GeospatialVector
   - Synesthesias.Snap.Runtime.IGeospatialMathModel
-  - Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel
+  - Synesthesias.Snap.Runtime.IGeospatialMeshModel
+  - Synesthesias.Snap.Runtime.IMeshFactoryModel
+  - Synesthesias.Snap.Runtime.IMeshValidationModel
   - Synesthesias.Snap.Runtime.ISurfaceModel
-  - Synesthesias.Snap.Runtime.LatLonConverter
-  - Synesthesias.Snap.Runtime.LatLonTests
-  - Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-  - Synesthesias.Snap.Runtime.MeshManager
-  - Synesthesias.Snap.Runtime.MeshModel
   - Synesthesias.Snap.Runtime.MeshValidationAngleResultType
   - Synesthesias.Snap.Runtime.MeshValidationAngleResultTypeExtensions
   - Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel
-  - Synesthesias.Snap.Runtime.MeshValidationModel
   - Synesthesias.Snap.Runtime.MeshValidationResult
   - Synesthesias.Snap.Runtime.MeshValidationVertexResultType
   - Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions
-  - Synesthesias.Snap.Runtime.MeshView
   - Synesthesias.Snap.Runtime.MobileGeospatialMathModel
-  - Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel
-  - Synesthesias.Snap.Runtime.MockJsonParser
-  - Synesthesias.Snap.Runtime.MockSurface
-  - Synesthesias.Snap.Runtime.MockSurfaces
+  - Synesthesias.Snap.Runtime.MobileGeospatialMeshModel
+  - Synesthesias.Snap.Runtime.MobileMeshValidationModel
+  - Synesthesias.Snap.Runtime.PlainShapeFactoryModel
   - Synesthesias.Snap.Runtime.Shape
-  - Synesthesias.Snap.Runtime.ShapeCalculator
-  - Synesthesias.Snap.Runtime.ShapeManager
-  - Synesthesias.Snap.Runtime.SimpleMeshModel
+  - Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  - Synesthesias.Snap.Runtime.ShapeValidatorModel
+  - Synesthesias.Snap.Runtime.SimpleMeshFactoryModel
   - Synesthesias.Snap.Runtime.SimpleMeshResultTypeExtensions
   - Synesthesias.Snap.Runtime.SurfaceConverter
+  - Synesthesias.Snap.Runtime.VectorCalculatorModel
   langs:
   - csharp
   - vb
@@ -97,6 +92,12 @@ references:
   name: GeospatialMainLoopStateTypeExtensions
   nameWithType: GeospatialMainLoopStateTypeExtensions
   fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopStateTypeExtensions
+- uid: Synesthesias.Snap.Runtime.Shape
+  commentId: T:Synesthesias.Snap.Runtime.Shape
+  href: Synesthesias.Snap.Runtime.Shape.html
+  name: Shape
+  nameWithType: Shape
+  fullName: Synesthesias.Snap.Runtime.Shape
 - uid: Synesthesias.Snap.Runtime.GeospatialMainLoopException
   commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopException
   href: Synesthesias.Snap.Runtime.GeospatialMainLoopException.html
@@ -116,18 +117,6 @@ references:
   name: SurfaceConverter
   nameWithType: SurfaceConverter
   fullName: Synesthesias.Snap.Runtime.SurfaceConverter
-- uid: Synesthesias.Snap.Runtime.MeshManager
-  commentId: T:Synesthesias.Snap.Runtime.MeshManager
-  href: Synesthesias.Snap.Runtime.MeshManager.html
-  name: MeshManager
-  nameWithType: MeshManager
-  fullName: Synesthesias.Snap.Runtime.MeshManager
-- uid: Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel
-  commentId: T:Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel
-  href: Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel.html
-  name: EditorGeospatialSimpleMeshModel
-  nameWithType: EditorGeospatialSimpleMeshModel
-  fullName: Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel
 - uid: Synesthesias.Snap.Runtime.ISurfaceModel
   commentId: T:Synesthesias.Snap.Runtime.ISurfaceModel
   parent: Synesthesias.Snap.Runtime
@@ -137,7 +126,6 @@ references:
   fullName: Synesthesias.Snap.Runtime.ISurfaceModel
 - uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel
   commentId: T:Synesthesias.Snap.Runtime.GeospatialAsyncModel
-  parent: Synesthesias.Snap.Runtime
   href: Synesthesias.Snap.Runtime.GeospatialAsyncModel.html
   name: GeospatialAsyncModel
   nameWithType: GeospatialAsyncModel
@@ -149,6 +137,13 @@ references:
   name: GeospatialAnchorResult
   nameWithType: GeospatialAnchorResult
   fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.IMeshValidationModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html
+  name: IMeshValidationModel
+  nameWithType: IMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel
 - uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
   commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResultType
   parent: Synesthesias.Snap.Runtime
@@ -163,25 +158,13 @@ references:
   name: GeospatialAnchorResultTypeExtensions
   nameWithType: GeospatialAnchorResultTypeExtensions
   fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions
-- uid: Synesthesias.Snap.Runtime.Shape
-  commentId: T:Synesthesias.Snap.Runtime.Shape
+- uid: Synesthesias.Snap.Runtime.IGeospatialMeshModel
+  commentId: T:Synesthesias.Snap.Runtime.IGeospatialMeshModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.Shape.html
-  name: Shape
-  nameWithType: Shape
-  fullName: Synesthesias.Snap.Runtime.Shape
-- uid: Synesthesias.Snap.Runtime.ShapeManager
-  commentId: T:Synesthesias.Snap.Runtime.ShapeManager
-  href: Synesthesias.Snap.Runtime.ShapeManager.html
-  name: ShapeManager
-  nameWithType: ShapeManager
-  fullName: Synesthesias.Snap.Runtime.ShapeManager
-- uid: Synesthesias.Snap.Runtime.ShapeCalculator
-  commentId: T:Synesthesias.Snap.Runtime.ShapeCalculator
-  href: Synesthesias.Snap.Runtime.ShapeCalculator.html
-  name: ShapeCalculator
-  nameWithType: ShapeCalculator
-  fullName: Synesthesias.Snap.Runtime.ShapeCalculator
+  href: Synesthesias.Snap.Runtime.IGeospatialMeshModel.html
+  name: IGeospatialMeshModel
+  nameWithType: IGeospatialMeshModel
+  fullName: Synesthesias.Snap.Runtime.IGeospatialMeshModel
 - uid: Synesthesias.Snap.Runtime.GeospatialDebugModel
   commentId: T:Synesthesias.Snap.Runtime.GeospatialDebugModel
   parent: Synesthesias.Snap.Runtime
@@ -217,6 +200,32 @@ references:
   name: GeospatialPoseModel
   nameWithType: GeospatialPoseModel
   fullName: Synesthesias.Snap.Runtime.GeospatialPoseModel
+- uid: Synesthesias.Snap.Runtime.IMeshFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.IMeshFactoryModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.IMeshFactoryModel.html
+  name: IMeshFactoryModel
+  nameWithType: IMeshFactoryModel
+  fullName: Synesthesias.Snap.Runtime.IMeshFactoryModel
+- uid: Synesthesias.Snap.Runtime.VectorCalculatorModel
+  commentId: T:Synesthesias.Snap.Runtime.VectorCalculatorModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.VectorCalculatorModel.html
+  name: VectorCalculatorModel
+  nameWithType: VectorCalculatorModel
+  fullName: Synesthesias.Snap.Runtime.VectorCalculatorModel
+- uid: Synesthesias.Snap.Runtime.SimpleMeshFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.SimpleMeshFactoryModel
+  href: Synesthesias.Snap.Runtime.SimpleMeshFactoryModel.html
+  name: SimpleMeshFactoryModel
+  nameWithType: SimpleMeshFactoryModel
+  fullName: Synesthesias.Snap.Runtime.SimpleMeshFactoryModel
+- uid: Synesthesias.Snap.Runtime.MobileGeospatialMeshModel
+  commentId: T:Synesthesias.Snap.Runtime.MobileGeospatialMeshModel
+  href: Synesthesias.Snap.Runtime.MobileGeospatialMeshModel.html
+  name: MobileGeospatialMeshModel
+  nameWithType: MobileGeospatialMeshModel
+  fullName: Synesthesias.Snap.Runtime.MobileGeospatialMeshModel
 - uid: Synesthesias.Snap.Runtime.AnchorType
   commentId: T:Synesthesias.Snap.Runtime.AnchorType
   parent: Synesthesias.Snap.Runtime
@@ -236,34 +245,12 @@ references:
   name: GeospatialAnchorHistoryCollection
   nameWithType: GeospatialAnchorHistoryCollection
   fullName: Synesthesias.Snap.Runtime.GeospatialAnchorHistoryCollection
-- uid: Synesthesias.Snap.Runtime.LatLonTests
-  commentId: T:Synesthesias.Snap.Runtime.LatLonTests
-  href: Synesthesias.Snap.Runtime.LatLonTests.html
-  name: LatLonTests
-  nameWithType: LatLonTests
-  fullName: Synesthesias.Snap.Runtime.LatLonTests
-- uid: Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-  commentId: T:Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-  href: Synesthesias.Snap.Runtime.LatLonTests.html
-  name: LatLonTests.LatLonData
-  nameWithType: LatLonTests.LatLonData
-  fullName: Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-  spec.csharp:
-  - uid: Synesthesias.Snap.Runtime.LatLonTests
-    name: LatLonTests
-    href: Synesthesias.Snap.Runtime.LatLonTests.html
-  - name: .
-  - uid: Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-    name: LatLonData
-    href: Synesthesias.Snap.Runtime.LatLonTests.LatLonData.html
-  spec.vb:
-  - uid: Synesthesias.Snap.Runtime.LatLonTests
-    name: LatLonTests
-    href: Synesthesias.Snap.Runtime.LatLonTests.html
-  - name: .
-  - uid: Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-    name: LatLonData
-    href: Synesthesias.Snap.Runtime.LatLonTests.LatLonData.html
+- uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  href: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.html
+  name: ShapeMeshFactoryModel
+  nameWithType: ShapeMeshFactoryModel
+  fullName: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
 - uid: Synesthesias.Snap.Runtime.GeospatialVector
   commentId: T:Synesthesias.Snap.Runtime.GeospatialVector
   parent: Synesthesias.Snap.Runtime
@@ -271,6 +258,12 @@ references:
   name: GeospatialVector
   nameWithType: GeospatialVector
   fullName: Synesthesias.Snap.Runtime.GeospatialVector
+- uid: Synesthesias.Snap.Runtime.EditorGeospatialMeshModel
+  commentId: T:Synesthesias.Snap.Runtime.EditorGeospatialMeshModel
+  href: Synesthesias.Snap.Runtime.EditorGeospatialMeshModel.html
+  name: EditorGeospatialMeshModel
+  nameWithType: EditorGeospatialMeshModel
+  fullName: Synesthesias.Snap.Runtime.EditorGeospatialMeshModel
 - uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
   commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopModel
   parent: Synesthesias.Snap.Runtime
@@ -278,19 +271,6 @@ references:
   name: GeospatialMainLoopModel
   nameWithType: GeospatialMainLoopModel
   fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
-- uid: Synesthesias.Snap.Runtime.LatLonConverter
-  commentId: T:Synesthesias.Snap.Runtime.LatLonConverter
-  href: Synesthesias.Snap.Runtime.LatLonConverter.html
-  name: LatLonConverter
-  nameWithType: LatLonConverter
-  fullName: Synesthesias.Snap.Runtime.LatLonConverter
-- uid: Synesthesias.Snap.Runtime.SimpleMeshModel
-  commentId: T:Synesthesias.Snap.Runtime.SimpleMeshModel
-  parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.SimpleMeshModel.html
-  name: SimpleMeshModel
-  nameWithType: SimpleMeshModel
-  fullName: Synesthesias.Snap.Runtime.SimpleMeshModel
 - uid: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
   commentId: T:Synesthesias.Snap.Runtime.MeshValidationAngleResultType
   parent: Synesthesias.Snap.Runtime
@@ -305,16 +285,15 @@ references:
   name: MeshValidationAngleResultTypeExtensions
   nameWithType: MeshValidationAngleResultTypeExtensions
   fullName: Synesthesias.Snap.Runtime.MeshValidationAngleResultTypeExtensions
-- uid: Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel
-  commentId: T:Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel
+- uid: Synesthesias.Snap.Runtime.ShapeValidatorModel
+  commentId: T:Synesthesias.Snap.Runtime.ShapeValidatorModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel.html
-  name: IGeospatialSimpleMeshModel
-  nameWithType: IGeospatialSimpleMeshModel
-  fullName: Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel
+  href: Synesthesias.Snap.Runtime.ShapeValidatorModel.html
+  name: ShapeValidatorModel
+  nameWithType: ShapeValidatorModel
+  fullName: Synesthesias.Snap.Runtime.ShapeValidatorModel
 - uid: Synesthesias.Snap.Runtime.MobileGeospatialMathModel
   commentId: T:Synesthesias.Snap.Runtime.MobileGeospatialMathModel
-  parent: Synesthesias.Snap.Runtime
   href: Synesthesias.Snap.Runtime.MobileGeospatialMathModel.html
   name: MobileGeospatialMathModel
   nameWithType: MobileGeospatialMathModel
@@ -325,25 +304,6 @@ references:
   name: GeospatialMeshResult
   nameWithType: GeospatialMeshResult
   fullName: Synesthesias.Snap.Runtime.GeospatialMeshResult
-- uid: Synesthesias.Snap.Runtime.MockSurfaces
-  commentId: T:Synesthesias.Snap.Runtime.MockSurfaces
-  parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.MockSurfaces.html
-  name: MockSurfaces
-  nameWithType: MockSurfaces
-  fullName: Synesthesias.Snap.Runtime.MockSurfaces
-- uid: Synesthesias.Snap.Runtime.MockSurface
-  commentId: T:Synesthesias.Snap.Runtime.MockSurface
-  href: Synesthesias.Snap.Runtime.MockSurface.html
-  name: MockSurface
-  nameWithType: MockSurface
-  fullName: Synesthesias.Snap.Runtime.MockSurface
-- uid: Synesthesias.Snap.Runtime.MockJsonParser
-  commentId: T:Synesthesias.Snap.Runtime.MockJsonParser
-  href: Synesthesias.Snap.Runtime.MockJsonParser.html
-  name: MockJsonParser
-  nameWithType: MockJsonParser
-  fullName: Synesthesias.Snap.Runtime.MockJsonParser
 - uid: Synesthesias.Snap.Runtime.GeospatialMeshResultType
   commentId: T:Synesthesias.Snap.Runtime.GeospatialMeshResultType
   parent: Synesthesias.Snap.Runtime
@@ -358,13 +318,12 @@ references:
   name: SimpleMeshResultTypeExtensions
   nameWithType: SimpleMeshResultTypeExtensions
   fullName: Synesthesias.Snap.Runtime.SimpleMeshResultTypeExtensions
-- uid: Synesthesias.Snap.Runtime.MeshValidationModel
-  commentId: T:Synesthesias.Snap.Runtime.MeshValidationModel
-  parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.MeshValidationModel.html
-  name: MeshValidationModel
-  nameWithType: MeshValidationModel
-  fullName: Synesthesias.Snap.Runtime.MeshValidationModel
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  href: Synesthesias.Snap.Runtime.EditorMeshValidationModel.html
+  name: EditorMeshValidationModel
+  nameWithType: EditorMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel
 - uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState
   commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopState
   parent: Synesthesias.Snap.Runtime
@@ -393,12 +352,19 @@ references:
   name: GeospatialAccuracyStateExtensions
   nameWithType: GeospatialAccuracyStateExtensions
   fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyStateExtensions
-- uid: Synesthesias.Snap.Runtime.CoordinateUtil
-  commentId: T:Synesthesias.Snap.Runtime.CoordinateUtil
-  href: Synesthesias.Snap.Runtime.CoordinateUtil.html
-  name: CoordinateUtil
-  nameWithType: CoordinateUtil
-  fullName: Synesthesias.Snap.Runtime.CoordinateUtil
+- uid: Synesthesias.Snap.Runtime.MobileMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.MobileMeshValidationModel
+  href: Synesthesias.Snap.Runtime.MobileMeshValidationModel.html
+  name: MobileMeshValidationModel
+  nameWithType: MobileMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.MobileMeshValidationModel
+- uid: Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.PlainShapeFactoryModel.html
+  name: PlainShapeFactoryModel
+  nameWithType: PlainShapeFactoryModel
+  fullName: Synesthesias.Snap.Runtime.PlainShapeFactoryModel
 - uid: Synesthesias.Snap.Runtime.GeospatialAnchorModel
   commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorModel
   parent: Synesthesias.Snap.Runtime
@@ -420,34 +386,14 @@ references:
   name: GeospatialMainLoopView
   nameWithType: GeospatialMainLoopView
   fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopView
-- uid: Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel
-  commentId: T:Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel
-  href: Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel.html
-  name: MobileGeospatialSimpleMeshModel
-  nameWithType: MobileGeospatialSimpleMeshModel
-  fullName: Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel
 - uid: Synesthesias.Snap.Runtime.GeospatialModel
   commentId: T:Synesthesias.Snap.Runtime.GeospatialModel
   href: Synesthesias.Snap.Runtime.GeospatialModel.html
   name: GeospatialModel
   nameWithType: GeospatialModel
   fullName: Synesthesias.Snap.Runtime.GeospatialModel
-- uid: Synesthesias.Snap.Runtime.MeshView
-  commentId: T:Synesthesias.Snap.Runtime.MeshView
-  parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.MeshView.html
-  name: MeshView
-  nameWithType: MeshView
-  fullName: Synesthesias.Snap.Runtime.MeshView
-- uid: Synesthesias.Snap.Runtime.MeshModel
-  commentId: T:Synesthesias.Snap.Runtime.MeshModel
-  href: Synesthesias.Snap.Runtime.MeshModel.html
-  name: MeshModel
-  nameWithType: MeshModel
-  fullName: Synesthesias.Snap.Runtime.MeshModel
 - uid: Synesthesias.Snap.Runtime.EditorGeospatialMathModel
   commentId: T:Synesthesias.Snap.Runtime.EditorGeospatialMathModel
-  parent: Synesthesias.Snap.Runtime
   href: Synesthesias.Snap.Runtime.EditorGeospatialMathModel.html
   name: EditorGeospatialMathModel
   nameWithType: EditorGeospatialMathModel

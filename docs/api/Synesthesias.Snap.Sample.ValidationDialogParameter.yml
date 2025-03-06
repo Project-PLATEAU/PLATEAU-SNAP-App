@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ValidationDialogParameter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LeftValidationText
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: RightValidationText
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CancelButtonText
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ConfirmButtonText
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Parameter/Dialog/ValidationDialogParameter.cs

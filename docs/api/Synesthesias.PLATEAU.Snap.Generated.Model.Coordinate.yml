@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Coordinate
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Longitude
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Latitude
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Altitude
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
@@ -256,7 +256,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToString
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToJson
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs

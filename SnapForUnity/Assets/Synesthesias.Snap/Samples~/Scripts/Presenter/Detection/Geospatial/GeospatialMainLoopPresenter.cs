@@ -15,7 +15,6 @@ namespace Synesthesias.Snap.Sample
     public class GeospatialMainLoopPresenter : IDisposable, IAsyncStartable
     {
         private readonly CompositeDisposable disposables = new();
-        private readonly SceneModel sceneModel;
         private readonly GeospatialMainLoopModel model;
         private readonly GeospatialMainLoopView view;
 
@@ -23,11 +22,9 @@ namespace Synesthesias.Snap.Sample
         /// コンストラクタ
         /// </summary>
         public GeospatialMainLoopPresenter(
-            SceneModel sceneModel,
             GeospatialMainLoopModel model,
             GeospatialMainLoopView view)
         {
-            this.sceneModel = sceneModel;
             this.model = model;
             this.view = view;
             OnSubscribe();

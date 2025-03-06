@@ -41,7 +41,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialMainLoopStateType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: None
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Enabled
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Disabled
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionResetting
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionResetFailed
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LocationServiceDisabledByUser
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LocationServiceInitializing
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LocationServiceFailed
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LocationServiceRunning
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionAvailabilityCheckInProgress
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -350,7 +350,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionAvailabilityUnsupported
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionAvailabilitySupportedAndReady
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -406,7 +406,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: VpsAvailabilityChecking
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -434,7 +434,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: VpsNotAvailable
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -462,7 +462,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: VpsAvailable
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionInstalling
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionReady
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionInitializing
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -574,7 +574,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionTracking
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -602,7 +602,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionPreparing
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -630,7 +630,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARSessionError
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -658,7 +658,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: NotSupported
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -686,7 +686,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialEnabling
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -714,7 +714,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EarthNotReady
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -742,7 +742,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Error
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
@@ -770,7 +770,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Ready
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopStateType.cs

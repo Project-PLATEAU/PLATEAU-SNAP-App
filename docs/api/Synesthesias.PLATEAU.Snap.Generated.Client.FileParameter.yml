@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: FileParameter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Name
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ContentType
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Content
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: op_Implicit
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/FileParameter.cs

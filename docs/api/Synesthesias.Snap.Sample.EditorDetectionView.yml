@@ -11,6 +11,7 @@ items:
   - Synesthesias.Snap.Sample.EditorDetectionView.MainCamera
   - Synesthesias.Snap.Sample.EditorDetectionView.MenuButton
   - Synesthesias.Snap.Sample.EditorDetectionView.MeshParent
+  - Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial
   - Synesthesias.Snap.Sample.EditorDetectionView.SelectedMaterial
   - Synesthesias.Snap.Sample.EditorDetectionView.TouchView
   langs:
@@ -23,7 +24,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EditorDetectionView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
@@ -183,11 +184,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectedMaterial
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -200,6 +201,37 @@ items:
       type: UnityEngine.Material
     content.vb: Public ReadOnly Property DetectedMaterial As Material
   overload: Synesthesias.Snap.Sample.EditorDetectionView.DetectedMaterial*
+- uid: Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial
+  commentId: P:Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial
+  id: SelectableMaterial
+  parent: Synesthesias.Snap.Sample.EditorDetectionView
+  langs:
+  - csharp
+  - vb
+  name: SelectableMaterial
+  nameWithType: EditorDetectionView.SelectableMaterial
+  fullName: Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SelectableMaterial
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
+    startLine: 30
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 選択可能時のMaterial
+  example: []
+  syntax:
+    content: public Material SelectableMaterial { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Material
+    content.vb: Public ReadOnly Property SelectableMaterial As Material
+  overload: Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial*
 - uid: Synesthesias.Snap.Sample.EditorDetectionView.SelectedMaterial
   commentId: P:Synesthesias.Snap.Sample.EditorDetectionView.SelectedMaterial
   id: SelectedMaterial
@@ -214,15 +246,15 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SelectedMaterial
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 29
+    startLine: 36
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
-  summary: 選択中のMaterial
+  summary: 選択時のMaterial
   example: []
   syntax:
     content: public Material SelectedMaterial { get; }
@@ -245,11 +277,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TouchView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 35
+    startLine: 42
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -276,11 +308,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MainCamera
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 41
+    startLine: 48
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -307,11 +339,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MenuButton
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 47
+    startLine: 54
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -338,11 +370,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CameraRawImage
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 53
+    startLine: 60
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -369,11 +401,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CameraButton
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 59
+    startLine: 66
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -400,11 +432,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshParent
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/EditorDetectionView.cs
-    startLine: 65
+    startLine: 72
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -6113,6 +6145,12 @@ references:
   name: Material
   nameWithType: Material
   fullName: UnityEngine.Material
+- uid: Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial
+  href: Synesthesias.Snap.Sample.EditorDetectionView.html#Synesthesias_Snap_Sample_EditorDetectionView_SelectableMaterial
+  name: SelectableMaterial
+  nameWithType: EditorDetectionView.SelectableMaterial
+  fullName: Synesthesias.Snap.Sample.EditorDetectionView.SelectableMaterial
 - uid: Synesthesias.Snap.Sample.EditorDetectionView.SelectedMaterial*
   commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionView.SelectedMaterial
   href: Synesthesias.Snap.Sample.EditorDetectionView.html#Synesthesias_Snap_Sample_EditorDetectionView_SelectedMaterial

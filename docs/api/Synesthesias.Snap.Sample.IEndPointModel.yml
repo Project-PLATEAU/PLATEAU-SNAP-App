@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IEndPointModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetEndPoint
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/IEndPointModel.cs

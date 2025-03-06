@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.DetectionMeshType
+  commentId: T:Synesthesias.Snap.Sample.DetectionMeshType
+  id: DetectionMeshType
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.DetectionMeshType.None
+  - Synesthesias.Snap.Sample.DetectionMeshType.Simple
+  - Synesthesias.Snap.Sample.DetectionMeshType.iShape
+  langs:
+  - csharp
+  - vb
+  name: DetectionMeshType
+  nameWithType: DetectionMeshType
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DetectionMeshType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 建物の検出のメッシュの種類
+  example: []
+  syntax:
+    content: public enum DetectionMeshType
+    content.vb: Public Enum DetectionMeshType
+- uid: Synesthesias.Snap.Sample.DetectionMeshType.None
+  commentId: F:Synesthesias.Snap.Sample.DetectionMeshType.None
+  id: None
+  parent: Synesthesias.Snap.Sample.DetectionMeshType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: DetectionMeshType.None
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType.None
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: None
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 未設定
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Synesthesias.Snap.Sample.DetectionMeshType
+- uid: Synesthesias.Snap.Sample.DetectionMeshType.Simple
+  commentId: F:Synesthesias.Snap.Sample.DetectionMeshType.Simple
+  id: Simple
+  parent: Synesthesias.Snap.Sample.DetectionMeshType
+  langs:
+  - csharp
+  - vb
+  name: Simple
+  nameWithType: DetectionMeshType.Simple
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType.Simple
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Simple
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 簡易なMeshを使用
+  example: []
+  syntax:
+    content: Simple = 1
+    return:
+      type: Synesthesias.Snap.Sample.DetectionMeshType
+- uid: Synesthesias.Snap.Sample.DetectionMeshType.iShape
+  commentId: F:Synesthesias.Snap.Sample.DetectionMeshType.iShape
+  id: iShape
+  parent: Synesthesias.Snap.Sample.DetectionMeshType
+  langs:
+  - csharp
+  - vb
+  name: iShape
+  nameWithType: DetectionMeshType.iShape
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType.iShape
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: iShape
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/DetectionMeshType.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: Unity.iShapeを使用
+  example: []
+  syntax:
+    content: iShape = 2
+    return:
+      type: Synesthesias.Snap.Sample.DetectionMeshType
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.DetectionMeshType
+  commentId: T:Synesthesias.Snap.Sample.DetectionMeshType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMeshType.html
+  name: DetectionMeshType
+  nameWithType: DetectionMeshType
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType

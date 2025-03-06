@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IAsynchronousClient
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: PostAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: PutAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DeleteAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: HeadAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OptionsAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
@@ -353,7 +353,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: PatchAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs

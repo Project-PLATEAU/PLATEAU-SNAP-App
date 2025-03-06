@@ -11,9 +11,6 @@ items:
   - Synesthesias.Snap.Sample.IEditorDetectionParameterModel.FromLatitude
   - Synesthesias.Snap.Sample.IEditorDetectionParameterModel.FromLongitude
   - Synesthesias.Snap.Sample.IEditorDetectionParameterModel.MaxDistance
-  - Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude
-  - Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude
-  - Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude
   langs:
   - csharp
   - vb
@@ -24,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IEditorDetectionParameterModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
@@ -51,7 +48,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: FromLatitude
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
@@ -82,7 +79,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: FromLongitude
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
@@ -113,7 +110,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: FromAltitude
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
@@ -130,99 +127,6 @@ items:
       type: System.Double
     content.vb: ReadOnly Property FromAltitude As Double
   overload: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.FromAltitude*
-- uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude
-  commentId: P:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude
-  id: ToLatitude
-  parent: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
-  langs:
-  - csharp
-  - vb
-  name: ToLatitude
-  nameWithType: IEditorDetectionParameterModel.ToLatitude
-  fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude
-  type: Property
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: ToLatitude
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-    startLine: 27
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: 終点の緯度
-  example: []
-  syntax:
-    content: double ToLatitude { get; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: ReadOnly Property ToLatitude As Double
-  overload: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude*
-- uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude
-  commentId: P:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude
-  id: ToLongitude
-  parent: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
-  langs:
-  - csharp
-  - vb
-  name: ToLongitude
-  nameWithType: IEditorDetectionParameterModel.ToLongitude
-  fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude
-  type: Property
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: ToLongitude
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-    startLine: 32
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: 終点の経度
-  example: []
-  syntax:
-    content: double ToLongitude { get; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: ReadOnly Property ToLongitude As Double
-  overload: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude*
-- uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude
-  commentId: P:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude
-  id: ToAltitude
-  parent: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
-  langs:
-  - csharp
-  - vb
-  name: ToAltitude
-  nameWithType: IEditorDetectionParameterModel.ToAltitude
-  fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude
-  type: Property
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: ToAltitude
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-    startLine: 37
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: 終点の高度
-  example: []
-  syntax:
-    content: double ToAltitude { get; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: ReadOnly Property ToAltitude As Double
-  overload: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude*
 - uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.MaxDistance
   commentId: P:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.MaxDistance
   id: MaxDistance
@@ -237,11 +141,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MaxDistance
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-    startLine: 42
+    startLine: 27
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -268,11 +172,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: FieldOfView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-    startLine: 47
+    startLine: 32
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -299,11 +203,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EunRotation
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/IEditorDetectionParameterModel.cs
-    startLine: 52
+    startLine: 37
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -383,24 +287,6 @@ references:
   name: FromAltitude
   nameWithType: IEditorDetectionParameterModel.FromAltitude
   fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.FromAltitude
-- uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude*
-  commentId: Overload:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude
-  href: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.html#Synesthesias_Snap_Sample_IEditorDetectionParameterModel_ToLatitude
-  name: ToLatitude
-  nameWithType: IEditorDetectionParameterModel.ToLatitude
-  fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLatitude
-- uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude*
-  commentId: Overload:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude
-  href: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.html#Synesthesias_Snap_Sample_IEditorDetectionParameterModel_ToLongitude
-  name: ToLongitude
-  nameWithType: IEditorDetectionParameterModel.ToLongitude
-  fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToLongitude
-- uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude*
-  commentId: Overload:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude
-  href: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.html#Synesthesias_Snap_Sample_IEditorDetectionParameterModel_ToAltitude
-  name: ToAltitude
-  nameWithType: IEditorDetectionParameterModel.ToAltitude
-  fullName: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.ToAltitude
 - uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.MaxDistance*
   commentId: Overload:Synesthesias.Snap.Sample.IEditorDetectionParameterModel.MaxDistance
   href: Synesthesias.Snap.Sample.IEditorDetectionParameterModel.html#Synesthesias_Snap_Sample_IEditorDetectionParameterModel_MaxDistance

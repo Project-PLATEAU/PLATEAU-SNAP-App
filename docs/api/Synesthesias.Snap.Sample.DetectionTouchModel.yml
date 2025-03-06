@@ -6,12 +6,12 @@ items:
   parent: Synesthesias.Snap.Sample
   children:
   - Synesthesias.Snap.Sample.DetectionTouchModel.#ctor(Synesthesias.Snap.Sample.MeshRepository,Synesthesias.Snap.Sample.DetectionMenuModel)
+  - Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(System.String)
   - Synesthesias.Snap.Sample.DetectionTouchModel.Dispose
   - Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
   - Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
   - Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable
   - Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
-  - Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews(System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView})
   - Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
   langs:
   - csharp
@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectionTouchModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsTapToCreateAnchor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OnSelectedAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TouchScreen
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -208,6 +208,42 @@ items:
       type: UnityEngine.Vector2
     content.vb: Public Sub TouchScreen(camera As Camera, screenPosition As Vector2)
   overload: Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen*
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(System.String)
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(System.String)
+  id: ContainsMeshId(System.String)
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: ContainsMeshId(string)
+  nameWithType: DetectionTouchModel.ContainsMeshId(string)
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ContainsMeshId
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 62
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュIDを含むか
+  example: []
+  syntax:
+    content: public bool ContainsMeshId(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsMeshId(id As String) As Boolean
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId*
+  nameWithType.vb: DetectionTouchModel.ContainsMeshId(String)
+  fullName.vb: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(String)
+  name.vb: ContainsMeshId(String)
 - uid: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
   commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
   id: SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
@@ -222,11 +258,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SetDetectedMeshView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-    startLine: 62
+    startLine: 70
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -239,40 +275,6 @@ items:
       type: Synesthesias.Snap.Sample.IMobileDetectionMeshView
     content.vb: Public Sub SetDetectedMeshView(meshView As IMobileDetectionMeshView)
   overload: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView*
-- uid: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews(System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView})
-  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews(System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView})
-  id: SetDetectedMeshViews(System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView})
-  parent: Synesthesias.Snap.Sample.DetectionTouchModel
-  langs:
-  - csharp
-  - vb
-  name: SetDetectedMeshViews(IEnumerable<IMobileDetectionMeshView>)
-  nameWithType: DetectionTouchModel.SetDetectedMeshViews(IEnumerable<IMobileDetectionMeshView>)
-  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews(System.Collections.Generic.IEnumerable<Synesthesias.Snap.Sample.IMobileDetectionMeshView>)
-  type: Method
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: SetDetectedMeshViews
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-    startLine: 70
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: 検出されたメッシュのViewを設定する
-  example: []
-  syntax:
-    content: public void SetDetectedMeshViews(IEnumerable<IMobileDetectionMeshView> meshViews)
-    parameters:
-    - id: meshViews
-      type: System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
-    content.vb: Public Sub SetDetectedMeshViews(meshViews As IEnumerable(Of IMobileDetectionMeshView))
-  overload: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews*
-  nameWithType.vb: DetectionTouchModel.SetDetectedMeshViews(IEnumerable(Of IMobileDetectionMeshView))
-  fullName.vb: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews(System.Collections.Generic.IEnumerable(Of Synesthesias.Snap.Sample.IMobileDetectionMeshView))
-  name.vb: SetDetectedMeshViews(IEnumerable(Of IMobileDetectionMeshView))
 - uid: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
   commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
   id: GetSelectedMeshView
@@ -287,7 +289,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetSelectedMeshView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
@@ -743,6 +745,23 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_ContainsMeshId_System_String_
+  name: ContainsMeshId
+  nameWithType: DetectionTouchModel.ContainsMeshId
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView*
   commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView
   href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_SetDetectedMeshView_Synesthesias_Snap_Sample_IMobileDetectionMeshView_
@@ -756,110 +775,6 @@ references:
   name: IMobileDetectionMeshView
   nameWithType: IMobileDetectionMeshView
   fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView
-- uid: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews*
-  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews
-  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_SetDetectedMeshViews_System_Collections_Generic_IEnumerable_Synesthesias_Snap_Sample_IMobileDetectionMeshView__
-  name: SetDetectedMeshViews
-  nameWithType: DetectionTouchModel.SetDetectedMeshViews
-  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshViews
-- uid: System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
-  commentId: T:System.Collections.Generic.IEnumerable{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  name: IEnumerable<IMobileDetectionMeshView>
-  nameWithType: IEnumerable<IMobileDetectionMeshView>
-  fullName: System.Collections.Generic.IEnumerable<Synesthesias.Snap.Sample.IMobileDetectionMeshView>
-  nameWithType.vb: IEnumerable(Of IMobileDetectionMeshView)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of Synesthesias.Snap.Sample.IMobileDetectionMeshView)
-  name.vb: IEnumerable(Of IMobileDetectionMeshView)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: <
-  - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
-    name: IMobileDetectionMeshView
-    href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
-    name: IMobileDetectionMeshView
-    href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
-  - name: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView*
   commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
   href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_GetSelectedMeshView

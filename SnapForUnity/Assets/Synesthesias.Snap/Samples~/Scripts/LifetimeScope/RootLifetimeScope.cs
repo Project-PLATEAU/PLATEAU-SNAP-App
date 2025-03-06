@@ -23,7 +23,6 @@ namespace Synesthesias.Snap.Sample
             builder.RegisterInstance(residentView);
             ConfigureEnvironment(builder);
             ConfigureLocalization(builder);
-            ConfigureBoot(builder);
             ConfigureAPI(builder);
             ConfigureRepository(builder);
         }
@@ -39,17 +38,6 @@ namespace Synesthesias.Snap.Sample
             builder.Register<LocalizationModel>(Lifetime.Singleton);
         }
 
-        private void ConfigureBoot(IContainerBuilder builder)
-        {
-#if UNITY_EDITOR
-            builder.Register<MockServerModel>(Lifetime.Singleton)
-                .AsImplementedInterfaces();
-#else
-            builder.Register<ServerModel>(Lifetime.Singleton)
-                .AsImplementedInterfaces();
-#endif
-        }
-
         private void ConfigureAPI(IContainerBuilder builder)
         {
             var apiConfiguration = environmentScriptableObject.ApiConfiguration;
@@ -61,13 +49,6 @@ namespace Synesthesias.Snap.Sample
             };
 
             builder.RegisterInstance(configuration);
-
-            builder.Register<MockEndPointModel>(Lifetime.Singleton)
-                .AsImplementedInterfaces();
-
-            // TODO: APIModelに差し替える
-            builder.Register<MockAPIModel>(Lifetime.Singleton)
-                .AsImplementedInterfaces();
         }
 
         private static void ConfigureRepository(IContainerBuilder builder)

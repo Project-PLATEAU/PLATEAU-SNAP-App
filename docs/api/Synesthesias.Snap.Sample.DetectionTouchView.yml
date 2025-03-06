@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionTouchView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectionTouchView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionTouchView.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionTouchView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OnScreenInputAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionTouchView.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionTouchView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TargetCamera
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionTouchView.cs

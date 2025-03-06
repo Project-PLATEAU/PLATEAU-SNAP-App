@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MockJsonParser
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs
-    startLine: 23
+    startLine: 30
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -51,11 +51,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Parse
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs
-    startLine: 25
+    startLine: 32
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime

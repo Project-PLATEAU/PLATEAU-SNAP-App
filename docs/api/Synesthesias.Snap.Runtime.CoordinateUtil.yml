@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/CoordinateUtil.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CoordinateUtil
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/CoordinateUtil.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/CoordinateUtil.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: JGD2011ToPlaneRectCoord
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/CoordinateUtil.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/CoordinateUtil.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: PlaneRectCoordToJGD2011
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/CoordinateUtil.cs

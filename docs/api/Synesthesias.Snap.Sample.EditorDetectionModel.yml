@@ -5,7 +5,7 @@ items:
   id: EditorDetectionModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.EditorDetectionModel.#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.EditorGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.MeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)
+  - Synesthesias.Snap.Sample.EditorDetectionModel.#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)
   - Synesthesias.Snap.Sample.EditorDetectionModel.CaptureAsync(UnityEngine.Camera,System.Threading.CancellationToken)
   - Synesthesias.Snap.Sample.EditorDetectionModel.Dispose
   - Synesthesias.Snap.Sample.EditorDetectionModel.GetCameraTexture
@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EditorDetectionModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OnSelectedAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -78,21 +78,21 @@ items:
       type: R3.Observable{System.Boolean}
     content.vb: Public Function OnSelectedAsObservable() As Observable(Of Boolean)
   overload: Synesthesias.Snap.Sample.EditorDetectionModel.OnSelectedAsObservable*
-- uid: Synesthesias.Snap.Sample.EditorDetectionModel.#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.EditorGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.MeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)
-  commentId: M:Synesthesias.Snap.Sample.EditorDetectionModel.#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.EditorGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.MeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)
-  id: '#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.EditorGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.MeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)'
+- uid: Synesthesias.Snap.Sample.EditorDetectionModel.#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)
+  commentId: M:Synesthesias.Snap.Sample.EditorDetectionModel.#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)
+  id: '#ctor(Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.IEditorDetectionParameterModel,Synesthesias.Snap.Sample.EditorWebCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.EditorDetectionMeshModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Sample.MockValidationResultModel)'
   parent: Synesthesias.Snap.Sample.EditorDetectionModel
   langs:
   - csharp
   - vb
-  name: EditorDetectionModel(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, EditorGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, MeshValidationModel, MockValidationResultModel)
-  nameWithType: EditorDetectionModel.EditorDetectionModel(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, EditorGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, MeshValidationModel, MockValidationResultModel)
-  fullName: Synesthesias.Snap.Sample.EditorDetectionModel.EditorDetectionModel(Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.ValidationRepository, Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Runtime.EditorGeospatialMathModel, Synesthesias.Snap.Sample.IEditorDetectionParameterModel, Synesthesias.Snap.Sample.EditorWebCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.EditorDetectionMeshModel, Synesthesias.Snap.Runtime.MeshValidationModel, Synesthesias.Snap.Sample.MockValidationResultModel)
+  name: EditorDetectionModel(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, IGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, IMeshValidationModel, MockValidationResultModel)
+  nameWithType: EditorDetectionModel.EditorDetectionModel(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, IGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, IMeshValidationModel, MockValidationResultModel)
+  fullName: Synesthesias.Snap.Sample.EditorDetectionModel.EditorDetectionModel(Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.ValidationRepository, Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Runtime.IGeospatialMathModel, Synesthesias.Snap.Sample.IEditorDetectionParameterModel, Synesthesias.Snap.Sample.EditorWebCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.EditorDetectionMeshModel, Synesthesias.Snap.Runtime.IMeshValidationModel, Synesthesias.Snap.Sample.MockValidationResultModel)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -103,7 +103,7 @@ items:
   summary: コンストラクタ
   example: []
   syntax:
-    content: public EditorDetectionModel(TextureRepository textureRepository, ValidationRepository validationRepository, SurfaceRepository surfaceRepository, SceneModel sceneModel, LocalizationModel localizationModel, EditorGeospatialMathModel geospatialMathModel, IEditorDetectionParameterModel parameterModel, EditorWebCameraModel cameraModel, DetectionMenuModel menuModel, DetectionTouchModel touchModel, EditorDetectionMeshModel meshModel, MeshValidationModel meshValidationModel, MockValidationResultModel resultModel)
+    content: public EditorDetectionModel(TextureRepository textureRepository, ValidationRepository validationRepository, SurfaceRepository surfaceRepository, SceneModel sceneModel, LocalizationModel localizationModel, IGeospatialMathModel geospatialMathModel, IEditorDetectionParameterModel parameterModel, EditorWebCameraModel cameraModel, DetectionMenuModel menuModel, DetectionTouchModel touchModel, EditorDetectionMeshModel detectionMeshModel, IMeshValidationModel meshValidationModel, MockValidationResultModel resultModel)
     parameters:
     - id: textureRepository
       type: Synesthesias.Snap.Sample.TextureRepository
@@ -116,7 +116,7 @@ items:
     - id: localizationModel
       type: Synesthesias.Snap.Sample.LocalizationModel
     - id: geospatialMathModel
-      type: Synesthesias.Snap.Runtime.EditorGeospatialMathModel
+      type: Synesthesias.Snap.Runtime.IGeospatialMathModel
     - id: parameterModel
       type: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
     - id: cameraModel
@@ -125,17 +125,17 @@ items:
       type: Synesthesias.Snap.Sample.DetectionMenuModel
     - id: touchModel
       type: Synesthesias.Snap.Sample.DetectionTouchModel
-    - id: meshModel
+    - id: detectionMeshModel
       type: Synesthesias.Snap.Sample.EditorDetectionMeshModel
     - id: meshValidationModel
-      type: Synesthesias.Snap.Runtime.MeshValidationModel
+      type: Synesthesias.Snap.Runtime.IMeshValidationModel
     - id: resultModel
       type: Synesthesias.Snap.Sample.MockValidationResultModel
-    content.vb: Public Sub New(textureRepository As TextureRepository, validationRepository As ValidationRepository, surfaceRepository As SurfaceRepository, sceneModel As SceneModel, localizationModel As LocalizationModel, geospatialMathModel As EditorGeospatialMathModel, parameterModel As IEditorDetectionParameterModel, cameraModel As EditorWebCameraModel, menuModel As DetectionMenuModel, touchModel As DetectionTouchModel, meshModel As EditorDetectionMeshModel, meshValidationModel As MeshValidationModel, resultModel As MockValidationResultModel)
+    content.vb: Public Sub New(textureRepository As TextureRepository, validationRepository As ValidationRepository, surfaceRepository As SurfaceRepository, sceneModel As SceneModel, localizationModel As LocalizationModel, geospatialMathModel As IGeospatialMathModel, parameterModel As IEditorDetectionParameterModel, cameraModel As EditorWebCameraModel, menuModel As DetectionMenuModel, touchModel As DetectionTouchModel, detectionMeshModel As EditorDetectionMeshModel, meshValidationModel As IMeshValidationModel, resultModel As MockValidationResultModel)
   overload: Synesthesias.Snap.Sample.EditorDetectionModel.#ctor*
-  nameWithType.vb: EditorDetectionModel.New(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, EditorGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, MeshValidationModel, MockValidationResultModel)
-  fullName.vb: Synesthesias.Snap.Sample.EditorDetectionModel.New(Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.ValidationRepository, Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Runtime.EditorGeospatialMathModel, Synesthesias.Snap.Sample.IEditorDetectionParameterModel, Synesthesias.Snap.Sample.EditorWebCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.EditorDetectionMeshModel, Synesthesias.Snap.Runtime.MeshValidationModel, Synesthesias.Snap.Sample.MockValidationResultModel)
-  name.vb: New(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, EditorGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, MeshValidationModel, MockValidationResultModel)
+  nameWithType.vb: EditorDetectionModel.New(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, IGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, IMeshValidationModel, MockValidationResultModel)
+  fullName.vb: Synesthesias.Snap.Sample.EditorDetectionModel.New(Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.ValidationRepository, Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Runtime.IGeospatialMathModel, Synesthesias.Snap.Sample.IEditorDetectionParameterModel, Synesthesias.Snap.Sample.EditorWebCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.EditorDetectionMeshModel, Synesthesias.Snap.Runtime.IMeshValidationModel, Synesthesias.Snap.Sample.MockValidationResultModel)
+  name.vb: New(TextureRepository, ValidationRepository, SurfaceRepository, SceneModel, LocalizationModel, IGeospatialMathModel, IEditorDetectionParameterModel, EditorWebCameraModel, DetectionMenuModel, DetectionTouchModel, EditorDetectionMeshModel, IMeshValidationModel, MockValidationResultModel)
 - uid: Synesthesias.Snap.Sample.EditorDetectionModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.EditorDetectionModel.Dispose
   id: Dispose
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: StartAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TouchScreen
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ShowMenu
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -276,7 +276,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetCameraTexture
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CaptureAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/EditorDetectionModel.cs
@@ -675,7 +675,7 @@ references:
   fullName: R3
 - uid: Synesthesias.Snap.Sample.EditorDetectionModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionModel.#ctor
-  href: Synesthesias.Snap.Sample.EditorDetectionModel.html#Synesthesias_Snap_Sample_EditorDetectionModel__ctor_Synesthesias_Snap_Sample_TextureRepository_Synesthesias_Snap_Sample_ValidationRepository_Synesthesias_Snap_Sample_SurfaceRepository_Synesthesias_Snap_Sample_SceneModel_Synesthesias_Snap_Sample_LocalizationModel_Synesthesias_Snap_Runtime_EditorGeospatialMathModel_Synesthesias_Snap_Sample_IEditorDetectionParameterModel_Synesthesias_Snap_Sample_EditorWebCameraModel_Synesthesias_Snap_Sample_DetectionMenuModel_Synesthesias_Snap_Sample_DetectionTouchModel_Synesthesias_Snap_Sample_EditorDetectionMeshModel_Synesthesias_Snap_Runtime_MeshValidationModel_Synesthesias_Snap_Sample_MockValidationResultModel_
+  href: Synesthesias.Snap.Sample.EditorDetectionModel.html#Synesthesias_Snap_Sample_EditorDetectionModel__ctor_Synesthesias_Snap_Sample_TextureRepository_Synesthesias_Snap_Sample_ValidationRepository_Synesthesias_Snap_Sample_SurfaceRepository_Synesthesias_Snap_Sample_SceneModel_Synesthesias_Snap_Sample_LocalizationModel_Synesthesias_Snap_Runtime_IGeospatialMathModel_Synesthesias_Snap_Sample_IEditorDetectionParameterModel_Synesthesias_Snap_Sample_EditorWebCameraModel_Synesthesias_Snap_Sample_DetectionMenuModel_Synesthesias_Snap_Sample_DetectionTouchModel_Synesthesias_Snap_Sample_EditorDetectionMeshModel_Synesthesias_Snap_Runtime_IMeshValidationModel_Synesthesias_Snap_Sample_MockValidationResultModel_
   name: EditorDetectionModel
   nameWithType: EditorDetectionModel.EditorDetectionModel
   fullName: Synesthesias.Snap.Sample.EditorDetectionModel.EditorDetectionModel
@@ -717,13 +717,13 @@ references:
   name: LocalizationModel
   nameWithType: LocalizationModel
   fullName: Synesthesias.Snap.Sample.LocalizationModel
-- uid: Synesthesias.Snap.Runtime.EditorGeospatialMathModel
-  commentId: T:Synesthesias.Snap.Runtime.EditorGeospatialMathModel
+- uid: Synesthesias.Snap.Runtime.IGeospatialMathModel
+  commentId: T:Synesthesias.Snap.Runtime.IGeospatialMathModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.EditorGeospatialMathModel.html
-  name: EditorGeospatialMathModel
-  nameWithType: EditorGeospatialMathModel
-  fullName: Synesthesias.Snap.Runtime.EditorGeospatialMathModel
+  href: Synesthesias.Snap.Runtime.IGeospatialMathModel.html
+  name: IGeospatialMathModel
+  nameWithType: IGeospatialMathModel
+  fullName: Synesthesias.Snap.Runtime.IGeospatialMathModel
 - uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
   commentId: T:Synesthesias.Snap.Sample.IEditorDetectionParameterModel
   parent: Synesthesias.Snap.Sample
@@ -759,13 +759,13 @@ references:
   name: EditorDetectionMeshModel
   nameWithType: EditorDetectionMeshModel
   fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel
-- uid: Synesthesias.Snap.Runtime.MeshValidationModel
-  commentId: T:Synesthesias.Snap.Runtime.MeshValidationModel
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.IMeshValidationModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.MeshValidationModel.html
-  name: MeshValidationModel
-  nameWithType: MeshValidationModel
-  fullName: Synesthesias.Snap.Runtime.MeshValidationModel
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html
+  name: IMeshValidationModel
+  nameWithType: IMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel
 - uid: Synesthesias.Snap.Sample.MockValidationResultModel
   commentId: T:Synesthesias.Snap.Sample.MockValidationResultModel
   parent: Synesthesias.Snap.Sample

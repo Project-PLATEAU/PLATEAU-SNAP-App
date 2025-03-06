@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialAnchorResultType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: None
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Failed
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Success
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResultType.cs

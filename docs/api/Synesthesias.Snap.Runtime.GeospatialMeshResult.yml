@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialMeshResult
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MainLoopState
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: AccuracyState
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ResultType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: AnchorTransform
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Mesh
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsSuccess
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResult.cs

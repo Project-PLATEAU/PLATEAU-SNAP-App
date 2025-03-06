@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/doc_fx/apiSpec/new?filename=Synesthesias_Snap_Runtime_MockSurface.md&amp;value=---%0Auid%3A%20Synesthesias.Snap.Runtime.MockSurface%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/update_docs/apiSpec/new?filename=Synesthesias_Snap_Runtime_MockSurface.md&amp;value=---%0Auid%3A%20Synesthesias.Snap.Runtime.MockSurface%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Synesthesias_Snap_Runtime_MockSurface" data-uid="Synesthesias.Snap.Runtime.MockSurface" class="text-break">
-Class MockSurface  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L16"><i class="bi bi-code-slash"></i></a>
+Class MockSurface  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -162,11 +162,10 @@ Class MockSurface  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Synesthesias_Snap_Runtime_MockSurface_Coordinates" data-uid="Synesthesias.Snap.Runtime.MockSurface.Coordinates">
   Coordinates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>面の座標</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -187,17 +186,6 @@ public List&lt;List&lt;List&lt;double&gt;&gt;&gt; Coordinates { get; set; }</cod
 
 
 
-  <h4 class="section" id="Synesthesias_Snap_Runtime_MockSurface_Coordinates_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>内側から数えて
-[1番目のList] - 座標の配列
-0インデックス目: 緯度(Latitude)の座標
-1インデックス目: 経度(Longitude)の座標
-2インデックス目: 高度(Altitude)の座標</p>
-<p>[2番目のList] - 面と穴のデータ
-0インデックス目: 面(Hull)の座標の配列
-1インデックス目以降: 穴(Hole)の座標の配列(面がくり抜かれているいる場合)</p>
-<p>[3番目のList] - 面と穴のデータの配列</p>
-</div>
 
 
 
@@ -206,7 +194,7 @@ public List&lt;List&lt;List&lt;double&gt;&gt;&gt; Coordinates { get; set; }</cod
 
   <h3 id="Synesthesias_Snap_Runtime_MockSurface_GmlId" data-uid="Synesthesias.Snap.Runtime.MockSurface.GmlId">
   GmlId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>GML ID</p>
@@ -235,11 +223,58 @@ public string GmlId { get; set; }</code></pre>
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Synesthesias_Snap_Runtime_MockSurface_GetUniqueCoordinates_" data-uid="Synesthesias.Snap.Runtime.MockSurface.GetUniqueCoordinates*"></a>
+
+  <h3 id="Synesthesias_Snap_Runtime_MockSurface_GetUniqueCoordinates" data-uid="Synesthesias.Snap.Runtime.MockSurface.GetUniqueCoordinates">
+  GetUniqueCoordinates()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>面の頂点座標のリスト(座標の重複なし)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;List&lt;List&lt;double&gt;&gt;&gt; GetUniqueCoordinates()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Synesthesias_Snap_Runtime_MockSurface_GetUniqueCoordinates_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>内側から数えて
+[1番目のList] - 座標の配列
+0インデックス目: 緯度(Latitude)の座標
+1インデックス目: 経度(Longitude)の座標
+2インデックス目: 高度(Altitude)の座標</p>
+<p>[2番目のList] - 面と穴のデータ
+0インデックス目: 面(Hull)の座標の配列
+1インデックス目以降: 穴(Hole)の座標の配列(面がくり抜かれているいる場合)</p>
+<p>[3番目のList] - 面と穴のデータの配列</p>
+</div>
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L16" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/JsonParser.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

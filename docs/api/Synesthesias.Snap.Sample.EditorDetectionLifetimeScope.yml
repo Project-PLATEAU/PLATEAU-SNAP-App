@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/Detection/EditorDetectionLifetimeScope.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EditorDetectionLifetimeScope
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/Detection/EditorDetectionLifetimeScope.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/Detection/EditorDetectionLifetimeScope.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Configure
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/LifetimeScope/Detection/EditorDetectionLifetimeScope.cs

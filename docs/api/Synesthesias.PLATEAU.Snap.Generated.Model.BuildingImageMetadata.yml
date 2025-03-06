@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: BuildingImageMetadata
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: gmlid
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: from
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: to
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: roll
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: timestamp
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToJson
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/API/Model/BuildingImageMetadata.cs

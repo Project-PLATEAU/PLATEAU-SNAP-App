@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ValidationDialogModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsVisibleProperty
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsLeftValidProperty
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsRightValidProperty
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ParameterAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TitleAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DescriptionAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsValidAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -336,7 +336,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SetParameter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -367,7 +367,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SetTitle
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -401,7 +401,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SetDescription
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -435,7 +435,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetTitleIconSprite
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
@@ -473,7 +473,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetTextIconSprite
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs

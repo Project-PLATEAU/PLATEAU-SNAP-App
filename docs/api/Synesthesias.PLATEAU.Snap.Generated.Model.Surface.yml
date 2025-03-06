@@ -7,6 +7,7 @@ items:
   children:
   - Synesthesias.PLATEAU.Snap.Generated.Model.Surface.#ctor(System.String,System.Collections.Generic.List{System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}})
   - Synesthesias.PLATEAU.Snap.Generated.Model.Surface.Coordinates
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates
   - Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GmlId
   - Synesthesias.PLATEAU.Snap.Generated.Model.Surface.Gmlid
   - Synesthesias.PLATEAU.Snap.Generated.Model.Surface.ToJson
@@ -21,11 +22,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Implementation/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Surface
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Implementation/Model/Surface.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - Synesthesias.Snap.Generated.Sample
   namespace: Synesthesias.PLATEAU.Snap.Generated.Model
@@ -73,7 +74,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
@@ -111,7 +112,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Gmlid
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
@@ -159,7 +160,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Coordinates
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
@@ -182,8 +183,6 @@ items:
 
       Public Property Coordinates As List(Of List(Of List(Of Double)))
   overload: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.Coordinates*
-  implements:
-  - Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -209,7 +208,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToString
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
@@ -241,7 +240,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToJson
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Surface.cs
@@ -272,11 +271,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Implementation/Model/Surface.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GmlId
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Implementation/Model/Surface.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - Synesthesias.Snap.Generated.Sample
   namespace: Synesthesias.PLATEAU.Snap.Generated.Model
@@ -291,6 +290,58 @@ items:
   overload: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GmlId*
   implements:
   - Synesthesias.Snap.Runtime.ISurfaceModel.GmlId
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates
+  id: GetUniqueCoordinates
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Surface
+  langs:
+  - csharp
+  - vb
+  name: GetUniqueCoordinates()
+  nameWithType: Surface.GetUniqueCoordinates()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Implementation/Model/Surface.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetUniqueCoordinates
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Implementation/Model/Surface.cs
+    startLine: 14
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: 面の頂点座標のリスト(座標の重複なし)
+  remarks: >-
+    内側から数えて
+
+    [1番目のList] - 座標の配列
+
+    0インデックス目: 緯度(Latitude)の座標
+
+    1インデックス目: 経度(Longitude)の座標
+
+    2インデックス目: 高度(Altitude)の座標
+
+
+    [2番目のList] - 面と穴のデータ
+
+    0インデックス目: 面(Hull)の座標の配列
+
+    1インデックス目以降: 穴(Hole)の座標の配列(面がくり抜かれているいる場合)
+
+
+    [3番目のList] - 面と穴のデータの配列
+  example: []
+  syntax:
+    content: public List<List<List<double>>> GetUniqueCoordinates()
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}}
+    content.vb: Public Function GetUniqueCoordinates() As List(Of List(Of List(Of Double)))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates*
+  implements:
+  - Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
 references:
 - uid: Synesthesias.PLATEAU.Snap.Generated.Model
   commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
@@ -754,13 +805,6 @@ references:
   name: Coordinates
   nameWithType: Surface.Coordinates
   fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.Coordinates
-- uid: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
-  commentId: P:Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
-  parent: Synesthesias.Snap.Runtime.ISurfaceModel
-  href: Synesthesias.Snap.Runtime.ISurfaceModel.html#Synesthesias_Snap_Runtime_ISurfaceModel_Coordinates
-  name: Coordinates
-  nameWithType: ISurfaceModel.Coordinates
-  fullName: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -806,7 +850,28 @@ references:
 - uid: Synesthesias.Snap.Runtime.ISurfaceModel.GmlId
   commentId: P:Synesthesias.Snap.Runtime.ISurfaceModel.GmlId
   parent: Synesthesias.Snap.Runtime.ISurfaceModel
-  href: Synesthesias.Snap.Runtime.ISurfaceModel.html#Synesthesias_Snap_Runtime_ISurfaceModel_GmlId
   name: GmlId
   nameWithType: ISurfaceModel.GmlId
   fullName: Synesthesias.Snap.Runtime.ISurfaceModel.GmlId
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.html#Synesthesias_PLATEAU_Snap_Generated_Model_Surface_GetUniqueCoordinates
+  name: GetUniqueCoordinates
+  nameWithType: Surface.GetUniqueCoordinates
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.GetUniqueCoordinates
+- uid: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+  commentId: M:Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+  parent: Synesthesias.Snap.Runtime.ISurfaceModel
+  name: GetUniqueCoordinates()
+  nameWithType: ISurfaceModel.GetUniqueCoordinates()
+  fullName: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates()
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+    name: GetUniqueCoordinates
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+    name: GetUniqueCoordinates
+  - name: (
+  - name: )

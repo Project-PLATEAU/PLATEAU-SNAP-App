@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TextureRepository
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SetTexture
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetTexture
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Clear
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/TextureRepository.cs

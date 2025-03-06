@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DialogIconDefine
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: None
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Success1
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Success2
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Error1
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Error2
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs

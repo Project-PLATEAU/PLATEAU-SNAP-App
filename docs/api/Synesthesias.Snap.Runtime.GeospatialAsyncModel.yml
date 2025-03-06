@@ -18,7 +18,9 @@ items:
   - Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorAsync(System.Double,System.Double,System.Double,UnityEngine.Quaternion,System.Threading.CancellationToken)
   - Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorWithAnchorTypeAsync(Synesthesias.Snap.Runtime.AnchorType,Google.XR.ARCoreExtensions.GeospatialPose,System.Threading.CancellationToken)
   - Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorWithAnchorTypeAsync(Synesthesias.Snap.Runtime.AnchorType,System.Double,System.Double,System.Double,UnityEngine.Quaternion,System.Threading.CancellationToken)
+  - Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState
   - Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraGeospatialPose
+  - Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState
   langs:
   - csharp
   - vb
@@ -29,7 +31,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialAsyncModel
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
@@ -69,7 +71,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
@@ -109,7 +111,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetCameraGeospatialPose
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
@@ -125,6 +127,66 @@ items:
       type: Google.XR.ARCoreExtensions.GeospatialPose
     content.vb: Public Function GetCameraGeospatialPose() As GeospatialPose
   overload: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraGeospatialPose*
+- uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState
+  id: GetCameraTrackingState
+  parent: Synesthesias.Snap.Runtime.GeospatialAsyncModel
+  langs:
+  - csharp
+  - vb
+  name: GetCameraTrackingState()
+  nameWithType: GeospatialAsyncModel.GetCameraTrackingState()
+  fullName: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetCameraTrackingState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
+    startLine: 49
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: カメラのTrackingStateを取得する
+  example: []
+  syntax:
+    content: public TrackingState GetCameraTrackingState()
+    return:
+      type: UnityEngine.XR.ARSubsystems.TrackingState
+    content.vb: Public Function GetCameraTrackingState() As TrackingState
+  overload: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState*
+- uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState
+  id: GetCameraEarthState
+  parent: Synesthesias.Snap.Runtime.GeospatialAsyncModel
+  langs:
+  - csharp
+  - vb
+  name: GetCameraEarthState()
+  nameWithType: GeospatialAsyncModel.GetCameraEarthState()
+  fullName: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetCameraEarthState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
+    startLine: 58
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: カメラのEarthStateを取得する
+  example: []
+  syntax:
+    content: public EarthState GetCameraEarthState()
+    return:
+      type: Google.XR.ARCoreExtensions.EarthState
+    content.vb: Public Function GetCameraEarthState() As EarthState
+  overload: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState*
 - uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorWithAnchorTypeAsync(Synesthesias.Snap.Runtime.AnchorType,System.Double,System.Double,System.Double,UnityEngine.Quaternion,System.Threading.CancellationToken)
   commentId: M:Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorWithAnchorTypeAsync(Synesthesias.Snap.Runtime.AnchorType,System.Double,System.Double,System.Double,UnityEngine.Quaternion,System.Threading.CancellationToken)
   id: CreateARGeospatialAnchorWithAnchorTypeAsync(Synesthesias.Snap.Runtime.AnchorType,System.Double,System.Double,System.Double,UnityEngine.Quaternion,System.Threading.CancellationToken)
@@ -139,11 +201,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorWithAnchorTypeAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 49
+    startLine: 67
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -185,11 +247,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorWithAnchorTypeAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 93
+    startLine: 111
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -222,11 +284,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorAsRooftopAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 117
+    startLine: 135
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -266,11 +328,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorAsRooftopAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 146
+    startLine: 164
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -301,11 +363,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorAsTerrainAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 163
+    startLine: 181
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -345,11 +407,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorAsTerrainAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 192
+    startLine: 210
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -380,11 +442,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 209
+    startLine: 227
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -424,11 +486,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARGeospatialAnchorAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 229
+    startLine: 247
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -459,11 +521,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARAnchorAsStreetScapeAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 246
+    startLine: 264
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -496,11 +558,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARAnchorAsStreetScapeAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 269
+    startLine: 287
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -531,11 +593,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateARAnchorAsStreetScapeAsync
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 284
+    startLine: 302
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -568,11 +630,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ARRaycast
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAsyncModel.cs
-    startLine: 305
+    startLine: 323
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
@@ -970,6 +1032,62 @@ references:
   name: GeospatialPose
   nameWithType: GeospatialPose
   fullName: Google.XR.ARCoreExtensions.GeospatialPose
+- uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState
+  href: Synesthesias.Snap.Runtime.GeospatialAsyncModel.html#Synesthesias_Snap_Runtime_GeospatialAsyncModel_GetCameraTrackingState
+  name: GetCameraTrackingState
+  nameWithType: GeospatialAsyncModel.GetCameraTrackingState
+  fullName: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraTrackingState
+- uid: UnityEngine.XR.ARSubsystems.TrackingState
+  commentId: T:UnityEngine.XR.ARSubsystems.TrackingState
+  parent: UnityEngine.XR.ARSubsystems
+  isExternal: true
+  name: TrackingState
+  nameWithType: TrackingState
+  fullName: UnityEngine.XR.ARSubsystems.TrackingState
+- uid: UnityEngine.XR.ARSubsystems
+  commentId: N:UnityEngine.XR.ARSubsystems
+  isExternal: true
+  name: UnityEngine.XR.ARSubsystems
+  nameWithType: UnityEngine.XR.ARSubsystems
+  fullName: UnityEngine.XR.ARSubsystems
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARSubsystems
+    name: ARSubsystems
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARSubsystems
+    name: ARSubsystems
+    isExternal: true
+- uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState
+  href: Synesthesias.Snap.Runtime.GeospatialAsyncModel.html#Synesthesias_Snap_Runtime_GeospatialAsyncModel_GetCameraEarthState
+  name: GetCameraEarthState
+  nameWithType: GeospatialAsyncModel.GetCameraEarthState
+  fullName: Synesthesias.Snap.Runtime.GeospatialAsyncModel.GetCameraEarthState
+- uid: Google.XR.ARCoreExtensions.EarthState
+  commentId: T:Google.XR.ARCoreExtensions.EarthState
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: EarthState
+  nameWithType: EarthState
+  fullName: Google.XR.ARCoreExtensions.EarthState
 - uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorWithAnchorTypeAsync*
   commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAsyncModel.CreateARGeospatialAnchorWithAnchorTypeAsync
   href: Synesthesias.Snap.Runtime.GeospatialAsyncModel.html#Synesthesias_Snap_Runtime_GeospatialAsyncModel_CreateARGeospatialAnchorWithAnchorTypeAsync_Synesthesias_Snap_Runtime_AnchorType_System_Double_System_Double_System_Double_UnityEngine_Quaternion_System_Threading_CancellationToken_
@@ -1195,36 +1313,6 @@ references:
     name: ARAnchor
     isExternal: true
   - name: )
-- uid: UnityEngine.XR.ARSubsystems
-  commentId: N:UnityEngine.XR.ARSubsystems
-  isExternal: true
-  name: UnityEngine.XR.ARSubsystems
-  nameWithType: UnityEngine.XR.ARSubsystems
-  fullName: UnityEngine.XR.ARSubsystems
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR
-    name: XR
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR.ARSubsystems
-    name: ARSubsystems
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR
-    name: XR
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR.ARSubsystems
-    name: ARSubsystems
-    isExternal: true
 - uid: UnityEngine.XR.ARSubsystems.XRRaycastHit
   commentId: T:UnityEngine.XR.ARSubsystems.XRRaycastHit
   parent: UnityEngine.XR.ARSubsystems

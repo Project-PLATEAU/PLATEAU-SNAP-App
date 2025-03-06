@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Presenter/Detection/MobileDetectionPresenter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MobileDetectionPresenter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Presenter/Detection/MobileDetectionPresenter.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -56,11 +56,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Presenter/Detection/MobileDetectionPresenter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Presenter/Detection/MobileDetectionPresenter.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -92,11 +92,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Presenter/Detection/MobileDetectionPresenter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: StartAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Presenter/Detection/MobileDetectionPresenter.cs
-    startLine: 32
+    startLine: 33
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample

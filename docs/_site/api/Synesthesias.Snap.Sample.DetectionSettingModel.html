@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/doc_fx/apiSpec/new?filename=Synesthesias_Snap_Sample_DetectionSettingModel.md&amp;value=---%0Auid%3A%20Synesthesias.Snap.Sample.DetectionSettingModel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/update_docs/apiSpec/new?filename=Synesthesias_Snap_Sample_DetectionSettingModel.md&amp;value=---%0Auid%3A%20Synesthesias.Snap.Sample.DetectionSettingModel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Synesthesias_Snap_Sample_DetectionSettingModel" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel" class="text-break">
-Class DetectionSettingModel  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class DetectionSettingModel  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -160,9 +160,9 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 
   <a id="Synesthesias_Snap_Sample_DetectionSettingModel__ctor_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.#ctor*"></a>
 
-  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel__ctor_Synesthesias_Snap_Sample_DetectionMenuModel_System_Int32_System_Int32_System_Int32_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32)">
-  DetectionSettingModel(DetectionMenuModel, int, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel__ctor_Synesthesias_Snap_Sample_DetectionMenuModel_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32,System.Int32)">
+  DetectionSettingModel(DetectionMenuModel, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>コンストラクタ</p>
@@ -170,7 +170,7 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DetectionSettingModel(DetectionMenuModel menuModel, int minimumDistance, int maximumDistance, int incrementDistance)</code></pre>
+    <pre><code class="lang-csharp hljs">public DetectionSettingModel(DetectionMenuModel menuModel, int minimumDistance, int maximumDistance, int incrementDistance, int defaultDistance)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -183,6 +183,8 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
     <dd></dd>
     <dt><code>incrementDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
+    <dt><code>defaultDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -196,14 +198,15 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
+  <a id="Synesthesias_Snap_Sample_DetectionSettingModel_Distance_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.Distance*"></a>
 
-  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_DistanceProperty" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.DistanceProperty">
-  DistanceProperty
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_Distance" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.Distance">
+  Distance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>検出距離</p>
@@ -211,15 +214,16 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ReactiveProperty&lt;int&gt; DistanceProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public int Distance { get; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">ReactiveProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -230,11 +234,11 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisible_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible*"></a>
 
-
-  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisibleProperty" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleProperty">
-  IsGeospatialVisibleProperty
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisible" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible">
+  IsGeospatialVisible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Geospatial情報を表示するか</p>
@@ -242,15 +246,16 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ReactiveProperty&lt;bool&gt; IsGeospatialVisibleProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsGeospatialVisible { get; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">ReactiveProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -261,11 +266,11 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="Synesthesias_Snap_Sample_DetectionSettingModel_IsManualDetection_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection*"></a>
 
-
-  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_IsManualDetectionProperty" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetectionProperty">
-  IsManualDetectionProperty
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_IsManualDetection" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection">
+  IsManualDetection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>手動検出か</p>
@@ -273,18 +278,18 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ReactiveProperty&lt;bool&gt; IsManualDetectionProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsManualDetection { get; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">ReactiveProperty</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
-
 
 
 
@@ -301,7 +306,7 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 
   <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_Dispose" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>破棄</p>
@@ -324,11 +329,43 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisibleAsObservable_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable*"></a>
+
+  <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisibleAsObservable" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable">
+  IsGeospatialVisibleAsObservable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Geospatial情報を表示するかのObservable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Observable&lt;bool&gt; IsGeospatialVisibleAsObservable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Observable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Synesthesias_Snap_Sample_DetectionSettingModel_StartAsync_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.StartAsync*"></a>
 
   <h3 id="Synesthesias_Snap_Sample_DetectionSettingModel_StartAsync_System_Threading_CancellationToken_" data-uid="Synesthesias.Snap.Sample.DetectionSettingModel.StartAsync(System.Threading.CancellationToken)">
   StartAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>開始</p>
@@ -365,7 +402,7 @@ Class DetectionSettingModel  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

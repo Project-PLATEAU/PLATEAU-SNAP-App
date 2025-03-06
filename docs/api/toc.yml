@@ -80,12 +80,12 @@ items:
   items:
   - uid: Synesthesias.Snap.Runtime.AnchorType
     name: AnchorType
-  - uid: Synesthesias.Snap.Runtime.CoordinateUtil
-    name: CoordinateUtil
   - uid: Synesthesias.Snap.Runtime.EditorGeospatialMathModel
     name: EditorGeospatialMathModel
-  - uid: Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel
-    name: EditorGeospatialSimpleMeshModel
+  - uid: Synesthesias.Snap.Runtime.EditorGeospatialMeshModel
+    name: EditorGeospatialMeshModel
+  - uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+    name: EditorMeshValidationModel
   - uid: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
     name: GeospatialAccuracyModel
   - uid: Synesthesias.Snap.Runtime.GeospatialAccuracyResult
@@ -138,63 +138,51 @@ items:
     name: GeospatialVector
   - uid: Synesthesias.Snap.Runtime.IGeospatialMathModel
     name: IGeospatialMathModel
-  - uid: Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel
-    name: IGeospatialSimpleMeshModel
+  - uid: Synesthesias.Snap.Runtime.IGeospatialMeshModel
+    name: IGeospatialMeshModel
+  - uid: Synesthesias.Snap.Runtime.IMeshFactoryModel
+    name: IMeshFactoryModel
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel
+    name: IMeshValidationModel
   - uid: Synesthesias.Snap.Runtime.ISurfaceModel
     name: ISurfaceModel
-  - uid: Synesthesias.Snap.Runtime.LatLonConverter
-    name: LatLonConverter
-  - uid: Synesthesias.Snap.Runtime.LatLonTests
-    name: LatLonTests
-  - uid: Synesthesias.Snap.Runtime.LatLonTests.LatLonData
-    name: LatLonTests.LatLonData
-  - uid: Synesthesias.Snap.Runtime.MeshManager
-    name: MeshManager
-  - uid: Synesthesias.Snap.Runtime.MeshModel
-    name: MeshModel
   - uid: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
     name: MeshValidationAngleResultType
   - uid: Synesthesias.Snap.Runtime.MeshValidationAngleResultTypeExtensions
     name: MeshValidationAngleResultTypeExtensions
   - uid: Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel
     name: MeshValidationAngleThresholdModel
-  - uid: Synesthesias.Snap.Runtime.MeshValidationModel
-    name: MeshValidationModel
   - uid: Synesthesias.Snap.Runtime.MeshValidationResult
     name: MeshValidationResult
   - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
     name: MeshValidationVertexResultType
   - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions
     name: MeshValidationVertexResultTypeExtensions
-  - uid: Synesthesias.Snap.Runtime.MeshView
-    name: MeshView
   - uid: Synesthesias.Snap.Runtime.MobileGeospatialMathModel
     name: MobileGeospatialMathModel
-  - uid: Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel
-    name: MobileGeospatialSimpleMeshModel
-  - uid: Synesthesias.Snap.Runtime.MockJsonParser
-    name: MockJsonParser
-  - uid: Synesthesias.Snap.Runtime.MockSurface
-    name: MockSurface
-  - uid: Synesthesias.Snap.Runtime.MockSurfaces
-    name: MockSurfaces
+  - uid: Synesthesias.Snap.Runtime.MobileGeospatialMeshModel
+    name: MobileGeospatialMeshModel
+  - uid: Synesthesias.Snap.Runtime.MobileMeshValidationModel
+    name: MobileMeshValidationModel
+  - uid: Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+    name: PlainShapeFactoryModel
   - uid: Synesthesias.Snap.Runtime.Shape
     name: Shape
-  - uid: Synesthesias.Snap.Runtime.ShapeCalculator
-    name: ShapeCalculator
-  - uid: Synesthesias.Snap.Runtime.ShapeManager
-    name: ShapeManager
-  - uid: Synesthesias.Snap.Runtime.SimpleMeshModel
-    name: SimpleMeshModel
+  - uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+    name: ShapeMeshFactoryModel
+  - uid: Synesthesias.Snap.Runtime.ShapeValidatorModel
+    name: ShapeValidatorModel
+  - uid: Synesthesias.Snap.Runtime.SimpleMeshFactoryModel
+    name: SimpleMeshFactoryModel
   - uid: Synesthesias.Snap.Runtime.SimpleMeshResultTypeExtensions
     name: SimpleMeshResultTypeExtensions
   - uid: Synesthesias.Snap.Runtime.SurfaceConverter
     name: SurfaceConverter
+  - uid: Synesthesias.Snap.Runtime.VectorCalculatorModel
+    name: VectorCalculatorModel
 - uid: Synesthesias.Snap.Sample
   name: Synesthesias.Snap.Sample
   items:
-  - uid: Synesthesias.Snap.Sample.APIModel
-    name: APIModel
   - uid: Synesthesias.Snap.Sample.ApiConfigurationScriptableObject
     name: ApiConfigurationScriptableObject
   - uid: Synesthesias.Snap.Sample.BaseLifetimeScope
@@ -205,6 +193,10 @@ items:
     name: BootModel
   - uid: Synesthesias.Snap.Sample.BootPresenter
     name: BootPresenter
+  - uid: Synesthesias.Snap.Sample.CoordinateUtil
+    name: CoordinateUtil
+  - uid: Synesthesias.Snap.Sample.DetectionMaterialModel
+    name: DetectionMaterialModel
   - uid: Synesthesias.Snap.Sample.DetectionMenuElementModel
     name: DetectionMenuElementModel
   - uid: Synesthesias.Snap.Sample.DetectionMenuElementView
@@ -215,12 +207,12 @@ items:
     name: DetectionMenuPresenter
   - uid: Synesthesias.Snap.Sample.DetectionMenuView
     name: DetectionMenuView
-  - uid: Synesthesias.Snap.Sample.DetectionMeshPresenter
-    name: DetectionMeshPresenter
+  - uid: Synesthesias.Snap.Sample.DetectionMeshCullingModel
+    name: DetectionMeshCullingModel
+  - uid: Synesthesias.Snap.Sample.DetectionMeshType
+    name: DetectionMeshType
   - uid: Synesthesias.Snap.Sample.DetectionSettingModel
     name: DetectionSettingModel
-  - uid: Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter
-    name: DetectionSimpleMeshPresenter
   - uid: Synesthesias.Snap.Sample.DetectionTouchModel
     name: DetectionTouchModel
   - uid: Synesthesias.Snap.Sample.DetectionTouchView
@@ -241,10 +233,12 @@ items:
     name: EditorDetectionPresenter
   - uid: Synesthesias.Snap.Sample.EditorDetectionView
     name: EditorDetectionView
-  - uid: Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView
-    name: EditorSimpleDetectionParameterView
   - uid: Synesthesias.Snap.Sample.EditorWebCameraModel
     name: EditorWebCameraModel
+  - uid: Synesthesias.Snap.Sample.EnvironmentScriptableObject
+    name: EnvironmentScriptableObject
+  - uid: Synesthesias.Snap.Sample.EnvironmentType
+    name: EnvironmentType
   - uid: Synesthesias.Snap.Sample.GeospatialDebugPresenter
     name: GeospatialDebugPresenter
   - uid: Synesthesias.Snap.Sample.GeospatialDebugView
@@ -259,24 +253,24 @@ items:
     name: GuidePresenter
   - uid: Synesthesias.Snap.Sample.GuideView
     name: GuideView
-  - uid: Synesthesias.Snap.Sample.IAPIModel
-    name: IAPIModel
   - uid: Synesthesias.Snap.Sample.IApiConfigurationModel
     name: IApiConfigurationModel
   - uid: Synesthesias.Snap.Sample.IApiKeyModel
     name: IApiKeyModel
   - uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
     name: IEditorDetectionParameterModel
-  - uid: Synesthesias.Snap.Sample.IEndPointModel
-    name: IEndPointModel
+  - uid: Synesthesias.Snap.Sample.IEnvironmentModel
+    name: IEnvironmentModel
   - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
     name: IMobileDetectionMeshView
-  - uid: Synesthesias.Snap.Sample.IServerModel
-    name: IServerModel
   - uid: Synesthesias.Snap.Sample.IValidationModel
     name: IValidationModel
   - uid: Synesthesias.Snap.Sample.ImageRepository
     name: ImageRepository
+  - uid: Synesthesias.Snap.Sample.LatLonTests
+    name: LatLonTests
+  - uid: Synesthesias.Snap.Sample.LatLonTests.LatLonData
+    name: LatLonTests.LatLonData
   - uid: Synesthesias.Snap.Sample.LocalizationModel
     name: LocalizationModel
   - uid: Synesthesias.Snap.Sample.MainLifetimeScope
@@ -289,8 +283,6 @@ items:
     name: MainView
   - uid: Synesthesias.Snap.Sample.MeshRepository
     name: MeshRepository
-  - uid: Synesthesias.Snap.Sample.MeshSample
-    name: MeshSample
   - uid: Synesthesias.Snap.Sample.MobileARCameraModel
     name: MobileARCameraModel
   - uid: Synesthesias.Snap.Sample.MobileDetectionLifetimeScope
@@ -303,28 +295,14 @@ items:
     name: MobileDetectionModel
   - uid: Synesthesias.Snap.Sample.MobileDetectionPresenter
     name: MobileDetectionPresenter
-  - uid: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel
-    name: MobileDetectionSimpleMeshModel
-  - uid: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView
-    name: MobileDetectionSimpleMeshView
   - uid: Synesthesias.Snap.Sample.MobileDetectionView
     name: MobileDetectionView
-  - uid: Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope
-    name: MobileSimpleDetectionLifetimeScope
-  - uid: Synesthesias.Snap.Sample.MobileSimpleDetectionModel
-    name: MobileSimpleDetectionModel
-  - uid: Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter
-    name: MobileSimpleDetectionPresenter
-  - uid: Synesthesias.Snap.Sample.MobileSimpleDetectionView
-    name: MobileSimpleDetectionView
-  - uid: Synesthesias.Snap.Sample.MockAPIModel
-    name: MockAPIModel
-  - uid: Synesthesias.Snap.Sample.MockEndPointModel
-    name: MockEndPointModel
-  - uid: Synesthesias.Snap.Sample.MockServerLifetimeScope
-    name: MockServerLifetimeScope
-  - uid: Synesthesias.Snap.Sample.MockServerModel
-    name: MockServerModel
+  - uid: Synesthesias.Snap.Sample.MockJsonParser
+    name: MockJsonParser
+  - uid: Synesthesias.Snap.Sample.MockSurface
+    name: MockSurface
+  - uid: Synesthesias.Snap.Sample.MockSurfaces
+    name: MockSurfaces
   - uid: Synesthesias.Snap.Sample.MockValidationModel
     name: MockValidationModel
   - uid: Synesthesias.Snap.Sample.MockValidationResultModel
@@ -343,10 +321,6 @@ items:
     name: ScreenModel
   - uid: Synesthesias.Snap.Sample.ScreenTouchModel
     name: ScreenTouchModel
-  - uid: Synesthesias.Snap.Sample.ServerModel
-    name: ServerModel
-  - uid: Synesthesias.Snap.Sample.ServerStatusCode
-    name: ServerStatusCode
   - uid: Synesthesias.Snap.Sample.SurfaceRepository
     name: SurfaceRepository
   - uid: Synesthesias.Snap.Sample.TMPModel

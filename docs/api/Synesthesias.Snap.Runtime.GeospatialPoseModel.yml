@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Pose/GeospatialPoseModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialPoseModel
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Pose/GeospatialPoseModel.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Pose/GeospatialPoseModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Pose/GeospatialPoseModel.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Pose/GeospatialPoseModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetCameraPose
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Pose/GeospatialPoseModel.cs

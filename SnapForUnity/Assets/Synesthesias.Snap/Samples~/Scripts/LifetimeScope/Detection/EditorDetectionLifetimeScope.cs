@@ -16,7 +16,6 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private EditorDetectionParameterView detectionParameterView;
         [SerializeField] private DetectionMenuView menuView;
         [SerializeField] private EditorDetectionMeshView detectionMeshViewTemplate;
-        [SerializeField] private MeshView meshViewTemplate;
         [SerializeField] private RenderTexture renderTexture;
 
         protected override void Configure(IContainerBuilder builder)
@@ -121,9 +120,7 @@ namespace Synesthesias.Snap.Sample
             }
 
             builder.RegisterInstance(detectionMeshViewTemplate);
-            builder.RegisterInstance(meshViewTemplate);
             builder.Register<EditorDetectionMeshModel>(Lifetime.Singleton);
-            builder.RegisterEntryPoint<DetectionMeshPresenter>();
         }
 
         private void ConfigureValidation(IContainerBuilder builder)

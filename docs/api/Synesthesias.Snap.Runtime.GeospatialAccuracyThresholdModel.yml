@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialAccuracyThresholdModel
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: HeadingThreshold
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: HorizontalAccuracyThreshold
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Default
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs

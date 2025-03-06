@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ValidationParameterModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshValidationResult
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GmlId
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: FromCoordinate
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToCoordinate
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Roll
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Timestamp
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
@@ -331,7 +331,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Validation/ValidationParameterModel.cs

@@ -5,7 +5,7 @@ items:
   id: ISurfaceModel
   parent: Synesthesias.Snap.Runtime
   children:
-  - Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
+  - Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
   - Synesthesias.Snap.Runtime.ISurfaceModel.GmlId
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/ISurfaceModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ISurfaceModel
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/ISurfaceModel.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/ISurfaceModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GmlId
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/ISurfaceModel.cs
@@ -61,29 +61,29 @@ items:
       type: System.String
     content.vb: Property GmlId As String
   overload: Synesthesias.Snap.Runtime.ISurfaceModel.GmlId*
-- uid: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
-  commentId: P:Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
-  id: Coordinates
+- uid: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+  commentId: M:Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+  id: GetUniqueCoordinates
   parent: Synesthesias.Snap.Runtime.ISurfaceModel
   langs:
   - csharp
   - vb
-  name: Coordinates
-  nameWithType: ISurfaceModel.Coordinates
-  fullName: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
-  type: Property
+  name: GetUniqueCoordinates()
+  nameWithType: ISurfaceModel.GetUniqueCoordinates()
+  fullName: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates()
+  type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/ISurfaceModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: Coordinates
+    id: GetUniqueCoordinates
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/ISurfaceModel.cs
     startLine: 30
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
-  summary: 面の座標
+  summary: 面の頂点座標のリスト(座標の重複なし)
   remarks: >-
     内側から数えて
 
@@ -106,12 +106,11 @@ items:
     [3番目のList] - 面と穴のデータの配列
   example: []
   syntax:
-    content: List<List<List<double>>> Coordinates { get; set; }
-    parameters: []
+    content: List<List<List<double>>> GetUniqueCoordinates()
     return:
       type: System.Collections.Generic.List{System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}}
-    content.vb: Property Coordinates As List(Of List(Of List(Of Double)))
-  overload: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates*
+    content.vb: Function GetUniqueCoordinates() As List(Of List(Of List(Of Double)))
+  overload: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates*
 references:
 - uid: Synesthesias.Snap.Runtime
   commentId: N:Synesthesias.Snap.Runtime
@@ -167,12 +166,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates*
-  commentId: Overload:Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
-  href: Synesthesias.Snap.Runtime.ISurfaceModel.html#Synesthesias_Snap_Runtime_ISurfaceModel_Coordinates
-  name: Coordinates
-  nameWithType: ISurfaceModel.Coordinates
-  fullName: Synesthesias.Snap.Runtime.ISurfaceModel.Coordinates
+- uid: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates*
+  commentId: Overload:Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
+  href: Synesthesias.Snap.Runtime.ISurfaceModel.html#Synesthesias_Snap_Runtime_ISurfaceModel_GetUniqueCoordinates
+  name: GetUniqueCoordinates
+  nameWithType: ISurfaceModel.GetUniqueCoordinates
+  fullName: Synesthesias.Snap.Runtime.ISurfaceModel.GetUniqueCoordinates
 - uid: System.Collections.Generic.List{System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}}
   commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}}
   parent: System.Collections.Generic

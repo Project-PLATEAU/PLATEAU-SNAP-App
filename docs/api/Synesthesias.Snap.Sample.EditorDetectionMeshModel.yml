@@ -5,10 +5,10 @@ items:
   id: EditorDetectionMeshModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor(Synesthesias.Snap.Sample.EditorDetectionMeshView)
+  - Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.EditorDetectionMeshView)
   - Synesthesias.Snap.Sample.EditorDetectionMeshModel.Clear
-  - Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.ISurfaceModel)
   - Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform(System.String,UnityEngine.Vector3,UnityEngine.Quaternion)
+  - Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
   - Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
   langs:
   - csharp
@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EditorDetectionMeshModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -45,40 +45,42 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor(Synesthesias.Snap.Sample.EditorDetectionMeshView)
-  commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor(Synesthesias.Snap.Sample.EditorDetectionMeshView)
-  id: '#ctor(Synesthesias.Snap.Sample.EditorDetectionMeshView)'
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.EditorDetectionMeshView)
+  commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.EditorDetectionMeshView)
+  id: '#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.EditorDetectionMeshView)'
   parent: Synesthesias.Snap.Sample.EditorDetectionMeshModel
   langs:
   - csharp
   - vb
-  name: EditorDetectionMeshModel(EditorDetectionMeshView)
-  nameWithType: EditorDetectionMeshModel.EditorDetectionMeshModel(EditorDetectionMeshView)
-  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.EditorDetectionMeshModel(Synesthesias.Snap.Sample.EditorDetectionMeshView)
+  name: EditorDetectionMeshModel(IGeospatialMeshModel, EditorDetectionMeshView)
+  nameWithType: EditorDetectionMeshModel.EditorDetectionMeshModel(IGeospatialMeshModel, EditorDetectionMeshView)
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.EditorDetectionMeshModel(Synesthesias.Snap.Runtime.IGeospatialMeshModel, Synesthesias.Snap.Sample.EditorDetectionMeshView)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: コンストラクタ
   example: []
   syntax:
-    content: public EditorDetectionMeshModel(EditorDetectionMeshView meshViewTemplate)
+    content: public EditorDetectionMeshModel(IGeospatialMeshModel editorGeospatialMeshModel, EditorDetectionMeshView meshViewTemplate)
     parameters:
+    - id: editorGeospatialMeshModel
+      type: Synesthesias.Snap.Runtime.IGeospatialMeshModel
     - id: meshViewTemplate
       type: Synesthesias.Snap.Sample.EditorDetectionMeshView
-    content.vb: Public Sub New(meshViewTemplate As EditorDetectionMeshView)
+    content.vb: Public Sub New(editorGeospatialMeshModel As IGeospatialMeshModel, meshViewTemplate As EditorDetectionMeshView)
   overload: Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor*
-  nameWithType.vb: EditorDetectionMeshModel.New(EditorDetectionMeshView)
-  fullName.vb: Synesthesias.Snap.Sample.EditorDetectionMeshModel.New(Synesthesias.Snap.Sample.EditorDetectionMeshView)
-  name.vb: New(EditorDetectionMeshView)
+  nameWithType.vb: EditorDetectionMeshModel.New(IGeospatialMeshModel, EditorDetectionMeshView)
+  fullName.vb: Synesthesias.Snap.Sample.EditorDetectionMeshModel.New(Synesthesias.Snap.Runtime.IGeospatialMeshModel, Synesthesias.Snap.Sample.EditorDetectionMeshView)
+  name.vb: New(IGeospatialMeshModel, EditorDetectionMeshView)
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
   id: Dispose
@@ -93,11 +95,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -109,6 +111,45 @@ items:
   overload: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose*
   implements:
   - System.IDisposable.Dispose
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
+  id: CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Sample.EditorDetectionMeshModel
+  langs:
+  - csharp
+  - vb
+  name: CreateMeshView(Camera, ISurfaceModel, Quaternion, CancellationToken)
+  nameWithType: EditorDetectionMeshModel.CreateMeshView(Camera, ISurfaceModel, Quaternion, CancellationToken)
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView(UnityEngine.Camera, Synesthesias.Snap.Runtime.ISurfaceModel, UnityEngine.Quaternion, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateMeshView
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
+    startLine: 41
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュ(surface)をAFGeospatialアンカーの位置に生成する
+  example: []
+  syntax:
+    content: public UniTask<EditorDetectionMeshView> CreateMeshView(Camera camera, ISurfaceModel surface, Quaternion eunRotation, CancellationToken cancellationToken)
+    parameters:
+    - id: camera
+      type: UnityEngine.Camera
+    - id: surface
+      type: Synesthesias.Snap.Runtime.ISurfaceModel
+    - id: eunRotation
+      type: UnityEngine.Quaternion
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{Synesthesias.Snap.Sample.EditorDetectionMeshView}
+    content.vb: Public Function CreateMeshView(camera As Camera, surface As ISurfaceModel, eunRotation As Quaternion, cancellationToken As CancellationToken) As UniTask(Of EditorDetectionMeshView)
+  overload: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView*
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform(System.String,UnityEngine.Vector3,UnityEngine.Quaternion)
   commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform(System.String,UnityEngine.Vector3,UnityEngine.Quaternion)
   id: CreateMeshAtTransform(System.String,UnityEngine.Vector3,UnityEngine.Quaternion)
@@ -123,11 +164,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreateMeshAtTransform
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-    startLine: 39
+    startLine: 89
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -149,48 +190,6 @@ items:
   nameWithType.vb: EditorDetectionMeshModel.CreateMeshAtTransform(String, Vector3, Quaternion)
   fullName.vb: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform(String, UnityEngine.Vector3, UnityEngine.Quaternion)
   name.vb: CreateMeshAtTransform(String, Vector3, Quaternion)
-- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.ISurfaceModel)
-  commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.ISurfaceModel)
-  id: CreateMeshAtARGeospatialAnchor(System.Double,System.Double,System.Double,Synesthesias.Snap.Runtime.ISurfaceModel)
-  parent: Synesthesias.Snap.Sample.EditorDetectionMeshModel
-  langs:
-  - csharp
-  - vb
-  name: CreateMeshAtARGeospatialAnchor(double, double, double, ISurfaceModel)
-  nameWithType: EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(double, double, double, ISurfaceModel)
-  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(double, double, double, Synesthesias.Snap.Runtime.ISurfaceModel)
-  type: Method
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: CreateMeshAtARGeospatialAnchor
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-    startLine: 57
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: メッシュ(surface)をAFGeospatialアンカーの位置に生成する
-  example: []
-  syntax:
-    content: public EditorDetectionMeshView CreateMeshAtARGeospatialAnchor(double latitude, double longitude, double altitude, ISurfaceModel detectedSurface)
-    parameters:
-    - id: latitude
-      type: System.Double
-    - id: longitude
-      type: System.Double
-    - id: altitude
-      type: System.Double
-    - id: detectedSurface
-      type: Synesthesias.Snap.Runtime.ISurfaceModel
-    return:
-      type: Synesthesias.Snap.Sample.EditorDetectionMeshView
-    content.vb: Public Function CreateMeshAtARGeospatialAnchor(latitude As Double, longitude As Double, altitude As Double, detectedSurface As ISurfaceModel) As EditorDetectionMeshView
-  overload: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor*
-  nameWithType.vb: EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(Double, Double, Double, ISurfaceModel)
-  fullName.vb: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor(Double, Double, Double, Synesthesias.Snap.Runtime.ISurfaceModel)
-  name.vb: CreateMeshAtARGeospatialAnchor(Double, Double, Double, ISurfaceModel)
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Clear
   commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshModel.Clear
   id: Clear
@@ -205,11 +204,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Clear
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/EditorDetectionMeshModel.cs
-    startLine: 88
+    startLine: 131
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -497,13 +496,20 @@ references:
   fullName: System
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.#ctor
-  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel__ctor_Synesthesias_Snap_Sample_EditorDetectionMeshView_
+  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel__ctor_Synesthesias_Snap_Runtime_IGeospatialMeshModel_Synesthesias_Snap_Sample_EditorDetectionMeshView_
   name: EditorDetectionMeshModel
   nameWithType: EditorDetectionMeshModel.EditorDetectionMeshModel
   fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.EditorDetectionMeshModel
   nameWithType.vb: EditorDetectionMeshModel.New
   fullName.vb: Synesthesias.Snap.Sample.EditorDetectionMeshModel.New
   name.vb: New
+- uid: Synesthesias.Snap.Runtime.IGeospatialMeshModel
+  commentId: T:Synesthesias.Snap.Runtime.IGeospatialMeshModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.IGeospatialMeshModel.html
+  name: IGeospatialMeshModel
+  nameWithType: IGeospatialMeshModel
+  fullName: Synesthesias.Snap.Runtime.IGeospatialMeshModel
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshView
   commentId: T:Synesthesias.Snap.Sample.EditorDetectionMeshView
   parent: Synesthesias.Snap.Sample
@@ -511,95 +517,6 @@ references:
   name: EditorDetectionMeshView
   nameWithType: EditorDetectionMeshView
   fullName: Synesthesias.Snap.Sample.EditorDetectionMeshView
-- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose*
-  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
-  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_Dispose
-  name: Dispose
-  nameWithType: EditorDetectionMeshModel.Dispose
-  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
-- uid: System.IDisposable.Dispose
-  commentId: M:System.IDisposable.Dispose
-  parent: System.IDisposable
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
-  name: Dispose()
-  nameWithType: IDisposable.Dispose()
-  fullName: System.IDisposable.Dispose()
-  spec.csharp:
-  - uid: System.IDisposable.Dispose
-    name: Dispose
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.IDisposable.Dispose
-    name: Dispose
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
-  - name: (
-  - name: )
-- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform*
-  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform
-  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_CreateMeshAtTransform_System_String_UnityEngine_Vector3_UnityEngine_Quaternion_
-  name: CreateMeshAtTransform
-  nameWithType: EditorDetectionMeshModel.CreateMeshAtTransform
-  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: UnityEngine.Vector3
-  commentId: T:UnityEngine.Vector3
-  parent: UnityEngine
-  isExternal: true
-  name: Vector3
-  nameWithType: Vector3
-  fullName: UnityEngine.Vector3
-- uid: UnityEngine.Quaternion
-  commentId: T:UnityEngine.Quaternion
-  parent: UnityEngine
-  isExternal: true
-  name: Quaternion
-  nameWithType: Quaternion
-  fullName: UnityEngine.Quaternion
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor*
-  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor
-  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_CreateMeshAtARGeospatialAnchor_System_Double_System_Double_System_Double_Synesthesias_Snap_Runtime_ISurfaceModel_
-  name: CreateMeshAtARGeospatialAnchor
-  nameWithType: EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor
-  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtARGeospatialAnchor
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.double
-  name: double
-  nameWithType: double
-  fullName: double
-  nameWithType.vb: Double
-  fullName.vb: Double
-  name.vb: Double
-- uid: Synesthesias.Snap.Runtime.ISurfaceModel
-  commentId: T:Synesthesias.Snap.Runtime.ISurfaceModel
-  parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.ISurfaceModel.html
-  name: ISurfaceModel
-  nameWithType: ISurfaceModel
-  fullName: Synesthesias.Snap.Runtime.ISurfaceModel
 - uid: Synesthesias.Snap.Runtime
   commentId: N:Synesthesias.Snap.Runtime
   href: Synesthesias.html
@@ -630,6 +547,212 @@ references:
   - uid: Synesthesias.Snap.Runtime
     name: Runtime
     href: Synesthesias.Snap.Runtime.html
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
+  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_Dispose
+  name: Dispose
+  nameWithType: EditorDetectionMeshModel.Dispose
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView
+  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_CreateMeshView_UnityEngine_Camera_Synesthesias_Snap_Runtime_ISurfaceModel_UnityEngine_Quaternion_System_Threading_CancellationToken_
+  name: CreateMeshView
+  nameWithType: EditorDetectionMeshModel.CreateMeshView
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshView
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: Synesthesias.Snap.Runtime.ISurfaceModel
+  commentId: T:Synesthesias.Snap.Runtime.ISurfaceModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.ISurfaceModel.html
+  name: ISurfaceModel
+  nameWithType: ISurfaceModel
+  fullName: Synesthesias.Snap.Runtime.ISurfaceModel
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask{Synesthesias.Snap.Sample.EditorDetectionMeshView}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{Synesthesias.Snap.Sample.EditorDetectionMeshView}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  href: Synesthesias.Snap.Sample.EditorDetectionMeshView.html
+  name: UniTask<EditorDetectionMeshView>
+  nameWithType: UniTask<EditorDetectionMeshView>
+  fullName: Cysharp.Threading.Tasks.UniTask<Synesthesias.Snap.Sample.EditorDetectionMeshView>
+  nameWithType.vb: UniTask(Of EditorDetectionMeshView)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of Synesthesias.Snap.Sample.EditorDetectionMeshView)
+  name.vb: UniTask(Of EditorDetectionMeshView)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: Synesthesias.Snap.Sample.EditorDetectionMeshView
+    name: EditorDetectionMeshView
+    href: Synesthesias.Snap.Sample.EditorDetectionMeshView.html
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.Snap.Sample.EditorDetectionMeshView
+    name: EditorDetectionMeshView
+    href: Synesthesias.Snap.Sample.EditorDetectionMeshView.html
+  - name: )
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform
+  href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_CreateMeshAtTransform_System_String_UnityEngine_Vector3_UnityEngine_Quaternion_
+  name: CreateMeshAtTransform
+  nameWithType: EditorDetectionMeshModel.CreateMeshAtTransform
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel.CreateMeshAtTransform
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshModel.Clear*
   commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshModel.Clear
   href: Synesthesias.Snap.Sample.EditorDetectionMeshModel.html#Synesthesias_Snap_Sample_EditorDetectionMeshModel_Clear

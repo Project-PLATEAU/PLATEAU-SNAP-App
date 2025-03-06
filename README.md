@@ -280,6 +280,9 @@ cd path/to/PLATEAU-SNAP-App
 // .NET環境を復元
 dotnet tool restore
 
+// 既存ファイルを削除
+rm -rf docs/_site docs/api docs/docs
+
 // ymlファイル作成
 dotnet docfx metadata docs/docfx.json
 

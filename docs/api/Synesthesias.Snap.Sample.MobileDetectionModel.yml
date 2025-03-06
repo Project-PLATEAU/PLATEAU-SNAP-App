@@ -5,13 +5,13 @@ items:
   id: MobileDetectionModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.MobileDetectionModel.#ctor(Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Runtime.MobileGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)
-  - Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(System.Threading.CancellationToken)
+  - Synesthesias.Snap.Sample.MobileDetectionModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionSettingModel,Synesthesias.Snap.Sample.DetectionMeshCullingModel,Synesthesias.Snap.Runtime.GeospatialAccuracyModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Runtime.GeospatialPoseModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)
+  - Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(UnityEngine.Camera,System.Threading.CancellationToken)
   - Synesthesias.Snap.Sample.MobileDetectionModel.Dispose
-  - Synesthesias.Snap.Sample.MobileDetectionModel.IsGeospatialVisibleProperty
+  - Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable
   - Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
   - Synesthesias.Snap.Sample.MobileDetectionModel.ShowMenu
-  - Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera,System.Single,System.Threading.CancellationToken)
+  - Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera,System.Threading.CancellationToken)
   - Synesthesias.Snap.Sample.MobileDetectionModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
   langs:
   - csharp
@@ -23,11 +23,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MobileDetectionModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 15
+    startLine: 13
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -48,35 +48,37 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Synesthesias.Snap.Sample.MobileDetectionModel.IsGeospatialVisibleProperty
-  commentId: F:Synesthesias.Snap.Sample.MobileDetectionModel.IsGeospatialVisibleProperty
-  id: IsGeospatialVisibleProperty
+- uid: Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable
+  id: OnIsGeospatialVisibleAsObservable
   parent: Synesthesias.Snap.Sample.MobileDetectionModel
   langs:
   - csharp
   - vb
-  name: IsGeospatialVisibleProperty
-  nameWithType: MobileDetectionModel.IsGeospatialVisibleProperty
-  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.IsGeospatialVisibleProperty
-  type: Field
+  name: OnIsGeospatialVisibleAsObservable()
+  nameWithType: MobileDetectionModel.OnIsGeospatialVisibleAsObservable()
+  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable()
+  type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: IsGeospatialVisibleProperty
+    id: OnIsGeospatialVisibleAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 36
+    startLine: 41
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
-  summary: Geospatial情報を表示するか
+  summary: GeoSpatial情報を表示するか
   example: []
   syntax:
-    content: public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty
+    content: public Observable<bool> OnIsGeospatialVisibleAsObservable()
     return:
-      type: R3.ReactiveProperty{System.Boolean}
-    content.vb: Public ReadOnly IsGeospatialVisibleProperty As ReactiveProperty(Of Boolean)
+      type: R3.Observable{System.Boolean}
+      description: ''
+    content.vb: Public Function OnIsGeospatialVisibleAsObservable() As Observable(Of Boolean)
+  overload: Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable*
 - uid: Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
   commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
   id: OnSelectedAsObservable
@@ -91,11 +93,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OnSelectedAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 41
+    startLine: 47
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -107,33 +109,37 @@ items:
       type: R3.Observable{System.Boolean}
     content.vb: Public Function OnSelectedAsObservable() As Observable(Of Boolean)
   overload: Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable*
-- uid: Synesthesias.Snap.Sample.MobileDetectionModel.#ctor(Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Runtime.MobileGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.#ctor(Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Runtime.MobileGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)
-  id: '#ctor(Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Runtime.MobileGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)'
+- uid: Synesthesias.Snap.Sample.MobileDetectionModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionSettingModel,Synesthesias.Snap.Sample.DetectionMeshCullingModel,Synesthesias.Snap.Runtime.GeospatialAccuracyModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Runtime.GeospatialPoseModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionSettingModel,Synesthesias.Snap.Sample.DetectionMeshCullingModel,Synesthesias.Snap.Runtime.GeospatialAccuracyModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Runtime.GeospatialPoseModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)
+  id: '#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.ValidationRepository,Synesthesias.Snap.Sample.SurfaceRepository,Synesthesias.Snap.Sample.TextureRepository,Synesthesias.Snap.Sample.SceneModel,Synesthesias.Snap.Sample.LocalizationModel,Synesthesias.Snap.Sample.MobileARCameraModel,Synesthesias.Snap.Sample.DetectionMenuModel,Synesthesias.Snap.Sample.DetectionSettingModel,Synesthesias.Snap.Sample.DetectionMeshCullingModel,Synesthesias.Snap.Runtime.GeospatialAccuracyModel,Synesthesias.Snap.Runtime.IMeshValidationModel,Synesthesias.Snap.Runtime.GeospatialPoseModel,Synesthesias.Snap.Runtime.IGeospatialMathModel,Synesthesias.Snap.Sample.MobileDetectionMeshModel,Synesthesias.Snap.Sample.DetectionTouchModel,Synesthesias.Snap.Sample.MockValidationResultModel)'
   parent: Synesthesias.Snap.Sample.MobileDetectionModel
   langs:
   - csharp
   - vb
-  name: MobileDetectionModel(SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, GeospatialAsyncModel, MobileGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
-  nameWithType: MobileDetectionModel.MobileDetectionModel(SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, GeospatialAsyncModel, MobileGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.MobileDetectionModel(Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Sample.MobileARCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Runtime.GeospatialAsyncModel, Synesthesias.Snap.Runtime.MobileGeospatialMathModel, Synesthesias.Snap.Sample.MobileDetectionMeshModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.MockValidationResultModel)
+  name: MobileDetectionModel(IEnvironmentModel, ValidationRepository, SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, DetectionSettingModel, DetectionMeshCullingModel, GeospatialAccuracyModel, IMeshValidationModel, GeospatialPoseModel, IGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
+  nameWithType: MobileDetectionModel.MobileDetectionModel(IEnvironmentModel, ValidationRepository, SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, DetectionSettingModel, DetectionMeshCullingModel, GeospatialAccuracyModel, IMeshValidationModel, GeospatialPoseModel, IGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
+  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.MobileDetectionModel(Synesthesias.Snap.Sample.IEnvironmentModel, Synesthesias.Snap.Sample.ValidationRepository, Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Sample.MobileARCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Sample.DetectionSettingModel, Synesthesias.Snap.Sample.DetectionMeshCullingModel, Synesthesias.Snap.Runtime.GeospatialAccuracyModel, Synesthesias.Snap.Runtime.IMeshValidationModel, Synesthesias.Snap.Runtime.GeospatialPoseModel, Synesthesias.Snap.Runtime.IGeospatialMathModel, Synesthesias.Snap.Sample.MobileDetectionMeshModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.MockValidationResultModel)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 47
+    startLine: 53
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: コンストラクタ
   example: []
   syntax:
-    content: public MobileDetectionModel(SurfaceRepository surfaceRepository, TextureRepository textureRepository, SceneModel sceneModel, LocalizationModel localizationModel, MobileARCameraModel cameraModel, DetectionMenuModel menuModel, GeospatialAsyncModel geospatialAsyncModel, MobileGeospatialMathModel geospatialMathModel, MobileDetectionMeshModel meshModel, DetectionTouchModel touchModel, MockValidationResultModel resultModel)
+    content: public MobileDetectionModel(IEnvironmentModel environmentModel, ValidationRepository validationRepository, SurfaceRepository surfaceRepository, TextureRepository textureRepository, SceneModel sceneModel, LocalizationModel localizationModel, MobileARCameraModel cameraModel, DetectionMenuModel menuModel, DetectionSettingModel settingModel, DetectionMeshCullingModel meshCullingModel, GeospatialAccuracyModel geospatialAccuracyModel, IMeshValidationModel validationModel, GeospatialPoseModel geospatialPoseModel, IGeospatialMathModel geospatialMathModel, MobileDetectionMeshModel detectionMeshModel, DetectionTouchModel touchModel, MockValidationResultModel resultModel)
     parameters:
+    - id: environmentModel
+      type: Synesthesias.Snap.Sample.IEnvironmentModel
+    - id: validationRepository
+      type: Synesthesias.Snap.Sample.ValidationRepository
     - id: surfaceRepository
       type: Synesthesias.Snap.Sample.SurfaceRepository
     - id: textureRepository
@@ -146,21 +152,29 @@ items:
       type: Synesthesias.Snap.Sample.MobileARCameraModel
     - id: menuModel
       type: Synesthesias.Snap.Sample.DetectionMenuModel
-    - id: geospatialAsyncModel
-      type: Synesthesias.Snap.Runtime.GeospatialAsyncModel
+    - id: settingModel
+      type: Synesthesias.Snap.Sample.DetectionSettingModel
+    - id: meshCullingModel
+      type: Synesthesias.Snap.Sample.DetectionMeshCullingModel
+    - id: geospatialAccuracyModel
+      type: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+    - id: validationModel
+      type: Synesthesias.Snap.Runtime.IMeshValidationModel
+    - id: geospatialPoseModel
+      type: Synesthesias.Snap.Runtime.GeospatialPoseModel
     - id: geospatialMathModel
-      type: Synesthesias.Snap.Runtime.MobileGeospatialMathModel
-    - id: meshModel
+      type: Synesthesias.Snap.Runtime.IGeospatialMathModel
+    - id: detectionMeshModel
       type: Synesthesias.Snap.Sample.MobileDetectionMeshModel
     - id: touchModel
       type: Synesthesias.Snap.Sample.DetectionTouchModel
     - id: resultModel
       type: Synesthesias.Snap.Sample.MockValidationResultModel
-    content.vb: Public Sub New(surfaceRepository As SurfaceRepository, textureRepository As TextureRepository, sceneModel As SceneModel, localizationModel As LocalizationModel, cameraModel As MobileARCameraModel, menuModel As DetectionMenuModel, geospatialAsyncModel As GeospatialAsyncModel, geospatialMathModel As MobileGeospatialMathModel, meshModel As MobileDetectionMeshModel, touchModel As DetectionTouchModel, resultModel As MockValidationResultModel)
+    content.vb: Public Sub New(environmentModel As IEnvironmentModel, validationRepository As ValidationRepository, surfaceRepository As SurfaceRepository, textureRepository As TextureRepository, sceneModel As SceneModel, localizationModel As LocalizationModel, cameraModel As MobileARCameraModel, menuModel As DetectionMenuModel, settingModel As DetectionSettingModel, meshCullingModel As DetectionMeshCullingModel, geospatialAccuracyModel As GeospatialAccuracyModel, validationModel As IMeshValidationModel, geospatialPoseModel As GeospatialPoseModel, geospatialMathModel As IGeospatialMathModel, detectionMeshModel As MobileDetectionMeshModel, touchModel As DetectionTouchModel, resultModel As MockValidationResultModel)
   overload: Synesthesias.Snap.Sample.MobileDetectionModel.#ctor*
-  nameWithType.vb: MobileDetectionModel.New(SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, GeospatialAsyncModel, MobileGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
-  fullName.vb: Synesthesias.Snap.Sample.MobileDetectionModel.New(Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Sample.MobileARCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Runtime.GeospatialAsyncModel, Synesthesias.Snap.Runtime.MobileGeospatialMathModel, Synesthesias.Snap.Sample.MobileDetectionMeshModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.MockValidationResultModel)
-  name.vb: New(SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, GeospatialAsyncModel, MobileGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
+  nameWithType.vb: MobileDetectionModel.New(IEnvironmentModel, ValidationRepository, SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, DetectionSettingModel, DetectionMeshCullingModel, GeospatialAccuracyModel, IMeshValidationModel, GeospatialPoseModel, IGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
+  fullName.vb: Synesthesias.Snap.Sample.MobileDetectionModel.New(Synesthesias.Snap.Sample.IEnvironmentModel, Synesthesias.Snap.Sample.ValidationRepository, Synesthesias.Snap.Sample.SurfaceRepository, Synesthesias.Snap.Sample.TextureRepository, Synesthesias.Snap.Sample.SceneModel, Synesthesias.Snap.Sample.LocalizationModel, Synesthesias.Snap.Sample.MobileARCameraModel, Synesthesias.Snap.Sample.DetectionMenuModel, Synesthesias.Snap.Sample.DetectionSettingModel, Synesthesias.Snap.Sample.DetectionMeshCullingModel, Synesthesias.Snap.Runtime.GeospatialAccuracyModel, Synesthesias.Snap.Runtime.IMeshValidationModel, Synesthesias.Snap.Runtime.GeospatialPoseModel, Synesthesias.Snap.Runtime.IGeospatialMathModel, Synesthesias.Snap.Sample.MobileDetectionMeshModel, Synesthesias.Snap.Sample.DetectionTouchModel, Synesthesias.Snap.Sample.MockValidationResultModel)
+  name.vb: New(IEnvironmentModel, ValidationRepository, SurfaceRepository, TextureRepository, SceneModel, LocalizationModel, MobileARCameraModel, DetectionMenuModel, DetectionSettingModel, DetectionMeshCullingModel, GeospatialAccuracyModel, IMeshValidationModel, GeospatialPoseModel, IGeospatialMathModel, MobileDetectionMeshModel, DetectionTouchModel, MockValidationResultModel)
 - uid: Synesthesias.Snap.Sample.MobileDetectionModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.Dispose
   id: Dispose
@@ -175,11 +189,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 76
+    startLine: 97
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -191,46 +205,41 @@ items:
   overload: Synesthesias.Snap.Sample.MobileDetectionModel.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera,System.Single,System.Threading.CancellationToken)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera,System.Single,System.Threading.CancellationToken)
-  id: StartAsync(UnityEngine.Camera,System.Single,System.Threading.CancellationToken)
+- uid: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera,System.Threading.CancellationToken)
+  id: StartAsync(UnityEngine.Camera,System.Threading.CancellationToken)
   parent: Synesthesias.Snap.Sample.MobileDetectionModel
   langs:
   - csharp
   - vb
-  name: StartAsync(Camera, float, CancellationToken)
-  nameWithType: MobileDetectionModel.StartAsync(Camera, float, CancellationToken)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera, float, System.Threading.CancellationToken)
+  name: StartAsync(Camera, CancellationToken)
+  nameWithType: MobileDetectionModel.StartAsync(Camera, CancellationToken)
+  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: StartAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 91
+    startLine: 112
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: 開始
   example: []
   syntax:
-    content: public UniTask StartAsync(Camera camera, float maxDistance, CancellationToken cancellation)
+    content: public UniTask StartAsync(Camera camera, CancellationToken cancellation)
     parameters:
     - id: camera
       type: UnityEngine.Camera
-    - id: maxDistance
-      type: System.Single
     - id: cancellation
       type: System.Threading.CancellationToken
     return:
       type: Cysharp.Threading.Tasks.UniTask
-    content.vb: Public Function StartAsync(camera As Camera, maxDistance As Single, cancellation As CancellationToken) As UniTask
+    content.vb: Public Function StartAsync(camera As Camera, cancellation As CancellationToken) As UniTask
   overload: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync*
-  nameWithType.vb: MobileDetectionModel.StartAsync(Camera, Single, CancellationToken)
-  fullName.vb: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync(UnityEngine.Camera, Single, System.Threading.CancellationToken)
-  name.vb: StartAsync(Camera, Single, CancellationToken)
 - uid: Synesthesias.Snap.Sample.MobileDetectionModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
   commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
   id: TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
@@ -245,11 +254,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TouchScreen
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 114
+    startLine: 132
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -278,11 +287,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ShowMenu
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 131
+    startLine: 148
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -292,38 +301,40 @@ items:
     content: public void ShowMenu()
     content.vb: Public Sub ShowMenu()
   overload: Synesthesias.Snap.Sample.MobileDetectionModel.ShowMenu*
-- uid: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(System.Threading.CancellationToken)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(System.Threading.CancellationToken)
-  id: CaptureAsync(System.Threading.CancellationToken)
+- uid: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(UnityEngine.Camera,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(UnityEngine.Camera,System.Threading.CancellationToken)
+  id: CaptureAsync(UnityEngine.Camera,System.Threading.CancellationToken)
   parent: Synesthesias.Snap.Sample.MobileDetectionModel
   langs:
   - csharp
   - vb
-  name: CaptureAsync(CancellationToken)
-  nameWithType: MobileDetectionModel.CaptureAsync(CancellationToken)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(System.Threading.CancellationToken)
+  name: CaptureAsync(Camera, CancellationToken)
+  nameWithType: MobileDetectionModel.CaptureAsync(Camera, CancellationToken)
+  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync(UnityEngine.Camera, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CaptureAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/MobileDetectionModel.cs
-    startLine: 139
+    startLine: 156
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: 撮影
   example: []
   syntax:
-    content: public UniTask CaptureAsync(CancellationToken cancellationToken)
+    content: public UniTask CaptureAsync(Camera camera, CancellationToken cancellationToken)
     parameters:
+    - id: camera
+      type: UnityEngine.Camera
     - id: cancellationToken
       type: System.Threading.CancellationToken
     return:
       type: Cysharp.Threading.Tasks.UniTask
-    content.vb: Public Function CaptureAsync(cancellationToken As CancellationToken) As UniTask
+    content.vb: Public Function CaptureAsync(camera As Camera, cancellationToken As CancellationToken) As UniTask
   overload: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync*
 references:
 - uid: Synesthesias.Snap.Sample
@@ -601,76 +612,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: R3.ReactiveProperty{System.Boolean}
-  commentId: T:R3.ReactiveProperty{System.Boolean}
-  parent: R3
-  definition: R3.ReactiveProperty`1
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: ReactiveProperty<bool>
-  nameWithType: ReactiveProperty<bool>
-  fullName: R3.ReactiveProperty<bool>
-  nameWithType.vb: ReactiveProperty(Of Boolean)
-  fullName.vb: R3.ReactiveProperty(Of Boolean)
-  name.vb: ReactiveProperty(Of Boolean)
-  spec.csharp:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
-    isExternal: true
-  - name: <
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '>'
-  spec.vb:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-- uid: R3.ReactiveProperty`1
-  commentId: T:R3.ReactiveProperty`1
-  isExternal: true
-  name: ReactiveProperty<T>
-  nameWithType: ReactiveProperty<T>
-  fullName: R3.ReactiveProperty<T>
-  nameWithType.vb: ReactiveProperty(Of T)
-  fullName.vb: R3.ReactiveProperty(Of T)
-  name.vb: ReactiveProperty(Of T)
-  spec.csharp:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
-    isExternal: true
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: R3
-  commentId: N:R3
-  isExternal: true
-  name: R3
-  nameWithType: R3
-  fullName: R3
-- uid: Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable*
-  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
-  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_OnSelectedAsObservable
-  name: OnSelectedAsObservable
-  nameWithType: MobileDetectionModel.OnSelectedAsObservable
-  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
+- uid: Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable
+  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_OnIsGeospatialVisibleAsObservable
+  name: OnIsGeospatialVisibleAsObservable
+  nameWithType: MobileDetectionModel.OnIsGeospatialVisibleAsObservable
+  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.OnIsGeospatialVisibleAsObservable
 - uid: R3.Observable{System.Boolean}
   commentId: T:R3.Observable{System.Boolean}
   parent: R3
@@ -729,15 +676,41 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: R3
+  commentId: N:R3
+  isExternal: true
+  name: R3
+  nameWithType: R3
+  fullName: R3
+- uid: Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
+  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_OnSelectedAsObservable
+  name: OnSelectedAsObservable
+  nameWithType: MobileDetectionModel.OnSelectedAsObservable
+  fullName: Synesthesias.Snap.Sample.MobileDetectionModel.OnSelectedAsObservable
 - uid: Synesthesias.Snap.Sample.MobileDetectionModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionModel.#ctor
-  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel__ctor_Synesthesias_Snap_Sample_SurfaceRepository_Synesthesias_Snap_Sample_TextureRepository_Synesthesias_Snap_Sample_SceneModel_Synesthesias_Snap_Sample_LocalizationModel_Synesthesias_Snap_Sample_MobileARCameraModel_Synesthesias_Snap_Sample_DetectionMenuModel_Synesthesias_Snap_Runtime_GeospatialAsyncModel_Synesthesias_Snap_Runtime_MobileGeospatialMathModel_Synesthesias_Snap_Sample_MobileDetectionMeshModel_Synesthesias_Snap_Sample_DetectionTouchModel_Synesthesias_Snap_Sample_MockValidationResultModel_
+  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel__ctor_Synesthesias_Snap_Sample_IEnvironmentModel_Synesthesias_Snap_Sample_ValidationRepository_Synesthesias_Snap_Sample_SurfaceRepository_Synesthesias_Snap_Sample_TextureRepository_Synesthesias_Snap_Sample_SceneModel_Synesthesias_Snap_Sample_LocalizationModel_Synesthesias_Snap_Sample_MobileARCameraModel_Synesthesias_Snap_Sample_DetectionMenuModel_Synesthesias_Snap_Sample_DetectionSettingModel_Synesthesias_Snap_Sample_DetectionMeshCullingModel_Synesthesias_Snap_Runtime_GeospatialAccuracyModel_Synesthesias_Snap_Runtime_IMeshValidationModel_Synesthesias_Snap_Runtime_GeospatialPoseModel_Synesthesias_Snap_Runtime_IGeospatialMathModel_Synesthesias_Snap_Sample_MobileDetectionMeshModel_Synesthesias_Snap_Sample_DetectionTouchModel_Synesthesias_Snap_Sample_MockValidationResultModel_
   name: MobileDetectionModel
   nameWithType: MobileDetectionModel.MobileDetectionModel
   fullName: Synesthesias.Snap.Sample.MobileDetectionModel.MobileDetectionModel
   nameWithType.vb: MobileDetectionModel.New
   fullName.vb: Synesthesias.Snap.Sample.MobileDetectionModel.New
   name.vb: New
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel
+  commentId: T:Synesthesias.Snap.Sample.IEnvironmentModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html
+  name: IEnvironmentModel
+  nameWithType: IEnvironmentModel
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel
+- uid: Synesthesias.Snap.Sample.ValidationRepository
+  commentId: T:Synesthesias.Snap.Sample.ValidationRepository
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.ValidationRepository.html
+  name: ValidationRepository
+  nameWithType: ValidationRepository
+  fullName: Synesthesias.Snap.Sample.ValidationRepository
 - uid: Synesthesias.Snap.Sample.SurfaceRepository
   commentId: T:Synesthesias.Snap.Sample.SurfaceRepository
   parent: Synesthesias.Snap.Sample
@@ -780,20 +753,48 @@ references:
   name: DetectionMenuModel
   nameWithType: DetectionMenuModel
   fullName: Synesthesias.Snap.Sample.DetectionMenuModel
-- uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel
-  commentId: T:Synesthesias.Snap.Runtime.GeospatialAsyncModel
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionSettingModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionSettingModel.html
+  name: DetectionSettingModel
+  nameWithType: DetectionSettingModel
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel
+- uid: Synesthesias.Snap.Sample.DetectionMeshCullingModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMeshCullingModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMeshCullingModel.html
+  name: DetectionMeshCullingModel
+  nameWithType: DetectionMeshCullingModel
+  fullName: Synesthesias.Snap.Sample.DetectionMeshCullingModel
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAccuracyModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.GeospatialAsyncModel.html
-  name: GeospatialAsyncModel
-  nameWithType: GeospatialAsyncModel
-  fullName: Synesthesias.Snap.Runtime.GeospatialAsyncModel
-- uid: Synesthesias.Snap.Runtime.MobileGeospatialMathModel
-  commentId: T:Synesthesias.Snap.Runtime.MobileGeospatialMathModel
+  href: Synesthesias.Snap.Runtime.GeospatialAccuracyModel.html
+  name: GeospatialAccuracyModel
+  nameWithType: GeospatialAccuracyModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyModel
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.IMeshValidationModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.MobileGeospatialMathModel.html
-  name: MobileGeospatialMathModel
-  nameWithType: MobileGeospatialMathModel
-  fullName: Synesthesias.Snap.Runtime.MobileGeospatialMathModel
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html
+  name: IMeshValidationModel
+  nameWithType: IMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel
+- uid: Synesthesias.Snap.Runtime.GeospatialPoseModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialPoseModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialPoseModel.html
+  name: GeospatialPoseModel
+  nameWithType: GeospatialPoseModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialPoseModel
+- uid: Synesthesias.Snap.Runtime.IGeospatialMathModel
+  commentId: T:Synesthesias.Snap.Runtime.IGeospatialMathModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.IGeospatialMathModel.html
+  name: IGeospatialMathModel
+  nameWithType: IGeospatialMathModel
+  fullName: Synesthesias.Snap.Runtime.IGeospatialMathModel
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel
   commentId: T:Synesthesias.Snap.Sample.MobileDetectionMeshModel
   parent: Synesthesias.Snap.Sample
@@ -875,7 +876,7 @@ references:
   - name: )
 - uid: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync*
   commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync
-  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_StartAsync_UnityEngine_Camera_System_Single_System_Threading_CancellationToken_
+  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_StartAsync_UnityEngine_Camera_System_Threading_CancellationToken_
   name: StartAsync
   nameWithType: MobileDetectionModel.StartAsync
   fullName: Synesthesias.Snap.Sample.MobileDetectionModel.StartAsync
@@ -886,17 +887,6 @@ references:
   name: Camera
   nameWithType: Camera
   fullName: UnityEngine.Camera
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
 - uid: System.Threading.CancellationToken
   commentId: T:System.Threading.CancellationToken
   parent: System.Threading
@@ -996,7 +986,7 @@ references:
   fullName: Synesthesias.Snap.Sample.MobileDetectionModel.ShowMenu
 - uid: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync*
   commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync
-  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_CaptureAsync_System_Threading_CancellationToken_
+  href: Synesthesias.Snap.Sample.MobileDetectionModel.html#Synesthesias_Snap_Sample_MobileDetectionModel_CaptureAsync_UnityEngine_Camera_System_Threading_CancellationToken_
   name: CaptureAsync
   nameWithType: MobileDetectionModel.CaptureAsync
   fullName: Synesthesias.Snap.Sample.MobileDetectionModel.CaptureAsync

@@ -11,6 +11,7 @@ items:
   - Synesthesias.Snap.Sample.MobileDetectionView.DetectedMaterial
   - Synesthesias.Snap.Sample.MobileDetectionView.GeospatialObject
   - Synesthesias.Snap.Sample.MobileDetectionView.MenuButton
+  - Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial
   - Synesthesias.Snap.Sample.MobileDetectionView.SelectedMaterial
   - Synesthesias.Snap.Sample.MobileDetectionView.TouchView
   langs:
@@ -23,7 +24,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MobileDetectionView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
@@ -183,11 +184,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectedMaterial
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -200,6 +201,37 @@ items:
       type: UnityEngine.Material
     content.vb: Public ReadOnly Property DetectedMaterial As Material
   overload: Synesthesias.Snap.Sample.MobileDetectionView.DetectedMaterial*
+- uid: Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial
+  commentId: P:Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial
+  id: SelectableMaterial
+  parent: Synesthesias.Snap.Sample.MobileDetectionView
+  langs:
+  - csharp
+  - vb
+  name: SelectableMaterial
+  nameWithType: MobileDetectionView.SelectableMaterial
+  fullName: Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SelectableMaterial
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 選択可能時のMaterial
+  example: []
+  syntax:
+    content: public Material SelectableMaterial { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Material
+    content.vb: Public ReadOnly Property SelectableMaterial As Material
+  overload: Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial*
 - uid: Synesthesias.Snap.Sample.MobileDetectionView.SelectedMaterial
   commentId: P:Synesthesias.Snap.Sample.MobileDetectionView.SelectedMaterial
   id: SelectedMaterial
@@ -214,11 +246,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SelectedMaterial
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 28
+    startLine: 35
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -245,11 +277,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TouchView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 34
+    startLine: 41
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -276,11 +308,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ArCamera
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 40
+    startLine: 47
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -307,11 +339,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MenuButton
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 46
+    startLine: 53
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -338,11 +370,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialObject
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 52
+    startLine: 59
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -369,11 +401,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CameraRawImage
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 58
+    startLine: 65
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -400,11 +432,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CameraButton
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/MobileDetectionView.cs
-    startLine: 64
+    startLine: 71
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -6101,6 +6133,12 @@ references:
   name: Material
   nameWithType: Material
   fullName: UnityEngine.Material
+- uid: Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial*
+  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial
+  href: Synesthesias.Snap.Sample.MobileDetectionView.html#Synesthesias_Snap_Sample_MobileDetectionView_SelectableMaterial
+  name: SelectableMaterial
+  nameWithType: MobileDetectionView.SelectableMaterial
+  fullName: Synesthesias.Snap.Sample.MobileDetectionView.SelectableMaterial
 - uid: Synesthesias.Snap.Sample.MobileDetectionView.SelectedMaterial*
   commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionView.SelectedMaterial
   href: Synesthesias.Snap.Sample.MobileDetectionView.html#Synesthesias_Snap_Sample_MobileDetectionView_SelectedMaterial

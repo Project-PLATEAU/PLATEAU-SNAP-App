@@ -5,8 +5,8 @@ items:
   id: DetectionMenuModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.SceneModel)
-  - Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel)
+  - Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)
+  - Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
   - Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
   - Synesthesias.Snap.Sample.DetectionMenuModel.IsVisibleProperty
   - Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable
@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectionMenuModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
@@ -58,11 +58,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsVisibleProperty
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -87,11 +87,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OnElementAddedAsObservable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -103,40 +103,42 @@ items:
       type: R3.Observable{Synesthesias.Snap.Sample.DetectionMenuElementModel}
     content.vb: Public Function OnElementAddedAsObservable() As Observable(Of DetectionMenuElementModel)
   overload: Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable*
-- uid: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.SceneModel)
-  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.SceneModel)
-  id: '#ctor(Synesthesias.Snap.Sample.SceneModel)'
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)
+  id: '#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)'
   parent: Synesthesias.Snap.Sample.DetectionMenuModel
   langs:
   - csharp
   - vb
-  name: DetectionMenuModel(SceneModel)
-  nameWithType: DetectionMenuModel.DetectionMenuModel(SceneModel)
-  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.DetectionMenuModel(Synesthesias.Snap.Sample.SceneModel)
+  name: DetectionMenuModel(IEnvironmentModel, SceneModel)
+  nameWithType: DetectionMenuModel.DetectionMenuModel(IEnvironmentModel, SceneModel)
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.DetectionMenuModel(Synesthesias.Snap.Sample.IEnvironmentModel, Synesthesias.Snap.Sample.SceneModel)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: コンストラクタ
   example: []
   syntax:
-    content: public DetectionMenuModel(SceneModel sceneModel)
+    content: public DetectionMenuModel(IEnvironmentModel environmentModel, SceneModel sceneModel)
     parameters:
+    - id: environmentModel
+      type: Synesthesias.Snap.Sample.IEnvironmentModel
     - id: sceneModel
       type: Synesthesias.Snap.Sample.SceneModel
-    content.vb: Public Sub New(sceneModel As SceneModel)
+    content.vb: Public Sub New(environmentModel As IEnvironmentModel, sceneModel As SceneModel)
   overload: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor*
-  nameWithType.vb: DetectionMenuModel.New(SceneModel)
-  fullName.vb: Synesthesias.Snap.Sample.DetectionMenuModel.New(Synesthesias.Snap.Sample.SceneModel)
-  name.vb: New(SceneModel)
+  nameWithType.vb: DetectionMenuModel.New(IEnvironmentModel, SceneModel)
+  fullName.vb: Synesthesias.Snap.Sample.DetectionMenuModel.New(Synesthesias.Snap.Sample.IEnvironmentModel, Synesthesias.Snap.Sample.SceneModel)
+  name.vb: New(IEnvironmentModel, SceneModel)
 - uid: Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
   id: Dispose
@@ -151,11 +153,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-    startLine: 35
+    startLine: 39
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -181,11 +183,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: PopulateElements
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-    startLine: 44
+    startLine: 48
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -195,36 +197,38 @@ items:
     content: public void PopulateElements()
     content.vb: Public Sub PopulateElements()
   overload: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements*
-- uid: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel)
-  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel)
-  id: AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel)
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
+  id: AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
   parent: Synesthesias.Snap.Sample.DetectionMenuModel
   langs:
   - csharp
   - vb
-  name: AddElement(DetectionMenuElementModel)
-  nameWithType: DetectionMenuModel.AddElement(DetectionMenuElementModel)
-  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel)
+  name: AddElement(DetectionMenuElementModel, EnvironmentType)
+  nameWithType: DetectionMenuModel.AddElement(DetectionMenuElementModel, EnvironmentType)
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel, Synesthesias.Snap.Sample.EnvironmentType)
   type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: AddElement
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
-    startLine: 58
+    startLine: 63
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: メニュー要素を追加
   example: []
   syntax:
-    content: public void AddElement(DetectionMenuElementModel element)
+    content: public void AddElement(DetectionMenuElementModel element, EnvironmentType environmentType = EnvironmentType.Development)
     parameters:
     - id: element
       type: Synesthesias.Snap.Sample.DetectionMenuElementModel
-    content.vb: Public Sub AddElement(element As DetectionMenuElementModel)
+    - id: environmentType
+      type: Synesthesias.Snap.Sample.EnvironmentType
+    content.vb: Public Sub AddElement(element As DetectionMenuElementModel, environmentType As EnvironmentType = EnvironmentType.Development)
   overload: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement*
 references:
 - uid: Synesthesias.Snap.Sample
@@ -630,13 +634,20 @@ references:
   - name: )
 - uid: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.#ctor
-  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel__ctor_Synesthesias_Snap_Sample_SceneModel_
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel__ctor_Synesthesias_Snap_Sample_IEnvironmentModel_Synesthesias_Snap_Sample_SceneModel_
   name: DetectionMenuModel
   nameWithType: DetectionMenuModel.DetectionMenuModel
   fullName: Synesthesias.Snap.Sample.DetectionMenuModel.DetectionMenuModel
   nameWithType.vb: DetectionMenuModel.New
   fullName.vb: Synesthesias.Snap.Sample.DetectionMenuModel.New
   name.vb: New
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel
+  commentId: T:Synesthesias.Snap.Sample.IEnvironmentModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html
+  name: IEnvironmentModel
+  nameWithType: IEnvironmentModel
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel
 - uid: Synesthesias.Snap.Sample.SceneModel
   commentId: T:Synesthesias.Snap.Sample.SceneModel
   parent: Synesthesias.Snap.Sample
@@ -680,7 +691,7 @@ references:
   fullName: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements
 - uid: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement*
   commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.AddElement
-  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel_AddElement_Synesthesias_Snap_Sample_DetectionMenuElementModel_
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel_AddElement_Synesthesias_Snap_Sample_DetectionMenuElementModel_Synesthesias_Snap_Sample_EnvironmentType_
   name: AddElement
   nameWithType: DetectionMenuModel.AddElement
   fullName: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement
@@ -691,3 +702,10 @@ references:
   name: DetectionMenuElementModel
   nameWithType: DetectionMenuElementModel
   fullName: Synesthesias.Snap.Sample.DetectionMenuElementModel
+- uid: Synesthesias.Snap.Sample.EnvironmentType
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.EnvironmentType.html
+  name: EnvironmentType
+  nameWithType: EnvironmentType
+  fullName: Synesthesias.Snap.Sample.EnvironmentType

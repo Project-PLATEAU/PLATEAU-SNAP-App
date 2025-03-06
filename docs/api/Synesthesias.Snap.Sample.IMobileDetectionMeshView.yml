@@ -8,6 +8,7 @@ items:
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetChildGameObject
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetGameObject
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView.Id
+  - Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshFilter
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshRenderer
   langs:
@@ -20,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IMobileDetectionMeshView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
@@ -45,7 +46,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Id
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
@@ -76,7 +77,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshFilter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
@@ -107,7 +108,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshRenderer
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
@@ -124,6 +125,37 @@ items:
       type: UnityEngine.MeshRenderer
     content.vb: ReadOnly Property MeshRenderer As MeshRenderer
   overload: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshRenderer*
+- uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+  commentId: P:Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+  id: MeshCollider
+  parent: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+  langs:
+  - csharp
+  - vb
+  name: MeshCollider
+  nameWithType: IMobileDetectionMeshView.MeshCollider
+  fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MeshCollider
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
+    startLine: 25
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュのCollider
+  example: []
+  syntax:
+    content: MeshCollider MeshCollider { get; }
+    parameters: []
+    return:
+      type: UnityEngine.MeshCollider
+    content.vb: ReadOnly Property MeshCollider As MeshCollider
+  overload: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider*
 - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetGameObject
   commentId: M:Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetGameObject
   id: GetGameObject
@@ -138,11 +170,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetGameObject
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-    startLine: 25
+    startLine: 30
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -168,11 +200,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetChildGameObject
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/IMobileDetectionMeshView.cs
-    startLine: 30
+    startLine: 35
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -283,6 +315,19 @@ references:
   name: MeshRenderer
   nameWithType: MeshRenderer
   fullName: UnityEngine.MeshRenderer
+- uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider*
+  commentId: Overload:Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+  href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html#Synesthesias_Snap_Sample_IMobileDetectionMeshView_MeshCollider
+  name: MeshCollider
+  nameWithType: IMobileDetectionMeshView.MeshCollider
+  fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+- uid: UnityEngine.MeshCollider
+  commentId: T:UnityEngine.MeshCollider
+  parent: UnityEngine
+  isExternal: true
+  name: MeshCollider
+  nameWithType: MeshCollider
+  fullName: UnityEngine.MeshCollider
 - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetGameObject*
   commentId: Overload:Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetGameObject
   href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html#Synesthesias_Snap_Sample_IMobileDetectionMeshView_GetGameObject

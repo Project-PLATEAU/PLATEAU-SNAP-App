@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialMeshResultType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: None
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EmptyCoordinate
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: OriginCreationFailed
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: AnchorCreationFailed
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: InsufficientVertices
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Success
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Mesh/GeospatialMeshResultType.cs

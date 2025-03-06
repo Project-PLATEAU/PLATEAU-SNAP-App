@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ServerStatusCode
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Success
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: BadRequest
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: NotFound
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MethodNotAllowed
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: InternalServerError
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ServiceUnavailable
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Server/ServerStatusCode.cs

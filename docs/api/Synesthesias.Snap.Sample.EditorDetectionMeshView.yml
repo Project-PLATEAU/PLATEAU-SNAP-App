@@ -9,6 +9,7 @@ items:
   - Synesthesias.Snap.Sample.EditorDetectionMeshView.GetChildGameObject
   - Synesthesias.Snap.Sample.EditorDetectionMeshView.GetGameObject
   - Synesthesias.Snap.Sample.EditorDetectionMeshView.Id
+  - Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider
   - Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshFilter
   - Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshRenderer
   langs:
@@ -21,11 +22,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EditorDetectionMeshView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -183,11 +184,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Id
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -216,11 +217,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshFilter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 26
+    startLine: 28
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -249,11 +250,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshRenderer
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 32
+    startLine: 34
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -282,11 +283,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DebugSphereMaterial
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 35
+    startLine: 37
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -311,11 +312,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetGameObject
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 41
+    startLine: 43
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -329,6 +330,39 @@ items:
   overload: Synesthesias.Snap.Sample.EditorDetectionMeshView.GetGameObject*
   implements:
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView.GetGameObject
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider
+  commentId: P:Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider
+  id: MeshCollider
+  parent: Synesthesias.Snap.Sample.EditorDetectionMeshView
+  langs:
+  - csharp
+  - vb
+  name: MeshCollider
+  nameWithType: EditorDetectionMeshView.MeshCollider
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MeshCollider
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
+    startLine: 51
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュのCollider
+  example: []
+  syntax:
+    content: public MeshCollider MeshCollider { get; }
+    parameters: []
+    return:
+      type: UnityEngine.MeshCollider
+    content.vb: Public ReadOnly Property MeshCollider As MeshCollider
+  overload: Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider*
+  implements:
+  - Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshView.GetChildGameObject
   commentId: M:Synesthesias.Snap.Sample.EditorDetectionMeshView.GetChildGameObject
   id: GetChildGameObject
@@ -343,11 +377,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetChildGameObject
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/DetectionMesh/EditorDetectionMeshView.cs
-    startLine: 49
+    startLine: 57
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -6146,6 +6180,26 @@ references:
   name: GameObject
   nameWithType: GameObject
   fullName: UnityEngine.GameObject
+- uid: Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider
+  href: Synesthesias.Snap.Sample.EditorDetectionMeshView.html#Synesthesias_Snap_Sample_EditorDetectionMeshView_MeshCollider
+  name: MeshCollider
+  nameWithType: EditorDetectionMeshView.MeshCollider
+  fullName: Synesthesias.Snap.Sample.EditorDetectionMeshView.MeshCollider
+- uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+  commentId: P:Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+  parent: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+  href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html#Synesthesias_Snap_Sample_IMobileDetectionMeshView_MeshCollider
+  name: MeshCollider
+  nameWithType: IMobileDetectionMeshView.MeshCollider
+  fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView.MeshCollider
+- uid: UnityEngine.MeshCollider
+  commentId: T:UnityEngine.MeshCollider
+  parent: UnityEngine
+  isExternal: true
+  name: MeshCollider
+  nameWithType: MeshCollider
+  fullName: UnityEngine.MeshCollider
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshView.GetChildGameObject*
   commentId: Overload:Synesthesias.Snap.Sample.EditorDetectionMeshView.GetChildGameObject
   href: Synesthesias.Snap.Sample.EditorDetectionMeshView.html#Synesthesias_Snap_Sample_EditorDetectionMeshView_GetChildGameObject

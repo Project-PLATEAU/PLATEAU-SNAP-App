@@ -5,11 +5,12 @@ items:
   id: DetectionSettingModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32)
+  - Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32,System.Int32)
   - Synesthesias.Snap.Sample.DetectionSettingModel.Dispose
-  - Synesthesias.Snap.Sample.DetectionSettingModel.DistanceProperty
-  - Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleProperty
-  - Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetectionProperty
+  - Synesthesias.Snap.Sample.DetectionSettingModel.Distance
+  - Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible
+  - Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable
+  - Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection
   - Synesthesias.Snap.Sample.DetectionSettingModel.StartAsync(System.Threading.CancellationToken)
   langs:
   - csharp
@@ -21,11 +22,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectionSettingModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -44,119 +45,155 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleProperty
-  commentId: F:Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleProperty
-  id: IsGeospatialVisibleProperty
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible
+  commentId: P:Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible
+  id: IsGeospatialVisible
   parent: Synesthesias.Snap.Sample.DetectionSettingModel
   langs:
   - csharp
   - vb
-  name: IsGeospatialVisibleProperty
-  nameWithType: DetectionSettingModel.IsGeospatialVisibleProperty
-  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleProperty
-  type: Field
+  name: IsGeospatialVisible
+  nameWithType: DetectionSettingModel.IsGeospatialVisible
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible
+  type: Property
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: IsGeospatialVisibleProperty
+    id: IsGeospatialVisible
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: Geospatial情報を表示するか
   example: []
   syntax:
-    content: public readonly ReactiveProperty<bool> IsGeospatialVisibleProperty
+    content: public bool IsGeospatialVisible { get; }
+    parameters: []
     return:
-      type: R3.ReactiveProperty{System.Boolean}
-    content.vb: Public ReadOnly IsGeospatialVisibleProperty As ReactiveProperty(Of Boolean)
-- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetectionProperty
-  commentId: F:Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetectionProperty
-  id: IsManualDetectionProperty
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGeospatialVisible As Boolean
+  overload: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible*
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection
+  commentId: P:Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection
+  id: IsManualDetection
   parent: Synesthesias.Snap.Sample.DetectionSettingModel
   langs:
   - csharp
   - vb
-  name: IsManualDetectionProperty
-  nameWithType: DetectionSettingModel.IsManualDetectionProperty
-  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetectionProperty
-  type: Field
+  name: IsManualDetection
+  nameWithType: DetectionSettingModel.IsManualDetection
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection
+  type: Property
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: IsManualDetectionProperty
+    id: IsManualDetection
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 23
+    startLine: 28
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: 手動検出か
   example: []
   syntax:
-    content: public readonly ReactiveProperty<bool> IsManualDetectionProperty
+    content: public bool IsManualDetection { get; }
+    parameters: []
     return:
-      type: R3.ReactiveProperty{System.Boolean}
-    content.vb: Public ReadOnly IsManualDetectionProperty As ReactiveProperty(Of Boolean)
-- uid: Synesthesias.Snap.Sample.DetectionSettingModel.DistanceProperty
-  commentId: F:Synesthesias.Snap.Sample.DetectionSettingModel.DistanceProperty
-  id: DistanceProperty
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsManualDetection As Boolean
+  overload: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection*
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.Distance
+  commentId: P:Synesthesias.Snap.Sample.DetectionSettingModel.Distance
+  id: Distance
   parent: Synesthesias.Snap.Sample.DetectionSettingModel
   langs:
   - csharp
   - vb
-  name: DistanceProperty
-  nameWithType: DetectionSettingModel.DistanceProperty
-  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.DistanceProperty
-  type: Field
+  name: Distance
+  nameWithType: DetectionSettingModel.Distance
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.Distance
+  type: Property
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: DistanceProperty
+    id: Distance
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 28
+    startLine: 34
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: 検出距離
   example: []
   syntax:
-    content: public readonly ReactiveProperty<int> DistanceProperty
+    content: public int Distance { get; }
+    parameters: []
     return:
-      type: R3.ReactiveProperty{System.Int32}
-    content.vb: Public ReadOnly DistanceProperty As ReactiveProperty(Of Integer)
-- uid: Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32)
-  commentId: M:Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32)
-  id: '#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32)'
+      type: System.Int32
+    content.vb: Public ReadOnly Property Distance As Integer
+  overload: Synesthesias.Snap.Sample.DetectionSettingModel.Distance*
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable
+  commentId: M:Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable
+  id: IsGeospatialVisibleAsObservable
   parent: Synesthesias.Snap.Sample.DetectionSettingModel
   langs:
   - csharp
   - vb
-  name: DetectionSettingModel(DetectionMenuModel, int, int, int)
-  nameWithType: DetectionSettingModel.DetectionSettingModel(DetectionMenuModel, int, int, int)
-  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.DetectionSettingModel(Synesthesias.Snap.Sample.DetectionMenuModel, int, int, int)
+  name: IsGeospatialVisibleAsObservable()
+  nameWithType: DetectionSettingModel.IsGeospatialVisibleAsObservable()
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsGeospatialVisibleAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
+    startLine: 40
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: Geospatial情報を表示するかのObservable
+  example: []
+  syntax:
+    content: public Observable<bool> IsGeospatialVisibleAsObservable()
+    return:
+      type: R3.Observable{System.Boolean}
+    content.vb: Public Function IsGeospatialVisibleAsObservable() As Observable(Of Boolean)
+  overload: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable*
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Synesthesias.Snap.Sample.DetectionSettingModel.#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(Synesthesias.Snap.Sample.DetectionMenuModel,System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: Synesthesias.Snap.Sample.DetectionSettingModel
+  langs:
+  - csharp
+  - vb
+  name: DetectionSettingModel(DetectionMenuModel, int, int, int, int)
+  nameWithType: DetectionSettingModel.DetectionSettingModel(DetectionMenuModel, int, int, int, int)
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.DetectionSettingModel(Synesthesias.Snap.Sample.DetectionMenuModel, int, int, int, int)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 33
+    startLine: 46
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: コンストラクタ
   example: []
   syntax:
-    content: public DetectionSettingModel(DetectionMenuModel menuModel, int minimumDistance, int maximumDistance, int incrementDistance)
+    content: public DetectionSettingModel(DetectionMenuModel menuModel, int minimumDistance, int maximumDistance, int incrementDistance, int defaultDistance)
     parameters:
     - id: menuModel
       type: Synesthesias.Snap.Sample.DetectionMenuModel
@@ -166,11 +203,13 @@ items:
       type: System.Int32
     - id: incrementDistance
       type: System.Int32
-    content.vb: Public Sub New(menuModel As DetectionMenuModel, minimumDistance As Integer, maximumDistance As Integer, incrementDistance As Integer)
+    - id: defaultDistance
+      type: System.Int32
+    content.vb: Public Sub New(menuModel As DetectionMenuModel, minimumDistance As Integer, maximumDistance As Integer, incrementDistance As Integer, defaultDistance As Integer)
   overload: Synesthesias.Snap.Sample.DetectionSettingModel.#ctor*
-  nameWithType.vb: DetectionSettingModel.New(DetectionMenuModel, Integer, Integer, Integer)
-  fullName.vb: Synesthesias.Snap.Sample.DetectionSettingModel.New(Synesthesias.Snap.Sample.DetectionMenuModel, Integer, Integer, Integer)
-  name.vb: New(DetectionMenuModel, Integer, Integer, Integer)
+  nameWithType.vb: DetectionSettingModel.New(DetectionMenuModel, Integer, Integer, Integer, Integer)
+  fullName.vb: Synesthesias.Snap.Sample.DetectionSettingModel.New(Synesthesias.Snap.Sample.DetectionMenuModel, Integer, Integer, Integer, Integer)
+  name.vb: New(DetectionMenuModel, Integer, Integer, Integer, Integer)
 - uid: Synesthesias.Snap.Sample.DetectionSettingModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.DetectionSettingModel.Dispose
   id: Dispose
@@ -185,11 +224,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 49
+    startLine: 66
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -215,11 +254,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: StartAsync
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/Setting/DetectionSettingModel.cs
-    startLine: 57
+    startLine: 74
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -510,20 +549,66 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: R3.ReactiveProperty{System.Boolean}
-  commentId: T:R3.ReactiveProperty{System.Boolean}
-  parent: R3
-  definition: R3.ReactiveProperty`1
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible
+  href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisible
+  name: IsGeospatialVisible
+  nameWithType: DetectionSettingModel.IsGeospatialVisible
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: ReactiveProperty<bool>
-  nameWithType: ReactiveProperty<bool>
-  fullName: R3.ReactiveProperty<bool>
-  nameWithType.vb: ReactiveProperty(Of Boolean)
-  fullName.vb: R3.ReactiveProperty(Of Boolean)
-  name.vb: ReactiveProperty(Of Boolean)
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection
+  href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel_IsManualDetection
+  name: IsManualDetection
+  nameWithType: DetectionSettingModel.IsManualDetection
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsManualDetection
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.Distance*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionSettingModel.Distance
+  href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel_Distance
+  name: Distance
+  nameWithType: DetectionSettingModel.Distance
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.Distance
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable
+  href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel_IsGeospatialVisibleAsObservable
+  name: IsGeospatialVisibleAsObservable
+  nameWithType: DetectionSettingModel.IsGeospatialVisibleAsObservable
+  fullName: Synesthesias.Snap.Sample.DetectionSettingModel.IsGeospatialVisibleAsObservable
+- uid: R3.Observable{System.Boolean}
+  commentId: T:R3.Observable{System.Boolean}
+  parent: R3
+  definition: R3.Observable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Observable<bool>
+  nameWithType: Observable<bool>
+  fullName: R3.Observable<bool>
+  nameWithType.vb: Observable(Of Boolean)
+  fullName.vb: R3.Observable(Of Boolean)
+  name.vb: Observable(Of Boolean)
   spec.csharp:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
+  - uid: R3.Observable`1
+    name: Observable
     isExternal: true
   - name: <
   - uid: System.Boolean
@@ -532,8 +617,8 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: '>'
   spec.vb:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
+  - uid: R3.Observable`1
+    name: Observable
     isExternal: true
   - name: (
   - name: Of
@@ -543,25 +628,25 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: R3.ReactiveProperty`1
-  commentId: T:R3.ReactiveProperty`1
+- uid: R3.Observable`1
+  commentId: T:R3.Observable`1
   isExternal: true
-  name: ReactiveProperty<T>
-  nameWithType: ReactiveProperty<T>
-  fullName: R3.ReactiveProperty<T>
-  nameWithType.vb: ReactiveProperty(Of T)
-  fullName.vb: R3.ReactiveProperty(Of T)
-  name.vb: ReactiveProperty(Of T)
+  name: Observable<T>
+  nameWithType: Observable<T>
+  fullName: R3.Observable<T>
+  nameWithType.vb: Observable(Of T)
+  fullName.vb: R3.Observable(Of T)
+  name.vb: Observable(Of T)
   spec.csharp:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
+  - uid: R3.Observable`1
+    name: Observable
     isExternal: true
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
+  - uid: R3.Observable`1
+    name: Observable
     isExternal: true
   - name: (
   - name: Of
@@ -574,42 +659,9 @@ references:
   name: R3
   nameWithType: R3
   fullName: R3
-- uid: R3.ReactiveProperty{System.Int32}
-  commentId: T:R3.ReactiveProperty{System.Int32}
-  parent: R3
-  definition: R3.ReactiveProperty`1
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: ReactiveProperty<int>
-  nameWithType: ReactiveProperty<int>
-  fullName: R3.ReactiveProperty<int>
-  nameWithType.vb: ReactiveProperty(Of Integer)
-  fullName.vb: R3.ReactiveProperty(Of Integer)
-  name.vb: ReactiveProperty(Of Integer)
-  spec.csharp:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
-    isExternal: true
-  - name: <
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
-  spec.vb:
-  - uid: R3.ReactiveProperty`1
-    name: ReactiveProperty
-    isExternal: true
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
 - uid: Synesthesias.Snap.Sample.DetectionSettingModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.DetectionSettingModel.#ctor
-  href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel__ctor_Synesthesias_Snap_Sample_DetectionMenuModel_System_Int32_System_Int32_System_Int32_
+  href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel__ctor_Synesthesias_Snap_Sample_DetectionMenuModel_System_Int32_System_Int32_System_Int32_System_Int32_
   name: DetectionSettingModel
   nameWithType: DetectionSettingModel.DetectionSettingModel
   fullName: Synesthesias.Snap.Sample.DetectionSettingModel.DetectionSettingModel
@@ -623,17 +675,6 @@ references:
   name: DetectionMenuModel
   nameWithType: DetectionMenuModel
   fullName: Synesthesias.Snap.Sample.DetectionMenuModel
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: Synesthesias.Snap.Sample.DetectionSettingModel.Dispose*
   commentId: Overload:Synesthesias.Snap.Sample.DetectionSettingModel.Dispose
   href: Synesthesias.Snap.Sample.DetectionSettingModel.html#Synesthesias_Snap_Sample_DetectionSettingModel_Dispose

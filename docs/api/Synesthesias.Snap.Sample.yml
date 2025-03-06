@@ -4,20 +4,21 @@ items:
   commentId: N:Synesthesias.Snap.Sample
   id: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.APIModel
   - Synesthesias.Snap.Sample.ApiConfigurationScriptableObject
   - Synesthesias.Snap.Sample.BaseLifetimeScope
   - Synesthesias.Snap.Sample.BootLifetimeScope
   - Synesthesias.Snap.Sample.BootModel
   - Synesthesias.Snap.Sample.BootPresenter
+  - Synesthesias.Snap.Sample.CoordinateUtil
+  - Synesthesias.Snap.Sample.DetectionMaterialModel
   - Synesthesias.Snap.Sample.DetectionMenuElementModel
   - Synesthesias.Snap.Sample.DetectionMenuElementView
   - Synesthesias.Snap.Sample.DetectionMenuModel
   - Synesthesias.Snap.Sample.DetectionMenuPresenter
   - Synesthesias.Snap.Sample.DetectionMenuView
-  - Synesthesias.Snap.Sample.DetectionMeshPresenter
+  - Synesthesias.Snap.Sample.DetectionMeshCullingModel
+  - Synesthesias.Snap.Sample.DetectionMeshType
   - Synesthesias.Snap.Sample.DetectionSettingModel
-  - Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter
   - Synesthesias.Snap.Sample.DetectionTouchModel
   - Synesthesias.Snap.Sample.DetectionTouchView
   - Synesthesias.Snap.Sample.DialogIconDefine
@@ -28,8 +29,9 @@ items:
   - Synesthesias.Snap.Sample.EditorDetectionParameterView
   - Synesthesias.Snap.Sample.EditorDetectionPresenter
   - Synesthesias.Snap.Sample.EditorDetectionView
-  - Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView
   - Synesthesias.Snap.Sample.EditorWebCameraModel
+  - Synesthesias.Snap.Sample.EnvironmentScriptableObject
+  - Synesthesias.Snap.Sample.EnvironmentType
   - Synesthesias.Snap.Sample.GeospatialDebugPresenter
   - Synesthesias.Snap.Sample.GeospatialDebugView
   - Synesthesias.Snap.Sample.GeospatialMainLoopPresenter
@@ -37,39 +39,31 @@ items:
   - Synesthesias.Snap.Sample.GuideModel
   - Synesthesias.Snap.Sample.GuidePresenter
   - Synesthesias.Snap.Sample.GuideView
-  - Synesthesias.Snap.Sample.IAPIModel
   - Synesthesias.Snap.Sample.IApiConfigurationModel
   - Synesthesias.Snap.Sample.IApiKeyModel
   - Synesthesias.Snap.Sample.IEditorDetectionParameterModel
-  - Synesthesias.Snap.Sample.IEndPointModel
+  - Synesthesias.Snap.Sample.IEnvironmentModel
   - Synesthesias.Snap.Sample.IMobileDetectionMeshView
-  - Synesthesias.Snap.Sample.IServerModel
   - Synesthesias.Snap.Sample.IValidationModel
   - Synesthesias.Snap.Sample.ImageRepository
+  - Synesthesias.Snap.Sample.LatLonTests
+  - Synesthesias.Snap.Sample.LatLonTests.LatLonData
   - Synesthesias.Snap.Sample.LocalizationModel
   - Synesthesias.Snap.Sample.MainLifetimeScope
   - Synesthesias.Snap.Sample.MainModel
   - Synesthesias.Snap.Sample.MainPresenter
   - Synesthesias.Snap.Sample.MainView
   - Synesthesias.Snap.Sample.MeshRepository
-  - Synesthesias.Snap.Sample.MeshSample
   - Synesthesias.Snap.Sample.MobileARCameraModel
   - Synesthesias.Snap.Sample.MobileDetectionLifetimeScope
   - Synesthesias.Snap.Sample.MobileDetectionMeshModel
   - Synesthesias.Snap.Sample.MobileDetectionMeshView
   - Synesthesias.Snap.Sample.MobileDetectionModel
   - Synesthesias.Snap.Sample.MobileDetectionPresenter
-  - Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel
-  - Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView
   - Synesthesias.Snap.Sample.MobileDetectionView
-  - Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope
-  - Synesthesias.Snap.Sample.MobileSimpleDetectionModel
-  - Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter
-  - Synesthesias.Snap.Sample.MobileSimpleDetectionView
-  - Synesthesias.Snap.Sample.MockAPIModel
-  - Synesthesias.Snap.Sample.MockEndPointModel
-  - Synesthesias.Snap.Sample.MockServerLifetimeScope
-  - Synesthesias.Snap.Sample.MockServerModel
+  - Synesthesias.Snap.Sample.MockJsonParser
+  - Synesthesias.Snap.Sample.MockSurface
+  - Synesthesias.Snap.Sample.MockSurfaces
   - Synesthesias.Snap.Sample.MockValidationModel
   - Synesthesias.Snap.Sample.MockValidationResultModel
   - Synesthesias.Snap.Sample.PlatformModel
@@ -79,8 +73,6 @@ items:
   - Synesthesias.Snap.Sample.SceneNameDefine
   - Synesthesias.Snap.Sample.ScreenModel
   - Synesthesias.Snap.Sample.ScreenTouchModel
-  - Synesthesias.Snap.Sample.ServerModel
-  - Synesthesias.Snap.Sample.ServerStatusCode
   - Synesthesias.Snap.Sample.SurfaceRepository
   - Synesthesias.Snap.Sample.TMPModel
   - Synesthesias.Snap.Sample.TextureRepository
@@ -119,12 +111,6 @@ references:
   name: IMobileDetectionMeshView
   nameWithType: IMobileDetectionMeshView
   fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView
-- uid: Synesthesias.Snap.Sample.MeshSample
-  commentId: T:Synesthesias.Snap.Sample.MeshSample
-  href: Synesthesias.Snap.Sample.MeshSample.html
-  name: MeshSample
-  nameWithType: MeshSample
-  fullName: Synesthesias.Snap.Sample.MeshSample
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel
   commentId: T:Synesthesias.Snap.Sample.MobileDetectionMeshModel
   parent: Synesthesias.Snap.Sample
@@ -138,6 +124,12 @@ references:
   name: GeospatialDebugPresenter
   nameWithType: GeospatialDebugPresenter
   fullName: Synesthesias.Snap.Sample.GeospatialDebugPresenter
+- uid: Synesthesias.Snap.Sample.EnvironmentScriptableObject
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentScriptableObject
+  href: Synesthesias.Snap.Sample.EnvironmentScriptableObject.html
+  name: EnvironmentScriptableObject
+  nameWithType: EnvironmentScriptableObject
+  fullName: Synesthesias.Snap.Sample.EnvironmentScriptableObject
 - uid: Synesthesias.Snap.Sample.MobileDetectionPresenter
   commentId: T:Synesthesias.Snap.Sample.MobileDetectionPresenter
   href: Synesthesias.Snap.Sample.MobileDetectionPresenter.html
@@ -150,19 +142,6 @@ references:
   name: BootLifetimeScope
   nameWithType: BootLifetimeScope
   fullName: Synesthesias.Snap.Sample.BootLifetimeScope
-- uid: Synesthesias.Snap.Sample.MobileSimpleDetectionView
-  commentId: T:Synesthesias.Snap.Sample.MobileSimpleDetectionView
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.MobileSimpleDetectionView.html
-  name: MobileSimpleDetectionView
-  nameWithType: MobileSimpleDetectionView
-  fullName: Synesthesias.Snap.Sample.MobileSimpleDetectionView
-- uid: Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView
-  commentId: T:Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView
-  href: Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView.html
-  name: EditorSimpleDetectionParameterView
-  nameWithType: EditorSimpleDetectionParameterView
-  fullName: Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView
 - uid: Synesthesias.Snap.Sample.EditorDetectionLifetimeScope
   commentId: T:Synesthesias.Snap.Sample.EditorDetectionLifetimeScope
   href: Synesthesias.Snap.Sample.EditorDetectionLifetimeScope.html
@@ -175,6 +154,13 @@ references:
   name: BootPresenter
   nameWithType: BootPresenter
   fullName: Synesthesias.Snap.Sample.BootPresenter
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel
+  commentId: T:Synesthesias.Snap.Sample.IEnvironmentModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html
+  name: IEnvironmentModel
+  nameWithType: IEnvironmentModel
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel
 - uid: Synesthesias.Snap.Sample.GuideModel
   commentId: T:Synesthesias.Snap.Sample.GuideModel
   parent: Synesthesias.Snap.Sample
@@ -229,6 +215,13 @@ references:
   name: MobileDetectionMeshView
   nameWithType: MobileDetectionMeshView
   fullName: Synesthesias.Snap.Sample.MobileDetectionMeshView
+- uid: Synesthesias.Snap.Sample.DetectionMeshCullingModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMeshCullingModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMeshCullingModel.html
+  name: DetectionMeshCullingModel
+  nameWithType: DetectionMeshCullingModel
+  fullName: Synesthesias.Snap.Sample.DetectionMeshCullingModel
 - uid: Synesthesias.Snap.Sample.MockValidationModel
   commentId: T:Synesthesias.Snap.Sample.MockValidationModel
   href: Synesthesias.Snap.Sample.MockValidationModel.html
@@ -281,12 +274,6 @@ references:
   name: GeospatialMainLoopPresenter
   nameWithType: GeospatialMainLoopPresenter
   fullName: Synesthesias.Snap.Sample.GeospatialMainLoopPresenter
-- uid: Synesthesias.Snap.Sample.MockAPIModel
-  commentId: T:Synesthesias.Snap.Sample.MockAPIModel
-  href: Synesthesias.Snap.Sample.MockAPIModel.html
-  name: MockAPIModel
-  nameWithType: MockAPIModel
-  fullName: Synesthesias.Snap.Sample.MockAPIModel
 - uid: Synesthesias.Snap.Sample.MobileDetectionLifetimeScope
   commentId: T:Synesthesias.Snap.Sample.MobileDetectionLifetimeScope
   href: Synesthesias.Snap.Sample.MobileDetectionLifetimeScope.html
@@ -360,12 +347,6 @@ references:
   name: ValidationParameterModel
   nameWithType: ValidationParameterModel
   fullName: Synesthesias.Snap.Sample.ValidationParameterModel
-- uid: Synesthesias.Snap.Sample.DetectionMeshPresenter
-  commentId: T:Synesthesias.Snap.Sample.DetectionMeshPresenter
-  href: Synesthesias.Snap.Sample.DetectionMeshPresenter.html
-  name: DetectionMeshPresenter
-  nameWithType: DetectionMeshPresenter
-  fullName: Synesthesias.Snap.Sample.DetectionMeshPresenter
 - uid: Synesthesias.Snap.Sample.DetectionTouchModel
   commentId: T:Synesthesias.Snap.Sample.DetectionTouchModel
   parent: Synesthesias.Snap.Sample
@@ -373,12 +354,12 @@ references:
   name: DetectionTouchModel
   nameWithType: DetectionTouchModel
   fullName: Synesthesias.Snap.Sample.DetectionTouchModel
-- uid: Synesthesias.Snap.Sample.MockServerLifetimeScope
-  commentId: T:Synesthesias.Snap.Sample.MockServerLifetimeScope
-  href: Synesthesias.Snap.Sample.MockServerLifetimeScope.html
-  name: MockServerLifetimeScope
-  nameWithType: MockServerLifetimeScope
-  fullName: Synesthesias.Snap.Sample.MockServerLifetimeScope
+- uid: Synesthesias.Snap.Sample.CoordinateUtil
+  commentId: T:Synesthesias.Snap.Sample.CoordinateUtil
+  href: Synesthesias.Snap.Sample.CoordinateUtil.html
+  name: CoordinateUtil
+  nameWithType: CoordinateUtil
+  fullName: Synesthesias.Snap.Sample.CoordinateUtil
 - uid: Synesthesias.Snap.Sample.TextureRepository
   commentId: T:Synesthesias.Snap.Sample.TextureRepository
   parent: Synesthesias.Snap.Sample
@@ -419,12 +400,6 @@ references:
   name: ValidationPresenter
   nameWithType: ValidationPresenter
   fullName: Synesthesias.Snap.Sample.ValidationPresenter
-- uid: Synesthesias.Snap.Sample.ServerModel
-  commentId: T:Synesthesias.Snap.Sample.ServerModel
-  href: Synesthesias.Snap.Sample.ServerModel.html
-  name: ServerModel
-  nameWithType: ServerModel
-  fullName: Synesthesias.Snap.Sample.ServerModel
 - uid: Synesthesias.Snap.Sample.EditorDetectionView
   commentId: T:Synesthesias.Snap.Sample.EditorDetectionView
   parent: Synesthesias.Snap.Sample
@@ -432,19 +407,6 @@ references:
   name: EditorDetectionView
   nameWithType: EditorDetectionView
   fullName: Synesthesias.Snap.Sample.EditorDetectionView
-- uid: Synesthesias.Snap.Sample.MobileSimpleDetectionModel
-  commentId: T:Synesthesias.Snap.Sample.MobileSimpleDetectionModel
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.MobileSimpleDetectionModel.html
-  name: MobileSimpleDetectionModel
-  nameWithType: MobileSimpleDetectionModel
-  fullName: Synesthesias.Snap.Sample.MobileSimpleDetectionModel
-- uid: Synesthesias.Snap.Sample.APIModel
-  commentId: T:Synesthesias.Snap.Sample.APIModel
-  href: Synesthesias.Snap.Sample.APIModel.html
-  name: APIModel
-  nameWithType: APIModel
-  fullName: Synesthesias.Snap.Sample.APIModel
 - uid: Synesthesias.Snap.Sample.DetectionMenuPresenter
   commentId: T:Synesthesias.Snap.Sample.DetectionMenuPresenter
   href: Synesthesias.Snap.Sample.DetectionMenuPresenter.html
@@ -472,13 +434,6 @@ references:
   name: ValidationDialogModel
   nameWithType: ValidationDialogModel
   fullName: Synesthesias.Snap.Sample.ValidationDialogModel
-- uid: Synesthesias.Snap.Sample.IServerModel
-  commentId: T:Synesthesias.Snap.Sample.IServerModel
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.IServerModel.html
-  name: IServerModel
-  nameWithType: IServerModel
-  fullName: Synesthesias.Snap.Sample.IServerModel
 - uid: Synesthesias.Snap.Sample.IEditorDetectionParameterModel
   commentId: T:Synesthesias.Snap.Sample.IEditorDetectionParameterModel
   parent: Synesthesias.Snap.Sample
@@ -499,12 +454,6 @@ references:
   name: EditorDetectionMeshModel
   nameWithType: EditorDetectionMeshModel
   fullName: Synesthesias.Snap.Sample.EditorDetectionMeshModel
-- uid: Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter
-  commentId: T:Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter
-  href: Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter.html
-  name: MobileSimpleDetectionPresenter
-  nameWithType: MobileSimpleDetectionPresenter
-  fullName: Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter
 - uid: Synesthesias.Snap.Sample.MainPresenter
   commentId: T:Synesthesias.Snap.Sample.MainPresenter
   href: Synesthesias.Snap.Sample.MainPresenter.html
@@ -524,6 +473,25 @@ references:
   name: EditorDetectionParameterView
   nameWithType: EditorDetectionParameterView
   fullName: Synesthesias.Snap.Sample.EditorDetectionParameterView
+- uid: Synesthesias.Snap.Sample.MockSurfaces
+  commentId: T:Synesthesias.Snap.Sample.MockSurfaces
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.MockSurfaces.html
+  name: MockSurfaces
+  nameWithType: MockSurfaces
+  fullName: Synesthesias.Snap.Sample.MockSurfaces
+- uid: Synesthesias.Snap.Sample.MockSurface
+  commentId: T:Synesthesias.Snap.Sample.MockSurface
+  href: Synesthesias.Snap.Sample.MockSurface.html
+  name: MockSurface
+  nameWithType: MockSurface
+  fullName: Synesthesias.Snap.Sample.MockSurface
+- uid: Synesthesias.Snap.Sample.MockJsonParser
+  commentId: T:Synesthesias.Snap.Sample.MockJsonParser
+  href: Synesthesias.Snap.Sample.MockJsonParser.html
+  name: MockJsonParser
+  nameWithType: MockJsonParser
+  fullName: Synesthesias.Snap.Sample.MockJsonParser
 - uid: Synesthesias.Snap.Sample.ImageRepository
   commentId: T:Synesthesias.Snap.Sample.ImageRepository
   parent: Synesthesias.Snap.Sample
@@ -538,39 +506,54 @@ references:
   name: IApiConfigurationModel
   nameWithType: IApiConfigurationModel
   fullName: Synesthesias.Snap.Sample.IApiConfigurationModel
+- uid: Synesthesias.Snap.Sample.DetectionMeshType
+  commentId: T:Synesthesias.Snap.Sample.DetectionMeshType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMeshType.html
+  name: DetectionMeshType
+  nameWithType: DetectionMeshType
+  fullName: Synesthesias.Snap.Sample.DetectionMeshType
+- uid: Synesthesias.Snap.Sample.LatLonTests
+  commentId: T:Synesthesias.Snap.Sample.LatLonTests
+  href: Synesthesias.Snap.Sample.LatLonTests.html
+  name: LatLonTests
+  nameWithType: LatLonTests
+  fullName: Synesthesias.Snap.Sample.LatLonTests
+- uid: Synesthesias.Snap.Sample.LatLonTests.LatLonData
+  commentId: T:Synesthesias.Snap.Sample.LatLonTests.LatLonData
+  href: Synesthesias.Snap.Sample.LatLonTests.html
+  name: LatLonTests.LatLonData
+  nameWithType: LatLonTests.LatLonData
+  fullName: Synesthesias.Snap.Sample.LatLonTests.LatLonData
+  spec.csharp:
+  - uid: Synesthesias.Snap.Sample.LatLonTests
+    name: LatLonTests
+    href: Synesthesias.Snap.Sample.LatLonTests.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample.LatLonTests.LatLonData
+    name: LatLonData
+    href: Synesthesias.Snap.Sample.LatLonTests.LatLonData.html
+  spec.vb:
+  - uid: Synesthesias.Snap.Sample.LatLonTests
+    name: LatLonTests
+    href: Synesthesias.Snap.Sample.LatLonTests.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample.LatLonTests.LatLonData
+    name: LatLonData
+    href: Synesthesias.Snap.Sample.LatLonTests.LatLonData.html
 - uid: Synesthesias.Snap.Sample.EditorDetectionPresenter
   commentId: T:Synesthesias.Snap.Sample.EditorDetectionPresenter
   href: Synesthesias.Snap.Sample.EditorDetectionPresenter.html
   name: EditorDetectionPresenter
   nameWithType: EditorDetectionPresenter
   fullName: Synesthesias.Snap.Sample.EditorDetectionPresenter
-- uid: Synesthesias.Snap.Sample.IAPIModel
-  commentId: T:Synesthesias.Snap.Sample.IAPIModel
+- uid: Synesthesias.Snap.Sample.DetectionMaterialModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMaterialModel
   parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.IAPIModel.html
-  name: IAPIModel
-  nameWithType: IAPIModel
-  fullName: Synesthesias.Snap.Sample.IAPIModel
-- uid: Synesthesias.Snap.Sample.ServerStatusCode
-  commentId: T:Synesthesias.Snap.Sample.ServerStatusCode
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.ServerStatusCode.html
-  name: ServerStatusCode
-  nameWithType: ServerStatusCode
-  fullName: Synesthesias.Snap.Sample.ServerStatusCode
-- uid: Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter
-  commentId: T:Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter
-  href: Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter.html
-  name: DetectionSimpleMeshPresenter
-  nameWithType: DetectionSimpleMeshPresenter
-  fullName: Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter
-- uid: Synesthesias.Snap.Sample.IEndPointModel
-  commentId: T:Synesthesias.Snap.Sample.IEndPointModel
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.IEndPointModel.html
-  name: IEndPointModel
-  nameWithType: IEndPointModel
-  fullName: Synesthesias.Snap.Sample.IEndPointModel
+  href: Synesthesias.Snap.Sample.DetectionMaterialModel.html
+  name: DetectionMaterialModel
+  nameWithType: DetectionMaterialModel
+  fullName: Synesthesias.Snap.Sample.DetectionMaterialModel
 - uid: Synesthesias.Snap.Sample.DetectionMenuElementModel
   commentId: T:Synesthesias.Snap.Sample.DetectionMenuElementModel
   parent: Synesthesias.Snap.Sample
@@ -626,12 +609,6 @@ references:
   name: DetectionTouchView
   nameWithType: DetectionTouchView
   fullName: Synesthesias.Snap.Sample.DetectionTouchView
-- uid: Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope
-  commentId: T:Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope
-  href: Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope.html
-  name: MobileSimpleDetectionLifetimeScope
-  nameWithType: MobileSimpleDetectionLifetimeScope
-  fullName: Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope
 - uid: Synesthesias.Snap.Sample.GuideLifetimeScope
   commentId: T:Synesthesias.Snap.Sample.GuideLifetimeScope
   href: Synesthesias.Snap.Sample.GuideLifetimeScope.html
@@ -645,13 +622,6 @@ references:
   name: DialogIconDefine
   nameWithType: DialogIconDefine
   fullName: Synesthesias.Snap.Sample.DialogIconDefine
-- uid: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView
-  commentId: T:Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView.html
-  name: MobileDetectionSimpleMeshView
-  nameWithType: MobileDetectionSimpleMeshView
-  fullName: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView
 - uid: Synesthesias.Snap.Sample.EditorDetectionMeshView
   commentId: T:Synesthesias.Snap.Sample.EditorDetectionMeshView
   parent: Synesthesias.Snap.Sample
@@ -659,25 +629,19 @@ references:
   name: EditorDetectionMeshView
   nameWithType: EditorDetectionMeshView
   fullName: Synesthesias.Snap.Sample.EditorDetectionMeshView
-- uid: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel
-  commentId: T:Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel
+- uid: Synesthesias.Snap.Sample.EnvironmentType
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentType
   parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel.html
-  name: MobileDetectionSimpleMeshModel
-  nameWithType: MobileDetectionSimpleMeshModel
-  fullName: Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel
+  href: Synesthesias.Snap.Sample.EnvironmentType.html
+  name: EnvironmentType
+  nameWithType: EnvironmentType
+  fullName: Synesthesias.Snap.Sample.EnvironmentType
 - uid: Synesthesias.Snap.Sample.ValidationLifetimeScope
   commentId: T:Synesthesias.Snap.Sample.ValidationLifetimeScope
   href: Synesthesias.Snap.Sample.ValidationLifetimeScope.html
   name: ValidationLifetimeScope
   nameWithType: ValidationLifetimeScope
   fullName: Synesthesias.Snap.Sample.ValidationLifetimeScope
-- uid: Synesthesias.Snap.Sample.MockEndPointModel
-  commentId: T:Synesthesias.Snap.Sample.MockEndPointModel
-  href: Synesthesias.Snap.Sample.MockEndPointModel.html
-  name: MockEndPointModel
-  nameWithType: MockEndPointModel
-  fullName: Synesthesias.Snap.Sample.MockEndPointModel
 - uid: Synesthesias.Snap.Sample.TMPModel
   commentId: T:Synesthesias.Snap.Sample.TMPModel
   href: Synesthesias.Snap.Sample.TMPModel.html
@@ -697,12 +661,6 @@ references:
   name: DetectionSettingModel
   nameWithType: DetectionSettingModel
   fullName: Synesthesias.Snap.Sample.DetectionSettingModel
-- uid: Synesthesias.Snap.Sample.MockServerModel
-  commentId: T:Synesthesias.Snap.Sample.MockServerModel
-  href: Synesthesias.Snap.Sample.MockServerModel.html
-  name: MockServerModel
-  nameWithType: MockServerModel
-  fullName: Synesthesias.Snap.Sample.MockServerModel
 - uid: Synesthesias.Snap.Sample
   commentId: N:Synesthesias.Snap.Sample
   href: Synesthesias.html

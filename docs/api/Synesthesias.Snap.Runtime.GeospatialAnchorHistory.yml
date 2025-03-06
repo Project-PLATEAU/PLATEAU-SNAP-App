@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GeospatialAnchorHistory
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SerializedTime
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Latitude
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Longitude
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Altitude
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Heading
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: AnchorType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EunRotation
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: CreatedTime
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
@@ -409,7 +409,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToString
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/SurfaceConverter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SurfaceConverter
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/SurfaceConverter.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/SurfaceConverter.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ToGeospatialVector
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Surface/SurfaceConverter.cs

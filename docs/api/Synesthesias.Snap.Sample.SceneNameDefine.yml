@@ -10,7 +10,6 @@ items:
   - Synesthesias.Snap.Sample.SceneNameDefine.Guide
   - Synesthesias.Snap.Sample.SceneNameDefine.Main
   - Synesthesias.Snap.Sample.SceneNameDefine.MobileDetection
-  - Synesthesias.Snap.Sample.SceneNameDefine.MobileSimpleDetection
   - Synesthesias.Snap.Sample.SceneNameDefine.Validation
   langs:
   - csharp
@@ -22,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SceneNameDefine
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
@@ -59,7 +58,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Boot
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
@@ -88,7 +87,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Main
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
@@ -117,7 +116,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MobileDetection
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
@@ -146,7 +145,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: EditorDetection
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
@@ -161,35 +160,6 @@ items:
     return:
       type: System.String
     content.vb: Public Const EditorDetection As String = "EditorDetectionScene"
-- uid: Synesthesias.Snap.Sample.SceneNameDefine.MobileSimpleDetection
-  commentId: F:Synesthesias.Snap.Sample.SceneNameDefine.MobileSimpleDetection
-  id: MobileSimpleDetection
-  parent: Synesthesias.Snap.Sample.SceneNameDefine
-  langs:
-  - csharp
-  - vb
-  name: MobileSimpleDetection
-  nameWithType: SceneNameDefine.MobileSimpleDetection
-  fullName: Synesthesias.Snap.Sample.SceneNameDefine.MobileSimpleDetection
-  type: Field
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: MobileSimpleDetection
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-    startLine: 30
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: 建物検出(簡易版メッシュ)画面(携帯端末)
-  example: []
-  syntax:
-    content: public const string MobileSimpleDetection = "MobileSimpleDetectionScene"
-    return:
-      type: System.String
-    content.vb: Public Const MobileSimpleDetection As String = "MobileSimpleDetectionScene"
 - uid: Synesthesias.Snap.Sample.SceneNameDefine.Validation
   commentId: F:Synesthesias.Snap.Sample.SceneNameDefine.Validation
   id: Validation
@@ -204,11 +174,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Validation
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-    startLine: 35
+    startLine: 30
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -233,11 +203,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Guide
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/SceneNameDefine.cs
-    startLine: 40
+    startLine: 35
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample

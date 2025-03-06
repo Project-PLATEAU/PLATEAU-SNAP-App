@@ -402,10 +402,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.EditorGeospatialMeshModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.EditorGeospatialSimpleMeshModel.html"
+          "relative_path": "api/Synesthesias.Snap.Runtime.EditorGeospatialMeshModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.EditorMeshValidationModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Runtime.EditorMeshValidationModel.html"
         }
       },
       "version": ""
@@ -672,10 +682,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.IGeospatialMeshModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.IGeospatialSimpleMeshModel.html"
+          "relative_path": "api/Synesthesias.Snap.Runtime.IGeospatialMeshModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.IMeshFactoryModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Runtime.IMeshFactoryModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.IMeshValidationModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Runtime.IMeshValidationModel.html"
         }
       },
       "version": ""
@@ -686,16 +716,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Runtime.ISurfaceModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.LatLonConverter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.LatLonConverter.html"
         }
       },
       "version": ""
@@ -716,26 +736,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Runtime.LatLonTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.MeshManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.MeshManager.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.MeshModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.MeshModel.html"
         }
       },
       "version": ""
@@ -766,16 +766,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationModel.html"
         }
       },
       "version": ""
@@ -832,10 +822,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.MobileGeospatialMeshModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.MobileGeospatialSimpleMeshModel.html"
+          "relative_path": "api/Synesthesias.Snap.Runtime.MobileGeospatialMeshModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.MobileMeshValidationModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Runtime.MobileMeshValidationModel.html"
         }
       },
       "version": ""
@@ -872,6 +872,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.PlainShapeFactoryModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Runtime.PlainShapeFactoryModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Runtime.Shape.yml",
       "output": {
         ".html": {
@@ -882,30 +892,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.ShapeCalculator.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.ShapeCalculator.html"
+          "relative_path": "api/Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.ShapeManager.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.ShapeValidatorModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.ShapeManager.html"
+          "relative_path": "api/Synesthesias.Snap.Runtime.ShapeValidatorModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Runtime.SimpleMeshModel.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.SimpleMeshFactoryModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Runtime.SimpleMeshModel.html"
+          "relative_path": "api/Synesthesias.Snap.Runtime.SimpleMeshFactoryModel.html"
         }
       },
       "version": ""
@@ -926,6 +936,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Runtime.SurfaceConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Runtime.VectorCalculatorModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Runtime.VectorCalculatorModel.html"
         }
       },
       "version": ""
@@ -1002,6 +1022,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.CoordinateUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.CoordinateUtil.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.DetectionMaterialModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.DetectionMaterialModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Sample.DetectionMenuElementModel.yml",
       "output": {
         ".html": {
@@ -1052,10 +1092,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshCullingModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshCullingModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshPresenter.yml",
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshPresenter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshType.html"
         }
       },
       "version": ""
@@ -1182,20 +1242,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.EditorWebCameraModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.EditorSimpleDetectionParameterView.html"
+          "relative_path": "api/Synesthesias.Snap.Sample.EditorWebCameraModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.EditorWebCameraModel.yml",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.EnvironmentScriptableObject.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.EditorWebCameraModel.html"
+          "relative_path": "api/Synesthesias.Snap.Sample.EnvironmentScriptableObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.EnvironmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.EnvironmentType.html"
         }
       },
       "version": ""
@@ -1322,6 +1392,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.IEnvironmentModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.IEnvironmentModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Sample.IMobileDetectionMeshView.yml",
       "output": {
         ".html": {
@@ -1356,6 +1436,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Sample.ImageRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.LatLonTests.LatLonData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.LatLonTests.LatLonData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.LatLonTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.LatLonTests.html"
         }
       },
       "version": ""
@@ -1422,16 +1522,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MeshSample.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MeshSample.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Sample.MobileARCameraModel.yml",
       "output": {
         ".html": {
@@ -1492,70 +1582,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionSimpleMeshModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionSimpleMeshView.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionView.yml",
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionView.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionLifetimeScope.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionModel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionModel.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionPresenter.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionView.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Synesthesias.Snap.Sample.MobileSimpleDetectionView.html"
         }
       },
       "version": ""
@@ -1582,6 +1612,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.MockJsonParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.MockJsonParser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Synesthesias.Snap.Sample.MockServerLifetimeScope.yml",
       "output": {
         ".html": {
@@ -1596,6 +1636,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Synesthesias.Snap.Sample.MockServerModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.MockSurface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.MockSurface.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Synesthesias.Snap.Sample.MockSurfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Synesthesias.Snap.Sample.MockSurfaces.html"
         }
       },
       "version": ""

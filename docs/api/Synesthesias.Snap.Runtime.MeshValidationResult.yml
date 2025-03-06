@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshValidationResult
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MainLoopState
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: AccuracyResult
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshAngleResultType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MeshVertexResultType
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: IsSuccess
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/MeshValidationResult.cs

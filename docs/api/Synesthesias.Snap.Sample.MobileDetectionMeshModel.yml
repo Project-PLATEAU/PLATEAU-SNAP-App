@@ -5,13 +5,11 @@ items:
   id: MobileDetectionMeshModel
   parent: Synesthesias.Snap.Sample
   children:
-  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)
+  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)
   - Synesthesias.Snap.Sample.MobileDetectionMeshModel.Clear
-  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor(UnityEngine.XR.ARFoundation.ARAnchor)
-  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor(Google.XR.ARCoreExtensions.ARGeospatialAnchor)
-  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose(Google.XR.ARCoreExtensions.GeospatialPose,System.Threading.CancellationToken)
-  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync(System.Threading.CancellationToken)
+  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
   - Synesthesias.Snap.Sample.MobileDetectionMeshModel.Dispose
+  - Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive(System.Boolean)
   langs:
   - csharp
   - vb
@@ -22,11 +20,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: MobileDetectionMeshModel
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -47,42 +45,42 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)
-  id: '#ctor(Synesthesias.Snap.Runtime.GeospatialAsyncModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)'
+- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)
+  id: '#ctor(Synesthesias.Snap.Runtime.IGeospatialMeshModel,Synesthesias.Snap.Sample.MobileDetectionMeshView)'
   parent: Synesthesias.Snap.Sample.MobileDetectionMeshModel
   langs:
   - csharp
   - vb
-  name: MobileDetectionMeshModel(GeospatialAsyncModel, MobileDetectionMeshView)
-  nameWithType: MobileDetectionMeshModel.MobileDetectionMeshModel(GeospatialAsyncModel, MobileDetectionMeshView)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.MobileDetectionMeshModel(Synesthesias.Snap.Runtime.GeospatialAsyncModel, Synesthesias.Snap.Sample.MobileDetectionMeshView)
+  name: MobileDetectionMeshModel(IGeospatialMeshModel, MobileDetectionMeshView)
+  nameWithType: MobileDetectionMeshModel.MobileDetectionMeshModel(IGeospatialMeshModel, MobileDetectionMeshView)
+  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.MobileDetectionMeshModel(Synesthesias.Snap.Runtime.IGeospatialMeshModel, Synesthesias.Snap.Sample.MobileDetectionMeshView)
   type: Constructor
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 24
+    startLine: 23
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
   summary: コンストラクタ
   example: []
   syntax:
-    content: public MobileDetectionMeshModel(GeospatialAsyncModel geospatialAsyncModel, MobileDetectionMeshView meshViewTemplate)
+    content: public MobileDetectionMeshModel(IGeospatialMeshModel mobileGeospatialMeshModel, MobileDetectionMeshView meshViewTemplate)
     parameters:
-    - id: geospatialAsyncModel
-      type: Synesthesias.Snap.Runtime.GeospatialAsyncModel
+    - id: mobileGeospatialMeshModel
+      type: Synesthesias.Snap.Runtime.IGeospatialMeshModel
     - id: meshViewTemplate
       type: Synesthesias.Snap.Sample.MobileDetectionMeshView
-    content.vb: Public Sub New(geospatialAsyncModel As GeospatialAsyncModel, meshViewTemplate As MobileDetectionMeshView)
+    content.vb: Public Sub New(mobileGeospatialMeshModel As IGeospatialMeshModel, meshViewTemplate As MobileDetectionMeshView)
   overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor*
-  nameWithType.vb: MobileDetectionMeshModel.New(GeospatialAsyncModel, MobileDetectionMeshView)
-  fullName.vb: Synesthesias.Snap.Sample.MobileDetectionMeshModel.New(Synesthesias.Snap.Runtime.GeospatialAsyncModel, Synesthesias.Snap.Sample.MobileDetectionMeshView)
-  name.vb: New(GeospatialAsyncModel, MobileDetectionMeshView)
+  nameWithType.vb: MobileDetectionMeshModel.New(IGeospatialMeshModel, MobileDetectionMeshView)
+  fullName.vb: Synesthesias.Snap.Sample.MobileDetectionMeshModel.New(Synesthesias.Snap.Runtime.IGeospatialMeshModel, Synesthesias.Snap.Sample.MobileDetectionMeshView)
+  name.vb: New(IGeospatialMeshModel, MobileDetectionMeshView)
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.Dispose
   commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.Dispose
   id: Dispose
@@ -97,11 +95,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Dispose
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -113,140 +111,79 @@ items:
   overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor(Google.XR.ARCoreExtensions.ARGeospatialAnchor)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor(Google.XR.ARCoreExtensions.ARGeospatialAnchor)
-  id: CreateMeshAtARGeospatialAnchor(Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
+  id: CreateMeshView(UnityEngine.Camera,Synesthesias.Snap.Runtime.ISurfaceModel,UnityEngine.Quaternion,System.Threading.CancellationToken)
   parent: Synesthesias.Snap.Sample.MobileDetectionMeshModel
   langs:
   - csharp
   - vb
-  name: CreateMeshAtARGeospatialAnchor(ARGeospatialAnchor)
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor(ARGeospatialAnchor)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor(Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+  name: CreateMeshView(Camera, ISurfaceModel, Quaternion, CancellationToken)
+  nameWithType: MobileDetectionMeshModel.CreateMeshView(Camera, ISurfaceModel, Quaternion, CancellationToken)
+  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView(UnityEngine.Camera, Synesthesias.Snap.Runtime.ISurfaceModel, UnityEngine.Quaternion, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: CreateMeshAtARGeospatialAnchor
+    id: CreateMeshView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 43
+    startLine: 42
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
-  summary: メッシュをAFGeospatialアンカーの位置に生成する
+  summary: メッシュ(surface)をAFGeospatialアンカーの位置に生成する
   example: []
   syntax:
-    content: public MobileDetectionMeshView CreateMeshAtARGeospatialAnchor(ARGeospatialAnchor geospatialAnchor)
+    content: public UniTask<MobileDetectionMeshView> CreateMeshView(Camera camera, ISurfaceModel surface, Quaternion eunRotation, CancellationToken cancellationToken)
     parameters:
-    - id: geospatialAnchor
-      type: Google.XR.ARCoreExtensions.ARGeospatialAnchor
-    return:
-      type: Synesthesias.Snap.Sample.MobileDetectionMeshView
-    content.vb: Public Function CreateMeshAtARGeospatialAnchor(geospatialAnchor As ARGeospatialAnchor) As MobileDetectionMeshView
-  overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor*
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor(UnityEngine.XR.ARFoundation.ARAnchor)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor(UnityEngine.XR.ARFoundation.ARAnchor)
-  id: CreateMeshAtARAnchor(UnityEngine.XR.ARFoundation.ARAnchor)
-  parent: Synesthesias.Snap.Sample.MobileDetectionMeshModel
-  langs:
-  - csharp
-  - vb
-  name: CreateMeshAtARAnchor(ARAnchor)
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtARAnchor(ARAnchor)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor(UnityEngine.XR.ARFoundation.ARAnchor)
-  type: Method
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: CreateMeshAtARAnchor
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 54
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: メッシュをARアンカーの位置に生成する
-  example: []
-  syntax:
-    content: public MobileDetectionMeshView CreateMeshAtARAnchor(ARAnchor arAnchor)
-    parameters:
-    - id: arAnchor
-      type: UnityEngine.XR.ARFoundation.ARAnchor
-    return:
-      type: Synesthesias.Snap.Sample.MobileDetectionMeshView
-    content.vb: Public Function CreateMeshAtARAnchor(arAnchor As ARAnchor) As MobileDetectionMeshView
-  overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor*
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose(Google.XR.ARCoreExtensions.GeospatialPose,System.Threading.CancellationToken)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose(Google.XR.ARCoreExtensions.GeospatialPose,System.Threading.CancellationToken)
-  id: CreateMeshAtARGeospatialPose(Google.XR.ARCoreExtensions.GeospatialPose,System.Threading.CancellationToken)
-  parent: Synesthesias.Snap.Sample.MobileDetectionMeshModel
-  langs:
-  - csharp
-  - vb
-  name: CreateMeshAtARGeospatialPose(GeospatialPose, CancellationToken)
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtARGeospatialPose(GeospatialPose, CancellationToken)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose(Google.XR.ARCoreExtensions.GeospatialPose, System.Threading.CancellationToken)
-  type: Method
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: CreateMeshAtARGeospatialPose
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 65
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: GeospatialPoseの位置にメッシュを生成する
-  example: []
-  syntax:
-    content: public UniTask<MobileDetectionMeshView> CreateMeshAtARGeospatialPose(GeospatialPose geospatialPose, CancellationToken cancellationToken)
-    parameters:
-    - id: geospatialPose
-      type: Google.XR.ARCoreExtensions.GeospatialPose
+    - id: camera
+      type: UnityEngine.Camera
+    - id: surface
+      type: Synesthesias.Snap.Runtime.ISurfaceModel
+    - id: eunRotation
+      type: UnityEngine.Quaternion
     - id: cancellationToken
       type: System.Threading.CancellationToken
     return:
       type: Cysharp.Threading.Tasks.UniTask{Synesthesias.Snap.Sample.MobileDetectionMeshView}
-    content.vb: Public Function CreateMeshAtARGeospatialPose(geospatialPose As GeospatialPose, cancellationToken As CancellationToken) As UniTask(Of MobileDetectionMeshView)
-  overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose*
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync(System.Threading.CancellationToken)
-  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync(System.Threading.CancellationToken)
-  id: CreateMeshAtCameraAsync(System.Threading.CancellationToken)
+    content.vb: Public Function CreateMeshView(camera As Camera, surface As ISurfaceModel, eunRotation As Quaternion, cancellationToken As CancellationToken) As UniTask(Of MobileDetectionMeshView)
+  overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView*
+- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive(System.Boolean)
+  commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive(System.Boolean)
+  id: SetMeshActive(System.Boolean)
   parent: Synesthesias.Snap.Sample.MobileDetectionMeshModel
   langs:
   - csharp
   - vb
-  name: CreateMeshAtCameraAsync(CancellationToken)
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtCameraAsync(CancellationToken)
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync(System.Threading.CancellationToken)
+  name: SetMeshActive(bool)
+  nameWithType: MobileDetectionMeshModel.SetMeshActive(bool)
+  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive(bool)
   type: Method
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: CreateMeshAtCameraAsync
+    id: SetMeshActive
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 80
+    startLine: 74
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
-  summary: カメラの位置にメッシュを生成する
+  summary: メッシュの表示を設定する
   example: []
   syntax:
-    content: public UniTask<MobileDetectionMeshView> CreateMeshAtCameraAsync(CancellationToken cancellationToken)
+    content: public void SetMeshActive(bool isActive)
     parameters:
-    - id: cancellationToken
-      type: System.Threading.CancellationToken
-    return:
-      type: Cysharp.Threading.Tasks.UniTask{Synesthesias.Snap.Sample.MobileDetectionMeshView}
-    content.vb: Public Function CreateMeshAtCameraAsync(cancellationToken As CancellationToken) As UniTask(Of MobileDetectionMeshView)
-  overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync*
+    - id: isActive
+      type: System.Boolean
+    content.vb: Public Sub SetMeshActive(isActive As Boolean)
+  overload: Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive*
+  nameWithType.vb: MobileDetectionMeshModel.SetMeshActive(Boolean)
+  fullName.vb: Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive(Boolean)
+  name.vb: SetMeshActive(Boolean)
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.Clear
   commentId: M:Synesthesias.Snap.Sample.MobileDetectionMeshModel.Clear
   id: Clear
@@ -261,11 +198,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Clear
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/DetectionMesh/MobileDetectionMeshModel.cs
-    startLine: 90
+    startLine: 86
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -553,20 +490,20 @@ references:
   fullName: System
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor*
   commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.#ctor
-  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel__ctor_Synesthesias_Snap_Runtime_GeospatialAsyncModel_Synesthesias_Snap_Sample_MobileDetectionMeshView_
+  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel__ctor_Synesthesias_Snap_Runtime_IGeospatialMeshModel_Synesthesias_Snap_Sample_MobileDetectionMeshView_
   name: MobileDetectionMeshModel
   nameWithType: MobileDetectionMeshModel.MobileDetectionMeshModel
   fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.MobileDetectionMeshModel
   nameWithType.vb: MobileDetectionMeshModel.New
   fullName.vb: Synesthesias.Snap.Sample.MobileDetectionMeshModel.New
   name.vb: New
-- uid: Synesthesias.Snap.Runtime.GeospatialAsyncModel
-  commentId: T:Synesthesias.Snap.Runtime.GeospatialAsyncModel
+- uid: Synesthesias.Snap.Runtime.IGeospatialMeshModel
+  commentId: T:Synesthesias.Snap.Runtime.IGeospatialMeshModel
   parent: Synesthesias.Snap.Runtime
-  href: Synesthesias.Snap.Runtime.GeospatialAsyncModel.html
-  name: GeospatialAsyncModel
-  nameWithType: GeospatialAsyncModel
-  fullName: Synesthesias.Snap.Runtime.GeospatialAsyncModel
+  href: Synesthesias.Snap.Runtime.IGeospatialMeshModel.html
+  name: IGeospatialMeshModel
+  nameWithType: IGeospatialMeshModel
+  fullName: Synesthesias.Snap.Runtime.IGeospatialMeshModel
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshView
   commentId: T:Synesthesias.Snap.Sample.MobileDetectionMeshView
   parent: Synesthesias.Snap.Sample
@@ -632,105 +569,33 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor*
-  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor
-  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_CreateMeshAtARGeospatialAnchor_Google_XR_ARCoreExtensions_ARGeospatialAnchor_
-  name: CreateMeshAtARGeospatialAnchor
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialAnchor
-- uid: Google.XR.ARCoreExtensions.ARGeospatialAnchor
-  commentId: T:Google.XR.ARCoreExtensions.ARGeospatialAnchor
-  parent: Google.XR.ARCoreExtensions
+- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView*
+  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView
+  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_CreateMeshView_UnityEngine_Camera_Synesthesias_Snap_Runtime_ISurfaceModel_UnityEngine_Quaternion_System_Threading_CancellationToken_
+  name: CreateMeshView
+  nameWithType: MobileDetectionMeshModel.CreateMeshView
+  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshView
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
   isExternal: true
-  name: ARGeospatialAnchor
-  nameWithType: ARGeospatialAnchor
-  fullName: Google.XR.ARCoreExtensions.ARGeospatialAnchor
-- uid: Google.XR.ARCoreExtensions
-  commentId: N:Google.XR.ARCoreExtensions
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: Synesthesias.Snap.Runtime.ISurfaceModel
+  commentId: T:Synesthesias.Snap.Runtime.ISurfaceModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.ISurfaceModel.html
+  name: ISurfaceModel
+  nameWithType: ISurfaceModel
+  fullName: Synesthesias.Snap.Runtime.ISurfaceModel
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
   isExternal: true
-  name: Google.XR.ARCoreExtensions
-  nameWithType: Google.XR.ARCoreExtensions
-  fullName: Google.XR.ARCoreExtensions
-  spec.csharp:
-  - uid: Google
-    name: Google
-    isExternal: true
-  - name: .
-  - uid: Google.XR
-    name: XR
-    isExternal: true
-  - name: .
-  - uid: Google.XR.ARCoreExtensions
-    name: ARCoreExtensions
-    isExternal: true
-  spec.vb:
-  - uid: Google
-    name: Google
-    isExternal: true
-  - name: .
-  - uid: Google.XR
-    name: XR
-    isExternal: true
-  - name: .
-  - uid: Google.XR.ARCoreExtensions
-    name: ARCoreExtensions
-    isExternal: true
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor*
-  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor
-  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_CreateMeshAtARAnchor_UnityEngine_XR_ARFoundation_ARAnchor_
-  name: CreateMeshAtARAnchor
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtARAnchor
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARAnchor
-- uid: UnityEngine.XR.ARFoundation.ARAnchor
-  commentId: T:UnityEngine.XR.ARFoundation.ARAnchor
-  parent: UnityEngine.XR.ARFoundation
-  isExternal: true
-  name: ARAnchor
-  nameWithType: ARAnchor
-  fullName: UnityEngine.XR.ARFoundation.ARAnchor
-- uid: UnityEngine.XR.ARFoundation
-  commentId: N:UnityEngine.XR.ARFoundation
-  isExternal: true
-  name: UnityEngine.XR.ARFoundation
-  nameWithType: UnityEngine.XR.ARFoundation
-  fullName: UnityEngine.XR.ARFoundation
-  spec.csharp:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR
-    name: XR
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR.ARFoundation
-    name: ARFoundation
-    isExternal: true
-  spec.vb:
-  - uid: UnityEngine
-    name: UnityEngine
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR
-    name: XR
-    isExternal: true
-  - name: .
-  - uid: UnityEngine.XR.ARFoundation
-    name: ARFoundation
-    isExternal: true
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose*
-  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose
-  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_CreateMeshAtARGeospatialPose_Google_XR_ARCoreExtensions_GeospatialPose_System_Threading_CancellationToken_
-  name: CreateMeshAtARGeospatialPose
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtARGeospatialPose
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtARGeospatialPose
-- uid: Google.XR.ARCoreExtensions.GeospatialPose
-  commentId: T:Google.XR.ARCoreExtensions.GeospatialPose
-  parent: Google.XR.ARCoreExtensions
-  isExternal: true
-  name: GeospatialPose
-  nameWithType: GeospatialPose
-  fullName: Google.XR.ARCoreExtensions.GeospatialPose
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
 - uid: System.Threading.CancellationToken
   commentId: T:System.Threading.CancellationToken
   parent: System.Threading
@@ -770,6 +635,12 @@ references:
     name: MobileDetectionMeshView
     href: Synesthesias.Snap.Sample.MobileDetectionMeshView.html
   - name: )
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: System.Threading
   commentId: N:System.Threading
   isExternal: true
@@ -852,12 +723,23 @@ references:
   - uid: Cysharp.Threading.Tasks
     name: Tasks
     isExternal: true
-- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync*
-  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync
-  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_CreateMeshAtCameraAsync_System_Threading_CancellationToken_
-  name: CreateMeshAtCameraAsync
-  nameWithType: MobileDetectionMeshModel.CreateMeshAtCameraAsync
-  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.CreateMeshAtCameraAsync
+- uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive*
+  commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive
+  href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_SetMeshActive_System_Boolean_
+  name: SetMeshActive
+  nameWithType: MobileDetectionMeshModel.SetMeshActive
+  fullName: Synesthesias.Snap.Sample.MobileDetectionMeshModel.SetMeshActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Synesthesias.Snap.Sample.MobileDetectionMeshModel.Clear*
   commentId: Overload:Synesthesias.Snap.Sample.MobileDetectionMeshModel.Clear
   href: Synesthesias.Snap.Sample.MobileDetectionMeshModel.html#Synesthesias_Snap_Sample_MobileDetectionMeshModel_Clear

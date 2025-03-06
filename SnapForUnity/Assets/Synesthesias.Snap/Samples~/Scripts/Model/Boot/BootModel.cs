@@ -16,9 +16,7 @@ namespace Synesthesias.Snap.Sample
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public BootModel(
-            IServerModel serverModel,
-            LocalizationModel localizationModel)
+        public BootModel(LocalizationModel localizationModel)
         {
             this.localizationModel = localizationModel;
 

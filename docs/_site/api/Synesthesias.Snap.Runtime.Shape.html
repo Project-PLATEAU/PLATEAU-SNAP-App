@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct Shape | Synesthesias.Snap API Document ">
       
-      
+      <meta name="description" content="頂点座標を格納する構造体">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/doc_fx/apiSpec/new?filename=Synesthesias_Snap_Runtime_Shape.md&amp;value=---%0Auid%3A%20Synesthesias.Snap.Runtime.Shape%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/new/feature/update_docs/apiSpec/new?filename=Synesthesias_Snap_Runtime_Shape.md&amp;value=---%0Auid%3A%20Synesthesias.Snap.Runtime.Shape%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Synesthesias_Snap_Runtime_Shape" data-uid="Synesthesias.Snap.Runtime.Shape" class="text-break">
-Struct Shape  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Struct Shape  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Struct Shape  <a class="header-action link-secondary" title="View source" href="
   <dl><dt>Assembly</dt><dd>Synesthesias.Snap.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>頂点座標を格納する構造体</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -138,29 +139,30 @@ Struct Shape  <a class="header-action link-secondary" title="View source" href="
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
+  <a id="Synesthesias_Snap_Runtime_Shape__ctor_" data-uid="Synesthesias.Snap.Runtime.Shape.#ctor*"></a>
 
-  <h3 id="Synesthesias_Snap_Runtime_Shape_holes" data-uid="Synesthesias.Snap.Runtime.Shape.holes">
-  holes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Synesthesias_Snap_Runtime_Shape__ctor_UnityEngine_Vector2___UnityEngine_Vector2_____" data-uid="Synesthesias.Snap.Runtime.Shape.#ctor(UnityEngine.Vector2[],UnityEngine.Vector2[][])">
+  Shape(Vector2[], Vector2[][])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>コンストラクタ</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2[][] holes</code></pre>
+    <pre><code class="lang-csharp hljs">public Shape(Vector2[] hull, Vector2[][] holes = null)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><span class="xref">Vector2</span>[][]</dt>
+    <dt><code>hull</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+    <dt><code>holes</code> <span class="xref">Vector2</span>[][]</dt>
     <dd></dd>
   </dl>
 
@@ -173,22 +175,64 @@ Struct Shape  <a class="header-action link-secondary" title="View source" href="
 
 
 
-  <h3 id="Synesthesias_Snap_Runtime_Shape_hull" data-uid="Synesthesias.Snap.Runtime.Shape.hull">
-  hull
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Synesthesias_Snap_Runtime_Shape_Holes_" data-uid="Synesthesias.Snap.Runtime.Shape.Holes*"></a>
+
+  <h3 id="Synesthesias_Snap_Runtime_Shape_Holes" data-uid="Synesthesias.Snap.Runtime.Shape.Holes">
+  Holes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>穴の頂点座標の配列</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2[] hull</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly Vector2[][] Holes { get; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span>[][]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Synesthesias_Snap_Runtime_Shape_Hull_" data-uid="Synesthesias.Snap.Runtime.Shape.Hull*"></a>
+
+  <h3 id="Synesthesias_Snap_Runtime_Shape_Hull" data-uid="Synesthesias.Snap.Runtime.Shape.Hull">
+  Hull
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>面の頂点座標の配列</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Vector2[] Hull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">Vector2</span>[]</dt>
     <dd></dd>
@@ -202,53 +246,10 @@ Struct Shape  <a class="header-action link-secondary" title="View source" href="
 
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Synesthesias_Snap_Runtime_Shape_ToPlainShape_" data-uid="Synesthesias.Snap.Runtime.Shape.ToPlainShape*"></a>
-
-  <h3 id="Synesthesias_Snap_Runtime_Shape_ToPlainShape_iShape_Geometry_IntGeom_Unity_Collections_Allocator_" data-uid="Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)">
-  ToPlainShape(IntGeom, Allocator)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs/#L14"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlainShape ToPlainShape(IntGeom iGeom, Allocator allocator)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iGeom</code> <span class="xref">IntGeom</span></dt>
-    <dd></dd>
-    <dt><code>allocator</code> <span class="xref">Allocator</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">PlainShape</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/doc_fx/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/feature/update_docs/SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

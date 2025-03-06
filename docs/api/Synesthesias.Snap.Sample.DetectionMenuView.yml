@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: DetectionMenuView
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: RootObject
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ContentTransform
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: TemplateButton
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: BackgroundButton
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/View/Detection/DetectionMenuView.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/LatLonTests.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: LatLonData
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/LatLonTests.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/LatLonTests.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: hull
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/LatLonTests.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/LatLonTests.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: holes
     path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/LatLonTests.cs

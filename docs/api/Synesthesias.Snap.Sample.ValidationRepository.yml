@@ -9,8 +9,8 @@ items:
   - Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult
   - Synesthesias.Snap.Sample.ValidationRepository.GetParameter
   - Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult
-  - Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult(Synesthesias.Snap.Runtime.MeshValidationAngleResultType)
-  - Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  - Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult
+  - Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult
   - Synesthesias.Snap.Sample.ValidationRepository.SetParameter(Synesthesias.Snap.Sample.ValidationParameterModel)
   langs:
   - csharp
@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: ValidationRepository
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
@@ -48,6 +48,68 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult
+  commentId: P:Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult
+  id: MockAngleResult
+  parent: Synesthesias.Snap.Sample.ValidationRepository
+  langs:
+  - csharp
+  - vb
+  name: MockAngleResult
+  nameWithType: ValidationRepository.MockAngleResult
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MockAngleResult
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 角度の検証結果のモック
+  example: []
+  syntax:
+    content: public MeshValidationAngleResultType MockAngleResult { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
+    content.vb: Public Property MockAngleResult As MeshValidationAngleResultType
+  overload: Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult*
+- uid: Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult
+  commentId: P:Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult
+  id: MockVertexResult
+  parent: Synesthesias.Snap.Sample.ValidationRepository
+  langs:
+  - csharp
+  - vb
+  name: MockVertexResult
+  nameWithType: ValidationRepository.MockVertexResult
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
+      branch: feature/update_docs
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MockVertexResult
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 頂点の検証結果のモック
+  example: []
+  syntax:
+    content: public MeshValidationVertexResultType MockVertexResult { get; set; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+    content.vb: Public Property MockVertexResult As MeshValidationVertexResultType
+  overload: Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult*
 - uid: Synesthesias.Snap.Sample.ValidationRepository.#ctor
   commentId: M:Synesthesias.Snap.Sample.ValidationRepository.#ctor
   id: '#ctor'
@@ -62,11 +124,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: .ctor
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 17
+    startLine: 25
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -93,11 +155,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetParameter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 26
+    startLine: 34
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -123,11 +185,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetAngleResult
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 34
+    startLine: 42
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -153,11 +215,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: GetVertexResult
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 49
+    startLine: 57
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -183,11 +245,11 @@ items:
   source:
     remote:
       path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: SetParameter
     path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 64
+    startLine: 72
   assemblies:
   - Synesthesias.Snap.Sample
   namespace: Synesthesias.Snap.Sample
@@ -200,68 +262,6 @@ items:
       type: Synesthesias.Snap.Sample.ValidationParameterModel
     content.vb: Public Sub SetParameter(parameter As ValidationParameterModel)
   overload: Synesthesias.Snap.Sample.ValidationRepository.SetParameter*
-- uid: Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult(Synesthesias.Snap.Runtime.MeshValidationAngleResultType)
-  commentId: M:Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult(Synesthesias.Snap.Runtime.MeshValidationAngleResultType)
-  id: SetMockAngleResult(Synesthesias.Snap.Runtime.MeshValidationAngleResultType)
-  parent: Synesthesias.Snap.Sample.ValidationRepository
-  langs:
-  - csharp
-  - vb
-  name: SetMockAngleResult(MeshValidationAngleResultType)
-  nameWithType: ValidationRepository.SetMockAngleResult(MeshValidationAngleResultType)
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult(Synesthesias.Snap.Runtime.MeshValidationAngleResultType)
-  type: Method
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: SetMockAngleResult
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 72
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: モックの角度判定の結果を設定
-  example: []
-  syntax:
-    content: public void SetMockAngleResult(MeshValidationAngleResultType mockAngleResult)
-    parameters:
-    - id: mockAngleResult
-      type: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
-    content.vb: Public Sub SetMockAngleResult(mockAngleResult As MeshValidationAngleResultType)
-  overload: Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult*
-- uid: Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
-  commentId: M:Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
-  id: SetMockVertexResult(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
-  parent: Synesthesias.Snap.Sample.ValidationRepository
-  langs:
-  - csharp
-  - vb
-  name: SetMockVertexResult(MeshValidationVertexResultType)
-  nameWithType: ValidationRepository.SetMockVertexResult(MeshValidationVertexResultType)
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
-  type: Method
-  source:
-    remote:
-      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-      branch: feature/doc_fx
-      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: SetMockVertexResult
-    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/ValidationRepository.cs
-    startLine: 80
-  assemblies:
-  - Synesthesias.Snap.Sample
-  namespace: Synesthesias.Snap.Sample
-  summary: モックの面判定の結果を設定
-  example: []
-  syntax:
-    content: public void SetMockVertexResult(MeshValidationVertexResultType mockVertexResult)
-    parameters:
-    - id: mockVertexResult
-      type: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
-    content.vb: Public Sub SetMockVertexResult(mockVertexResult As MeshValidationVertexResultType)
-  overload: Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult*
 references:
 - uid: Synesthesias.Snap.Sample
   commentId: N:Synesthesias.Snap.Sample
@@ -530,34 +530,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Synesthesias.Snap.Sample.ValidationRepository.#ctor*
-  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.#ctor
-  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository__ctor
-  name: ValidationRepository
-  nameWithType: ValidationRepository.ValidationRepository
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.ValidationRepository
-  nameWithType.vb: ValidationRepository.New
-  fullName.vb: Synesthesias.Snap.Sample.ValidationRepository.New
-  name.vb: New
-- uid: Synesthesias.Snap.Sample.ValidationRepository.GetParameter*
-  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.GetParameter
-  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_GetParameter
-  name: GetParameter
-  nameWithType: ValidationRepository.GetParameter
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.GetParameter
-- uid: Synesthesias.Snap.Sample.ValidationParameterModel
-  commentId: T:Synesthesias.Snap.Sample.ValidationParameterModel
-  parent: Synesthesias.Snap.Sample
-  href: Synesthesias.Snap.Sample.ValidationParameterModel.html
-  name: ValidationParameterModel
-  nameWithType: ValidationParameterModel
-  fullName: Synesthesias.Snap.Sample.ValidationParameterModel
-- uid: Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult*
-  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult
-  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_GetAngleResult
-  name: GetAngleResult
-  nameWithType: ValidationRepository.GetAngleResult
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult
+- uid: Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult
+  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_MockAngleResult
+  name: MockAngleResult
+  nameWithType: ValidationRepository.MockAngleResult
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.MockAngleResult
 - uid: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
   commentId: T:Synesthesias.Snap.Runtime.MeshValidationAngleResultType
   parent: Synesthesias.Snap.Runtime
@@ -595,12 +573,12 @@ references:
   - uid: Synesthesias.Snap.Runtime
     name: Runtime
     href: Synesthesias.Snap.Runtime.html
-- uid: Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult*
-  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult
-  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_GetVertexResult
-  name: GetVertexResult
-  nameWithType: ValidationRepository.GetVertexResult
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult
+- uid: Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult
+  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_MockVertexResult
+  name: MockVertexResult
+  nameWithType: ValidationRepository.MockVertexResult
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.MockVertexResult
 - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
   commentId: T:Synesthesias.Snap.Runtime.MeshValidationVertexResultType
   parent: Synesthesias.Snap.Runtime
@@ -608,21 +586,43 @@ references:
   name: MeshValidationVertexResultType
   nameWithType: MeshValidationVertexResultType
   fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+- uid: Synesthesias.Snap.Sample.ValidationRepository.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.#ctor
+  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository__ctor
+  name: ValidationRepository
+  nameWithType: ValidationRepository.ValidationRepository
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.ValidationRepository
+  nameWithType.vb: ValidationRepository.New
+  fullName.vb: Synesthesias.Snap.Sample.ValidationRepository.New
+  name.vb: New
+- uid: Synesthesias.Snap.Sample.ValidationRepository.GetParameter*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.GetParameter
+  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_GetParameter
+  name: GetParameter
+  nameWithType: ValidationRepository.GetParameter
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.GetParameter
+- uid: Synesthesias.Snap.Sample.ValidationParameterModel
+  commentId: T:Synesthesias.Snap.Sample.ValidationParameterModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.ValidationParameterModel.html
+  name: ValidationParameterModel
+  nameWithType: ValidationParameterModel
+  fullName: Synesthesias.Snap.Sample.ValidationParameterModel
+- uid: Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult
+  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_GetAngleResult
+  name: GetAngleResult
+  nameWithType: ValidationRepository.GetAngleResult
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.GetAngleResult
+- uid: Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult
+  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_GetVertexResult
+  name: GetVertexResult
+  nameWithType: ValidationRepository.GetVertexResult
+  fullName: Synesthesias.Snap.Sample.ValidationRepository.GetVertexResult
 - uid: Synesthesias.Snap.Sample.ValidationRepository.SetParameter*
   commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.SetParameter
   href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_SetParameter_Synesthesias_Snap_Sample_ValidationParameterModel_
   name: SetParameter
   nameWithType: ValidationRepository.SetParameter
   fullName: Synesthesias.Snap.Sample.ValidationRepository.SetParameter
-- uid: Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult*
-  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult
-  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_SetMockAngleResult_Synesthesias_Snap_Runtime_MeshValidationAngleResultType_
-  name: SetMockAngleResult
-  nameWithType: ValidationRepository.SetMockAngleResult
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.SetMockAngleResult
-- uid: Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult*
-  commentId: Overload:Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult
-  href: Synesthesias.Snap.Sample.ValidationRepository.html#Synesthesias_Snap_Sample_ValidationRepository_SetMockVertexResult_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
-  name: SetMockVertexResult
-  nameWithType: ValidationRepository.SetMockVertexResult
-  fullName: Synesthesias.Snap.Sample.ValidationRepository.SetMockVertexResult

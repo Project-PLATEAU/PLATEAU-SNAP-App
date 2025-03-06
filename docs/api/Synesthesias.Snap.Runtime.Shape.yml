@@ -5,9 +5,9 @@ items:
   id: Shape
   parent: Synesthesias.Snap.Runtime
   children:
-  - Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
-  - Synesthesias.Snap.Runtime.Shape.holes
-  - Synesthesias.Snap.Runtime.Shape.hull
+  - Synesthesias.Snap.Runtime.Shape.#ctor(UnityEngine.Vector2[],UnityEngine.Vector2[][])
+  - Synesthesias.Snap.Runtime.Shape.Holes
+  - Synesthesias.Snap.Runtime.Shape.Hull
   langs:
   - csharp
   - vb
@@ -17,15 +17,17 @@ items:
   type: Struct
   source:
     remote:
-      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-      branch: feature/doc_fx
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
     id: Shape
-    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-    startLine: 8
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+    startLine: 7
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
+  summary: 頂点座標を格納する構造体
+  example: []
   syntax:
     content: public struct Shape
     content.vb: Public Structure Shape
@@ -36,93 +38,104 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: Synesthesias.Snap.Runtime.Shape.hull
-  commentId: F:Synesthesias.Snap.Runtime.Shape.hull
-  id: hull
+- uid: Synesthesias.Snap.Runtime.Shape.Hull
+  commentId: P:Synesthesias.Snap.Runtime.Shape.Hull
+  id: Hull
   parent: Synesthesias.Snap.Runtime.Shape
   langs:
   - csharp
   - vb
-  name: hull
-  nameWithType: Shape.hull
-  fullName: Synesthesias.Snap.Runtime.Shape.hull
-  type: Field
+  name: Hull
+  nameWithType: Shape.Hull
+  fullName: Synesthesias.Snap.Runtime.Shape.Hull
+  type: Property
   source:
     remote:
-      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-      branch: feature/doc_fx
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: hull
-    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-    startLine: 10
+    id: Hull
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+    startLine: 12
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
+  summary: 面の頂点座標の配列
+  example: []
   syntax:
-    content: public Vector2[] hull
+    content: public readonly Vector2[] Hull { get; }
+    parameters: []
     return:
       type: UnityEngine.Vector2[]
-    content.vb: Public hull As Vector2()
-- uid: Synesthesias.Snap.Runtime.Shape.holes
-  commentId: F:Synesthesias.Snap.Runtime.Shape.holes
-  id: holes
+    content.vb: Public ReadOnly Property Hull As Vector2()
+  overload: Synesthesias.Snap.Runtime.Shape.Hull*
+- uid: Synesthesias.Snap.Runtime.Shape.Holes
+  commentId: P:Synesthesias.Snap.Runtime.Shape.Holes
+  id: Holes
   parent: Synesthesias.Snap.Runtime.Shape
   langs:
   - csharp
   - vb
-  name: holes
-  nameWithType: Shape.holes
-  fullName: Synesthesias.Snap.Runtime.Shape.holes
-  type: Field
+  name: Holes
+  nameWithType: Shape.Holes
+  fullName: Synesthesias.Snap.Runtime.Shape.Holes
+  type: Property
   source:
     remote:
-      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-      branch: feature/doc_fx
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: holes
-    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-    startLine: 11
+    id: Holes
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+    startLine: 17
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
+  summary: 穴の頂点座標の配列
+  example: []
   syntax:
-    content: public Vector2[][] holes
+    content: public readonly Vector2[][] Holes { get; }
+    parameters: []
     return:
       type: UnityEngine.Vector2[][]
-    content.vb: Public holes As Vector2()()
-- uid: Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
-  commentId: M:Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
-  id: ToPlainShape(iShape.Geometry.IntGeom,Unity.Collections.Allocator)
+    content.vb: Public ReadOnly Property Holes As Vector2()()
+  overload: Synesthesias.Snap.Runtime.Shape.Holes*
+- uid: Synesthesias.Snap.Runtime.Shape.#ctor(UnityEngine.Vector2[],UnityEngine.Vector2[][])
+  commentId: M:Synesthesias.Snap.Runtime.Shape.#ctor(UnityEngine.Vector2[],UnityEngine.Vector2[][])
+  id: '#ctor(UnityEngine.Vector2[],UnityEngine.Vector2[][])'
   parent: Synesthesias.Snap.Runtime.Shape
   langs:
   - csharp
   - vb
-  name: ToPlainShape(IntGeom, Allocator)
-  nameWithType: Shape.ToPlainShape(IntGeom, Allocator)
-  fullName: Synesthesias.Snap.Runtime.Shape.ToPlainShape(iShape.Geometry.IntGeom, Unity.Collections.Allocator)
-  type: Method
+  name: Shape(Vector2[], Vector2[][])
+  nameWithType: Shape.Shape(Vector2[], Vector2[][])
+  fullName: Synesthesias.Snap.Runtime.Shape.Shape(UnityEngine.Vector2[], UnityEngine.Vector2[][])
+  type: Constructor
   source:
     remote:
-      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-      branch: feature/doc_fx
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+      branch: feature/update_docs
       repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
-    id: ToPlainShape
-    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Mesh/ShapeManager.cs
-    startLine: 13
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Triangulation/Shape/Shape.cs
+    startLine: 22
   assemblies:
   - Synesthesias.Snap
   namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
   syntax:
-    content: public PlainShape ToPlainShape(IntGeom iGeom, Allocator allocator)
+    content: public Shape(Vector2[] hull, Vector2[][] holes = null)
     parameters:
-    - id: iGeom
-      type: iShape.Geometry.IntGeom
-    - id: allocator
-      type: Unity.Collections.Allocator
-    return:
-      type: iShape.Geometry.Container.PlainShape
-    content.vb: Public Function ToPlainShape(iGeom As IntGeom, allocator As Allocator) As PlainShape
-  overload: Synesthesias.Snap.Runtime.Shape.ToPlainShape*
+    - id: hull
+      type: UnityEngine.Vector2[]
+    - id: holes
+      type: UnityEngine.Vector2[][]
+    content.vb: Public Sub New(hull As Vector2(), holes As Vector2()() = Nothing)
+  overload: Synesthesias.Snap.Runtime.Shape.#ctor*
+  nameWithType.vb: Shape.New(Vector2(), Vector2()())
+  fullName.vb: Synesthesias.Snap.Runtime.Shape.New(UnityEngine.Vector2(), UnityEngine.Vector2()())
+  name.vb: New(Vector2(), Vector2()())
 references:
 - uid: Synesthesias.Snap.Runtime
   commentId: N:Synesthesias.Snap.Runtime
@@ -371,6 +384,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Synesthesias.Snap.Runtime.Shape.Hull*
+  commentId: Overload:Synesthesias.Snap.Runtime.Shape.Hull
+  href: Synesthesias.Snap.Runtime.Shape.html#Synesthesias_Snap_Runtime_Shape_Hull
+  name: Hull
+  nameWithType: Shape.Hull
+  fullName: Synesthesias.Snap.Runtime.Shape.Hull
 - uid: UnityEngine.Vector2[]
   isExternal: true
   name: Vector2[]
@@ -391,6 +410,12 @@ references:
     isExternal: true
   - name: (
   - name: )
+- uid: Synesthesias.Snap.Runtime.Shape.Holes*
+  commentId: Overload:Synesthesias.Snap.Runtime.Shape.Holes
+  href: Synesthesias.Snap.Runtime.Shape.html#Synesthesias_Snap_Runtime_Shape_Holes
+  name: Holes
+  nameWithType: Shape.Holes
+  fullName: Synesthesias.Snap.Runtime.Shape.Holes
 - uid: UnityEngine.Vector2[][]
   isExternal: true
   name: Vector2[][]
@@ -415,104 +440,12 @@ references:
   - name: )
   - name: (
   - name: )
-- uid: Synesthesias.Snap.Runtime.Shape.ToPlainShape*
-  commentId: Overload:Synesthesias.Snap.Runtime.Shape.ToPlainShape
-  href: Synesthesias.Snap.Runtime.Shape.html#Synesthesias_Snap_Runtime_Shape_ToPlainShape_iShape_Geometry_IntGeom_Unity_Collections_Allocator_
-  name: ToPlainShape
-  nameWithType: Shape.ToPlainShape
-  fullName: Synesthesias.Snap.Runtime.Shape.ToPlainShape
-- uid: iShape.Geometry.IntGeom
-  commentId: T:iShape.Geometry.IntGeom
-  parent: iShape.Geometry
-  isExternal: true
-  name: IntGeom
-  nameWithType: IntGeom
-  fullName: iShape.Geometry.IntGeom
-- uid: Unity.Collections.Allocator
-  commentId: T:Unity.Collections.Allocator
-  parent: Unity.Collections
-  isExternal: true
-  name: Allocator
-  nameWithType: Allocator
-  fullName: Unity.Collections.Allocator
-- uid: iShape.Geometry.Container.PlainShape
-  commentId: T:iShape.Geometry.Container.PlainShape
-  parent: iShape.Geometry.Container
-  isExternal: true
-  name: PlainShape
-  nameWithType: PlainShape
-  fullName: iShape.Geometry.Container.PlainShape
-- uid: iShape.Geometry
-  commentId: N:iShape.Geometry
-  isExternal: true
-  name: iShape.Geometry
-  nameWithType: iShape.Geometry
-  fullName: iShape.Geometry
-  spec.csharp:
-  - uid: iShape
-    name: iShape
-    isExternal: true
-  - name: .
-  - uid: iShape.Geometry
-    name: Geometry
-    isExternal: true
-  spec.vb:
-  - uid: iShape
-    name: iShape
-    isExternal: true
-  - name: .
-  - uid: iShape.Geometry
-    name: Geometry
-    isExternal: true
-- uid: Unity.Collections
-  commentId: N:Unity.Collections
-  isExternal: true
-  name: Unity.Collections
-  nameWithType: Unity.Collections
-  fullName: Unity.Collections
-  spec.csharp:
-  - uid: Unity
-    name: Unity
-    isExternal: true
-  - name: .
-  - uid: Unity.Collections
-    name: Collections
-    isExternal: true
-  spec.vb:
-  - uid: Unity
-    name: Unity
-    isExternal: true
-  - name: .
-  - uid: Unity.Collections
-    name: Collections
-    isExternal: true
-- uid: iShape.Geometry.Container
-  commentId: N:iShape.Geometry.Container
-  isExternal: true
-  name: iShape.Geometry.Container
-  nameWithType: iShape.Geometry.Container
-  fullName: iShape.Geometry.Container
-  spec.csharp:
-  - uid: iShape
-    name: iShape
-    isExternal: true
-  - name: .
-  - uid: iShape.Geometry
-    name: Geometry
-    isExternal: true
-  - name: .
-  - uid: iShape.Geometry.Container
-    name: Container
-    isExternal: true
-  spec.vb:
-  - uid: iShape
-    name: iShape
-    isExternal: true
-  - name: .
-  - uid: iShape.Geometry
-    name: Geometry
-    isExternal: true
-  - name: .
-  - uid: iShape.Geometry.Container
-    name: Container
-    isExternal: true
+- uid: Synesthesias.Snap.Runtime.Shape.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.Shape.#ctor
+  href: Synesthesias.Snap.Runtime.Shape.html#Synesthesias_Snap_Runtime_Shape__ctor_UnityEngine_Vector2___UnityEngine_Vector2_____
+  name: Shape
+  nameWithType: Shape.Shape
+  fullName: Synesthesias.Snap.Runtime.Shape.Shape
+  nameWithType.vb: Shape.New
+  fullName.vb: Synesthesias.Snap.Runtime.Shape.New
+  name.vb: New
