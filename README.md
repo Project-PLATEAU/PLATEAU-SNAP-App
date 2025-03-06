@@ -23,7 +23,7 @@
 [![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Mesh2d&message=0.0.9&color=0e6da0)](https://github.com/iShapeUnity/Mesh2d/releases/tag/0.0.9)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Triangulation&message=0.0.8&color=0e6da0)](https://github.com/iShapeUnity/Triangulation/releases/tag/0.0.8)
 
-### Installation
+# Installation
 
 Package/manifest.jsonに以下を追記します。
 (サンプルの場合は後述)
@@ -79,19 +79,27 @@ PackageManagerからSampleを追加する場合は上記のRuntime側のInstalla
 }
 ```
 
-## サンプルを更新する場合の注意点
+## Localizationの設定方法
 
-Unityパッケージの仕様により、サンプルファイルは Samples~ ディレクトリ(隠しディレクトリ)に配置されています。この仕様は [Unity公式ドキュメント](https://docs.unity3d.com/ja/2022.3/Manual/cus-samples.html)に従ったもので、Samples ディレクトリにリネームする代わりに、シンボリックリンクを活用して開発の効率化を図っています。
+- サンプルは `Localization` を使っています
+- 初期設定を行なっていない場合は以下の手順で設定を行います
+  - Edit > Project Settings > `Localization` (左側の一覧) > `Create` を選択
+  - `Add Locale` を選択
+  - 検索バーに `Japanese` と入力して検索してチェックを入れます (`Code` が `ja` のもの)
+  - 同じように `English` (`Code` が `en` のもの)にチェックを入れます
+  - `Add Locales` を選択します
 
-### Windowsユーザー向けシンボリックリンクの設定手順
+## Addressablesの設定方法
 
-Windowsユーザーの方はリポジトリ内で以下のコマンドを実行し、シンボリックリンクを有効化してください。
+- サンプルは `Addressables` を使っています
+- 初期設定を行なっていない場合は以下の手順で設定を行います
+- Addressablesの初期設定を行なっていな場合
+  - Window > Asset Management > Addressables > Groups > Create Addressables Settings > Create Addressables Settings
+- 前述でインポートしたサンプルの `Addressables` ディレクトリを Project Viewから選択して Inspector の `Addressables` にチェックを入れます
+  - 必要に応じてGroupを変更します
+  - 全てのリソースをアプリに含める場合は `Default Local Group` のままにします
 
-```bash
-git config core.symlinks true
-```
-
-Macユーザーは特別な対応は不要です。
+> Assets/Samples/Synesthesias PLATEAU SNAP/<バージョン>/Sample App/Addressables
 
 ## 環境設定について
 
@@ -214,9 +222,10 @@ Assets/Resources/GitIgnore
   - (Development Buildでもアプリが実行する方法があれば情報共有をお願いします)
 - `Build` を選択してiOSのアプリをビルドします
 
-## クライアントのAPIドキュメントの閲覧方法
+# クライアントのAPIドキュメントの閲覧方法
 
-APIドキュメントを閲覧するだけであれば以下のコマンドが一番楽です。
+- 本リポジトリをチェックアウトします
+- APIドキュメントを閲覧するだけであれば以下のコマンドが一番楽です。
 
 ```bash
 python3 -m http.server <ポート番号> --directory docs/_site
@@ -225,6 +234,29 @@ python3 -m http.server <ポート番号> --directory docs/_site
 - ブラウザで以下のURLへアクセスします。
   - http://localhost:<ポート番号>/
 - 画面上部から「API」タブを選択して各種APIを確認できます
+
+
+---
+
+# メンテナー向け情報
+
+これ以降はリポジトリのメンテナー向けの情報です。
+
+---
+
+## サンプルを更新する場合の注意点
+
+Unityパッケージの仕様により、サンプルファイルは Samples~ ディレクトリ(隠しディレクトリ)に配置されています。この仕様は [Unity公式ドキュメント](https://docs.unity3d.com/ja/2022.3/Manual/cus-samples.html)に従ったもので、Samples ディレクトリにリネームする代わりに、シンボリックリンクを活用して開発の効率化を図っています。
+
+### Windowsユーザー向けシンボリックリンクの設定手順
+
+Windowsユーザーの方はリポジトリ内で以下のコマンドを実行し、シンボリックリンクを有効化してください。
+
+```bash
+git config core.symlinks true
+```
+
+Macユーザーは特別な対応は不要です。
 
 ### APIドキュメントの更新と閲覧を行う方法
 
