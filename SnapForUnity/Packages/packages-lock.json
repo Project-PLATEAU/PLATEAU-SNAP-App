@@ -28,7 +28,7 @@
       "hash": "141504d23647362869c41db27a8c30321cfc8dd8"
     },
     "com.ishape.geometry": {
-      "version": "https://github.com/iShapeUnity/Geometry.git",
+      "version": "https://github.com/iShapeUnity/Geometry.git#0.0.5",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -38,7 +38,7 @@
       "hash": "57bf3cd03759dd40899c375ae3052b0534aeac24"
     },
     "com.ishape.mesh2d": {
-      "version": "https://github.com/iShapeUnity/Mesh2d.git",
+      "version": "https://github.com/iShapeUnity/Mesh2d.git#0.0.9",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -48,7 +48,7 @@
       "hash": "146782fc7cba53ab297be3f57d48ae7ad26dd5d2"
     },
     "com.ishape.triangulation": {
-      "version": "https://github.com/iShapeUnity/Triangulation.git",
+      "version": "https://github.com/iShapeUnity/Triangulation.git#0.0.8",
       "depth": 0,
       "source": "git",
       "dependencies": {

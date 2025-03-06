@@ -5,7 +5,7 @@
 
 ### Version
 
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=PLATEAU&nbsp;SNAP&message=0.0.1&color=0e6da0)](https://github.com/Gentlymad-Studios/PackageManagerTools)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=PLATEAU.SNAP.App&message=0.0.1&color=0e6da0)](https://github.com/Gentlymad-Studios/PackageManagerTools)
 
 ### Support
 
@@ -13,11 +13,15 @@
 
 ### Dependencies
 
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=PLATEAU.SNAP.Server&message=0.0.1&color=0e6da0)](https://github.com/Synesthesias/PLATEAU-SNAP-Server)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=AR%20Foundation&message=5.1.5&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Google%20ARCore%20XR%20Plugin&message=5.1.5&color=0e6da0)](https://docs.unity3d.com/ja/Packages/com.unity.xr.arkit@5.1/manual/index.html)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=ARCore%20Extensions&message=1.22.3&color=0e6da0)](https://github.com/google-ar/arcore-unity-extensions)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=UniTask&message=2.5.10&color=0e6da0)](https://github.com/Cysharp/UniTask/releases/tag/2.5.10)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=R3&message=1.2.9&color=0e6da0)](https://github.com/Cysharp/R3/releases/tag/1.2.9)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Geometry&message=0.0.5&color=0e6da0)](https://github.com/iShapeUnity/Geometry/releases/tag/0.0.5)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Mesh2d&message=0.0.9&color=0e6da0)](https://github.com/iShapeUnity/Mesh2d/releases/tag/0.0.9)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Triangulation&message=0.0.8&color=0e6da0)](https://github.com/iShapeUnity/Triangulation/releases/tag/0.0.8)
 
 ### Installation
 
@@ -32,6 +36,9 @@ Package/manifest.jsonに以下を追記します。
     "com.cysharp.unitask": "2.5.10",
     "org.nuget.r3": "1.2.9",
     "com.google.ar.core.arfoundation.extensions": "https://github.com/google-ar/arcore-unity-extensions.git#1.47.0",
+    "com.ishape.geometry": "https://github.com/iShapeUnity/Geometry.git#0.0.5",
+    "com.ishape.mesh2d": "https://github.com/iShapeUnity/Mesh2d.git#0.0.9",
+    "com.ishape.triangulation": "https://github.com/iShapeUnity/Triangulation.git#0.0.8"
   },
   "scopedRegistries": [
     {
@@ -54,6 +61,7 @@ Package/manifest.jsonに以下を追記します。
 [![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Localization&message=1.5.4&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.localization@1.5/manual/index.html)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=TextMeshPro&message=3.0.6&color=0e6da0)](https://docs.unity3d.com/ja/2022.3/Manual/com.unity.textmeshpro.html)
 [![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=VContainer&message=1.16.8&color=0e6da0)](https://github.com/hadashiA/VContainer/releases/tag/1.16.8)
+[![](https://img.shields.io/static/v1?style=flat=square&logo=NuGet&logoColor=FFFFFF&label=Polly&message=8.5.2&color=0e6da0)](https://www.nuget.org/packages/Polly/8.5.2)
 
 ### Installation
 
@@ -66,6 +74,7 @@ PackageManagerからSampleを追加する場合は上記のRuntime側のInstalla
     "com.unity.localization": "1.5.4",
     "com.unity.textmeshpro": "3.0.6",
     "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.16.8",
+    "org.nuget.polly": "8.5.2"
   }
 }
 ```
@@ -110,9 +119,13 @@ Macユーザーは特別な対応は不要です。
 
 ## ARCoreの設定方法 (iOS)
 
-- Project Settings > XR Plugin-in Management > ARCore Extensions
-- iOS Support Enabledにチェックを入れます
-- Geospatialにチェックを入れます
+- Unityプロジェクトを開きます
+- Edit > Project Settings
+- XR Plug-in Management > iOSタブを選択します
+  - `Apple ARKit` にチェックを入れます
+- XR Plug-in Management > ARCore Extensions
+  - iOS Support Enabledにチェックを入れます
+  - Geospatialにチェックを入れます
 
 # ARCoreのAPIキーの管理に注意してください
 
@@ -120,7 +133,7 @@ Macユーザーは特別な対応は不要です。
 - APIキーをアプリに組み込まないようにしてください
 - APIキーはあくまで暫定対応です
   - Android: Keylessを使用してください
-  - iOS: Authentication Tokenを使用してください
+  - iOS: API Keyを選択します
 - APIキーを間違ってコミットしないように以下の設定ファイルは.gitignoreで除外しています
 
 ```
@@ -129,17 +142,31 @@ Macユーザーは特別な対応は不要です。
 
 ### ARCoreのAPIキーの設定方法
 
+- 以下のドキュメントの手順に従いARCoreのAPIキー作成の手順まで完了させます
+  - https://developers.google.com/ar/develop/authorization?hl=ja&platform=unity-arf#api-key-unity
 - Project Settings > XR Plugin-in Management > ARCore Extensions
 - iOS Authentication StrategyをAPI Keyに設定します
   - 本来であればAuthentication Tokenを使用することを推奨します
-  - iOS API KeyにAPIキーを設定します
+  - iOS API Keyに先ほど発行したAPIキーを設定します
+
+# サーバーのAPI
+
+- クライアント(Unity)は以下のサーバー側のリポジトリのAPIを呼んでいます
+  - https://github.com/Synesthesias/PLATEAU-SNAP-Server
+- APIを呼ぶにはサーバー側で作成したAPIキーを後述の手順で設定する必要があります
 
 # サーバーのAPIキーの管理に注意してください
 
 - APIキーはgitで管理しないようにしください
 - APIキーをアプリに組み込まないようにしてください
 - APIキーはあくまで暫定対応です
-- APIキーを間違ってコミットしないように以下の設定ファイルは.gitignoreで除外しています
+
+## .gitignore用のディレクトリの作成
+
+- gitでバージョン管理しないディレクトリを作成します
+  - 例: Assets/Resources/GitIgnore
+- .gitignoreに上記のディレクトリを追記します
+- (本リポジトリのメンテナーは以下のディレクトリが既に.gitignoreに追記されているので、そのまま使ってください)
 
 ```
 Assets/Resources/GitIgnore
@@ -147,7 +174,7 @@ Assets/Resources/GitIgnore
 
 ### サーバーのAPIキーの設定方法
 
-- Project Viewの Assets/Resources/GitIgnore ディレクトリ配下で右クリックします
+- `Assets/Resources/GitIgnore` ディレクトリで右クリックしてメニューを開きます
 - Create > Synesthesias > Snap > Sample > ApiKeyScriptableObject を選択します
 - 作成されたScriptableObjectを選択してAPIの情報を入力します
   - End Point
@@ -158,6 +185,34 @@ Assets/Resources/GitIgnore
   - Api Key Value
     - APIキーの値を入力します
 - Project Viewから前述の開発環境設定用のScriptableObjectを選択し `Api Configuration` のフィールドに前述のScriptableObjectの参照をドラッグ&ドロップで設定します
+
+## iOS機能用途の説明の記載
+
+本アプリはiOSのカメラと位置情報の機能を使用するため、用途を記載しないとビルドエラーが発生してしまいます。
+
+- Edit > Project Settings > Player Settings (左側のメニューのPlayer)
+- iOSタブを選択
+- `Camera Usage Description` にカメラの用途を追記します
+  - 例: `建物検出機能に使用します`
+- `Location Usage Description` に位置情報の用途を追記します
+  - 例: `建物検出機能に使用します`
+
+# サンプルアプリのビルド方法
+
+- サンプルをインポートして前述のAPIキーの設定を一通り完了させます
+- File > Build Settings
+- `iOS` を選択して `Switch Platform` を選択します
+- 以下のシーンを順番に開いて Build Settingsの `Add Open Scenes` を選択して各種シーンを `Scenes In Build` に追加します
+  - BootScene (必ず0番目にしてください)
+  - MobileDetectionScene
+  - GuideScene
+  - MainScene
+  - ValidationScene
+- `Run in Xcode as` は `Release` が選択されていることを確認します
+- `Development Build` のチェックが外れていることを確認します
+  - ＊ `Development Build` の場合はアプリが起動できません
+  - (Development Buildでもアプリが実行する方法があれば情報共有をお願いします)
+- `Build` を選択してiOSのアプリをビルドします
 
 ## クライアントのAPIドキュメントの閲覧方法
 
@@ -293,7 +348,7 @@ dotnet docfx build docs/docfx.json
 dotnet docfx docs/docfx.json --serve --port <ポート番号>
 ```
 
-## API通信用のクライアントコードの更新方法
+## サンプルのAPI通信用のクライアントコードの更新方法
 
 - サーバー側のAPIが更新されたら `spec.json` を更新してください
 - 以下の手順を参考にOpenAPIのGeneratorでGenerated.Clientディレクトリ配下のソースコードを更新します
