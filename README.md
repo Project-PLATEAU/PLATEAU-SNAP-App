@@ -61,6 +61,7 @@ TODO: 追記予定
 ## 7. 本リポジトリのフォルダ構成
 
 | フォルダ名 | 詳細 |
+|-----|-----|
 | SnapForUnity | Unityプロジェクト |
 | .config | .NETの環境設定 |
 | .github | GitHubの設定ファイル |
