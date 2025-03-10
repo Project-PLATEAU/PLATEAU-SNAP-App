@@ -48,20 +48,13 @@ namespace Synesthesias.Snap.Runtime
 
             await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
 
-            //頂点の重複がある時，クラッシュするのを防止する．
+            // 頂点の重複がある時，クラッシュするのを防止する．
             if (await validatorModel.IsOverlappingVerticesAsync(
                     hull: hull,
                     holes: holes,
                     cancellationToken))
             {
                 Debug.LogWarning("頂点の重複が検出された為、処理を中断しました");
-                return null;
-            }
-
-            //shapeData.hullの頂点座標が反時計回りに格納されている時，クラッシュするのを防止する．
-            if (validatorModel.IsCounterClockwise(hull))
-            {
-                Debug.LogWarning("頂点が反時計まわりに格納されています");
                 return null;
             }
 
@@ -80,8 +73,17 @@ namespace Synesthesias.Snap.Runtime
 
             var vector2Hull = calculatorModel.GetHullVertices2d(rotatedHullVertices);
             var vector2Holes = calculatorModel.GetHolesVertices2d(holes);
+            var hoge = validatorModel.IsCounterClockwise(vector2Hull);
 
             await UniTask.DelayFrame(2, cancellationToken: cancellationToken);
+
+            // vector2Hullの頂点座標が反時計回りに格納されている時，クラッシュするのを防止する．
+            // 3D->2Dへの変換が間違っていた場合，以下の警告が出る．
+            if (validatorModel.IsCounterClockwise(vector2Hull))
+            {
+                Debug.LogWarning("頂点が反時計まわりに格納されています");
+                return null;
+            }
 
             var pShape = plainShapeFactory.CreatePlainShape(
                 hull: vector2Hull,
@@ -197,8 +199,6 @@ namespace Synesthesias.Snap.Runtime
             mesh.vertices = restoredVertices;
             mesh.RecalculateBounds();
             mesh.RecalculateNormals();
-
-            mesh = calculatorModel.GetInvertMesh(mesh);
 
             return mesh;
         }

@@ -158,10 +158,18 @@ namespace Synesthesias.Snap.Runtime
 
             for (var i = 0; i < n; i++)
             {
-                var current = vertices[i];
-                var next = vertices[(i + 1) % n];
+                var p0 = vertices[i];
+                var p1 = vertices[(i + 1) % n];
+                var p2 = vertices[(i + 2) % n];
 
-                normal += Vector3.Cross(current, next);
+                var edge1 = p1 - p0;
+                var edge2 = p2 - p0;
+
+                var cross = Vector3.Cross(edge1, edge2);
+                if (cross.magnitude > 0)
+                {
+                    normal += cross;
+                }
             }
 
             return normal.normalized;
@@ -174,40 +182,21 @@ namespace Synesthesias.Snap.Runtime
 
             for (var i = 0; i < n; i++)
             {
-                var current = vertices[i];
-                var next = vertices[(i + 1) % n];
+                var p0 = vertices[i];
+                var p1 = vertices[(i + 1) % n];
+                var p2 = vertices[(i + 2) % n];
 
-                normal += Vector3.Cross(current, next);
+                var edge1 = p1 - p0;
+                var edge2 = p2 - p0;
+
+                var cross = Vector3.Cross(edge1, edge2);
+                if (cross.magnitude > 0)
+                {
+                    normal += cross;
+                }
             }
 
             return normal.normalized;
-        }
-
-        /// <summary>
-        /// メッシュを反転する
-        /// TODO: メッシュ生成後に反転するのは非効率なので，メッシュ生成時に反転するように変更する
-        /// </summary>
-        [Obsolete("削除予定")]
-        public Mesh GetInvertMesh(Mesh mesh)
-        {
-            int[] triangles = mesh.triangles;
-            for (int i = 0; i < triangles.Length; i += 3)
-            {
-                int temp = triangles[i];
-                triangles[i] = triangles[i + 1];
-                triangles[i + 1] = temp;
-            }
-            mesh.triangles = triangles;
-
-            Vector3[] normals = mesh.normals;
-            for (int i = 0; i < normals.Length; i++)
-            {
-                normals[i] = -normals[i];
-            }
-            mesh.normals = normals;
-            mesh.RecalculateBounds();
-
-            return mesh;
         }
     }
 }

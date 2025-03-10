@@ -15,7 +15,8 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Model
         public List<List<List<double>>> GetUniqueCoordinates()
             => Coordinates
                 .Select(coordinates => coordinates
-                    .SkipLast(1)
+                    .Skip(1)
+                    .Reverse()
                     .ToList())
                 .ToList();
     }
