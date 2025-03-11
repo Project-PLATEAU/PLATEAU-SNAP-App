@@ -62,7 +62,7 @@ TODO: 追記予定
 
 | フォルダ名 | 詳細 |
 |-----|-----|
-| SnapForUnity | Unityプロジェクト |
+| SnapForUnity | Unityプロジェクト ([詳細](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/1).-%E9%96%8B%E7%99%BA%E8%80%85(Developer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#1-1-%E6%A7%8B%E6%88%90>))  |
 | .config | .NETの環境設定 |
 | .github | GitHubの設定ファイル |
 | OpenAPI | API通信用のコード生成関連 |
