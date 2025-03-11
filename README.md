@@ -20,7 +20,7 @@ TODO: 追記予定
 
 | 項目 | 名称 | バージョン | 内容 |
 |---|---|---|---|
-| 開発プラットフォーム | Unity | [2022.3.44f1](https://unity.com/ja/releases/editor/archive) | モバイルアプリの開発に使用 |
+| 開発プラットフォーム | Unity | [2022.3.44f1](https://docs.unity3d.com/ja/2022.3/Manual/) | モバイルアプリの開発に使用 |
 | 使用言語 | C# | [9.0](https://docs.unity3d.com/ja/2022.3/Manual/CSharpCompiler.html) | Unityのサポート言語 |
 
 ### Unity関連のパッケージ
