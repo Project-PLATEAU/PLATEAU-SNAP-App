@@ -60,13 +60,13 @@ TODO: 追記予定
 
 ## 7. 本リポジトリのフォルダ構成
 
-| フォルダ名 | 詳細 |
-|-----|-----|
-| SnapForUnity | Unityプロジェクト ([詳細](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/1).-%E9%96%8B%E7%99%BA%E8%80%85(Developer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#1-1-%E6%A7%8B%E6%88%90>))  |
-| .config | .NETの環境設定 |
-| .github | GitHubの設定ファイル |
-| OpenAPI | API通信用のコード生成関連 |
-| docs | アプリのAPIドキュメント |
+| フォルダ名 | 詳細 | 関連情報 |
+|-----|-----|-----|
+| SnapForUnity | Unityプロジェクト | [構成](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/1).-%E9%96%8B%E7%99%BA%E8%80%85(Developer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#1-1-%E6%A7%8B%E6%88%90>)  |
+| .config | .NETの環境設定 | [クライアントのAPIドキュメントの作成方法](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-3-%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AEapi%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95%E8%BF%BD%E5%8A%A0%E5%AF%BE%E5%BF%9C%E4%B8%8D%E8%A6%81>) |
+| .github | GitHubの設定ファイル | [プルリクエストの作成手順](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-6-%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90%E6%89%8B%E9%A0%86>) |
+| OpenAPI | API通信用のコード生成関連 | [サンプルのAPI通信用のクライアントコードの更新方法](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-5-%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AEapi%E9%80%9A%E4%BF%A1%E7%94%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95>) |
+| docs | アプリのAPIドキュメント | [クライアントのAPIドキュメントの作成方法](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-3-%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AEapi%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95%E8%BF%BD%E5%8A%A0%E5%AF%BE%E5%BF%9C%E4%B8%8D%E8%A6%81>) |
 
 ## 8. ライセンス
 
