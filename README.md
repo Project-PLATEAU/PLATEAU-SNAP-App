@@ -10,7 +10,7 @@ TODO: 追記予定
 
 ## 3. 利用手順
 
-- 本リポジトリのWikiの[利用手順](https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86)をご確認ください。
+- 本リポジトリの[Wiki](https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki)の「利用者向け情報」をご確認ください。
 
 ## 4. システム概要
 
