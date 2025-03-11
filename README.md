@@ -18,14 +18,15 @@ TODO: 追記予定
 
 ## 5. 利用技術
 
-- 開発プラットフォーム
-  - Unity [2022.3.44f1](https://unity.com/ja/releases/editor/archive)
+| 項目 | 名称 | バージョン | 内容 |
+|---|---|---|---|
+| 開発プラットフォーム | Unity | [2022.3.44f1](https://unity.com/ja/releases/editor/archive) | モバイルアプリの開発に使用 |
+| 使用言語 | C# | [9.0](https://docs.unity3d.com/ja/2022.3/Manual/CSharpCompiler.html) | Unityのサポート言語 |
 
 ### Unity関連のパッケージ
 
-#### ランタイム
-
-ランタイムの実行に必要なUnityの依存パッケージです。
+- ランタイム
+  - ランタイムの実行に必要なUnityの依存パッケージです
 
 | 名称 | バージョン | 内容 |
 |-----|-------|-------|
@@ -39,9 +40,9 @@ TODO: 追記予定
 | Mesh2d | [0.0.9](https://github.com/iShapeUnity/Mesh2d/releases/tag/0.0.9) | メッシュ描画に使用 |
 | Triangulation | [0.0.8](https://github.com/iShapeUnity/Triangulation/releases/tag/0.0.8) | メッシュ描画に使用 |
 
-#### サンプル
-
-サンプルの実行に必要なUnityの依存パッケージです。(ランタイムに併せて必要です)
+- サンプル
+  - サンプルの実行に必要なUnityの依存パッケージです
+  - ランタイムに併せて必要です
 
 | 名称 | バージョン | 内容 |
 |-----|-------|-------|
