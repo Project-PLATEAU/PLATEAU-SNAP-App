@@ -59,8 +59,9 @@ jobs:
           git switch --orphan gh-pages
           git reset --hard
 
-      - name: 既存のファイルを削除
-        run: git rm -rf .
+      - name: mainブランチのdocs/_siteをチェックアウト
+        run: |
+          git checkout main -- docs/_site
 
       - name: docs/_site の内容をコピー
         run: cp -r docs/_site/* .
