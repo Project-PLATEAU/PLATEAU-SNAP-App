@@ -54,8 +54,9 @@ jobs:
 
       - name: 「gh-pages」に「docs/_site」の内容をデプロイ
         run: |
+          git fetch origin gh-pages || echo "gh-pagesブランチが見つかりませんでした"
           git switch --orphan gh-pages
-          git rm -rf .
+          git reset --hard
           git checkout main -- docs/_site
           mv docs/_site/* .
           rm -rf docs
