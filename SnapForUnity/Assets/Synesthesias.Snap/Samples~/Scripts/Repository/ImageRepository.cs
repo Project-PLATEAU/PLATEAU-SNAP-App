@@ -1,12 +1,13 @@
 using Cysharp.Threading.Tasks;
+using Synesthesias.PLATEAU.Snap.Generated;
 using Synesthesias.PLATEAU.Snap.Generated.Api;
 using Synesthesias.PLATEAU.Snap.Generated.Client;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
-using Synesthesias.Snap.Runtime;
 using System;
 using System.IO;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -36,10 +37,9 @@ namespace Synesthesias.Snap.Sample
         {
             try
             {
-                // 各種引数のNullをDebug.Logで出力する
-                Debug.Log($"validationParameter(null?): {validationParameter == null}");
-                Debug.Log($"texture(null?): {texture == null}");
-                Debug.Log($"fileName(null?): {fileName == null}");
+                Assert.IsNotNull(validationParameter, "validationParameterがnullです。");
+                Assert.IsNotNull(texture, "textureがnullです。");
+                Assert.IsFalse(string.IsNullOrEmpty(fileName), $"ファイル名({fileName})がnullまたは空です。");
 
                 var pngBytesBuffer = texture.EncodeToPNG();
                 using var stream = new MemoryStream(buffer: pngBytesBuffer);
@@ -59,19 +59,26 @@ namespace Synesthesias.Snap.Sample
 
                 var metaDataJson = metadata.ToJson();
 
-                await imagesApiAsync.CreateBuildingImageAsyncAsync(
+                var response = await imagesApiAsync.CreateBuildingImageAsyncAsync(
                     file: fileParameter,
                     metadata: metaDataJson,
                     cancellationToken: cancellationToken);
+
+                response.ThrowIfError();
             }
             catch (ApiException exception)
             {
-                Debug.LogError(exception);
+                Debug.LogWarning(exception);
+                throw;
+            }
+            catch (BuildingImageException exception)
+            {
+                Debug.LogWarning(exception);
                 throw;
             }
             catch (Exception exception)
             {
-                Debug.LogError(exception);
+                Debug.LogWarning(exception);
                 throw;
             }
         }

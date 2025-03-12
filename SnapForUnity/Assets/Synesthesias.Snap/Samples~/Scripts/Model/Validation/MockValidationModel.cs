@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using R3;
+using Synesthesias.PLATEAU.Snap.Generated;
 using Synesthesias.PLATEAU.Snap.Generated.Client;
 using Synesthesias.Snap.Runtime;
 using System;
@@ -153,10 +154,17 @@ namespace Synesthesias.Snap.Sample
                 dialogModel.SetDescription(exception.ErrorContent.ToString());
                 throw;
             }
+            catch (BuildingImageException exception)
+            {
+                dialogModel.SetTitle(exception.Title);
+                dialogModel.SetDescription(exception.Description);
+                throw;
+            }
             catch (Exception exception)
             {
                 dialogModel.SetTitle(exception.Message);
                 dialogModel.SetDescription("画像の登録に失敗しました");
+                throw;
             }
         }
 
