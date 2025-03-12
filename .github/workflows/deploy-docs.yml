@@ -36,25 +36,8 @@ jobs:
       - name: DocFX をインストール
         run: dotnet tool update -g docfx
 
-      - name: _siteを削除
-        run: rm -rf docs/_site
-
       - name: ドキュメントをビルド
         run: docfx docs/docfx.json
-
-      - name: docs ディレクトリの変更をコミット＆プッシュ
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add docs/
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          git commit -m "docs: [ドキュメント自動更新]"
-          git push origin main
 
       - name: gh-pages ブランチを作成 or リセット
         run: |
@@ -63,11 +46,13 @@ jobs:
           git reset --hard
 
       - name: mainブランチのdocs/_siteをチェックアウト
-        run: |
-          git checkout main -- docs/_site
+        run: git checkout main -- docs/_site
 
       - name: docs/_site の内容をコピー
         run: cp -r docs/_site/* .
+
+      - name: docs の内容を削除
+        run: rm -rf docs
 
       - name: 変更をコミット
         run: |
@@ -76,15 +61,3 @@ jobs:
 
       - name: gh-pages に強制プッシュ
         run: git push --force origin gh-pages
-
-      - name: main ブランチに戻る
-        run: git switch main
-
-      - name: アーティファクトをアップロード
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'docs/_site'
-
-      - name: GitHub Pages へデプロイ
-        id: deployment
-        uses: actions/deploy-pages@v4
