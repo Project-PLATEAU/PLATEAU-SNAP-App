@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/Users/k_inoue/Documents/repository/synesthesias/snap/PLATEAU-SNAP-App/docs",
+  "source_base_path": "/home/runner/work/PLATEAU-SNAP-App/PLATEAU-SNAP-App/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApi.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiAsync.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.IImagesApiSync.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApi",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApi.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiSync.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiSync",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiSync.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.ImagesApi.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.SurfacesApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api.SurfacesApi",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Api.SurfacesApi.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Api.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Api",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient.yml\" sourcestartlinenumber=\"1\">Provides a default implementation of an Api client (both synchronous and asynchronous implementations),\nencapsulating general REST accessor use cases.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.ApiException",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.yml\" sourcestartlinenumber=\"1\">API Exception</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<T>",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.yml\" sourcestartlinenumber=\"1\">API Response</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils.yml\" sourcestartlinenumber=\"1\">Utility functions providing some benefit to API client consumers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.Configuration.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.Configuration",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.Configuration.yml\" sourcestartlinenumber=\"1\">Represents a set of configuration settings</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory.yml\" sourcestartlinenumber=\"1\">A delegate to ExceptionFactory method</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.yml\" sourcestartlinenumber=\"1\">Represents a File passed to the API as a Parameter, allows using different backends for files</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration.yml\" sourcestartlinenumber=\"1\"><xref href=\"Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration\" data-throw-if-not-resolved=\"false\"></xref> provides a compile-time extension point for globally configuring\nAPI Clients.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.yml\" sourcestartlinenumber=\"1\">Represents configuration aspects required to interact with the API endpoints.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.yml\" sourcestartlinenumber=\"1\">Provides a non-generic contract for the ApiResponse wrapper.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.yml\" sourcestartlinenumber=\"1\">Contract for Asynchronous RESTful API interactions.</p>\n<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.yml\" sourcestartlinenumber=\"3\">This interface allows consumers to provide a custom API accessor client.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.yml\" sourcestartlinenumber=\"1\">Represents a readable-only configuration contract.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -228,7 +312,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.yml\" sourcestartlinenumber=\"1\">Contract for Synchronous RESTful API interactions.</p>\n<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.yml\" sourcestartlinenumber=\"3\">This interface allows consumers to provide a custom API accessor client.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -238,7 +326,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<TKey, TValue>",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.yml\" sourcestartlinenumber=\"1\">A dictionary in which one key has many associated values.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -248,7 +340,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter.yml\" sourcestartlinenumber=\"1\">Formatter for 'date' openapi formats ss defined by full-date - RFC3339\nsee <a href=\"https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types\" sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter.yml\" sourcestartlinenumber=\"2\">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -258,7 +354,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions.yml\" sourcestartlinenumber=\"1\">A container for generalized request inputs. This type allows consumers to extend the request functionality\nby abstracting away from the default (built-in) request framework (e.g. RestSharp).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -268,7 +368,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration class to set the polly retry policies to be applied to the requests.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -278,7 +382,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Client.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Client",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -288,7 +396,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema.yml\" sourcestartlinenumber=\"1\">Abstract base class for oneOf, anyOf schemas in the OpenAPI specification</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -298,7 +410,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata.yml\" sourcestartlinenumber=\"1\">建物画像のメタデータ\nspec.ymlに含まれていないためopenapi-generatorでは生成されないモデルを定義</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -308,7 +424,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.yml\" sourcestartlinenumber=\"1\">BuildingImageResponse</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +438,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.yml\" sourcestartlinenumber=\"1\">Coordinate</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -328,7 +452,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.StatusType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.yml\" sourcestartlinenumber=\"1\">Defines StatusType</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -338,7 +466,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.Surface.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.Surface",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.Surface.yml\" sourcestartlinenumber=\"1\">Surface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -348,7 +480,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest.yml\" sourcestartlinenumber=\"1\">VisibleSurfacesRequest</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +494,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse",
+      "Summary": "<p sourcefile=\"api/Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.yml\" sourcestartlinenumber=\"1\">VisibleSurfacesResponse</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -368,7 +508,11 @@
           "relative_path": "api/Synesthesias.PLATEAU.Snap.Generated.Model.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.PLATEAU.Snap.Generated.Model",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -378,7 +522,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.AnchorType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.AnchorType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.AnchorType.yml\" sourcestartlinenumber=\"1\">Describes the current type of anchor created by screen tap.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -388,7 +536,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.CoordinateUtil.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.CoordinateUtil",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -398,7 +550,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.EditorGeospatialMathModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.EditorGeospatialMathModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.EditorGeospatialMathModel.yml\" sourcestartlinenumber=\"1\">Geospatialの計算を行うModel(エディタ用)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -408,7 +564,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.EditorGeospatialMeshModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.EditorGeospatialMeshModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.EditorGeospatialMeshModel.yml\" sourcestartlinenumber=\"1\">メッシュ(簡易版)のModel(エディタ)\nHullのみ対応(Holeは無視される)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -418,7 +578,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.EditorMeshValidationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.EditorMeshValidationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.EditorMeshValidationModel.yml\" sourcestartlinenumber=\"1\">メッシュの検証</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -428,7 +592,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAccuracyModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAccuracyModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAccuracyModel.yml\" sourcestartlinenumber=\"1\">Geospatialの精度を取得するModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -438,7 +606,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAccuracyResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAccuracyResult",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAccuracyResult.yml\" sourcestartlinenumber=\"1\">Geospatialの精度の結果</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -448,7 +620,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAccuracyState.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAccuracyState",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAccuracyState.yml\" sourcestartlinenumber=\"1\">Geospatialの精度の状態</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -458,7 +634,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAccuracyStateExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAccuracyStateExtensions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAccuracyStateExtensions.yml\" sourcestartlinenumber=\"1\">GeospatialAccuracyStateの拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -468,7 +648,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.yml\" sourcestartlinenumber=\"1\">Geospatialの精度のしきい値のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -478,7 +662,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAnchorHistory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAnchorHistory",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAnchorHistory.yml\" sourcestartlinenumber=\"1\">A serializable struct that stores the basic information of a persistent geospatial anchor.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -488,7 +676,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAnchorHistoryCollection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAnchorHistoryCollection",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAnchorHistoryCollection.yml\" sourcestartlinenumber=\"1\">A wrapper class for serializing a collection of <xref href=\"Synesthesias.Snap.Runtime.GeospatialAnchorHistory\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -498,7 +690,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAnchorModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAnchorModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -508,7 +704,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAnchorResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAnchorResult",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAnchorResult.yml\" sourcestartlinenumber=\"1\">GeospatialAnchorの結果</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -518,7 +718,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAnchorResultType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAnchorResultType.yml\" sourcestartlinenumber=\"1\">Geospatialのアンカーの結果の種類</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -528,7 +732,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAnchorResultTypeExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -538,7 +746,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialAsyncModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialAsyncModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialAsyncModel.yml\" sourcestartlinenumber=\"1\">Geospatial関連のModel(非同期処理)\nGeospatialControllerを参考にUniTaskを使用して非同期処理を行なっている</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -548,7 +760,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialDebugModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialDebugModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialDebugModel.yml\" sourcestartlinenumber=\"1\">GeospatialのデバッグModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -558,7 +774,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMainLoopException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMainLoopException",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMainLoopException.yml\" sourcestartlinenumber=\"1\">GeospatialのメインループのException</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -568,7 +788,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMainLoopModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMainLoopModel.yml\" sourcestartlinenumber=\"1\">GeospatialのメインループのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -578,7 +802,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMainLoopState.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMainLoopState",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMainLoopState.yml\" sourcestartlinenumber=\"1\">Geospatialのメインループの状態</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -588,7 +816,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMainLoopStateType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMainLoopStateType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMainLoopStateType.yml\" sourcestartlinenumber=\"1\">Geospatialのメインループの状態</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -598,7 +830,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMainLoopStateTypeExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMainLoopStateTypeExtensions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMainLoopStateTypeExtensions.yml\" sourcestartlinenumber=\"1\">Geospatialのメインループの状態の拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -608,7 +844,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMainLoopView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMainLoopView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMainLoopView.yml\" sourcestartlinenumber=\"1\">GeospatialのメインループのView</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -618,7 +858,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMeshResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMeshResult",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMeshResult.yml\" sourcestartlinenumber=\"1\">メッシュ(簡易版)の結果</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -628,7 +872,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialMeshResultType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialMeshResultType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialMeshResultType.yml\" sourcestartlinenumber=\"1\">メッシュ(簡易版)の結果の種類</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -638,7 +886,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialModel.yml\" sourcestartlinenumber=\"1\">GeospatialControllerを複製したもの</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -648,7 +900,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialPoseExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialPoseExtensions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialPoseExtensions.yml\" sourcestartlinenumber=\"1\">Geospatial Poseの拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -658,7 +914,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialPoseModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialPoseModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -668,7 +928,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.GeospatialVector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.GeospatialVector",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.GeospatialVector.yml\" sourcestartlinenumber=\"1\">Geospatialのベクトル</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -678,7 +942,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.IGeospatialMathModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.IGeospatialMathModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.IGeospatialMathModel.yml\" sourcestartlinenumber=\"1\">Geospatialの計算を行うModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -688,7 +956,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.IGeospatialMeshModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.IGeospatialMeshModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.IGeospatialMeshModel.yml\" sourcestartlinenumber=\"1\">Geospatial上に表示できるメッシュ(簡易版)のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -698,7 +970,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.IMeshFactoryModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.IMeshFactoryModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.IMeshFactoryModel.yml\" sourcestartlinenumber=\"1\">メッシュ生成用のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -708,7 +984,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.IMeshValidationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.IMeshValidationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.IMeshValidationModel.yml\" sourcestartlinenumber=\"1\">メッシュの検証</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -718,7 +998,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.ISurfaceModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.ISurfaceModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.ISurfaceModel.yml\" sourcestartlinenumber=\"1\">面の情報</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -728,7 +1012,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.LatLonTests.LatLonData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.LatLonTests.LatLonData",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -738,7 +1026,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.LatLonTests.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.LatLonTests",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -748,7 +1040,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationAngleResultType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshValidationAngleResultType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshValidationAngleResultType.yml\" sourcestartlinenumber=\"1\">メッシュの角度の検証結果の種類</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -758,7 +1054,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationAngleResultTypeExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshValidationAngleResultTypeExtensions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshValidationAngleResultTypeExtensions.yml\" sourcestartlinenumber=\"1\">メッシュの角度の検証結果の種類の拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -768,7 +1068,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel.yml\" sourcestartlinenumber=\"1\">メッシュの角度の検証しきい値のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -778,7 +1082,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshValidationResult",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshValidationResult.yml\" sourcestartlinenumber=\"1\">メッシュの検証結果</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -788,7 +1096,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshValidationVertexResultType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshValidationVertexResultType.yml\" sourcestartlinenumber=\"1\">メッシュの頂点の検証結果の種類</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -798,7 +1110,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.yml\" sourcestartlinenumber=\"1\">メッシュの頂点の検証結果の種類の拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -808,7 +1124,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MeshView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MeshView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MeshView.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのView</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -818,7 +1138,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MobileGeospatialMathModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MobileGeospatialMathModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MobileGeospatialMathModel.yml\" sourcestartlinenumber=\"1\">Geospatialの計算を行うModel(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -828,7 +1152,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MobileGeospatialMeshModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MobileGeospatialMeshModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MobileGeospatialMeshModel.yml\" sourcestartlinenumber=\"1\">メッシュ(簡易版)のModel(携帯端末)\nHullのみ対応(Holeは無視される)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -838,7 +1166,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MobileMeshValidationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MobileMeshValidationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.MobileMeshValidationModel.yml\" sourcestartlinenumber=\"1\">メッシュの検証</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -848,7 +1180,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MockJsonParser.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MockJsonParser",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -858,7 +1194,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MockSurface.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MockSurface",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -868,7 +1208,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.MockSurfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.MockSurfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -878,7 +1222,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.PlainShapeFactoryModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.PlainShapeFactoryModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.PlainShapeFactoryModel.yml\" sourcestartlinenumber=\"1\">頂点座標を格納する構造体の拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -888,7 +1236,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.Shape.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.Shape",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.Shape.yml\" sourcestartlinenumber=\"1\">頂点座標を格納する構造体</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -898,7 +1250,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.ShapeMeshFactoryModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.yml\" sourcestartlinenumber=\"1\">iShapeを使用してメッシュを生成するModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -908,7 +1264,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.ShapeValidatorModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.ShapeValidatorModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -918,7 +1278,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.SimpleMeshFactoryModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.SimpleMeshFactoryModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.SimpleMeshFactoryModel.yml\" sourcestartlinenumber=\"1\">シンプルなメッシュ生成用のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -928,7 +1292,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.SimpleMeshResultTypeExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.SimpleMeshResultTypeExtensions",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.SimpleMeshResultTypeExtensions.yml\" sourcestartlinenumber=\"1\">SimpleMeshResultTypeの拡張メソッド</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -938,7 +1306,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.SurfaceConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.SurfaceConverter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Runtime.SurfaceConverter.yml\" sourcestartlinenumber=\"1\">面の変換</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -948,7 +1320,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.VectorCalculatorModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime.VectorCalculatorModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -958,7 +1334,11 @@
           "relative_path": "api/Synesthesias.Snap.Runtime.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Runtime",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -968,7 +1348,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.APIModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.APIModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.APIModel.yml\" sourcestartlinenumber=\"1\">APIモデル(モック)\nMockServerと一緒に使用する</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -978,7 +1362,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ApiConfigurationScriptableObject.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ApiConfigurationScriptableObject",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -988,7 +1376,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.BaseLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.BaseLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.BaseLifetimeScope.yml\" sourcestartlinenumber=\"1\">ライフタイムスコープの基底クラス</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -998,7 +1390,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.BootLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.BootLifetimeScope",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1008,7 +1404,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.BootModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.BootModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.BootModel.yml\" sourcestartlinenumber=\"1\">BootシーンのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1018,7 +1418,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.BootPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.BootPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.BootPresenter.yml\" sourcestartlinenumber=\"1\">ブート画面のPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1028,7 +1432,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.CoordinateUtil.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.CoordinateUtil",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1038,7 +1446,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMaterialModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMaterialModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionMaterialModel.yml\" sourcestartlinenumber=\"1\">建物検出画面のマテリアルのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1048,7 +1460,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMenuElementModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMenuElementModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionMenuElementModel.yml\" sourcestartlinenumber=\"1\">検出画面のメニューの要素のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1058,7 +1474,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMenuElementView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMenuElementView",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1068,7 +1488,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMenuModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMenuModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1078,7 +1502,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMenuPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMenuPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionMenuPresenter.yml\" sourcestartlinenumber=\"1\">建物検出画面のメニューのPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1088,7 +1516,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMenuView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMenuView",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1098,7 +1530,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshCullingModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMeshCullingModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionMeshCullingModel.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのCullingのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1108,7 +1544,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMeshPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionMeshPresenter.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのPresenter(エディタ)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1118,7 +1558,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionMeshType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionMeshType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionMeshType.yml\" sourcestartlinenumber=\"1\">建物の検出のメッシュの種類</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1128,7 +1572,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionSettingModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionSettingModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1138,7 +1586,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionSimpleMeshPresenter.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュ(簡易版)のPresenter(エディタ)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1148,7 +1600,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionTouchModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionTouchModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DetectionTouchModel.yml\" sourcestartlinenumber=\"1\">建物検出画面の画面タップ関連のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1158,7 +1614,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DetectionTouchView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DetectionTouchView",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1168,7 +1628,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.DialogIconDefine.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.DialogIconDefine",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.DialogIconDefine.yml\" sourcestartlinenumber=\"1\">ダイアログアイコンの定義</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1178,7 +1642,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionLifetimeScope.yml\" sourcestartlinenumber=\"1\">建物検出画面のみが影響範囲のLifetimeScope(エディタ用)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1188,7 +1656,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionMeshModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionMeshModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionMeshModel.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのModel(エディタ)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1198,7 +1670,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionMeshView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionMeshView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionMeshView.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのView(エディタ用)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1208,7 +1684,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionModel.yml\" sourcestartlinenumber=\"1\">建物検出シーンのModel(Editor)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1218,7 +1698,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionParameterView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionParameterView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionParameterView.yml\" sourcestartlinenumber=\"1\">建物検出画面のパラメータのView(エディタ用)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1228,7 +1712,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionPresenter.yml\" sourcestartlinenumber=\"1\">建物検出画面のPresenter(エディタ)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1238,7 +1726,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorDetectionView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorDetectionView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EditorDetectionView.yml\" sourcestartlinenumber=\"1\">建物検出画面のView(エディタ用)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1248,7 +1740,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EditorWebCameraModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EditorWebCameraModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1258,7 +1754,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EnvironmentScriptableObject.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EnvironmentScriptableObject",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EnvironmentScriptableObject.yml\" sourcestartlinenumber=\"1\">環境設定のScriptableObject</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1268,7 +1768,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.EnvironmentType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.EnvironmentType",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.EnvironmentType.yml\" sourcestartlinenumber=\"1\">環境の種類</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1278,7 +1782,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GeospatialDebugPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GeospatialDebugPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GeospatialDebugPresenter.yml\" sourcestartlinenumber=\"1\">Geospatialのデバッグ用Presenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1288,7 +1796,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GeospatialDebugView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GeospatialDebugView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GeospatialDebugView.yml\" sourcestartlinenumber=\"1\">Geospatialのデバッグ用View</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1298,7 +1810,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GeospatialMainLoopPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GeospatialMainLoopPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GeospatialMainLoopPresenter.yml\" sourcestartlinenumber=\"1\">GeospatialのメインループのPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1308,7 +1824,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GuideLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GuideLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GuideLifetimeScope.yml\" sourcestartlinenumber=\"1\">利用ガイド画面のみが影響範囲のLifetimeScope</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1318,7 +1838,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GuideModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GuideModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GuideModel.yml\" sourcestartlinenumber=\"1\">利用ガイドシーンのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1328,7 +1852,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GuidePresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GuidePresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GuidePresenter.yml\" sourcestartlinenumber=\"1\">利用ガイド画面のPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1338,7 +1866,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.GuideView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.GuideView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.GuideView.yml\" sourcestartlinenumber=\"1\">利用ガイド画面のView</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1348,7 +1880,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IAPIModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IAPIModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.IAPIModel.yml\" sourcestartlinenumber=\"1\">APIのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1358,7 +1894,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IApiConfigurationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IApiConfigurationModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1368,7 +1908,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IApiKeyModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IApiKeyModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1378,7 +1922,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IEditorDetectionParameterModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IEditorDetectionParameterModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.IEditorDetectionParameterModel.yml\" sourcestartlinenumber=\"1\">建物検出画面のパラメータのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1388,7 +1936,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IEndPointModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IEndPointModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.IEndPointModel.yml\" sourcestartlinenumber=\"1\">エンドポイントのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1398,7 +1950,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IEnvironmentModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IEnvironmentModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.IEnvironmentModel.yml\" sourcestartlinenumber=\"1\">環境のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1408,7 +1964,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IMobileDetectionMeshView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IMobileDetectionMeshView",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1418,7 +1978,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IServerModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IServerModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.IServerModel.yml\" sourcestartlinenumber=\"1\">サーバーのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1428,7 +1992,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.IValidationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.IValidationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.IValidationModel.yml\" sourcestartlinenumber=\"1\">撮影判定画面のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1438,7 +2006,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ImageRepository.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ImageRepository",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ImageRepository.yml\" sourcestartlinenumber=\"1\">撮影した建物面の画像を登録するリポジトリ</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1448,7 +2020,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.LatLonTests.LatLonData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.LatLonTests.LatLonData",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1458,7 +2034,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.LatLonTests.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.LatLonTests",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1468,7 +2048,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.LocalizationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.LocalizationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.LocalizationModel.yml\" sourcestartlinenumber=\"1\">テキストのLocalizationのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1478,7 +2062,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MainLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MainLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MainLifetimeScope.yml\" sourcestartlinenumber=\"1\">メイン画面のみが影響範囲のLifetimeScope</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1488,7 +2076,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MainModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MainModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MainModel.yml\" sourcestartlinenumber=\"1\">メインシーンのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1498,7 +2090,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MainPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MainPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MainPresenter.yml\" sourcestartlinenumber=\"1\">メイン画面のPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1508,7 +2104,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MainView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MainView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MainView.yml\" sourcestartlinenumber=\"1\">メイン画面のView</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1518,7 +2118,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MeshRepository.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MeshRepository",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MeshRepository.yml\" sourcestartlinenumber=\"1\">メッシュ情報を管理するリポジトリ\n検出されたメッシュや選択されたメッシュの情報を管理する</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1528,7 +2132,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileARCameraModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileARCameraModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1538,7 +2146,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileDetectionLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MobileDetectionLifetimeScope.yml\" sourcestartlinenumber=\"1\">建物検出画面のみが影響範囲のLifetimeScope(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1548,7 +2160,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionMeshModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileDetectionMeshModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MobileDetectionMeshModel.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのModel(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1558,7 +2174,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionMeshView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileDetectionMeshView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MobileDetectionMeshView.yml\" sourcestartlinenumber=\"1\">建物検出画面のメッシュのView(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1568,7 +2188,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileDetectionModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MobileDetectionModel.yml\" sourcestartlinenumber=\"1\">建物検出シーンのModel(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1578,7 +2202,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileDetectionPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MobileDetectionPresenter.yml\" sourcestartlinenumber=\"1\">建物検出画面のPresenter(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1588,7 +2216,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MobileDetectionView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MobileDetectionView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MobileDetectionView.yml\" sourcestartlinenumber=\"1\">建物検出画面のView(携帯端末)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1598,7 +2230,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockAPIModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockAPIModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MockAPIModel.yml\" sourcestartlinenumber=\"1\">APIモデル(モック)\nMockServerと一緒に使用する</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1608,7 +2244,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockEndPointModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockEndPointModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MockEndPointModel.yml\" sourcestartlinenumber=\"1\">エンドポイントのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1618,7 +2258,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockJsonParser.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockJsonParser",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1628,7 +2272,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockServerLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockServerLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MockServerLifetimeScope.yml\" sourcestartlinenumber=\"1\">Mockサーバーのみを動作させるためのLifetimeScope</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1638,7 +2286,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockServerModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockServerModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MockServerModel.yml\" sourcestartlinenumber=\"1\">モックサーバーのModel\nMac/PCでローカルサーバーを立てて画像送信の動作検証をするためのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1648,7 +2300,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockSurface.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockSurface",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1658,7 +2314,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockSurfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockSurfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1668,7 +2328,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockValidationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockValidationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MockValidationModel.yml\" sourcestartlinenumber=\"1\">撮影判定画面のModel(Mock)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1678,7 +2342,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.MockValidationResultModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.MockValidationResultModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.MockValidationResultModel.yml\" sourcestartlinenumber=\"1\">検証結果のモックのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1688,7 +2356,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.PlatformModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.PlatformModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1698,7 +2370,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ResidentView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ResidentView",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ResidentView.yml\" sourcestartlinenumber=\"1\">常駐するView</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1708,7 +2384,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.RootLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.RootLifetimeScope",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.RootLifetimeScope.yml\" sourcestartlinenumber=\"1\">シーンをまたいで共有できるLifeTimeScope</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1718,7 +2398,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.SceneModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.SceneModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.SceneModel.yml\" sourcestartlinenumber=\"1\">シーンのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1728,7 +2412,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.SceneNameDefine.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.SceneNameDefine",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.SceneNameDefine.yml\" sourcestartlinenumber=\"1\">シーン名の定義</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1738,7 +2426,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ScreenModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ScreenModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ScreenModel.yml\" sourcestartlinenumber=\"1\">Screen関連のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1748,7 +2440,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ScreenTouchModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ScreenTouchModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ScreenTouchModel.yml\" sourcestartlinenumber=\"1\">画面タッチのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1758,7 +2454,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ServerModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ServerModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ServerModel.yml\" sourcestartlinenumber=\"1\">サーバーのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1768,7 +2468,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ServerStatusCode.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ServerStatusCode",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ServerStatusCode.yml\" sourcestartlinenumber=\"1\">サーバーからのレスポンスのステータスコード</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1778,7 +2482,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.SurfaceRepository.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.SurfaceRepository",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.SurfaceRepository.yml\" sourcestartlinenumber=\"1\">現在の位置で撮影可能な面の情報を取得するリポジトリ</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1788,7 +2496,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.TMPModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.TMPModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.TMPModel.yml\" sourcestartlinenumber=\"1\">TextMeshProのハンドラ</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1798,7 +2510,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.TextureRepository.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.TextureRepository",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.TextureRepository.yml\" sourcestartlinenumber=\"1\">テクスチャの情報を取得するリポジトリ\nテクスチャをシーンをまたいで共有するために使用</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1808,7 +2524,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationDialogIconSprite.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationDialogIconSprite",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1818,7 +2538,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationDialogModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationDialogModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationDialogModel.yml\" sourcestartlinenumber=\"1\">判定ダイアログのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1828,7 +2552,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationDialogParameter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationDialogParameter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationDialogParameter.yml\" sourcestartlinenumber=\"1\">判定ダイアログのパラメータ</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1838,7 +2566,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationDialogPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationDialogPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationDialogPresenter.yml\" sourcestartlinenumber=\"1\">検証ダイアログのPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1848,7 +2580,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationDialogView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationDialogView",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1858,7 +2594,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationLifetimeScope.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationLifetimeScope",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1868,7 +2608,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationModel.yml\" sourcestartlinenumber=\"1\">撮影判定画面のModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1878,7 +2622,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationParameterModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationParameterModel",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationParameterModel.yml\" sourcestartlinenumber=\"1\">検証するパラメータのModel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1888,7 +2636,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationPresenter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationPresenter",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationPresenter.yml\" sourcestartlinenumber=\"1\">建物検証画面のPresenter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1898,7 +2650,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationRepository.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationRepository",
+      "Summary": "<p sourcefile=\"api/Synesthesias.Snap.Sample.ValidationRepository.yml\" sourcestartlinenumber=\"1\">検証シーンに情報を受け渡すためのリポジトリ\nパラメータをシーンをまたいで共有するために使用</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1908,7 +2664,11 @@
           "relative_path": "api/Synesthesias.Snap.Sample.ValidationView.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample.ValidationView",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1918,17 +2678,21 @@
           "relative_path": "api/Synesthesias.Snap.Sample.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Synesthesias.Snap.Sample",
+      "Summary": null
     },
     {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -1957,11 +2721,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/toc.html"
-        },
         ".json": {
           "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
         }
       },
       "version": ""
@@ -1980,11 +2744,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

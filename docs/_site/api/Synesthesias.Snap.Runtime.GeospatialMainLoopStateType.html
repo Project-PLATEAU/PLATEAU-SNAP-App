@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -54,7 +54,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -77,7 +77,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -125,82 +125,108 @@ Enum GeospatialMainLoopStateType  <a class="header-action link-secondary" title=
 </h2>
   <dl class="parameters">
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionAvailabilityCheckInProgress"><code>ARSessionAvailabilityCheckInProgress = 9</code></dt>
-    <dd><p>ARセッションのAvailabilityチェック中</p>
+  
+  <dd><p>ARセッションのAvailabilityチェック中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionAvailabilitySupportedAndReady"><code>ARSessionAvailabilitySupportedAndReady = 11</code></dt>
-    <dd><p>ARセッションがデバイスでサポートされていて準備完了</p>
+  
+  <dd><p>ARセッションがデバイスでサポートされていて準備完了</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionAvailabilityUnsupported"><code>ARSessionAvailabilityUnsupported = 10</code></dt>
-    <dd><p>ARセッションがデバイスでサポートされていない</p>
+  
+  <dd><p>ARセッションがデバイスでサポートされていない</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionError"><code>ARSessionError = 20</code></dt>
-    <dd><p>ARCoreのセッションエラー</p>
+  
+  <dd><p>ARCoreのセッションエラー</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionInitializing"><code>ARSessionInitializing = 17</code></dt>
-    <dd><p>セッションの初期化中</p>
+  
+  <dd><p>セッションの初期化中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionInstalling"><code>ARSessionInstalling = 15</code></dt>
-    <dd><p>ARセッションのインストール中</p>
+  
+  <dd><p>ARセッションのインストール中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionPreparing"><code>ARSessionPreparing = 19</code></dt>
-    <dd><p>セッションの準備中</p>
+  
+  <dd><p>セッションの準備中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionReady"><code>ARSessionReady = 16</code></dt>
-    <dd><p>セッションの準備完了</p>
+  
+  <dd><p>セッションの準備完了</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionResetFailed"><code>ARSessionResetFailed = 4</code></dt>
-    <dd><p>ARセッションのリセット失敗</p>
+  
+  <dd><p>ARセッションのリセット失敗</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionResetting"><code>ARSessionResetting = 3</code></dt>
-    <dd><p>ARセッションのリセット中</p>
+  
+  <dd><p>ARセッションのリセット中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_ARSessionTracking"><code>ARSessionTracking = 18</code></dt>
-    <dd><p>セッションのトラッキング中</p>
+  
+  <dd><p>セッションのトラッキング中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_Disabled"><code>Disabled = 2</code></dt>
-    <dd><p>無効化</p>
+  
+  <dd><p>無効化</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_EarthNotReady"><code>EarthNotReady = 23</code></dt>
-    <dd><p>Earthが準備されていない</p>
+  
+  <dd><p>Earthが準備されていない</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_Enabled"><code>Enabled = 1</code></dt>
-    <dd><p>有効化</p>
+  
+  <dd><p>有効化</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_Error"><code>Error = 24</code></dt>
-    <dd><p>エラー</p>
+  
+  <dd><p>エラー</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_GeospatialEnabling"><code>GeospatialEnabling = 22</code></dt>
-    <dd><p>Geospatialの有効化中</p>
+  
+  <dd><p>Geospatialの有効化中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_LocationServiceDisabledByUser"><code>LocationServiceDisabledByUser = 5</code></dt>
-    <dd><p>位置サービスがユーザーによって無効化されている</p>
+  
+  <dd><p>位置サービスがユーザーによって無効化されている</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_LocationServiceFailed"><code>LocationServiceFailed = 7</code></dt>
-    <dd><p>位置サービスの初期化失敗</p>
+  
+  <dd><p>位置サービスの初期化失敗</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_LocationServiceInitializing"><code>LocationServiceInitializing = 6</code></dt>
-    <dd><p>位置サービスの初期化中</p>
+  
+  <dd><p>位置サービスの初期化中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_LocationServiceRunning"><code>LocationServiceRunning = 8</code></dt>
-    <dd><p>位置サービスが実行中</p>
+  
+  <dd><p>位置サービスが実行中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_None"><code>None = 0</code></dt>
-    <dd><p>なし</p>
+  
+  <dd><p>なし</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_NotSupported"><code>NotSupported = 21</code></dt>
-    <dd><p>デバイスがサポートされていない</p>
+  
+  <dd><p>デバイスがサポートされていない</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_Ready"><code>Ready = 25</code></dt>
-    <dd><p>準備完了</p>
+  
+  <dd><p>準備完了</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_VpsAvailabilityChecking"><code>VpsAvailabilityChecking = 12</code></dt>
-    <dd><p>VPSのAvailabilityチェック中</p>
+  
+  <dd><p>VPSのAvailabilityチェック中</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_VpsAvailable"><code>VpsAvailable = 14</code></dt>
-    <dd><p>VPSが利用できる</p>
+  
+  <dd><p>VPSが利用できる</p>
 </dd>
     <dt id="Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_VpsNotAvailable"><code>VpsNotAvailable = 13</code></dt>
-    <dd><p>VPSが利用できない</p>
+  
+  <dd><p>VPSが利用できない</p>
 </dd>
   </dl>
 
