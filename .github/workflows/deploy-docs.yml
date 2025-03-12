@@ -51,6 +51,11 @@ jobs:
       - name: docs の内容を削除
         run: rm -rf docs
 
+      - name: ユーザー情報を設定
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: 変更をコミット
         run: |
           git add --all
