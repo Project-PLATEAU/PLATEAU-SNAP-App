@@ -45,9 +45,6 @@ jobs:
           git switch --orphan gh-pages
           git reset --hard
 
-      - name: mainブランチのdocs/_siteをチェックアウト
-        run: git checkout main -- docs/_site
-
       - name: docs/_site の内容をコピー
         run: cp -r docs/_site/* .
 
