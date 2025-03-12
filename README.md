@@ -12,8 +12,7 @@ TODO: 追記予定
 
 ## 3. 利用手順
 
-- GitHub Pagesからご確認ください
-  - https://synesthesias.github.io/PLATEAU-SNAP-App
+[ドキュメント](https://synesthesias.github.io/PLATEAU-SNAP-App)ページから各種利用手順をご確認ください。
 
 ## 4. システム概要
 
@@ -84,4 +83,4 @@ TODO: 追記予定
 
 ## 10. 参考資料
 
-- [Wiki](https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki)
+- [ドキュメント](https://synesthesias.github.io/PLATEAU-SNAP-App)
