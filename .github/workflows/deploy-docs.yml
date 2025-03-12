@@ -49,17 +49,18 @@ jobs:
             exit 0
           fi
 
-          git commit -m "自動更新: ドキュメント"
+          git commit -m "docs: [ドキュメント自動更新]"
           git push origin main
 
       - name: 「gh-pages」に「docs/_site」の内容をデプロイ
         run: |
-          git checkout --orphan gh-pages-temp
+          git switch --orphan gh-pages
           git rm -rf .
-          cp -r docs/_site/* .
-          git add .
-          git commit -m "docs: GitHub Pages[自動更新]"
-          git push --force origin gh-pages-temp:gh-pages
+          git checkout main -- docs/_site
+          mv docs/_site/* .
+          rm -rf docs
+          git commit -m "docs: [GitHub Pages自動更新]"
+          git push --force origin gh-pages
           git checkout main
 
       - name: アーティファクトをアップロード
