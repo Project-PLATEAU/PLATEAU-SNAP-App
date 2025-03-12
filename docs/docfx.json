@@ -47,6 +47,7 @@
     "globalMetadata": {
       "_appName": "Synesthesias PLATEAU SNAP ドキュメント",
       "_appTitle": "Synesthesias PLATEAU SNAP ドキュメント",
+      "_appFaviconPath": "images/logo.svg",
       "_appLogoPath": "images/logo.svg",
       "_enableSearch": true,
       "pdf": true
