@@ -24,6 +24,12 @@
         "exclude": [
           "_site/**"
         ]
+      },
+      {
+        "files": [
+          "manual/**/*.md"
+        ],
+        "dest": "manual"
       }
     ],
     "resource": [
@@ -39,8 +45,9 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "Synesthesias.Snap API Document",
-      "_appTitle": "Synesthesias.Snap API Document",
+      "_appName": "Synesthesias PLATEAU SNAP ドキュメント",
+      "_appTitle": "Synesthesias PLATEAU SNAP ドキュメント",
+      "_appLogoPath": "images/logo.svg",
       "_enableSearch": true,
       "pdf": true
     }

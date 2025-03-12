@@ -36,6 +36,9 @@ jobs:
       - name: DocFX をインストール
         run: dotnet tool update -g docfx
 
+      - name: _siteを削除
+        run: rm -rf docs/_site
+
       - name: ドキュメントをビルド
         run: docfx docs/docfx.json
 
