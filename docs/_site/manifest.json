@@ -2698,44 +2698,74 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "docs/getting-started.md",
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/manual/index.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/manual/index.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Redirection",
+      "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "docs/getting-started.html"
+          "relative_path": "index.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/introduction.md",
+      "source_relative_path": "manual/contributer/index.md",
       "output": {
         ".html": {
-          "relative_path": "docs/introduction.html"
+          "relative_path": "manual/contributer/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/developer/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/developer/index.html"
         }
       },
       "version": ""
     },
     {
       "type": "Toc",
-      "source_relative_path": "docs/toc.yml",
+      "source_relative_path": "manual/toc.yml",
       "output": {
         ".json": {
-          "relative_path": "docs/toc.json"
+          "relative_path": "manual/toc.json"
         },
         ".html": {
-          "relative_path": "docs/toc.html"
+          "relative_path": "manual/toc.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "index.md",
+      "source_relative_path": "manual/user/index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html"
+          "relative_path": "manual/user/index.html"
         }
       },
       "version": ""

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>3). コントリビューター(Contributer)向け情報 | Synesthesias PLATEAU SNAP ドキュメント </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="3). コントリビューター(Contributer)向け情報 | Synesthesias PLATEAU SNAP ドキュメント ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/docs/manual/contributer/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.svg" alt="Synesthesias PLATEAU SNAP ドキュメント">
+            Synesthesias PLATEAU SNAP ドキュメント
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="3-コントリビューターcontributer向け情報">3). コントリビューター(Contributer)向け情報</h1>
+
+<ul>
+<li>本アプリのコントリビューター(Contributer)向け情報です</li>
+<li>本リポジトリに対して実際にコミットやプルリクエストを作成する方はこちらのページのご確認をお願いいたします</li>
+<li><a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki">Wiki</a>の「開発者向け情報」も合わせてご確認ください</li>
+</ul>
+<h2 id="3-1-開発環境">3-1). 開発環境</h2>
+<ul>
+<li>本アプリはiOSを含むモバイルデバイスがサポート対象です</li>
+<li>上記のため本ページはMacユーザーの開発者をベースとした情報が前提となっております</li>
+<li>UnityはWindowsでも開発が可能なためコマンド等はWindows版に置き換えて読み進めて下さい</li>
+</ul>
+<h2 id="3-2-サンプルを更新する場合の注意点">3-2). サンプルを更新する場合の注意点</h2>
+<p>Unityパッケージの仕様により、サンプルファイルは Samples~ ディレクトリ(隠しディレクトリ)に配置されています。この仕様は <a href="https://docs.unity3d.com/ja/2022.3/Manual/cus-samples.html">Unity公式ドキュメント</a>に従ったもので、Samples ディレクトリにリネームする代わりに、シンボリックリンクを活用して開発の効率化を図っています。</p>
+<h3 id="windowsユーザー向けシンボリックリンクの設定手順">Windowsユーザー向けシンボリックリンクの設定手順</h3>
+<p>Windowsユーザーの方はリポジトリ内で以下のコマンドを実行し、シンボリックリンクを有効化してください。</p>
+<pre><code class="lang-bash">git config core.symlinks true
+</code></pre>
+<p>Macユーザーは特別な対応は不要です。</p>
+<h2 id="3-3-クライアントのapiドキュメントの作成方法追加対応不要">3-3). クライアントのAPIドキュメントの作成方法(追加対応不要)</h2>
+<ul>
+<li>既に初期設定は行なっているため追加対応は不要です</li>
+<li>以下の手順で各種設定ファイルは作成しています</li>
+</ul>
+<pre><code class="lang-bash">// .NETのインストール
+brew install dotnet
+
+// リポジトリのルートディレクトリへ移動
+cd path/to/PLATEAU-SNAP-App
+
+// .NET環境を作成(.config/dotnet-tools.jsonが作成される)
+dotnet new tool-manifest
+
+// .NET経由でDocFxを導入(dotnet-tools.jsonにdocfxが追記される)
+dotnet tool install docfx
+
+// DocFxのバージョンを調整(下記参照)
+vi .config/dotnet-tools.json
+
+// バージョンを変更したので.NET環境を復元
+dotnet tool restore
+
+// DocFxの初期化(質問に順番に答えるとdocsディレクトリが生成される)
+dotnet docfx init -o docs
+
+// APIドキュメントに含めるcsprojファイルを指定(下記参照)
+vi docs/docfx.json
+</code></pre>
+<h3 id="docfxのバージョンについて">DocFxのバージョンについて</h3>
+<p>最新のバージョンだとAPIドキュメント生成時にエラーになってしまうためバージョン <code>2.78.2</code> から <code>2.75.3</code> にダウングレードしています。</p>
+<h3 id="docfxの初期化時の質問項目追加対応不要">DocFxの初期化時の質問項目(追加対応不要)</h3>
+<pre><code class="lang-bash">// サイトの名称
+Name (mysite): Synesthesias.Snap API Document
+
+// APIドキュメントを作成するかどうか
+Generate .NET API documentation? [y/n] (y): ※そのままエンターキーを押す
+
+// Unityプロジェクトディレクトリを指定(csprojファイルのパス)
+.NET projects location (src): ./SnapForUnity
+
+// ドキュメントのディレクトリ
+Markdown docs location (docs): ※そのままエンターキーを押す
+
+// 検索バーが表示するかどうか
+Enable site search? [y/n] (y): ※そのままエンターキーを押す
+
+// PDFのダウンロードリンクを表示するかどうか
+Enable PDF? [y/n] (y): ※そのままエンターキーを押す
+
+// 設定の最終確認
+Is this OK? [y/n] (y): ※そのままエンターキーを押す
+</code></pre>
+<h3 id="apiドキュメントに含めるcsprojを指定">APIドキュメントに含めるcsprojを指定</h3>
+<blockquote>
+<p>docs/<a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/docs/docfx.json">docfx.json</a></p>
+</blockquote>
+<pre><code class="lang-diff">{
+  &quot;$schema&quot;: &quot;https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json&quot;,
+  &quot;metadata&quot;: [
+    {
+      &quot;src&quot;: [
+        {
+          &quot;src&quot;: &quot;.././SnapForUnity&quot;,
+          &quot;files&quot;: [
+-           &quot;**/*.csproj&quot;
++           &quot;Synesthesias.Snap.Generated.Sample.csproj&quot;,
++           &quot;Synesthesias.Snap.csproj&quot;,
++           &quot;Synesthesias.Snap.Sample.csproj&quot;
+          ]
+        }
+      ],
+      &quot;dest&quot;: &quot;api&quot;
++     &quot;allowCompilationErrors&quot;: true
+    }
+  ]
+}
+</code></pre>
+<h2 id="3-4-クライアントのapiドキュメントの更新方法">3-4). クライアントのAPIドキュメントの更新方法</h2>
+<p>APIドキュメントは <code>*.csproj</code> ファイルを元に生成されます。</p>
+<p>Unityで該当のUnityプロジェクトを開き直したり、ソースコードを任意のIDEで開きます。</p>
+<p>Unityプロジェクトのディレクトリ直下に <code>*.csproj</code> ファイルが生成されていることを確認します。</p>
+<pre><code class="lang-bash">// .NETのインストール
+brew install dotnet
+
+// リポジトリのルートディレクトリへ移動
+cd path/to/PLATEAU-SNAP-App
+
+// .NET環境を復元
+dotnet tool restore
+
+// 既存ファイルを削除
+rm -rf docs/_site docs/api docs/docs
+
+// ymlファイル作成
+dotnet docfx metadata docs/docfx.json
+
+// htmlファイル作成
+dotnet docfx build docs/docfx.json
+
+// ホスティングとpdfドキュメント生成(前述のコマンドをスキップしてこちらを直接実行してもymlとhtmlファイルは作成されます)
+dotnet docfx docs/docfx.json --serve --port &lt;ポート番号&gt;
+</code></pre>
+<h2 id="3-5-サンプルのapi通信用のクライアントコードの更新方法">3-5). サンプルのAPI通信用のクライアントコードの更新方法</h2>
+<ul>
+<li><a href="https://github.com/Synesthesias/PLATEAU-SNAP-Server">サーバー側</a>のAPIが更新されたら <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/OpenAPI/spec.json">spec.json</a> を更新してください</li>
+<li>以下の手順を参考にOpenAPIのGeneratorでGenerated.Clientディレクトリ配下のソースコードを更新します</li>
+</ul>
+<pre><code class="lang-bash">// openapi-generatorのインストール
+brew install openapi-generator
+
+// OpenAPIのディレクトリへ移動
+cd path/to/OpenAPI
+
+// 既存の生成コードの削除
+rm -rf ./Generated.Client/
+
+// コードを生成
+openapi-generator generate -i spec.json -g csharp -c config_client.json -o ./Generated.Client
+</code></pre>
+<h3 id="readmemdで依存パッケージの確認">README.mdで依存パッケージの確認</h3>
+<ul>
+<li>コードが生成できたら <code>Generated.Client</code> ディレクトリの中にある README.md の Dependencies セクションを確認してパッケージの依存を確認します</li>
+</ul>
+<pre><code class="lang-markdown">## Dependencies
+
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 13.0.2 or later
+- [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 5.0.0 or later
+</code></pre>
+<p>README.mdからは以下の2つのパッケージのバージョンの依存があることが判明</p>
+<ul>
+<li>Json.NET (Newtonsoft.Json)
+<ul>
+<li>13.0.2以降</li>
+</ul>
+</li>
+<li>System.ComponentModel.Annotations
+<ul>
+<li>5.0.0以降</li>
+</ul>
+</li>
+</ul>
+<p>実際は、<code>using Polly</code> の箇所でコンパイルエラーになるため <code>Polly</code> のパッケージ名とバージョンを後述の手順で確認します</p>
+<h3 id="openupm-cliでパッケージ名と提供バージョンを確認する">openupm-cliでパッケージ名と提供バージョンを確認する</h3>
+<ul>
+<li>例えば <code>Polly</code> のパッケージ名とバージョンを確認は以下のような流れで行います</li>
+</ul>
+<pre><code class="lang-bash">// npxをインストールする
+brew install npx
+
+// 検索でパッケージ名を確認する
+// (初回の場合はyでopenupm-cliコマンドをインストールする)
+npx openupm-cli search Polly
+
+// パッケージのバージョン一覧を調べる
+npx openupm-cli info org.nuget.polly
+</code></pre>
+<ul>
+<li><code>npx openupm-cli search Polly</code> を実行するとパッケージ名は <code>org.nuget.polly</code> であることが判明します</li>
+<li><code>npx openupm-cli info org.nuget.polly</code> を実行すると <code>org.nuget.polly</code> の最新バージョンが <code>8.5.2</code> であることが判明します</li>
+</ul>
+<h3 id="manifestjsonに依存パッケージを記載する">manifest.jsonに依存パッケージを記載する</h3>
+<ul>
+<li><p>自動生成される <code>packages-lock.json</code> 側に依存パッケージが既に導入されているか確認します</p>
+</li>
+<li><p>packages-lock.jsonに記載がないことが確認できたら <code>manifest.json</code> に各種依存パッケージを記載します</p>
+</li>
+<li><p>例: Pollyの場合</p>
+</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;org.nuget.polly&quot;: &quot;8.5.2&quot;
+  }
+}
+</code></pre>
+<h3 id="packages-lockjsonを確認する">packages-lock.jsonを確認する</h3>
+<ul>
+<li>自動生成される <code>packages-lock.json</code> 側に依存パッケージが導入されているか確認します</li>
+<li>今回の場合、 <code>org.nuget.polly</code> を導入したことにより前述のREADME.mdのDependenciesに記載があった <code>Annotation</code> が <code>packages-lock.json</code> に自動的に追記されていることが分かります</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;org.nuget.polly&quot;: {
+      &quot;version&quot;: &quot;8.5.2&quot;,
+      &quot;depth&quot;: 0,
+      &quot;source&quot;: &quot;registry&quot;,
+      &quot;dependencies&quot;: {
+        &quot;org.nuget.polly.core&quot;: &quot;8.5.2&quot;
+      },
+      &quot;url&quot;: &quot;https://package.openupm.com&quot;
+    },
+    &quot;org.nuget.polly.core&quot;: {
+      &quot;version&quot;: &quot;8.5.2&quot;,
+      &quot;depth&quot;: 1,
+      &quot;source&quot;: &quot;registry&quot;,
+      &quot;dependencies&quot;: {
+        &quot;org.nuget.microsoft.bcl.asyncinterfaces&quot;: &quot;6.0.0&quot;,
+        &quot;org.nuget.microsoft.bcl.timeprovider&quot;: &quot;8.0.0&quot;,
+        &quot;org.nuget.system.componentmodel.annotations&quot;: &quot;4.5.0&quot;,
+        &quot;org.nuget.system.threading.tasks.extensions&quot;: &quot;4.5.4&quot;
+      },
+      &quot;url&quot;: &quot;https://package.openupm.com&quot;
+    }
+  }
+}
+</code></pre>
+<h2 id="3-6-プルリクエストの作成手順">3-6). プルリクエストの作成手順</h2>
+<ul>
+<li>Githubのリポジトリの画面上部から <code>Pull requests</code> タブを選択します</li>
+<li>pushしたブランチの <code>Compare &amp; Pull request</code> または <code>New pull request</code> からブランチを選択してから <code>Create pull request</code> を選択してください</li>
+</ul>
+<h3 id="機能実装のプルリクエストの場合">機能実装のプルリクエストの場合</h3>
+<ul>
+<li>表示されたテンプレートをそのまま使ってください</li>
+<li>(またはURLの末尾に <code>?template=feature_template.md</code> を追記してください)</li>
+<li>テンプレートを更新する場合は<a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/.github/pull_request_template.md">こちら</a>のファイルを更新して下さい</li>
+</ul>
+<h3 id="不具合修正のプルリクエストの場合">不具合修正のプルリクエストの場合</h3>
+<ul>
+<li>URLの末尾に <code>?template=fix_template.md</code> を追記してください</li>
+<li>テンプレートを更新する場合は<a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/.github/PULL_REQUEST_TEMPLATE/fix_template.md">こちら</a>のファイルを更新して下さい</li>
+</ul>
+<h3 id="その他のプルリクエストの場合">その他のプルリクエストの場合</h3>
+<ul>
+<li>テンプレートは作成していないです</li>
+<li>必要に応じて<a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/tree/main/.github/PULL_REQUEST_TEMPLATE">PULL_REQUEST_TEMPLATE</a>ディレクトリ配下に追加してください</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/docs/manual/contributer/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
