@@ -1,5 +1,7 @@
 # PLATEAU-SNAP-App
 
+<img src="docs/images/manual/index.png" width="300">
+
 ## 1. 概要
 
 デジタルツインの実現に向けたクラウドソーシング型3D都市モデル作成システム(PLATEAU SNAP)のモバイルアプリケーションです。
