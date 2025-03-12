@@ -33,7 +33,8 @@ jobs:
         with:
           dotnet-version: 8.x
 
-      - run: dotnet tool update -g docfx
+      - name: DocFX をインストール
+        run: dotnet tool update -g docfx
 
       - name: ドキュメントをビルド
         run: docfx docs/docfx.json
@@ -52,17 +53,28 @@ jobs:
           git commit -m "docs: [ドキュメント自動更新]"
           git push origin main
 
-      - name: 「gh-pages」に「docs/_site」の内容をデプロイ
+      - name: gh-pages ブランチを作成 or リセット
         run: |
-          git fetch origin gh-pages || echo "gh-pagesブランチが見つかりませんでした"
+          git fetch origin gh-pages || echo "gh-pages does not exist yet"
           git switch --orphan gh-pages
           git reset --hard
-          git checkout main -- docs/_site
-          mv docs/_site/* .
-          rm -rf docs
+
+      - name: 既存のファイルを削除
+        run: git rm -rf .
+
+      - name: docs/_site の内容をコピー
+        run: cp -r docs/_site/* .
+
+      - name: 変更をコミット
+        run: |
+          git add --all
           git commit -m "docs: [GitHub Pages自動更新]"
-          git push --force origin gh-pages
-          git checkout main
+
+      - name: gh-pages に強制プッシュ
+        run: git push --force origin gh-pages
+
+      - name: main ブランチに戻る
+        run: git switch main
 
       - name: アーティファクトをアップロード
         uses: actions/upload-pages-artifact@v3
