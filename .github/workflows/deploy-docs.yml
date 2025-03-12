@@ -52,7 +52,7 @@ jobs:
           git commit -m "自動更新: ドキュメント"
           git push origin main
 
-      - name: `gh-pages` に `docs/_site` の内容をデプロイ
+      - name: 「gh-pages」に「docs/_site」の内容をデプロイ
         run: |
           git checkout --orphan gh-pages-temp
           git rm -rf .
