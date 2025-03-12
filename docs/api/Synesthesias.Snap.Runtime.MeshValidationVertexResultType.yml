@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  id: MeshValidationVertexResultType
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Invalid
+  - Synesthesias.Snap.Runtime.MeshValidationVertexResultType.None
+  - Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Valid
+  langs:
+  - csharp
+  - vb
+  name: MeshValidationVertexResultType
+  nameWithType: MeshValidationVertexResultType
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MeshValidationVertexResultType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メッシュの頂点の検証結果の種類
+  example: []
+  syntax:
+    content: public enum MeshValidationVertexResultType
+    content.vb: Public Enum MeshValidationVertexResultType
+  extensionMethods:
+  - Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.None
+  commentId: F:Synesthesias.Snap.Runtime.MeshValidationVertexResultType.None
+  id: None
+  parent: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MeshValidationVertexResultType.None
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.None
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: None
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: なし
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Invalid
+  commentId: F:Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Invalid
+  id: Invalid
+  parent: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  langs:
+  - csharp
+  - vb
+  name: Invalid
+  nameWithType: MeshValidationVertexResultType.Invalid
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Invalid
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Invalid
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+    startLine: 16
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: >-
+    無効な頂点
+
+    頂点がカメラの画角外にある
+  example: []
+  syntax:
+    content: Invalid = 1
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Valid
+  commentId: F:Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Valid
+  id: Valid
+  parent: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  langs:
+  - csharp
+  - vb
+  name: Valid
+  nameWithType: MeshValidationVertexResultType.Valid
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Valid
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Valid
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/Vertex/MeshValidationVertexResultType.cs
+    startLine: 22
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: >-
+    有効な頂点
+
+    全ての頂点がカメラの画角内にある
+  example: []
+  syntax:
+    content: Valid = 2
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage
+  commentId: M:Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  parent: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions
+  definition: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html#Synesthesias_Snap_Runtime_MeshValidationVertexResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
+  name: ToMessage(MeshValidationVertexResultType)
+  nameWithType: MeshValidationVertexResultTypeExtensions.ToMessage(MeshValidationVertexResultType)
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html#Synesthesias_Snap_Runtime_MeshValidationVertexResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+    name: MeshValidationVertexResultType
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html#Synesthesias_Snap_Runtime_MeshValidationVertexResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+    name: MeshValidationVertexResultType
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html
+  - name: )
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  commentId: M:Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html#Synesthesias_Snap_Runtime_MeshValidationVertexResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
+  name: ToMessage(MeshValidationVertexResultType)
+  nameWithType: MeshValidationVertexResultTypeExtensions.ToMessage(MeshValidationVertexResultType)
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html#Synesthesias_Snap_Runtime_MeshValidationVertexResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+    name: MeshValidationVertexResultType
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.ToMessage(Synesthesias.Snap.Runtime.MeshValidationVertexResultType)
+    name: ToMessage
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html#Synesthesias_Snap_Runtime_MeshValidationVertexResultTypeExtensions_ToMessage_Synesthesias_Snap_Runtime_MeshValidationVertexResultType_
+  - name: (
+  - uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+    name: MeshValidationVertexResultType
+    href: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html
+  - name: )
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions.html
+  name: MeshValidationVertexResultTypeExtensions
+  nameWithType: MeshValidationVertexResultTypeExtensions
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultTypeExtensions
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html
+  name: MeshValidationVertexResultType
+  nameWithType: MeshValidationVertexResultType
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType

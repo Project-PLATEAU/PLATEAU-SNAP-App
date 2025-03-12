@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  id: Synesthesias.PLATEAU.Snap.Generated.Client
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils
+  - Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  - Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+  - Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+  - Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  - Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter
+  - Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+  - Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  type: Namespace
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter.html
+  name: OpenAPIDateConverter
+  nameWithType: OpenAPIDateConverter
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.OpenAPIDateConverter
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html
+  name: IApiAccessor
+  nameWithType: IApiAccessor
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient.html
+  name: ISynchronousClient
+  nameWithType: ISynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ISynchronousClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html
+  name: IAsynchronousClient
+  nameWithType: IAsynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration.html
+  name: GlobalConfiguration
+  nameWithType: GlobalConfiguration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.GlobalConfiguration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html
+  name: IReadableConfiguration
+  nameWithType: IReadableConfiguration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils.html
+  name: ClientUtils
+  nameWithType: ClientUtils
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ClientUtils
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter.html
+  name: FileParameter
+  nameWithType: FileParameter
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.FileParameter
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory.html
+  name: ExceptionFactory
+  nameWithType: ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse.html
+  name: IApiResponse
+  nameWithType: IApiResponse
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiResponse
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  name: ApiResponse<T>
+  nameWithType: ApiResponse<T>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<T>
+  nameWithType.vb: ApiResponse(Of T)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of T)
+  name.vb: ApiResponse(Of T)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html
+  name: ApiException
+  nameWithType: ApiException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration.html
+  name: Configuration
+  nameWithType: Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Configuration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions.html
+  name: RequestOptions
+  nameWithType: RequestOptions
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration.html
+  name: RetryConfiguration
+  nameWithType: RetryConfiguration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.RetryConfiguration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  name: Multimap<TKey, TValue>
+  nameWithType: Multimap<TKey, TValue>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<TKey, TValue>
+  nameWithType.vb: Multimap(Of TKey, TValue)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap(Of TKey, TValue)
+  name.vb: Multimap(Of TKey, TValue)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient.html
+  name: ApiClient
+  nameWithType: ApiClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html

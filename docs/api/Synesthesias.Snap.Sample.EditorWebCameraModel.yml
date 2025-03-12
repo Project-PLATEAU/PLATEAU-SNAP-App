@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel
+  commentId: T:Synesthesias.Snap.Sample.EditorWebCameraModel
+  id: EditorWebCameraModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.EditorWebCameraModel.#ctor(UnityEngine.RenderTexture)
+  - Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose
+  - Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture
+  - Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync(System.Threading.CancellationToken)
+  - Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync(System.Threading.CancellationToken)
+  - Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D(UnityEngine.Texture2D@)
+  langs:
+  - csharp
+  - vb
+  name: EditorWebCameraModel
+  nameWithType: EditorWebCameraModel
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EditorWebCameraModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 9
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: 'public class EditorWebCameraModel : IDisposable'
+    content.vb: Public Class EditorWebCameraModel Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.#ctor(UnityEngine.RenderTexture)
+  commentId: M:Synesthesias.Snap.Sample.EditorWebCameraModel.#ctor(UnityEngine.RenderTexture)
+  id: '#ctor(UnityEngine.RenderTexture)'
+  parent: Synesthesias.Snap.Sample.EditorWebCameraModel
+  langs:
+  - csharp
+  - vb
+  name: EditorWebCameraModel(RenderTexture)
+  nameWithType: EditorWebCameraModel.EditorWebCameraModel(RenderTexture)
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.EditorWebCameraModel(UnityEngine.RenderTexture)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 19
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public EditorWebCameraModel(RenderTexture renderTexture)
+    parameters:
+    - id: renderTexture
+      type: UnityEngine.RenderTexture
+    content.vb: Public Sub New(renderTexture As RenderTexture)
+  overload: Synesthesias.Snap.Sample.EditorWebCameraModel.#ctor*
+  nameWithType.vb: EditorWebCameraModel.New(RenderTexture)
+  fullName.vb: Synesthesias.Snap.Sample.EditorWebCameraModel.New(UnityEngine.RenderTexture)
+  name.vb: New(RenderTexture)
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose
+  commentId: M:Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose
+  id: Dispose
+  parent: Synesthesias.Snap.Sample.EditorWebCameraModel
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: EditorWebCameraModel.Dispose()
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Dispose
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 破棄
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync(System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Sample.EditorWebCameraModel
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: EditorWebCameraModel.StartAsync(CancellationToken)
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: StartAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 44
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 開始
+  example: []
+  syntax:
+    content: public UniTask StartAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function StartAsync(cancellationToken As CancellationToken) As UniTask
+  overload: Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync*
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture
+  commentId: M:Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture
+  id: GetCameraTexture
+  parent: Synesthesias.Snap.Sample.EditorWebCameraModel
+  langs:
+  - csharp
+  - vb
+  name: GetCameraTexture()
+  nameWithType: EditorWebCameraModel.GetCameraTexture()
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetCameraTexture
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 51
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: public Texture GetCameraTexture()
+    return:
+      type: UnityEngine.Texture
+    content.vb: Public Function GetCameraTexture() As Texture
+  overload: Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture*
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync(System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync(System.Threading.CancellationToken)
+  id: ToggleDeviceAsync(System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Sample.EditorWebCameraModel
+  langs:
+  - csharp
+  - vb
+  name: ToggleDeviceAsync(CancellationToken)
+  nameWithType: EditorWebCameraModel.ToggleDeviceAsync(CancellationToken)
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ToggleDeviceAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 59
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: カメラデバイスの切り替え
+  example: []
+  syntax:
+    content: public UniTask ToggleDeviceAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function ToggleDeviceAsync(cancellationToken As CancellationToken) As UniTask
+  overload: Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync*
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D(UnityEngine.Texture2D@)
+  commentId: M:Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D(UnityEngine.Texture2D@)
+  id: TryCaptureTexture2D(UnityEngine.Texture2D@)
+  parent: Synesthesias.Snap.Sample.EditorWebCameraModel
+  langs:
+  - csharp
+  - vb
+  name: TryCaptureTexture2D(out Texture2D)
+  nameWithType: EditorWebCameraModel.TryCaptureTexture2D(out Texture2D)
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D(out UnityEngine.Texture2D)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: TryCaptureTexture2D
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Camera/EditorWebCameraModel.cs
+    startLine: 65
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: public bool TryCaptureTexture2D(out Texture2D result)
+    parameters:
+    - id: result
+      type: UnityEngine.Texture2D
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryCaptureTexture2D(result As Texture2D) As Boolean
+  overload: Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D*
+  nameWithType.vb: EditorWebCameraModel.TryCaptureTexture2D(Texture2D)
+  fullName.vb: Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D(UnityEngine.Texture2D)
+  name.vb: TryCaptureTexture2D(Texture2D)
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorWebCameraModel.#ctor
+  href: Synesthesias.Snap.Sample.EditorWebCameraModel.html#Synesthesias_Snap_Sample_EditorWebCameraModel__ctor_UnityEngine_RenderTexture_
+  name: EditorWebCameraModel
+  nameWithType: EditorWebCameraModel.EditorWebCameraModel
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.EditorWebCameraModel
+  nameWithType.vb: EditorWebCameraModel.New
+  fullName.vb: Synesthesias.Snap.Sample.EditorWebCameraModel.New
+  name.vb: New
+- uid: UnityEngine.RenderTexture
+  commentId: T:UnityEngine.RenderTexture
+  parent: UnityEngine
+  isExternal: true
+  name: RenderTexture
+  nameWithType: RenderTexture
+  fullName: UnityEngine.RenderTexture
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose
+  href: Synesthesias.Snap.Sample.EditorWebCameraModel.html#Synesthesias_Snap_Sample_EditorWebCameraModel_Dispose
+  name: Dispose
+  nameWithType: EditorWebCameraModel.Dispose
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync
+  href: Synesthesias.Snap.Sample.EditorWebCameraModel.html#Synesthesias_Snap_Sample_EditorWebCameraModel_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: EditorWebCameraModel.StartAsync
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.StartAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture
+  href: Synesthesias.Snap.Sample.EditorWebCameraModel.html#Synesthesias_Snap_Sample_EditorWebCameraModel_GetCameraTexture
+  name: GetCameraTexture
+  nameWithType: EditorWebCameraModel.GetCameraTexture
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.GetCameraTexture
+- uid: UnityEngine.Texture
+  commentId: T:UnityEngine.Texture
+  parent: UnityEngine
+  isExternal: true
+  name: Texture
+  nameWithType: Texture
+  fullName: UnityEngine.Texture
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync
+  href: Synesthesias.Snap.Sample.EditorWebCameraModel.html#Synesthesias_Snap_Sample_EditorWebCameraModel_ToggleDeviceAsync_System_Threading_CancellationToken_
+  name: ToggleDeviceAsync
+  nameWithType: EditorWebCameraModel.ToggleDeviceAsync
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.ToggleDeviceAsync
+- uid: Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D*
+  commentId: Overload:Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D
+  href: Synesthesias.Snap.Sample.EditorWebCameraModel.html#Synesthesias_Snap_Sample_EditorWebCameraModel_TryCaptureTexture2D_UnityEngine_Texture2D__
+  name: TryCaptureTexture2D
+  nameWithType: EditorWebCameraModel.TryCaptureTexture2D
+  fullName: Synesthesias.Snap.Sample.EditorWebCameraModel.TryCaptureTexture2D
+- uid: UnityEngine.Texture2D
+  commentId: T:UnityEngine.Texture2D
+  parent: UnityEngine
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: UnityEngine.Texture2D
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

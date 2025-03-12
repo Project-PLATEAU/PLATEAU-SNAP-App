@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync
+  id: ISurfacesApiAsync
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ISurfacesApiAsync
+  nameWithType: ISurfacesApiAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/SurfacesApi.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ISurfacesApiAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/SurfacesApi.cs
+    startLine: 53
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: Represents a collection of functions to interact with the API endpoints
+  example: []
+  syntax:
+    content: 'public interface ISurfacesApiAsync : IApiAccessor'
+    content.vb: Public Interface ISurfacesApiAsync Inherits IApiAccessor
+  inheritedMembers:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  id: GetVisibleSurfacesAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync
+  langs:
+  - csharp
+  - vb
+  name: GetVisibleSurfacesAsyncAsync(VisibleSurfacesRequest, CancellationToken)
+  nameWithType: ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync(VisibleSurfacesRequest, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/SurfacesApi.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetVisibleSurfacesAsyncAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/SurfacesApi.cs
+    startLine: 66
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: 現在の位置で撮影可能な面の情報を取得します。
+  remarks: ''
+  example: []
+  syntax:
+    content: Task<VisibleSurfacesResponse> GetVisibleSurfacesAsyncAsync(VisibleSurfacesRequest visibleSurfacesRequest = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: visibleSurfacesRequest
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+      description: (optional)
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse}
+      description: Task of VisibleSurfacesResponse
+    content.vb: Function GetVisibleSurfacesAsyncAsync(visibleSurfacesRequest As VisibleSurfacesRequest = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of VisibleSurfacesResponse)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync*
+  exceptions:
+  - type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    description: Thrown when fails to make API call
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  id: GetVisibleSurfacesAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync
+  langs:
+  - csharp
+  - vb
+  name: GetVisibleSurfacesAsyncWithHttpInfoAsync(VisibleSurfacesRequest, CancellationToken)
+  nameWithType: ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync(VisibleSurfacesRequest, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync(Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/SurfacesApi.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetVisibleSurfacesAsyncWithHttpInfoAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Api/SurfacesApi.cs
+    startLine: 78
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Api
+  summary: 現在の位置で撮影可能な面の情報を取得します。
+  remarks: ''
+  example: []
+  syntax:
+    content: Task<ApiResponse<VisibleSurfacesResponse>> GetVisibleSurfacesAsyncWithHttpInfoAsync(VisibleSurfacesRequest visibleSurfacesRequest = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: visibleSurfacesRequest
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+      description: (optional)
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse}}
+      description: Task of ApiResponse (VisibleSurfacesResponse)
+    content.vb: Function GetVisibleSurfacesAsyncWithHttpInfoAsync(visibleSurfacesRequest As VisibleSurfacesRequest = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of VisibleSurfacesResponse))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync*
+  exceptions:
+  - type: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+    description: Thrown when fails to make API call
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Api
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Api
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Api
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api
+    name: Api
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Api
+    name: Api
+    href: Synesthesias.PLATEAU.Snap.Generated.Api.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_Configuration
+  name: Configuration
+  nameWithType: IApiAccessor.Configuration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.Configuration
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  name: GetBasePath()
+  nameWithType: IApiAccessor.GetBasePath()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath()
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+    name: GetBasePath
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.GetBasePath
+    name: GetBasePath
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_GetBasePath
+  - name: (
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html#Synesthesias_PLATEAU_Snap_Generated_Client_IApiAccessor_ExceptionFactory
+  name: ExceptionFactory
+  nameWithType: IApiAccessor.ExceptionFactory
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.ExceptionFactory
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor.html
+  name: IApiAccessor
+  nameWithType: IApiAccessor
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IApiAccessor
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html
+  name: ApiException
+  nameWithType: ApiException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_ISurfacesApiAsync_GetVisibleSurfacesAsyncAsync_Synesthesias_PLATEAU_Snap_Generated_Model_VisibleSurfacesRequest_System_Threading_CancellationToken_
+  name: GetVisibleSurfacesAsyncAsync
+  nameWithType: ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest.html
+  name: VisibleSurfacesRequest
+  nameWithType: VisibleSurfacesRequest
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse}
+  commentId: T:System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<VisibleSurfacesResponse>
+  nameWithType: Task<VisibleSurfacesResponse>
+  fullName: System.Threading.Tasks.Task<Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse>
+  nameWithType.vb: Task(Of VisibleSurfacesResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse)
+  name.vb: Task(Of VisibleSurfacesResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+    name: VisibleSurfacesResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+    name: VisibleSurfacesResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.html
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.html#Synesthesias_PLATEAU_Snap_Generated_Api_ISurfacesApiAsync_GetVisibleSurfacesAsyncWithHttpInfoAsync_Synesthesias_PLATEAU_Snap_Generated_Model_VisibleSurfacesRequest_System_Threading_CancellationToken_
+  name: GetVisibleSurfacesAsyncWithHttpInfoAsync
+  nameWithType: ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Api.ISurfacesApiAsync.GetVisibleSurfacesAsyncWithHttpInfoAsync
+- uid: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse}}
+  commentId: T:System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<VisibleSurfacesResponse>>
+  nameWithType: Task<ApiResponse<VisibleSurfacesResponse>>
+  fullName: System.Threading.Tasks.Task<Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse>>
+  nameWithType.vb: Task(Of ApiResponse(Of VisibleSurfacesResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse))
+  name.vb: Task(Of ApiResponse(Of VisibleSurfacesResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+    name: VisibleSurfacesResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+    name: VisibleSurfacesResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.html
+  - name: )
+  - name: )

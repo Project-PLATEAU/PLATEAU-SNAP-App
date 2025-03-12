@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated
+  id: Synesthesias.PLATEAU.Snap.Generated
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.BuildingImageException
+  langs:
+  - csharp
+  - vb
+  name: Synesthesias.PLATEAU.Snap.Generated
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated
+  fullName: Synesthesias.PLATEAU.Snap.Generated
+  type: Namespace
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.BuildingImageException
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.BuildingImageException
+  href: Synesthesias.PLATEAU.Snap.Generated.BuildingImageException.html
+  name: BuildingImageException
+  nameWithType: BuildingImageException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.BuildingImageException

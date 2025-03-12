@@ -1,0 +1,991 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.MeshRepository
+  commentId: T:Synesthesias.Snap.Sample.MeshRepository
+  id: MeshRepository
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.MeshRepository.#ctor(Synesthesias.Snap.Sample.DetectionMaterialModel)
+  - Synesthesias.Snap.Sample.MeshRepository.Clear
+  - Synesthesias.Snap.Sample.MeshRepository.ClearDetected
+  - Synesthesias.Snap.Sample.MeshRepository.ClearSelected
+  - Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId(System.String)
+  - Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews
+  - Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable
+  - Synesthesias.Snap.Sample.MeshRepository.RemoveDetected(System.String)
+  - Synesthesias.Snap.Sample.MeshRepository.SelectObject(UnityEngine.GameObject)
+  - Synesthesias.Snap.Sample.MeshRepository.SelectedMeshViewProperty
+  - Synesthesias.Snap.Sample.MeshRepository.SetMesh(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  langs:
+  - csharp
+  - vb
+  name: MeshRepository
+  nameWithType: MeshRepository
+  fullName: Synesthesias.Snap.Sample.MeshRepository
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MeshRepository
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 12
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: >-
+    メッシュ情報を管理するリポジトリ
+
+    検出されたメッシュや選択されたメッシュの情報を管理する
+  example: []
+  syntax:
+    content: public class MeshRepository
+    content.vb: Public Class MeshRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.MeshRepository.SelectedMeshViewProperty
+  commentId: F:Synesthesias.Snap.Sample.MeshRepository.SelectedMeshViewProperty
+  id: SelectedMeshViewProperty
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: SelectedMeshViewProperty
+  nameWithType: MeshRepository.SelectedMeshViewProperty
+  fullName: Synesthesias.Snap.Sample.MeshRepository.SelectedMeshViewProperty
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SelectedMeshViewProperty
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 22
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 選択されたメッシュのViewのProperty
+  example: []
+  syntax:
+    content: public readonly ReactiveProperty<IMobileDetectionMeshView> SelectedMeshViewProperty
+    return:
+      type: R3.ReactiveProperty{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
+    content.vb: Public ReadOnly SelectedMeshViewProperty As ReactiveProperty(Of IMobileDetectionMeshView)
+- uid: Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews
+  commentId: P:Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews
+  id: DetectedMeshViews
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: DetectedMeshViews
+  nameWithType: MeshRepository.DetectedMeshViews
+  fullName: Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DetectedMeshViews
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 27
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 検出されたメッシュのViewのリスト
+  example: []
+  syntax:
+    content: public IReadOnlyCollection<IMobileDetectionMeshView> DetectedMeshViews { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
+    content.vb: Public ReadOnly Property DetectedMeshViews As IReadOnlyCollection(Of IMobileDetectionMeshView)
+  overload: Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews*
+- uid: Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable
+  id: OnSelectedAsObservable
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: OnSelectedAsObservable()
+  nameWithType: MeshRepository.OnSelectedAsObservable()
+  fullName: Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: OnSelectedAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 33
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: MeshViewが選択されたかのObservable
+  example: []
+  syntax:
+    content: public Observable<bool> OnSelectedAsObservable()
+    return:
+      type: R3.Observable{System.Boolean}
+    content.vb: Public Function OnSelectedAsObservable() As Observable(Of Boolean)
+  overload: Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable*
+- uid: Synesthesias.Snap.Sample.MeshRepository.#ctor(Synesthesias.Snap.Sample.DetectionMaterialModel)
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.#ctor(Synesthesias.Snap.Sample.DetectionMaterialModel)
+  id: '#ctor(Synesthesias.Snap.Sample.DetectionMaterialModel)'
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: MeshRepository(DetectionMaterialModel)
+  nameWithType: MeshRepository.MeshRepository(DetectionMaterialModel)
+  fullName: Synesthesias.Snap.Sample.MeshRepository.MeshRepository(Synesthesias.Snap.Sample.DetectionMaterialModel)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 39
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public MeshRepository(DetectionMaterialModel materialModel)
+    parameters:
+    - id: materialModel
+      type: Synesthesias.Snap.Sample.DetectionMaterialModel
+    content.vb: Public Sub New(materialModel As DetectionMaterialModel)
+  overload: Synesthesias.Snap.Sample.MeshRepository.#ctor*
+  nameWithType.vb: MeshRepository.New(DetectionMaterialModel)
+  fullName.vb: Synesthesias.Snap.Sample.MeshRepository.New(Synesthesias.Snap.Sample.DetectionMaterialModel)
+  name.vb: New(DetectionMaterialModel)
+- uid: Synesthesias.Snap.Sample.MeshRepository.Clear
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.Clear
+  id: Clear
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: MeshRepository.Clear()
+  fullName: Synesthesias.Snap.Sample.MeshRepository.Clear()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Clear
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 48
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: >-
+    クリア
+
+    検出や選択されたメッシュをクリアする
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Synesthesias.Snap.Sample.MeshRepository.Clear*
+- uid: Synesthesias.Snap.Sample.MeshRepository.RemoveDetected(System.String)
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.RemoveDetected(System.String)
+  id: RemoveDetected(System.String)
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: RemoveDetected(string)
+  nameWithType: MeshRepository.RemoveDetected(string)
+  fullName: Synesthesias.Snap.Sample.MeshRepository.RemoveDetected(string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: RemoveDetected
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 57
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 検出されたメッシュを削除する
+  example: []
+  syntax:
+    content: public void RemoveDetected(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub RemoveDetected(id As String)
+  overload: Synesthesias.Snap.Sample.MeshRepository.RemoveDetected*
+  nameWithType.vb: MeshRepository.RemoveDetected(String)
+  fullName.vb: Synesthesias.Snap.Sample.MeshRepository.RemoveDetected(String)
+  name.vb: RemoveDetected(String)
+- uid: Synesthesias.Snap.Sample.MeshRepository.ClearDetected
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.ClearDetected
+  id: ClearDetected
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: ClearDetected()
+  nameWithType: MeshRepository.ClearDetected()
+  fullName: Synesthesias.Snap.Sample.MeshRepository.ClearDetected()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ClearDetected
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 68
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: public void ClearDetected()
+    content.vb: Public Sub ClearDetected()
+  overload: Synesthesias.Snap.Sample.MeshRepository.ClearDetected*
+- uid: Synesthesias.Snap.Sample.MeshRepository.ClearSelected
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.ClearSelected
+  id: ClearSelected
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: ClearSelected()
+  nameWithType: MeshRepository.ClearSelected()
+  fullName: Synesthesias.Snap.Sample.MeshRepository.ClearSelected()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ClearSelected
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 74
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: public void ClearSelected()
+    content.vb: Public Sub ClearSelected()
+  overload: Synesthesias.Snap.Sample.MeshRepository.ClearSelected*
+- uid: Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId(System.String)
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId(System.String)
+  id: ContainsMeshId(System.String)
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: ContainsMeshId(string)
+  nameWithType: MeshRepository.ContainsMeshId(string)
+  fullName: Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId(string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ContainsMeshId
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 88
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュIDを含むか
+  example: []
+  syntax:
+    content: public bool ContainsMeshId(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsMeshId(id As String) As Boolean
+  overload: Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId*
+  nameWithType.vb: MeshRepository.ContainsMeshId(String)
+  fullName.vb: Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId(String)
+  name.vb: ContainsMeshId(String)
+- uid: Synesthesias.Snap.Sample.MeshRepository.SetMesh(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.SetMesh(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  id: SetMesh(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: SetMesh(IMobileDetectionMeshView)
+  nameWithType: MeshRepository.SetMesh(IMobileDetectionMeshView)
+  fullName: Synesthesias.Snap.Sample.MeshRepository.SetMesh(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetMesh
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 96
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 検出されたメッシュのViewを設定する
+  example: []
+  syntax:
+    content: public void SetMesh(IMobileDetectionMeshView meshView)
+    parameters:
+    - id: meshView
+      type: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    content.vb: Public Sub SetMesh(meshView As IMobileDetectionMeshView)
+  overload: Synesthesias.Snap.Sample.MeshRepository.SetMesh*
+- uid: Synesthesias.Snap.Sample.MeshRepository.SelectObject(UnityEngine.GameObject)
+  commentId: M:Synesthesias.Snap.Sample.MeshRepository.SelectObject(UnityEngine.GameObject)
+  id: SelectObject(UnityEngine.GameObject)
+  parent: Synesthesias.Snap.Sample.MeshRepository
+  langs:
+  - csharp
+  - vb
+  name: SelectObject(GameObject)
+  nameWithType: MeshRepository.SelectObject(GameObject)
+  fullName: Synesthesias.Snap.Sample.MeshRepository.SelectObject(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SelectObject
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Repository/MeshRepository.cs
+    startLine: 111
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュのGameObjectを選択する
+  example: []
+  syntax:
+    content: public void SelectObject(GameObject gameObject)
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    content.vb: Public Sub SelectObject(gameObject As GameObject)
+  overload: Synesthesias.Snap.Sample.MeshRepository.SelectObject*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: R3.ReactiveProperty{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
+  commentId: T:R3.ReactiveProperty{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
+  parent: R3
+  definition: R3.ReactiveProperty`1
+  href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  name: ReactiveProperty<IMobileDetectionMeshView>
+  nameWithType: ReactiveProperty<IMobileDetectionMeshView>
+  fullName: R3.ReactiveProperty<Synesthesias.Snap.Sample.IMobileDetectionMeshView>
+  nameWithType.vb: ReactiveProperty(Of IMobileDetectionMeshView)
+  fullName.vb: R3.ReactiveProperty(Of Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  name.vb: ReactiveProperty(Of IMobileDetectionMeshView)
+  spec.csharp:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    name: IMobileDetectionMeshView
+    href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  - name: '>'
+  spec.vb:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    name: IMobileDetectionMeshView
+    href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  - name: )
+- uid: R3.ReactiveProperty`1
+  commentId: T:R3.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: R3.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: R3.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: R3
+  commentId: N:R3
+  isExternal: true
+  name: R3
+  nameWithType: R3
+  fullName: R3
+- uid: Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_DetectedMeshViews
+  name: DetectedMeshViews
+  nameWithType: MeshRepository.DetectedMeshViews
+  fullName: Synesthesias.Snap.Sample.MeshRepository.DetectedMeshViews
+- uid: System.Collections.Generic.IReadOnlyCollection{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Synesthesias.Snap.Sample.IMobileDetectionMeshView}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<IMobileDetectionMeshView>
+  nameWithType: IReadOnlyCollection<IMobileDetectionMeshView>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Synesthesias.Snap.Sample.IMobileDetectionMeshView>
+  nameWithType.vb: IReadOnlyCollection(Of IMobileDetectionMeshView)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  name.vb: IReadOnlyCollection(Of IMobileDetectionMeshView)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    name: IMobileDetectionMeshView
+    href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    name: IMobileDetectionMeshView
+    href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_OnSelectedAsObservable
+  name: OnSelectedAsObservable
+  nameWithType: MeshRepository.OnSelectedAsObservable
+  fullName: Synesthesias.Snap.Sample.MeshRepository.OnSelectedAsObservable
+- uid: R3.Observable{System.Boolean}
+  commentId: T:R3.Observable{System.Boolean}
+  parent: R3
+  definition: R3.Observable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Observable<bool>
+  nameWithType: Observable<bool>
+  fullName: R3.Observable<bool>
+  nameWithType.vb: Observable(Of Boolean)
+  fullName.vb: R3.Observable(Of Boolean)
+  name.vb: Observable(Of Boolean)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: R3.Observable`1
+  commentId: T:R3.Observable`1
+  isExternal: true
+  name: Observable<T>
+  nameWithType: Observable<T>
+  fullName: R3.Observable<T>
+  nameWithType.vb: Observable(Of T)
+  fullName.vb: R3.Observable(Of T)
+  name.vb: Observable(Of T)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Synesthesias.Snap.Sample.MeshRepository.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.#ctor
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository__ctor_Synesthesias_Snap_Sample_DetectionMaterialModel_
+  name: MeshRepository
+  nameWithType: MeshRepository.MeshRepository
+  fullName: Synesthesias.Snap.Sample.MeshRepository.MeshRepository
+  nameWithType.vb: MeshRepository.New
+  fullName.vb: Synesthesias.Snap.Sample.MeshRepository.New
+  name.vb: New
+- uid: Synesthesias.Snap.Sample.DetectionMaterialModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMaterialModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMaterialModel.html
+  name: DetectionMaterialModel
+  nameWithType: DetectionMaterialModel
+  fullName: Synesthesias.Snap.Sample.DetectionMaterialModel
+- uid: Synesthesias.Snap.Sample.MeshRepository.Clear*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.Clear
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_Clear
+  name: Clear
+  nameWithType: MeshRepository.Clear
+  fullName: Synesthesias.Snap.Sample.MeshRepository.Clear
+- uid: Synesthesias.Snap.Sample.MeshRepository.RemoveDetected*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.RemoveDetected
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_RemoveDetected_System_String_
+  name: RemoveDetected
+  nameWithType: MeshRepository.RemoveDetected
+  fullName: Synesthesias.Snap.Sample.MeshRepository.RemoveDetected
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.Snap.Sample.MeshRepository.ClearDetected*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.ClearDetected
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_ClearDetected
+  name: ClearDetected
+  nameWithType: MeshRepository.ClearDetected
+  fullName: Synesthesias.Snap.Sample.MeshRepository.ClearDetected
+- uid: Synesthesias.Snap.Sample.MeshRepository.ClearSelected*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.ClearSelected
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_ClearSelected
+  name: ClearSelected
+  nameWithType: MeshRepository.ClearSelected
+  fullName: Synesthesias.Snap.Sample.MeshRepository.ClearSelected
+- uid: Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_ContainsMeshId_System_String_
+  name: ContainsMeshId
+  nameWithType: MeshRepository.ContainsMeshId
+  fullName: Synesthesias.Snap.Sample.MeshRepository.ContainsMeshId
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Synesthesias.Snap.Sample.MeshRepository.SetMesh*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.SetMesh
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_SetMesh_Synesthesias_Snap_Sample_IMobileDetectionMeshView_
+  name: SetMesh
+  nameWithType: MeshRepository.SetMesh
+  fullName: Synesthesias.Snap.Sample.MeshRepository.SetMesh
+- uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+  commentId: T:Synesthesias.Snap.Sample.IMobileDetectionMeshView
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  name: IMobileDetectionMeshView
+  nameWithType: IMobileDetectionMeshView
+  fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+- uid: Synesthesias.Snap.Sample.MeshRepository.SelectObject*
+  commentId: Overload:Synesthesias.Snap.Sample.MeshRepository.SelectObject
+  href: Synesthesias.Snap.Sample.MeshRepository.html#Synesthesias_Snap_Sample_MeshRepository_SelectObject_UnityEngine_GameObject_
+  name: SelectObject
+  nameWithType: MeshRepository.SelectObject
+  fullName: Synesthesias.Snap.Sample.MeshRepository.SelectObject
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

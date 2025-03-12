@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.EnvironmentType
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentType
+  id: EnvironmentType
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.EnvironmentType.Development
+  - Synesthesias.Snap.Sample.EnvironmentType.None
+  - Synesthesias.Snap.Sample.EnvironmentType.Release
+  langs:
+  - csharp
+  - vb
+  name: EnvironmentType
+  nameWithType: EnvironmentType
+  fullName: Synesthesias.Snap.Sample.EnvironmentType
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EnvironmentType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 環境の種類
+  example: []
+  syntax:
+    content: public enum EnvironmentType
+    content.vb: Public Enum EnvironmentType
+- uid: Synesthesias.Snap.Sample.EnvironmentType.None
+  commentId: F:Synesthesias.Snap.Sample.EnvironmentType.None
+  id: None
+  parent: Synesthesias.Snap.Sample.EnvironmentType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EnvironmentType.None
+  fullName: Synesthesias.Snap.Sample.EnvironmentType.None
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: None
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 未設定
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Synesthesias.Snap.Sample.EnvironmentType
+- uid: Synesthesias.Snap.Sample.EnvironmentType.Development
+  commentId: F:Synesthesias.Snap.Sample.EnvironmentType.Development
+  id: Development
+  parent: Synesthesias.Snap.Sample.EnvironmentType
+  langs:
+  - csharp
+  - vb
+  name: Development
+  nameWithType: EnvironmentType.Development
+  fullName: Synesthesias.Snap.Sample.EnvironmentType.Development
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Development
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 開発
+  example: []
+  syntax:
+    content: Development = 1
+    return:
+      type: Synesthesias.Snap.Sample.EnvironmentType
+- uid: Synesthesias.Snap.Sample.EnvironmentType.Release
+  commentId: F:Synesthesias.Snap.Sample.EnvironmentType.Release
+  id: Release
+  parent: Synesthesias.Snap.Sample.EnvironmentType
+  langs:
+  - csharp
+  - vb
+  name: Release
+  nameWithType: EnvironmentType.Release
+  fullName: Synesthesias.Snap.Sample.EnvironmentType.Release
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Release
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Environment/EnvironmentType.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: リリース
+  example: []
+  syntax:
+    content: Release = 2
+    return:
+      type: Synesthesias.Snap.Sample.EnvironmentType
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.EnvironmentType
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.EnvironmentType.html
+  name: EnvironmentType
+  nameWithType: EnvironmentType
+  fullName: Synesthesias.Snap.Sample.EnvironmentType

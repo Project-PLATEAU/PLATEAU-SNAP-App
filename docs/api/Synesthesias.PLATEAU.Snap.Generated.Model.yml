@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  id: Synesthesias.PLATEAU.Snap.Generated.Model
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema
+  - Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata
+  - Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  - Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Surface
+  - Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+  - Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+  langs:
+  - csharp
+  - vb
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  type: Namespace
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html
+  name: Coordinate
+  nameWithType: Coordinate
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.html
+  name: StatusType
+  nameWithType: StatusType
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse.html
+  name: VisibleSurfacesResponse
+  nameWithType: VisibleSurfacesResponse
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesResponse
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema.html
+  name: AbstractOpenAPISchema
+  nameWithType: AbstractOpenAPISchema
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.AbstractOpenAPISchema
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Surface
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.Surface
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Surface.html
+  name: Surface
+  nameWithType: Surface
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Surface
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest.html
+  name: VisibleSurfacesRequest
+  nameWithType: VisibleSurfacesRequest
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.VisibleSurfacesRequest
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse.html
+  name: BuildingImageResponse
+  nameWithType: BuildingImageResponse
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageResponse
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata.html
+  name: BuildingImageMetadata
+  nameWithType: BuildingImageMetadata
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.BuildingImageMetadata
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html

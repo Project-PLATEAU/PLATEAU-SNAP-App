@@ -1,0 +1,731 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  id: GeospatialMainLoopModel
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.#ctor(UnityEngine.XR.ARFoundation.ARSession,Google.XR.ARCoreExtensions.AREarthManager,Google.XR.ARCoreExtensions.ARCoreExtensions)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync(System.Threading.CancellationToken)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync(System.Threading.CancellationToken)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopModel.State
+  langs:
+  - csharp
+  - vb
+  name: GeospatialMainLoopModel
+  nameWithType: GeospatialMainLoopModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialMainLoopModel
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 12
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: GeospatialのメインループのModel
+  example: []
+  syntax:
+    content: public class GeospatialMainLoopModel
+    content.vb: Public Class GeospatialMainLoopModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.State
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.State
+  id: State
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: GeospatialMainLoopModel.State
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.State
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: State
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 21
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 状態
+  example: []
+  syntax:
+    content: public readonly GeospatialMainLoopState State
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+    content.vb: Public ReadOnly State As GeospatialMainLoopState
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.#ctor(UnityEngine.XR.ARFoundation.ARSession,Google.XR.ARCoreExtensions.AREarthManager,Google.XR.ARCoreExtensions.ARCoreExtensions)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.#ctor(UnityEngine.XR.ARFoundation.ARSession,Google.XR.ARCoreExtensions.AREarthManager,Google.XR.ARCoreExtensions.ARCoreExtensions)
+  id: '#ctor(UnityEngine.XR.ARFoundation.ARSession,Google.XR.ARCoreExtensions.AREarthManager,Google.XR.ARCoreExtensions.ARCoreExtensions)'
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: GeospatialMainLoopModel(ARSession, AREarthManager, ARCoreExtensions)
+  nameWithType: GeospatialMainLoopModel.GeospatialMainLoopModel(ARSession, AREarthManager, ARCoreExtensions)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.GeospatialMainLoopModel(UnityEngine.XR.ARFoundation.ARSession, Google.XR.ARCoreExtensions.AREarthManager, Google.XR.ARCoreExtensions.ARCoreExtensions)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 26
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public GeospatialMainLoopModel(ARSession arSession, AREarthManager earthManager, ARCoreExtensions arCoreExtensions)
+    parameters:
+    - id: arSession
+      type: UnityEngine.XR.ARFoundation.ARSession
+    - id: earthManager
+      type: Google.XR.ARCoreExtensions.AREarthManager
+    - id: arCoreExtensions
+      type: Google.XR.ARCoreExtensions.ARCoreExtensions
+    content.vb: Public Sub New(arSession As ARSession, earthManager As AREarthManager, arCoreExtensions As ARCoreExtensions)
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.#ctor*
+  nameWithType.vb: GeospatialMainLoopModel.New(ARSession, AREarthManager, ARCoreExtensions)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.New(UnityEngine.XR.ARFoundation.ARSession, Google.XR.ARCoreExtensions.AREarthManager, Google.XR.ARCoreExtensions.ARCoreExtensions)
+  name.vb: New(ARSession, AREarthManager, ARCoreExtensions)
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60
+  id: SetFrameRateAs60
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: SetFrameRateAs60()
+  nameWithType: GeospatialMainLoopModel.SetFrameRateAs60()
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetFrameRateAs60
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 39
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: フレームレートを60にする
+  example: []
+  syntax:
+    content: public static void SetFrameRateAs60()
+    content.vb: Public Shared Sub SetFrameRateAs60()
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait
+  id: LockToPortrait
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: LockToPortrait()
+  nameWithType: GeospatialMainLoopModel.LockToPortrait()
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: LockToPortrait
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 47
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 縦画面に固定する
+  example: []
+  syntax:
+    content: public static void LockToPortrait()
+    content.vb: Public Shared Sub LockToPortrait()
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync(System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync(System.Threading.CancellationToken)
+  id: EnableAsync(System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: EnableAsync(CancellationToken)
+  nameWithType: GeospatialMainLoopModel.EnableAsync(CancellationToken)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EnableAsync
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 58
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 有効化
+  example: []
+  syntax:
+    content: public UniTask EnableAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function EnableAsync(cancellationToken As CancellationToken) As UniTask
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable
+  id: Disable
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: GeospatialMainLoopModel.Disable()
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Disable
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 94
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 無効化
+  example: []
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable()
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync(System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync(System.Threading.CancellationToken)
+  id: MainLoopAsync(System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopModel
+  langs:
+  - csharp
+  - vb
+  name: MainLoopAsync(CancellationToken)
+  nameWithType: GeospatialMainLoopModel.MainLoopAsync(CancellationToken)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MainLoopAsync
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopModel.cs
+    startLine: 105
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 更新
+  example: []
+  syntax:
+    content: public UniTask MainLoopAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask
+    content.vb: Public Function MainLoopAsync(cancellationToken As CancellationToken) As UniTask
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync*
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html
+  name: GeospatialMainLoopState
+  nameWithType: GeospatialMainLoopState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html#Synesthesias_Snap_Runtime_GeospatialMainLoopModel__ctor_UnityEngine_XR_ARFoundation_ARSession_Google_XR_ARCoreExtensions_AREarthManager_Google_XR_ARCoreExtensions_ARCoreExtensions_
+  name: GeospatialMainLoopModel
+  nameWithType: GeospatialMainLoopModel.GeospatialMainLoopModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.GeospatialMainLoopModel
+  nameWithType.vb: GeospatialMainLoopModel.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.New
+  name.vb: New
+- uid: UnityEngine.XR.ARFoundation.ARSession
+  commentId: T:UnityEngine.XR.ARFoundation.ARSession
+  parent: UnityEngine.XR.ARFoundation
+  isExternal: true
+  name: ARSession
+  nameWithType: ARSession
+  fullName: UnityEngine.XR.ARFoundation.ARSession
+- uid: Google.XR.ARCoreExtensions.AREarthManager
+  commentId: T:Google.XR.ARCoreExtensions.AREarthManager
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: AREarthManager
+  nameWithType: AREarthManager
+  fullName: Google.XR.ARCoreExtensions.AREarthManager
+- uid: Google.XR.ARCoreExtensions.ARCoreExtensions
+  commentId: T:Google.XR.ARCoreExtensions.ARCoreExtensions
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: ARCoreExtensions
+  nameWithType: ARCoreExtensions
+  fullName: Google.XR.ARCoreExtensions.ARCoreExtensions
+- uid: UnityEngine.XR.ARFoundation
+  commentId: N:UnityEngine.XR.ARFoundation
+  isExternal: true
+  name: UnityEngine.XR.ARFoundation
+  nameWithType: UnityEngine.XR.ARFoundation
+  fullName: UnityEngine.XR.ARFoundation
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARFoundation
+    name: ARFoundation
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARFoundation
+    name: ARFoundation
+    isExternal: true
+- uid: Google.XR.ARCoreExtensions
+  commentId: N:Google.XR.ARCoreExtensions
+  isExternal: true
+  name: Google.XR.ARCoreExtensions
+  nameWithType: Google.XR.ARCoreExtensions
+  fullName: Google.XR.ARCoreExtensions
+  spec.csharp:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+  spec.vb:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html#Synesthesias_Snap_Runtime_GeospatialMainLoopModel_SetFrameRateAs60
+  name: SetFrameRateAs60
+  nameWithType: GeospatialMainLoopModel.SetFrameRateAs60
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.SetFrameRateAs60
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html#Synesthesias_Snap_Runtime_GeospatialMainLoopModel_LockToPortrait
+  name: LockToPortrait
+  nameWithType: GeospatialMainLoopModel.LockToPortrait
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.LockToPortrait
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html#Synesthesias_Snap_Runtime_GeospatialMainLoopModel_EnableAsync_System_Threading_CancellationToken_
+  name: EnableAsync
+  nameWithType: GeospatialMainLoopModel.EnableAsync
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.EnableAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask
+  commentId: T:Cysharp.Threading.Tasks.UniTask
+  parent: Cysharp.Threading.Tasks
+  isExternal: true
+  name: UniTask
+  nameWithType: UniTask
+  fullName: Cysharp.Threading.Tasks.UniTask
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html#Synesthesias_Snap_Runtime_GeospatialMainLoopModel_Disable
+  name: Disable
+  nameWithType: GeospatialMainLoopModel.Disable
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.Disable
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.html#Synesthesias_Snap_Runtime_GeospatialMainLoopModel_MainLoopAsync_System_Threading_CancellationToken_
+  name: MainLoopAsync
+  nameWithType: GeospatialMainLoopModel.MainLoopAsync
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopModel.MainLoopAsync

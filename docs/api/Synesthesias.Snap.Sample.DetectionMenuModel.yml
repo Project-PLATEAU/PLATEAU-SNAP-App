@@ -1,0 +1,711 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMenuModel
+  id: DetectionMenuModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)
+  - Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
+  - Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
+  - Synesthesias.Snap.Sample.DetectionMenuModel.IsVisibleProperty
+  - Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable
+  - Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements
+  langs:
+  - csharp
+  - vb
+  name: DetectionMenuModel
+  nameWithType: DetectionMenuModel
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DetectionMenuModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 7
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  syntax:
+    content: 'public class DetectionMenuModel : IDisposable'
+    content.vb: Public Class DetectionMenuModel Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.IsVisibleProperty
+  commentId: F:Synesthesias.Snap.Sample.DetectionMenuModel.IsVisibleProperty
+  id: IsVisibleProperty
+  parent: Synesthesias.Snap.Sample.DetectionMenuModel
+  langs:
+  - csharp
+  - vb
+  name: IsVisibleProperty
+  nameWithType: DetectionMenuModel.IsVisibleProperty
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.IsVisibleProperty
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsVisibleProperty
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 17
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メニューを表示するか
+  example: []
+  syntax:
+    content: public readonly ReactiveProperty<bool> IsVisibleProperty
+    return:
+      type: R3.ReactiveProperty{System.Boolean}
+    content.vb: Public ReadOnly IsVisibleProperty As ReactiveProperty(Of Boolean)
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable
+  id: OnElementAddedAsObservable
+  parent: Synesthesias.Snap.Sample.DetectionMenuModel
+  langs:
+  - csharp
+  - vb
+  name: OnElementAddedAsObservable()
+  nameWithType: DetectionMenuModel.OnElementAddedAsObservable()
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: OnElementAddedAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 22
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メニューの要素を追加のObservable
+  example: []
+  syntax:
+    content: public Observable<DetectionMenuElementModel> OnElementAddedAsObservable()
+    return:
+      type: R3.Observable{Synesthesias.Snap.Sample.DetectionMenuElementModel}
+    content.vb: Public Function OnElementAddedAsObservable() As Observable(Of DetectionMenuElementModel)
+  overload: Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable*
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)
+  id: '#ctor(Synesthesias.Snap.Sample.IEnvironmentModel,Synesthesias.Snap.Sample.SceneModel)'
+  parent: Synesthesias.Snap.Sample.DetectionMenuModel
+  langs:
+  - csharp
+  - vb
+  name: DetectionMenuModel(IEnvironmentModel, SceneModel)
+  nameWithType: DetectionMenuModel.DetectionMenuModel(IEnvironmentModel, SceneModel)
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.DetectionMenuModel(Synesthesias.Snap.Sample.IEnvironmentModel, Synesthesias.Snap.Sample.SceneModel)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 28
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public DetectionMenuModel(IEnvironmentModel environmentModel, SceneModel sceneModel)
+    parameters:
+    - id: environmentModel
+      type: Synesthesias.Snap.Sample.IEnvironmentModel
+    - id: sceneModel
+      type: Synesthesias.Snap.Sample.SceneModel
+    content.vb: Public Sub New(environmentModel As IEnvironmentModel, sceneModel As SceneModel)
+  overload: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor*
+  nameWithType.vb: DetectionMenuModel.New(IEnvironmentModel, SceneModel)
+  fullName.vb: Synesthesias.Snap.Sample.DetectionMenuModel.New(Synesthesias.Snap.Sample.IEnvironmentModel, Synesthesias.Snap.Sample.SceneModel)
+  name.vb: New(IEnvironmentModel, SceneModel)
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
+  id: Dispose
+  parent: Synesthesias.Snap.Sample.DetectionMenuModel
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DetectionMenuModel.Dispose()
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.Dispose()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Dispose
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 39
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 破棄
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Synesthesias.Snap.Sample.DetectionMenuModel.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements
+  id: PopulateElements
+  parent: Synesthesias.Snap.Sample.DetectionMenuModel
+  langs:
+  - csharp
+  - vb
+  name: PopulateElements()
+  nameWithType: DetectionMenuModel.PopulateElements()
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: PopulateElements
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 48
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 要素を追加
+  example: []
+  syntax:
+    content: public void PopulateElements()
+    content.vb: Public Sub PopulateElements()
+  overload: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements*
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
+  commentId: M:Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
+  id: AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel,Synesthesias.Snap.Sample.EnvironmentType)
+  parent: Synesthesias.Snap.Sample.DetectionMenuModel
+  langs:
+  - csharp
+  - vb
+  name: AddElement(DetectionMenuElementModel, EnvironmentType)
+  nameWithType: DetectionMenuModel.AddElement(DetectionMenuElementModel, EnvironmentType)
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement(Synesthesias.Snap.Sample.DetectionMenuElementModel, Synesthesias.Snap.Sample.EnvironmentType)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: AddElement
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionMenuModel.cs
+    startLine: 63
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メニュー要素を追加
+  example: []
+  syntax:
+    content: public void AddElement(DetectionMenuElementModel element, EnvironmentType environmentType = EnvironmentType.Development)
+    parameters:
+    - id: element
+      type: Synesthesias.Snap.Sample.DetectionMenuElementModel
+    - id: environmentType
+      type: Synesthesias.Snap.Sample.EnvironmentType
+    content.vb: Public Sub AddElement(element As DetectionMenuElementModel, environmentType As EnvironmentType = EnvironmentType.Development)
+  overload: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: R3.ReactiveProperty{System.Boolean}
+  commentId: T:R3.ReactiveProperty{System.Boolean}
+  parent: R3
+  definition: R3.ReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: ReactiveProperty<bool>
+  nameWithType: ReactiveProperty<bool>
+  fullName: R3.ReactiveProperty<bool>
+  nameWithType.vb: ReactiveProperty(Of Boolean)
+  fullName.vb: R3.ReactiveProperty(Of Boolean)
+  name.vb: ReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: R3.ReactiveProperty`1
+  commentId: T:R3.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: R3.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: R3.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: R3
+  commentId: N:R3
+  isExternal: true
+  name: R3
+  nameWithType: R3
+  fullName: R3
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel_OnElementAddedAsObservable
+  name: OnElementAddedAsObservable
+  nameWithType: DetectionMenuModel.OnElementAddedAsObservable
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.OnElementAddedAsObservable
+- uid: R3.Observable{Synesthesias.Snap.Sample.DetectionMenuElementModel}
+  commentId: T:R3.Observable{Synesthesias.Snap.Sample.DetectionMenuElementModel}
+  parent: R3
+  definition: R3.Observable`1
+  href: Synesthesias.Snap.Sample.DetectionMenuElementModel.html
+  name: Observable<DetectionMenuElementModel>
+  nameWithType: Observable<DetectionMenuElementModel>
+  fullName: R3.Observable<Synesthesias.Snap.Sample.DetectionMenuElementModel>
+  nameWithType.vb: Observable(Of DetectionMenuElementModel)
+  fullName.vb: R3.Observable(Of Synesthesias.Snap.Sample.DetectionMenuElementModel)
+  name.vb: Observable(Of DetectionMenuElementModel)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - uid: Synesthesias.Snap.Sample.DetectionMenuElementModel
+    name: DetectionMenuElementModel
+    href: Synesthesias.Snap.Sample.DetectionMenuElementModel.html
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.Snap.Sample.DetectionMenuElementModel
+    name: DetectionMenuElementModel
+    href: Synesthesias.Snap.Sample.DetectionMenuElementModel.html
+  - name: )
+- uid: R3.Observable`1
+  commentId: T:R3.Observable`1
+  isExternal: true
+  name: Observable<T>
+  nameWithType: Observable<T>
+  fullName: R3.Observable<T>
+  nameWithType.vb: Observable(Of T)
+  fullName.vb: R3.Observable(Of T)
+  name.vb: Observable(Of T)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.#ctor
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel__ctor_Synesthesias_Snap_Sample_IEnvironmentModel_Synesthesias_Snap_Sample_SceneModel_
+  name: DetectionMenuModel
+  nameWithType: DetectionMenuModel.DetectionMenuModel
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.DetectionMenuModel
+  nameWithType.vb: DetectionMenuModel.New
+  fullName.vb: Synesthesias.Snap.Sample.DetectionMenuModel.New
+  name.vb: New
+- uid: Synesthesias.Snap.Sample.IEnvironmentModel
+  commentId: T:Synesthesias.Snap.Sample.IEnvironmentModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IEnvironmentModel.html
+  name: IEnvironmentModel
+  nameWithType: IEnvironmentModel
+  fullName: Synesthesias.Snap.Sample.IEnvironmentModel
+- uid: Synesthesias.Snap.Sample.SceneModel
+  commentId: T:Synesthesias.Snap.Sample.SceneModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.SceneModel.html
+  name: SceneModel
+  nameWithType: SceneModel
+  fullName: Synesthesias.Snap.Sample.SceneModel
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.Dispose*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel_Dispose
+  name: Dispose
+  nameWithType: DetectionMenuModel.Dispose
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel_PopulateElements
+  name: PopulateElements
+  nameWithType: DetectionMenuModel.PopulateElements
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.PopulateElements
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionMenuModel.AddElement
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html#Synesthesias_Snap_Sample_DetectionMenuModel_AddElement_Synesthesias_Snap_Sample_DetectionMenuElementModel_Synesthesias_Snap_Sample_EnvironmentType_
+  name: AddElement
+  nameWithType: DetectionMenuModel.AddElement
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel.AddElement
+- uid: Synesthesias.Snap.Sample.DetectionMenuElementModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMenuElementModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMenuElementModel.html
+  name: DetectionMenuElementModel
+  nameWithType: DetectionMenuElementModel
+  fullName: Synesthesias.Snap.Sample.DetectionMenuElementModel
+- uid: Synesthesias.Snap.Sample.EnvironmentType
+  commentId: T:Synesthesias.Snap.Sample.EnvironmentType
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.EnvironmentType.html
+  name: EnvironmentType
+  nameWithType: EnvironmentType
+  fullName: Synesthesias.Snap.Sample.EnvironmentType

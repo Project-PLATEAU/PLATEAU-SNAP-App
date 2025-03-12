@@ -1,0 +1,678 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  id: IAsynchronousClient
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAsynchronousClient
+  nameWithType: IAsynchronousClient
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  type: Interface
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IAsynchronousClient
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: >-
+    Contract for Asynchronous RESTful API interactions.
+
+
+    This interface allows consumers to provide a custom API accessor client.
+  example: []
+  syntax:
+    content: public interface IAsynchronousClient
+    content.vb: Public Interface IAsynchronousClient
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: GetAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: GetAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.GetAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 31
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the GET http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> GetAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function GetAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync*
+  nameWithType.vb: IAsynchronousClient.GetAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: GetAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: PostAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: PostAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.PostAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: PostAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 42
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the POST http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> PostAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function PostAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync*
+  nameWithType.vb: IAsynchronousClient.PostAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: PostAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: PutAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: PutAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.PutAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: PutAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 53
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the PUT http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> PutAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function PutAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync*
+  nameWithType.vb: IAsynchronousClient.PutAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: PutAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: DeleteAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.DeleteAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DeleteAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 64
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the DELETE http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> DeleteAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function DeleteAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync*
+  nameWithType.vb: IAsynchronousClient.DeleteAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: DeleteAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: HeadAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: HeadAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.HeadAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: HeadAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 75
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the HEAD http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> HeadAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function HeadAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync*
+  nameWithType.vb: IAsynchronousClient.HeadAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: HeadAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: OptionsAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: OptionsAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.OptionsAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: OptionsAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 86
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the OPTIONS http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> OptionsAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function OptionsAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync*
+  nameWithType.vb: IAsynchronousClient.OptionsAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: OptionsAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  id: PatchAsync``1(System.String,Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions,Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration,System.Threading.CancellationToken)
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient
+  langs:
+  - csharp
+  - vb
+  name: PatchAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  nameWithType: IAsynchronousClient.PatchAsync<T>(string, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync<T>(string, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: PatchAsync
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/IAsynchronousClient.cs
+    startLine: 97
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Executes a non-blocking call to some <code class="paramref">path</code> using the PATCH http verb.
+  example: []
+  syntax:
+    content: Task<ApiResponse<T>> PatchAsync<T>(string path, RequestOptions options, IReadableConfiguration configuration = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: path
+      type: System.String
+      description: The relative path to invoke.
+    - id: options
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+      description: The request parameters to pass along to the client.
+    - id: configuration
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+      description: Per-request configurable settings.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation Token to cancel the request.
+    typeParameters:
+    - id: T
+      description: The return type.
+    return:
+      type: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+      description: A task eventually representing the response data, decorated with <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function PatchAsync(Of T)(path As String, options As RequestOptions, configuration As IReadableConfiguration = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of ApiResponse(Of T))
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync*
+  nameWithType.vb: IAsynchronousClient.PatchAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync(Of T)(String, Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions, Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration, System.Threading.CancellationToken)
+  name.vb: PatchAsync(Of T)(String, RequestOptions, IReadableConfiguration, CancellationToken)
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  name: ApiResponse<T>
+  nameWithType: ApiResponse<T>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<T>
+  nameWithType.vb: ApiResponse(Of T)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of T)
+  name.vb: ApiResponse(Of T)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_GetAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: GetAsync
+  nameWithType: IAsynchronousClient.GetAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.GetAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions.html
+  name: RequestOptions
+  nameWithType: RequestOptions
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.RequestOptions
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration.html
+  name: IReadableConfiguration
+  nameWithType: IReadableConfiguration
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IReadableConfiguration
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{{T}}}
+  commentId: T:System.Threading.Tasks.Task{Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ApiResponse<T>>
+  nameWithType: Task<ApiResponse<T>>
+  fullName: System.Threading.Tasks.Task<Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse<T>>
+  nameWithType.vb: Task(Of ApiResponse(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse(Of T))
+  name.vb: Task(Of ApiResponse(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse`1
+    name: ApiResponse
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_PostAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: PostAsync
+  nameWithType: IAsynchronousClient.PostAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PostAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_PutAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: PutAsync
+  nameWithType: IAsynchronousClient.PutAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PutAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_DeleteAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: DeleteAsync
+  nameWithType: IAsynchronousClient.DeleteAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.DeleteAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_HeadAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: HeadAsync
+  nameWithType: IAsynchronousClient.HeadAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.HeadAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_OptionsAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: OptionsAsync
+  nameWithType: IAsynchronousClient.OptionsAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.OptionsAsync
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.html#Synesthesias_PLATEAU_Snap_Generated_Client_IAsynchronousClient_PatchAsync__1_System_String_Synesthesias_PLATEAU_Snap_Generated_Client_RequestOptions_Synesthesias_PLATEAU_Snap_Generated_Client_IReadableConfiguration_System_Threading_CancellationToken_
+  name: PatchAsync
+  nameWithType: IAsynchronousClient.PatchAsync
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.IAsynchronousClient.PatchAsync

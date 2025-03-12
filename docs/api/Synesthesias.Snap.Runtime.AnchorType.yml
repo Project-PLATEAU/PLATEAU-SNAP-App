@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.AnchorType
+  commentId: T:Synesthesias.Snap.Runtime.AnchorType
+  id: AnchorType
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.AnchorType.Geospatial
+  - Synesthesias.Snap.Runtime.AnchorType.Rooftop
+  - Synesthesias.Snap.Runtime.AnchorType.Terrain
+  langs:
+  - csharp
+  - vb
+  name: AnchorType
+  nameWithType: AnchorType
+  fullName: Synesthesias.Snap.Runtime.AnchorType
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: AnchorType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Describes the current type of anchor created by screen tap.
+  example: []
+  syntax:
+    content: public enum AnchorType
+    content.vb: Public Enum AnchorType
+- uid: Synesthesias.Snap.Runtime.AnchorType.Geospatial
+  commentId: F:Synesthesias.Snap.Runtime.AnchorType.Geospatial
+  id: Geospatial
+  parent: Synesthesias.Snap.Runtime.AnchorType
+  langs:
+  - csharp
+  - vb
+  name: Geospatial
+  nameWithType: AnchorType.Geospatial
+  fullName: Synesthesias.Snap.Runtime.AnchorType.Geospatial
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Geospatial
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 34
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Type <code>GeospatialAnchor</code>.
+  example: []
+  syntax:
+    content: Geospatial = 0
+    return:
+      type: Synesthesias.Snap.Runtime.AnchorType
+- uid: Synesthesias.Snap.Runtime.AnchorType.Rooftop
+  commentId: F:Synesthesias.Snap.Runtime.AnchorType.Rooftop
+  id: Rooftop
+  parent: Synesthesias.Snap.Runtime.AnchorType
+  langs:
+  - csharp
+  - vb
+  name: Rooftop
+  nameWithType: AnchorType.Rooftop
+  fullName: Synesthesias.Snap.Runtime.AnchorType.Rooftop
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Rooftop
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 39
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Type <code>RooftopAnchor</code>.
+  example: []
+  syntax:
+    content: Rooftop = 1
+    return:
+      type: Synesthesias.Snap.Runtime.AnchorType
+- uid: Synesthesias.Snap.Runtime.AnchorType.Terrain
+  commentId: F:Synesthesias.Snap.Runtime.AnchorType.Terrain
+  id: Terrain
+  parent: Synesthesias.Snap.Runtime.AnchorType
+  langs:
+  - csharp
+  - vb
+  name: Terrain
+  nameWithType: AnchorType.Terrain
+  fullName: Synesthesias.Snap.Runtime.AnchorType.Terrain
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Terrain
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Anchor.cs
+    startLine: 44
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Type <code>TerrainAnchor</code>.
+  example: []
+  syntax:
+    content: Terrain = 2
+    return:
+      type: Synesthesias.Snap.Runtime.AnchorType
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: Synesthesias.Snap.Runtime.AnchorType
+  commentId: T:Synesthesias.Snap.Runtime.AnchorType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.AnchorType.html
+  name: AnchorType
+  nameWithType: AnchorType
+  fullName: Synesthesias.Snap.Runtime.AnchorType

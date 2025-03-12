@@ -1,0 +1,783 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionTouchModel
+  id: DetectionTouchModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.DetectionTouchModel.#ctor(Synesthesias.Snap.Sample.MeshRepository,Synesthesias.Snap.Sample.DetectionMenuModel)
+  - Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(System.String)
+  - Synesthesias.Snap.Sample.DetectionTouchModel.Dispose
+  - Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
+  - Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
+  - Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable
+  - Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  - Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
+  langs:
+  - csharp
+  - vb
+  name: DetectionTouchModel
+  nameWithType: DetectionTouchModel
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DetectionTouchModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 12
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 建物検出画面の画面タップ関連のModel
+  example: []
+  syntax:
+    content: 'public class DetectionTouchModel : IDisposable'
+    content.vb: Public Class DetectionTouchModel Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
+  commentId: P:Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
+  id: IsTapToCreateAnchor
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: IsTapToCreateAnchor
+  nameWithType: DetectionTouchModel.IsTapToCreateAnchor
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsTapToCreateAnchor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 22
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: タップでアンカーを作成するか
+  example: []
+  syntax:
+    content: public bool IsTapToCreateAnchor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTapToCreateAnchor As Boolean
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor*
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable
+  id: OnSelectedAsObservable
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: OnSelectedAsObservable()
+  nameWithType: DetectionTouchModel.OnSelectedAsObservable()
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: OnSelectedAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 28
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 検出された建物が選択されたかのObservable
+  example: []
+  syntax:
+    content: public Observable<bool> OnSelectedAsObservable()
+    return:
+      type: R3.Observable{System.Boolean}
+    content.vb: Public Function OnSelectedAsObservable() As Observable(Of Boolean)
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable*
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.#ctor(Synesthesias.Snap.Sample.MeshRepository,Synesthesias.Snap.Sample.DetectionMenuModel)
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.#ctor(Synesthesias.Snap.Sample.MeshRepository,Synesthesias.Snap.Sample.DetectionMenuModel)
+  id: '#ctor(Synesthesias.Snap.Sample.MeshRepository,Synesthesias.Snap.Sample.DetectionMenuModel)'
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: DetectionTouchModel(MeshRepository, DetectionMenuModel)
+  nameWithType: DetectionTouchModel.DetectionTouchModel(MeshRepository, DetectionMenuModel)
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.DetectionTouchModel(Synesthesias.Snap.Sample.MeshRepository, Synesthesias.Snap.Sample.DetectionMenuModel)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 34
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public DetectionTouchModel(MeshRepository meshRepository, DetectionMenuModel menuModel)
+    parameters:
+    - id: meshRepository
+      type: Synesthesias.Snap.Sample.MeshRepository
+    - id: menuModel
+      type: Synesthesias.Snap.Sample.DetectionMenuModel
+    content.vb: Public Sub New(meshRepository As MeshRepository, menuModel As DetectionMenuModel)
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.#ctor*
+  nameWithType.vb: DetectionTouchModel.New(MeshRepository, DetectionMenuModel)
+  fullName.vb: Synesthesias.Snap.Sample.DetectionTouchModel.New(Synesthesias.Snap.Sample.MeshRepository, Synesthesias.Snap.Sample.DetectionMenuModel)
+  name.vb: New(MeshRepository, DetectionMenuModel)
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.Dispose
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.Dispose
+  id: Dispose
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DetectionTouchModel.Dispose()
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.Dispose()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Dispose
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 46
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 破棄
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
+  id: TouchScreen(UnityEngine.Camera,UnityEngine.Vector2)
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: TouchScreen(Camera, Vector2)
+  nameWithType: DetectionTouchModel.TouchScreen(Camera, Vector2)
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen(UnityEngine.Camera, UnityEngine.Vector2)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: TouchScreen
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 54
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 画面をタッチ
+  example: []
+  syntax:
+    content: public void TouchScreen(Camera camera, Vector2 screenPosition)
+    parameters:
+    - id: camera
+      type: UnityEngine.Camera
+    - id: screenPosition
+      type: UnityEngine.Vector2
+    content.vb: Public Sub TouchScreen(camera As Camera, screenPosition As Vector2)
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen*
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(System.String)
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(System.String)
+  id: ContainsMeshId(System.String)
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: ContainsMeshId(string)
+  nameWithType: DetectionTouchModel.ContainsMeshId(string)
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ContainsMeshId
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 62
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: メッシュIDを含むか
+  example: []
+  syntax:
+    content: public bool ContainsMeshId(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsMeshId(id As String) As Boolean
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId*
+  nameWithType.vb: DetectionTouchModel.ContainsMeshId(String)
+  fullName.vb: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId(String)
+  name.vb: ContainsMeshId(String)
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  id: SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: SetDetectedMeshView(IMobileDetectionMeshView)
+  nameWithType: DetectionTouchModel.SetDetectedMeshView(IMobileDetectionMeshView)
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView(Synesthesias.Snap.Sample.IMobileDetectionMeshView)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetDetectedMeshView
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 70
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 検出されたメッシュのViewを設定する
+  example: []
+  syntax:
+    content: public void SetDetectedMeshView(IMobileDetectionMeshView meshView)
+    parameters:
+    - id: meshView
+      type: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    content.vb: Public Sub SetDetectedMeshView(meshView As IMobileDetectionMeshView)
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView*
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
+  commentId: M:Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
+  id: GetSelectedMeshView
+  parent: Synesthesias.Snap.Sample.DetectionTouchModel
+  langs:
+  - csharp
+  - vb
+  name: GetSelectedMeshView()
+  nameWithType: DetectionTouchModel.GetSelectedMeshView()
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetSelectedMeshView
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Detection/DetectionTouchModel.cs
+    startLine: 78
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 選択されたメッシュのViewを取得する
+  example: []
+  syntax:
+    content: public IMobileDetectionMeshView GetSelectedMeshView()
+    return:
+      type: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+    content.vb: Public Function GetSelectedMeshView() As IMobileDetectionMeshView
+  overload: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView*
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_IsTapToCreateAnchor
+  name: IsTapToCreateAnchor
+  nameWithType: DetectionTouchModel.IsTapToCreateAnchor
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.IsTapToCreateAnchor
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_OnSelectedAsObservable
+  name: OnSelectedAsObservable
+  nameWithType: DetectionTouchModel.OnSelectedAsObservable
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.OnSelectedAsObservable
+- uid: R3.Observable{System.Boolean}
+  commentId: T:R3.Observable{System.Boolean}
+  parent: R3
+  definition: R3.Observable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Observable<bool>
+  nameWithType: Observable<bool>
+  fullName: R3.Observable<bool>
+  nameWithType.vb: Observable(Of Boolean)
+  fullName.vb: R3.Observable(Of Boolean)
+  name.vb: Observable(Of Boolean)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: R3.Observable`1
+  commentId: T:R3.Observable`1
+  isExternal: true
+  name: Observable<T>
+  nameWithType: Observable<T>
+  fullName: R3.Observable<T>
+  nameWithType.vb: Observable(Of T)
+  fullName.vb: R3.Observable(Of T)
+  name.vb: Observable(Of T)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: R3
+  commentId: N:R3
+  isExternal: true
+  name: R3
+  nameWithType: R3
+  fullName: R3
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.#ctor
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel__ctor_Synesthesias_Snap_Sample_MeshRepository_Synesthesias_Snap_Sample_DetectionMenuModel_
+  name: DetectionTouchModel
+  nameWithType: DetectionTouchModel.DetectionTouchModel
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.DetectionTouchModel
+  nameWithType.vb: DetectionTouchModel.New
+  fullName.vb: Synesthesias.Snap.Sample.DetectionTouchModel.New
+  name.vb: New
+- uid: Synesthesias.Snap.Sample.MeshRepository
+  commentId: T:Synesthesias.Snap.Sample.MeshRepository
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.MeshRepository.html
+  name: MeshRepository
+  nameWithType: MeshRepository
+  fullName: Synesthesias.Snap.Sample.MeshRepository
+- uid: Synesthesias.Snap.Sample.DetectionMenuModel
+  commentId: T:Synesthesias.Snap.Sample.DetectionMenuModel
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DetectionMenuModel.html
+  name: DetectionMenuModel
+  nameWithType: DetectionMenuModel
+  fullName: Synesthesias.Snap.Sample.DetectionMenuModel
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.Dispose*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.Dispose
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_Dispose
+  name: Dispose
+  nameWithType: DetectionTouchModel.Dispose
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_TouchScreen_UnityEngine_Camera_UnityEngine_Vector2_
+  name: TouchScreen
+  nameWithType: DetectionTouchModel.TouchScreen
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.TouchScreen
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: UnityEngine.Vector2
+  commentId: T:UnityEngine.Vector2
+  parent: UnityEngine
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_ContainsMeshId_System_String_
+  name: ContainsMeshId
+  nameWithType: DetectionTouchModel.ContainsMeshId
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.ContainsMeshId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_SetDetectedMeshView_Synesthesias_Snap_Sample_IMobileDetectionMeshView_
+  name: SetDetectedMeshView
+  nameWithType: DetectionTouchModel.SetDetectedMeshView
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.SetDetectedMeshView
+- uid: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+  commentId: T:Synesthesias.Snap.Sample.IMobileDetectionMeshView
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.IMobileDetectionMeshView.html
+  name: IMobileDetectionMeshView
+  nameWithType: IMobileDetectionMeshView
+  fullName: Synesthesias.Snap.Sample.IMobileDetectionMeshView
+- uid: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView*
+  commentId: Overload:Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView
+  href: Synesthesias.Snap.Sample.DetectionTouchModel.html#Synesthesias_Snap_Sample_DetectionTouchModel_GetSelectedMeshView
+  name: GetSelectedMeshView
+  nameWithType: DetectionTouchModel.GetSelectedMeshView
+  fullName: Synesthesias.Snap.Sample.DetectionTouchModel.GetSelectedMeshView

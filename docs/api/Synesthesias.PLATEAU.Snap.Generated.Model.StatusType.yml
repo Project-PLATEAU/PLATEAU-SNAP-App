@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  id: StatusType
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Error
+  - Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Success
+  langs:
+  - csharp
+  - vb
+  name: StatusType
+  nameWithType: StatusType
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/StatusType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: StatusType
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/StatusType.cs
+    startLine: 30
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Defines StatusType
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum StatusType
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum StatusType
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Success
+  commentId: F:Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Success
+  id: Success
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: StatusType.Success
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Success
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/StatusType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Success
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/StatusType.cs
+    startLine: 36
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: 'Enum Success for value: success'
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "success")]
+
+      Success = 1
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+    content.vb: >-
+      <EnumMember(Value:="success")>
+
+      Success = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: success
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Error
+  commentId: F:Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Error
+  id: Error
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: StatusType.Error
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.Error
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/StatusType.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Error
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/StatusType.cs
+    startLine: 42
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: 'Enum Error for value: error'
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "error")]
+
+      Error = 2
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+    content.vb: >-
+      <EnumMember(Value:="error")>
+
+      Error = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: error
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.StatusType
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType.html
+  name: StatusType
+  nameWithType: StatusType
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.StatusType

@@ -1,0 +1,470 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  id: GeospatialAccuracyThresholdModel
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.#ctor(System.Double,System.Double)
+  - Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default
+  - Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HeadingThreshold
+  - Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HorizontalAccuracyThreshold
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAccuracyThresholdModel
+  nameWithType: GeospatialAccuracyThresholdModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialAccuracyThresholdModel
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Geospatialの精度のしきい値のModel
+  example: []
+  syntax:
+    content: public class GeospatialAccuracyThresholdModel
+    content.vb: Public Class GeospatialAccuracyThresholdModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HeadingThreshold
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HeadingThreshold
+  id: HeadingThreshold
+  parent: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  langs:
+  - csharp
+  - vb
+  name: HeadingThreshold
+  nameWithType: GeospatialAccuracyThresholdModel.HeadingThreshold
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HeadingThreshold
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: HeadingThreshold
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 方位角のしきい値
+  example: []
+  syntax:
+    content: public readonly double HeadingThreshold
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly HeadingThreshold As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HorizontalAccuracyThreshold
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HorizontalAccuracyThreshold
+  id: HorizontalAccuracyThreshold
+  parent: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  langs:
+  - csharp
+  - vb
+  name: HorizontalAccuracyThreshold
+  nameWithType: GeospatialAccuracyThresholdModel.HorizontalAccuracyThreshold
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.HorizontalAccuracyThreshold
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: HorizontalAccuracyThreshold
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 水平精度のしきい値
+  example: []
+  syntax:
+    content: public readonly double HorizontalAccuracyThreshold
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly HorizontalAccuracyThreshold As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default
+  id: Default
+  parent: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: GeospatialAccuracyThresholdModel.Default
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Default
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: デフォルト
+  example: []
+  syntax:
+    content: public static GeospatialAccuracyThresholdModel Default { get; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+    content.vb: Public Shared ReadOnly Property [Default] As GeospatialAccuracyThresholdModel
+  overload: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default*
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.#ctor(System.Double,System.Double)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAccuracyThresholdModel(double, double)
+  nameWithType: GeospatialAccuracyThresholdModel.GeospatialAccuracyThresholdModel(double, double)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.GeospatialAccuracyThresholdModel(double, double)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Accuracy/GeospatialAccuracyThresholdModel.cs
+    startLine: 27
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public GeospatialAccuracyThresholdModel(double headingThreshold, double horizontalAccuracyThreshold)
+    parameters:
+    - id: headingThreshold
+      type: System.Double
+    - id: horizontalAccuracyThreshold
+      type: System.Double
+    content.vb: Public Sub New(headingThreshold As Double, horizontalAccuracyThreshold As Double)
+  overload: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.#ctor*
+  nameWithType.vb: GeospatialAccuracyThresholdModel.New(Double, Double)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.New(Double, Double)
+  name.vb: New(Double, Double)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default
+  href: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.html#Synesthesias_Snap_Runtime_GeospatialAccuracyThresholdModel_Default
+  name: Default
+  nameWithType: GeospatialAccuracyThresholdModel.Default
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.Default
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.html
+  name: GeospatialAccuracyThresholdModel
+  nameWithType: GeospatialAccuracyThresholdModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.html#Synesthesias_Snap_Runtime_GeospatialAccuracyThresholdModel__ctor_System_Double_System_Double_
+  name: GeospatialAccuracyThresholdModel
+  nameWithType: GeospatialAccuracyThresholdModel.GeospatialAccuracyThresholdModel
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.GeospatialAccuracyThresholdModel
+  nameWithType.vb: GeospatialAccuracyThresholdModel.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAccuracyThresholdModel.New
+  name.vb: New

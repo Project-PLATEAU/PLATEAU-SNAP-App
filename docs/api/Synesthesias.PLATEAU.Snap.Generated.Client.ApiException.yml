@@ -1,0 +1,870 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  id: ApiException
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor(System.Int32,System.String)
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor(System.Int32,System.String,System.Object,Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String})
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent
+  - Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers
+  langs:
+  - csharp
+  - vb
+  name: ApiException
+  nameWithType: ApiException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ApiException
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 17
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: API Exception
+  example: []
+  syntax:
+    content: 'public class ApiException : Exception, ISerializable'
+    content.vb: Public Class ApiException Inherits Exception Implements ISerializable
+  inheritance:
+  - System.Object
+  - System.Exception
+  implements:
+  - System.Runtime.Serialization.ISerializable
+  inheritedMembers:
+  - System.Exception.GetBaseException
+  - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - System.Exception.GetType
+  - System.Exception.ToString
+  - System.Exception.Data
+  - System.Exception.HelpLink
+  - System.Exception.HResult
+  - System.Exception.InnerException
+  - System.Exception.Message
+  - System.Exception.Source
+  - System.Exception.StackTrace
+  - System.Exception.TargetSite
+  - System.Exception.SerializeObjectState
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode
+  id: ErrorCode
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  langs:
+  - csharp
+  - vb
+  name: ErrorCode
+  nameWithType: ApiException.ErrorCode
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ErrorCode
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 23
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets the error code (HTTP status code)
+  example: []
+  syntax:
+    content: public int ErrorCode { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The error code (HTTP status code).
+    content.vb: Public Property ErrorCode As Integer
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent
+  id: ErrorContent
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  langs:
+  - csharp
+  - vb
+  name: ErrorContent
+  nameWithType: ApiException.ErrorContent
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ErrorContent
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 29
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets the error content (body json object)
+  example: []
+  syntax:
+    content: public object ErrorContent { get; }
+    parameters: []
+    return:
+      type: System.Object
+      description: The error content (Http response body).
+    content.vb: Public Property ErrorContent As Object
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers
+  id: Headers
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: ApiException.Headers
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Headers
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 35
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Gets or sets the HTTP headers
+  example: []
+  syntax:
+    content: public Multimap<string, string> Headers { get; }
+    parameters: []
+    return:
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+      description: HTTP headers
+    content.vb: Public Property Headers As Multimap(Of String, String)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor
+  id: '#ctor'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  langs:
+  - csharp
+  - vb
+  name: ApiException()
+  nameWithType: ApiException.ApiException()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ApiException()
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 40
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public ApiException()
+    content.vb: Public Sub New()
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor*
+  nameWithType.vb: ApiException.New()
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.New()
+  name.vb: New()
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor(System.Int32,System.String)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor(System.Int32,System.String)
+  id: '#ctor(System.Int32,System.String)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  langs:
+  - csharp
+  - vb
+  name: ApiException(int, string)
+  nameWithType: ApiException.ApiException(int, string)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ApiException(int, string)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 47
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public ApiException(int errorCode, string message)
+    parameters:
+    - id: errorCode
+      type: System.Int32
+      description: HTTP status code.
+    - id: message
+      type: System.String
+      description: Error message.
+    content.vb: Public Sub New(errorCode As Integer, message As String)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor*
+  nameWithType.vb: ApiException.New(Integer, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.New(Integer, String)
+  name.vb: New(Integer, String)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor(System.Int32,System.String,System.Object,Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String})
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor(System.Int32,System.String,System.Object,Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String})
+  id: '#ctor(System.Int32,System.String,System.Object,Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String})'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  langs:
+  - csharp
+  - vb
+  name: ApiException(int, string, object, Multimap<string, string>)
+  nameWithType: ApiException.ApiException(int, string, object, Multimap<string, string>)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ApiException(int, string, object, Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<string, string>)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Client/ApiException.cs
+    startLine: 59
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Client
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Client.ApiException" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public ApiException(int errorCode, string message, object errorContent = null, Multimap<string, string> headers = null)
+    parameters:
+    - id: errorCode
+      type: System.Int32
+      description: HTTP status code.
+    - id: message
+      type: System.String
+      description: Error message.
+    - id: errorContent
+      type: System.Object
+      description: Error content.
+    - id: headers
+      type: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+      description: HTTP Headers.
+    content.vb: Public Sub New(errorCode As Integer, message As String, errorContent As Object = Nothing, headers As Multimap(Of String, String) = Nothing)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor*
+  nameWithType.vb: ApiException.New(Integer, String, Object, Multimap(Of String, String))
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.New(Integer, String, Object, Synesthesias.PLATEAU.Snap.Generated.Client.Multimap(Of String, String))
+  name.vb: New(Integer, String, Object, Multimap(Of String, String))
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Client
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Client
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client
+    name: Client
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
+  fullName: System.Exception.GetBaseException()
+  spec.csharp:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  - name: (
+  - name: )
+- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
+  - name: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getobjectdata
+  - name: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo
+  - name: ','
+  - name: " "
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
+  - name: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  - name: (
+  - name: )
+- uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  name: ToString()
+  nameWithType: Exception.ToString()
+  fullName: System.Exception.ToString()
+  spec.csharp:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.data
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.helplink
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.hresult
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.innerexception
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
+- uid: System.Exception.Message
+  commentId: P:System.Exception.Message
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.message
+  name: Message
+  nameWithType: Exception.Message
+  fullName: System.Exception.Message
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.source
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.stacktrace
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.targetsite
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
+- uid: System.Exception.SerializeObjectState
+  commentId: E:System.Exception.SerializeObjectState
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.serializeobjectstate
+  name: SerializeObjectState
+  nameWithType: Exception.SerializeObjectState
+  fullName: System.Exception.SerializeObjectState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html#Synesthesias_PLATEAU_Snap_Generated_Client_ApiException_ErrorCode
+  name: ErrorCode
+  nameWithType: ApiException.ErrorCode
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html#Synesthesias_PLATEAU_Snap_Generated_Client_ApiException_ErrorContent
+  name: ErrorContent
+  nameWithType: ApiException.ErrorContent
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ErrorContent
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html#Synesthesias_PLATEAU_Snap_Generated_Client_ApiException_Headers
+  name: Headers
+  nameWithType: ApiException.Headers
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.Headers
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Multimap{System.String,System.String}
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  definition: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  name: Multimap<string, string>
+  nameWithType: Multimap<string, string>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<string, string>
+  nameWithType.vb: Multimap(Of String, String)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap(Of String, String)
+  name.vb: Multimap(Of String, String)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+  parent: Synesthesias.PLATEAU.Snap.Generated.Client
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  name: Multimap<TKey, TValue>
+  nameWithType: Multimap<TKey, TValue>
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap<TKey, TValue>
+  nameWithType.vb: Multimap(Of TKey, TValue)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap(Of TKey, TValue)
+  name.vb: Multimap(Of TKey, TValue)
+  spec.csharp:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap`2
+    name: Multimap
+    href: Synesthesias.PLATEAU.Snap.Generated.Client.Multimap-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html
+  name: ApiException
+  nameWithType: ApiException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException
+- uid: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.#ctor
+  href: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.html#Synesthesias_PLATEAU_Snap_Generated_Client_ApiException__ctor
+  name: ApiException
+  nameWithType: ApiException.ApiException
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.ApiException
+  nameWithType.vb: ApiException.New
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Client.ApiException.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

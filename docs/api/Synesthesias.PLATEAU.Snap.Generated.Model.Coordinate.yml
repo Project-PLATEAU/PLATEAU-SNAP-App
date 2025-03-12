@@ -1,0 +1,659 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  id: Coordinate
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  children:
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.#ctor(System.Double,System.Double,System.Double)
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson
+  - Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString
+  langs:
+  - csharp
+  - vb
+  name: Coordinate
+  nameWithType: Coordinate
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Coordinate
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 30
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Coordinate
+  example: []
+  syntax:
+    content: >-
+      [DataContract(Name = "Coordinate")]
+
+      public class Coordinate
+    content.vb: >-
+      <DataContract(Name:="Coordinate")>
+
+      Public Class Coordinate
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Coordinate
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  langs:
+  - csharp
+  - vb
+  name: Coordinate(double, double, double)
+  nameWithType: Coordinate.Coordinate(double, double, double)
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Coordinate(double, double, double)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 39
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Initializes a new instance of the <xref href="Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Coordinate(double longitude = 0, double latitude = 0, double altitude = 0)
+    parameters:
+    - id: longitude
+      type: System.Double
+      description: longitude.
+    - id: latitude
+      type: System.Double
+      description: latitude.
+    - id: altitude
+      type: System.Double
+      description: altitude.
+    content.vb: Public Sub New(longitude As Double = 0, latitude As Double = 0, altitude As Double = 0)
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.#ctor*
+  nameWithType.vb: Coordinate.New(Double, Double, Double)
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.New(Double, Double, Double)
+  name.vb: New(Double, Double, Double)
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude
+  id: Longitude
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: Coordinate.Longitude
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Longitude
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 49
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Gets or Sets Longitude
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "longitude", EmitDefaultValue = false)]
+
+      public double Longitude { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember(Name:="longitude", EmitDefaultValue:=False)>
+
+      Public Property Longitude As Double
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: longitude
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude
+  id: Latitude
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: Coordinate.Latitude
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Latitude
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 55
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Gets or Sets Latitude
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "latitude", EmitDefaultValue = false)]
+
+      public double Latitude { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember(Name:="latitude", EmitDefaultValue:=False)>
+
+      Public Property Latitude As Double
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: latitude
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude
+  commentId: P:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude
+  id: Altitude
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  langs:
+  - csharp
+  - vb
+  name: Altitude
+  nameWithType: Coordinate.Altitude
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Altitude
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 61
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Gets or Sets Altitude
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "altitude", EmitDefaultValue = false)]
+
+      public double Altitude { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember(Name:="altitude", EmitDefaultValue:=False)>
+
+      Public Property Altitude As Double
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: altitude
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString
+  id: ToString
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Coordinate.ToString()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ToString
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 68
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Returns the string presentation of the object
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: String presentation of the object
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString*
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson
+  commentId: M:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson
+  id: ToJson
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Coordinate.ToJson()
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ToJson
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Generated/Client/Model/Coordinate.cs
+    startLine: 83
+  assemblies:
+  - Synesthesias.Snap.Generated.Sample
+  namespace: Synesthesias.PLATEAU.Snap.Generated.Model
+  summary: Returns the JSON string presentation of the object
+  example: []
+  syntax:
+    content: public virtual string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Overridable Function ToJson() As String
+  overload: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson*
+references:
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model
+  commentId: N:Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.html
+  name: Synesthesias.PLATEAU.Snap.Generated.Model
+  nameWithType: Synesthesias.PLATEAU.Snap.Generated.Model
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.PLATEAU
+    name: PLATEAU
+    href: Synesthesias.PLATEAU.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap
+    name: Snap
+    href: Synesthesias.PLATEAU.Snap.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated
+    name: Generated
+    href: Synesthesias.PLATEAU.Snap.Generated.html
+  - name: .
+  - uid: Synesthesias.PLATEAU.Snap.Generated.Model
+    name: Model
+    href: Synesthesias.PLATEAU.Snap.Generated.Model.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  commentId: T:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+  parent: Synesthesias.PLATEAU.Snap.Generated.Model
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html
+  name: Coordinate
+  nameWithType: Coordinate
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.#ctor*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.#ctor
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html#Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate__ctor_System_Double_System_Double_System_Double_
+  name: Coordinate
+  nameWithType: Coordinate.Coordinate
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Coordinate
+  nameWithType.vb: Coordinate.New
+  fullName.vb: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.New
+  name.vb: New
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html#Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_Longitude
+  name: Longitude
+  nameWithType: Coordinate.Longitude
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Longitude
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html#Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_Latitude
+  name: Latitude
+  nameWithType: Coordinate.Latitude
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Latitude
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html#Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_Altitude
+  name: Altitude
+  nameWithType: Coordinate.Altitude
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.Altitude
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html#Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_ToString
+  name: ToString
+  nameWithType: Coordinate.ToString
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson*
+  commentId: Overload:Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson
+  href: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.html#Synesthesias_PLATEAU_Snap_Generated_Model_Coordinate_ToJson
+  name: ToJson
+  nameWithType: Coordinate.ToJson
+  fullName: Synesthesias.PLATEAU.Snap.Generated.Model.Coordinate.ToJson

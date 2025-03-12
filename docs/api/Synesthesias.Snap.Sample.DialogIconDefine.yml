@@ -1,0 +1,213 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.DialogIconDefine
+  commentId: T:Synesthesias.Snap.Sample.DialogIconDefine
+  id: DialogIconDefine
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.DialogIconDefine.Error1
+  - Synesthesias.Snap.Sample.DialogIconDefine.Error2
+  - Synesthesias.Snap.Sample.DialogIconDefine.None
+  - Synesthesias.Snap.Sample.DialogIconDefine.Success1
+  - Synesthesias.Snap.Sample.DialogIconDefine.Success2
+  langs:
+  - csharp
+  - vb
+  name: DialogIconDefine
+  nameWithType: DialogIconDefine
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine
+  type: Enum
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DialogIconDefine
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: ダイアログアイコンの定義
+  example: []
+  syntax:
+    content: public enum DialogIconDefine
+    content.vb: Public Enum DialogIconDefine
+- uid: Synesthesias.Snap.Sample.DialogIconDefine.None
+  commentId: F:Synesthesias.Snap.Sample.DialogIconDefine.None
+  id: None
+  parent: Synesthesias.Snap.Sample.DialogIconDefine
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: DialogIconDefine.None
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine.None
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: None
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: なし
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Synesthesias.Snap.Sample.DialogIconDefine
+- uid: Synesthesias.Snap.Sample.DialogIconDefine.Success1
+  commentId: F:Synesthesias.Snap.Sample.DialogIconDefine.Success1
+  id: Success1
+  parent: Synesthesias.Snap.Sample.DialogIconDefine
+  langs:
+  - csharp
+  - vb
+  name: Success1
+  nameWithType: DialogIconDefine.Success1
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine.Success1
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Success1
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 成功(1)
+  example: []
+  syntax:
+    content: Success1 = 1
+    return:
+      type: Synesthesias.Snap.Sample.DialogIconDefine
+- uid: Synesthesias.Snap.Sample.DialogIconDefine.Success2
+  commentId: F:Synesthesias.Snap.Sample.DialogIconDefine.Success2
+  id: Success2
+  parent: Synesthesias.Snap.Sample.DialogIconDefine
+  langs:
+  - csharp
+  - vb
+  name: Success2
+  nameWithType: DialogIconDefine.Success2
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine.Success2
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Success2
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 成功(2)
+  example: []
+  syntax:
+    content: Success2 = 2
+    return:
+      type: Synesthesias.Snap.Sample.DialogIconDefine
+- uid: Synesthesias.Snap.Sample.DialogIconDefine.Error1
+  commentId: F:Synesthesias.Snap.Sample.DialogIconDefine.Error1
+  id: Error1
+  parent: Synesthesias.Snap.Sample.DialogIconDefine
+  langs:
+  - csharp
+  - vb
+  name: Error1
+  nameWithType: DialogIconDefine.Error1
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine.Error1
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Error1
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+    startLine: 25
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: エラー(1)
+  example: []
+  syntax:
+    content: Error1 = 3
+    return:
+      type: Synesthesias.Snap.Sample.DialogIconDefine
+- uid: Synesthesias.Snap.Sample.DialogIconDefine.Error2
+  commentId: F:Synesthesias.Snap.Sample.DialogIconDefine.Error2
+  id: Error2
+  parent: Synesthesias.Snap.Sample.DialogIconDefine
+  langs:
+  - csharp
+  - vb
+  name: Error2
+  nameWithType: DialogIconDefine.Error2
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine.Error2
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Error2
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Define/DialogIconDefine.cs
+    startLine: 30
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: エラー(2)
+  example: []
+  syntax:
+    content: Error2 = 4
+    return:
+      type: Synesthesias.Snap.Sample.DialogIconDefine
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: Synesthesias.Snap.Sample.DialogIconDefine
+  commentId: T:Synesthesias.Snap.Sample.DialogIconDefine
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.DialogIconDefine.html
+  name: DialogIconDefine
+  nameWithType: DialogIconDefine
+  fullName: Synesthesias.Snap.Sample.DialogIconDefine

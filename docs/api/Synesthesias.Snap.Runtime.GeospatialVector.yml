@@ -1,0 +1,434 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialVector
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialVector
+  id: GeospatialVector
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialVector.#ctor(System.Double,System.Double,System.Double)
+  - Synesthesias.Snap.Runtime.GeospatialVector.Altitude
+  - Synesthesias.Snap.Runtime.GeospatialVector.Latitude
+  - Synesthesias.Snap.Runtime.GeospatialVector.Longitude
+  langs:
+  - csharp
+  - vb
+  name: GeospatialVector
+  nameWithType: GeospatialVector
+  fullName: Synesthesias.Snap.Runtime.GeospatialVector
+  type: Struct
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialVector
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+    startLine: 5
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Geospatialのベクトル
+  example: []
+  syntax:
+    content: public struct GeospatialVector
+    content.vb: Public Structure GeospatialVector
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Synesthesias.Snap.Runtime.GeospatialVector.Latitude
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialVector.Latitude
+  id: Latitude
+  parent: Synesthesias.Snap.Runtime.GeospatialVector
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: GeospatialVector.Latitude
+  fullName: Synesthesias.Snap.Runtime.GeospatialVector.Latitude
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Latitude
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 緯度
+  example: []
+  syntax:
+    content: public readonly double Latitude
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Latitude As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialVector.Longitude
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialVector.Longitude
+  id: Longitude
+  parent: Synesthesias.Snap.Runtime.GeospatialVector
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: GeospatialVector.Longitude
+  fullName: Synesthesias.Snap.Runtime.GeospatialVector.Longitude
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Longitude
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 経度
+  example: []
+  syntax:
+    content: public readonly double Longitude
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Longitude As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialVector.Altitude
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialVector.Altitude
+  id: Altitude
+  parent: Synesthesias.Snap.Runtime.GeospatialVector
+  langs:
+  - csharp
+  - vb
+  name: Altitude
+  nameWithType: GeospatialVector.Altitude
+  fullName: Synesthesias.Snap.Runtime.GeospatialVector.Altitude
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Altitude
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+    startLine: 20
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 高度
+  example: []
+  syntax:
+    content: public readonly double Altitude
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Altitude As Double
+- uid: Synesthesias.Snap.Runtime.GeospatialVector.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialVector.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: Synesthesias.Snap.Runtime.GeospatialVector
+  langs:
+  - csharp
+  - vb
+  name: GeospatialVector(double, double, double)
+  nameWithType: GeospatialVector.GeospatialVector(double, double, double)
+  fullName: Synesthesias.Snap.Runtime.GeospatialVector.GeospatialVector(double, double, double)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/Vector/GeospatialVector.cs
+    startLine: 25
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public GeospatialVector(double latitude, double longitude, double altitude)
+    parameters:
+    - id: latitude
+      type: System.Double
+    - id: longitude
+      type: System.Double
+    - id: altitude
+      type: System.Double
+    content.vb: Public Sub New(latitude As Double, longitude As Double, altitude As Double)
+  overload: Synesthesias.Snap.Runtime.GeospatialVector.#ctor*
+  nameWithType.vb: GeospatialVector.New(Double, Double, Double)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialVector.New(Double, Double, Double)
+  name.vb: New(Double, Double, Double)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Synesthesias.Snap.Runtime.GeospatialVector.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialVector.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialVector.html#Synesthesias_Snap_Runtime_GeospatialVector__ctor_System_Double_System_Double_System_Double_
+  name: GeospatialVector
+  nameWithType: GeospatialVector.GeospatialVector
+  fullName: Synesthesias.Snap.Runtime.GeospatialVector.GeospatialVector
+  nameWithType.vb: GeospatialVector.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialVector.New
+  name.vb: New

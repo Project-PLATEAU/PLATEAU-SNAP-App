@@ -1,0 +1,1115 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel
+  commentId: T:Synesthesias.Snap.Sample.ValidationDialogModel
+  id: ValidationDialogModel
+  parent: Synesthesias.Snap.Sample
+  children:
+  - Synesthesias.Snap.Sample.ValidationDialogModel.#ctor
+  - Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable
+  - Synesthesias.Snap.Sample.ValidationDialogModel.Dispose
+  - Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  - Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  - Synesthesias.Snap.Sample.ValidationDialogModel.IsLeftValidProperty
+  - Synesthesias.Snap.Sample.ValidationDialogModel.IsRightValidProperty
+  - Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable
+  - Synesthesias.Snap.Sample.ValidationDialogModel.IsVisibleProperty
+  - Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable
+  - Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription(System.String)
+  - Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter(Synesthesias.Snap.Sample.ValidationDialogParameter)
+  - Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle(System.String)
+  - Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable
+  langs:
+  - csharp
+  - vb
+  name: ValidationDialogModel
+  nameWithType: ValidationDialogModel
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ValidationDialogModel
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 10
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 判定ダイアログのModel
+  example: []
+  syntax:
+    content: 'public class ValidationDialogModel : IDisposable'
+    content.vb: Public Class ValidationDialogModel Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.IsVisibleProperty
+  commentId: F:Synesthesias.Snap.Sample.ValidationDialogModel.IsVisibleProperty
+  id: IsVisibleProperty
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: IsVisibleProperty
+  nameWithType: ValidationDialogModel.IsVisibleProperty
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.IsVisibleProperty
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsVisibleProperty
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 21
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 表示するかどうかのプロパティ
+  example: []
+  syntax:
+    content: public readonly ReactiveProperty<bool> IsVisibleProperty
+    return:
+      type: R3.ReactiveProperty{System.Boolean}
+    content.vb: Public ReadOnly IsVisibleProperty As ReactiveProperty(Of Boolean)
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.IsLeftValidProperty
+  commentId: F:Synesthesias.Snap.Sample.ValidationDialogModel.IsLeftValidProperty
+  id: IsLeftValidProperty
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: IsLeftValidProperty
+  nameWithType: ValidationDialogModel.IsLeftValidProperty
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.IsLeftValidProperty
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsLeftValidProperty
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 26
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 左が有効かどうかのプロパティ
+  example: []
+  syntax:
+    content: public readonly ReactiveProperty<bool> IsLeftValidProperty
+    return:
+      type: R3.ReactiveProperty{System.Boolean}
+    content.vb: Public ReadOnly IsLeftValidProperty As ReactiveProperty(Of Boolean)
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.IsRightValidProperty
+  commentId: F:Synesthesias.Snap.Sample.ValidationDialogModel.IsRightValidProperty
+  id: IsRightValidProperty
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: IsRightValidProperty
+  nameWithType: ValidationDialogModel.IsRightValidProperty
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.IsRightValidProperty
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsRightValidProperty
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 31
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 右が有効かどうかのプロパティ
+  example: []
+  syntax:
+    content: public readonly ReactiveProperty<bool> IsRightValidProperty
+    return:
+      type: R3.ReactiveProperty{System.Boolean}
+    content.vb: Public ReadOnly IsRightValidProperty As ReactiveProperty(Of Boolean)
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable
+  id: ParameterAsObservable
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: ParameterAsObservable()
+  nameWithType: ValidationDialogModel.ParameterAsObservable()
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ParameterAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 36
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 開くのObservable
+  example: []
+  syntax:
+    content: public Observable<ValidationDialogParameter> ParameterAsObservable()
+    return:
+      type: R3.Observable{Synesthesias.Snap.Sample.ValidationDialogParameter}
+    content.vb: Public Function ParameterAsObservable() As Observable(Of ValidationDialogParameter)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable*
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable
+  id: TitleAsObservable
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: TitleAsObservable()
+  nameWithType: ValidationDialogModel.TitleAsObservable()
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: TitleAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 42
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: タイトルのObservable
+  example: []
+  syntax:
+    content: public Observable<string> TitleAsObservable()
+    return:
+      type: R3.Observable{System.String}
+    content.vb: Public Function TitleAsObservable() As Observable(Of String)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable*
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable
+  id: DescriptionAsObservable
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: DescriptionAsObservable()
+  nameWithType: ValidationDialogModel.DescriptionAsObservable()
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: DescriptionAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 48
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 説明のObservable
+  example: []
+  syntax:
+    content: public Observable<string> DescriptionAsObservable()
+    return:
+      type: R3.Observable{System.String}
+    content.vb: Public Function DescriptionAsObservable() As Observable(Of String)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable*
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable
+  id: IsValidAsObservable
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: IsValidAsObservable()
+  nameWithType: ValidationDialogModel.IsValidAsObservable()
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsValidAsObservable
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 54
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 有効かどうかのObservable
+  example: []
+  syntax:
+    content: public Observable<bool> IsValidAsObservable()
+    return:
+      type: R3.Observable{System.Boolean}
+    content.vb: Public Function IsValidAsObservable() As Observable(Of Boolean)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable*
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.#ctor
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.#ctor
+  id: '#ctor'
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: ValidationDialogModel()
+  nameWithType: ValidationDialogModel.ValidationDialogModel()
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.ValidationDialogModel()
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 60
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public ValidationDialogModel()
+    content.vb: Public Sub New()
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.#ctor*
+  nameWithType.vb: ValidationDialogModel.New()
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogModel.New()
+  name.vb: New()
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.Dispose
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.Dispose
+  id: Dispose
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ValidationDialogModel.Dispose()
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.Dispose()
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Dispose
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 68
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 破棄
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter(Synesthesias.Snap.Sample.ValidationDialogParameter)
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter(Synesthesias.Snap.Sample.ValidationDialogParameter)
+  id: SetParameter(Synesthesias.Snap.Sample.ValidationDialogParameter)
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(ValidationDialogParameter)
+  nameWithType: ValidationDialogModel.SetParameter(ValidationDialogParameter)
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter(Synesthesias.Snap.Sample.ValidationDialogParameter)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetParameter
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 76
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: パラメータ設定
+  example: []
+  syntax:
+    content: public void SetParameter(ValidationDialogParameter parameter)
+    parameters:
+    - id: parameter
+      type: Synesthesias.Snap.Sample.ValidationDialogParameter
+    content.vb: Public Sub SetParameter(parameter As ValidationDialogParameter)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter*
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle(System.String)
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle(System.String)
+  id: SetTitle(System.String)
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: SetTitle(string)
+  nameWithType: ValidationDialogModel.SetTitle(string)
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle(string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetTitle
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 84
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: タイトル設定
+  example: []
+  syntax:
+    content: public void SetTitle(string title)
+    parameters:
+    - id: title
+      type: System.String
+    content.vb: Public Sub SetTitle(title As String)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle*
+  nameWithType.vb: ValidationDialogModel.SetTitle(String)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle(String)
+  name.vb: SetTitle(String)
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription(System.String)
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription(System.String)
+  id: SetDescription(System.String)
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: SetDescription(string)
+  nameWithType: ValidationDialogModel.SetDescription(string)
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription(string)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetDescription
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 92
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: 説明設定
+  example: []
+  syntax:
+    content: public void SetDescription(string description)
+    parameters:
+    - id: description
+      type: System.String
+    content.vb: Public Sub SetDescription(description As String)
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription*
+  nameWithType.vb: ValidationDialogModel.SetDescription(String)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription(String)
+  name.vb: SetDescription(String)
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  id: GetTitleIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: GetTitleIconSprite(ValidationDialogIconSprite[], bool)
+  nameWithType: ValidationDialogModel.GetTitleIconSprite(ValidationDialogIconSprite[], bool)
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[], bool)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetTitleIconSprite
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 100
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: タイトルアイコンスプライト取得
+  example: []
+  syntax:
+    content: public Sprite GetTitleIconSprite(ValidationDialogIconSprite[] iconSprites, bool isValid)
+    parameters:
+    - id: iconSprites
+      type: Synesthesias.Snap.Sample.ValidationDialogIconSprite[]
+    - id: isValid
+      type: System.Boolean
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Function GetTitleIconSprite(iconSprites As ValidationDialogIconSprite(), isValid As Boolean) As Sprite
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite*
+  nameWithType.vb: ValidationDialogModel.GetTitleIconSprite(ValidationDialogIconSprite(), Boolean)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite(), Boolean)
+  name.vb: GetTitleIconSprite(ValidationDialogIconSprite(), Boolean)
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  commentId: M:Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  id: GetTextIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[],System.Boolean)
+  parent: Synesthesias.Snap.Sample.ValidationDialogModel
+  langs:
+  - csharp
+  - vb
+  name: GetTextIconSprite(ValidationDialogIconSprite[], bool)
+  nameWithType: ValidationDialogModel.GetTextIconSprite(ValidationDialogIconSprite[], bool)
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite[], bool)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetTextIconSprite
+    path: ../SnapForUnity/Assets/Samples/Synesthesias.Snap/Scripts/Model/Dialog/ValidationDialogModel.cs
+    startLine: 115
+  assemblies:
+  - Synesthesias.Snap.Sample
+  namespace: Synesthesias.Snap.Sample
+  summary: テキストアイコンスプライト取得
+  example: []
+  syntax:
+    content: public Sprite GetTextIconSprite(ValidationDialogIconSprite[] iconSprites, bool isValid)
+    parameters:
+    - id: iconSprites
+      type: Synesthesias.Snap.Sample.ValidationDialogIconSprite[]
+    - id: isValid
+      type: System.Boolean
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Function GetTextIconSprite(iconSprites As ValidationDialogIconSprite(), isValid As Boolean) As Sprite
+  overload: Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite*
+  nameWithType.vb: ValidationDialogModel.GetTextIconSprite(ValidationDialogIconSprite(), Boolean)
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite(Synesthesias.Snap.Sample.ValidationDialogIconSprite(), Boolean)
+  name.vb: GetTextIconSprite(ValidationDialogIconSprite(), Boolean)
+references:
+- uid: Synesthesias.Snap.Sample
+  commentId: N:Synesthesias.Snap.Sample
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Sample
+  nameWithType: Synesthesias.Snap.Sample
+  fullName: Synesthesias.Snap.Sample
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Sample
+    name: Sample
+    href: Synesthesias.Snap.Sample.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: R3.ReactiveProperty{System.Boolean}
+  commentId: T:R3.ReactiveProperty{System.Boolean}
+  parent: R3
+  definition: R3.ReactiveProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: ReactiveProperty<bool>
+  nameWithType: ReactiveProperty<bool>
+  fullName: R3.ReactiveProperty<bool>
+  nameWithType.vb: ReactiveProperty(Of Boolean)
+  fullName.vb: R3.ReactiveProperty(Of Boolean)
+  name.vb: ReactiveProperty(Of Boolean)
+  spec.csharp:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: R3.ReactiveProperty`1
+  commentId: T:R3.ReactiveProperty`1
+  isExternal: true
+  name: ReactiveProperty<T>
+  nameWithType: ReactiveProperty<T>
+  fullName: R3.ReactiveProperty<T>
+  nameWithType.vb: ReactiveProperty(Of T)
+  fullName.vb: R3.ReactiveProperty(Of T)
+  name.vb: ReactiveProperty(Of T)
+  spec.csharp:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.ReactiveProperty`1
+    name: ReactiveProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: R3
+  commentId: N:R3
+  isExternal: true
+  name: R3
+  nameWithType: R3
+  fullName: R3
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_ParameterAsObservable
+  name: ParameterAsObservable
+  nameWithType: ValidationDialogModel.ParameterAsObservable
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.ParameterAsObservable
+- uid: R3.Observable{Synesthesias.Snap.Sample.ValidationDialogParameter}
+  commentId: T:R3.Observable{Synesthesias.Snap.Sample.ValidationDialogParameter}
+  parent: R3
+  definition: R3.Observable`1
+  href: Synesthesias.Snap.Sample.ValidationDialogParameter.html
+  name: Observable<ValidationDialogParameter>
+  nameWithType: Observable<ValidationDialogParameter>
+  fullName: R3.Observable<Synesthesias.Snap.Sample.ValidationDialogParameter>
+  nameWithType.vb: Observable(Of ValidationDialogParameter)
+  fullName.vb: R3.Observable(Of Synesthesias.Snap.Sample.ValidationDialogParameter)
+  name.vb: Observable(Of ValidationDialogParameter)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - uid: Synesthesias.Snap.Sample.ValidationDialogParameter
+    name: ValidationDialogParameter
+    href: Synesthesias.Snap.Sample.ValidationDialogParameter.html
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Synesthesias.Snap.Sample.ValidationDialogParameter
+    name: ValidationDialogParameter
+    href: Synesthesias.Snap.Sample.ValidationDialogParameter.html
+  - name: )
+- uid: R3.Observable`1
+  commentId: T:R3.Observable`1
+  isExternal: true
+  name: Observable<T>
+  nameWithType: Observable<T>
+  fullName: R3.Observable<T>
+  nameWithType.vb: Observable(Of T)
+  fullName.vb: R3.Observable(Of T)
+  name.vb: Observable(Of T)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_TitleAsObservable
+  name: TitleAsObservable
+  nameWithType: ValidationDialogModel.TitleAsObservable
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.TitleAsObservable
+- uid: R3.Observable{System.String}
+  commentId: T:R3.Observable{System.String}
+  parent: R3
+  definition: R3.Observable`1
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: Observable<string>
+  nameWithType: Observable<string>
+  fullName: R3.Observable<string>
+  nameWithType.vb: Observable(Of String)
+  fullName.vb: R3.Observable(Of String)
+  name.vb: Observable(Of String)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_DescriptionAsObservable
+  name: DescriptionAsObservable
+  nameWithType: ValidationDialogModel.DescriptionAsObservable
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.DescriptionAsObservable
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_IsValidAsObservable
+  name: IsValidAsObservable
+  nameWithType: ValidationDialogModel.IsValidAsObservable
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.IsValidAsObservable
+- uid: R3.Observable{System.Boolean}
+  commentId: T:R3.Observable{System.Boolean}
+  parent: R3
+  definition: R3.Observable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Observable<bool>
+  nameWithType: Observable<bool>
+  fullName: R3.Observable<bool>
+  nameWithType.vb: Observable(Of Boolean)
+  fullName.vb: R3.Observable(Of Boolean)
+  name.vb: Observable(Of Boolean)
+  spec.csharp:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: R3.Observable`1
+    name: Observable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.#ctor
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel__ctor
+  name: ValidationDialogModel
+  nameWithType: ValidationDialogModel.ValidationDialogModel
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.ValidationDialogModel
+  nameWithType.vb: ValidationDialogModel.New
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogModel.New
+  name.vb: New
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.Dispose*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.Dispose
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_Dispose
+  name: Dispose
+  nameWithType: ValidationDialogModel.Dispose
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_SetParameter_Synesthesias_Snap_Sample_ValidationDialogParameter_
+  name: SetParameter
+  nameWithType: ValidationDialogModel.SetParameter
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.SetParameter
+- uid: Synesthesias.Snap.Sample.ValidationDialogParameter
+  commentId: T:Synesthesias.Snap.Sample.ValidationDialogParameter
+  parent: Synesthesias.Snap.Sample
+  href: Synesthesias.Snap.Sample.ValidationDialogParameter.html
+  name: ValidationDialogParameter
+  nameWithType: ValidationDialogParameter
+  fullName: Synesthesias.Snap.Sample.ValidationDialogParameter
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_SetTitle_System_String_
+  name: SetTitle
+  nameWithType: ValidationDialogModel.SetTitle
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.SetTitle
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_SetDescription_System_String_
+  name: SetDescription
+  nameWithType: ValidationDialogModel.SetDescription
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.SetDescription
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_GetTitleIconSprite_Synesthesias_Snap_Sample_ValidationDialogIconSprite___System_Boolean_
+  name: GetTitleIconSprite
+  nameWithType: ValidationDialogModel.GetTitleIconSprite
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.GetTitleIconSprite
+- uid: Synesthesias.Snap.Sample.ValidationDialogIconSprite[]
+  isExternal: true
+  href: Synesthesias.Snap.Sample.ValidationDialogIconSprite.html
+  name: ValidationDialogIconSprite[]
+  nameWithType: ValidationDialogIconSprite[]
+  fullName: Synesthesias.Snap.Sample.ValidationDialogIconSprite[]
+  nameWithType.vb: ValidationDialogIconSprite()
+  fullName.vb: Synesthesias.Snap.Sample.ValidationDialogIconSprite()
+  name.vb: ValidationDialogIconSprite()
+  spec.csharp:
+  - uid: Synesthesias.Snap.Sample.ValidationDialogIconSprite
+    name: ValidationDialogIconSprite
+    href: Synesthesias.Snap.Sample.ValidationDialogIconSprite.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Synesthesias.Snap.Sample.ValidationDialogIconSprite
+    name: ValidationDialogIconSprite
+    href: Synesthesias.Snap.Sample.ValidationDialogIconSprite.html
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite*
+  commentId: Overload:Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite
+  href: Synesthesias.Snap.Sample.ValidationDialogModel.html#Synesthesias_Snap_Sample_ValidationDialogModel_GetTextIconSprite_Synesthesias_Snap_Sample_ValidationDialogIconSprite___System_Boolean_
+  name: GetTextIconSprite
+  nameWithType: ValidationDialogModel.GetTextIconSprite
+  fullName: Synesthesias.Snap.Sample.ValidationDialogModel.GetTextIconSprite

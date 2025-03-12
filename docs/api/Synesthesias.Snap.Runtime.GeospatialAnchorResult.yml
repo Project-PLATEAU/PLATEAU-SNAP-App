@@ -1,0 +1,577 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  id: GeospatialAnchorResult
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResult.#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopState,Synesthesias.Snap.Runtime.GeospatialAccuracyState,Synesthesias.Snap.Runtime.GeospatialAnchorResultType,Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResult.AccuracyState
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResult.Anchor
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResult.IsSuccess
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResult.MainLoopState
+  - Synesthesias.Snap.Runtime.GeospatialAnchorResult.ResultType
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorResult
+  nameWithType: GeospatialAnchorResult
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialAnchorResult
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 7
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: GeospatialAnchorの結果
+  example: []
+  syntax:
+    content: public class GeospatialAnchorResult
+    content.vb: Public Class GeospatialAnchorResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.MainLoopState
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResult.MainLoopState
+  id: MainLoopState
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  langs:
+  - csharp
+  - vb
+  name: MainLoopState
+  nameWithType: GeospatialAnchorResult.MainLoopState
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.MainLoopState
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: MainLoopState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 12
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メインループの状態
+  example: []
+  syntax:
+    content: public readonly GeospatialMainLoopState MainLoopState
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+    content.vb: Public ReadOnly MainLoopState As GeospatialMainLoopState
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.AccuracyState
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResult.AccuracyState
+  id: AccuracyState
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  langs:
+  - csharp
+  - vb
+  name: AccuracyState
+  nameWithType: GeospatialAnchorResult.AccuracyState
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.AccuracyState
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: AccuracyState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 17
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 精度の状態
+  example: []
+  syntax:
+    content: public readonly GeospatialAccuracyState AccuracyState
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAccuracyState
+    content.vb: Public ReadOnly AccuracyState As GeospatialAccuracyState
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.ResultType
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResult.ResultType
+  id: ResultType
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  langs:
+  - csharp
+  - vb
+  name: ResultType
+  nameWithType: GeospatialAnchorResult.ResultType
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.ResultType
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ResultType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 22
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 結果の種類
+  example: []
+  syntax:
+    content: public readonly GeospatialAnchorResultType ResultType
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+    content.vb: Public ReadOnly ResultType As GeospatialAnchorResultType
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.Anchor
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResult.Anchor
+  id: Anchor
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  langs:
+  - csharp
+  - vb
+  name: Anchor
+  nameWithType: GeospatialAnchorResult.Anchor
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.Anchor
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Anchor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 27
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 結果の値
+  example: []
+  syntax:
+    content: public readonly ARGeospatialAnchor Anchor
+    return:
+      type: Google.XR.ARCoreExtensions.ARGeospatialAnchor
+    content.vb: Public ReadOnly Anchor As ARGeospatialAnchor
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.IsSuccess
+  commentId: F:Synesthesias.Snap.Runtime.GeospatialAnchorResult.IsSuccess
+  id: IsSuccess
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: GeospatialAnchorResult.IsSuccess
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.IsSuccess
+  type: Field
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsSuccess
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 32
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 成功かどうか
+  example: []
+  syntax:
+    content: public readonly bool IsSuccess
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly IsSuccess As Boolean
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopState,Synesthesias.Snap.Runtime.GeospatialAccuracyState,Synesthesias.Snap.Runtime.GeospatialAnchorResultType,Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialAnchorResult.#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopState,Synesthesias.Snap.Runtime.GeospatialAccuracyState,Synesthesias.Snap.Runtime.GeospatialAnchorResultType,Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+  id: '#ctor(Synesthesias.Snap.Runtime.GeospatialMainLoopState,Synesthesias.Snap.Runtime.GeospatialAccuracyState,Synesthesias.Snap.Runtime.GeospatialAnchorResultType,Google.XR.ARCoreExtensions.ARGeospatialAnchor)'
+  parent: Synesthesias.Snap.Runtime.GeospatialAnchorResult
+  langs:
+  - csharp
+  - vb
+  name: GeospatialAnchorResult(GeospatialMainLoopState, GeospatialAccuracyState, GeospatialAnchorResultType, ARGeospatialAnchor)
+  nameWithType: GeospatialAnchorResult.GeospatialAnchorResult(GeospatialMainLoopState, GeospatialAccuracyState, GeospatialAnchorResultType, ARGeospatialAnchor)
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.GeospatialAnchorResult(Synesthesias.Snap.Runtime.GeospatialMainLoopState, Synesthesias.Snap.Runtime.GeospatialAccuracyState, Synesthesias.Snap.Runtime.GeospatialAnchorResultType, Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/GeospatialAnchorResult.cs
+    startLine: 37
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public GeospatialAnchorResult(GeospatialMainLoopState mainLoopState, GeospatialAccuracyState accuracyState, GeospatialAnchorResultType resultType = GeospatialAnchorResultType.None, ARGeospatialAnchor anchor = null)
+    parameters:
+    - id: mainLoopState
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+    - id: accuracyState
+      type: Synesthesias.Snap.Runtime.GeospatialAccuracyState
+    - id: resultType
+      type: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+    - id: anchor
+      type: Google.XR.ARCoreExtensions.ARGeospatialAnchor
+    content.vb: Public Sub New(mainLoopState As GeospatialMainLoopState, accuracyState As GeospatialAccuracyState, resultType As GeospatialAnchorResultType = GeospatialAnchorResultType.None, anchor As ARGeospatialAnchor = Nothing)
+  overload: Synesthesias.Snap.Runtime.GeospatialAnchorResult.#ctor*
+  nameWithType.vb: GeospatialAnchorResult.New(GeospatialMainLoopState, GeospatialAccuracyState, GeospatialAnchorResultType, ARGeospatialAnchor)
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorResult.New(Synesthesias.Snap.Runtime.GeospatialMainLoopState, Synesthesias.Snap.Runtime.GeospatialAccuracyState, Synesthesias.Snap.Runtime.GeospatialAnchorResultType, Google.XR.ARCoreExtensions.ARGeospatialAnchor)
+  name.vb: New(GeospatialMainLoopState, GeospatialAccuracyState, GeospatialAnchorResultType, ARGeospatialAnchor)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html
+  name: GeospatialMainLoopState
+  nameWithType: GeospatialMainLoopState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+- uid: Synesthesias.Snap.Runtime.GeospatialAccuracyState
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAccuracyState
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAccuracyState.html
+  name: GeospatialAccuracyState
+  nameWithType: GeospatialAccuracyState
+  fullName: Synesthesias.Snap.Runtime.GeospatialAccuracyState
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResultType.html
+  name: GeospatialAnchorResultType
+  nameWithType: GeospatialAnchorResultType
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResultType
+- uid: Google.XR.ARCoreExtensions.ARGeospatialAnchor
+  commentId: T:Google.XR.ARCoreExtensions.ARGeospatialAnchor
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: ARGeospatialAnchor
+  nameWithType: ARGeospatialAnchor
+  fullName: Google.XR.ARCoreExtensions.ARGeospatialAnchor
+- uid: Google.XR.ARCoreExtensions
+  commentId: N:Google.XR.ARCoreExtensions
+  isExternal: true
+  name: Google.XR.ARCoreExtensions
+  nameWithType: Google.XR.ARCoreExtensions
+  fullName: Google.XR.ARCoreExtensions
+  spec.csharp:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+  spec.vb:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Synesthesias.Snap.Runtime.GeospatialAnchorResult.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialAnchorResult.#ctor
+  href: Synesthesias.Snap.Runtime.GeospatialAnchorResult.html#Synesthesias_Snap_Runtime_GeospatialAnchorResult__ctor_Synesthesias_Snap_Runtime_GeospatialMainLoopState_Synesthesias_Snap_Runtime_GeospatialAccuracyState_Synesthesias_Snap_Runtime_GeospatialAnchorResultType_Google_XR_ARCoreExtensions_ARGeospatialAnchor_
+  name: GeospatialAnchorResult
+  nameWithType: GeospatialAnchorResult.GeospatialAnchorResult
+  fullName: Synesthesias.Snap.Runtime.GeospatialAnchorResult.GeospatialAnchorResult
+  nameWithType.vb: GeospatialAnchorResult.New
+  fullName.vb: Synesthesias.Snap.Runtime.GeospatialAnchorResult.New
+  name.vb: New

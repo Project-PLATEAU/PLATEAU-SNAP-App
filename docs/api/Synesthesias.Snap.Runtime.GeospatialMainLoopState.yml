@@ -1,0 +1,762 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  id: GeospatialMainLoopState
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState(Google.XR.ARCoreExtensions.EarthState)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported(Google.XR.ARCoreExtensions.FeatureSupported)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  - Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType
+  langs:
+  - csharp
+  - vb
+  name: GeospatialMainLoopState
+  nameWithType: GeospatialMainLoopState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GeospatialMainLoopState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 9
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Geospatialのメインループの状態
+  example: []
+  syntax:
+    content: public class GeospatialMainLoopState
+    content.vb: Public Class GeospatialMainLoopState
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType
+  id: StateType
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: StateType
+  nameWithType: GeospatialMainLoopState.StateType
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: StateType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 14
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メインループの状態
+  example: []
+  syntax:
+    content: public GeospatialMainLoopStateType StateType { get; }
+    parameters: []
+    return:
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+    content.vb: Public Property StateType As GeospatialMainLoopStateType
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported
+  id: FeatureSupported
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: FeatureSupported
+  nameWithType: GeospatialMainLoopState.FeatureSupported
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: FeatureSupported
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 19
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: デバイスのサポート状況
+  example: []
+  syntax:
+    content: public FeatureSupported FeatureSupported { get; }
+    parameters: []
+    return:
+      type: Google.XR.ARCoreExtensions.FeatureSupported
+    content.vb: Public Property FeatureSupported As FeatureSupported
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus
+  id: LocationServiceStatus
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: LocationServiceStatus
+  nameWithType: GeospatialMainLoopState.LocationServiceStatus
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: LocationServiceStatus
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 24
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 位置サービスの状態
+  example: []
+  syntax:
+    content: public LocationServiceStatus LocationServiceStatus { get; }
+    parameters: []
+    return:
+      type: UnityEngine.LocationServiceStatus
+    content.vb: Public ReadOnly Property LocationServiceStatus As LocationServiceStatus
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState
+  id: EarthState
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: EarthState
+  nameWithType: GeospatialMainLoopState.EarthState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EarthState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 30
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Earthの状態
+  example: []
+  syntax:
+    content: public EarthState EarthState { get; }
+    parameters: []
+    return:
+      type: Google.XR.ARCoreExtensions.EarthState
+    content.vb: Public Property EarthState As EarthState
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState
+  id: ARSessionState
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: ARSessionState
+  nameWithType: GeospatialMainLoopState.ARSessionState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ARSessionState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 35
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: ARSessionの状態
+  example: []
+  syntax:
+    content: public ARSessionState ARSessionState { get; }
+    parameters: []
+    return:
+      type: UnityEngine.XR.ARFoundation.ARSessionState
+    content.vb: Public ReadOnly Property ARSessionState As ARSessionState
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady
+  commentId: P:Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady
+  id: IsReady
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: IsReady
+  nameWithType: GeospatialMainLoopState.IsReady
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady
+  type: Property
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: IsReady
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 41
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: 準備完了かどうか
+  example: []
+  syntax:
+    content: public bool IsReady { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReady As Boolean
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  id: SetStateType(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: SetStateType(GeospatialMainLoopStateType)
+  nameWithType: GeospatialMainLoopState.SetStateType(GeospatialMainLoopStateType)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType(Synesthesias.Snap.Runtime.GeospatialMainLoopStateType)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetStateType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 47
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メインループの状態を設定する
+  example: []
+  syntax:
+    content: public void SetStateType(GeospatialMainLoopStateType stateType)
+    parameters:
+    - id: stateType
+      type: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+    content.vb: Public Sub SetStateType(stateType As GeospatialMainLoopStateType)
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported(Google.XR.ARCoreExtensions.FeatureSupported)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported(Google.XR.ARCoreExtensions.FeatureSupported)
+  id: SetFeatureSupported(Google.XR.ARCoreExtensions.FeatureSupported)
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: SetFeatureSupported(FeatureSupported)
+  nameWithType: GeospatialMainLoopState.SetFeatureSupported(FeatureSupported)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported(Google.XR.ARCoreExtensions.FeatureSupported)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetFeatureSupported
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 55
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: デバイスのサポート状況を設定する
+  example: []
+  syntax:
+    content: public void SetFeatureSupported(FeatureSupported featureSupported)
+    parameters:
+    - id: featureSupported
+      type: Google.XR.ARCoreExtensions.FeatureSupported
+    content.vb: Public Sub SetFeatureSupported(featureSupported As FeatureSupported)
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported*
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState(Google.XR.ARCoreExtensions.EarthState)
+  commentId: M:Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState(Google.XR.ARCoreExtensions.EarthState)
+  id: SetEarthState(Google.XR.ARCoreExtensions.EarthState)
+  parent: Synesthesias.Snap.Runtime.GeospatialMainLoopState
+  langs:
+  - csharp
+  - vb
+  name: SetEarthState(EarthState)
+  nameWithType: GeospatialMainLoopState.SetEarthState(EarthState)
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState(Google.XR.ARCoreExtensions.EarthState)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: SetEarthState
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Geospatial/MainLoop/GeospatialMainLoopState.cs
+    startLine: 63
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: Earthの状態を設定する
+  example: []
+  syntax:
+    content: public void SetEarthState(EarthState earthState)
+    parameters:
+    - id: earthState
+      type: Google.XR.ARCoreExtensions.EarthState
+    content.vb: Public Sub SetEarthState(earthState As EarthState)
+  overload: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState*
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_StateType
+  name: StateType
+  nameWithType: GeospatialMainLoopState.StateType
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.StateType
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+  commentId: T:Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType.html
+  name: GeospatialMainLoopStateType
+  nameWithType: GeospatialMainLoopStateType
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopStateType
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_FeatureSupported
+  name: FeatureSupported
+  nameWithType: GeospatialMainLoopState.FeatureSupported
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.FeatureSupported
+- uid: Google.XR.ARCoreExtensions.FeatureSupported
+  commentId: T:Google.XR.ARCoreExtensions.FeatureSupported
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: FeatureSupported
+  nameWithType: FeatureSupported
+  fullName: Google.XR.ARCoreExtensions.FeatureSupported
+- uid: Google.XR.ARCoreExtensions
+  commentId: N:Google.XR.ARCoreExtensions
+  isExternal: true
+  name: Google.XR.ARCoreExtensions
+  nameWithType: Google.XR.ARCoreExtensions
+  fullName: Google.XR.ARCoreExtensions
+  spec.csharp:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+  spec.vb:
+  - uid: Google
+    name: Google
+    isExternal: true
+  - name: .
+  - uid: Google.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: Google.XR.ARCoreExtensions
+    name: ARCoreExtensions
+    isExternal: true
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_LocationServiceStatus
+  name: LocationServiceStatus
+  nameWithType: GeospatialMainLoopState.LocationServiceStatus
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.LocationServiceStatus
+- uid: UnityEngine.LocationServiceStatus
+  commentId: T:UnityEngine.LocationServiceStatus
+  parent: UnityEngine
+  isExternal: true
+  name: LocationServiceStatus
+  nameWithType: LocationServiceStatus
+  fullName: UnityEngine.LocationServiceStatus
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_EarthState
+  name: EarthState
+  nameWithType: GeospatialMainLoopState.EarthState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.EarthState
+- uid: Google.XR.ARCoreExtensions.EarthState
+  commentId: T:Google.XR.ARCoreExtensions.EarthState
+  parent: Google.XR.ARCoreExtensions
+  isExternal: true
+  name: EarthState
+  nameWithType: EarthState
+  fullName: Google.XR.ARCoreExtensions.EarthState
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_ARSessionState
+  name: ARSessionState
+  nameWithType: GeospatialMainLoopState.ARSessionState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.ARSessionState
+- uid: UnityEngine.XR.ARFoundation.ARSessionState
+  commentId: T:UnityEngine.XR.ARFoundation.ARSessionState
+  parent: UnityEngine.XR.ARFoundation
+  isExternal: true
+  name: ARSessionState
+  nameWithType: ARSessionState
+  fullName: UnityEngine.XR.ARFoundation.ARSessionState
+- uid: UnityEngine.XR.ARFoundation
+  commentId: N:UnityEngine.XR.ARFoundation
+  isExternal: true
+  name: UnityEngine.XR.ARFoundation
+  nameWithType: UnityEngine.XR.ARFoundation
+  fullName: UnityEngine.XR.ARFoundation
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARFoundation
+    name: ARFoundation
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR
+    name: XR
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.XR.ARFoundation
+    name: ARFoundation
+    isExternal: true
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_IsReady
+  name: IsReady
+  nameWithType: GeospatialMainLoopState.IsReady
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.IsReady
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_SetStateType_Synesthesias_Snap_Runtime_GeospatialMainLoopStateType_
+  name: SetStateType
+  nameWithType: GeospatialMainLoopState.SetStateType
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetStateType
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_SetFeatureSupported_Google_XR_ARCoreExtensions_FeatureSupported_
+  name: SetFeatureSupported
+  nameWithType: GeospatialMainLoopState.SetFeatureSupported
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetFeatureSupported
+- uid: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState*
+  commentId: Overload:Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState
+  href: Synesthesias.Snap.Runtime.GeospatialMainLoopState.html#Synesthesias_Snap_Runtime_GeospatialMainLoopState_SetEarthState_Google_XR_ARCoreExtensions_EarthState_
+  name: SetEarthState
+  nameWithType: GeospatialMainLoopState.SetEarthState
+  fullName: Synesthesias.Snap.Runtime.GeospatialMainLoopState.SetEarthState

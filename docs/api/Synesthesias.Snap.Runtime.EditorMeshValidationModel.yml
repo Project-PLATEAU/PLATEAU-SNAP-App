@@ -1,0 +1,658 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  id: EditorMeshValidationModel
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.EditorMeshValidationModel.#ctor(UnityEngine.Camera,Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel)
+  - Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  - Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  - Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+  langs:
+  - csharp
+  - vb
+  name: EditorMeshValidationModel
+  nameWithType: EditorMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: EditorMeshValidationModel
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+    startLine: 8
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メッシュの検証
+  example: []
+  syntax:
+    content: 'public class EditorMeshValidationModel : IMeshValidationModel'
+    content.vb: Public Class EditorMeshValidationModel Implements IMeshValidationModel
+  inheritance:
+  - System.Object
+  implements:
+  - Synesthesias.Snap.Runtime.IMeshValidationModel
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.#ctor(UnityEngine.Camera,Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel)
+  commentId: M:Synesthesias.Snap.Runtime.EditorMeshValidationModel.#ctor(UnityEngine.Camera,Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel)
+  id: '#ctor(UnityEngine.Camera,Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel)'
+  parent: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  langs:
+  - csharp
+  - vb
+  name: EditorMeshValidationModel(Camera, MeshValidationAngleThresholdModel)
+  nameWithType: EditorMeshValidationModel.EditorMeshValidationModel(Camera, MeshValidationAngleThresholdModel)
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.EditorMeshValidationModel(UnityEngine.Camera, Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+    startLine: 16
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public EditorMeshValidationModel(Camera camera, MeshValidationAngleThresholdModel angleThresholdModel)
+    parameters:
+    - id: camera
+      type: UnityEngine.Camera
+    - id: angleThresholdModel
+      type: Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel
+    content.vb: Public Sub New(camera As Camera, angleThresholdModel As MeshValidationAngleThresholdModel)
+  overload: Synesthesias.Snap.Runtime.EditorMeshValidationModel.#ctor*
+  nameWithType.vb: EditorMeshValidationModel.New(Camera, MeshValidationAngleThresholdModel)
+  fullName.vb: Synesthesias.Snap.Runtime.EditorMeshValidationModel.New(UnityEngine.Camera, Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel)
+  name.vb: New(Camera, MeshValidationAngleThresholdModel)
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+  commentId: M:Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+  id: Validate(UnityEngine.Transform,UnityEngine.Mesh)
+  parent: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  langs:
+  - csharp
+  - vb
+  name: Validate(Transform, Mesh)
+  nameWithType: EditorMeshValidationModel.Validate(Transform, Mesh)
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate(UnityEngine.Transform, UnityEngine.Mesh)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: Validate
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+    startLine: 27
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メッシュを検証します
+  example: []
+  syntax:
+    content: public MeshValidationResult Validate(Transform meshTransform, Mesh mesh)
+    parameters:
+    - id: meshTransform
+      type: UnityEngine.Transform
+    - id: mesh
+      type: UnityEngine.Mesh
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationResult
+    content.vb: Public Function Validate(meshTransform As Transform, mesh As Mesh) As MeshValidationResult
+  overload: Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate*
+  implements:
+  - Synesthesias.Snap.Runtime.IMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  commentId: M:Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  id: GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  parent: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  langs:
+  - csharp
+  - vb
+  name: GetMeshValidationAngleResultType(Transform, Mesh)
+  nameWithType: EditorMeshValidationModel.GetMeshValidationAngleResultType(Transform, Mesh)
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform, UnityEngine.Mesh)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetMeshValidationAngleResultType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+    startLine: 58
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メッシュの角度の検証結果の種類
+  example: []
+  syntax:
+    content: public MeshValidationAngleResultType GetMeshValidationAngleResultType(Transform meshTransform, Mesh mesh)
+    parameters:
+    - id: meshTransform
+      type: UnityEngine.Transform
+    - id: mesh
+      type: UnityEngine.Mesh
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
+    content.vb: Public Function GetMeshValidationAngleResultType(meshTransform As Transform, mesh As Mesh) As MeshValidationAngleResultType
+  overload: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType*
+  implements:
+  - Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  commentId: M:Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  id: GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  parent: Synesthesias.Snap.Runtime.EditorMeshValidationModel
+  langs:
+  - csharp
+  - vb
+  name: GetMeshValidationVertexResultType(Transform, Mesh)
+  nameWithType: EditorMeshValidationModel.GetMeshValidationVertexResultType(Transform, Mesh)
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform, UnityEngine.Mesh)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: GetMeshValidationVertexResultType
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/Mesh/Validation/EditorMeshValidationModel.cs
+    startLine: 79
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メッシュの頂点の検証結果の種類を取得
+  example: []
+  syntax:
+    content: public MeshValidationVertexResultType GetMeshValidationVertexResultType(Transform meshTransform, Mesh mesh)
+    parameters:
+    - id: meshTransform
+      type: UnityEngine.Transform
+    - id: mesh
+      type: UnityEngine.Mesh
+    return:
+      type: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+    content.vb: Public Function GetMeshValidationVertexResultType(meshTransform As Transform, mesh As Mesh) As MeshValidationVertexResultType
+  overload: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType*
+  implements:
+  - Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel
+  commentId: T:Synesthesias.Snap.Runtime.IMeshValidationModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html
+  name: IMeshValidationModel
+  nameWithType: IMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.EditorMeshValidationModel.#ctor
+  href: Synesthesias.Snap.Runtime.EditorMeshValidationModel.html#Synesthesias_Snap_Runtime_EditorMeshValidationModel__ctor_UnityEngine_Camera_Synesthesias_Snap_Runtime_MeshValidationAngleThresholdModel_
+  name: EditorMeshValidationModel
+  nameWithType: EditorMeshValidationModel.EditorMeshValidationModel
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.EditorMeshValidationModel
+  nameWithType.vb: EditorMeshValidationModel.New
+  fullName.vb: Synesthesias.Snap.Runtime.EditorMeshValidationModel.New
+  name.vb: New
+- uid: UnityEngine.Camera
+  commentId: T:UnityEngine.Camera
+  parent: UnityEngine
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel.html
+  name: MeshValidationAngleThresholdModel
+  nameWithType: MeshValidationAngleThresholdModel
+  fullName: Synesthesias.Snap.Runtime.MeshValidationAngleThresholdModel
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate*
+  commentId: Overload:Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate
+  href: Synesthesias.Snap.Runtime.EditorMeshValidationModel.html#Synesthesias_Snap_Runtime_EditorMeshValidationModel_Validate_UnityEngine_Transform_UnityEngine_Mesh_
+  name: Validate
+  nameWithType: EditorMeshValidationModel.Validate
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.Validate
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+  commentId: M:Synesthesias.Snap.Runtime.IMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+  parent: Synesthesias.Snap.Runtime.IMeshValidationModel
+  isExternal: true
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_Validate_UnityEngine_Transform_UnityEngine_Mesh_
+  name: Validate(Transform, Mesh)
+  nameWithType: IMeshValidationModel.Validate(Transform, Mesh)
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel.Validate(UnityEngine.Transform, UnityEngine.Mesh)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+    name: Validate
+    href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_Validate_UnityEngine_Transform_UnityEngine_Mesh_
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel.Validate(UnityEngine.Transform,UnityEngine.Mesh)
+    name: Validate
+    href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_Validate_UnityEngine_Transform_UnityEngine_Mesh_
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine.Mesh
+  commentId: T:UnityEngine.Mesh
+  parent: UnityEngine
+  isExternal: true
+  name: Mesh
+  nameWithType: Mesh
+  fullName: UnityEngine.Mesh
+- uid: Synesthesias.Snap.Runtime.MeshValidationResult
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationResult
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationResult.html
+  name: MeshValidationResult
+  nameWithType: MeshValidationResult
+  fullName: Synesthesias.Snap.Runtime.MeshValidationResult
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType*
+  commentId: Overload:Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType
+  href: Synesthesias.Snap.Runtime.EditorMeshValidationModel.html#Synesthesias_Snap_Runtime_EditorMeshValidationModel_GetMeshValidationAngleResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  name: GetMeshValidationAngleResultType
+  nameWithType: EditorMeshValidationModel.GetMeshValidationAngleResultType
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationAngleResultType
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  commentId: M:Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  parent: Synesthesias.Snap.Runtime.IMeshValidationModel
+  isExternal: true
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_GetMeshValidationAngleResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  name: GetMeshValidationAngleResultType(Transform, Mesh)
+  nameWithType: IMeshValidationModel.GetMeshValidationAngleResultType(Transform, Mesh)
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform, UnityEngine.Mesh)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+    name: GetMeshValidationAngleResultType
+    href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_GetMeshValidationAngleResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationAngleResultType(UnityEngine.Transform,UnityEngine.Mesh)
+    name: GetMeshValidationAngleResultType
+    href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_GetMeshValidationAngleResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+- uid: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationAngleResultType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationAngleResultType.html
+  name: MeshValidationAngleResultType
+  nameWithType: MeshValidationAngleResultType
+  fullName: Synesthesias.Snap.Runtime.MeshValidationAngleResultType
+- uid: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType*
+  commentId: Overload:Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType
+  href: Synesthesias.Snap.Runtime.EditorMeshValidationModel.html#Synesthesias_Snap_Runtime_EditorMeshValidationModel_GetMeshValidationVertexResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  name: GetMeshValidationVertexResultType
+  nameWithType: EditorMeshValidationModel.GetMeshValidationVertexResultType
+  fullName: Synesthesias.Snap.Runtime.EditorMeshValidationModel.GetMeshValidationVertexResultType
+- uid: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  commentId: M:Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+  parent: Synesthesias.Snap.Runtime.IMeshValidationModel
+  isExternal: true
+  href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_GetMeshValidationVertexResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  name: GetMeshValidationVertexResultType(Transform, Mesh)
+  nameWithType: IMeshValidationModel.GetMeshValidationVertexResultType(Transform, Mesh)
+  fullName: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform, UnityEngine.Mesh)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+    name: GetMeshValidationVertexResultType
+    href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_GetMeshValidationVertexResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.IMeshValidationModel.GetMeshValidationVertexResultType(UnityEngine.Transform,UnityEngine.Mesh)
+    name: GetMeshValidationVertexResultType
+    href: Synesthesias.Snap.Runtime.IMeshValidationModel.html#Synesthesias_Snap_Runtime_IMeshValidationModel_GetMeshValidationVertexResultType_UnityEngine_Transform_UnityEngine_Mesh_
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+- uid: Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  commentId: T:Synesthesias.Snap.Runtime.MeshValidationVertexResultType
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.MeshValidationVertexResultType.html
+  name: MeshValidationVertexResultType
+  nameWithType: MeshValidationVertexResultType
+  fullName: Synesthesias.Snap.Runtime.MeshValidationVertexResultType

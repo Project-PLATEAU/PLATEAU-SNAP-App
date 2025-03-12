@@ -1,0 +1,662 @@
+### YamlMime:ManagedReference
+items:
+- uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  id: ShapeMeshFactoryModel
+  parent: Synesthesias.Snap.Runtime
+  children:
+  - Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.#ctor(Synesthesias.Snap.Runtime.ShapeValidatorModel,Synesthesias.Snap.Runtime.VectorCalculatorModel,Synesthesias.Snap.Runtime.PlainShapeFactoryModel)
+  - Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ShapeMeshFactoryModel
+  nameWithType: ShapeMeshFactoryModel
+  fullName: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  type: Class
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/MeshParameter/Factory/iShape/ShapeMeshFactory.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: ShapeMeshFactoryModel
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/MeshParameter/Factory/iShape/ShapeMeshFactory.cs
+    startLine: 15
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: iShapeを使用してメッシュを生成するModel
+  example: []
+  syntax:
+    content: 'public class ShapeMeshFactoryModel : IMeshFactoryModel'
+    content.vb: Public Class ShapeMeshFactoryModel Implements IMeshFactoryModel
+  inheritance:
+  - System.Object
+  implements:
+  - Synesthesias.Snap.Runtime.IMeshFactoryModel
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.#ctor(Synesthesias.Snap.Runtime.ShapeValidatorModel,Synesthesias.Snap.Runtime.VectorCalculatorModel,Synesthesias.Snap.Runtime.PlainShapeFactoryModel)
+  commentId: M:Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.#ctor(Synesthesias.Snap.Runtime.ShapeValidatorModel,Synesthesias.Snap.Runtime.VectorCalculatorModel,Synesthesias.Snap.Runtime.PlainShapeFactoryModel)
+  id: '#ctor(Synesthesias.Snap.Runtime.ShapeValidatorModel,Synesthesias.Snap.Runtime.VectorCalculatorModel,Synesthesias.Snap.Runtime.PlainShapeFactoryModel)'
+  parent: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  langs:
+  - csharp
+  - vb
+  name: ShapeMeshFactoryModel(ShapeValidatorModel, VectorCalculatorModel, PlainShapeFactoryModel)
+  nameWithType: ShapeMeshFactoryModel.ShapeMeshFactoryModel(ShapeValidatorModel, VectorCalculatorModel, PlainShapeFactoryModel)
+  fullName: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.ShapeMeshFactoryModel(Synesthesias.Snap.Runtime.ShapeValidatorModel, Synesthesias.Snap.Runtime.VectorCalculatorModel, Synesthesias.Snap.Runtime.PlainShapeFactoryModel)
+  type: Constructor
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/MeshParameter/Factory/iShape/ShapeMeshFactory.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: .ctor
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/MeshParameter/Factory/iShape/ShapeMeshFactory.cs
+    startLine: 24
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: コンストラクタ
+  example: []
+  syntax:
+    content: public ShapeMeshFactoryModel(ShapeValidatorModel validatorModel, VectorCalculatorModel calculatorModel, PlainShapeFactoryModel plainShapeFactory)
+    parameters:
+    - id: validatorModel
+      type: Synesthesias.Snap.Runtime.ShapeValidatorModel
+    - id: calculatorModel
+      type: Synesthesias.Snap.Runtime.VectorCalculatorModel
+    - id: plainShapeFactory
+      type: Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+    content.vb: Public Sub New(validatorModel As ShapeValidatorModel, calculatorModel As VectorCalculatorModel, plainShapeFactory As PlainShapeFactoryModel)
+  overload: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.#ctor*
+  nameWithType.vb: ShapeMeshFactoryModel.New(ShapeValidatorModel, VectorCalculatorModel, PlainShapeFactoryModel)
+  fullName.vb: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.New(Synesthesias.Snap.Runtime.ShapeValidatorModel, Synesthesias.Snap.Runtime.VectorCalculatorModel, Synesthesias.Snap.Runtime.PlainShapeFactoryModel)
+  name.vb: New(ShapeValidatorModel, VectorCalculatorModel, PlainShapeFactoryModel)
+- uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  id: CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(Vector3[], Vector3[][], CancellationToken)
+  nameWithType: ShapeMeshFactoryModel.CreateAsync(Vector3[], Vector3[][], CancellationToken)
+  fullName: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync(UnityEngine.Vector3[], UnityEngine.Vector3[][], System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/MeshParameter/Factory/iShape/ShapeMeshFactory.cs
+      branch: feature/create_csproj
+      repo: https://synesthesias-koichi-inoue@github.com/Synesthesias/PLATEAU-SNAP-App.git
+    id: CreateAsync
+    path: ../SnapForUnity/Assets/Synesthesias.Snap/Runtime/Model/MeshParameter/Factory/iShape/ShapeMeshFactory.cs
+    startLine: 37
+  assemblies:
+  - Synesthesias.Snap
+  namespace: Synesthesias.Snap.Runtime
+  summary: メッシュを生成する
+  example: []
+  syntax:
+    content: public UniTask<Mesh> CreateAsync(Vector3[] hull, Vector3[][] holes, CancellationToken cancellationToken)
+    parameters:
+    - id: hull
+      type: UnityEngine.Vector3[]
+    - id: holes
+      type: UnityEngine.Vector3[][]
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: Cysharp.Threading.Tasks.UniTask{UnityEngine.Mesh}
+    content.vb: Public Function CreateAsync(hull As Vector3(), holes As Vector3()(), cancellationToken As CancellationToken) As UniTask(Of Mesh)
+  overload: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync*
+  implements:
+  - Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  nameWithType.vb: ShapeMeshFactoryModel.CreateAsync(Vector3(), Vector3()(), CancellationToken)
+  fullName.vb: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync(UnityEngine.Vector3(), UnityEngine.Vector3()(), System.Threading.CancellationToken)
+  name.vb: CreateAsync(Vector3(), Vector3()(), CancellationToken)
+references:
+- uid: Synesthesias.Snap.Runtime
+  commentId: N:Synesthesias.Snap.Runtime
+  href: Synesthesias.html
+  name: Synesthesias.Snap.Runtime
+  nameWithType: Synesthesias.Snap.Runtime
+  fullName: Synesthesias.Snap.Runtime
+  spec.csharp:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+  spec.vb:
+  - uid: Synesthesias
+    name: Synesthesias
+    href: Synesthesias.html
+  - name: .
+  - uid: Synesthesias.Snap
+    name: Snap
+    href: Synesthesias.Snap.html
+  - name: .
+  - uid: Synesthesias.Snap.Runtime
+    name: Runtime
+    href: Synesthesias.Snap.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Synesthesias.Snap.Runtime.IMeshFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.IMeshFactoryModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.IMeshFactoryModel.html
+  name: IMeshFactoryModel
+  nameWithType: IMeshFactoryModel
+  fullName: Synesthesias.Snap.Runtime.IMeshFactoryModel
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.#ctor*
+  commentId: Overload:Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.#ctor
+  href: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.html#Synesthesias_Snap_Runtime_ShapeMeshFactoryModel__ctor_Synesthesias_Snap_Runtime_ShapeValidatorModel_Synesthesias_Snap_Runtime_VectorCalculatorModel_Synesthesias_Snap_Runtime_PlainShapeFactoryModel_
+  name: ShapeMeshFactoryModel
+  nameWithType: ShapeMeshFactoryModel.ShapeMeshFactoryModel
+  fullName: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.ShapeMeshFactoryModel
+  nameWithType.vb: ShapeMeshFactoryModel.New
+  fullName.vb: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.New
+  name.vb: New
+- uid: Synesthesias.Snap.Runtime.ShapeValidatorModel
+  commentId: T:Synesthesias.Snap.Runtime.ShapeValidatorModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.ShapeValidatorModel.html
+  name: ShapeValidatorModel
+  nameWithType: ShapeValidatorModel
+  fullName: Synesthesias.Snap.Runtime.ShapeValidatorModel
+- uid: Synesthesias.Snap.Runtime.VectorCalculatorModel
+  commentId: T:Synesthesias.Snap.Runtime.VectorCalculatorModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.VectorCalculatorModel.html
+  name: VectorCalculatorModel
+  nameWithType: VectorCalculatorModel
+  fullName: Synesthesias.Snap.Runtime.VectorCalculatorModel
+- uid: Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+  commentId: T:Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+  parent: Synesthesias.Snap.Runtime
+  href: Synesthesias.Snap.Runtime.PlainShapeFactoryModel.html
+  name: PlainShapeFactoryModel
+  nameWithType: PlainShapeFactoryModel
+  fullName: Synesthesias.Snap.Runtime.PlainShapeFactoryModel
+- uid: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync*
+  commentId: Overload:Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync
+  href: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.html#Synesthesias_Snap_Runtime_ShapeMeshFactoryModel_CreateAsync_UnityEngine_Vector3___UnityEngine_Vector3_____System_Threading_CancellationToken_
+  name: CreateAsync
+  nameWithType: ShapeMeshFactoryModel.CreateAsync
+  fullName: Synesthesias.Snap.Runtime.ShapeMeshFactoryModel.CreateAsync
+- uid: Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  commentId: M:Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+  parent: Synesthesias.Snap.Runtime.IMeshFactoryModel
+  isExternal: true
+  href: Synesthesias.Snap.Runtime.IMeshFactoryModel.html#Synesthesias_Snap_Runtime_IMeshFactoryModel_CreateAsync_UnityEngine_Vector3___UnityEngine_Vector3_____System_Threading_CancellationToken_
+  name: CreateAsync(Vector3[], Vector3[][], CancellationToken)
+  nameWithType: IMeshFactoryModel.CreateAsync(Vector3[], Vector3[][], CancellationToken)
+  fullName: Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3[], UnityEngine.Vector3[][], System.Threading.CancellationToken)
+  nameWithType.vb: IMeshFactoryModel.CreateAsync(Vector3(), Vector3()(), CancellationToken)
+  fullName.vb: Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3(), UnityEngine.Vector3()(), System.Threading.CancellationToken)
+  name.vb: CreateAsync(Vector3(), Vector3()(), CancellationToken)
+  spec.csharp:
+  - uid: Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+    name: CreateAsync
+    href: Synesthesias.Snap.Runtime.IMeshFactoryModel.html#Synesthesias_Snap_Runtime_IMeshFactoryModel_CreateAsync_UnityEngine_Vector3___UnityEngine_Vector3_____System_Threading_CancellationToken_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Synesthesias.Snap.Runtime.IMeshFactoryModel.CreateAsync(UnityEngine.Vector3[],UnityEngine.Vector3[][],System.Threading.CancellationToken)
+    name: CreateAsync
+    href: Synesthesias.Snap.Runtime.IMeshFactoryModel.html#Synesthesias_Snap_Runtime_IMeshFactoryModel_CreateAsync_UnityEngine_Vector3___UnityEngine_Vector3_____System_Threading_CancellationToken_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: UnityEngine.Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: UnityEngine.Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: UnityEngine.Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: (
+  - name: )
+- uid: UnityEngine.Vector3[][]
+  isExternal: true
+  name: Vector3[][]
+  nameWithType: Vector3[][]
+  fullName: UnityEngine.Vector3[][]
+  nameWithType.vb: Vector3()()
+  fullName.vb: UnityEngine.Vector3()()
+  name.vb: Vector3()()
+  spec.csharp:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: Cysharp.Threading.Tasks.UniTask{UnityEngine.Mesh}
+  commentId: T:Cysharp.Threading.Tasks.UniTask{UnityEngine.Mesh}
+  parent: Cysharp.Threading.Tasks
+  definition: Cysharp.Threading.Tasks.UniTask`1
+  name: UniTask<Mesh>
+  nameWithType: UniTask<Mesh>
+  fullName: Cysharp.Threading.Tasks.UniTask<UnityEngine.Mesh>
+  nameWithType.vb: UniTask(Of Mesh)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of UnityEngine.Mesh)
+  name.vb: UniTask(Of Mesh)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Mesh
+    name: Mesh
+    isExternal: true
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Cysharp.Threading.Tasks.UniTask`1
+  commentId: T:Cysharp.Threading.Tasks.UniTask`1
+  isExternal: true
+  name: UniTask<T>
+  nameWithType: UniTask<T>
+  fullName: Cysharp.Threading.Tasks.UniTask<T>
+  nameWithType.vb: UniTask(Of T)
+  fullName.vb: Cysharp.Threading.Tasks.UniTask(Of T)
+  name.vb: UniTask(Of T)
+  spec.csharp:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Cysharp.Threading.Tasks.UniTask`1
+    name: UniTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Cysharp.Threading.Tasks
+  commentId: N:Cysharp.Threading.Tasks
+  isExternal: true
+  name: Cysharp.Threading.Tasks
+  nameWithType: Cysharp.Threading.Tasks
+  fullName: Cysharp.Threading.Tasks
+  spec.csharp:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: Cysharp
+    name: Cysharp
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: Cysharp.Threading.Tasks
+    name: Tasks
+    isExternal: true
