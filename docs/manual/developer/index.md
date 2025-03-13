@@ -7,10 +7,10 @@
 本アプリはUnity(開発プラットフォーム)で開発しています。
 以下の構成になっています。
 
-- [Runtime](https://github.com/Synesthesias/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Runtime) (ランタイム)
+- [Runtime](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Runtime) (ランタイム)
   - アプリ開発に必要なランタイムが含まれています
   - アーキテクチャはMVP (Model View Presenter)を採用していますがPresenterは含まれていません
-- [Sample](https://github.com/Synesthesias/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Samples~/Scripts) (サンプル)
+- [Sample](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Samples~/Scripts) (サンプル)
   - UI、シーン等のリソースを含むサンプルアプリです
   - 前述のランタイムが必要です
   - アーキテクチャはMVP (Model View Presenter)を採用しています
@@ -33,38 +33,6 @@ Samples/Scripts/
 └── View/ (MVPのView)
 ```
 
-### Runtime (ランタイム)
-
-#### Version (バージョン)
-
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=PLATEAU.SNAP.App&message=0.0.1&color=0e6da0)](https://github.com/Synesthesias/PLATEAU-SNAP-App)
-
-#### Support (サポート対象)
-
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Unity&message=2022.3.44f1%20or%20higher&color=0e6da0)](https://github.com/Gentlymad-Studios/PackageManagerTools)
-
-#### Dependencies (依存パッケージ)
-
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=PLATEAU.SNAP.Server&message=0.0.1&color=0e6da0)](https://github.com/Synesthesias/PLATEAU-SNAP-Server)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=AR%20Foundation&message=5.1.5&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Google%20ARCore%20XR%20Plugin&message=5.1.5&color=0e6da0)](https://docs.unity3d.com/ja/Packages/com.unity.xr.arkit@5.1/manual/index.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=ARCore%20Extensions&message=1.22.3&color=0e6da0)](https://github.com/google-ar/arcore-unity-extensions)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=UniTask&message=2.5.10&color=0e6da0)](https://github.com/Cysharp/UniTask/releases/tag/2.5.10)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=R3&message=1.2.9&color=0e6da0)](https://github.com/Cysharp/R3/releases/tag/1.2.9)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Geometry&message=0.0.5&color=0e6da0)](https://github.com/iShapeUnity/Geometry/releases/tag/0.0.5)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Mesh2d&message=0.0.9&color=0e6da0)](https://github.com/iShapeUnity/Mesh2d/releases/tag/0.0.9)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=Triangulation&message=0.0.8&color=0e6da0)](https://github.com/iShapeUnity/Triangulation/releases/tag/0.0.8)
-
-### Sample (サンプル)
-
-#### Dependencies (依存パッケージ)
-
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Addressables&message=1.22.3&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.addressables@1.22/manual/index.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=Localization&message=1.5.4&color=0e6da0)](https://docs.unity3d.com/Packages/com.unity.localization@1.5/manual/index.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=Unity&logoColor=FFFFFF&label=TextMeshPro&message=3.0.6&color=0e6da0)](https://docs.unity3d.com/ja/2022.3/Manual/com.unity.textmeshpro.html)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=GitHub&logoColor=FFFFFF&label=VContainer&message=1.16.8&color=0e6da0)](https://github.com/hadashiA/VContainer/releases/tag/1.16.8)
-[![](https://img.shields.io/static/v1?style=flat=square&logo=NuGet&logoColor=FFFFFF&label=Polly&message=8.5.2&color=0e6da0)](https://www.nuget.org/packages/Polly/8.5.2)
-
 ## 2-2). Installation (導入手順)
 
 ### Installation (Runtime)
@@ -76,7 +44,7 @@ Samples/Scripts/
 ```json
 {
   "dependencies": {
-    "jp.synesthesias.plateau.snap": "https://github.com/Synesthesias/PLATEAU-SNAP-App.git?path=SnapForUnity/Assets/Synesthesias.Snap",
+    "jp.synesthesias.plateau.snap": "https://github.com/Project-PLATEAU/PLATEAU-SNAP-App.git?path=SnapForUnity/Assets/Synesthesias.Snap",
     "com.cysharp.r3": "1.2.9",
     "com.cysharp.unitask": "2.5.10",
     "org.nuget.r3": "1.2.9",
@@ -195,7 +163,7 @@ PackageManagerからSampleを追加する場合は上記のRuntime側のInstalla
 ## 2-7). サーバーのAPI
 
 - クライアント(Unity)は以下のサーバー側のリポジトリのAPIを呼んでいます
-  - https://github.com/Synesthesias/PLATEAU-SNAP-Server
+  - https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server
 - APIを呼ぶにはサーバー側で作成したAPIキーを後述の手順で設定する必要があります
 
 # サーバーのAPIキーの管理に注意してください

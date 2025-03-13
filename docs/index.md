@@ -6,4 +6,4 @@
 
 ## ソースコード
 
-- [GitHub](https://github.com/Synesthesias/PLATEAU-SNAP-App)
+- [GitHub](https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server)

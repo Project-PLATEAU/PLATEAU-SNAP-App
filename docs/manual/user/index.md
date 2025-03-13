@@ -7,10 +7,10 @@
 サンプルアプリをビルドして実行するまでの手順です。
 
 - 以下のリポジトリをクローンします
-  - [PLATEAU-SNAP-App](https://github.com/Synesthesias/PLATEAU-SNAP-App)
+  - [PLATEAU-SNAP-App](https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server)
 
 ```bash
-git clone https://github.com/Synesthesias/PLATEAU-SNAP-App.git
+git clone https://github.com/Project-PLATEAU/PLATEAU-SNAP-App.git
 ```
 
 ## 1-2). アプリのビルド方法
