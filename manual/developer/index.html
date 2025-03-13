@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>2). 開発者(Developer)向け情報 | Synesthesias PLATEAU SNAP ドキュメント </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="2). 開発者(Developer)向け情報 | Synesthesias PLATEAU SNAP ドキュメント ">
+    
+    
+      <link rel="shortcut icon" href="../../images/logo.svg">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="Synesthesias PLATEAU SNAP ドキュメント">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2-開発者developer向け情報">2). 開発者(Developer)向け情報</h1>
+
+<p>本アプリのRuntimeとSample(後述)を利用してアプリの開発を行う開発者(Developer)向けの情報です。</p>
+<h2 id="2-1-構成">2-1). 構成</h2>
+<p>本アプリはUnity(開発プラットフォーム)で開発しています。
+以下の構成になっています。</p>
+<ul>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Runtime">Runtime</a> (ランタイム)
+<ul>
+<li>アプリ開発に必要なランタイムが含まれています</li>
+<li>アーキテクチャはMVP (Model View Presenter)を採用していますがPresenterは含まれていません</li>
+</ul>
+</li>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Samples%7E/Scripts">Sample</a> (サンプル)
+<ul>
+<li>UI、シーン等のリソースを含むサンプルアプリです</li>
+<li>前述のランタイムが必要です</li>
+<li>アーキテクチャはMVP (Model View Presenter)を採用しています</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-bash">Runtime/
+├── Model/
+└── View/
+</code></pre>
+<pre><code class="lang-bash">Samples/Scripts/
+├── Define/ (定数やenumを含む定義関連)
+├── Generated/ (OpenAPIで生成したソースコード)
+├── LifetimeScope/ (VContainerでのDI)
+├── Model/ (MVPのModel)
+├── Parameter/ (シーン間でのパラメータの受け渡し)
+├── Presenter/ (MVPのPresenter)
+├── Repository/ (データの永続化 - シーン間でのデータの受け渡し用)
+└── View/ (MVPのView)
+</code></pre>
+<h2 id="2-2-installation-導入手順">2-2). Installation (導入手順)</h2>
+<h3 id="installation-runtime">Installation (Runtime)</h3>
+<ul>
+<li>ランタイムを導入する方法です</li>
+<li>Package/manifest.jsonに以下を追記します。</li>
+<li>(サンプルの導入手順は後述しています)</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;jp.synesthesias.plateau.snap&quot;: &quot;https://github.com/Project-PLATEAU/PLATEAU-SNAP-App.git?path=SnapForUnity/Assets/Synesthesias.Snap&quot;,
+    &quot;com.cysharp.r3&quot;: &quot;1.2.9&quot;,
+    &quot;com.cysharp.unitask&quot;: &quot;2.5.10&quot;,
+    &quot;org.nuget.r3&quot;: &quot;1.2.9&quot;,
+    &quot;com.google.ar.core.arfoundation.extensions&quot;: &quot;https://github.com/google-ar/arcore-unity-extensions.git#1.47.0&quot;,
+    &quot;com.ishape.geometry&quot;: &quot;https://github.com/iShapeUnity/Geometry.git#0.0.5&quot;,
+    &quot;com.ishape.mesh2d&quot;: &quot;https://github.com/iShapeUnity/Mesh2d.git#0.0.9&quot;,
+    &quot;com.ishape.triangulation&quot;: &quot;https://github.com/iShapeUnity/Triangulation.git#0.0.8&quot;
+  },
+  &quot;scopedRegistries&quot;: [
+    {
+      &quot;name&quot;: &quot;OpenUPM&quot;,
+      &quot;url&quot;: &quot;https://package.openupm.com&quot;,
+      &quot;scopes&quot;: [
+        &quot;com.cysharp&quot;,
+        &quot;org.nuget&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<h3 id="sample-サンプル">Sample (サンプル)</h3>
+<p>PackageManagerからSampleを追加する場合は上記のRuntime側のInstallationの手順に加えて更にPackage/manifest.jsonに以下を追記します。</p>
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.unity.addressables&quot;: &quot;1.22.3&quot;,
+    &quot;com.unity.localization&quot;: &quot;1.5.4&quot;,
+    &quot;com.unity.textmeshpro&quot;: &quot;3.0.6&quot;,
+    &quot;jp.hadashikick.vcontainer&quot;: &quot;https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.16.8&quot;,
+    &quot;org.nuget.polly&quot;: &quot;8.5.2&quot;
+  }
+}
+</code></pre>
+<h2 id="2-3-localizationの設定方法">2-3). Localizationの設定方法</h2>
+<ul>
+<li>サンプルは <code>Localization</code> を使っています</li>
+<li>初期設定を行なっていない場合は以下の手順で設定を行います
+<ul>
+<li>Edit &gt; Project Settings &gt; <code>Localization</code> (左側の一覧) &gt; <code>Create</code> を選択</li>
+<li><code>Add Locale</code> を選択</li>
+<li>検索バーに <code>Japanese</code> と入力して検索してチェックを入れます (<code>Code</code> が <code>ja</code> のもの)</li>
+<li>同じように <code>English</code> (<code>Code</code> が <code>en</code> のもの)にチェックを入れます</li>
+<li><code>Add Locales</code> を選択します</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-4-addressablesの設定方法">2-4). Addressablesの設定方法</h2>
+<ul>
+<li>サンプルは <code>Addressables</code> を使っています</li>
+<li>初期設定を行なっていない場合は以下の手順で設定を行います</li>
+<li>Addressablesの初期設定を行なっていな場合
+<ul>
+<li>Window &gt; Asset Management &gt; Addressables &gt; Groups &gt; Create Addressables Settings &gt; Create Addressables Settings</li>
+</ul>
+</li>
+<li>前述でインポートしたサンプルの <code>Addressables</code> ディレクトリを Project Viewから選択して Inspector の <code>Addressables</code> にチェックを入れます
+<ul>
+<li>必要に応じてGroupを変更します</li>
+<li>全てのリソースをアプリに含める場合は <code>Default Local Group</code> のままにします</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias PLATEAU SNAP/&lt;バージョン&gt;/Sample App/Addressables</p>
+</blockquote>
+<h2 id="2-5-環境設定について">2-5). 環境設定について</h2>
+<p>開発環境の設定は以下のScriptableObjectで管理しています。</p>
+<ul>
+<li>EnvironmentDevelopment (開発環境)</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias.Snap/Resources/Environment/EnvironmentDevelopment.asset</p>
+</blockquote>
+<ul>
+<li>EnvironmentRelease (リリース環境)</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias.Snap/Resources/Environment/EnvironmentRelease.asset</p>
+</blockquote>
+<h3 id="環境設定を追加する方法">環境設定を追加する方法</h3>
+<ul>
+<li>Project Viewで右クリックします</li>
+<li>Create &gt; Synesthesias &gt; Snap &gt; Sample &gt; EnvironmentScriptableObject</li>
+</ul>
+<h3 id="環境を切り替える方法">環境を切り替える方法</h3>
+<ul>
+<li>Project ViewからRootLifetimeScopeのprefabを選択し  <code>Environment Scriptable Object</code> のフィールドに前述の環境設定のScriptableObjectの参照をドラッグ&amp;ドロップで設定します</li>
+<li>デフォルトで <code>Environment Development</code> (開発環境) を指定済みです</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias.Snap/Resources/VContainer/RootLifetimeScope.prefab</p>
+</blockquote>
+<h2 id="2-6-arcoreの設定方法-ios">2-6). ARCoreの設定方法 (iOS)</h2>
+<ul>
+<li>Unityプロジェクトを開きます</li>
+<li>Edit &gt; Project Settings</li>
+<li>XR Plug-in Management &gt; iOSタブを選択します
+<ul>
+<li><code>Apple ARKit</code> にチェックを入れます</li>
+</ul>
+</li>
+<li>XR Plug-in Management &gt; ARCore Extensions
+<ul>
+<li>iOS Support Enabledにチェックを入れます</li>
+<li>Geospatialにチェックを入れます</li>
+</ul>
+</li>
+</ul>
+<h1 id="arcoreのapiキーの管理に注意してください">ARCoreのAPIキーの管理に注意してください</h1>
+<ul>
+<li>APIキーはgitで管理しないようにしください</li>
+<li>APIキーをアプリに組み込まないようにしてください</li>
+<li>APIキーはあくまで暫定対応です
+<ul>
+<li>Android: Keylessを使用してください</li>
+<li>iOS: API Keyを選択します</li>
+</ul>
+</li>
+<li>APIキーを間違ってコミットしないように以下の設定ファイルは.gitignoreで除外しています</li>
+</ul>
+<pre><code>/ProjectSettings/ARCoreExtensionsProjectSettings.json
+</code></pre>
+<h3 id="arcoreのapiキーの設定方法">ARCoreのAPIキーの設定方法</h3>
+<ul>
+<li>以下のドキュメントの手順に従いARCoreのAPIキー作成の手順まで完了させます
+<ul>
+<li><a href="https://developers.google.com/ar/develop/authorization?hl=ja&amp;platform=unity-arf#api-key-unity">https://developers.google.com/ar/develop/authorization?hl=ja&amp;platform=unity-arf#api-key-unity</a></li>
+</ul>
+</li>
+<li>Project Settings &gt; XR Plugin-in Management &gt; ARCore Extensions</li>
+<li>iOS Authentication StrategyをAPI Keyに設定します
+<ul>
+<li>本来であればAuthentication Tokenを使用することを推奨します</li>
+<li>iOS API Keyに先ほど発行したAPIキーを設定します</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-7-サーバーのapi">2-7). サーバーのAPI</h2>
+<ul>
+<li>クライアント(Unity)は以下のサーバー側のリポジトリのAPIを呼んでいます
+<ul>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server">https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server</a></li>
+</ul>
+</li>
+<li>APIを呼ぶにはサーバー側で作成したAPIキーを後述の手順で設定する必要があります</li>
+</ul>
+<h1 id="サーバーのapiキーの管理に注意してください">サーバーのAPIキーの管理に注意してください</h1>
+<ul>
+<li>APIキーはgitで管理しないようにしください</li>
+<li>APIキーをアプリに組み込まないようにしてください</li>
+<li>APIキーはあくまで暫定対応です</li>
+</ul>
+<h3 id="gitignore用のディレクトリの作成">.gitignore用のディレクトリの作成</h3>
+<ul>
+<li>gitでバージョン管理しないディレクトリを作成します
+<ul>
+<li>例: Assets/Resources/GitIgnore</li>
+</ul>
+</li>
+<li>.gitignoreに上記のディレクトリを追記します</li>
+<li>(本リポジトリのメンテナーは以下のディレクトリが既に.gitignoreに追記されているので、そのまま使ってください)</li>
+</ul>
+<pre><code>Assets/Resources/GitIgnore
+</code></pre>
+<h3 id="サーバーのapiキーの設定方法">サーバーのAPIキーの設定方法</h3>
+<ul>
+<li><code>Assets/Resources/GitIgnore</code> ディレクトリで右クリックしてメニューを開きます</li>
+<li>Create &gt; Synesthesias &gt; Snap &gt; Sample &gt; ApiKeyScriptableObject を選択します</li>
+<li>作成されたScriptableObjectを選択してAPIの情報を入力します
+<ul>
+<li>End Point
+<ul>
+<li>サーバーのエンドポイントのURLを入力します</li>
+</ul>
+</li>
+<li>Api Key Type
+<ul>
+<li>APIキーの種類を入力します</li>
+<li>例: Bearer, X-API-Key</li>
+</ul>
+</li>
+<li>Api Key Value
+<ul>
+<li>APIキーの値を入力します</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project Viewから前述の開発環境設定用のScriptableObjectを選択し <code>Api Configuration</code> のフィールドに前述のScriptableObjectの参照をドラッグ&amp;ドロップで設定します</li>
+</ul>
+<h2 id="2-8-ios機能用途の説明の記載">2-8). iOS機能用途の説明の記載</h2>
+<p>本アプリはiOSのカメラと位置情報の機能を使用するため、用途を記載しないとビルドエラーが発生してしまいます。</p>
+<ul>
+<li>Edit &gt; Project Settings &gt; Player Settings (左側のメニューのPlayer)</li>
+<li>iOSタブを選択</li>
+<li><code>Camera Usage Description</code> にカメラの用途を追記します
+<ul>
+<li>例: <code>建物検出機能に使用します</code></li>
+</ul>
+</li>
+<li><code>Location Usage Description</code> に位置情報の用途を追記します
+<ul>
+<li>例: <code>建物検出機能に使用します</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-9-サンプルアプリのビルド方法">2-9). サンプルアプリのビルド方法</h2>
+<ul>
+<li>サンプルをインポートして前述のAPIキーの設定を一通り完了させます</li>
+<li>File &gt; Build Settings</li>
+<li><code>iOS</code> を選択して <code>Switch Platform</code> を選択します</li>
+<li>以下のシーンを順番に開いて Build Settingsの <code>Add Open Scenes</code> を選択して各種シーンを <code>Scenes In Build</code> に追加します
+<ul>
+<li>BootScene (必ず0番目にしてください)</li>
+<li>MobileDetectionScene</li>
+<li>GuideScene</li>
+<li>MainScene</li>
+<li>ValidationScene</li>
+</ul>
+</li>
+<li><code>Run in Xcode as</code> は <code>Release</code> が選択されていることを確認します</li>
+<li><code>Development Build</code> のチェックが外れていることを確認します
+<ul>
+<li>＊ <code>Development Build</code> の場合はアプリが起動できません</li>
+<li>(Development Buildでもアプリが実行する方法があれば情報共有をお願いします)</li>
+</ul>
+</li>
+<li><code>Build</code> を選択してiOSのアプリをビルドします</li>
+</ul>
+<h2 id="2-10-xcodeのビルド方法">2-10). Xcodeのビルド方法</h2>
+<p>以下は必要最低限アプリをビルドするまでの手順です。
+Xcodeの詳細な使い方については触れないため、必要に応じて適宜調査をお願いします。</p>
+<ul>
+<li>MacにiPhone端末を有線で事前に接続しておきます</li>
+<li>ドロップダウンから接続しているiPhoneを選択しておきます</li>
+<li>初回ビルドの場合Signingでビルドエラーになるのでい以下のいずれかを設定します
+<ul>
+<li>Automatically manage signing</li>
+<li>Provisioning Profile</li>
+</ul>
+</li>
+<li>再生アイコンを押すと再度ビルドが開始されます</li>
+<li>ビルドが完了するとiPhoneにアプリが自動でインストールされアプリが起動します</li>
+</ul>
+<h2 id="2-12-サンプルアプリを使用する">2-12). サンプルアプリを使用する</h2>
+<p>サンプルアプリの使い方は以下のページからご確認ください。</p>
+<ul>
+<li><a href="../user/index.html">アプリ利用者向け情報</a></li>
+</ul>
+<h2 id="2-13-apiドキュメントの閲覧方法">2-13). APIドキュメントの閲覧方法</h2>
+<ul>
+<li>本ドキュメントの画面上部の「API」タブを選択してご確認ください。</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/docs/manual/developer/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
