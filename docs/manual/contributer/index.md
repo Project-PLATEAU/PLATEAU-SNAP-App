@@ -2,7 +2,7 @@
 
 - 本アプリのコントリビューター(Contributer)向け情報です
 - 本リポジトリに対して実際にコミットやプルリクエストを作成する方はこちらのページのご確認をお願いいたします
-- [Wiki](https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki)の「開発者向け情報」も合わせてご確認ください
+- [開発者向け情報](../developer/index.md)も合わせてご確認ください
 
 ## 3-1). 開発環境
 

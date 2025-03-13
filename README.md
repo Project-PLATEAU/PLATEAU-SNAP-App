@@ -1,5 +1,6 @@
 # PLATEAU-SNAP-App
-<img src="docs/images/manual/index.png" width="300">
+
+<img src="docs/images/manual/index.webp" width="300">
 
 ## 1. 概要
 
