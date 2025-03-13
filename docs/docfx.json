@@ -41,8 +41,7 @@
     ],
     "output": "_site",
     "template": [
-      "default",
-      "modern"
+      "default"
     ],
     "globalMetadata": {
       "_appName": "Synesthesias PLATEAU SNAP ドキュメント",

@@ -259,13 +259,4 @@ Assets/Resources/GitIgnore
 
 ## 2-10). APIドキュメントの閲覧方法
 
-- 本リポジトリをチェックアウトします
-- APIドキュメントを閲覧するだけであれば以下のコマンドが一番楽です。
-
-```bash
-python3 -m http.server <ポート番号> --directory docs/_site
-```
-
-- ブラウザで以下のURLへアクセスします。
-  - http://localhost:<ポート番号>/
-- 画面上部から「API」タブを選択して各種APIを確認できます
+- [API](../../../api/Synesthesias.PLATEAU.Snap.Generated.html)ページからご確認ください

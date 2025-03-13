@@ -63,7 +63,7 @@ vi docs/docfx.json
 
 ```bash
 // サイトの名称
-Name (mysite): Synesthesias.Snap API Document
+Name (mysite): Synesthesias PLATEAU SNAP ドキュメント
 
 // APIドキュメントを作成するかどうか
 Generate .NET API documentation? [y/n] (y): ※そのままエンターキーを押す
@@ -113,11 +113,30 @@ Is this OK? [y/n] (y): ※そのままエンターキーを押す
 
 ## 3-4). クライアントのAPIドキュメントの更新方法
 
+### 更新用ブランチへ切替
+
+gitでmainブランチを最新の状態にしてdocs更新用のブランチへ切り替えます
+
+```bash
+// リモートの最新情報を取得
+git fetch origin
+
+// mainブランチを最新の状態に同期する
+git branch -f main origin/main
+
+// mainブランチからdocs更新用のブランチを作成してチェックアウト
+git checkout -b feature/update_docs main
+```
+
+### csprojファイルの生成
+
 APIドキュメントは `*.csproj` ファイルを元に生成されます。
 
 Unityで該当のUnityプロジェクトを開き直したり、ソースコードを任意のIDEで開きます。
 
 Unityプロジェクトのディレクトリ直下に `*.csproj` ファイルが生成されていることを確認します。
+
+### ドキュメントの生成
 
 ```bash
 // .NETのインストール
@@ -130,17 +149,44 @@ cd path/to/PLATEAU-SNAP-App
 dotnet tool restore
 
 // 既存ファイルを削除
-rm -rf docs/_site docs/api docs/docs
+rm -rf docs/api docs/_site docs/api docs/docs
 
 // ymlファイル作成
 dotnet docfx metadata docs/docfx.json
+```
 
-// htmlファイル作成
+### ドキュメントの確認
+
+以下のコマンドを実行するとローカル環境でDocFxで生成したドキュメントをブラウザで閲覧することが可能です。
+
+```bash
+// htmlファイル作成(docs/_site)
 dotnet docfx build docs/docfx.json
 
 // ホスティングとpdfドキュメント生成(前述のコマンドをスキップしてこちらを直接実行してもymlとhtmlファイルは作成されます)
 dotnet docfx docs/docfx.json --serve --port <ポート番号>
+
+// ブラウザから以下のURLを開く
+http://localhost:<ポート番号>
 ```
+
+### PRマージと自動デプロイ
+
+- ここまでの変更差分をpushしてプルリクエストをmainブランチへマージします
+- mainブランチに変更が加わると[GitHub Action](https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/.github/workflows/deploy-docs.yml)が自動で `docs/_site` 配下のファイルを [gh-pages](https://github.com/Synesthesias/PLATEAU-SNAP-App/tree/gh-pages) ブランチへ自動でpushします
+- 自動で[ドキュメント](https://synesthesias.github.io/PLATEAU-SNAP-App)ページにデプロイされ更新されます(詳細後述)
+
+#### 自動デプロイの設定について
+
+前述のデプロイはリポジトリの `Settings` タブで設定されています
+`Settings` タブへのアクセスはアクセス権限が必要です。
+
+- [詳細](https://docs.github.com/ja/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+- 本リポジトリは以下の設定になっているため `gh-pages` ブランチへ `_site` 配下のディレクトリがpushされると自動でドキュメントページへ自動デプロイが行われます
+
+> Build and deployment
+> Source: Deploy from a branch
+> Branch: gh-pages
 
 ## 3-5). サンプルのAPI通信用のクライアントコードの更新方法
 

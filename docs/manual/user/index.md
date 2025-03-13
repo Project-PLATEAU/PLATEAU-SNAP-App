@@ -2,6 +2,9 @@
 
 サンプルアプリの利用者向けの情報です
 
+- リポジトリ
+  - [PLATEAU-SNAP-App](https://github.com/Synesthesias/PLATEAU-SNAP-App)
+
 <img src="../../images/manual/index.png" width="300">
 
 ## 1-1). TODO: 利用方法を追記
