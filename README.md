@@ -11,11 +11,11 @@
 
 スマートフォンで撮影した画像をもとに 3D 都市モデルの建物地物のテクスチャ(地物の外観)を抽出・生成し、3D 都市モデルのデータベースに登録・蓄積可能なツール「PLATEAU SNAP」を開発しました。
 
-本システムは、同ツールのフロントエンドとし機能し、スマートフォンの位置や姿勢を高精度で推定するVPS機能に加えて、撮影可能な建物の面をカメラ映像上にAR表示する機能や撮影した画像の品質を評価する機能、撮影画像と面情報をアップロードする機能を提供します。バックエンドのリポジトリは 「[PLATEAU-SNAP-Server](https://github.com/Synesthesias/PLATEAU-SNAP-Server)」にて管理されています。バックエンドの詳細については、そちらのリポジトリをご確認ください。
+本システムは、同ツールのフロントエンドとし機能し、スマートフォンの位置や姿勢を高精度で推定するVPS機能に加えて、撮影可能な建物の面をカメラ映像上にAR表示する機能や撮影した画像の品質を評価する機能、撮影画像と面情報をアップロードする機能を提供します。バックエンドのリポジトリは 「[PLATEAU-SNAP-Server](https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server)」にて管理されています。バックエンドの詳細については、そちらのリポジトリをご確認ください。
 
 ## 3. 利用手順
 
-本システムの構築手順及び利用手順については[操作マニュアル](https://synesthesias.github.io/PLATEAU-SNAP-App)を参照してください。
+本システムの構築手順及び利用手順については[操作マニュアル](https://project-plateau.github.io/PLATEAU-SNAP-App/index.html)を参照してください。
 
 ## 4. システム概要
 
@@ -41,7 +41,7 @@
 
 | 名称 | バージョン | 内容 |
 |-----|-------|-------|
-| [PLATEAU.SNAP.Server](https://github.com/Synesthesias/PLATEAU-SNAP-Server) | 0.0.1 | SNAPのサーバーサイド |
+| [PLATEAU.SNAP.Server](https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server) | 0.0.1 | SNAPのサーバーサイド |
 | AR Foundation | [5.1.5](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html) | AR機能実装に使用 |
 | Google ARCore XR Plugin | [5.1.5](https://docs.unity3d.com/ja/Packages/com.unity.xr.arkit@5.1/manual/index.html) | AR機能実装(Geospatial)に使用 |
 | ARCore Extensions | [1.22.3](https://github.com/google-ar/arcore-unity-extensions) | AR機能の拡張を提供(ARCoreが依存) |
@@ -75,13 +75,13 @@
 
 ## 7. 本リポジトリのフォルダ構成
 
-| フォルダ名 | 詳細 | 関連情報 |
-|-----|-----|-----|
-| SnapForUnity | Unityプロジェクト | [構成](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/1).-%E9%96%8B%E7%99%BA%E8%80%85(Developer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#1-1-%E6%A7%8B%E6%88%90>)  |
-| .config | .NETの環境設定 | [クライアントのAPIドキュメントの作成方法](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-3-%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AEapi%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95%E8%BF%BD%E5%8A%A0%E5%AF%BE%E5%BF%9C%E4%B8%8D%E8%A6%81>) |
-| .github | GitHubの設定ファイル | [プルリクエストの作成手順](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-6-%E3%83%97%E3%83%AB%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90%E6%89%8B%E9%A0%86>) |
-| OpenAPI | API通信用のコード生成関連 | [サンプルのAPI通信用のクライアントコードの更新方法](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-5-%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AEapi%E9%80%9A%E4%BF%A1%E7%94%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95>) |
-| docs | アプリのAPIドキュメント | [クライアントのAPIドキュメントの作成方法](<https://github.com/Synesthesias/PLATEAU-SNAP-App/wiki/2).-%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC(Contributer)%E5%90%91%E3%81%91%E6%83%85%E5%A0%B1#2-3-%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AEapi%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95%E8%BF%BD%E5%8A%A0%E5%AF%BE%E5%BF%9C%E4%B8%8D%E8%A6%81>) |
+| フォルダ名        | 詳細                             |
+|------------------|--------------------------------|
+| SnapForUnity    | Unityプロジェクト               |
+| .config        | .NETの環境設定                   |
+| .github        | GitHubの設定ファイル             |
+| OpenAPI        | API通信用のコード生成関連       |
+| docs          | アプリのAPIドキュメント           |
 
 ## 8. ライセンス
 
