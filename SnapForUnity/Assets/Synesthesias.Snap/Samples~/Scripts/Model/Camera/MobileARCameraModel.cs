@@ -26,7 +26,7 @@ namespace Synesthesias.Snap.Sample
                     height: originalTexture.height,
                     textureFormat: TextureFormat.RGBA32,
                     mipChain: false,
-                    linear: true);
+                    linear: false);
 
                 var previousTexture = RenderTexture.active;
                 RenderTexture.active = originalTexture;

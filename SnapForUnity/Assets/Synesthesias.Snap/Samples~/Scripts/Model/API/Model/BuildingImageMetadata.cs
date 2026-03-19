@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic; 
 
 namespace Synesthesias.PLATEAU.Snap.Generated.Model
 {
@@ -14,7 +15,8 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Model
         public Coordinate to;
         public double roll;
         public DateTime timestamp;
-
+        public string coordinates;
+        
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -23,18 +25,22 @@ namespace Synesthesias.PLATEAU.Snap.Generated.Model
         /// <param name="to"></param>
         /// <param name="roll"></param>
         /// <param name="timestamp"></param>
+        /// <param name="coordinates"></param>
+        
         public BuildingImageMetadata(
             string gmlid,
             Coordinate from,
             Coordinate to,
             double roll,
-            DateTime timestamp)
+            DateTime timestamp,
+            string coordinates)
         {
             this.gmlid = gmlid;
             this.from = from;
             this.to = to;
             this.roll = roll;
             this.timestamp = timestamp;
+            this.coordinates = coordinates;   
         }
 
         /// <summary>

@@ -21,6 +21,7 @@ namespace Synesthesias.Snap.Sample
             builder.Register<SceneModel>(Lifetime.Singleton);
             builder.Register<PlatformModel>(Lifetime.Singleton);
             builder.RegisterInstance(residentView);
+            builder.RegisterEntryPoint<DevLogger>();
             ConfigureEnvironment(builder);
             ConfigureLocalization(builder);
             ConfigureAPI(builder);

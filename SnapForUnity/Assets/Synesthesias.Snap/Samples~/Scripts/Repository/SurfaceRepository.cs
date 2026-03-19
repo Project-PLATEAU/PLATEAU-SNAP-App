@@ -7,7 +7,9 @@ using Synesthesias.Snap.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
+using System.Text;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -31,7 +33,7 @@ namespace Synesthesias.Snap.Sample
         }
 
         /// <summary>
-        /// 現在の位置で撮影可能な面の情報を取得
+        /// 現在の位置で撮影可能な面の情報をAPIを用いて取得する
         /// </summary>
         /// <param name="fromLatitude">始点の緯度</param>
         /// <param name="fromLongitude">始点の経度</param>
@@ -97,6 +99,20 @@ namespace Synesthesias.Snap.Sample
 
                 result = cachedSurfaces;
                 return result;
+            }
+            catch (TaskCanceledException)
+            {
+                // HTTP通信のキャンセル処理は正常な動作のため、ログ出力せずに空のリストを返す
+                requestedAt = previousRequestedAt;
+                Debug.Log("面の取得(API): キャンセルされました");
+                return new List<ISurfaceModel>();
+            }
+            catch (OperationCanceledException)
+            {
+                // キャンセレーション処理は正常な動作のため、ログ出力せずに空のリストを返す
+                requestedAt = previousRequestedAt;
+                Debug.Log("面の取得(API): キャンセルされました");
+                return new List<ISurfaceModel>();
             }
             catch (ApiException exception)
             {

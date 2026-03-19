@@ -115,7 +115,7 @@ namespace Synesthesias.Snap.Sample
 
             builder.Register<DetectionSettingModel>(Lifetime.Singleton)
                 .WithParameter("minimumDistance", 10)
-                .WithParameter("maximumDistance", 100)
+                .WithParameter("maximumDistance", 500)
                 .WithParameter("incrementDistance", 10)
                 .WithParameter("defaultDistance", 50);
 

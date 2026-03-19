@@ -35,17 +35,20 @@ namespace Synesthesias.Snap.Runtime
             var result = string.Empty;
             var mainLoopState = geospatialMainLoopModel.State;
 
+            // 基本情報の表示
             stringBuilder
                 .AppendLine($"StateType: {mainLoopState.StateType.ToMessage()}")
                 .AppendLine($"FeatureSupported: {mainLoopState.FeatureSupported}")
-                .AppendLine($"EarthState: {mainLoopState.EarthState}")
                 .AppendLine($"ARSessionState: {mainLoopState.ARSessionState}");
+
+            // AREarthManagerの状態表示
+            stringBuilder
+                .AppendLine($"--- AREarthManager State ---")
+                .AppendLine($"EarthState: {arEarthManager.EarthState}")
+                .AppendLine($"EarthTrackingState: {arEarthManager.EarthTrackingState}");
 
             if (arEarthManager.EarthTrackingState != TrackingState.Tracking)
             {
-                stringBuilder
-                    .AppendLine("Earth Tracking State: Not Tracking");
-
                 result = stringBuilder.ToString();
                 stringBuilder.Clear();
                 return result;
@@ -53,29 +56,38 @@ namespace Synesthesias.Snap.Runtime
 
             var accuracyResult = geospatialAccuracyModel.GetAccuracy();
 
+            // 精度情報の表示
             stringBuilder
-                .AppendLine($"Accuracy: {accuracyResult.AccuracyState.ToMessage()}")
+                .AppendLine($"--- Accuracy Information ---")
+                .AppendLine($"Accuracy State: {accuracyResult.AccuracyState.ToMessage()}")
                 .Append("Horizontal Accuracy: ")
                 .Append(geospatialPose.HorizontalAccuracy.ToString("F6"))
+                .Append(" m")
                 .AppendLine()
                 .Append("Vertical Accuracy: ")
                 .Append(geospatialPose.VerticalAccuracy.ToString("F2"))
+                .Append(" m")
                 .AppendLine();
 
+            // 位置情報の表示
             stringBuilder
-                .AppendLine($"Latitude/Longitude: ")
+                .AppendLine($"--- Position Information ---")
+                .Append("Latitude/Longitude: ")
                 .Append(geospatialPose.Latitude.ToString("F6"))
                 .Append("/")
                 .Append(geospatialPose.Longitude.ToString("F6"))
                 .AppendLine()
                 .Append("Altitude: ")
                 .Append(geospatialPose.Altitude.ToString("F2"))
+                .Append(" m")
                 .AppendLine()
                 .Append("Heading: ")
                 .Append(geospatialPose.EunRotation.ToString("F1"))
+                .Append("°")
                 .AppendLine()
                 .Append("Heading Accuracy: ")
-                .Append(geospatialPose.OrientationYawAccuracy.ToString("F1"));
+                .Append(geospatialPose.OrientationYawAccuracy.ToString("F1"))
+                .Append("°");
 
             result = stringBuilder.ToString();
             stringBuilder.Clear();

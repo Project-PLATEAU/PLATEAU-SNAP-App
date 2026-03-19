@@ -16,5 +16,10 @@ namespace Synesthesias.Snap.Runtime
             ISurfaceModel surface,
             Quaternion eunRotation,
             CancellationToken cancellationToken);
+
+        /// <summary>
+        /// 全てのアンカーを明示的にクリア
+        /// </summary>
+        void ClearAllAnchors();
     }
 }

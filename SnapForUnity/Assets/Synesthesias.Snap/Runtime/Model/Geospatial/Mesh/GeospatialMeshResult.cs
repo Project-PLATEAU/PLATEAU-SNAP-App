@@ -33,6 +33,16 @@ namespace Synesthesias.Snap.Runtime
         public readonly Mesh Mesh;
 
         /// <summary>
+        /// メッシュのローカル頂点(Hull)
+        /// </summary>
+        public readonly Vector3[] HullVertices;
+
+        /// <summary>
+        /// メッシュのローカル頂点(Holes)
+        /// </summary>
+        public readonly Vector3[][] HolesVertices;
+
+        /// <summary>
         /// 成功かどうか
         /// </summary>
         public readonly bool IsSuccess;
@@ -45,13 +55,17 @@ namespace Synesthesias.Snap.Runtime
             GeospatialAccuracyState accuracyState,
             GeospatialMeshResultType resultType = GeospatialMeshResultType.None,
             Transform anchorTransform = null,
-            Mesh mesh = null)
+            Mesh mesh = null,
+            Vector3[] hullVertices = null,
+            Vector3[][] holesVertices= null)
         {
             MainLoopState = mainLoopState;
             AccuracyState = accuracyState;
             ResultType = resultType;
             AnchorTransform = anchorTransform;
             Mesh = mesh;
+            HullVertices = hullVertices;
+            HolesVertices = holesVertices;
 
             IsSuccess = MainLoopState.IsReady
                         && AccuracyState == GeospatialAccuracyState.HighAccuracy

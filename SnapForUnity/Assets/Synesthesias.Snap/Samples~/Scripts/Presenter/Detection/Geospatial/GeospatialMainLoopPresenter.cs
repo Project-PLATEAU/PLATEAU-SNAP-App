@@ -55,6 +55,11 @@ namespace Synesthesias.Snap.Sample
                     await model.MainLoopAsync(cancellationToken);
                 }
             }
+            catch (OperationCanceledException)
+            {
+                // キャンセレーション処理は正常な動作のため、ログ出力しない
+                return;
+            }
             catch (Exception exception)
             {
                 Debug.LogWarning(exception);

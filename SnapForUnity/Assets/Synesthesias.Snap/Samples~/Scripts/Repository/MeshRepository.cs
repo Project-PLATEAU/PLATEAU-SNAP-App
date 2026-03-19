@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using System.Linq;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -26,7 +27,7 @@ namespace Synesthesias.Snap.Sample
         /// 検出されたメッシュのViewのリスト
         /// </summary>
         public IReadOnlyCollection<IMobileDetectionMeshView> DetectedMeshViews
-            => detectedMeshViews.Values;
+            => detectedMeshViews.Values.ToArray();
 
         /// <summary>
         /// MeshViewが選択されたかのObservable
@@ -68,7 +69,15 @@ namespace Synesthesias.Snap.Sample
 
         public void ClearDetected()
         {
-            RemoveDetected(detectedMeshViews.Values);
+            // コレクション変更エラーを避けるため、配列にコピーしてから削除
+            var meshViewsToRemove = detectedMeshViews.Values.ToArray();
+            foreach (var meshView in meshViewsToRemove)
+            {
+                if (meshView?.GetGameObject())
+                {
+                    Object.Destroy(meshView.GetGameObject());
+                }
+            }
             detectedMeshViews.Clear();
         }
 
@@ -98,7 +107,13 @@ namespace Synesthesias.Snap.Sample
         {
             if (ContainsMeshId(meshView.Id))
             {
-                throw new InvalidOperationException($"メッシュ({meshView.Id})は既に検出されています");
+                // 重複したメッシュの場合は既存のメッシュを保持し、新しいメッシュは破棄する
+                // Debug.Log($"メッシュ({meshView.Id})は既に検出されています。新しいメッシュを破棄します。");
+                if (meshView?.GetGameObject())
+                {
+                    Object.Destroy(meshView.GetGameObject());
+                }
+                return;
             }
 
             RemoveDetected(meshView.Id);
@@ -116,7 +131,9 @@ namespace Synesthesias.Snap.Sample
 
         private void RemoveDetected(IEnumerable<IMobileDetectionMeshView> meshViews)
         {
-            foreach (var meshView in meshViews)
+            // コレクション変更エラーを避けるため、配列にコピーしてから削除
+            var meshViewsArray = meshViews.ToArray();
+            foreach (var meshView in meshViewsArray)
             {
                 RemoveDetected(meshView.Id);
             }
@@ -124,7 +141,26 @@ namespace Synesthesias.Snap.Sample
 
         private void OnSubscribeMesh(IMobileDetectionMeshView meshView)
         {
-            var gameObject = meshView.GetGameObject();
+            if (meshView == null)
+            {
+                return;
+            }
+
+            GameObject gameObject = null;
+            try
+            {
+                gameObject = meshView.GetGameObject();
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"[購読設定] GameObject取得に失敗: {ex.Message}");
+                return;
+            }
+
+            if (!gameObject)
+            {
+                return;
+            }
 
             selectedObjectSubject
                 .Where(selectedObject => selectedObject == gameObject)

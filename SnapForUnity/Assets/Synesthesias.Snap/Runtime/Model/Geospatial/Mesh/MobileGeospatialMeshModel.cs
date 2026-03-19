@@ -18,6 +18,7 @@ namespace Synesthesias.Snap.Runtime
         private readonly IMeshFactoryModel meshFactoryModel;
         private readonly GeospatialAccuracyModel accuracyModel;
         private readonly GeospatialAnchorModel geospatialAnchorModel;
+        private readonly IGeospatialMathModel geospatialMathModel;
 
         /// <summary>
         /// コンストラクタ
@@ -25,11 +26,13 @@ namespace Synesthesias.Snap.Runtime
         public MobileGeospatialMeshModel(
             IMeshFactoryModel meshFactoryModel,
             GeospatialAccuracyModel accuracyModel,
-            GeospatialAnchorModel geospatialAnchorModel)
+            GeospatialAnchorModel geospatialAnchorModel,
+            IGeospatialMathModel geospatialMathModel)
         {
             this.meshFactoryModel = meshFactoryModel;
             this.accuracyModel = accuracyModel;
             this.geospatialAnchorModel = geospatialAnchorModel;
+            this.geospatialMathModel = geospatialMathModel;
         }
 
         /// <summary>
@@ -37,9 +40,23 @@ namespace Synesthesias.Snap.Runtime
         /// </summary>
         public void Dispose()
         {
-            ClearAnchors(anchorResults);
+            ClearAllAnchors();
         }
-
+       /// <summary>
+        /// 全てのアンカーを明示的にクリア
+        /// </summary>
+        public void ClearAllAnchors()
+        {
+            try
+            {
+                ClearAnchors(anchorResults);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"[MobileGeospatialMeshModel] アンカーのクリア中にエラーが発生しました: {ex.Message}");
+            }
+        }
+        
         /// <summary>
         /// メッシュの生成
         /// </summary>
@@ -57,6 +74,7 @@ namespace Synesthesias.Snap.Runtime
                     accuracyState: accuracyResult.AccuracyState);
             }
 
+            // 面の頂点座標のリストを取得   
             var coordinates = surface?.GetUniqueCoordinates();
 
             if (coordinates == null || coordinates.Count < 1)
@@ -67,62 +85,48 @@ namespace Synesthesias.Snap.Runtime
                     resultType: GeospatialMeshResultType.EmptyCoordinate);
             }
 
-            if (!TryGetAnchorResults(
-                    coordinates: coordinates[0], // Hullのみ対応(Holeは無視)
-                    eunRotation: eunRotation,
-                    results: out var results))
-            {
-                ClearAnchors(results);
+            var hullCoordinates = coordinates[0]; // Hullのみ対応(Holeは無視)
 
+            // 単一アンカー方式：最初の頂点にのみアンカーを作成
+            if (!TryCreateOriginAnchor(
+                    firstCoordinate: hullCoordinates[0],
+                    eunRotation: eunRotation,
+                    result: out var originAnchorResult))
+            {
                 return new GeospatialMeshResult(
                     mainLoopState: accuracyResult.MainLoopState,
                     accuracyState: accuracyResult.AccuracyState,
                     resultType: GeospatialMeshResultType.AnchorCreationFailed);
             }
 
-            anchorResults.AddRange(results);
+            anchorResults.Add(originAnchorResult);
+
+            // originアンカーのTracking待機
+            var originAnchor = originAnchorResult.Anchor;
 
             await UniTask.WaitUntil(
                 () =>
                 {
-                    foreach (var vertexAnchor in results
-                                 .Select(result => result.Anchor))
+                    if (originAnchor.trackingState != TrackingState.Tracking)
                     {
-                        if (vertexAnchor.trackingState != TrackingState.Tracking)
-                        {
-                            return false;
-                        }
+                        return false;
+                    }
 
-                        if (!IsValidPosition(vertexAnchor.transform.position))
-                        {
-                            return false;
-                        }
+                    if (!IsValidPosition(originAnchor.transform.position))
+                    {
+                        return false;
                     }
 
                     return true;
                 },
                 cancellationToken: cancellationToken);
 
-            var originAnchor = results[0].Anchor;
-            var originVertex = originAnchor.transform.position;
-
-            var vertices = results
-                .Select(result => result.Anchor.transform.position - originVertex)
-                .ToArray();
-
-            // Verticesを取得したので原点以外のアンカーを削除
-            for (var anchorIndex = 1; anchorIndex < results.Count; anchorIndex++)
-            {
-                var anchorResult = results[anchorIndex];
-                if (anchorResult.Anchor.gameObject)
-                {
-                    UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
-                }
-
-                results.Remove(anchorResult);
-                anchorResults.Remove(anchorResult);
-            }
-
+            // 単一アンカー方式：全頂点を同一フレーム内で経緯度から変換
+            var vertices = ConvertCoordinatesToVertices(
+                hullCoordinates: hullCoordinates,
+                originAnchorTransform: originAnchor.transform,
+                eunRotation: eunRotation);
+          
             var mesh = await meshFactoryModel.CreateAsync(
                 hull: vertices,
                 holes: null,
@@ -133,11 +137,13 @@ namespace Synesthesias.Snap.Runtime
                 accuracyState: accuracyResult.AccuracyState,
                 resultType: GeospatialMeshResultType.Success,
                 anchorTransform: originAnchor.transform,
-                mesh: mesh);
+                mesh: mesh,
+                hullVertices: vertices,
+                holesVertices: null);
 
             return result;
         }
-
+        
         private bool IsValidPosition(Vector3 position)
         {
             return position != Vector3.zero &&
@@ -145,40 +151,73 @@ namespace Synesthesias.Snap.Runtime
                    !float.IsInfinity(position.x) && !float.IsInfinity(position.y) && !float.IsInfinity(position.z);
         }
 
-        private bool TryGetAnchorResults(
-            List<List<double>> coordinates,
+        /// <summary>
+        /// 原点アンカーを作成する（単一アンカー方式）
+        /// </summary>
+        /// <param name="firstCoordinate">最初の頂点の経緯度座標</param>
+        /// <param name="eunRotation">EUN回転</param>
+        /// <param name="result">作成されたアンカーの結果</param>
+        /// <returns>成功した場合true、失敗した場合false</returns>
+        private bool TryCreateOriginAnchor(
+            List<double> firstCoordinate,
             Quaternion eunRotation,
-            out List<GeospatialAnchorResult> results)
+            out GeospatialAnchorResult result)
         {
-            results = new List<GeospatialAnchorResult>();
+            var geospatialVector = SurfaceConverter.ToGeospatialVector(firstCoordinate);
 
-            foreach (var coordinate in coordinates)
+            result = geospatialAnchorModel.CreateAnchor(
+                latitude: geospatialVector.Latitude,
+                longitude: geospatialVector.Longitude,
+                altitude: geospatialVector.Altitude,
+                eunRotation: eunRotation);
+
+            return result.IsSuccess;
+        }
+
+        /// <summary>
+        /// 経緯度座標配列を頂点座標配列に変換する（単一アンカー方式）
+        /// 全頂点を同一フレーム内で変換することで、AR座標系のずれを防ぐ
+        /// </summary>
+        /// <param name="hullCoordinates">Hull頂点の経緯度座標配列</param>
+        /// <param name="originAnchorTransform">原点アンカーのTransform</param>
+        /// <param name="eunRotation">EUN回転</param>
+        /// <returns>原点アンカーのローカル座標系での頂点配列</returns>
+        private Vector3[] ConvertCoordinatesToVertices(
+            List<List<double>> hullCoordinates,
+            Transform originAnchorTransform,
+            Quaternion eunRotation)
+        {
+            var vertices = new Vector3[hullCoordinates.Count];
+
+            for (var i = 0; i < hullCoordinates.Count; i++)
             {
+                var coordinate = hullCoordinates[i];
                 var geospatialVector = SurfaceConverter.ToGeospatialVector(coordinate);
 
-                var anchorResult = geospatialAnchorModel.CreateAnchor(
+                // 経緯度をGeospatialPoseに変換
+                var geospatialPose = geospatialMathModel.CreateGeospatialPose(
                     latitude: geospatialVector.Latitude,
                     longitude: geospatialVector.Longitude,
                     altitude: geospatialVector.Altitude,
                     eunRotation: eunRotation);
 
-                results.Add(anchorResult);
+                // ワールド座標に変換
+                var worldPosition = geospatialMathModel.GetVector3(geospatialPose);
 
-                if (anchorResult.IsSuccess)
-                {
-                    continue;
-                }
-
-                return false;
+                // originAnchorのローカル座標系に変換
+                vertices[i] = originAnchorTransform.InverseTransformPoint(worldPosition);
             }
 
-            return true;
+            return vertices;
         }
-
+        /// <summary>
+        /// アンカーをクリアする
+        /// </summary>
+        /// <param name="anchorResults">アンカーのリスト</param>
         private static void ClearAnchors(List<GeospatialAnchorResult> anchorResults)
         {
             foreach (var anchorResult in anchorResults
-                         .Where(anchorResult => anchorResult.Anchor.gameObject))
+                         .Where(anchorResult => anchorResult?.Anchor != null && anchorResult.Anchor.gameObject != null))
             {
                 UnityEngine.Object.Destroy(anchorResult.Anchor.gameObject);
             }

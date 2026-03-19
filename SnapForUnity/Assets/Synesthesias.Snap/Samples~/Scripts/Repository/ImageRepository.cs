@@ -55,7 +55,8 @@ namespace Synesthesias.Snap.Sample
                     from: validationParameter.FromCoordinate,
                     to: validationParameter.ToCoordinate,
                     roll: validationParameter.Roll,
-                    timestamp: validationParameter.Timestamp);
+                    timestamp: validationParameter.Timestamp,
+                    coordinates: validationParameter.Coordinates);
 
                 var metaDataJson = metadata.ToJson();
 

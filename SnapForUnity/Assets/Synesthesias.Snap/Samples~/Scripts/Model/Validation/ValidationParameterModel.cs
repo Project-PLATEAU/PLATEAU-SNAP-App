@@ -2,6 +2,7 @@ using Google.XR.ARCoreExtensions;
 using Synesthesias.PLATEAU.Snap.Generated.Model;
 using Synesthesias.Snap.Runtime;
 using System;
+using System.Collections.Generic;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -41,6 +42,11 @@ namespace Synesthesias.Snap.Sample
         public readonly DateTime Timestamp;
 
         /// <summary>
+        /// AR表示していた面の頂点座標WKT形式のPolygon座標文字列
+        /// </summary>
+        public readonly string Coordinates;
+
+        /// <summary>
         /// コンストラクタ
         /// </summary>
         public ValidationParameterModel(
@@ -49,7 +55,8 @@ namespace Synesthesias.Snap.Sample
             Coordinate fromCoordinate,
             Coordinate toCoordinate,
             double roll,
-            DateTime timestamp)
+            DateTime timestamp,
+            string coordinates)
         {
             MeshValidationResult = meshValidationResult;
             GmlId = gmlId;
@@ -57,6 +64,7 @@ namespace Synesthesias.Snap.Sample
             ToCoordinate = toCoordinate;
             Roll = roll;
             Timestamp = timestamp;
+            Coordinates = coordinates;
         }
 
         /// <summary>
@@ -72,13 +80,15 @@ namespace Synesthesias.Snap.Sample
             double toLatitude,
             double toAltitude,
             double roll,
-            DateTime timestamp) : this(
+            DateTime timestamp,
+            string coordinates) : this(
             meshValidationResult: meshValidationResult,
             gmlId: gmlId,
             fromCoordinate: new Coordinate(fromLongitude, fromLatitude, fromAltitude),
             toCoordinate: new Coordinate(toLongitude, toLatitude, toAltitude),
             roll: roll,
-            timestamp: timestamp)
+            timestamp: timestamp,
+            coordinates: coordinates)
         {
         }
 
@@ -91,7 +101,8 @@ namespace Synesthesias.Snap.Sample
             GeospatialPose fromGeospatialPose,
             GeospatialPose toGeospatialPose,
             double roll,
-            DateTime timestamp) : this(
+            DateTime timestamp,
+            string coordinates) : this(
             meshValidationResult: meshValidationResult,
             gmlId: gmlId,
             fromLongitude: fromGeospatialPose.Longitude,
@@ -101,7 +112,8 @@ namespace Synesthesias.Snap.Sample
             toLatitude: toGeospatialPose.Latitude,
             toAltitude: toGeospatialPose.Altitude,
             roll: roll,
-            timestamp: timestamp)
+            timestamp: timestamp,
+            coordinates: coordinates)
         {
         }
     }

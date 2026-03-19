@@ -4,6 +4,7 @@ using Google.XR.ARCoreExtensions;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 namespace Synesthesias.Snap.Runtime
 {
@@ -60,11 +61,14 @@ namespace Synesthesias.Snap.Runtime
         {
             State.SetStateType(GeospatialMainLoopStateType.Enabled);
 
-            var isArSessionStarted = false;
-
-            while (!isArSessionStarted)
+            // 既にトラッキング中ならResetを避け、状態遷移のみ行う
+            var isArSessionStarted = ARSession.state == ARSessionState.SessionTracking;
+            if (!isArSessionStarted)
             {
-                isArSessionStarted = await StartARSessionAsync(cancellationToken);
+                while (!isArSessionStarted)
+                {
+                    isArSessionStarted = await StartARSessionAsync(cancellationToken);
+                }
             }
 
             var isLocationServiceStarted = false;
@@ -130,11 +134,15 @@ namespace Synesthesias.Snap.Runtime
                 return;
             }
 
+            var isEarthTracking = earthManager.EarthTrackingState == TrackingState.Tracking;
+
 #if UNITY_IOS
             var isSessionReady = ARSession.state == ARSessionState.SessionTracking &&
-                                 Input.location.status == LocationServiceStatus.Running;
+                                 Input.location.status == LocationServiceStatus.Running &&
+                                 isEarthTracking;
 #else
-            var isSessionReady = ARSession.state == ARSessionState.SessionTracking;
+            var isSessionReady = ARSession.state == ARSessionState.SessionTracking &&
+                                 isEarthTracking;
 #endif
 
             if (isSessionReady)

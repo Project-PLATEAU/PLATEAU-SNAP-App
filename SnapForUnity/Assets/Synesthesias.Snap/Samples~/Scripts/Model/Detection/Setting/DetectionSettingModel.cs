@@ -90,13 +90,13 @@ namespace Synesthesias.Snap.Sample
         private DetectionMenuElementModel CreateGeospatialVisibilityElementModel()
         {
             var elementModel = new DetectionMenuElementModel(
-                text: "Geospatial: ---",
+                text: "LogView: ---",
                 onClickAsync: OnClickGeospatialAsync);
 
             isGeospatialVisibleProperty
                 .Subscribe(isVisible =>
                 {
-                    var text = isVisible ? "Geospatial: 表示" : "Geospatial: 非表示";
+                    var text = isVisible ? "LogView: 表示" : "LogView: 非表示";
                     elementModel.TextProperty.Value = text;
                 })
                 .AddTo(disposable);

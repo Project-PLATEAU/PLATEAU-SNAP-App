@@ -2,9 +2,9 @@
   href: ../index.md
 - name: 利用を開始する
   items:
-  - name: 1). アプリ利用者向け情報
-    href: user/index.md
-  - name: 2). 開発者向け情報
-    href: developer/index.md
-  - name: 3). コントリビューター向け情報
-    href: contributer/index.md
+      - name: アプリ利用者向け情報
+        href: user/index.md
+      - name: 開発者向け情報
+        href: developer/index.md
+      - name: コントリビューター向け情報
+        href: contributor/index.md

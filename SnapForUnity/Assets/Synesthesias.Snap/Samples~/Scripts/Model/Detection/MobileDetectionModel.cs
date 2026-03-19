@@ -2,9 +2,11 @@ using Cysharp.Threading.Tasks;
 using R3;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 using Synesthesias.Snap.Runtime;
+using UnityEngine.XR.ARFoundation;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -15,6 +17,7 @@ namespace Synesthesias.Snap.Sample
     {
         private readonly CompositeDisposable disposable = new();
         private readonly List<CancellationTokenSource> cancellationTokenSources = new();
+        private CancellationTokenSource createMeshCancellationTokenSource;
         private readonly ReactiveProperty<bool> isManualDetectionProperty;
         private readonly IEnvironmentModel environmentModel;
         private readonly ValidationRepository validationRepository;
@@ -33,7 +36,22 @@ namespace Synesthesias.Snap.Sample
         private readonly MobileDetectionMeshModel detectionMeshModel;
         private readonly DetectionTouchModel touchModel;
         private readonly MockValidationResultModel resultModel;
-        private CancellationTokenSource createMeshCancellationTokenSource;
+
+        /// <summary>
+        /// メッシュリポジトリ
+        /// </summary>
+        private readonly MeshRepository meshRepository;
+
+        /// <summary>
+        /// ARセッション
+        /// </summary>
+        private readonly ARSession arSession;
+
+        /// <summary>
+        /// 手動検出か
+        /// </summary>
+        public bool IsManualDetection
+            => isManualDetectionProperty.Value;
 
         /// <summary>
         /// GeoSpatial情報を表示するか
@@ -68,7 +86,9 @@ namespace Synesthesias.Snap.Sample
             IGeospatialMathModel geospatialMathModel,
             MobileDetectionMeshModel detectionMeshModel,
             DetectionTouchModel touchModel,
-            MockValidationResultModel resultModel)
+            MockValidationResultModel resultModel,
+            MeshRepository meshRepository,
+            ARSession arSession)
         {
             this.validationRepository = validationRepository;
             this.surfaceRepository = surfaceRepository;
@@ -86,6 +106,8 @@ namespace Synesthesias.Snap.Sample
             this.detectionMeshModel = detectionMeshModel;
             this.touchModel = touchModel;
             this.resultModel = resultModel;
+            this.meshRepository = meshRepository;
+            this.arSession = arSession;
 
             var isRelease = environmentModel.EnvironmentType == EnvironmentType.Release;
             var isManualDetection = !isRelease;
@@ -197,6 +219,9 @@ namespace Synesthesias.Snap.Sample
 
             try
             {
+                // 選択されたメッシュの頂点をWKT形式で取得
+                var coordinates = selectedMeshView.GetVerticesAsScreenCoordinates(camera);
+
                 // メッシュを非表示にする
                 detectionMeshModel.SetMeshActive(false);
 
@@ -225,10 +250,22 @@ namespace Synesthesias.Snap.Sample
                     toLatitude: toGeospatialPose.Latitude,
                     toAltitude: toGeospatialPose.Altitude,
                     roll: camera.transform.rotation.eulerAngles.z,
-                    timestamp: DateTime.UtcNow);
+                    timestamp: DateTime.UtcNow,
+                    coordinates: coordinates);
 
                 validationRepository.SetParameter(validationParameter);
-                sceneModel.Transition(SceneNameDefine.Validation);
+
+                // 検証シーンへ遷移しても検出シーンを保持するため、
+                // 撮影後にメッシュ表示を元に戻す
+                detectionMeshModel.SetMeshActive(true);
+
+                // 検出シーンを保持したまま検証シーンをAdditiveでロード
+                await sceneModel.TransitionAdditive(SceneNameDefine.Validation);
+            }
+            catch (OperationCanceledException)
+            {
+                // キャンセル時は正常な動作として扱う
+                detectionMeshModel.SetMeshActive(true);
             }
             catch (Exception exception)
             {
@@ -248,6 +285,34 @@ namespace Synesthesias.Snap.Sample
 
             var clearAnchorMenuElement = CreateClearAnchorMenuElementModel();
             menuModel.AddElement(clearAnchorMenuElement);
+        }
+
+        /// <summary>
+        /// VPSセッションとメッシュをリセットする
+        /// </summary>
+        public async UniTask ResetVpsSessionAndMeshesAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                // メッシュをリセット
+                meshRepository.Clear();
+                detectionMeshModel.Clear();
+
+                // VPS/ARセッションをリセット
+                arSession.Reset();
+                // ARSessionがReadyまたはSessionTrackingになるまで待機
+                while (ARSession.state != ARSessionState.Ready && ARSession.state != ARSessionState.SessionTracking)
+                {
+                    await UniTask.Yield(PlayerLoopTiming.Update, cancellationToken);
+                }
+            }
+            catch (OperationCanceledException)
+            {
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning(exception);
+            }
         }
 
         private DetectionMenuElementModel CreateIsManualDetectionMenuElementModel()
@@ -290,6 +355,9 @@ namespace Synesthesias.Snap.Sample
             return result;
         }
 
+        /// <summary>
+        /// 建物検出のメインループ
+        /// </summary>
         private async UniTask DetectMainLoop(
             Camera camera,
             CancellationToken cancellation)
@@ -313,6 +381,11 @@ namespace Synesthesias.Snap.Sample
                 try
                 {
                     await DetectedAsync(camera, cancellation);
+                }
+                catch (OperationCanceledException)
+                {
+                    // キャンセレーション処理は正常な動作のため、再スローして上位で処理
+                    throw;
                 }
                 catch (Exception e)
                 {
@@ -365,8 +438,17 @@ namespace Synesthesias.Snap.Sample
             var eunRotation = Quaternion.AngleAxis(
                 fromGeospatialPose.EunRotation.eulerAngles.y, Vector3.up);
 
-            foreach (var surface in surfaces)
+            // コレクション変更エラーを避けるため配列に変換
+            var surfaceArray = new ISurfaceModel[surfaces.Count];
+            for (int i = 0; i < surfaces.Count; i++)
             {
+                surfaceArray[i] = surfaces[i];
+            }
+
+            // 面の配列をループしてメッシュを表示する
+            foreach (var surface in surfaceArray)
+            {
+                // メッシュを表示する
                 await OnSurfaceAsync(
                     camera: camera,
                     surface: surface,
@@ -377,6 +459,9 @@ namespace Synesthesias.Snap.Sample
             }
         }
 
+        /// <summary>
+        /// 建物検出画面にメッシュを表示する
+        /// </summary>
         private async UniTask OnSurfaceAsync(
             Camera camera,
             ISurfaceModel surface,

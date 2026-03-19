@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 namespace Synesthesias.Snap.Sample
@@ -39,6 +41,56 @@ namespace Synesthesias.Snap.Sample
         public void Transition(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
+        }
+
+        /// <summary>
+        /// シーンをAdditiveでロードし、アクティブシーンに設定する
+        /// </summary>
+        public async UniTask TransitionAdditive(string sceneName)
+        {
+            var asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+            // シーンの読み込みが完了するまで待機
+            await UniTask.WaitUntil(() => asyncLoad.isDone);
+
+            // 1フレーム待機してシーンの初期化を確実にする
+            await UniTask.Yield();
+
+            var loadedScene = SceneManager.GetSceneByName(sceneName);
+            if (loadedScene.IsValid())
+            {
+                SceneManager.SetActiveScene(loadedScene);
+            }
+        }
+
+        /// <summary>
+        /// 指定したシーンをアンロードする
+        /// </summary>
+        public void Unload(string sceneName)
+        {
+            var scene = SceneManager.GetSceneByName(sceneName);
+            if (scene.IsValid())
+            {
+                SceneManager.UnloadSceneAsync(scene);
+            }
+        }
+
+        /// <summary>
+        /// 指定シーンをアクティブに設定し、別のシーンをアンロードする
+        /// </summary>
+        public void UnloadAndSetActive(string activeSceneName, string unloadSceneName)
+        {
+            var activeScene = SceneManager.GetSceneByName(activeSceneName);
+            if (activeScene.IsValid())
+            {
+                SceneManager.SetActiveScene(activeScene);
+            }
+
+            var unloadScene = SceneManager.GetSceneByName(unloadSceneName);
+            if (unloadScene.IsValid())
+            {
+                SceneManager.UnloadSceneAsync(unloadScene);
+            }
         }
 
         private static string GetActiveSceneName()

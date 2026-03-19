@@ -16,19 +16,26 @@ namespace Synesthesias.Snap.Runtime
         public readonly double HorizontalAccuracyThreshold;
 
         /// <summary>
+        /// 垂直精度のしきい値
+        /// </summary>
+        public readonly double VerticalAccuracyThreshold;
+
+        /// <summary>
         /// デフォルト
         /// </summary>
         public static GeospatialAccuracyThresholdModel Default => new(
-            headingThreshold: 25,
-            horizontalAccuracyThreshold: 20);
+            headingThreshold: 5,
+            horizontalAccuracyThreshold: 1,
+            verticalAccuracyThreshold: 1);
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public GeospatialAccuracyThresholdModel(double headingThreshold, double horizontalAccuracyThreshold)
+        public GeospatialAccuracyThresholdModel(double headingThreshold, double horizontalAccuracyThreshold, double verticalAccuracyThreshold)
         {
             HeadingThreshold = headingThreshold;
             HorizontalAccuracyThreshold = horizontalAccuracyThreshold;
+            VerticalAccuracyThreshold = verticalAccuracyThreshold;
         }
     }
 }

@@ -146,7 +146,7 @@ namespace Synesthesias.Snap.Sample
                 dialogModel.IsVisibleProperty.OnNext(false);
 
                 var previousSceneName = GetPreviousSceneName();
-                sceneModel.Transition(previousSceneName);
+                sceneModel.UnloadAndSetActive(previousSceneName, SceneNameDefine.Validation);
             }
             catch (ApiException exception)
             {
@@ -174,7 +174,7 @@ namespace Synesthesias.Snap.Sample
         public void Cancel()
         {
             var previousSceneName = GetPreviousSceneName();
-            sceneModel.Transition(previousSceneName);
+            sceneModel.UnloadAndSetActive(previousSceneName, SceneNameDefine.Validation);
         }
 
         private string GetPreviousSceneName()

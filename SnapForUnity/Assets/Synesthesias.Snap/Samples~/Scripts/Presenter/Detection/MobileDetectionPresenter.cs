@@ -39,6 +39,11 @@ namespace Synesthesias.Snap.Sample
                     camera: view.ArCamera,
                     cancellationToken);
             }
+            catch (OperationCanceledException)
+            {
+                // キャンセレーション処理は正常な動作のため、ログ出力しない
+                return;
+            }
             catch (Exception exception)
             {
                 Debug.LogWarning(exception);
@@ -67,6 +72,11 @@ namespace Synesthesias.Snap.Sample
             view.CameraButton
                 .OnClickAsObservable()
                 .Subscribe(_ => OnClickCameraAsync().Forget(Debug.LogException))
+                .AddTo(view);
+
+            view.VpsResetButton
+                .OnClickAsObservable()
+                .Subscribe(_ => OnClickVpsResetAsync().Forget(Debug.LogException))
                 .AddTo(view);
         }
 
@@ -97,6 +107,39 @@ namespace Synesthesias.Snap.Sample
             await model.CaptureAsync(
                 camera: view.ArCamera,
                 cancellationToken: cancellationToken);
+        }
+
+        private async UniTask OnClickVpsResetAsync()
+        {
+            // リセット中はVPSリセットボタン無効化
+            var prevVpsInteractable = view.VpsResetButton ? view.VpsResetButton.interactable : false;
+            if (view.VpsResetButton)
+            {
+                view.VpsResetButton.interactable = false;
+            }
+
+            var cancellationToken = view.GetCancellationTokenOnDestroy();
+
+            try
+            {
+                await model.ResetVpsSessionAndMeshesAsync(cancellationToken);
+ 
+                // 表示: リセット完了 → 数秒後に非表示
+                if (view.ResetInfoText)
+                {
+                    view.ResetInfoText.gameObject.SetActive(true);
+                    view.ResetInfoText.text = "リセット完了";
+                    await UniTask.Delay(TimeSpan.FromSeconds(3), cancellationToken: cancellationToken);
+                    view.ResetInfoText.gameObject.SetActive(false);
+                }
+            }
+            finally
+            {
+                if (view.VpsResetButton)
+                {
+                    view.VpsResetButton.interactable = prevVpsInteractable;
+                }
+            }
         }
     }
 }

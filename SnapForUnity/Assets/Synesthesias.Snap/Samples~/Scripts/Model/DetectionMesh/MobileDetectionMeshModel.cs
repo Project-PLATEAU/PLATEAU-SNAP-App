@@ -56,6 +56,7 @@ namespace Synesthesias.Snap.Sample
                 return null;
             }
 
+            // メッシュをインスタンス化する
             var view = Object.Instantiate(
                 meshViewTemplate,
                 meshResult.AnchorTransform);
@@ -65,6 +66,11 @@ namespace Synesthesias.Snap.Sample
             view.Id = surface.GmlId;
             view.MeshFilter.mesh = meshResult.Mesh;
             view.MeshCollider.sharedMesh = meshResult.Mesh;
+
+            // メッシュの頂点を設定する
+            view.SetVertices(
+                meshResult.HullVertices,
+                meshResult.HolesVertices);
 
             return view;
         }
@@ -88,10 +94,16 @@ namespace Synesthesias.Snap.Sample
         {
             foreach (var anchorObject in anchorObjects)
             {
-                Object.Destroy(anchorObject);
+                if (anchorObject != null)
+                {
+                    Object.Destroy(anchorObject);
+                }
             }
 
             anchorObjects.Clear();
+            
+            // ARGeospatialAnchor自体もクリア
+            mobileGeospatialMeshModel.ClearAllAnchors();
         }
     }
 }

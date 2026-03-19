@@ -380,6 +380,15 @@
       },
       "url": "https://package.openupm.com"
     },
+    "org.nuget.nettopologysuite": {
+      "version": "2.6.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "org.nuget.system.memory": "4.6.0"
+      },
+      "url": "https://package.openupm.com"
+    },
     "org.nuget.polly": {
       "version": "8.5.2",
       "depth": 0,
@@ -430,7 +439,7 @@
       "url": "https://package.openupm.com"
     },
     "org.nuget.system.memory": {
-      "version": "4.5.5",
+      "version": "4.6.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {

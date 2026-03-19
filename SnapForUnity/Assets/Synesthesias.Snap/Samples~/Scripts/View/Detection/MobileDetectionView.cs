@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Synesthesias.Snap.Sample
 {
@@ -17,6 +18,8 @@ namespace Synesthesias.Snap.Sample
         [SerializeField] private GameObject geospatialObject;
         [SerializeField] private RawImage cameraRawImage;
         [SerializeField] private Button cameraButton;
+        [SerializeField] private Button vpsResetButton;
+        [SerializeField] private TMP_Text resetInfoText;
 
         /// <summary>
         /// 検出時のMaterial
@@ -71,5 +74,17 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         public Button CameraButton
             => cameraButton;
+
+        /// <summary>
+        /// VPSリセットボタン
+        /// </summary>
+        public Button VpsResetButton
+            => vpsResetButton;
+
+        /// <summary>
+        /// リセット状態の表示テキスト
+        /// </summary>
+        public TMP_Text ResetInfoText
+            => resetInfoText;
     }
 }

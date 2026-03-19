@@ -14,6 +14,7 @@ namespace Synesthesias.Snap.Sample
         private readonly IValidationModel model;
         private readonly ValidationView view;
         private readonly ValidationDialogView dialogView;
+        private bool isSubmitting;
 
         /// <summary>
         /// コンストラクタ
@@ -61,14 +62,18 @@ namespace Synesthesias.Snap.Sample
         {
             var cancellationToken = view.GetCancellationTokenOnDestroy();
 
+            if (isSubmitting) return;
+            isSubmitting = true;
             try
             {
-                dialogView.ConfirmButton.interactable = false;
                 await model.RegisterAsync(cancellationToken);
             }
             catch
             {
-                dialogView.ConfirmButton.interactable = true;
+            }
+            finally
+            {
+                isSubmitting = false;
             }
         }
     }

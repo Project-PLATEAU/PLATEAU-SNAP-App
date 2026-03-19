@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Synesthesias.Snap.Sample
@@ -35,5 +36,12 @@ namespace Synesthesias.Snap.Sample
         /// </summary>
         [Obsolete("削除予定")]
         GameObject GetChildGameObject();
+
+        /// <summary>
+        /// メッシュの頂点をピクセル座標で取得する
+        /// </summary>
+        /// <param name="camera">変換に使用するカメラ</param>
+        /// <returns>WKT形式のPolygon文字列</returns>
+        string GetVerticesAsScreenCoordinates(Camera camera);
     }
 }

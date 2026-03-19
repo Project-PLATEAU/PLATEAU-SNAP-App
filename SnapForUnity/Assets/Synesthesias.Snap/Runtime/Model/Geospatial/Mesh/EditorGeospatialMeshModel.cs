@@ -78,7 +78,18 @@ namespace Synesthesias.Snap.Runtime
                 accuracyState: GeospatialAccuracyState.HighAccuracy,
                 resultType: GeospatialMeshResultType.Success,
                 anchorTransform: anchorObject.transform,
-                mesh: mesh);
+                mesh: mesh,
+                hullVertices: hullVertices,
+                holesVertices: holesVertices);
+        }
+        
+        /// <summary>
+        /// 全てのアンカーを明示的にクリア（エディタ版は特別な処理なし）
+        /// </summary>
+        public void ClearAllAnchors()
+        {
+            // Editor 版では生成したアンカーに特別な管理を行っていないため、
+            // インターフェース準拠のための空実装。
         }
 
         private Vector3[] CreateVertices(

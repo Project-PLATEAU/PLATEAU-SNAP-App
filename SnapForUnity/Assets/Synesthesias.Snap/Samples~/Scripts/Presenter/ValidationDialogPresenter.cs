@@ -119,7 +119,14 @@ namespace Synesthesias.Snap.Sample
             var sprite = dialogModel.GetTitleIconSprite(view.IconSprites, isValid);
             view.IconImage.sprite = sprite;
             view.IconImage.gameObject.SetActive(true);
-            view.ConfirmButton.interactable = isValid;
+            UniTask.Void(async () =>
+            {
+                await UniTask.Yield();
+                if (view != null && view.ConfirmButton != null && view.ConfirmButton.gameObject.activeInHierarchy)
+                {
+                    view.ConfirmButton.interactable = isValid;
+                }
+            });
         }
     }
 }

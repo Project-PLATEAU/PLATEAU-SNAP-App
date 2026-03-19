@@ -185,13 +185,20 @@ namespace Synesthesias.Snap.Sample
                 meshTransform: selectedMeshView.MeshFilter.transform,
                 mesh: selectedMeshView.MeshFilter.mesh);
 
+            // 選択されたメッシュの頂点をWKT形式で取得
+            var coordinates = selectedMeshView.GetVerticesAsScreenCoordinates(camera);
+
+            // メッシュを非表示にする
+            selectedMeshView.MeshFilter.gameObject.SetActive(false);
+
             var validationParameter = new ValidationParameterModel(
                 meshValidationResult: meshValidationResult,
                 gmlId: selectedMeshView.Id,
                 fromGeospatialPose: fromGeospatialPose,
                 toGeospatialPose: toGeospatialPose,
                 roll: camera.transform.rotation.eulerAngles.z,
-                timestamp: DateTime.UtcNow);
+                timestamp: DateTime.UtcNow,
+                coordinates: coordinates);
 
             validationRepository.SetParameter(validationParameter);
             sceneModel.Transition(SceneNameDefine.Validation);
