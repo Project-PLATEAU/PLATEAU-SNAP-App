@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>アプリ利用者向け情報 | Synesthesias PLATEAU SNAP ドキュメント </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="アプリ利用者向け情報 | Synesthesias PLATEAU SNAP ドキュメント ">
+    
+    
+      <link rel="shortcut icon" href="../../images/logo.svg">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="Synesthesias PLATEAU SNAP ドキュメント">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="アプリ利用者向け情報">アプリ利用者向け情報</h1>
+
+<p>本アプリは、カメラ画像を用いたVPS（Visual Positioning System）により端末の「位置」と「向き（姿勢）」を推定し、現実の建物に合わせてPLATEAUの3Dモデルを重ねて表示します。<br>
+<small><span style="color: #666;">※VPS: カメラで捉えた景色を参照データと照合することで、GPSが苦手な屋内やビルの多い場所でも「今どこにいるか」「どちらを向いているか」を推定する技術です。</span></small></p>
+<p>利用中は画面に集中しやすいため、周囲をよく確認し、身の安全の確保と周辺の方への配慮をお願いします。</p>
+<ul>
+<li>歩きながら/車道の近くでの操作は避け、安全な場所に立ち止まって操作をする（車・自転車との接触防止）</li>
+<li>周囲の人や障害物に注意して、衝突や転倒を避ける</li>
+<li>撮影時は周囲の方の映り込みに配慮し、個人情報が不要に写り込まないようにする</li>
+</ul>
+<h2 id="操作手順の概要">操作手順の概要</h2>
+<ul>
+<li>カメラを撮影したい建物に向ける</li>
+<li>青色にAR表示される面をタップして選択 ※赤色は撮影できない面</li>
+<li>カメラボタンを押して撮影</li>
+<li>撮影画像の品質を確認 ・十分な場合は登録または再撮影を選択 ・不十分な場合は再撮影を選択</li>
+</ul>
+<hr>
+<h2 id="アプリの利用を開始する事前準備">アプリの利用を開始する（事前準備）</h2>
+<h3 id="本アプリの入手方法について">本アプリの入手方法について</h3>
+<ul>
+<li>PLATEAU SNAP 関連の GitHub リポジトリは複数存在しますが、<br>
+アプリ利用者がインストールする対象は「PLATEAU-SNAP-App」リポジトリです。</li>
+<li>フロントエンドアプリ（本アプリ）
+<ul>
+<li><code>[https://github.com/Project-PLATEAU/PLATEAU-SNAP-App]</code></li>
+</ul>
+</li>
+<li>サーバー側リポジトリ（利用者はインストール不要）
+<ul>
+<li><code>[https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="必要環境推奨スペック">必要環境（推奨スペック）</h3>
+<ul>
+<li>本アプリは AR（拡張現実）機能を使用します。</li>
+<li>対応端末：ARKit / ARCore 対応スマートフォン</li>
+<li>iOS：iOS 16</li>
+<li>カメラ機能・位置情報機能が利用可能であること</li>
+</ul>
+<h3 id="github-からのインストール方法">GitHub からのインストール方法</h3>
+<ul>
+<li>本アプリは Unity プロジェクトとして提供されています。</li>
+<li>GitHub からリポジトリを取得します。
+<ul>
+<li><code>git clone https://github.com/Project-PLATEAU/PLATEAU-SNAP-App.git</code></li>
+</ul>
+</li>
+<li>Unity 2022.3.44f1 以上でプロジェクトを開きます（対応バージョンは<a href="https://project-plateau.github.io/PLATEAU-SNAP-App/manual/developer/index.html">開発者向け情報</a>
+を参照）</li>
+<li>開発者向け情報タブに従い、以下を設定します。
+<ul>
+<li>APIキー設定</li>
+<li>ARCore設定</li>
+<li>ビルド設定</li>
+</ul>
+</li>
+<li>設定完了後、iOS用にビルドします。</li>
+<li>既にビルド済みアプリが配布されている場合は、配布元の手順に従ってインストールしてください。</li>
+</ul>
+<hr>
+<h2 id="アプリの利用を開始する">アプリの利用を開始する</h2>
+<ul>
+<li>アプリを起動すると、メイン画面が表示されます</li>
+<li><code>アプリ起動</code> ボタンを押下してアプリを開始します</li>
+</ul>
+<img src="../../images/manual/user/1-3-1.webp" width="300">
+<hr>
+<h2 id="利用ガイドを読む">利用ガイドを読む</h2>
+<ul>
+<li>利用ガイドが表示されるため、使い方を確認します</li>
+<li>確認したら、画面右上の<code>☓</code> ボタンを押下して利用ガイドを閉じます</li>
+</ul>
+<img src="../../images/manual/user/1-3-2.webp" width="300">
+<hr>
+<h2 id="各種アクセスを許可する初回のみ">各種アクセスを許可する（初回のみ）</h2>
+<ul>
+<li>初回起動時のみ、カメラや位置情報の使用に関する許可を求められます。表示に従って <code>許可</code> してください。</li>
+</ul>
+<p><strong>カメラの許可（例）</strong></p>
+<blockquote>
+<p>「snap.sample」がカメラへのアクセスを求めています<br>
+建物検出機能に使用します<br>
+<code>[許可しない]</code> <code>[OK]</code></p>
+</blockquote>
+<p><strong>位置情報の許可（例）</strong></p>
+<blockquote>
+<p>「snap.sample」に位置情報の使用を許可しますか？<br>
+建物検出機能に使用します<br>
+<code>[1度だけ許可]</code><br>
+<code>[Appの使用中は許可]</code>（推奨）<br>
+<code>[許可しない]</code></p>
+</blockquote>
+<hr>
+<h2 id="位置姿勢の取得のために建物の周辺を撮影する">位置姿勢の取得のために、建物の周辺を撮影する</h2>
+<ul>
+<li>利用ガイドを閉じると <code>建物検出画面</code> が表示されます</li>
+<li>位置・向き（姿勢）の情報を取得するために、該当の建物やその場所から見える周辺の道路・建物等をカメラに写して下さい<br>
+<img src="../../images/manual/user/1-3-4.webp" width="300"></li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>VPSの精度を良くするために、以下の点を意識して撮影して下さい。</p>
+<ul>
+<li>iPhone をゆっくり左右に移動し、少しずつ角度を変えて撮影する（急な回転・ブレを避ける）</li>
+<li>建物の角・窓・看板など、特徴のある部分が画面に入るようにする</li>
+<li>暗すぎる/逆光になりすぎる状況は避け、明るい環境で撮影する</li>
+<li>反射の強いガラス面や、単色の壁面だけが大きく写る状態は避ける</li>
+<li>人や車など動く物体が画面の大半を占めないようにする</li>
+<li>カメラレンズの汚れを拭き、ピントが合っていることを確認する</li>
+</ul>
+</div>
+<hr>
+<h2 id="面をar表示する">面をAR表示する</h2>
+<ul>
+<li>位置情報の精度が十分になると、カメラで映している建物に沿って赤や青の面が表示されます</li>
+</ul>
+<img src="../../images/manual/user/1-3-5.webp" width="300">
+<div class="TIP">
+<h5>Tip</h5>
+<p>以下の点に注意してカメラで建物の面を写すと、赤色(撮影不可)から青色(撮影可能)に変わります。</p>
+<ul>
+<li>撮影角度
+<ul>
+<li>青色(撮影可能): 面に対して正面から撮影できている</li>
+<li>赤色(撮影不可): 面に対して斜めから撮影してしまっている</li>
+</ul>
+</li>
+<li>面の欠け
+<ul>
+<li>青色(撮影可能): 面の全ての頂点がカメラに映っている</li>
+<li>赤色(撮影不可): 面の一部または全ての頂点がカメラからはみ出てしまっている</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="面を選択する">面を選択する</h2>
+<ul>
+<li>前記の手順で青色になった面はタップで選択可能です</li>
+<li>青色になった面をタップして選択します</li>
+<li>選択された面は緑色に変わります</li>
+</ul>
+<img src="../../images/manual/user/1-3-6.webp" width="300">
+<hr>
+<h2 id="撮影する">撮影する</h2>
+<ul>
+<li>面を選択すると画面下中央の <code>撮影</code> ボタンが押せるようになります</li>
+<li><code>撮影</code> ボタンを押下して建物を撮影します</li>
+</ul>
+<hr>
+<h2 id="判定する">判定する</h2>
+<ul>
+<li><code>撮影</code> ボタンで撮影するとダイアログが表示され以下の判定が行われます</li>
+<li>撮影角度
+<ul>
+<li>建物の面が正面から撮影されているか</li>
+</ul>
+</li>
+<li>面の欠け
+<ul>
+<li>建物の面の頂点が全て画像に含まれている</li>
+</ul>
+</li>
+</ul>
+<img src="../../images/manual/user/1-3-8.webp" width="300">
+<hr>
+<h2 id="画像を登録する">画像を登録する</h2>
+<ul>
+<li><code>撮影角度</code> と <code>面の欠け</code> の両方が問題なければ <code>登録</code> ボタンが選択できるようになります</li>
+<li><code>撮影角度</code> と <code>面の欠け</code> の両方、またはいずれかの条件が満たされていない場合は <code>再撮影</code> ボタンを押下して、再度撮影を行なって下さい</li>
+<li><code>登録</code> ボタンが押せる場合は、<code>登録</code> ボタンを押下するとサーバーへ撮影した画像が送信され登録されます</li>
+<li>問題なく送信が完了すると自動的にダイアログが閉じます</li>
+<li>登録の処理に問題が発生した場合はエラーメッセージが表示されるので再度 <code>登録</code> ボタンを選択して下さい</li>
+</ul>
+<img src="../../images/manual/user/1-3-9.webp" width="300">
+<br>
+<p>この後は、<a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-CMS">PLATEAU-SNAP-CMS</a> を用いて、撮影・登録した画像を3Dモデルへ適用することができます。詳細な手順については、PLATEAU-SNAP-CMS のドキュメントをご参照ください。</p>
+<hr>
+<h2 id="補足事項">補足事項</h2>
+<h3 id="最初からやり直すリセット">最初からやり直す（リセット）</h3>
+<p>画面上のリセットボタンを選択すると、現在表示している面や位置合わせの状態をクリアし、最初から操作をやり直すことができます。
+位置合わせがうまくいかない場合や、多くの面が表示されてしまい、撮影対象の面が分からなくなってしまった場合などに使用してください。</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/docs/manual/user/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

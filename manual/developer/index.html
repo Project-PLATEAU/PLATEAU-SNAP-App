@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>開発者(Developer)向け情報 | Synesthesias PLATEAU SNAP ドキュメント </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="開発者(Developer)向け情報 | Synesthesias PLATEAU SNAP ドキュメント ">
+    
+    
+      <link rel="shortcut icon" href="../../images/logo.svg">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.svg" alt="Synesthesias PLATEAU SNAP ドキュメント">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="開発者developer向け情報">開発者(Developer)向け情報</h1>
+
+<p>本アプリの Runtime と Sample(後述)を利用してアプリの開発を行う開発者(Developer)向けの情報です。</p>
+<p>本ページでは、サンプルアプリをビルド・実行するまでの流れをまとめています。</p>
+<h3 id="必要なデバイス">必要なデバイス</h3>
+<p>デバイスとして、iPhoneとMacが必要です。
+下記に動作確認済みの環境を示します。</p>
+<table>
+<thead>
+<tr>
+<th>種別</th>
+<th>デバイス</th>
+<th>機種名</th>
+<th>OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>実機 (実行用)</td>
+<td>iPhone</td>
+<td>iPhone 13 Pro</td>
+<td>iOS 18.3</td>
+</tr>
+<tr>
+<td>ビルド環境</td>
+<td>Mac</td>
+<td>MacBook Pro (M1)</td>
+<td>macOS Sonoma 14.7</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li>iPhone は ARKit / ARCore 対応の機種が必要です</li>
+<li>Mac は Xcode がインストールされている必要があります</li>
+</ul>
+</div>
+<hr>
+<h2 id="構成-architecture">構成 (Architecture)</h2>
+<p>本アプリは Unity(開発プラットフォーム)で開発しています。
+以下の構成になっています。</p>
+<ul>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Runtime">Runtime</a> (ランタイム)
+<ul>
+<li>アプリ開発に必要なランタイムが含まれています</li>
+<li>アーキテクチャは MVP (Model View Presenter)を採用していますが Presenter は含まれていません</li>
+</ul>
+</li>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/SnapForUnity/Assets/Synesthesias.Snap/Samples%7E/Scripts">Sample</a> (サンプル)
+<ul>
+<li>UI、シーン等のリソースを含むサンプルアプリです</li>
+<li>前述のランタイムが必要です</li>
+<li>アーキテクチャは MVP (Model View Presenter)を採用しています</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-bash">Runtime/
+├── Model/
+└── View/
+</code></pre>
+<pre><code class="lang-bash">Samples/Scripts/
+├── Define/ (定数やenumを含む定義関連)
+├── Generated/ (OpenAPIで生成したソースコード)
+├── LifetimeScope/ (VContainerでのDI)
+├── Model/ (MVPのModel)
+├── Parameter/ (シーン間でのパラメータの受け渡し)
+├── Presenter/ (MVPのPresenter)
+├── Repository/ (データの永続化 - シーン間でのデータの受け渡し用)
+└── View/ (MVPのView)
+</code></pre>
+<h3 id="runtime-ランタイム">Runtime (ランタイム)</h3>
+<p><strong>Version (バージョン)</strong></p>
+<p><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=PLATEAU.SNAP.App&amp;message=0.0.1&amp;color=0e6da0" alt=""></a></p>
+<p><strong>Support (サポート対象)</strong></p>
+<p><a href="https://github.com/Gentlymad-Studios/PackageManagerTools"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=Unity&amp;logoColor=FFFFFF&amp;label=Unity&amp;message=2022.3.44f1%20or%20higher&amp;color=0e6da0" alt=""></a></p>
+<p><strong>Dependencies (依存パッケージ)</strong></p>
+<p><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=PLATEAU.SNAP.Server&amp;message=0.0.1&amp;color=0e6da0" alt=""></a>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=Unity&amp;logoColor=FFFFFF&amp;label=AR%20Foundation&amp;message=5.1.5&amp;color=0e6da0" alt=""></a>
+<a href="https://docs.unity3d.com/ja/Packages/com.unity.xr.arkit@5.1/manual/index.html"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=Unity&amp;logoColor=FFFFFF&amp;label=Google%20ARCore%20XR%20Plugin&amp;message=5.1.5&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/google-ar/arcore-unity-extensions"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=ARCore%20Extensions&amp;message=1.22.3&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/Cysharp/UniTask/releases/tag/2.5.10"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=UniTask&amp;message=2.5.10&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/Cysharp/R3/releases/tag/1.2.9"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=R3&amp;message=1.2.9&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/iShapeUnity/Geometry/releases/tag/0.0.5"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=Geometry&amp;message=0.0.5&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/iShapeUnity/Mesh2d/releases/tag/0.0.9"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=Mesh2d&amp;message=0.0.9&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/iShapeUnity/Triangulation/releases/tag/0.0.8"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=Triangulation&amp;message=0.0.8&amp;color=0e6da0" alt=""></a></p>
+<h3 id="sample-サンプル">Sample (サンプル)</h3>
+<p><strong>Dependencies (依存パッケージ)</strong></p>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.22/manual/index.html"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=Unity&amp;logoColor=FFFFFF&amp;label=Addressables&amp;message=1.22.3&amp;color=0e6da0" alt=""></a>
+<a href="https://docs.unity3d.com/Packages/com.unity.localization@1.5/manual/index.html"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=Unity&amp;logoColor=FFFFFF&amp;label=Localization&amp;message=1.5.4&amp;color=0e6da0" alt=""></a>
+<a href="https://docs.unity3d.com/ja/2022.3/Manual/com.unity.textmeshpro.html"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=Unity&amp;logoColor=FFFFFF&amp;label=TextMeshPro&amp;message=3.0.6&amp;color=0e6da0" alt=""></a>
+<a href="https://github.com/hadashiA/VContainer/releases/tag/1.16.8"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=GitHub&amp;logoColor=FFFFFF&amp;label=VContainer&amp;message=1.16.8&amp;color=0e6da0" alt=""></a>
+<a href="https://www.nuget.org/packages/Polly/8.5.2"><img src="https://img.shields.io/static/v1?style=flat=square&amp;logo=NuGet&amp;logoColor=FFFFFF&amp;label=Polly&amp;message=8.5.2&amp;color=0e6da0" alt=""></a></p>
+<br>
+<p>サーバとの通信 API も含めたコードの詳細仕様は、本ドキュメントの画面上部の「API」タブを選択してご確認ください。</p>
+<hr>
+<h2 id="環境設定について">環境設定について</h2>
+<h4 id="環境設定の概要">環境設定の概要</h4>
+<p>サンプルアプリではアプリの動作環境として、開発環境・リリース環境を用意しており、以下の ScriptableObject で管理しています。</p>
+<ul>
+<li>EnvironmentDevelopment (開発環境)</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias.Snap/Resources/Environment/EnvironmentDevelopment.asset</p>
+</blockquote>
+<ul>
+<li>EnvironmentRelease (リリース環境)</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias.Snap/Resources/Environment/EnvironmentRelease.asset</p>
+</blockquote>
+<h4 id="環境の設定">環境の設定</h4>
+<p>使用する環境を切り替えるには、以下の手順で参照を設定します。</p>
+<ul>
+<li>Project View から RootLifetimeScope の prefab を選択し <code>Environment Scriptable Object</code> のフィールドに前述の環境設定の ScriptableObject の参照をドラッグ&amp;ドロップで設定します</li>
+<li>デフォルトで <code>Environment Development</code> (開発環境) を指定済みです</li>
+</ul>
+<blockquote>
+<p>Assets/Samples/Synesthesias.Snap/Resources/VContainer/RootLifetimeScope.prefab</p>
+</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+<p>環境を追加する方法</p>
+<ul>
+<li>Project View で右クリックします</li>
+<li>Create &gt; Synesthesias &gt; Snap &gt; Sample &gt; EnvironmentScriptableObject</li>
+</ul>
+</div>
+<hr>
+<h2 id="arcore-の設定方法-ios">ARCore の設定方法 (iOS)</h2>
+<p>本アプリは iOS の AR 機能を使用するため、Unity プロジェクト側で ARCore 関連の設定が必要です。</p>
+<h4 id="プラグインの設定">プラグインの設定</h4>
+<p>まず、Unity のプロジェクト設定で ARCore 関連の機能を有効化します。</p>
+<ul>
+<li>Unity プロジェクトを開きます</li>
+<li>Edit &gt; Project Settings</li>
+<li>XR Plug-in Management &gt; iOS タブを選択します
+<ul>
+<li><code>Apple ARKit</code> にチェックを入れます</li>
+</ul>
+</li>
+<li>XR Plug-in Management &gt; ARCore Extensions
+<ul>
+<li>iOS Support Enabled にチェックを入れます</li>
+<li>Geospatial にチェックを入れます</li>
+</ul>
+</li>
+</ul>
+<h4 id="arcore-の-api-キーの設定方法">ARCore の API キーの設定方法</h4>
+<p>次に、Google Cloud Platform で発行した API キーをプロジェクトに設定します。</p>
+<ul>
+<li>以下のドキュメントの手順に従い ARCore の API キー作成の手順まで完了させます
+<ul>
+<li><a href="https://developers.google.com/ar/develop/authorization?hl=ja&amp;platform=unity-arf#api-key-unity">https://developers.google.com/ar/develop/authorization?hl=ja&amp;platform=unity-arf#api-key-unity</a></li>
+</ul>
+</li>
+<li>Project Settings &gt; XR Plugin-in Management &gt; ARCore Extensions</li>
+<li>iOS Authentication Strategy を API Key に設定します
+<ul>
+<li>本来であれば Authentication Token を使用することを推奨します</li>
+<li>iOS API Key に先ほど発行した API キーを設定します</li>
+</ul>
+</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>【重要】ARCore の API キーの管理について
+API キーの取り扱いには十分注意してください。</p>
+<ul>
+<li>API キーは git で管理しないようにしてください</li>
+<li>API キーをアプリに組み込まないようにしてください</li>
+<li>API キーはあくまで暫定対応です
+<ul>
+<li>Android: Keyless を使用してください</li>
+<li>iOS: API Key を選択します</li>
+</ul>
+</li>
+<li>API キーを間違ってコミットしないように以下の設定ファイルは.gitignore で除外しています</li>
+</ul>
+<pre><code>/ProjectSettings/ARCoreExtensionsProjectSettings.json
+</code></pre>
+</div>
+<hr>
+<h2 id="サーバーの-api-設定">サーバーの API 設定</h2>
+<p>本アプリはサーバーと通信を行うため、API キーの設定が必要です。
+以下の手順に従って設定を行ってください。</p>
+<h4 id="サーバーリポジトリについて">サーバーリポジトリについて</h4>
+<p>クライアント(Unity)は以下のサーバー側の API を利用しています。</p>
+<ul>
+<li><a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server">https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server</a></li>
+</ul>
+<h4 id="保存用ディレクトリの準備">保存用ディレクトリの準備</h4>
+<p>API キーを含む設定ファイルを保存するための、Git 管理外のディレクトリを用意します。</p>
+<ul>
+<li><code>Assets/Resources/GitIgnore</code> ディレクトリが存在することを確認します（なければ作成します）。</li>
+<li>念のため <code>.gitignore</code> に以下の記述があるか確認します（本リポジトリでは設定済みです）。</li>
+</ul>
+<pre><code>Assets/Resources/GitIgnore
+</code></pre>
+<h4 id="api-キー設定アセットの作成">API キー設定アセットの作成</h4>
+<p>保存用ディレクトリの中に、API キー情報を保持する設定ファイル（ScriptableObject）を作成します。</p>
+<ul>
+<li><code>Assets/Resources/GitIgnore</code> ディレクトリで右クリックし、メニューを開きます</li>
+<li>Create &gt; Synesthesias &gt; Snap &gt; Sample &gt; ApiKeyScriptableObject を選択します</li>
+<li>作成されたアセットを選択し、Inspector で以下を入力します
+<ul>
+<li><strong>End Point</strong>: サーバーのエンドポイント URL</li>
+<li><strong>Api Key Type</strong>: キーの種類（例: <code>Bearer</code>, <code>X-API-Key</code>）</li>
+<li><strong>Api Key Value</strong>: API キーの値</li>
+</ul>
+</li>
+</ul>
+<h4 id="環境設定への適用">環境設定への適用</h4>
+<p>作成した API キー設定を、アプリの環境設定（EnvironmentScriptableObject）に紐付けます。</p>
+<ul>
+<li>使用する環境設定アセット（例: <code>EnvironmentDevelopment.asset</code>）を選択します
+<ul>
+<li>場所: <code>Assets/Samples/Synesthesias.Snap/Resources/Environment/</code></li>
+</ul>
+</li>
+<li>Inspector の <code>Api Configuration</code> フィールドに、手順 2 で作成した <code>ApiKeyScriptableObject</code> をドラッグ&amp;ドロップします</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>【重要】API キーの取り扱いについて
+セキュリティ上の理由から、API キーは以下のように管理してください。</p>
+<ul>
+<li>Git で管理しない（.gitignore で除外されたフォルダに保存する）</li>
+<li>アプリ本体のコードに直接埋め込まない</li>
+</ul>
+</div>
+<hr>
+<h2 id="ios-機能用途の説明の記載">iOS 機能用途の説明の記載</h2>
+<p>本アプリは iOS のカメラと位置情報の機能を使用するため、申請時やビルド時に用途の説明が必要です。
+<strong>サンプルアプリでは既に設定が含まれていますので、設定が正しいか確認してください。</strong></p>
+<h4 id="player-settings-の確認">Player Settings の確認</h4>
+<ul>
+<li>Edit &gt; Project Settings &gt; Player Settings (左側のメニューの Player)</li>
+<li>iOS タブを選択</li>
+<li><code>Camera Usage Description</code> にカメラの用途が記載されているか確認します
+<ul>
+<li>例: <code>建物検出機能に使用します</code></li>
+</ul>
+</li>
+<li><code>Location Usage Description</code> に位置情報の用途が記載されているか確認します
+<ul>
+<li>例: <code>建物検出機能に使用します</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="iphoneへのビルド">iPhoneへのビルド</h2>
+<p>ここまでの設定が完了したら、以下の 2 ステップでアプリをiPhoneにインストールします。</p>
+<h3 id="step-1-unity-から-xcode-プロジェクトを書き出す">Step 1: Unity から Xcode プロジェクトを書き出す</h3>
+<p>Unity から iOS アプリのプロジェクトを出力します。</p>
+<p><strong>Build Settings の設定</strong></p>
+<ul>
+<li>サンプルをインポートして前述の API キーの設定を一通り完了させます</li>
+<li>File &gt; Build Settings</li>
+<li><code>iOS</code> を選択して <code>Switch Platform</code> を選択します</li>
+<li>以下のシーンを順番に開いて Build Settings の <code>Add Open Scenes</code> を選択して各種シーンを <code>Scenes In Build</code> に追加します
+<ul>
+<li>BootScene (必ず 0 番目にしてください)</li>
+<li>MobileDetectionScene</li>
+<li>GuideScene</li>
+<li>MainScene</li>
+<li>ValidationScene</li>
+</ul>
+</li>
+<li><code>Run in Xcode as</code> は <code>Release</code> が選択されていることを確認します</li>
+<li><code>Development Build</code> のチェックが外れていることを確認します
+<ul>
+<li>＊ <code>Development Build</code> の場合はアプリが起動できません</li>
+<li>(Development Build でもアプリが実行する方法があれば情報共有をお願いします)</li>
+</ul>
+</li>
+<li><code>Build</code> を選択して iOS のアプリをビルドします</li>
+</ul>
+<h3 id="step-2-xcode-でのビルド">Step 2: Xcode でのビルド</h3>
+<p>Unity でビルドしたプロジェクトを Xcode で開き、iPhoneにインストールします。
+以下は必要最低限アプリをビルドするまでの手順です。
+Xcode の詳細な使い方については触れないため、必要に応じて適宜調査をお願いします。</p>
+<ul>
+<li>Mac に iPhone 端末を有線で事前に接続しておきます</li>
+<li>ドロップダウンから接続している iPhone を選択しておきます</li>
+<li>初回ビルドの場合 Signing でビルドエラーになるので以下のいずれかを設定します
+<ul>
+<li>Automatically manage signing</li>
+<li>Provisioning Profile</li>
+</ul>
+</li>
+<li>再生アイコンを押すと再度ビルドが開始されます</li>
+<li>ビルドが完了すると iPhone にアプリが自動でインストールされアプリが起動します</li>
+</ul>
+<hr>
+<h2 id="サンプルアプリを使用する">サンプルアプリを使用する</h2>
+<p>インストールされたサンプルアプリの具体的な使い方は、利用者向けドキュメントを参照してください。</p>
+<ul>
+<li><a href="../user/index.html">アプリ利用者向け情報</a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>上記以外にもテストフライトやAdHocなどの配信方法があります。</p>
+</div>
+<br>
+<br>
+<hr>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/docs/manual/developer/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
